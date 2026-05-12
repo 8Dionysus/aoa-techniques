@@ -231,13 +231,13 @@ entries:
 - id: AOA-T-0038
   name: one-command-service-lifecycle
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: runtime-truth-lifecycle
 - id: AOA-T-0039
   name: baseline-first-additive-profile-benchmarks
   domain: evaluation
-  status: promoted
+  status: canonical
   kind: validation
   family: runtime-truth-lifecycle
 - id: AOA-T-0040

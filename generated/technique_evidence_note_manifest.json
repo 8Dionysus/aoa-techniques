@@ -20078,6 +20078,179 @@
       "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0038"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "one-command-service-lifecycle"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for one-entrypoint local stack lifecycle ownership"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep startup, visible follow-through, and teardown centered on one bounded local stack rather than absorbing install, platform, deployment, readiness, render, smoke, benchmark, or monitoring authority"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a convenience entrypoint becomes a hidden install wizard or platform launcher"
+                },
+                {
+                  "order": 2,
+                  "text": "the entrypoint starts services but leaves stop or cleanup outside the visible contract"
+                },
+                {
+                  "order": 3,
+                  "text": "backgrounded children survive after the operator believes the stack is stopped"
+                },
+                {
+                  "order": 4,
+                  "text": "lifecycle output implies render review, readiness, smoke, or benchmark confidence that did not actually happen"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one-command startup can hide useful service boundaries if status output is too vague"
+                },
+                {
+                  "order": 2,
+                  "text": "prerequisite checks or first-run setup can slow small local runs if they are not proportional"
+                },
+                {
+                  "order": 3,
+                  "text": "a canonical lifecycle wrapper can attract unrelated local operations because it is the most visible command"
+                },
+                {
+                  "order": 4,
+                  "text": "teardown can be too destructive if it removes shared local substrate that the bounded stack did not own"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the lifecycle entrypoint as a generic project bootstrap, installer, deployment tool, or platform dashboard"
+                },
+                {
+                  "order": 2,
+                  "text": "treating `up` success as proof that selected runtime truth, host readiness, smoke, or benchmarks are valid"
+                },
+                {
+                  "order": 3,
+                  "text": "starting remote or fleet resources while still describing the surface as local stack lifecycle"
+                },
+                {
+                  "order": 4,
+                  "text": "adding unrelated OAuth, logging, registry, memory, or monitoring breadth to the core lifecycle command"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot name the services owned by the entrypoint"
+                },
+                {
+                  "order": 2,
+                  "text": "stop instructions are absent, unreliable, or known to leave child services behind"
+                },
+                {
+                  "order": 3,
+                  "text": "users need several manual terminal commands before the supposed one-command lifecycle works"
+                },
+                {
+                  "order": 4,
+                  "text": "route discussion focuses more on deployment, platform policy, or product launchers than on bounded local startup and teardown"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the entrypoint narrow and tied to a named local stack"
+                },
+                {
+                  "order": 2,
+                  "text": "print what started and how to stop it every time the stack starts"
+                },
+                {
+                  "order": 3,
+                  "text": "treat leftover child processes or shared-substrate teardown as lifecycle defects"
+                },
+                {
+                  "order": 4,
+                  "text": "route composition, render truth, readiness, smoke, benchmark, deployment, and monitoring concerns to sibling techniques or owner repos"
+                },
+                {
+                  "order": 5,
+                  "text": "document first-run tooling only as subordinate prerequisite handling, not as the reusable move"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for launcher drift, hidden cleanup debt, false readiness, and expansion into platform or deployment authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -20108,7 +20281,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -20124,18 +20297,18 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same lifecycle contract as a documentation-first adaptation with one example and one checklist"
+                  "key": "exact-fit second context",
+                  "value_markdown": "Metaflow Devstack exposes `make up`, `make all-up`, service subset startup, `make shell`, and `make down` as a real local-stack lifecycle surface over Minikube and Tilt"
                 },
                 {
                   "order": 3,
                   "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "value_markdown": "the first import review passed, and the new Metaflow pass confirms the lifecycle contract survives outside the donor repo without importing deployment, platform, render, readiness, or benchmark authority"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repo"
+                  "value_markdown": "the bundle now carries one checklist, one example, donor evidence, exact-fit public second-context evidence, and an adverse-effects review"
                 }
               ]
             },
@@ -20146,7 +20319,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main reusable object is one explicit lifecycle entrypoint for a bounded local multi-service stack"
+                  "text": "this is the right canonical default when the main reusable object is one explicit lifecycle entrypoint for a bounded local multi-service stack"
                 },
                 {
                   "order": 2,
@@ -20155,6 +20328,14 @@
                 {
                   "order": 3,
                   "text": "it remains distinct from `AOA-T-0037`, which stays centered on selector-aware readiness verdicts rather than on launch control"
+                },
+                {
+                  "order": 4,
+                  "text": "it remains distinct from `AOA-T-0039`, which compares benchmark profiles rather than owning the local service lifecycle"
+                },
+                {
+                  "order": 5,
+                  "text": "Metaflow confirms that the default move can survive outside the donor stack even when the implementation substrate changes from Node scripts to Make, Minikube, Tilt, service selection, wait paths, and teardown targets"
                 }
               ]
             },
@@ -20166,7 +20347,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -20181,7 +20362,12 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, adaptation notes, and Metaflow evidence remain understandable without hidden donor-repo context"
+                },
+                {
+                  "order": 5,
+                  "key": "public-safety boundary",
+                  "value_markdown": "Metaflow service names are cited only as evidence of bounded-stack lifecycle ownership, not as universal required services or Kubernetes doctrine"
                 }
               ]
             },
@@ -20192,11 +20378,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on local lifecycle ownership with visible startup, status/follow-through, and teardown"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where one-entrypoint local lifecycle ownership is used as a real operator contract rather than only as imported documentation"
+                  "text": "future review should reject surfaces that are only generic launchers, install wizards, remote deployment workflows, readiness checks, render previews, smoke checks, or benchmark harnesses without the same local stack lifecycle seam"
                 }
               ]
             },
@@ -20207,11 +20393,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0038` `promoted`"
+                  "text": "promote `AOA-T-0038` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the same bounded local lifecycle contract survives outside the donor repository"
+                  "text": "use `AOA-T-0038` as the default local-stack lifecycle technique when one explicit operator-facing entrypoint should start and stop a bounded local stack while sibling techniques own composition, render truth, readiness, smoke, benchmark comparison, and deployment concerns"
                 }
               ]
             }
@@ -20510,17 +20696,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Metaflow Devstack"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public library repository with reusable technique bundles, generated catalog surfaces, and documentation-first validation"
+                  "value_markdown": "public local Kubernetes development stack for Metaflow, built around Minikube and Tilt"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first repository that records the lifecycle contract rather than shipping the donor startup manager itself"
+                  "value_markdown": "operator-facing `make` lifecycle targets under `devtools/` for selecting, starting, waiting on, entering, and tearing down a bounded local service stack"
                 }
               ]
             },
@@ -20532,22 +20718,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses `npm start`, wrapper scripts, and companion stop helpers; this adaptation presents a generic one-entrypoint local lifecycle contract without depending on those exact commands"
+                  "value_markdown": "the donor `npm start` and companion stop helpers map to Metaflow's `make up`, `make all-up`, `make shell`, and `make down` lifecycle targets"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "donor-specific memory, logging, OAuth, and desktop-integration breadth is removed from the reusable contract"
+                  "value_markdown": "donor-specific memory and desktop-integration breadth maps to Metaflow's selectable local stack services such as MinIO, PostgreSQL, metadata service, UI, localbatch, Argo, Airflow, and cloud emulators"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on visible lifecycle ownership rather than on one process-manager implementation or one platform setup path"
+                  "value_markdown": "the invariant is not one process manager; Metaflow uses Make, Minikube, Tilt, Helm, and a service picker while preserving one operator-facing lifecycle surface"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should read the technique as a local runtime-control pattern for bounded stacks, not as a generic launcher or bootstrap program"
+                  "value_markdown": "this proves the technique as local lifecycle ownership, not as generic project bootstrap, installer doctrine, fleet deployment, or readiness proof"
                 }
               ]
             },
@@ -20564,12 +20750,12 @@
                 {
                   "order": 2,
                   "key": "validation logic",
-                  "value_markdown": "the entrypoint should fail early on missing prerequisites, print visible runtime status, and provide a real stop path"
+                  "value_markdown": "the entrypoint checks prerequisites, installs local tools as needed, selects or accepts services, starts the stack, and exposes a follow-up shell/wait path"
                 },
                 {
                   "order": 3,
                   "key": "safety rules",
-                  "value_markdown": "shutdown remains part of the same contract and should not collapse into silent background leftovers"
+                  "value_markdown": "shutdown remains part of the contract through `make down`, Tilt teardown, Minikube cleanup, tunnel process cleanup, and generated-file cleanup"
                 }
               ]
             },
@@ -20580,11 +20766,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if a project says \"one command\" but still relies on hidden manual prep"
+                  "text": "Metaflow Devstack is larger than the donor stack, so the technique must not absorb Kubernetes platform doctrine, CI UX tests, cloud emulator semantics, or deployment ownership"
                 },
                 {
                   "order": 2,
-                  "text": "some repositories may widen lifecycle wording into general platform doctrine instead of one bounded local stack contract"
+                  "text": "`make up` installs some local tooling on first run, so the transferable evidence is lifecycle ownership of a bounded local stack, not install-wizard breadth"
+                },
+                {
+                  "order": 3,
+                  "text": "`make shell` waits for readiness before opening a configured shell, so later reuse must keep readiness and shell-entry support subordinate to the lifecycle seam"
                 }
               ]
             },
@@ -20595,22 +20785,40 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor `README.md`, `QUICKSTART.md`, and `AUTOMATIC_STARTUP.md` describe a single startup surface that owns the dependent local services and cleanup path"
+                  "text": "Metaflow `devtools/README.md` documents `make up` as an interactive service picker that starts the stack, `make all-up` as the all-services entrypoint, `SERVICES_OVERRIDE=... make up` as bounded subset startup, `make shell` as the configured development shell, and `make down` as teardown."
                 },
                 {
                   "order": 2,
-                  "text": "`package.json`, `start-openmemory.js`, and `stop-openmemory.ps1` show the same contract in executable form: one visible lifecycle surface starts the bounded stack and one explicit stop path shuts it down"
+                  "text": "Metaflow `devtools/README.md` names the bounded service set and says service dependencies are resolved automatically."
+                },
+                {
+                  "order": 3,
+                  "text": "Metaflow `devtools/Makefile` implements `up` with Docker checks, local tool setup, service selection or override, Minikube tunnel startup, Tilt startup, visible next steps, and a generated `start.sh` with traps."
+                },
+                {
+                  "order": 4,
+                  "text": "Metaflow `devtools/Makefile` implements `down` by stopping all services, killing the Minikube tunnel, tearing down Minikube, removing Tilt, and cleaning generated `.devtools` scripts."
+                },
+                {
+                  "order": 5,
+                  "text": "Metaflow `devtools/ci/start-devstack.sh` provides a CI/local non-TUI lifecycle path that starts Tilt, waits for the API server, waits for the Tiltfile, and waits for the devstack services to become ready."
                 }
               ]
             },
             {
               "heading": "Result",
               "order": 7,
-              "payload_type": "items",
-              "items": [
+              "payload_type": "fields",
+              "fields": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded lifecycle core without carrying over donor-specific memory or platform breadth"
+                  "key": "verdict",
+                  "value_markdown": "exact-fit second context"
+                },
+                {
+                  "order": 2,
+                  "key": "note",
+                  "value_markdown": "Metaflow proves the same reusable move outside the donor lineage: one explicit local lifecycle surface owns a selectable bounded stack, resolves dependent services, provides visible operator follow-through, and owns teardown without becoming render truth, host doctor, benchmark, or deployment authority"
                 }
               ]
             }
@@ -20622,6 +20830,179 @@
       "id": "AOA-T-0039",
       "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0039"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "baseline-first-additive-profile-benchmarks"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for baseline-first additive benchmark comparison discipline"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on same-surface comparison rather than benchmark-suite governance, product scoring, promotion policy, rolling baseline management, or runtime lifecycle control"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "additive setup mutates the baseline path, so the comparison stops being like-for-like"
+                },
+                {
+                  "order": 2,
+                  "text": "baseline and additive runs produce different artifact shapes or use different measurement surfaces"
+                },
+                {
+                  "order": 3,
+                  "text": "benchmark results are treated as product rankings or promotion decisions"
+                },
+                {
+                  "order": 4,
+                  "text": "a rolling historical baseline replaces the explicit current baseline-first contract"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "insisting on a baseline-first run can add overhead when a quick smoke comparison would be enough"
+                },
+                {
+                  "order": 2,
+                  "text": "additive prework can become elaborate enough to hide setup differences"
+                },
+                {
+                  "order": 3,
+                  "text": "a shared summary shape can mask semantic differences if fields are not interpreted carefully"
+                },
+                {
+                  "order": 4,
+                  "text": "canonical status can encourage teams to over-formalize small experiments as benchmark programs"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the technique to crown a winner rather than compare bounded profile shapes"
+                },
+                {
+                  "order": 2,
+                  "text": "treating additive backends, plugins, profiles, or richer setup as the new default path"
+                },
+                {
+                  "order": 3,
+                  "text": "folding benchmark-suite ownership, leaderboard policy, promotion decisions, or product scoring into the technique"
+                },
+                {
+                  "order": 4,
+                  "text": "widening the bundle into profile composition, render truth, host readiness, service lifecycle, or regression-gate policy"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "default runs now require additive-only setup"
+                },
+                {
+                  "order": 2,
+                  "text": "baseline and additive outputs no longer contain the same summary fields"
+                },
+                {
+                  "order": 3,
+                  "text": "comparison notes use ranking, acceptance, or promotion language instead of bounded deltas"
+                },
+                {
+                  "order": 4,
+                  "text": "reviewers cannot identify which prework was isolated for additive profiles"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "run the stable baseline first and keep it visible as the reference point"
+                },
+                {
+                  "order": 2,
+                  "text": "require the same measurement surface and artifact shape for every compared run"
+                },
+                {
+                  "order": 3,
+                  "text": "isolate additive prework in a separate script, workflow step, or operator note"
+                },
+                {
+                  "order": 4,
+                  "text": "report bounded deltas and explicitly reject product-scoring or promotion-policy claims"
+                },
+                {
+                  "order": 5,
+                  "text": "route profile composition, rendered truth, host readiness, lifecycle, and proof authority to sibling techniques or owner repos"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for false comparability, additive-default drift, benchmark-governance expansion, and product-scoring overreach"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -20653,7 +21034,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -20668,11 +21049,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around baseline-first additive comparison discipline"
+                  "text": "LOCOMO/OpenClaw now provides an exact-fit public second context: `memory-core` is the baseline, `memory-lancedb` and `memory-lancedb-pro` are additive backend comparisons, all runs share the LOCOMO rows, gateway/judge path, and run artifact family, and additive prework stays isolated through prebuilt stores and plugin setup"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still proven mainly through one donor lineage"
+                  "text": "the second context adaptation keeps the contract bounded around baseline-first additive comparison discipline rather than benchmark-suite ownership, product ranking, leaderboard policy, or rolling historical baseline governance"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle now has a checklist, a public-safe example, origin evidence, exact-fit second-context evidence, and an adverse-effects review"
                 }
               ]
             },
@@ -20683,7 +21068,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when one stable baseline must anchor a comparison before richer profiles are evaluated"
+                  "text": "this is the right canonical default when one stable baseline must anchor a comparison before richer profiles are evaluated"
                 },
                 {
                   "order": 2,
@@ -20691,11 +21076,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default benchmark pattern for every evaluation surface"
+                  "text": "it remains narrower than benchmark-suite governance because it only owns comparison discipline: same measurement surface, same artifact shape, baseline first, additive second"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "LOCOMO/OpenClaw confirms that the default move can survive outside `atm10-agent`: baseline backend first, additive backend legs later, prework isolated, and summaries comparable without turning the result into product scoring"
                 }
               ]
             },
@@ -20707,7 +21092,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-23"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -20718,6 +21103,11 @@
                   "order": 3,
                   "key": "sanitization still holds",
                   "value_markdown": "the published technique keeps the reusable comparison contract while stripping donor-specific service names, workflow paths, and private benchmark labels"
+                },
+                {
+                  "order": 4,
+                  "key": "public-safety boundary",
+                  "value_markdown": "LOCOMO/OpenClaw evidence is cited for comparison discipline, not as a universal memory benchmark, model judgement policy, product ranking, or plugin endorsement"
                 }
               ]
             },
@@ -20728,11 +21118,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on same-surface baseline/additive comparison discipline"
                 },
                 {
                   "order": 2,
-                  "text": "the separation from product scoring, promotion policy, and rolling baseline governance should stay tested through future sibling imports"
+                  "text": "future review should reject benchmark matrices, A/B tests, product leaderboards, rolling baselines, or regression gates unless they preserve baseline-first ordering, additive isolation, and same artifact shape"
                 }
               ]
             },
@@ -20743,11 +21133,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0039` as `promoted`"
+                  "text": "promote `AOA-T-0039` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same baseline-first additive comparison contract"
+                  "text": "use `AOA-T-0039` as the default benchmark-comparison technique when richer profiles or backends must remain additive and comparable against one stable baseline without owning policy or product scoring"
                 }
               ]
             }
@@ -20875,17 +21265,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "LOCOMO Benchmark for OpenClaw Memory"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                  "value_markdown": "public benchmark harness comparing OpenClaw memory backends on the LOCOMO dataset"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "reviewable technique bundles with portable wording"
+                  "value_markdown": "backend-specific memory benchmark runs that start with `memory-core`, then compare `memory-lancedb` and `memory-lancedb-pro` on the same selected rows, gateway, judge path, and output artifact family"
                 }
               ]
             },
@@ -20896,19 +21286,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "donor-specific profile labels and service names were rewritten into a portable baseline-first comparison contract"
+                  "text": "the donor's `baseline_first` profile maps to LOCOMO/OpenClaw's `memory-core` backend baseline"
                 },
                 {
                   "order": 2,
-                  "text": "the cross-service benchmark path became a public-safe example of additive comparison discipline instead of a private suite recipe"
+                  "text": "the donor's additive profile maps to LOCOMO/OpenClaw's `memory-lancedb` and `memory-lancedb-pro` backend legs"
                 },
                 {
                   "order": 3,
-                  "text": "additive setup was kept separate from the default path so the benchmark reads as a comparison technique, not as a benchmark owner surface"
+                  "text": "the donor's normalized suite summary maps to each LOCOMO run directory with `summary.json`, `selected_rows.jsonl`, `qa_results.jsonl`, `judged_results.jsonl`, and memory status artifacts"
                 },
                 {
                   "order": 4,
-                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                  "text": "the donor's isolated additive prework maps to prebuilt-store and plugin setup paths, especially the `memory-lancedb-pro` leg that builds from the existing `memory-lancedb` corpus rather than changing the baseline path"
                 }
               ]
             },
@@ -20946,15 +21336,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public wording can drift into benchmark-suite governance if it starts describing ownership of the whole harness"
+                  "text": "LOCOMO/OpenClaw is a full benchmark harness, so the technique must not absorb benchmark-suite ownership, LLM judge policy, memory backend design, leaderboard logic, or product scoring"
                 },
                 {
                   "order": 2,
-                  "text": "the bundle can widen into promotion policy if the comparison result is treated like a decision policy"
+                  "text": "`memory-lancedb-pro` has plugin-specific setup and tuning, so the transferable evidence is isolated additive prework over the same corpus and artifact family rather than one plugin's retrieval settings"
                 },
                 {
                   "order": 3,
-                  "text": "a generic example can become too abstract if it does not show why additive setup must stay isolated"
+                  "text": "parallel execution is supported, but it remains an execution optimization only because the output format is kept identical"
                 }
               ]
             },
@@ -20965,15 +21355,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public technique stays in `evaluation` because the reusable object is a bounded comparison contract rather than a composition or lifecycle technique"
+                  "text": "LOCOMO/OpenClaw README describes three backends: `memory-core`, `memory-lancedb`, and `memory-lancedb-pro`, with LanceDB legs reusing the same LOCOMO markdown and exact `memory-core` indexed chunks or chunk-aligned corpus."
                 },
                 {
                   "order": 2,
-                  "text": "the donor lineage already treats the baseline-first suite as a default path with an additive sibling path"
+                  "text": "The README explicitly says to start with `memory-core` as the baseline, then compare it against `memory-lancedb` and `memory-lancedb-pro`."
                 },
                 {
                   "order": 3,
-                  "text": "the adapted bundle preserves the key donor invariant: compare like with like, and keep richer profiles secondary"
+                  "text": "The README defines the same output family for each run, including `summary.json`, selected rows, QA results, judged results, memory status before/after, and ingest logs."
+                },
+                {
+                  "order": 4,
+                  "text": "The runner writes the same `summary.json` shape for each backend using the selected rows, QA results, judged results, run label, input path, and limit."
+                },
+                {
+                  "order": 5,
+                  "text": "`run_parallel.py` preserves the same output format while splitting work across workers, then merges JSONL files and recomputes `summary.json`."
                 }
               ]
             },
@@ -20985,12 +21383,12 @@
                 {
                   "order": 1,
                   "key": "verdict",
-                  "value_markdown": "works"
+                  "value_markdown": "exact-fit second context"
                 },
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded evaluation technique for stable baseline-plus-additive comparisons"
+                  "value_markdown": "LOCOMO/OpenClaw proves the same reusable move outside the donor lineage: run the baseline backend first, compare additive backends on the same benchmark surface and artifact shape, isolate additive prework, and keep the result as comparison evidence rather than suite governance or product scoring"
                 }
               ]
             }

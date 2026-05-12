@@ -256,6 +256,33 @@
       }
     },
     {
+      "id": "AOA-T-0038",
+      "name": "one-command-service-lifecycle",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
+      "topology": {
+        "family": "runtime-truth-lifecycle",
+        "capability_class": [
+          "plan",
+          "observe",
+          "interpret"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "docs",
+          "shell"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -276,33 +303,6 @@
         "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0038",
-      "name": "one-command-service-lifecycle",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
-      "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
-      "topology": {
-        "family": "runtime-truth-lifecycle",
-        "capability_class": [
-          "plan",
-          "observe",
-          "interpret"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "docs",
-          "shell"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },
@@ -2554,6 +2554,32 @@
       }
     },
     {
+      "id": "AOA-T-0039",
+      "name": "baseline-first-additive-profile-benchmarks",
+      "domain": "evaluation",
+      "kind": "validation",
+      "status": "canonical",
+      "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
+      "topology": {
+        "family": "runtime-truth-lifecycle",
+        "capability_class": [
+          "validate",
+          "observe",
+          "write"
+        ],
+        "substrate": [
+          "tests",
+          "instructions",
+          "runtime-state"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0032",
       "name": "context-report-for-ci",
       "domain": "evaluation",
@@ -2571,32 +2597,6 @@
         "substrate": [
           "tests",
           "instructions"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0039",
-      "name": "baseline-first-additive-profile-benchmarks",
-      "domain": "evaluation",
-      "kind": "validation",
-      "status": "promoted",
-      "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
-      "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
-      "topology": {
-        "family": "runtime-truth-lifecycle",
-        "capability_class": [
-          "validate",
-          "observe",
-          "write"
-        ],
-        "substrate": [
-          "tests",
-          "instructions",
-          "runtime-state"
         ],
         "execution_profile": "small-agent",
         "risk_posture": [

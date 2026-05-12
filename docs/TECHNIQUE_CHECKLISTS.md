@@ -58,17 +58,17 @@ See also:
 |---|---|---|---|---|
 | Render Truth Before Startup Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/checks/render-truth-before-startup-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
 
+### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| One-Command Service Lifecycle Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/checks/one-command-service-lifecycle-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) |
 
 ### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
 
@@ -584,17 +584,17 @@ See also:
 |---|---|---|---|---|
 | Contextual Host Doctor Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/checks/contextual-host-doctor-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 
+### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Baseline First Additive Profile Benchmarks Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
+
 ### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Context Report For CI Checklist | `absent` | `7` | `techniques/proof/evaluation-chain/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
-
-### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Baseline First Additive Profile Benchmarks Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/checks/baseline-first-additive-profile-benchmarks-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 
 ### [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) - upstream-skill-health-checking (`promoted`)
 

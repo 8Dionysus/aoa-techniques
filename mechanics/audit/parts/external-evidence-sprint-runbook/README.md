@@ -59,6 +59,8 @@ Closed precedents:
 - [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) has exited this sprint lane through a separate canonical review after Aider's public `.aider.chat.history.md` artifact family closed the capture-as-artifact gap.
 - [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) has exited this sprint lane through a separate canonical review after Dockform's plan/render-before-apply surface closed the render-truth review seam.
 - [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) has exited this sprint lane through a separate canonical review after Get Physics Done's selected-runtime `gpd doctor` surface closed the contextual preflight readiness gap.
+- [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) has exited this sprint lane through a canonical review after Metaflow Devstack closed the one-entrypoint local lifecycle gap.
+- [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) has exited this sprint lane through a canonical review after LOCOMO / OpenClaw closed the baseline-first additive benchmark gap.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:

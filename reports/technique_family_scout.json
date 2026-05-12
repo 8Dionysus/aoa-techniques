@@ -823,8 +823,8 @@
       ],
       "counts": {
         "total": 4,
-        "canonical": 2,
-        "promoted": 2,
+        "canonical": 4,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 2,
           "docs": 0,
@@ -868,7 +868,7 @@
           "id": "AOA-T-0038",
           "name": "one-command-service-lifecycle",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine.",
           "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md",
           "kind": "workflow"
@@ -886,7 +886,7 @@
           "id": "AOA-T-0039",
           "name": "baseline-first-additive-profile-benchmarks",
           "domain": "evaluation",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path.",
           "technique_path": "techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md",
           "kind": "validation"

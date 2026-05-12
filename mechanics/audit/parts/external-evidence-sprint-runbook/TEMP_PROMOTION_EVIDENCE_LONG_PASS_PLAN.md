@@ -2,8 +2,8 @@
 
 Status: temporary working plan for a full promotion-evidence pass over the
 original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
-`AOA-T-0036` A2 closure, and `AOA-T-0037` Stage 2 closure, the live promoted
-queue is `79` bundles. This
+`AOA-T-0036` A2 closure, `AOA-T-0037` Stage 2 closure, and Pack 3 closures for
+`AOA-T-0038` plus `AOA-T-0039`, the live promoted queue is `77` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -33,8 +33,14 @@ Current live constraint:
 - `AOA-T-0037` closed during Stage 2 with exact-fit Get Physics Done
   selected-runtime doctor evidence and exits the live promoted queue through
   canonical review;
-- the live generated catalog currently contains `79` promoted techniques and
-  `28` canonical techniques;
+- `AOA-T-0038` closed during Stage 2 with exact-fit Metaflow Devstack
+  one-entrypoint local lifecycle evidence and exits the live promoted queue
+  through canonical review;
+- `AOA-T-0039` closed during Stage 2 with exact-fit LOCOMO / OpenClaw
+  baseline-first additive benchmark evidence and exits the live promoted queue
+  through canonical review;
+- the live generated catalog currently contains `77` promoted techniques and
+  `30` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -42,9 +48,10 @@ Current live constraint:
 
 Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
-canonical readiness. The live remaining queue after the `AOA-T-0037` Stage 2
-closure is `79` promoted techniques, with `AOA-T-0026`, `AOA-T-0036`, and
-`AOA-T-0037` counted as closed rows rather than remaining targets.
+canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
+and `AOA-T-0039` closures is `77` promoted techniques, with `AOA-T-0026`,
+`AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, and `AOA-T-0039` counted as closed
+rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -59,7 +66,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with two closed canonical rows.
+This is an original `82/82` promoted-corpus plan with five closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -88,8 +95,8 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0022 risk-and-negative-effect-lift](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | docs / lift | Pack 1 long-gap donor lane | adjacent lanes recorded; remains promoted | `external-evidence-ledger` Stage 2 notes; broad risk/framework false-positive lanes ruled out |
 | Stage 2 | [AOA-T-0035 profile-preset-composition](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | docs / composition | Pack 3 runtime operator stack | adjacent lanes recorded; remains promoted | `external-evidence-ledger` Stage 2 notes; profile-only, option-preset, editor-profile, feature/template, overlay, and generic config-composition lanes ruled out |
 | Stage 2 | [AOA-T-0037 contextual-host-doctor](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | evaluation / validation | Pack 3 runtime operator stack | exact-fit second context; exits to canonical | `external-evidence-ledger` exact-fit notes; Get Physics Done selected-runtime doctor surface closes the contextual preflight gap |
-| Stage 2 | [AOA-T-0038 one-command-service-lifecycle](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | agent-workflows / workflow | Pack 3 runtime operator stack | pending |  |
-| Stage 2 | [AOA-T-0039 baseline-first-additive-profile-benchmarks](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | evaluation / validation | Pack 3 runtime operator stack | pending |  |
+| Stage 2 | [AOA-T-0038 one-command-service-lifecycle](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | agent-workflows / workflow | Pack 3 runtime operator stack | exact-fit second context; exits to canonical | `external-evidence-ledger` exact-fit notes; Metaflow Devstack one-entrypoint local lifecycle surface closes the lifecycle gap |
+| Stage 2 | [AOA-T-0039 baseline-first-additive-profile-benchmarks](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | evaluation / validation | Pack 3 runtime operator stack | exact-fit second context; exits to canonical | `external-evidence-ledger` exact-fit notes; LOCOMO / OpenClaw baseline-first additive benchmark surface closes the comparison gap |
 | Stage 2 | [AOA-T-0027 cross-agent-skill-propagation](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) | docs / distribution | Pack 4 instruction-surface cluster | pending |  |
 | Stage 2 | [AOA-T-0029 nested-rule-loading](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | docs / composition | Pack 4 instruction-surface cluster | pending |  |
 | Stage 2 | [AOA-T-0030 fragmented-agent-context](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | docs / composition | Pack 4 instruction-surface cluster | pending |  |
@@ -205,7 +212,8 @@ CI-report artifact, history artifact, and runtime truth seam.
 ### Stage 2: Remaining Early Evidence Packs
 
 4. Pack 1 - Long-Gap Donor Lanes: `AOA-T-0005`, `AOA-T-0022`
-5. Pack 3 - Runtime Operator Stack: `AOA-T-0035`, `AOA-T-0038`, `AOA-T-0039`
+5. Pack 3 - Runtime Operator Stack: `AOA-T-0035` remains an adjacent hold;
+   `AOA-T-0038` and `AOA-T-0039` are closed canonical rows
 6. Pack 4 - Instruction-Surface Cluster remainder: `AOA-T-0027`,
    `AOA-T-0029`, `AOA-T-0030`
 7. Pack 5 - Skill Ecosystem And Curated Inputs: `AOA-T-0024`,
@@ -289,8 +297,9 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `79` current promoted IDs plus the closed `AOA-T-0026`,
-    `AOA-T-0036`, and `AOA-T-0037` rows against generated catalog truth.
+44. Reconcile all `77` current promoted IDs plus the closed `AOA-T-0026`,
+    `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, and `AOA-T-0039` rows against
+    generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -311,7 +320,8 @@ search result looks promising.
 
 1. Confirm current branch and intended diff.
 2. List unrelated dirty surfaces and mark them out of scope.
-3. Confirm `AOA-T-0032`, `AOA-T-0026`, and `AOA-T-0036` are treated as the
+3. Confirm `AOA-T-0032`, `AOA-T-0026`, `AOA-T-0036`, `AOA-T-0037`,
+   `AOA-T-0038`, and `AOA-T-0039` are treated as the
    landed calibration history described above, not as uncommitted branch state.
 4. Do not stage `.agents/skills/**` unless the user routes that separate skill
    work into the current branch.
