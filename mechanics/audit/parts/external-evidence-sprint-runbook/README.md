@@ -44,10 +44,26 @@ Run the external evidence queue in this order:
      a pre-surface source availability plus manifest-readiness signal
 3. markdown-first and fresh-extraction follow-through:
    - [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
+     remains `promoted`; the 2026-05-12 Pack 6 pass ruled out Agent Loom as
+     adjacent because it has typed markdown evidence records and paths but no
+     accepted derived note-kind/path provenance manifest or reader
    - [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
+     remains `promoted`; the 2026-05-12 Pack 6 pass recorded first
+     second-context support from `nuxt-content/nuxt-llms`, but the next
+     promotion trigger is a second repo-owned docs route manifest outside
+     framework-specific `llms.txt` generation
    - [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
+     remains `promoted`; the 2026-05-12 Pack 6 pass recorded first
+     second-context support from GitHub's issue and pull request template
+     surfaces, but the next promotion trigger is a review-specific template
+     manifest or intake reader beyond platform-native rendering
    - [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
-4. long-gap holds:
+     remains `promoted`; the 2026-05-12 Pack 6 pass ruled out AI review, code
+     review summary, quality-report, and scoring lanes as adjacent
+4. next long-pass evidence targets:
+   - [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
+   - [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
+5. long-gap holds:
    - [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
      remains `promoted`; the 2026-05-12 Stage 2 long-pass search ruled out
      generic intent-classification, assistant-eval, and IBN benchmark lanes as
@@ -74,7 +90,9 @@ Why this order:
 
 - `AOA-T-0032` is still the clearest report-only blocker, but its currently known public lanes are searched; reopen it only from a new artifact-first signal instead of repeating context-compiler, fragment-assembly, graph, or repo-quality searches
 - `AOA-T-0042` is the only Pack 5 residual; reopen it from source-readiness-before-surfacing evidence rather than install/update, security scanning, registry governance, or generic monitoring overlap
-- `AOA-T-0020` plus `AOA-T-0046` through `AOA-T-0048` should not reopen until a real non-origin consumer exists
+- `AOA-T-0020` should not reopen until a real non-origin note-kind/path manifest or reader exists
+- `AOA-T-0046` and `AOA-T-0047` now have first second-context support; reopen them only from a stronger repo-owned route or review-template reader, not from generic docs generation or platform-native forms
+- `AOA-T-0048` should not reopen until a real non-origin semantic-review reader exists
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real
   new-intent rollout artifact rather than NLU/eval/benchmark overlap

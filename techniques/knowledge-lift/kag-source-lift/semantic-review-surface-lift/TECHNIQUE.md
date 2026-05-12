@@ -30,6 +30,8 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
 ---
 
 # semantic-review-surface-lift

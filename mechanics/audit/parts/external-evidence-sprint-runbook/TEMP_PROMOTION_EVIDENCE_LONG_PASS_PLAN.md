@@ -123,10 +123,10 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0041 skill-marketplace-curation](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | docs / discovery | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | VoltAgent awesome-agent-skills closes the editorial curation gap |
 | Stage 2 | [AOA-T-0042 upstream-skill-health-checking](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | evaluation / validation | Pack 5 skill ecosystem and curated inputs | adjacent lanes recorded; remains promoted | shskills, fast-agent, and Aescut lanes widen into install/update/security/registry behavior rather than minimal pre-surface source readiness |
 | Stage 2 | [AOA-T-0043 multi-source-primary-input-provenance](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | docs / guardrail | Pack 5 skill ecosystem and curated inputs | exact-fit second context; exits to canonical | StableNexus primary source-document plus supporting-source separation closes the bridge-ordering gap |
-| Stage 2 | [AOA-T-0020 evidence-note-provenance-lift](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
-| Stage 2 | [AOA-T-0046 repo-doc-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
-| Stage 2 | [AOA-T-0047 github-review-template-lift](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
-| Stage 2 | [AOA-T-0048 semantic-review-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | pending |  |
+| Stage 2 | [AOA-T-0020 evidence-note-provenance-lift](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | adjacent lane recorded; remains promoted | Agent Loom typed-record lane ruled adjacent because it lacks a derived note-kind/path provenance manifest or reader |
+| Stage 2 | [AOA-T-0046 repo-doc-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | first second-context support; remains promoted | `nuxt-content/nuxt-llms` `llms.txt` route recorded; needs stronger repo-owned route manifest before canonical promotion |
+| Stage 2 | [AOA-T-0047 github-review-template-lift](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | first second-context support; remains promoted | GitHub issue / pull request template intake recorded; needs review-specific template manifest before canonical promotion |
+| Stage 2 | [AOA-T-0048 semantic-review-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | adjacent lanes recorded; remains promoted | AI review, code review summary, quality-report, and scoring lanes ruled adjacent |
 | Stage 2 | [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | history / artifact | Pack 7 history artifacts remainder | pending |  |
 | Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | pending |  |
 | Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
@@ -237,8 +237,9 @@ CI-report artifact, history artifact, and runtime truth seam.
 7. Pack 5 - Skill Ecosystem And Curated Inputs: `AOA-T-0024`,
    `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, and `AOA-T-0043`
    are closed canonical rows; `AOA-T-0042` remains an adjacent hold
-8. Pack 6 - KAG / Source-Lift Evidence Prep: `AOA-T-0020`,
-   `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`
+8. Pack 6 - KAG / Source-Lift Evidence Prep: `AOA-T-0020`
+   adjacent lane recorded; `AOA-T-0046` and `AOA-T-0047` first
+   second-context support recorded; `AOA-T-0048` adjacent lanes recorded
 9. Pack 7 - History Artifacts remainder: `AOA-T-0045`
 10. Pack 8 - Internal Docs Practice: `AOA-T-0033`
 
@@ -625,6 +626,13 @@ Reject:
 
 ### AOA-T-0020: `evidence-note-provenance-lift`
 
+Stage 2 Pack 6 verdict, 2026-05-12: no exact-fit second consumer accepted.
+Agent Loom is a strong public markdown-first record corpus with `.loom/evidence`,
+`.loom/audit`, typed record headers, and source/path discipline, but the source
+surfaces preserve record grammar and repo-local graph readability rather than
+lifting note kind plus note path into a derived provenance manifest or reader.
+Keep it as adjacent searched-lane memory, not second-context support.
+
 Exact evidence:
 
 - committed markdown-first corpus;
@@ -639,6 +647,14 @@ Reject:
 - eval-only donor repetition already known in current lineage.
 
 ### AOA-T-0046: `repo-doc-surface-lift`
+
+Stage 2 Pack 6 verdict, 2026-05-12: first second-context support recorded.
+`nuxt-content/nuxt-llms` at `6faa1c45e082274267eae9295b501ab0053d0365`
+generates a `llms.txt` route from configured documentation sections, titles,
+descriptions, links, and notes. This fits the bounded repo-doc reader contract,
+but stays promoted because canonical promotion still needs a stronger
+repo-owned route manifest or reader outside framework-specific LLM docs
+generation.
 
 Exact evidence:
 
@@ -655,6 +671,14 @@ Reject:
 
 ### AOA-T-0047: `github-review-template-lift`
 
+Stage 2 Pack 6 verdict, 2026-05-12: first second-context support recorded.
+GitHub's public issue and pull request template surfaces turn authored
+repository templates into issue chooser entries, rendered issue forms, and pull
+request body intake. This fits the template-intake lift boundary as first
+support, but stays promoted because canonical promotion still needs a
+review-specific manifest or intake reader that does not widen into approval,
+triage, or review-state behavior.
+
 Exact evidence:
 
 - GitHub review templates are lifted into a downstream intake or review reader;
@@ -667,6 +691,13 @@ Reject:
 - review automation that owns verdicts rather than template intake.
 
 ### AOA-T-0048: `semantic-review-surface-lift`
+
+Stage 2 Pack 6 verdict, 2026-05-12: no exact-fit second consumer accepted.
+Public AI/code review and quality-report lanes remain adjacent when they
+summarize, score, or enforce review output without preserving authored
+semantic-review markdown as the source for a bounded cluster/finding/next-step
+reader. Keep the next search centered on authored review docs plus derived
+lookup, not review automation.
 
 Exact evidence:
 
