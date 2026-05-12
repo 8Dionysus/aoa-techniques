@@ -905,8 +905,8 @@
       ],
       "counts": {
         "total": 3,
-        "canonical": 2,
-        "promoted": 1,
+        "canonical": 3,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 3,
@@ -958,7 +958,7 @@
           "id": "AOA-T-0064",
           "name": "capability-discovery",
           "domain": "docs",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
           "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
           "kind": "discovery"

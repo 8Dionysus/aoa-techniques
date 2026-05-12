@@ -387,7 +387,7 @@ entries:
 - id: AOA-T-0064
   name: capability-discovery
   domain: docs
-  status: promoted
+  status: canonical
   kind: discovery
   family: capability-registry
 - id: AOA-T-0065

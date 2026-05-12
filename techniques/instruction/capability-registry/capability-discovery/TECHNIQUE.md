@@ -3,7 +3,7 @@ id: AOA-T-0064
 name: capability-discovery
 domain: docs
 kind: discovery
-status: promoted
+status: canonical
 origin:
   project: agntcy/dir
   path: README.md + proto/agntcy/dir/search/v1/record_query.proto + proto/agntcy/dir/search/v1/search_service.proto
@@ -17,12 +17,12 @@ tags:
   - capability
   - query
 summary: Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: requires
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # capability-discovery

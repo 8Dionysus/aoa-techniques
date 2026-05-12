@@ -1756,6 +1756,28 @@
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
+      "id": "AOA-T-0064",
+      "name": "capability-discovery",
+      "domain": "docs",
+      "kind": "discovery",
+      "status": "canonical",
+      "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
+      "current_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
+      "family": "capability-registry",
+      "proposed_trunk": "instruction",
+      "proposed_shelf": "capability-registry",
+      "proposed_future_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:capability-registry",
+        "domain:docs",
+        "kind:discovery",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0020",
       "name": "evidence-note-provenance-lift",
       "domain": "docs",
@@ -1886,28 +1908,6 @@
         "review_status:pilot-candidate"
       ],
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0064",
-      "name": "capability-discovery",
-      "domain": "docs",
-      "kind": "discovery",
-      "status": "promoted",
-      "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
-      "current_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
-      "family": "capability-registry",
-      "proposed_trunk": "instruction",
-      "proposed_shelf": "capability-registry",
-      "proposed_future_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:capability-registry",
-        "domain:docs",
-        "kind:discovery",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0094",

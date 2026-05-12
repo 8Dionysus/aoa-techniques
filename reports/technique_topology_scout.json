@@ -2093,6 +2093,34 @@
       }
     },
     {
+      "id": "AOA-T-0064",
+      "name": "capability-discovery",
+      "domain": "docs",
+      "kind": "discovery",
+      "status": "canonical",
+      "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
+      "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
+      "topology": {
+        "family": "capability-registry",
+        "capability_class": [
+          "read",
+          "choose",
+          "interpret"
+        ],
+        "substrate": [
+          "docs",
+          "config",
+          "data",
+          "tool-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating",
+          "public-share"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0020",
       "name": "evidence-note-provenance-lift",
       "domain": "docs",
@@ -2244,34 +2272,6 @@
         "execution_profile": "orchestration-required",
         "risk_posture": [
           "security-sensitive"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0064",
-      "name": "capability-discovery",
-      "domain": "docs",
-      "kind": "discovery",
-      "status": "promoted",
-      "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
-      "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
-      "topology": {
-        "family": "capability-registry",
-        "capability_class": [
-          "read",
-          "choose",
-          "interpret"
-        ],
-        "substrate": [
-          "docs",
-          "config",
-          "data",
-          "tool-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating",
-          "public-share"
         ]
       }
     },
