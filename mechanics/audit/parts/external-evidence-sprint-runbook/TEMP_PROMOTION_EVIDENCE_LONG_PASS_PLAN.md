@@ -16,8 +16,8 @@ closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
 19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, the
 Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, the
 Pack 23 closure for `AOA-T-0066`, the Pack 24 closure for `AOA-T-0067`, the
-Pack 25 closure for `AOA-T-0068`, and the Pack 26 closure for `AOA-T-0069`,
-the live promoted queue is `49`
+Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, and
+the Pack 27 closure for `AOA-T-0070`, the live promoted queue is `48`
 bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
@@ -134,8 +134,13 @@ Current live constraint:
   call identity, saved message history, explicit deferred results, and
   durable-execution support for long-running human-in-the-loop workflows, and
   exits the live promoted queue through canonical review;
-- the live generated catalog currently contains `49` promoted techniques and
-  `58` canonical techniques;
+- `AOA-T-0070` closed during Stage 4 with exact-fit `JaidedAI/EasyOCR`
+  evidence for separate detection and recognition methods, public bounding
+  box/text/confidence results, structured dict/JSON output, and visible CRAFT
+  detection plus CRNN/custom recognition stage boundaries, and exits the live
+  promoted queue through canonical review;
+- the live generated catalog currently contains `48` promoted techniques and
+  `59` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -147,7 +152,7 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, and Pack 26 closures is `49` promoted techniques,
+Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26, and Pack 27 closures is `48` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
@@ -155,7 +160,7 @@ with `AOA-T-0026`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`,
-`AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, and `AOA-T-0069` counted as closed rows rather
+`AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`, and `AOA-T-0070` counted as closed rows rather
 than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
@@ -238,7 +243,7 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | exact-fit second context; exits to canonical | `ai4curation/ai-blame` trace-derived line blame, session metadata, and transcript view workflows close the bounded code-to-evidence lineage gap |
 | Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | exact-fit second context; exits to canonical | `mvar-security/clawzero` deterministic execution boundary, explicit block decisions, adapter-level blocked execution, and witness artifacts close the bounded fail-closed evidence-gate gap |
 | Stage 4 | [AOA-T-0069 approval-bound-durable-jobs](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | agent-workflows / handoff | Pack 26 approval-bound durable jobs | exact-fit second context; exits to canonical | `pydantic/pydantic-ai` deferred approval/external-call identity plus durable execution support closes the bounded approval-bound durable-job gap; LangGraph supports checkpoint/thread/resume boundary semantics |
-| Stage 4 | [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | agent-workflows / ingest | Pack 27 OCR staged handoff | pending |  |
+| Stage 4 | [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | agent-workflows / ingest | Pack 27 OCR staged handoff | exact-fit second context; exits to canonical | `JaidedAI/EasyOCR` separate detection and recognition methods, bounding-box/text/confidence results, and structured dict/JSON output close the staged OCR handoff gap |
 | Stage 4 | [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 28 post-OCR template field extraction | pending |  |
 | Stage 4 | [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | agent-workflows / ingest | Pack 29 perceptual media dedupe | pending |  |
 | Stage 4 | [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 30 semantic media bucketing | pending |  |
@@ -430,6 +435,13 @@ families without collapsing them into one generic "agent workflow" proof lane.
     workflows and scheduler, queue, retry, dashboard, fleet, and platform
     governance stay outside the contract
 29. Pack 27 - OCR Staged Handoff: `AOA-T-0070`
+    exact-fit `JaidedAI/EasyOCR` evidence found: separate `detect` and
+    `recognize` methods, `readtext()` detection-before-recognition flow,
+    public bounding-box/text/confidence results, and dict/JSON structured
+    output close the OCR handoff gap while searchable-PDF generation, OCR
+    serving, model training, benchmarks, template extraction, semantic media
+    bucketing, and full document-understanding products stay outside the
+    contract
 30. Pack 28 - Post-OCR Template Field Extraction: `AOA-T-0071`
 31. Pack 29 - Perceptual Media Dedupe: `AOA-T-0072`
 32. Pack 30 - Semantic Media Bucketing: `AOA-T-0073`
@@ -473,14 +485,14 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `49` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `48` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
     `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`,
     `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
     `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`,
-    and `AOA-T-0069` rows against generated catalog truth.
+    `AOA-T-0069`, and `AOA-T-0070` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1641,6 +1653,42 @@ Reject:
 - generic confirmation prompts or one-shot fail-closed verdict gates;
 - importing product-specific durable-execution platforms instead of preserving
   the smaller approval-bound pause/resume contract.
+
+### AOA-T-0070: `two-stage-document-ocr-pipeline`
+
+Stage 4 Pack 27 verdict, 2026-05-12: exact-fit second context found.
+`JaidedAI/EasyOCR` keeps the reusable object as one staged OCR handoff outside
+the PaddleOCR/docTR donor family: detection stays separately visible,
+recognition consumes bounded text regions, and public results preserve source
+boxes, recognized text, and confidence before any downstream extraction or
+review layer interprets fields.
+
+Exact evidence:
+
+- EasyOCR's README exposes standard OCR output as bounding box, text, and
+  confidence tuples;
+- `easyocr/easyocr.py` defines separate `detect()` and `recognize()` methods;
+- `readtext()` reformats the image, runs detection to produce horizontal and
+  free-form region lists, then passes those lists into recognition;
+- dictionary and JSON output modes preserve boxes, text, and confidence as a
+  structured result surface;
+- `custom_model.md` keeps recognition-model concerns separate from the core
+  OCR handoff;
+- `trainer/craft/README.md` keeps CRAFT detection concerns separately visible;
+- `releasenotes.md` records separate `detect` and `recognize` method support.
+
+Reject:
+
+- EasyOCR installation, Docker, model downloads, language-pack management,
+  custom training, demos, business-support surfaces, or roadmap behavior as
+  invariant requirements;
+- OCRmyPDF searchable-PDF layering, Tesseract.js engine packaging, or Surya
+  document-understanding breadth as the primary proof;
+- PaddleOCR and docTR as second-context proof because they are the donor OCR
+  family for this bundle;
+- receipt schema law, invoice parsing, template extraction, semantic media
+  bucketing, review-queue automation, OCR serving, benchmarks, and total
+  document-understanding products.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

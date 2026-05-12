@@ -659,6 +659,33 @@
       }
     },
     {
+      "id": "AOA-T-0070",
+      "name": "two-stage-document-ocr-pipeline",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.",
+      "technique_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "topology": {
+        "family": "media-ingest",
+        "capability_class": [
+          "read",
+          "transform",
+          "mutate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "docs",
+          "media"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -731,33 +758,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0070",
-      "name": "two-stage-document-ocr-pipeline",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.",
-      "technique_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
-      "topology": {
-        "family": "media-ingest",
-        "capability_class": [
-          "read",
-          "transform",
-          "mutate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "docs",
-          "media"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },

@@ -37,10 +37,10 @@
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
-- a future stronger context should show another public workflow where OCR staging remains an explicit handoff seam before later extraction or review
+- at import time, the smallest remaining gap was one live second context beyond the donor family and documentation-first adaptation
+- that gap was later closed during the 2026-05-12 canonical review by `JaidedAI/EasyOCR`, which showed another public workflow where OCR staging remains an explicit handoff seam before later extraction or review
 
 ## Recommendation
 
 - accept `AOA-T-0070` as a bounded external import and publish it as `promoted`
-- defer any canonical review until another live adopter confirms that staged OCR handoff survives outside the current donor family
+- treat this review as the import receipt; later canonical status is governed by `notes/canonical-readiness.md` and `notes/adverse-effects-review.md`

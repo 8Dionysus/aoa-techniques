@@ -148,6 +148,12 @@ See also:
 |---|---|---|---|---|
 | approval-bound-durable-jobs checklist | `absent` | `8` | `techniques/governance/approval-evidence/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) |
 
+### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| two-stage-document-ocr-pipeline checklist | `absent` | `6` | `techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -165,12 +171,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| two-stage-document-ocr-pipeline checklist | `absent` | `6` | `techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/checks/two-stage-document-ocr-pipeline-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) |
 
 ### [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) - template-backed-field-extraction-after-ocr (`promoted`)
 

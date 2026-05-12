@@ -30,4 +30,4 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 
 - why this adaptation is reusable here: many document and screenshot workflows need OCR to remain a visible intermediate seam before later extraction, review, or normalization logic begins
 - downstream repo impact: likely follow-on imports stay in `aoa-techniques` first as bounded siblings, while later execution packaging belongs in `aoa-skills`
-- limits or follow-up review concerns: this import still needs one second live adopter beyond the donor OCR family and documentation-first adaptation before any canonical discussion is honest
+- limits or follow-up review concerns: the original import needed one live adopter beyond the donor OCR family and documentation-first adaptation before canonical discussion; the 2026-05-12 canonical review records EasyOCR as that independent reinforcement while keeping OCR serving, benchmark, training, and downstream extraction doctrine out of the bundle

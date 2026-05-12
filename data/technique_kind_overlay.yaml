@@ -423,7 +423,7 @@ entries:
 - id: AOA-T-0070
   name: two-stage-document-ocr-pipeline
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: ingest
   family: media-ingest
 - id: AOA-T-0071

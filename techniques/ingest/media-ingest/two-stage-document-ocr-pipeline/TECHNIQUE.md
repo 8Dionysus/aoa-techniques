@@ -3,7 +3,7 @@ id: AOA-T-0070
 name: two-stage-document-ocr-pipeline
 domain: agent-workflows
 kind: ingest
-status: promoted
+status: canonical
 origin:
   project: PaddleOCR + docTR
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - handoff
   - confidence
 summary: Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations: []
 evidence:
@@ -34,6 +34,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # two-stage-document-ocr-pipeline

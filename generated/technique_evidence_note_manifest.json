@@ -42245,6 +42245,189 @@
       "technique_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0070"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "two-stage-document-ocr-pipeline"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `JaidedAI/EasyOCR`"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that the bundle remains one staged OCR handoff contract, not a searchable-PDF product, model-serving recipe, OCR benchmark, template-backed field extractor, semantic media bucketer, receipt parser, or full document-understanding stack"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "detection misses text-bearing regions before recognition starts, so downstream extraction receives a clean-looking but incomplete handoff"
+                },
+                {
+                  "order": 2,
+                  "text": "recognition output is flattened into plain text and loses bounding boxes, layout handles, or confidence"
+                },
+                {
+                  "order": 3,
+                  "text": "low-confidence spans are normalized away before a reviewer or downstream extractor can inspect uncertainty"
+                },
+                {
+                  "order": 4,
+                  "text": "multi-column pages, skewed scans, screenshots, receipts, or mixed scripts produce region order that looks plausible but is semantically wrong"
+                },
+                {
+                  "order": 5,
+                  "text": "an engine-specific result shape leaks into the invariant handoff and makes later engine replacement expensive"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "staged handoff adds a small intermediate artifact where a fused end-to-end extractor may feel faster"
+                },
+                {
+                  "order": 2,
+                  "text": "preserving boxes and confidence can create storage and review overhead for very simple images"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers may over-trust numeric confidence if they treat OCR as final truth rather than intermediate evidence"
+                },
+                {
+                  "order": 4,
+                  "text": "public OCR examples can tempt contributors to import installation, model weights, training, serving, language-pack, or benchmark details into a technique that only needs a handoff seam"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using this bundle as a substitute for [template-backed-field-extraction-after-ocr](../../template-backed-field-extraction-after-ocr/TECHNIQUE.md) when the actual need is field semantics after OCR already exists"
+                },
+                {
+                  "order": 2,
+                  "text": "using this bundle as a substitute for [semantic-media-bucketing-with-vision-plus-ocr](../../semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) when the actual need is media classification with OCR as side evidence"
+                },
+                {
+                  "order": 3,
+                  "text": "converting every OCR result into one plain text stream and deleting region or confidence metadata because downstream code prefers convenience"
+                },
+                {
+                  "order": 4,
+                  "text": "treating one OCR engine's API, detector, recognizer, training pipeline, benchmark result, or serving topology as part of the canonical technique"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot trace a recognized text span back to a source region, line, bounding box, or layout handle"
+                },
+                {
+                  "order": 2,
+                  "text": "downstream field extraction claims merchant, amount, date, table, or class semantics before the OCR handoff is inspected"
+                },
+                {
+                  "order": 3,
+                  "text": "examples center model setup, server deployment, benchmark scores, or language-pack management more than the detect/layout -> recognize -> handoff contract"
+                },
+                {
+                  "order": 4,
+                  "text": "low-confidence or conflicting spans disappear from the output object"
+                },
+                {
+                  "order": 5,
+                  "text": "an engine swap requires rewriting downstream extraction because the handoff was donor-specific instead of generic"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "preserve region, line, bounding box, or layout handles with recognized text"
+                },
+                {
+                  "order": 2,
+                  "text": "carry confidence or explicit uncertainty markers into the handoff and keep low-confidence spans visible"
+                },
+                {
+                  "order": 3,
+                  "text": "keep field extraction, template matching, media bucketing, review queues, and automation as separate downstream consumers"
+                },
+                {
+                  "order": 4,
+                  "text": "document engine-specific APIs as examples only, not as invariant handoff law"
+                },
+                {
+                  "order": 5,
+                  "text": "test the smallest handoff shape by checking that a downstream consumer can inspect source reference, text, and confidence without donor-specific runtime code"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow ingest technique when OCR remains staged as detect/layout first, recognition second, and one structured handoff with source references and confidence before downstream extraction or review"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb searchable-PDF generation, OCR serving, model training, benchmark doctrine, receipt or invoice schema law, template extraction, semantic media bucketing, deletion/cleanup policy, or total document-understanding product behavior into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -42275,34 +42458,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around serving posture, benchmark claims, packaging, and document-specific extraction doctrine"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around serving posture, benchmark claims, packaging, and document-specific extraction doctrine"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same staged OCR seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same staged OCR seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor OCR family"
+                  "text": "`JaidedAI/EasyOCR` provides exact-fit public reinforcement beyond the donor OCR family: the public README exposes OCR results as bounding box, recognized text, and confidence tuples; the implementation keeps `detect()` and `recognize()` as separate methods; `readtext()` derives text regions first and passes those region lists into recognition; dictionary and JSON output modes preserve boxes, text, and confidence as one structured result surface"
+                },
+                {
+                  "order": 5,
+                  "text": "EasyOCR's current public source is Apache-2.0 licensed at commit `363afb184047ce452e436f4224f3098422df872e`; inspected files include `README.md` (`d7e7853811a65d0373c5dc77d2c91402c963d0fa`), `easyocr/easyocr.py` (`c08fe0388ddcfdd7d027ad68a16fb9079b5e9267`), `custom_model.md` (`3dead0b050ccaee5d24314b38f1025fc5fa67e1f`), `trainer/craft/README.md` (`823c83dc679a50196e4185ed5d4eb480d9bdc19f`), and `releasenotes.md` (`4c72a2f8da70e1af1a406eddd326b2d7e556cc6e`)"
+                },
+                {
+                  "order": 6,
+                  "text": "adjacent OCR lanes were checked and kept out of the canonical proof: OCRmyPDF is primarily searchable-PDF layering, Tesseract.js is OCR engine packaging rather than an explicit staged handoff contract, Surya widens into layout analysis, table recognition, and GPL-licensed document understanding, and PaddleOCR/docTR remain donor-family evidence rather than an independent second context"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement that repeats the bounded staged OCR handoff outside the donor family"
                 }
               ]
             },
@@ -42313,7 +42504,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is keeping OCR output reviewable and interchangeable before later extraction or parsing begins"
+                  "text": "this is the right canonical default when the main problem is keeping OCR output reviewable and interchangeable before later extraction or parsing begins"
                 },
                 {
                   "order": 2,
@@ -42322,6 +42513,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than multimodal bucketing or media-review techniques because it stays on staged document text extraction rather than taxonomy or dedupe behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the second public context repeats the key shape: detect text-bearing regions, recognize bounded segments, preserve source boxes and confidence, and leave later extraction or review as a separate consumer"
                 }
               ]
             },
@@ -42333,7 +42528,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -42348,7 +42543,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected EasyOCR source is public and Apache-2.0 licensed, and no source code, model weights, sample images, private documents, credentials, runtime paths, benchmark claims, app-specific extraction schemas, or deployment instructions were copied into the technique"
                 }
               ]
             },
@@ -42359,11 +42554,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that keeps OCR staging explicit as a structured handoff before later extraction or review"
+                  "text": "future sources can reinforce the default, but they must preserve the narrow boundary: visible region or layout handles, recognized text, confidence or uncertainty, one structured OCR handoff, and a stop-line before field extraction, semantic bucketing, automation, model serving, benchmarking, or full document-understanding systems"
                 }
               ]
             },
@@ -42374,11 +42569,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0070` `promoted`"
+                  "text": "move `AOA-T-0070` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the staged OCR handoff contract survives outside the donor OCR family"
+                  "text": "add an adverse-effects review to preserve the boundary between staged OCR handoff, later field extraction, media bucketing, searchable-PDF generation, OCR serving, benchmark doctrine, and full document-understanding stacks"
                 }
               ]
             }
@@ -42518,11 +42713,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "at import time, the smallest remaining gap was one live second context beyond the donor family and documentation-first adaptation"
                 },
                 {
                   "order": 2,
-                  "text": "a future stronger context should show another public workflow where OCR staging remains an explicit handoff seam before later extraction or review"
+                  "text": "that gap was later closed during the 2026-05-12 canonical review by `JaidedAI/EasyOCR`, which showed another public workflow where OCR staging remains an explicit handoff seam before later extraction or review"
                 }
               ]
             },
@@ -42537,7 +42732,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that staged OCR handoff survives outside the current donor family"
+                  "text": "treat this review as the import receipt; later canonical status is governed by `notes/canonical-readiness.md` and `notes/adverse-effects-review.md`"
                 }
               ]
             }
@@ -42655,7 +42850,7 @@
                 {
                   "order": 3,
                   "key": "limits or follow-up review concerns",
-                  "value_markdown": "this import still needs one second live adopter beyond the donor OCR family and documentation-first adaptation before any canonical discussion is honest"
+                  "value_markdown": "the original import needed one live adopter beyond the donor OCR family and documentation-first adaptation before canonical discussion; the 2026-05-12 canonical review records EasyOCR as that independent reinforcement while keeping OCR serving, benchmark, training, and downstream extraction doctrine out of the bundle"
                 }
               ]
             }
@@ -42704,6 +42899,31 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first corpus that records the staged OCR handoff pattern rather than shipping donor OCR engines or packaging"
+                },
+                {
+                  "order": 4,
+                  "key": "source",
+                  "value_markdown": "`https://github.com/JaidedAI/EasyOCR`"
+                },
+                {
+                  "order": 5,
+                  "key": "license",
+                  "value_markdown": "Apache-2.0"
+                },
+                {
+                  "order": 6,
+                  "key": "inspected commit",
+                  "value_markdown": "`363afb184047ce452e436f4224f3098422df872e`"
+                },
+                {
+                  "order": 7,
+                  "key": "inspected surfaces",
+                  "value_markdown": "`README.md`, `easyocr/easyocr.py`, `custom_model.md`, `trainer/craft/README.md`, and `releasenotes.md`"
+                },
+                {
+                  "order": 8,
+                  "key": "result",
+                  "value_markdown": "exact-fit public reinforcement beyond the PaddleOCR/docTR donor family"
                 }
               ]
             },
@@ -42726,7 +42946,11 @@
                 },
                 {
                   "order": 4,
-                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                  "text": "the bundle is kept to one technique doc, one checklist, one example, and bounded evidence notes"
+                },
+                {
+                  "order": 5,
+                  "text": "the 2026-05-12 canonical review now records EasyOCR as live second-context reinforcement because its public API and implementation preserve region handles, recognized text, and confidence as an OCR result before downstream application logic"
                 }
               ]
             },
@@ -42769,6 +42993,10 @@
                 {
                   "order": 3,
                   "text": "too much normalization can hide layout ambiguity that later extraction needed"
+                },
+                {
+                  "order": 4,
+                  "text": "OCR tool examples can tempt a bundle to absorb language packs, model serving, training, benchmark, or app-specific extraction details that belong outside this technique"
                 }
               ]
             },
@@ -42788,6 +43016,14 @@
                 {
                   "order": 3,
                   "text": "this adaptation narrows those behaviors into one reusable public technique for confidence-aware OCR handoff"
+                },
+                {
+                  "order": 4,
+                  "text": "EasyOCR repeats the same practical seam outside the donor family: detection produces horizontal and free-form region lists, recognition consumes those bounded regions, public results carry boxes plus text plus confidence, and simpler text-only output remains optional rather than the invariant handoff"
+                },
+                {
+                  "order": 5,
+                  "text": "EasyOCR also keeps detection and recognition model concerns separately visible through CRAFT detection documentation, custom recognition documentation, public release notes for separate `detect` and `recognize` methods, and roadmap language around swappable detection and recognition algorithms"
                 }
               ]
             },
@@ -42798,7 +43034,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over serving posture, packaging, or donor-specific field logic"
+                  "text": "works as a documentation-first second context and, after EasyOCR review, as cross-context reinforcement for canonical status without carrying over serving posture, packaging, language-model weights, benchmark claims, or donor-specific field logic"
                 }
               ]
             }
