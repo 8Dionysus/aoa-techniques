@@ -30,7 +30,8 @@
 - `aoa-skills/docs/OVERLAY_SPEC.md` explicitly says local overlays may change paths and commands but must not change the base skill boundary
 - `aoa-skills/generated/skill_catalog.min.json` keeps skills as source-owned artifacts with their own path, scope, and invocation metadata
 - `aoa-routing/README.md` and `aoa-routing/generated/task_to_surface_hints.json` keep `skill` as a separate source kind with inspect and expand surfaces instead of turning routing hints into skill meaning
+- 2026-05-12 public reinforcement: Claude Code skills keep reusable instructions in `SKILL.md` directories with optional supporting files and frontmatter, allow direct `/skill-name` invocation, and preserve invocation controls for task-like or side-effectful entries
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded docs technique for artifact ownership between reusable skills and command entrypoints
+- note: the adapted bundle stays readable as a bounded docs technique for artifact ownership between reusable skills and command entrypoints, with exact-fit public reinforcement outside the original plugin lineage

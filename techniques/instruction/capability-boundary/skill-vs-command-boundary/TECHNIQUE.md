@@ -3,7 +3,7 @@ id: AOA-T-0040
 name: skill-vs-command-boundary
 domain: docs
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: agentic-dev-team
   path: docs/skills.md
@@ -17,12 +17,12 @@ tags:
   - boundaries
   - capability
 summary: Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -34,6 +34,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # skill-vs-command-boundary

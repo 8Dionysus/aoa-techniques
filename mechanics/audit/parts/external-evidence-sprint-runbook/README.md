@@ -29,7 +29,7 @@ If the problem is really donor intake or a new extraction, use [External Import 
 - no donor-import workflow inside this runbook
 - no bundle widening just to fit a tempting external surface
 - no repeated searching of a lane that is already logged as exhausted without a new signal
-- no multi-technique promotion PRs
+- no opportunistic multi-technique promotion PRs; a coherent evidence pack is allowed only when every status change has bundle-local readiness notes and adverse-effect review support before shared queue docs move
 
 ## Current Sprint Order
 
@@ -37,12 +37,17 @@ Run the external evidence queue in this order:
 
 1. lead queue:
    - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) remains `promoted`; the 2026-05-12 Stage 1 long-pass sweep added searched-lane memory for context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces, but found no exact-fit second consumer
-2. markdown-first and fresh-extraction follow-through:
+2. residual skill-ecosystem source-readiness lane:
+   - [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
+     remains `promoted`; the 2026-05-12 Pack 5 search ruled out manifest/doctor,
+     registry-update, and security-risk lanes as adjacent, so reopen only from
+     a pre-surface source availability plus manifest-readiness signal
+3. markdown-first and fresh-extraction follow-through:
    - [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
    - [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
    - [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
    - [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
-3. long-gap holds:
+4. long-gap holds:
    - [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
      remains `promoted`; the 2026-05-12 Stage 2 long-pass search ruled out
      generic intent-classification, assistant-eval, and IBN benchmark lanes as
@@ -62,11 +67,13 @@ Closed precedents:
 - [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) has exited this sprint lane through a canonical review after Metaflow Devstack closed the one-entrypoint local lifecycle gap.
 - [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) has exited this sprint lane through a canonical review after LOCOMO / OpenClaw closed the baseline-first additive benchmark gap.
 - [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) have exited this sprint lane through a canonical review after ai-rulez, Claude Code memory/rules, and Cline Rules closed the managed fan-out, layered precedence, and fragment-first context gaps.
+- [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) have exited this sprint lane through a canonical review after managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus closed the mirror-provenance, versioned-capability, skill-command, editorial-curation, and primary/supporting source-ordering gaps.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
 
 - `AOA-T-0032` is still the clearest report-only blocker, but its currently known public lanes are searched; reopen it only from a new artifact-first signal instead of repeating context-compiler, fragment-assembly, graph, or repo-quality searches
+- `AOA-T-0042` is the only Pack 5 residual; reopen it from source-readiness-before-surfacing evidence rather than install/update, security scanning, registry governance, or generic monitoring overlap
 - `AOA-T-0020` plus `AOA-T-0046` through `AOA-T-0048` should not reopen until a real non-origin consumer exists
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real

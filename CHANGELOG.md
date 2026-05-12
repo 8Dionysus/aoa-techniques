@@ -22,6 +22,17 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0024 upstream-mirroring-with-provenance`, `AOA-T-0025
+  capability-spec-versioning`, `AOA-T-0040 skill-vs-command-boundary`,
+  `AOA-T-0041 skill-marketplace-curation`, and `AOA-T-0043
+  multi-source-primary-input-provenance` to `canonical` after
+  managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent
+  awesome-agent-skills, and StableNexus showed exact-fit public reinforcement
+  for mirror provenance, versioned capability contracts, skill-command
+  invocation boundaries, editorial skill curation, and primary/supporting
+  source ordering respectively, updating Audit queue posture from `74`
+  promoted techniques to `69` while keeping `AOA-T-0042` promoted with
+  adjacent skill-health lanes recorded
 - promoted `AOA-T-0027 cross-agent-skill-propagation`, `AOA-T-0029
   nested-rule-loading`, and `AOA-T-0030 fragmented-agent-context` to
   `canonical` after ai-rulez, Claude Code memory/rules, and Cline Rules

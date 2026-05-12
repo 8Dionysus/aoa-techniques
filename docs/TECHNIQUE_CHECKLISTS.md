@@ -408,6 +408,18 @@ See also:
 |---|---|---|---|---|
 | Relation Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/checks/relation-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
+### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
+
+### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Capability Spec Versioning Checklist | `absent` | `7` | `techniques/instruction/capability-registry/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
+
 ### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -432,6 +444,24 @@ See also:
 |---|---|---|---|---|
 | Public Safe Artifact Sanitization Checklist | `present` | `13` | `techniques/instruction/docs-boundary/public-safe-artifact-sanitization/checks/public-safe-artifact-sanitization-checklist.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) |
 
+### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Skill Vs Command Boundary Checklist | `absent` | `9` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
+
+### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Skill Marketplace Curation Checklist | `absent` | `9` | `techniques/instruction/skill-discovery/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
+
+### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -444,18 +474,6 @@ See also:
 |---|---|---|---|---|
 | Caution Lift Checklist | `present` | `5` | `techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/checks/caution-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) |
 
-### [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) - upstream-mirroring-with-provenance (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Upstream Mirroring With Provenance Checklist | `absent` | `7` | `techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/checks/upstream-mirroring-with-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md) |
-
-### [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) - capability-spec-versioning (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Capability Spec Versioning Checklist | `absent` | `7` | `techniques/instruction/capability-registry/capability-spec-versioning/checks/capability-spec-versioning-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
-
 ### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -467,24 +485,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Profile Preset Composition Checklist | `absent` | `12` | `techniques/instruction/instruction-surface/profile-preset-composition/checks/profile-preset-composition-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
-
-### [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) - skill-vs-command-boundary (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Skill Vs Command Boundary Checklist | `absent` | `9` | `techniques/instruction/capability-boundary/skill-vs-command-boundary/checks/skill-vs-command-boundary-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) |
-
-### [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) - skill-marketplace-curation (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Skill Marketplace Curation Checklist | `absent` | `9` | `techniques/instruction/skill-discovery/skill-marketplace-curation/checks/skill-marketplace-curation-checklist.md` | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
-
-### [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) - multi-source-primary-input-provenance (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
 ### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
 

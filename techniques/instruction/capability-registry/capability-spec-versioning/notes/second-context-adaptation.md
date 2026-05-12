@@ -28,6 +28,7 @@
 - the donor `README.md` now explicitly describes a capability system with rich specification and versioning
 - the same public README shows capability specifications, providers, composition, and retrieval as first-class concepts instead of burying capability meaning only in runtime code
 - this imported technique narrows that public donor surface to one reusable contract: versioned capability specification as the reviewable capability boundary
+- 2026-05-12 public reinforcement: the A2A Protocol uses a discoverable Agent Card with protocol version, supported interfaces, capabilities, skills, version-aware caching, and capability validation before optional operations are used
 
 ## Result
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific orchestration, persistence, or learning breadth
+- works as a documentation-first second context and now has exact-fit public protocol reinforcement without carrying over donor-specific orchestration, persistence, registry, or learning breadth

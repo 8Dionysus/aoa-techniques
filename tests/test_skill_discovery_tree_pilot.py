@@ -15,7 +15,7 @@ PILOT_BUNDLES = (
         "skill-marketplace-curation",
         "docs",
         "discovery",
-        "promoted",
+        "canonical",
         "techniques/docs/skill-marketplace-curation",
         "techniques/instruction/skill-discovery/skill-marketplace-curation",
     ),

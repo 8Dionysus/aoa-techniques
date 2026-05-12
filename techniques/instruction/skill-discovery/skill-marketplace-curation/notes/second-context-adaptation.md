@@ -32,7 +32,8 @@
 - the donor README describes the repository as a curated marketplace, names `AGENTS.md` as the universal discovery file, and uses categories plus featured-quality language to shape how skills are surfaced
 - the donor also keeps auto-sync and attribution in adjacent surfaces, which makes it possible to import curation separately from sync substrate
 - this imported technique narrows those behaviors into one reusable docs pattern for local discoverability over upstream-owned skills
+- 2026-05-12 public reinforcement: `VoltAgent/awesome-agent-skills` presents a curated public collection of agent skills grouped by source families and topic sections, with short descriptions and outbound source links rather than taking ownership of installer behavior or registry governance
 
 ## Result
 
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific installer, registry, or sync breadth
+- works as a documentation-first second context and now has exact-fit public curated-collection reinforcement without carrying over donor-specific installer, registry, or sync breadth

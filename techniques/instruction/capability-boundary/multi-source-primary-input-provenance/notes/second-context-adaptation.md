@@ -27,7 +27,8 @@
 - `aoa-kag` keeps the multi-source bridge contract explicit with exactly one `primary` input and additional `supporting` inputs
 - `Tree-of-Sophia` keeps conceptual origin authored while allowing derived bridge projection to stay downstream and explicit
 - the adapted bundle preserves the same smaller seam: source-priority ordering remains visible without importing graph traversal, note provenance handles, or ranking doctrine
+- 2026-05-12 public reinforcement: StableNexus Research Desk methodology requires notes to be source-led, show a primary source-document card, keep supporting sources separate, and separate external material from interpretation and operational implications
 
 ## Result
 - verdict: works
-- note: the adapted bundle reads as a bounded docs technique for explicit source-priority ordering
+- note: the adapted bundle reads as a bounded docs technique for explicit source-priority ordering, with exact-fit public bridge-method reinforcement outside the origin lineage

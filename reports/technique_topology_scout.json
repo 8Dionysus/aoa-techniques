@@ -1803,6 +1803,60 @@
       }
     },
     {
+      "id": "AOA-T-0024",
+      "name": "upstream-mirroring-with-provenance",
+      "domain": "docs",
+      "kind": "distribution",
+      "status": "canonical",
+      "summary": "Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.",
+      "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
+      "topology": {
+        "family": "instruction-surface",
+        "capability_class": [
+          "coordinate",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "docs",
+          "instructions",
+          "config",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "read-only",
+          "external-evidence"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0025",
+      "name": "capability-spec-versioning",
+      "domain": "docs",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.",
+      "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
+      "topology": {
+        "family": "capability-registry",
+        "capability_class": [
+          "write",
+          "mutate"
+        ],
+        "substrate": [
+          "docs",
+          "config",
+          "data",
+          "tool-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0027",
       "name": "cross-agent-skill-propagation",
       "domain": "docs",
@@ -1906,6 +1960,86 @@
       }
     },
     {
+      "id": "AOA-T-0040",
+      "name": "skill-vs-command-boundary",
+      "domain": "docs",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.",
+      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
+      "topology": {
+        "family": "capability-boundary",
+        "capability_class": [
+          "choose",
+          "interpret",
+          "write"
+        ],
+        "substrate": [
+          "docs",
+          "shell",
+          "tool-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "public-share"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0041",
+      "name": "skill-marketplace-curation",
+      "domain": "docs",
+      "kind": "discovery",
+      "status": "canonical",
+      "summary": "Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.",
+      "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
+      "topology": {
+        "family": "skill-discovery",
+        "capability_class": [
+          "read",
+          "choose",
+          "interpret"
+        ],
+        "substrate": [
+          "docs",
+          "config",
+          "data",
+          "tool-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating",
+          "external-evidence"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0043",
+      "name": "multi-source-primary-input-provenance",
+      "domain": "docs",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.",
+      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "topology": {
+        "family": "capability-boundary",
+        "capability_class": [
+          "choose",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "docs",
+          "graph-adjacent-artifacts",
+          "tool-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0020",
       "name": "evidence-note-provenance-lift",
       "domain": "docs",
@@ -1957,60 +2091,6 @@
       }
     },
     {
-      "id": "AOA-T-0024",
-      "name": "upstream-mirroring-with-provenance",
-      "domain": "docs",
-      "kind": "distribution",
-      "status": "promoted",
-      "summary": "Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.",
-      "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
-      "topology": {
-        "family": "instruction-surface",
-        "capability_class": [
-          "coordinate",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "docs",
-          "instructions",
-          "config",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "read-only",
-          "external-evidence"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0025",
-      "name": "capability-spec-versioning",
-      "domain": "docs",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy.",
-      "technique_path": "techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md",
-      "topology": {
-        "family": "capability-registry",
-        "capability_class": [
-          "write",
-          "mutate"
-        ],
-        "substrate": [
-          "docs",
-          "config",
-          "data",
-          "tool-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
-        ]
-      }
-    },
-    {
       "id": "AOA-T-0033",
       "name": "decision-rationale-recording",
       "domain": "docs",
@@ -2058,86 +2138,6 @@
           "runtime-state"
         ],
         "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0040",
-      "name": "skill-vs-command-boundary",
-      "domain": "docs",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy.",
-      "technique_path": "techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md",
-      "topology": {
-        "family": "capability-boundary",
-        "capability_class": [
-          "choose",
-          "interpret",
-          "write"
-        ],
-        "substrate": [
-          "docs",
-          "shell",
-          "tool-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "public-share"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0041",
-      "name": "skill-marketplace-curation",
-      "domain": "docs",
-      "kind": "discovery",
-      "status": "promoted",
-      "summary": "Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy.",
-      "technique_path": "techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md",
-      "topology": {
-        "family": "skill-discovery",
-        "capability_class": [
-          "read",
-          "choose",
-          "interpret"
-        ],
-        "substrate": [
-          "docs",
-          "config",
-          "data",
-          "tool-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating",
-          "external-evidence"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0043",
-      "name": "multi-source-primary-input-provenance",
-      "domain": "docs",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine.",
-      "technique_path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
-      "topology": {
-        "family": "capability-boundary",
-        "capability_class": [
-          "choose",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "docs",
-          "graph-adjacent-artifacts",
-          "tool-surfaces"
-        ],
-        "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
         ]

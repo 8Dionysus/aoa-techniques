@@ -28,6 +28,7 @@
 - the donor `README.md` describes `sources.yaml` as the upstream external skill manifest and `.source.json` as the preserved attribution marker for synced skills
 - the donor auto-sync section keeps upstream ownership explicit by naming the source repo, mirrored copy, and repeated refresh path
 - this imported technique narrows those behaviors into one reusable docs pattern for manifest-driven mirroring with provenance
+- 2026-05-12 public reinforcement: `managedcode/dotnet-skills` keeps upstream repositories in a dedicated `external-sources/` area, uses `vendir.yml` plus `vendir.lock.yml` for fetch-and-pin, copies upstream `SKILL.md`, `AGENT.md`, and `references/` content verbatim, and keeps local-only metadata in sibling `manifest.json` files
 
 ## Result
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific marketplace or registry breadth
+- works as a documentation-first second context and now has exact-fit public reinforcement beyond the original donor without carrying over marketplace, installer, or registry breadth
