@@ -58,18 +58,18 @@ See also:
 | Concrete Shell Composable Agent Invocation | `present` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/concrete-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
 | Minimal Shell-Composable Agent Invocation | `present` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/examples/minimal-shell-composable-agent-invocation.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
 
+### [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Render Truth Before Startup | `present` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/examples/minimal-render-truth-before-startup.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Render Truth Before Startup | `present` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/examples/minimal-render-truth-before-startup.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
 
 ### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
 

@@ -219,7 +219,7 @@ entries:
 - id: AOA-T-0036
   name: render-truth-before-startup
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: composition
   family: runtime-truth-lifecycle
 - id: AOA-T-0037

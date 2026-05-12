@@ -10,12 +10,13 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `81` techniques
-- matrix categorization status: `81` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `80` techniques
+- matrix categorization status: `80` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Aider's `.aider.chat.history.md` session-artifact family and committed public repository examples
-- prior graduation wave: [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
+- latest graduation wave: [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Dockform's plan/render-before-apply operator seam
+- prior graduation wave: [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Aider's `.aider.chat.history.md` session-artifact family and committed public repository examples
+- earlier graduation wave: [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
 - fresh extraction watch: [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md), [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), [AOA-T-0100](../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md), [AOA-T-0105](../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md), [AOA-T-0106](../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md), and [AOA-T-0107](../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) still need second-context evidence before canonical discussion is honest
 
@@ -48,6 +49,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 `AOA-T-0034` has since exited this matrix through a separate follow-up canonical review after an exact-fit second-consumer pass around `Truth-Zeeker-AI-Public`.
 `AOA-T-0023` has since exited this matrix through a separate follow-up canonical review after GitHub Copilot CLI's programmatic one-prompt path closed the missing external fast-path gap.
 `AOA-T-0026` has since exited this matrix through a separate follow-up canonical review after Aider's public `.aider.chat.history.md` artifact family closed the missing capture-as-artifact gap.
+`AOA-T-0036` has since exited this matrix through a separate follow-up canonical review after Dockform's plan/render-before-apply surface closed the missing render-truth review seam without widening into lifecycle, readiness, or deployment-preview authority.
 
 ## Readiness Lanes
 
@@ -56,7 +58,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `33` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `32` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `35` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `10` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -86,12 +88,11 @@ Pack 2 is now closed: [AOA-T-0028](../../../../techniques/execution/agent-workfl
 
 ### Pack 3 - Runtime Operator Stack
 
-Shared blocker: one more live consumer is needed so the stack reads as a portable operator family, not one donor lineage plus repo-local adaptation.
+Shared blocker: each remaining row still needs one more live consumer without collapsing profile composition, preflight, lifecycle control, or benchmark comparison into the now-canonical render-truth seam.
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
 | [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries. | One second downstream consumer using reviewable profile and preset layering. |
-| [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract and current lead candidate for this pack; the latest compose prestart lane remains adjacent because it proves a useful service preview before `up`, and the newer render-before-apply lane remains adjacent because Docker Compose `config` or `alpha dry-run` plus Helm `template` render or simulate commands without yet establishing a clearly bounded pre-start review seam over effective local runtime truth distinct from lifecycle, readiness, or deployment templating. | One second live context where rendered service or config truth is explicitly reviewed before startup as its own seam rather than as a helper command inside broader startup docs. |
 | [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | Selector-aware preflight sibling. | One second live context proving preflight stays separate from render review and lifecycle control. |
 | [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | Lifecycle sibling with clear exclusions around launcher doctrine. | One second live operator surface using one-entrypoint lifecycle ownership in practice. |
 | [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | Evaluation sibling that stays additive rather than policy-shaped. | One second downstream consumer proving baseline-first additive comparison stays bounded. |
@@ -449,8 +450,8 @@ Closed wave:
   changing status.
 
 1. `Wave A - evidence-prep leaders`
-   - `AOA-T-0032`, `AOA-T-0036`
-   - recently closed: `AOA-T-0026`
+   - `AOA-T-0032`
+   - recently closed: `AOA-T-0026`, `AOA-T-0036`
    - goal: close the smallest honest blocker for the strongest current candidates without flipping status before bundle-local approval
 2. `Wave B - pack proof waves`
    - shell-agent fast path

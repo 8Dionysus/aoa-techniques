@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0036 render-truth-before-startup` to `canonical` after the
+  Dockform plan/render-before-apply pass found a real public second context
+  where resolved runtime truth is rendered, reviewed, and confirmed before
+  startup without widening into lifecycle, readiness, deployment-preview, or
+  secret-publication authority, updating Audit queue posture from `81`
+  promoted techniques to `80`
 - promoted `AOA-T-0026 session-capture-as-repo-artifact` to `canonical`
   after the Aider `.aider.chat.history.md` artifact-family pass found a real
   public second context in committed repository-visible session-history

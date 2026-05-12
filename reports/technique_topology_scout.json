@@ -229,6 +229,33 @@
       }
     },
     {
+      "id": "AOA-T-0036",
+      "name": "render-truth-before-startup",
+      "domain": "agent-workflows",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
+      "topology": {
+        "family": "runtime-truth-lifecycle",
+        "capability_class": [
+          "coordinate",
+          "transform",
+          "mutate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "instructions",
+          "config"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -249,33 +276,6 @@
         "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0036",
-      "name": "render-truth-before-startup",
-      "domain": "agent-workflows",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
-      "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
-      "topology": {
-        "family": "runtime-truth-lifecycle",
-        "capability_class": [
-          "coordinate",
-          "transform",
-          "mutate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "instructions",
-          "config"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },

@@ -3,7 +3,7 @@ id: AOA-T-0036
 name: render-truth-before-startup
 domain: agent-workflows
 kind: composition
-status: promoted
+status: canonical
 origin:
   project: abyss-stack
   path: docs/RENDER_TRUTH.md
@@ -17,12 +17,12 @@ tags:
   - render
   - reviewable
 summary: Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-22
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -34,6 +34,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # render-truth-before-startup
@@ -179,9 +181,10 @@ See `checks/render-truth-before-startup-checklist.md`.
 
 - extracted from `abyss-stack`
 - promoted to `aoa-techniques` on 2026-03-22 as a bounded agent-workflow technique for pre-start rendered runtime review
+- promoted to `canonical` on 2026-05-12 after Dockform confirmed the same plan/render-before-apply seam over resolved Docker Compose runtime truth outside the donor lineage
 
 ## Future evolution
 
 - keep `contextual-host-doctor` as the readiness sibling rather than turning render review into host-preflight doctrine
 - keep `one-command-service-lifecycle` as the lifecycle sibling rather than absorbing startup control into this technique
-- add a second live context if another runtime stack uses the same pre-start rendered-truth seam
+- keep watching for drift between rendered-truth review, deployment previews, readiness checks, and lifecycle control as more Compose-native tools adopt plan/apply workflows

@@ -402,8 +402,8 @@
       ],
       "counts": {
         "total": 7,
-        "canonical": 2,
-        "promoted": 5,
+        "canonical": 3,
+        "promoted": 4,
         "by_domain": {
           "agent-workflows": 3,
           "docs": 4,
@@ -426,7 +426,7 @@
           "id": "AOA-T-0036",
           "name": "render-truth-before-startup",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
           "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md"
         },

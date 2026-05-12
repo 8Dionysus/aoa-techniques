@@ -34,7 +34,7 @@ AOA-T-0032,context-report-for-ci,evaluation,promoted,validation,evaluation-chain
 AOA-T-0033,decision-rationale-recording,docs,promoted,artifact,docs-boundary
 AOA-T-0034,public-safe-artifact-sanitization,docs,canonical,guardrail,docs-boundary
 AOA-T-0035,profile-preset-composition,docs,promoted,composition,instruction-surface
-AOA-T-0036,render-truth-before-startup,agent-workflows,promoted,composition,runtime-truth-lifecycle
+AOA-T-0036,render-truth-before-startup,agent-workflows,canonical,composition,runtime-truth-lifecycle
 AOA-T-0037,contextual-host-doctor,evaluation,promoted,validation,runtime-truth-lifecycle
 AOA-T-0038,one-command-service-lifecycle,agent-workflows,promoted,workflow,runtime-truth-lifecycle
 AOA-T-0039,baseline-first-additive-profile-benchmarks,evaluation,promoted,validation,runtime-truth-lifecycle
