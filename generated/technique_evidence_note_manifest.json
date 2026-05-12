@@ -16979,6 +16979,22 @@
                 {
                   "order": 2,
                   "text": "specifically, the bundle still needs another public repository or surface family that uses the same CI-facing context report as a real report artifact rather than only as imported documentation"
+                },
+                {
+                  "order": 3,
+                  "text": "latest evidence pass, 2026-05-12: defer still holds after searching public context-report, token-budget, repo-packing, LLM-ready-docs, and CI reporting surfaces"
+                },
+                {
+                  "order": 4,
+                  "text": "adjacent or insufficient surfaces from that pass: GitHub Agentic Workflows token and audit reports, Repomix repo-packing and token-count surfaces, Repo Tokens badge-style token counts, `pytest-llm-report` test/LLM annotation reports, Calcis prompt cost estimates, and `llms-txt-action` documentation conversion workflows"
+                },
+                {
+                  "order": 5,
+                  "text": "why those surfaces do not close the gap: each is useful but either owns context assembly, token/cost monitoring, documentation conversion, prompt/test reporting, or generic workflow audit rather than a read-only CI-facing report over composed-context source coverage plus token drift"
+                },
+                {
+                  "order": 6,
+                  "text": "next honest search shape: look for a public repository or docs-validation workflow that emits an artifact over assembled prompt or multi-fragment context coverage and token drift, while keeping composition, scoring, and remediation outside the report"
                 }
               ]
             },
