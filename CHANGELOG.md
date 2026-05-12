@@ -22,6 +22,14 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- closed the template modernization long pass across all `107` current bundles,
+  preserving the `proof/skill-support` pilot as the only source-shape repair
+  cohort, recording `104` held-no-repair rows, accepting no new
+  `TECHNIQUE.md` rewrites, no route-to-other-lane tails, no schema,
+  frontmatter, path, relation, support-file, validator, generated-surface, or
+  empirical small-agent proof changes, and keeping `Atomic move`,
+  `Topology fit`, and `Small-agent execution shape` as optional fixed-slot
+  sections rather than required corpus law
 - started the template modernization lane with a bounded
   `proof/skill-support` pilot, adding explicit `Atomic move`, `Topology fit`,
   and `Small-agent execution shape` sections to `AOA-T-0015`, `AOA-T-0016`,

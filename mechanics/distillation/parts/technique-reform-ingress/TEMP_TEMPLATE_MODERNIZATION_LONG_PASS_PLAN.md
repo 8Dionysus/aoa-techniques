@@ -2,8 +2,8 @@
 
 Source packet: [Technique Reform Ingress](README.md)
 
-Status: active temporary rhythm plan. It becomes superseded only after a
-template-modernization long-pass closeout ledger lands.
+Status: superseded temporary rhythm plan. The durable closeout is
+[Template Modernization Long-Pass Closeout Ledger](reviews/template-modernization-long-pass-closeout-ledger.md).
 
 This file replaces the too-small first expansion framing. The long pass is one
 continuous corpus pass with internal shelves and phases for reviewability. The
@@ -184,17 +184,17 @@ Use this loop for every bundle, including holds:
 
 ## Full Phase Status
 
-- [ ] Phase 0: base and pilot landing gate
-- [ ] Phase 1: full-corpus inventory and triage ledger
-- [ ] Phase 2: proof trunk review and repairs
-- [ ] Phase 3: execution trunk review and repairs
-- [ ] Phase 4: continuity trunk review and repairs
-- [ ] Phase 5: instruction trunk review and repairs
-- [ ] Phase 6: knowledge, history, ingest, and tool-use review and repairs
-- [ ] Phase 7: governance trunk review and repairs
-- [ ] Phase 8: recovery trunk review and repairs
-- [ ] Phase 9: generated parity, residual scan, and tail closure
-- [ ] Phase 10: long-pass closeout ledger and next-lane decision
+- [x] Phase 0: base and pilot landing gate
+- [x] Phase 1: full-corpus inventory and triage ledger
+- [x] Phase 2: proof trunk review and repairs
+- [x] Phase 3: execution trunk review and repairs
+- [x] Phase 4: continuity trunk review and repairs
+- [x] Phase 5: instruction trunk review and repairs
+- [x] Phase 6: knowledge, history, ingest, and tool-use review and repairs
+- [x] Phase 7: governance trunk review and repairs
+- [x] Phase 8: recovery trunk review and repairs
+- [x] Phase 9: generated parity, residual scan, and tail closure
+- [x] Phase 10: long-pass closeout ledger and next-lane decision
 
 ## Phase 0: Base And Pilot Landing Gate
 
@@ -684,3 +684,6 @@ Use this section during execution. Keep notes short and evidence-linked.
 
 - Corrected from an insufficient first expansion plan into a full current-corpus
   long-pass plan.
+- Closed as a full current-corpus review: `107/107` bundles covered,
+  `3` pilot-repaired, `104` held without new source repair, `0`
+  route-to-other-lane tails, `0` generated surfaces changed.

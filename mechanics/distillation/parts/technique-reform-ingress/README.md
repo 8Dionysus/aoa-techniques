@@ -747,21 +747,24 @@ source repair, accepts no owner-boundary relation repair, marks the temporary
 plan superseded, and routes the next technique-reform lane toward a small
 template modernization pilot rather than another broad boundary audit.
 
-Current latest template modernization pilot: `proof/skill-support` is the first
-source-shape cohort. `AOA-T-0015`, `AOA-T-0016`, and `AOA-T-0017` now expose
-explicit `Atomic move`, `Topology fit`, and `Small-agent execution shape`
-sections while preserving frontmatter, paths, relations, support files,
-template contracts, sibling-skill boundaries, and empirical-proof routing. The
-validator accepts these as optional fixed-slot template-modernization sections
-instead of turning them into a full-corpus required-section migration.
+Current latest template modernization closeout: the long pass is closed across
+all `107` current bundles. It preserves the `proof/skill-support` pilot as the
+only source-shape repair cohort, records `104` held-no-repair rows across the
+remaining corpus, accepts no new `TECHNIQUE.md` source rewrite, accepts no
+route-to-other-lane tails, changes no frontmatter, paths, relations, support
+files, schema, validator, or generated surfaces, and rejects required-section
+migration. The optional sections remain available only for future
+bundle-local repair when direct source reading proves that they materially
+improve `pick -> inspect -> execute`.
 
-Next clean move: review this pilot's generated parity and start the template
-modernization long pass from direct evidence, not from a global
-`old-template-watch` rewrite. Do not stop after the first comfortable cohort,
-do not restart portability or owner-boundary as broad audits, do not add future
-relation names such as `follows`, do not promote scout axes into frontmatter
-without a separate decision and validator wave, and do not run local
-small-agent proof without an `aoa-evals` proof surface.
+Next clean move: leave template modernization as a closed lane and move toward
+concrete content-level technique reform only when a chosen bundle or shelf has
+an actual source, selector, relation, portability, owner-boundary, or
+execution-shape problem. Do not restart the broad template pass, do not turn
+optional sections into corpus law, do not add future relation names such as
+`follows`, do not promote scout axes into frontmatter without a separate
+decision and validator wave, and do not run local small-agent proof without an
+`aoa-evals` proof surface.
 
 The first pilot migration has moved exactly `AOA-T-0051`, `AOA-T-0052`, and
 `AOA-T-0054` into `techniques/continuity/review-compaction/` without changing

@@ -220,8 +220,8 @@ Previous review breadcrumb preserved for parity: Run the `proof/owner-truth-clos
 
 | Field | Direction |
 |---|---|
-| Current posture | Capsules and generated catalogs already provide compact lookup surfaces, and the first template-modernization pilot has started over `proof/skill-support` by making the atom, topology fit, and small-agent execution shape explicit in source with optional fixed-slot validator support. |
-| Next honest move | Expand template modernization only through direct-read cohorts where the source shape materially improves `pick -> inspect -> execute`; review generated parity before any broader wave. |
+| Current posture | Capsules and generated catalogs already provide compact lookup surfaces; the template-modernization long pass is closed across all `107` current bundles with `3` pilot-repaired `proof/skill-support` leaves, `104` held-no-repair rows, no new source rewrites, and optional fixed-slot sections still rejected as a required corpus migration. |
+| Next honest move | Move from template-shape review to concrete content-level technique reform only where direct bundle reading finds a real source, selector, relation, portability, owner-boundary, or execution-shape problem. |
 | Guardrail | Small-agent usability does not mean autonomous selection; routing and composition may belong to larger agents or neighboring layers. |
 
 ## Horizon: Mechanics To Canon
