@@ -3,7 +3,7 @@ id: AOA-T-0054
 name: compaction-resilient-skill-loading
 domain: agent-workflows
 kind: recovery
-status: promoted
+status: canonical
 origin:
   project: joshuadavidthomas/opencode-agent-skills
   path: README.md + src/plugin.ts + src/skills.ts + .opencode/command/test-compaction.md
@@ -17,12 +17,12 @@ tags:
   - recovery
   - context
 summary: Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # compaction-resilient-skill-loading
@@ -186,3 +188,4 @@ See `checks/compaction-resilient-skill-loading-checklist.md`.
 - keep general context composition as a separate docs-side sibling instead of widening this bundle into full prompt reconstruction
 - keep marketplace discovery and install surfaces separate instead of folding them into recovery
 - add a stronger second live context if another public repository uses the same bounded post-compaction skill-recovery seam in practice
+- maintain the bounded distinction between post-compaction skill reattachment or re-invocation and broader context restoration as more agent systems expose skill lifecycle docs

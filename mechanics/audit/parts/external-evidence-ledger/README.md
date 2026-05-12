@@ -45,6 +45,7 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | Taskwarrior | A public task workflow can surface blocked, blocking, and unblocked work so blocker-free state determines the next eligible frontier before urgency, scheduling, context, sync, or broader task-management behavior. |
 | [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | Qodo / PR-Agent | A public review workflow can refresh review output after PR push or commit-like events, preserve visible findings as persistent review comments, and keep review artifacts distinct from auto-fix, auto-approval, merge, or CI-governance behavior. |
 | [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | Qodo / PR-Agent | A public review workflow can update one current findings surface across repeated commits, keep added/resolved findings visible by commit, and fold previous suggestions into bounded history without becoming backlog, remediation, or merge policy. |
+| [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | Claude Code skills lifecycle | A public agent skill system can carry invoked skills across auto-compaction within a budget, re-attach recent skill invocations after summary, and allow explicit re-invocation after compaction without becoming long-term memory, marketplace, installer, or full prompt-restoration doctrine. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
 
 ## Active Lead Ledger
@@ -430,6 +431,38 @@ Rejected as still adjacent:
 Future watch shape: keep `AOA-T-0036` centered on the rendered-truth review seam
 and route lifecycle control, host readiness, deployment preview, and benchmark
 comparison back to their sibling techniques.
+
+## AOA-T-0054 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0054` exited the
+promoted queue through a bundle-local canonical review.
+
+Searched and accepted:
+
+- Claude Code's official skills documentation records a skill content lifecycle
+  where invoked skill content enters the conversation and auto-compaction carries
+  invoked skills forward within a token budget.
+- The same lifecycle says compaction re-attaches recent skill invocations after
+  the summary, keeping bounded skill content rather than arbitrary session
+  history.
+- The same lifecycle gives an explicit post-compaction reload path: when a large
+  or older skill was truncated or dropped, re-invoke it after compaction to
+  restore the full content.
+
+Rejected as still adjacent:
+
+- Generic skill discovery, marketplace installation, plugin setup, and skill
+  registry surfaces remain adjacent unless the object is post-compaction skill
+  availability or reload.
+- Long-term memory, transcript replay, context-summary policy, and full prompt
+  reconstruction remain sibling lanes rather than evidence for this technique.
+- Product-wide skill lifecycle governance remains too broad unless it preserves
+  the narrow compaction recovery seam.
+
+Future watch shape: keep `AOA-T-0054` centered on post-compaction skill
+availability, bounded reattachment, and explicit reload from canonical sources;
+route compaction summary policy, memory recall, installer behavior, marketplace
+curation, and full context reconstruction to sibling techniques.
 
 ## Deferred Pack Watch
 

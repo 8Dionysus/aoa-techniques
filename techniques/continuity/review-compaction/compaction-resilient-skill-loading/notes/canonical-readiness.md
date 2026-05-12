@@ -5,29 +5,30 @@
 - name: compaction-resilient-skill-loading
 
 ## Verdict
-- bounded defer for now
+- approve for canonical promotion
 
 ## Evidence summary
 - external origin: the imported technique has a bounded donor contract and explicit exclusions around marketplace discovery, install flow, semantic matching, embeddings, and full prompt-state replay
-- second context: `aoa-techniques` now records the same post-compaction skill-recovery contract as a documentation-first adaptation with one example and one checklist
-- external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale
-- validation strength: the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor product family
+- donor proof: `joshuadavidthomas/opencode-agent-skills` listens for a compaction event, re-injects the available skills list, and drops stale loaded-skill bookkeeping so the recovered surface is availability plus reload rather than hidden state survival
+- second context: Claude Code's official skills documentation records a separate skill content lifecycle where invoked skills are carried through auto-compaction within budget, re-attached after summary, and can be re-invoked after compaction to restore full content if dropped or truncated
+- adaptation fit: both source families keep canonical skill files authoritative and preserve post-compaction skill availability without requiring full context reconstruction, long-term memory, marketplace installation, or product-width skill management
+- validation strength: the bundle now carries external origin, second-context adaptation, external import review, canonical readiness, checklist, example, and adverse-effects review support
 
 ## Default-use rationale
-- this is the right promoted default when the main problem is keeping skill availability recoverable after compaction without silently replaying full prompt state
+- this is the right canonical default when the main problem is keeping skill availability recoverable after compaction without silently replaying full prompt state
 - it remains narrower than [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition
 - it also remains narrower than [AOA-T-0027](../../../docs/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets
 
 ## Fresh public-safety check
-- review date: 2026-03-28
+- review date: 2026-05-12
 - result: pass
-- sanitization still holds: the bundle keeps only the reusable post-compaction recovery seam and excludes plugin install, marketplace breadth, semantic matching, embeddings, and donor runtime specifics
-- public reuse check: the example, checklist, and adaptation notes remain understandable without hidden donor-repo context
+- sanitization still holds: the bundle keeps only the reusable post-compaction recovery seam and excludes plugin install, marketplace breadth, semantic matching, embeddings, donor runtime specifics, memory recall, and full context replay
+- public reuse check: the example, checklist, adaptation notes, and Claude Code evidence remain understandable without hidden donor-repo or OS Abyss context
 
 ## Remaining gaps
-- the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation
-- specifically, the bundle still needs another public workflow surface that treats bounded post-compaction skill recovery as a reusable object without widening into general context restoration, memory, or marketplace doctrine
+- no promotion blocker remains for the current canonical claim
+- future evidence may split sibling techniques only if the object becomes compaction-summary policy, memory recall, full context reconstruction, installer behavior, marketplace curation, or product-wide skill lifecycle governance
 
 ## Recommendation
-- keep `AOA-T-0054` `promoted`
-- defer canonical promotion until another live adopter confirms that the compaction-resilient skill-recovery contract survives outside the donor product family
+- move `AOA-T-0054` to `canonical`
+- keep future post-compaction work bounded to skill availability and explicit reload unless a narrower sibling object is reviewed separately

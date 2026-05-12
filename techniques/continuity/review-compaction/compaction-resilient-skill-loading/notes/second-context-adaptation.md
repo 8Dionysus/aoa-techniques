@@ -30,6 +30,8 @@
 - the same README says the plugin listens for `session.compacted` events and re-injects the available skills list so the agent maintains access to skills throughout long sessions
 - the donor `event` handler for `session.compacted` calls `injectSkillsList(...)` and then deletes `loadedSkillsPerSession`, which shows the recovery seam restores bounded availability rather than pretending exact prior skill state survived untouched
 - the donor test command `test-compaction.md` verifies the re-injected skills list remains visible and that `use_skill` still works after manual compaction
+- Claude Code's official skills documentation at `https://code.claude.com/docs/en/skills` (accessed 2026-05-12) records an independent skill content lifecycle: invoked skills load into the conversation, auto-compaction carries invoked skills forward within a token budget, compaction re-attaches recent skill invocations after the summary, and a dropped or truncated skill can be re-invoked after compaction to restore the full content
+- the Claude Code surface is exact-fit second-context evidence because it treats post-compaction skill recovery as bounded skill-content availability and reload behavior, not as long-term memory, marketplace installation, arbitrary prompt-history replay, or full context reconstruction
 
 ## Result
-- works as a documentation-first second context and preserves one bounded post-compaction skill-recovery contract without carrying over plugin-host, marketplace, or product-width behavior
+- works as a cross-context adaptation: the donor plugin and Claude Code skill lifecycle both preserve the same bounded post-compaction skill-recovery contract while rejecting plugin-host, marketplace, long-term memory, and product-width context restoration behavior

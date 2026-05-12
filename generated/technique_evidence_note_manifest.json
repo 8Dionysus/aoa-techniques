@@ -30660,6 +30660,181 @@
       "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0054"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "compaction-resilient-skill-loading"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from Claude Code's documented skill content lifecycle"
+                },
+                {
+                  "order": 2,
+                  "text": "failure cases where post-compaction skill recovery is mistaken for full context restoration, memory recall, marketplace behavior, or hidden prompt replay"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a session re-attaches stale skill instructions after compaction even though the canonical source changed"
+                },
+                {
+                  "order": 2,
+                  "text": "a large skill is partially preserved after compaction and the agent treats the truncated copy as complete"
+                },
+                {
+                  "order": 3,
+                  "text": "the recovery surface lists skills that can no longer be loaded from canonical sources"
+                },
+                {
+                  "order": 4,
+                  "text": "post-compaction recovery happens invisibly, leaving reviewers unable to see what capability context was restored"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "operators may over-trust a recovered skill surface and skip re-reading the canonical skill when precision matters"
+                },
+                {
+                  "order": 2,
+                  "text": "automatic reattachment can increase token pressure if too many skills are kept alive after compaction"
+                },
+                {
+                  "order": 3,
+                  "text": "teams may treat skill recovery as memory continuity and accidentally preserve broader state than the technique permits"
+                },
+                {
+                  "order": 4,
+                  "text": "hidden or noisy recovery messages can make the session harder to audit"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "replaying arbitrary prior prompt text and calling it skill recovery"
+                },
+                {
+                  "order": 2,
+                  "text": "folding marketplace discovery, installer flow, or skill registry policy into the post-compaction recovery seam"
+                },
+                {
+                  "order": 3,
+                  "text": "treating post-compaction reattachment as proof that all previously loaded skill content survived unchanged"
+                },
+                {
+                  "order": 4,
+                  "text": "using the technique to avoid writing explicit handoff, summary, or verification artifacts"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "recovered skills cannot be traced to current canonical source paths"
+                },
+                {
+                  "order": 2,
+                  "text": "the recovery surface grows into full prompt reconstruction or memory recall"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers cannot tell whether a skill was reattached, re-invoked, or guessed from stale context"
+                },
+                {
+                  "order": 4,
+                  "text": "post-compaction failures disappear only after manually reloading the skill body"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep canonical skill source paths and reload commands explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "reattach or re-inject only bounded skill availability or bounded skill content, not arbitrary session history"
+                },
+                {
+                  "order": 3,
+                  "text": "re-invoke a skill after compaction when exact instructions matter or when truncation is possible"
+                },
+                {
+                  "order": 4,
+                  "text": "record the compaction boundary and recovered skill surface in a visible artifact when the session affects durable work"
+                },
+                {
+                  "order": 5,
+                  "text": "route memory recall, marketplace curation, installer behavior, and context reconstruction into sibling techniques instead of widening this one"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical recovery technique when the implementation keeps recovery bounded to skill availability, reattachment, and explicit reload from canonical sources"
+                },
+                {
+                  "order": 2,
+                  "text": "do not use the canonical status as approval for hidden state replay, long-term memory, automatic skill installation, or full prompt reconstruction"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -30690,7 +30865,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -30706,18 +30881,23 @@
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same post-compaction skill-recovery contract as a documentation-first adaptation with one example and one checklist"
+                  "key": "donor proof",
+                  "value_markdown": "`joshuadavidthomas/opencode-agent-skills` listens for a compaction event, re-injects the available skills list, and drops stale loaded-skill bookkeeping so the recovered surface is availability plus reload rather than hidden state survival"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "key": "second context",
+                  "value_markdown": "Claude Code's official skills documentation records a separate skill content lifecycle where invoked skills are carried through auto-compaction within budget, re-attached after summary, and can be re-invoked after compaction to restore full content if dropped or truncated"
                 },
                 {
                   "order": 4,
+                  "key": "adaptation fit",
+                  "value_markdown": "both source families keep canonical skill files authoritative and preserve post-compaction skill availability without requiring full context reconstruction, long-term memory, marketplace installation, or product-width skill management"
+                },
+                {
+                  "order": 5,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor product family"
+                  "value_markdown": "the bundle now carries external origin, second-context adaptation, external import review, canonical readiness, checklist, example, and adverse-effects review support"
                 }
               ]
             },
@@ -30728,7 +30908,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is keeping skill availability recoverable after compaction without silently replaying full prompt state"
+                  "text": "this is the right canonical default when the main problem is keeping skill availability recoverable after compaction without silently replaying full prompt state"
                 },
                 {
                   "order": 2,
@@ -30748,7 +30928,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -30758,12 +30938,12 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable post-compaction recovery seam and excludes plugin install, marketplace breadth, semantic matching, embeddings, and donor runtime specifics"
+                  "value_markdown": "the bundle keeps only the reusable post-compaction recovery seam and excludes plugin install, marketplace breadth, semantic matching, embeddings, donor runtime specifics, memory recall, and full context replay"
                 },
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, adaptation notes, and Claude Code evidence remain understandable without hidden donor-repo or OS Abyss context"
                 }
               ]
             },
@@ -30774,11 +30954,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no promotion blocker remains for the current canonical claim"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface that treats bounded post-compaction skill recovery as a reusable object without widening into general context restoration, memory, or marketplace doctrine"
+                  "text": "future evidence may split sibling techniques only if the object becomes compaction-summary policy, memory recall, full context reconstruction, installer behavior, marketplace curation, or product-wide skill lifecycle governance"
                 }
               ]
             },
@@ -30789,11 +30969,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0054` `promoted`"
+                  "text": "move `AOA-T-0054` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the compaction-resilient skill-recovery contract survives outside the donor product family"
+                  "text": "keep future post-compaction work bounded to skill availability and explicit reload unless a narrower sibling object is reviewed separately"
                 }
               ]
             }
@@ -31190,17 +31370,26 @@
                 {
                   "order": 4,
                   "text": "the donor test command `test-compaction.md` verifies the re-injected skills list remains visible and that `use_skill` still works after manual compaction"
+                },
+                {
+                  "order": 5,
+                  "text": "Claude Code's official skills documentation at `https://code.claude.com/docs/en/skills` (accessed 2026-05-12) records an independent skill content lifecycle: invoked skills load into the conversation, auto-compaction carries invoked skills forward within a token budget, compaction re-attaches recent skill invocations after the summary, and a dropped or truncated skill can be re-invoked after compaction to restore the full content"
+                },
+                {
+                  "order": 6,
+                  "text": "the Claude Code surface is exact-fit second-context evidence because it treats post-compaction skill recovery as bounded skill-content availability and reload behavior, not as long-term memory, marketplace installation, arbitrary prompt-history replay, or full context reconstruction"
                 }
               ]
             },
             {
               "heading": "Result",
               "order": 7,
-              "payload_type": "items",
-              "items": [
+              "payload_type": "fields",
+              "fields": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves one bounded post-compaction skill-recovery contract without carrying over plugin-host, marketplace, or product-width behavior"
+                  "key": "works as a cross-context adaptation",
+                  "value_markdown": "the donor plugin and Claude Code skill lifecycle both preserve the same bounded post-compaction skill-recovery contract while rejecting plugin-host, marketplace, long-term memory, and product-width context restoration behavior"
                 }
               ]
             }

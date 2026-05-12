@@ -94,18 +94,18 @@ See also:
 |---|---|---|---|
 | Minimal review-findings-compaction example | `present` | `techniques/continuity/review-compaction/review-findings-compaction/examples/minimal-review-findings-compaction.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
 
+### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal compaction-resilient skill loading | `present` | `techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal compaction-resilient skill loading | `present` | `techniques/continuity/review-compaction/compaction-resilient-skill-loading/examples/minimal-compaction-resilient-skill-loading.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
 
 ### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 

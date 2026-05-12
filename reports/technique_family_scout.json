@@ -1183,8 +1183,8 @@
       ],
       "counts": {
         "total": 3,
-        "canonical": 2,
-        "promoted": 1,
+        "canonical": 3,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 3,
           "docs": 0,
@@ -1236,7 +1236,7 @@
           "id": "AOA-T-0054",
           "name": "compaction-resilient-skill-loading",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
           "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
           "kind": "recovery"

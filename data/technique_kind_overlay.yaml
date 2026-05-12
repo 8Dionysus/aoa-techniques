@@ -327,7 +327,7 @@ entries:
 - id: AOA-T-0054
   name: compaction-resilient-skill-loading
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: recovery
   family: review-compaction
 - id: AOA-T-0055

@@ -761,7 +761,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("`validation`", decision)
         self.assertIn("`lift`", decision)
 
-    def test_0054_kind_remap_landed_without_status_change(self) -> None:
+    def test_0054_kind_remap_remains_classification_only_after_later_promotion(self) -> None:
         catalog = json.loads(
             (REPO_ROOT / "generated" / "technique_catalog.json").read_text(
                 encoding="utf-8"
@@ -788,7 +788,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
 
         self.assertEqual("agent-workflows", technique["domain"])
         self.assertEqual("recovery", technique["kind"])
-        self.assertEqual("promoted", technique["status"])
+        self.assertEqual("canonical", technique["status"])
         self.assertIn("Remap `AOA-T-0054` from `handoff` to `recovery`", decision)
         self.assertIn("classification correction only", decision)
         self.assertIn("`workflow`", decision)

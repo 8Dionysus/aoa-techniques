@@ -391,6 +391,34 @@
       }
     },
     {
+      "id": "AOA-T-0054",
+      "name": "compaction-resilient-skill-loading",
+      "domain": "agent-workflows",
+      "kind": "recovery",
+      "status": "canonical",
+      "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
+      "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "topology": {
+        "family": "review-compaction",
+        "capability_class": [
+          "recover",
+          "read",
+          "summarize"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "instructions",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "read-only",
+          "degraded-mode"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -411,34 +439,6 @@
         "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0054",
-      "name": "compaction-resilient-skill-loading",
-      "domain": "agent-workflows",
-      "kind": "recovery",
-      "status": "promoted",
-      "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
-      "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
-      "topology": {
-        "family": "review-compaction",
-        "capability_class": [
-          "recover",
-          "read",
-          "summarize"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "instructions",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "read-only",
-          "degraded-mode"
         ]
       }
     },

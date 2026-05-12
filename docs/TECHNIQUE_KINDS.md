@@ -31,7 +31,7 @@ See also:
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `0` | `11` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
 | `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `10` | `0` | `10` |
-| `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `6` | `0` | `6` |
+| `recovery` | Degraded continuation, regrounding, repair, rollback, or explicit recovery posture. | `6` | `1` | `5` |
 
 ## `workflow`
 
@@ -432,7 +432,7 @@ Do not use this when:
 - the technique only diagnoses a problem without shaping recovery or repair
 - the technique is a steady-state workflow with no degraded or repair posture
 
-Counts: `total` 6, `canonical` 0, `promoted` 6.
+Counts: `total` 6, `canonical` 1, `promoted` 5.
 
 | domain | entries |
 |---|---|
@@ -445,7 +445,7 @@ Counts: `total` 6, `canonical` 0, `promoted` 6.
 
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
-| [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `promoted` | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
+| [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `canonical` | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. | [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) |
 | [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | `agent-workflows` | `promoted` | Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout. | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) |
 | [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | `agent-workflows` | `promoted` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 | [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) | `system-recovery` | `promoted` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) |

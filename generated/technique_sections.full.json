@@ -4445,7 +4445,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep general context composition as a separate docs-side sibling instead of widening this bundle into full prompt reconstruction\n- keep marketplace discovery and install surfaces separate instead of folding them into recovery\n- add a stronger second live context if another public repository uses the same bounded post-compaction skill-recovery seam in practice"
+          "content_markdown": "- keep general context composition as a separate docs-side sibling instead of widening this bundle into full prompt reconstruction\n- keep marketplace discovery and install surfaces separate instead of folding them into recovery\n- add a stronger second live context if another public repository uses the same bounded post-compaction skill-recovery seam in practice\n- maintain the bounded distinction between post-compaction skill reattachment or re-invocation and broader context restoration as more agent systems expose skill lifecycle docs"
         }
       ]
     },
