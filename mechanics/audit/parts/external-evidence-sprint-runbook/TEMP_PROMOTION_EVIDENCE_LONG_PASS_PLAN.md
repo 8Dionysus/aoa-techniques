@@ -80,7 +80,7 @@ result has been distilled into the appropriate durable surface.
 | stage | technique | domain/kind | pack or lane | outcome | durable note |
 |---|---|---|---|---|---|
 | Stage 1 | [AOA-T-0032 context-report-for-ci](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | evaluation / validation | lead queue; Pack 4 report-only proof lane | adjacent lanes recorded; remains promoted | `external-evidence-ledger` Stage 1 notes; bundle readiness gap sharpened |
-| Stage 2 | [AOA-T-0005 new-intent-rollout-checklist](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | agent-workflows / workflow | Pack 1 long-gap donor lane | pending |  |
+| Stage 2 | [AOA-T-0005 new-intent-rollout-checklist](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | agent-workflows / workflow | Pack 1 long-gap donor lane | adjacent lanes recorded; remains promoted | `external-evidence-ledger` Stage 2 notes; intent-eval and benchmark false-positive lanes ruled out |
 | Stage 2 | [AOA-T-0022 risk-and-negative-effect-lift](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | docs / lift | Pack 1 long-gap donor lane | pending |  |
 | Stage 2 | [AOA-T-0035 profile-preset-composition](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | docs / composition | Pack 3 runtime operator stack | pending |  |
 | Stage 2 | [AOA-T-0037 contextual-host-doctor](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | evaluation / validation | Pack 3 runtime operator stack | pending |  |

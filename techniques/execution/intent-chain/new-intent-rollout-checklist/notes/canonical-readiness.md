@@ -24,6 +24,17 @@
 - sanitization still holds: the public technique keeps the reusable rollout checklist and removes donor-specific workflow names, payloads, and private operational detail
 - public reuse check: the repo-local examples and triage note are understandable without origin-project access, and the merged `atm10-agent` rollout records materially strengthen origin proof, but they still do not create a second non-origin live context for canonical promotion
 
+- 2026-05-12 long-pass searched-lane result: no exact-fit second consumer found in the Stage 2 promotion-evidence pass
+- searched lane: public `expected_intent_type` / intent-evaluation repositories, assistant conversation-eval documentation, and chatbot/IBN intent-testing surfaces
+- adjacent public examples: PRISM Monitor's manufacturing
+  intent-classification dataset, ARTE Chatbot's `intent_type` evaluation
+  harness, CS4730 IBN benchmark fixtures, Rasa assistant testing, and Botpress
+  ADK evals all show useful intent or behavior validation patterns, but they do
+  not show one new intent being rolled into an existing dry-run chain through a
+  canonical fixture, dedicated smoke path, strict contract summary, published
+  review surface, and regression proof
+- conclusion: these lanes strengthen the negative boundary around the technique, but they do not close the second-context gap
+
 ## Remaining gaps
 - the bundle still needs one non-origin live reuse context beyond `atm10-agent` and the repo-local rollout sketch before canonical promotion would be justified
 - a future second live context should show the same checklist succeeding in practice on another shared intent chain, not only in the origin project plus a public-safe example form
