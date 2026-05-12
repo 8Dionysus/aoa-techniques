@@ -632,6 +632,33 @@
       }
     },
     {
+      "id": "AOA-T-0069",
+      "name": "approval-bound-durable-jobs",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
+      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
+      "topology": {
+        "family": "approval-evidence",
+        "capability_class": [
+          "handoff",
+          "choose",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only",
+          "approval-required"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -704,33 +731,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0069",
-      "name": "approval-bound-durable-jobs",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
-      "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
-      "topology": {
-        "family": "approval-evidence",
-        "capability_class": [
-          "handoff",
-          "choose",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only",
-          "approval-required"
         ]
       }
     },

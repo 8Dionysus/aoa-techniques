@@ -1417,8 +1417,8 @@
       ],
       "counts": {
         "total": 2,
-        "canonical": 1,
-        "promoted": 1,
+        "canonical": 2,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 2,
           "docs": 0,
@@ -1460,7 +1460,7 @@
           "id": "AOA-T-0069",
           "name": "approval-bound-durable-jobs",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
           "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
           "kind": "handoff"

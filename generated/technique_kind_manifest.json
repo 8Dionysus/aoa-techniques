@@ -849,8 +849,8 @@
       ],
       "counts": {
         "total": 11,
-        "canonical": 5,
-        "promoted": 6,
+        "canonical": 6,
+        "promoted": 5,
         "by_domain": {
           "agent-workflows": 11,
           "docs": 0,
@@ -902,6 +902,14 @@
           "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0069",
+          "name": "approval-bound-durable-jobs",
+          "domain": "agent-workflows",
+          "status": "canonical",
+          "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
+          "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0058",
           "name": "receipt-confirmed-handoff-packet",
           "domain": "agent-workflows",
@@ -916,14 +924,6 @@
           "status": "promoted",
           "summary": "Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone.",
           "technique_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0069",
-          "name": "approval-bound-durable-jobs",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
-          "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0077",

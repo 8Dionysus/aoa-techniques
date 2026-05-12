@@ -49,6 +49,7 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | SpecForge-Agent plus GitHub Spec Kit boundary check | A public agent workflow can keep requirements, design, and task artifacts distinct before implementation, with design derived from approved requirements and tasks derived from design plus requirements, without making the technique absorb full SDD, command, approval, memory, or implementation doctrine. |
 | [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | `mycel` plus MCP Agent Mail license-bound adjacent check | A public AI-agent mailbox can keep stable message identity, bounded thread lanes, ordered replay, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows without making ACKs remote delivery proof or absorbing handoff authorization, transcript history, trust policy, encryption, adapters, or messaging-platform doctrine. |
 | [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | `cwc-long-running-agents` plus `openclaw-memory-kit` | A public long-running agent harness and a public OpenClaw memory kit both keep a structured progress or handoff packet visible before restart, compaction, or wake-up without making the packet a transcript, mailbox, git-verification, memory-search, hook-policy, cron-memory, or harness-governance system. |
+| [AOA-T-0069](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | `pydantic/pydantic-ai` plus LangGraph boundary check | A public agent framework can end an agent run on deferred approvals or external calls, preserve pending-call identity, resume with saved message history and deferred results, and pair that with durable execution support without making the technique a scheduler or workflow-platform doctrine. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
 
 ## AOA-T-0057 External Evidence Notes
@@ -528,6 +529,63 @@ evidence surface records the verdict basis. Do not reopen from broad policy
 authoring, human approval, signed-witness infrastructure, compliance export,
 attack-pack validation, gateway products, sandboxing, or durable job
 orchestration unless they expose the bounded fail-closed evidence gate itself.
+
+## AOA-T-0069 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`pydantic/pydantic-ai` at
+`ac684b2638ee1095077ece25b7fed5abe6d14a25` provides the clean primary public
+source for Pack 26. The repository is MIT licensed and frames the object as
+deferred tool approval or external execution in an agent run, with durable
+execution adapters for long-running and human-in-the-loop workflows. LangGraph
+at `4a86705bd7f951c6c2cf3dd863f3f12521d9e221` provides supporting
+checkpoint/thread/resume boundary evidence, but not the primary proof.
+
+Accepted evidence:
+
+- Pydantic AI `docs/deferred-tools.md` describes tool calls that cannot run in
+  the same agent process because they need user approval, an external service,
+  or longer background work.
+- The stop-the-world flow ends the current run with `DeferredToolRequests`;
+  the caller gathers approvals, denials, or external results and starts a new
+  run with the original message history plus `DeferredToolResults`.
+- Approval requests carry tool name, validated arguments, unique tool call ID,
+  and optional metadata; results map back by tool call ID and can approve,
+  deny, override arguments, or return external call results.
+- External calls can carry a separate task ID in metadata so a background
+  worker or later process can match completed work back to the deferred tool
+  call before resuming.
+- Pydantic AI `docs/durable_execution/overview.md` says durable agents preserve
+  progress across transient failures, application errors or restarts, and
+  long-running, asynchronous, human-in-the-loop workflows through public
+  durable-system integrations.
+- LangGraph's official durable execution and interrupt docs support the
+  boundary shape: checkpointed state, `thread_id` as persistent cursor,
+  indefinite waits for external input, and `Command(resume=...)` continuation.
+
+Rejected or bounded:
+
+- Do not import Pydantic AI model names, decorator APIs, toolset classes,
+  capability hooks, test cassette contents, adapter packages, install commands,
+  or public-interface wording as technique requirements.
+- Do not import Temporal, DBOS, Prefect, Restate, LangGraph, or any other
+  durable backend as the invariant implementation. Durable state, saved
+  message history, a persisted checkpoint, or equivalent pending-call identity
+  is enough.
+- Do not treat generic human approval as sufficient proof; this bundle needs
+  longer-running continuity across an approval or external-result seam.
+- Treat Prefect examples, Temporal samples, HumanLayer approval/session
+  surfaces, and broad workflow products as adjacent pressure unless a future
+  pass needs a separate scheduler, queue, or agent-session product sibling.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: one durable or serialized pending
+unit, one explicit approval or external-result seam, and continuation from
+durable state, saved history, checkpoint, or equivalent identity. Do not reopen
+from one-shot confirmation prompts, fail-closed verdict gates, generic queues,
+scheduler platforms, retry doctrine, worker-fleet governance, dashboards, or
+total durable-execution product behavior unless they expose the bounded
+approval-bound durable-job seam itself.
 
 ## AOA-T-0065 External Evidence Notes
 

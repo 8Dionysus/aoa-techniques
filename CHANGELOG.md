@@ -22,6 +22,18 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0069 approval-bound-durable-jobs` to `canonical` after
+  `pydantic/pydantic-ai` showed exact-fit public reinforcement for deferred
+  approval and external-tool calls that preserve pending call identity, return
+  `DeferredToolRequests`, gather approval or result input outside the agent
+  run, and resume with original message history plus `DeferredToolResults`,
+  while its durable-execution surface supports long-running asynchronous and
+  human-in-the-loop workflows; LangGraph interrupts were used only as
+  supporting checkpoint/thread/resume semantics and scheduler products, queue
+  platforms, workflow governance, fleet control, retry doctrine, generic
+  confirmation prompts, and full durable-execution product behavior stay
+  outside the bundle, updating Audit queue posture from `50` promoted
+  techniques to `49`
 - promoted `AOA-T-0068 fail-closed-evidence-gate` to `canonical` after
   `mvar-security/clawzero` showed exact-fit public reinforcement for a
   deterministic execution boundary between model output and tool/process

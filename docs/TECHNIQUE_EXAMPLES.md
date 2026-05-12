@@ -148,6 +148,12 @@ See also:
 |---|---|---|---|
 | minimal fail-closed-evidence-gate | `present` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
 
+### [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal approval-bound-durable-jobs | `present` | `techniques/governance/approval-evidence/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -166,12 +172,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal approval-bound-durable-jobs | `present` | `techniques/governance/approval-evidence/approval-bound-durable-jobs/examples/minimal-approval-bound-durable-jobs.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) |
 
 ### [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) - two-stage-document-ocr-pipeline (`promoted`)
 

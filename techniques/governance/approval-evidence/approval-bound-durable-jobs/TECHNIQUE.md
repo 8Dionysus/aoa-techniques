@@ -3,7 +3,7 @@ id: AOA-T-0069
 name: approval-bound-durable-jobs
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: Clyra-AI/gait
   path: docs/durable_jobs.md + README.md
@@ -17,12 +17,12 @@ tags:
   - checkpoint
   - resume
 summary: Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # approval-bound-durable-jobs
