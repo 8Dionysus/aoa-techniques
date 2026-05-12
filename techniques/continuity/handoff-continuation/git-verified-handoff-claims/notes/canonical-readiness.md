@@ -13,6 +13,7 @@
 - second context: `aoa-techniques` now records the same handoff-verification seam as a documentation-first adaptation with one example and one checklist
 - external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale
 - validation strength: the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family
+- 2026-05-12 searched lanes: `confab-framework`, `marcusglee11/LifeOS`, `antonwing77/session-handoff`, `HyunKN/Mimir-Skills`, SLOPE, and `cwc-long-running-agents` were inspected and recorded as adjacent or partial rather than exact-fit proof
 
 ## Default-use rationale
 
@@ -31,6 +32,7 @@
 
 - the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
 - specifically, the bundle still needs another public workflow surface where concrete handoff claims are checked against repo evidence before continuation without widening into generic code review or provenance doctrine
+- future searches should distinguish handoff-claim verification from broad claim hygiene, outbound handoff capture, branch-state summaries, session-start orientation, generic git-status checks, and full provenance or review frameworks
 
 ## Recommendation
 

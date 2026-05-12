@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- recorded the 2026-05-12 Pack 16 evidence pass for `AOA-T-0059
+  git-verified-handoff-claims`; `confab-framework`, LifeOS handoff-pack,
+  `session-handoff`, Mimir handoff-context, SLOPE compaction handoffs, and
+  `cwc-long-running-agents` were logged as adjacent or partial rather than
+  canonical proof, so the bundle remains `promoted` and Audit queue counts stay
+  unchanged
 - recorded the 2026-05-12 Pack 15 evidence pass for `AOA-T-0058
   receipt-confirmed-handoff-packet`; `cmux` request ACKs, Gas Town handoff
   mail/session cycling/escalation ACKs, and exact phrase GitHub code-search
