@@ -264,6 +264,62 @@ paths, first-look surfaces, and an explicit boundary away from architecture
 inventories, topology stacks, dispatch policy, and full workspace-platform
 governance.
 
+## AOA-T-0062 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`cloudflare/cloudflare-docs` at
+`037df074e87cd773eb92836c81994db5e37ee5b9`, file
+`src/content/docs/agents/concepts/long-running-agents.mdx` sha
+`482c32aed0eb66f65ed1565996606a3dbdfbdd88`, provides the clean public source
+for Pack 19. The repository is CC-BY-4.0 licensed.
+
+Accepted evidence:
+
+- The guide frames long-running agents as durable identities whose state,
+  schedules, SQL data, and fiber checkpoints survive restarts and hibernation.
+- `runFiber()` checkpoints intermediate state through `stash()` and recovers
+  from the last checkpoint after eviction or restart.
+- The planning strategy persists a `Plan` with ordered `steps`,
+  `currentStep`, timestamps, and per-step statuses including `pending`,
+  `in_progress`, `complete`, `failed`, and `skipped`.
+- `executeNextStep` runs one step, marks it complete with a result, advances
+  `currentStep`, and schedules the next step only after that bounded slice
+  closes.
+- On error, the current step is marked `failed` rather than silently advancing.
+- The guide names recovery, visible progress, re-planning after failure or
+  changed requirements, human oversight approval checkpoints, and context
+  reconstruction as the advantages of the plan boundary.
+- The summary keeps the loop narrow: plans break goals into steps, execution
+  runs steps one at a time, recovery resumes from the last checkpoint, and the
+  long-running agent eventually ends.
+
+Rejected or bounded:
+
+- Do not import Cloudflare Durable Objects, Workers, scheduling APIs, fibers,
+  Workflows, sub-agent RPC, storage, hibernation, deployment, or lifecycle
+  management into the technique.
+- Treat `ax-llm/ax` as adjacent context-compression evidence: its checkpointed
+  context policy, actor turns, clarification resume state, and status callbacks
+  preserve runtime and prompt continuity, but they do not define a bounded
+  work-episode loop with a checkpoint artifact and continue / stop / escalate
+  decision before the next episode.
+- Treat `Haserjian/assay` as adjacent proof-gate evidence: its episode-native
+  runtime SDK seals checkpoints and gates settlement through verified evidence
+  with escalate or alert outcomes, but the primary object is evidence
+  settlement, not longer-work segmentation over repeated agent episodes.
+- Exact-phrase GitHub code-search lanes around `episode`, `checkpoint`,
+  `continue`, `stop`, and `escalate` produced no cleaner source before
+  code-search rate limiting stopped the broader pass.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: one bounded long-running work slice,
+one visible checkpoint or failure state, an explicit continue / stop /
+escalate or re-plan decision, and a later slice that resumes from durable
+state rather than hidden memory. Do not reopen from generic multi-step plans,
+workflow engines, runtime checkpointing, context compression, settlement
+gates, or autonomous-platform lifecycle docs unless they expose the bounded
+episode-loop seam itself.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

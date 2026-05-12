@@ -36329,6 +36329,187 @@
       "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0062"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "episode-bounded-agent-loop"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for dividing longer agent work into bounded checkpointed episodes or equivalent durable steps before deciding whether to continue, stop, or escalate"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the episode loop without turning it into session-opening ritual, handoff packet doctrine, git-claim verification, proof-gate policy, durable-job orchestration, or full autonomous-agent lifecycle governance"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "an episode goal is too broad, so the checkpoint becomes a vague progress note rather than a real boundary"
+                },
+                {
+                  "order": 2,
+                  "text": "continuation happens automatically after a checkpoint without a visible continue, stop, or escalate decision"
+                },
+                {
+                  "order": 3,
+                  "text": "the next episode starts from hidden model memory or inherited narration instead of the checkpointed state"
+                },
+                {
+                  "order": 4,
+                  "text": "failed, blocked, or unsafe episode outcomes are normalized as \"continue later\" without being marked as stop or escalation triggers"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "small tasks can gain unnecessary ceremony when one bounded pass would have been clearer"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can mistake segmented work for governed work even when the checkpoints are weak"
+                },
+                {
+                  "order": 3,
+                  "text": "checkpoint artifacts can become noisy if they collect every runtime detail instead of the state needed for the next bounded slice"
+                },
+                {
+                  "order": 4,
+                  "text": "the technique can invite broad platform language if schedules, fibers, child agents, budgets, supervision, or proof gates are folded into the episode seam"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating any multi-step plan as an episode loop even when there is no reviewable boundary between steps"
+                },
+                {
+                  "order": 2,
+                  "text": "using checkpoints as decorative summaries while continuing by momentum"
+                },
+                {
+                  "order": 3,
+                  "text": "hiding escalation behind retries, schedules, or background workers"
+                },
+                {
+                  "order": 4,
+                  "text": "importing workflow engines, Durable Object lifecycle, budget caps, task integrity systems, or proof-pack settlement into the technique"
+                },
+                {
+                  "order": 5,
+                  "text": "merging the episode loop with startup rituals, structured handoff packets, receipt gates, or git-backed claim verification"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the checkpoint cannot explain where the next episode should start"
+                },
+                {
+                  "order": 2,
+                  "text": "the operator cannot say why the previous episode continued, stopped, or escalated"
+                },
+                {
+                  "order": 3,
+                  "text": "failure state is recorded but the next slice opens anyway without re-planning or review"
+                },
+                {
+                  "order": 4,
+                  "text": "the artifact starts naming platform primitives more often than episode goal, checkpoint, and decision state"
+                },
+                {
+                  "order": 5,
+                  "text": "adjacent techniques are needed but are being copied into this bundle instead of linked or routed"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep each episode goal short enough that its end condition can be reviewed"
+                },
+                {
+                  "order": 2,
+                  "text": "require one checkpoint artifact or checkpoint state before a new episode opens"
+                },
+                {
+                  "order": 3,
+                  "text": "record the next decision as continue, stop, or escalate rather than implying it from progress"
+                },
+                {
+                  "order": 4,
+                  "text": "route session-opening ritual to AOA-T-0060 and handoff packet shape to AOA-T-0057"
+                },
+                {
+                  "order": 5,
+                  "text": "keep proof gates, durable-job infrastructure, supervision, budgets, and runtime lifecycle in their owning layers"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0062` to `canonical` and use this note as the watch surface for checkpoint theater, implicit continuation, hidden-memory starts, platform creep, and accidental absorption of sibling continuation or governance techniques"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -36359,34 +36540,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around mission runtimes, supervision stacks, budget policies, task integrity systems, and broader autonomous-platform semantics"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around mission runtimes, supervision stacks, budget policies, task integrity systems, and broader autonomous-platform semantics"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same episode-loop seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same episode-loop seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family"
+                  "text": "`cloudflare/cloudflare-docs` provides exact-fit public reinforcement beyond the donor family: its long-running Agents guide persists a plan with current step state, runs one step at a time, schedules the next step after completion, marks failed steps without silently continuing, uses checkpoints for recovery, and names re-planning plus human oversight as the review boundary before proceeding"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for the same bounded episode or step loop"
                 }
               ]
             },
@@ -36397,7 +36578,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is how to segment longer work into checkpointed episodes with explicit continue, stop, or escalate decisions"
+                  "text": "this is the right canonical default when the main problem is how to segment longer work into checkpointed episodes or equivalent durable steps with explicit continue, stop, or escalate decisions"
                 },
                 {
                   "order": 2,
@@ -36406,6 +36587,10 @@
                 {
                   "order": 3,
                   "text": "it also remains smaller than total autonomous-agent doctrine because it does not define supervision, budgets, immutable task governance, or one orchestrator runtime"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the external reinforcement repeats the same \"bounded slice, checkpoint state, explicit next decision, later slice starts from durable state\" shape without requiring the bundle to absorb the Cloudflare platform, sub-agent model, workflow engine, schedule API, or Durable Objects lifecycle"
                 }
               ]
             },
@@ -36417,7 +36602,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -36427,12 +36612,12 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable episode-loop seam and excludes donor runtime stacks, budget policies, and supervision systems"
+                  "value_markdown": "the bundle keeps only the reusable episode-loop seam and excludes donor runtime stacks, budget policies, supervision systems, and platform lifecycle machinery"
                 },
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `cloudflare/cloudflare-docs` source is CC-BY-4.0 licensed and no source code, credentials, private state, platform configuration, or Cloudflare-specific runtime setup was copied into the technique"
                 }
               ]
             },
@@ -36443,11 +36628,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where longer work is segmented into checkpointed episodes without widening into a whole autonomous platform or workflow-governance doctrine"
+                  "text": "future work can add another episode-loop implementation, but it must preserve the narrow boundary: one bounded work slice, one visible checkpoint or stop state, one explicit continue / stop / escalate decision, and a later slice that starts from durable checkpoint state rather than hidden memory"
                 }
               ]
             },
@@ -36458,11 +36643,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0062` `promoted`"
+                  "text": "move `AOA-T-0062` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the episode-loop contract survives outside the current donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between the episode loop, session-opening rituals, handoff packet structure, git-claim verification, proof gates, durable-job platforms, and full autonomous-agent lifecycle governance"
                 }
               ]
             }

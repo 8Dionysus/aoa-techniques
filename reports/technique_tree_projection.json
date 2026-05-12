@@ -470,6 +470,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0062",
+      "name": "episode-bounded-agent-loop",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
+      "current_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
+      "family": "handoff-continuation",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "handoff-continuation",
+      "proposed_future_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:handoff-continuation",
+        "domain:agent-workflows",
+        "kind:handoff",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -525,28 +547,6 @@
       "proposed_trunk": "continuity",
       "proposed_shelf": "handoff-continuation",
       "proposed_future_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:handoff-continuation",
-        "domain:agent-workflows",
-        "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0062",
-      "name": "episode-bounded-agent-loop",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
-      "current_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
-      "family": "handoff-continuation",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "handoff-continuation",
-      "proposed_future_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
       "review_status": "pilot-candidate",
       "rationale_cues": [
         "family:handoff-continuation",

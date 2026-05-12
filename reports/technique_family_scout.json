@@ -1254,8 +1254,8 @@
       ],
       "counts": {
         "total": 7,
-        "canonical": 4,
-        "promoted": 3,
+        "canonical": 5,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 7,
           "docs": 0,
@@ -1284,9 +1284,9 @@
         "AOA-T-0057",
         "AOA-T-0060",
         "AOA-T-0061",
+        "AOA-T-0062",
         "AOA-T-0058",
-        "AOA-T-0059",
-        "AOA-T-0062"
+        "AOA-T-0059"
       ],
       "techniques": [
         {
@@ -1326,6 +1326,15 @@
           "kind": "handoff"
         },
         {
+          "id": "AOA-T-0062",
+          "name": "episode-bounded-agent-loop",
+          "domain": "agent-workflows",
+          "status": "canonical",
+          "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
+          "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
+          "kind": "handoff"
+        },
+        {
           "id": "AOA-T-0058",
           "name": "receipt-confirmed-handoff-packet",
           "domain": "agent-workflows",
@@ -1341,15 +1350,6 @@
           "status": "promoted",
           "summary": "Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone.",
           "technique_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
-          "kind": "handoff"
-        },
-        {
-          "id": "AOA-T-0062",
-          "name": "episode-bounded-agent-loop",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
-          "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
           "kind": "handoff"
         }
       ]
