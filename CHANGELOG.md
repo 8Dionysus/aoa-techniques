@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0037 contextual-host-doctor` to `canonical` after the Get
+  Physics Done selected-runtime `gpd doctor` pass found a real public second
+  context where runtime-readiness checks stay selector-aware, severity-labeled,
+  and separate from render truth, lifecycle, permission, plan, build, smoke, or
+  monitoring authority, updating Audit queue posture from `80` promoted
+  techniques to `79`
 - promoted `AOA-T-0036 render-truth-before-startup` to `canonical` after the
   Dockform plan/render-before-apply pass found a real public second context
   where resolved runtime truth is rendered, reviewed, and confirmed before

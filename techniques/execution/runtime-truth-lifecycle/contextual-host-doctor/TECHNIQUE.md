@@ -3,10 +3,10 @@ id: AOA-T-0037
 name: contextual-host-doctor
 domain: evaluation
 kind: validation
-status: promoted
+status: canonical
 origin:
   project: abyss-stack
-  path: docs/DOCTOR.md
+  path: Configs/docs/DOCTOR.md
   note: Extracted from a selector-aware preflight check that changes its verdicts based on the chosen runtime shape instead of treating every host warning as universally relevant.
 owners:
   - 8Dionysus
@@ -17,12 +17,12 @@ tags:
   - diagnostic
   - profile-aware
 summary: Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-22
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -34,6 +34,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # contextual-host-doctor

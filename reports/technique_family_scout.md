@@ -20,7 +20,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `skill-support` | Boundary-contract testing, invariant coverage, and bounded-context vocabulary around capability seams. | `3` | `3` | `0` |
 | `kag-source-lift` | Section, metadata, provenance, relation, repo-doc, and review-surface lift from authoritative markdown. | `8` | `3` | `5` |
 | `history-artifacts` | Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts. | `6` | `3` | `3` |
-| `runtime-truth-lifecycle` | Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark additive profiles. | `4` | `1` | `3` |
+| `runtime-truth-lifecycle` | Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark additive profiles. | `4` | `2` | `2` |
 | `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `0` | `3` |
 | `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `0` | `3` |
 | `skill-discovery` | Editorial discovery and health visibility over upstream-owned skill sources. | `2` | `0` | `2` |
@@ -197,13 +197,13 @@ Render effective runtime truth, check host readiness, operate service lifecycle,
 Typical domains: `agent-workflows`, `evaluation`.
 Typical kinds: `composition`, `validation`, `workflow`.
 
-Counts: `total` 4, `canonical` 1, `promoted` 3.
+Counts: `total` 4, `canonical` 2, `promoted` 2.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | `composition` | `canonical` | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. |
 | [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Start and stop a bounded local service stack through one explicit lifecycle entrypoint so prerequisite checks, visible runtime status, and clean shutdown stay reviewable without widening into generic launcher or platform doctrine. |
-| [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | `validation` | `promoted` | Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control. |
+| [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | `validation` | `canonical` | Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control. |
 | [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `evaluation` | `validation` | `promoted` | Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path. |
 
 ## `capability-registry`

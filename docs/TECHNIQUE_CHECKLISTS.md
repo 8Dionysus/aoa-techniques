@@ -578,17 +578,17 @@ See also:
 |---|---|---|---|---|
 | Property Invariants Checklist | `present` | `7` | `techniques/proof/skill-support/property-invariants/checks/property-invariants-checklist.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 
+### [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Contextual Host Doctor Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/checks/contextual-host-doctor-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
+
 ### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Context Report For CI Checklist | `absent` | `7` | `techniques/proof/evaluation-chain/context-report-for-ci/checks/context-report-for-ci-checklist.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
-
-### [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Contextual Host Doctor Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/checks/contextual-host-doctor-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 
 ### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
 

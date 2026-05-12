@@ -2130,6 +2130,28 @@
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
+      "id": "AOA-T-0037",
+      "name": "contextual-host-doctor",
+      "domain": "evaluation",
+      "kind": "validation",
+      "status": "canonical",
+      "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
+      "current_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
+      "family": "runtime-truth-lifecycle",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "runtime-truth-lifecycle",
+      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:runtime-truth-lifecycle",
+        "domain:evaluation",
+        "kind:validation",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0032",
       "name": "context-report-for-ci",
       "domain": "evaluation",
@@ -2150,28 +2172,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0037",
-      "name": "contextual-host-doctor",
-      "domain": "evaluation",
-      "kind": "validation",
-      "status": "promoted",
-      "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
-      "current_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
-      "family": "runtime-truth-lifecycle",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "runtime-truth-lifecycle",
-      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:runtime-truth-lifecycle",
-        "domain:evaluation",
-        "kind:validation",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0039",

@@ -7,11 +7,11 @@
 ## Source project
 - name: abyss-stack
 - source files:
-  - `docs/DOCTOR.md`
-  - `docs/FIRST_RUN.md`
-  - `docs/LIFECYCLE.md`
-  - `docs/DEPLOYMENT.md`
-  - `scripts/aoa-doctor`
+  - `Configs/docs/DOCTOR.md`
+  - `Configs/docs/FIRST_RUN.md`
+  - `Configs/docs/LIFECYCLE.md`
+  - `Configs/docs/DEPLOYMENT.md`
+  - `Configs/scripts/aoa-doctor`
 
 ## Evidence
 - the donor defines `aoa-doctor` as a host-readiness and runtime-readiness probe whose purpose is to answer whether the current environment is shaped enough for the selected stack path before startup

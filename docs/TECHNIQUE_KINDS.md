@@ -22,7 +22,7 @@ See also:
 |---|---|---|---|---|
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `4` | `9` |
 | `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
-| `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
+| `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `5` | `5` |
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `3` | `4` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `7` | `7` |
@@ -123,7 +123,7 @@ Do not use this when:
 - the technique mainly classifies options or diagnoses routes without claiming proof
 - the primary value is a durable artifact layout or history container
 
-Counts: `total` 10, `canonical` 4, `promoted` 6.
+Counts: `total` 10, `canonical` 5, `promoted` 5.
 
 | domain | entries |
 |---|---|
@@ -141,8 +141,8 @@ Counts: `total` 10, `canonical` 4, `promoted` 6.
 | [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) | `evaluation` | `canonical` | Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface. | [TECHNIQUE.md](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md) |
 | [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) | `evaluation` | `canonical` | Make a boundary explicit by defining expected inputs, outputs, and verification around the contract rather than around hidden internals. | [TECHNIQUE.md](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md) |
 | [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) | `evaluation` | `canonical` | Express stable system or domain truths as invariant-oriented tests or checks so broad behavior is constrained beyond a small handpicked example set. | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
+| [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | `canonical` | Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 | [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | `evaluation` | `promoted` | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
-| [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | `evaluation` | `promoted` | Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 | [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | `evaluation` | `promoted` | Benchmark one stable baseline profile first, then compare additive profiles against the same measurement surface and artifact shape so richer profiles stay additive and off the default path. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) |
 | [AOA-T-0042](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) | `evaluation` | `promoted` | Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine. | [TECHNIQUE.md](../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) |
 | [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) | `validation-patterns` | `promoted` | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) |

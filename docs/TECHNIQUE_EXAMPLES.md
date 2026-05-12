@@ -601,18 +601,18 @@ See also:
 | Concrete Config Invariant Check | `present` | `techniques/proof/skill-support/property-invariants/examples/concrete-config-invariant-check.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 | Minimal Invariant Check | `present` | `techniques/proof/skill-support/property-invariants/examples/minimal-invariant-check.md` | [TECHNIQUE.md](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md) |
 
+### [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Contextual Host Doctor | `present` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/examples/minimal-contextual-host-doctor.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
+
 ### [AOA-T-0032](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) - context-report-for-ci (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Context Composition CI Report | `present` | `techniques/proof/evaluation-chain/context-report-for-ci/examples/concrete-context-composition-ci-report.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
 | Minimal Context Report For CI | `present` | `techniques/proof/evaluation-chain/context-report-for-ci/examples/minimal-context-report-for-ci.md` | [TECHNIQUE.md](../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) |
-
-### [AOA-T-0037](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) - contextual-host-doctor (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Contextual Host Doctor | `present` | `techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/examples/minimal-contextual-host-doctor.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) |
 
 ### [AOA-T-0039](../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) - baseline-first-additive-profile-benchmarks (`promoted`)
 

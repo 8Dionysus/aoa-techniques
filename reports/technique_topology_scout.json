@@ -2527,6 +2527,33 @@
       }
     },
     {
+      "id": "AOA-T-0037",
+      "name": "contextual-host-doctor",
+      "domain": "evaluation",
+      "kind": "validation",
+      "status": "canonical",
+      "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
+      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
+      "topology": {
+        "family": "runtime-truth-lifecycle",
+        "capability_class": [
+          "validate",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "tests",
+          "docs",
+          "instructions",
+          "shell"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0032",
       "name": "context-report-for-ci",
       "domain": "evaluation",
@@ -2548,33 +2575,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0037",
-      "name": "contextual-host-doctor",
-      "domain": "evaluation",
-      "kind": "validation",
-      "status": "promoted",
-      "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
-      "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
-      "topology": {
-        "family": "runtime-truth-lifecycle",
-        "capability_class": [
-          "validate",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "tests",
-          "docs",
-          "instructions",
-          "shell"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },

@@ -19517,6 +19517,179 @@
       "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0037"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "contextual-host-doctor"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for selected-target pre-start readiness diagnostics"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on contextual doctor verdicts with item-level severity rather than install orchestration, rendered runtime truth, lifecycle control, smoke, monitoring, permission policy, plan validation, or build truth"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a doctor result is treated as proof that startup, runtime health, unattended execution, plan execution, or build output will succeed"
+                },
+                {
+                  "order": 2,
+                  "text": "warning-heavy output becomes ambient and no longer affects operator decisions"
+                },
+                {
+                  "order": 3,
+                  "text": "the selected runtime, profile, preset, target, or install scope changes but the readiness check set stays static"
+                },
+                {
+                  "order": 4,
+                  "text": "a generic environment checker is mistaken for contextual preflight because it uses a `doctor` command name"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "canonical status can make small projects add a doctor step when one static preflight note would be enough"
+                },
+                {
+                  "order": 2,
+                  "text": "contextual warnings can create alert fatigue if every optional issue is printed on every selected path"
+                },
+                {
+                  "order": 3,
+                  "text": "target-scoped readiness can create false confidence when users forget that permission, render, smoke, build, and monitoring checks are separate"
+                },
+                {
+                  "order": 4,
+                  "text": "strict handling of warnings can block useful degraded paths when the warning should remain advisory"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "folding install repair, permission synchronization, launch, smoke, paper build, or plan validation into the doctor"
+                },
+                {
+                  "order": 2,
+                  "text": "using the doctor as a broad host inventory, fleet monitor, or incident dashboard"
+                },
+                {
+                  "order": 3,
+                  "text": "hard-coding one donor's runtime paths, devices, providers, or command names as universal requirements"
+                },
+                {
+                  "order": 4,
+                  "text": "counting a context-free `doctor` utility as evidence for this technique without checking selector-aware relevance"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "output is nearly identical across selected runtime paths even when their prerequisites differ"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors describe dashboards, polling, running-service health, or automatic repair more than pre-start readiness"
+                },
+                {
+                  "order": 3,
+                  "text": "operators still hit the same selected-runtime blockers immediately after a passing doctor result"
+                },
+                {
+                  "order": 4,
+                  "text": "warnings and blockers are collapsed into one opaque pass/fail line"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the check set small and tied to selected-path pre-start blockers or advisories"
+                },
+                {
+                  "order": 2,
+                  "text": "require one visible selected runtime, profile, preset, target, or equivalent context before interpreting the verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "keep warning/advisory output separate from hard blockers and review whether each warning still belongs"
+                },
+                {
+                  "order": 4,
+                  "text": "route render, lifecycle, smoke, permission, plan, build, monitoring, and repair concerns to sibling techniques or owner repos"
+                },
+                {
+                  "order": 5,
+                  "text": "record context-free doctor tools as adjacent searched lanes unless they prove selected-target branching and item-level severity"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for false readiness, alert fatigue, context-free doctor drift, and expansion into runtime owner authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -19547,7 +19720,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -19562,11 +19735,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around selector-aware preflight readiness"
+                  "text": "Get Physics Done now provides an exact-fit public second context: it exposes `gpd doctor --runtime <runtime> --local/--global`, resolves the selected runtime target, emits item-level readiness checks, distinguishes warnings/advisories from blockers, and keeps permission, plan, and build verdicts in sibling commands"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still proven mainly through one donor lineage"
+                  "text": "the second context adaptation keeps the contract bounded around selected-target preflight readiness rather than install orchestration, unattended permission policy, plan validation, manuscript build, smoke, lifecycle, or monitoring breadth"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle now has a checklist, a public-safe example, origin evidence, exact-fit second-context evidence, and an adverse-effects review, so the pattern is no longer proven mainly through one donor lineage"
                 }
               ]
             },
@@ -19577,41 +19754,46 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when the missing object is a context-sensitive pre-start readiness verdict for a chosen runtime path"
+                  "text": "this is the right canonical default when the missing object is a selected-target pre-start readiness verdict, not a renderer, launcher, smoke check, monitor, or permission-policy engine"
                 },
                 {
                   "order": 2,
-                  "text": "it is strongest when one runtime selection changes which host warnings matter and which do not"
+                  "text": "it is strongest when one selected runtime, profile, preset, install target, or equivalent path changes which checks matter and which warnings remain advisory"
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default evaluation pattern for every preflight or diagnostic surface"
+                  "text": "it remains narrower than `AOA-T-0035` because it assumes a selected runtime path and diagnoses readiness rather than owning profile/preset composition"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it remains narrower than `AOA-T-0036` and `AOA-T-0038` because it does not render the final runtime truth and does not own startup, shutdown, or lifecycle control"
+                },
+                {
+                  "order": 5,
+                  "text": "Get Physics Done confirms that the default move can survive outside `abyss-stack`: inspect selected-runtime readiness, surface item-level failures and advisories, then hand off to the next bounded runtime or workflow step"
                 }
               ]
             },
             {
               "heading": "Fresh public-safety check",
               "order": 5,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "review date",
-                  "value_markdown": "2026-03-22"
+                  "text": "review date: 2026-05-12"
                 },
                 {
                   "order": 2,
-                  "key": "result",
-                  "value_markdown": "pass"
+                  "text": "result: pass"
                 },
                 {
                   "order": 3,
-                  "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the selector-aware readiness contract while stripping donor-specific commands, paths, and hardware assumptions"
+                  "text": "sanitization still holds: the published technique keeps the selector-aware readiness contract while stripping donor-specific commands, paths, and hardware assumptions"
+                },
+                {
+                  "order": 4,
+                  "text": "Get Physics Done evidence strengthens the public-safety boundary because runtime/provider specifics remain target-scoped diagnostics while warnings, blockers, permission alignment, plan preflight, and build truth stay separated"
                 }
               ]
             },
@@ -19622,11 +19804,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on selected-target pre-start diagnostics with item-level severity"
                 },
                 {
                   "order": 2,
-                  "text": "the separation from render review, smoke, and monitoring should stay tested through future sibling imports"
+                  "text": "future review should keep rejecting surfaces that are only generic environment checks, install wrappers, permission gates, plan validators, build validators, smoke tests, lifecycle controllers, or monitoring dashboards without the same selector-aware doctor verdict"
                 }
               ]
             },
@@ -19637,11 +19819,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0037` as `promoted`"
+                  "text": "promote `AOA-T-0037` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same selector-aware preflight contract"
+                  "text": "use `AOA-T-0037` as the default runtime-readiness technique when selected runtime context changes which pre-start warnings or blockers matter, while routing composition, render truth, lifecycle, permission alignment, plan validation, smoke, build, and monitoring concerns to sibling owners"
                 }
               ]
             }
@@ -19684,7 +19866,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `docs/DOCTOR.md`\n- `docs/FIRST_RUN.md`\n- `docs/LIFECYCLE.md`\n- `docs/DEPLOYMENT.md`\n- `scripts/aoa-doctor`"
+                  "value_markdown": "- `Configs/docs/DOCTOR.md`\n- `Configs/docs/FIRST_RUN.md`\n- `Configs/docs/LIFECYCLE.md`\n- `Configs/docs/DEPLOYMENT.md`\n- `Configs/scripts/aoa-doctor`"
                 }
               ]
             },
@@ -19760,17 +19942,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Get Physics Done"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                  "value_markdown": "public multi-runtime agentic research CLI and runtime-integration package"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "human and agent contribution workflow over reviewable technique bundles"
+                  "value_markdown": "terminal-side readiness flow for selected AI runtimes such as Claude Code, Codex, Gemini CLI, GitHub Copilot CLI, and OpenCode"
                 }
               ]
             },
@@ -19781,19 +19963,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "donor-specific command names, runtime roots, and device paths were rewritten into a portable selector-aware readiness contract"
+                  "text": "the donor's profile or preset selector maps to GPD's `--runtime`, `--local`, `--global`, and optional `--target-dir` readiness target"
                 },
                 {
                   "order": 2,
-                  "text": "the donor shell script became public-safe diagnostic language rather than a repo-specific CLI requirement"
+                  "text": "the donor's host-readiness script maps to GPD's `gpd doctor --runtime <runtime>` runtime-readiness mode"
                 },
                 {
                   "order": 3,
-                  "text": "internal-only service reminders and hardware-specific checks were kept only as examples of context-aware branching, not as invariant requirements"
+                  "text": "the donor's `ok`, `warn`, and `fail` rows map to GPD's structured check statuses, blockers, advisories, and `overall` verdict"
                 },
                 {
                   "order": 4,
-                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                  "text": "the donor's pre-start boundary maps to GPD's installer and operator preflight before runtime-owned installation, unattended permission alignment, plan preflight, or paper build truth"
                 }
               ]
             },
@@ -19804,19 +19986,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the diagnostic still runs before startup"
+                  "text": "the diagnostic still runs before the selected runtime path is treated as ready"
                 },
                 {
                   "order": 2,
-                  "text": "the selected runtime still changes which checks are relevant"
+                  "text": "the selected runtime and install target still change which checks are relevant"
                 },
                 {
                   "order": 3,
-                  "text": "item-level `ok`, `warn`, and `fail` signals still remain visible"
+                  "text": "item-level readiness checks still remain visible as separate statuses"
                 },
                 {
                   "order": 4,
-                  "text": "strict mode still remains a separate hardening seam over the same underlying diagnostic"
+                  "text": "warning/advisory output remains distinct from blocking failure"
+                },
+                {
+                  "order": 5,
+                  "text": "the doctor remains diagnostic and hands off to sibling readiness, permission, plan, or build checks instead of absorbing them"
                 }
               ]
             },
@@ -19827,15 +20013,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public wording can drift into generic monitoring if the pre-start boundary is not restated clearly"
+                  "text": "GPD is a broader agentic research workflow package, so the technique must not absorb command orchestration, permission synchronization, plan validation, manuscript build, or physics-review doctrine"
                 },
                 {
                   "order": 2,
-                  "text": "the bundle can widen into render or lifecycle semantics if it starts describing what happens after the readiness verdict"
+                  "text": "GPD's doctor is runtime-target readiness rather than container-stack readiness, so the transferable evidence is the selected-target diagnostic contract rather than a particular substrate"
                 },
                 {
                   "order": 3,
-                  "text": "a generic example can understate the importance of context-sensitive checks if it does not show why one warning matters for one runtime choice but not another"
+                  "text": "GPD also has `validate unattended-readiness`, `validate plan-preflight`, and `paper-build` surfaces, so later reuse must keep doctor output separate from permission, plan, and build verdicts"
                 }
               ]
             },
@@ -19846,15 +20032,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public technique stays in `evaluation` because the reusable object is a readiness verdict rather than a composition contract or startup workflow"
+                  "text": "GPD README documents `gpd doctor --runtime <runtime> --local` and `gpd doctor --runtime <runtime> --global` as runtime-readiness checks for a selected runtime target."
                 },
                 {
                   "order": 2,
-                  "text": "the donor already treats the doctor as one bounded surface among adjacent runtime tools rather than as a universal operator platform"
+                  "text": "GPD README treats `Workflow Presets` and `LaTeX Toolchain` doctor rows as readiness signals that can be warnings rather than full install blockers, while `paper-build` remains the build truth."
                 },
                 {
                   "order": 3,
-                  "text": "the adapted bundle preserves the key donor invariant: what matters depends on the selected runtime"
+                  "text": "GPD CLI routes `doctor --runtime` into `run_doctor(..., runtime=..., install_scope=..., target_dir=..., cwd=...)` and defaults the target to local readiness unless a global or explicit target is selected."
+                },
+                {
+                  "order": 4,
+                  "text": "GPD health code normalizes runtime, scope, and target into one readiness context, checks runtime launcher, runtime config target, provider/auth guidance, optional live executable probes, LaTeX toolchain, and workflow presets, and returns `mode=\"runtime-readiness\"` when a runtime is selected."
+                },
+                {
+                  "order": 5,
+                  "text": "GPD installer preflight consumes the structured doctor report, collects `fail` checks as blockers, keeps warning/advisory messages separate, and tells the operator to rerun the exact `gpd doctor --runtime ...` command before continuing."
                 }
               ]
             },
@@ -19866,12 +20060,12 @@
                 {
                   "order": 1,
                   "key": "verdict",
-                  "value_markdown": "works"
+                  "value_markdown": "exact-fit second context"
                 },
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded evaluation technique for selector-aware preflight readiness"
+                  "value_markdown": "Get Physics Done proves the same reusable move outside the donor lineage: run a selected-target doctor before treating a runtime path as ready, keep item-level readiness statuses visible, separate warnings from blockers, and hand off to sibling permission, plan, build, or runtime workflows after the diagnostic verdict"
                 }
               ]
             }

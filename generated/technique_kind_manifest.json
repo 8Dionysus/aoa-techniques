@@ -295,8 +295,8 @@
       ],
       "counts": {
         "total": 10,
-        "canonical": 4,
-        "promoted": 6,
+        "canonical": 5,
+        "promoted": 5,
         "by_domain": {
           "agent-workflows": 1,
           "docs": 0,
@@ -348,20 +348,20 @@
           "technique_path": "techniques/proof/skill-support/property-invariants/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0037",
+          "name": "contextual-host-doctor",
+          "domain": "evaluation",
+          "status": "canonical",
+          "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
+          "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0032",
           "name": "context-report-for-ci",
           "domain": "evaluation",
           "status": "promoted",
           "summary": "Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself.",
           "technique_path": "techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0037",
-          "name": "contextual-host-doctor",
-          "domain": "evaluation",
-          "status": "promoted",
-          "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
-          "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0039",

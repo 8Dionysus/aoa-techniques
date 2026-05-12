@@ -225,7 +225,7 @@ entries:
 - id: AOA-T-0037
   name: contextual-host-doctor
   domain: evaluation
-  status: promoted
+  status: canonical
   kind: validation
   family: runtime-truth-lifecycle
 - id: AOA-T-0038
