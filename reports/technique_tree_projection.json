@@ -426,6 +426,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0060",
+      "name": "session-opening-ritual-before-work",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
+      "current_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
+      "family": "handoff-continuation",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "handoff-continuation",
+      "proposed_future_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:handoff-continuation",
+        "domain:agent-workflows",
+        "kind:handoff",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -481,28 +503,6 @@
       "proposed_trunk": "continuity",
       "proposed_shelf": "handoff-continuation",
       "proposed_future_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:handoff-continuation",
-        "domain:agent-workflows",
-        "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0060",
-      "name": "session-opening-ritual-before-work",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
-      "current_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
-      "family": "handoff-continuation",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "handoff-continuation",
-      "proposed_future_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
       "review_status": "pilot-candidate",
       "rationale_cues": [
         "family:handoff-continuation",

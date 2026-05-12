@@ -26,7 +26,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `skill-discovery` | Editorial discovery and health visibility over upstream-owned skill sources. | `2` | `1` | `1` |
 | `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `3` | `0` |
 | `review-compaction` | Background review triggering, findings compaction, and recovery of capability loading after compaction. | `3` | `3` | `0` |
-| `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `2` | `5` |
+| `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `3` | `4` |
 | `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `0` | `1` |
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `0` | `2` |
 | `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `3` | `0` | `3` |
@@ -287,15 +287,15 @@ Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams
 Typical domains: `agent-workflows`.
 Typical kinds: `handoff`.
 
-Counts: `total` 7, `canonical` 2, `promoted` 5.
+Counts: `total` 7, `canonical` 3, `promoted` 4.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack. |
 | [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay. |
+| [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions. |
 | [AOA-T-0058](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Require an explicit receipt state for a handoff packet before the receiving side continues so ownership transfer stays reviewable instead of being inferred from delivery or silence. |
 | [AOA-T-0059](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone. |
-| [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions. |
 | [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Bootstrap cross-repo work from one explicit resource map so the next session can see which repos and surfaces matter before deeper continuation begins. |
 | [AOA-T-0062](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy. |
 

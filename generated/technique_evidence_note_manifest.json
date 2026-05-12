@@ -34875,6 +34875,183 @@
       "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0060"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-opening-ritual-before-work"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for starting a resumed or handed-off session with one visible read-and-verify step before the first mutation"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the opening ritual without turning it into handoff authoring, detailed git-claim verification, startup test doctrine, task routing, or a full long-running-agent harness"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the session reads a handoff or progress file but never checks current repo or artifact state"
+                },
+                {
+                  "order": 2,
+                  "text": "edits begin before the expected baseline and actual visible state are compared"
+                },
+                {
+                  "order": 3,
+                  "text": "mismatch notes are omitted because the opening ritual is treated as a symbolic checklist"
+                },
+                {
+                  "order": 4,
+                  "text": "the baseline check is too generic to catch stale branch, dirty tree, missing file, failed smoke, or wrong target state"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "small uninterrupted tasks can gain ceremony when no real context boundary exists"
+                },
+                {
+                  "order": 2,
+                  "text": "agents can overtrust the opening ritual and skip detailed claim verification that a specific handoff still needs"
+                },
+                {
+                  "order": 3,
+                  "text": "startup can become slow if every project folds full test suites, task selection, and harness boot into the ritual"
+                },
+                {
+                  "order": 4,
+                  "text": "a broad startup checklist can crowd out the one thing this technique owns: read current context and verify baseline before mutation"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating \"read the handoff\" as sufficient without checking live state"
+                },
+                {
+                  "order": 2,
+                  "text": "importing packet-writing, mailbox receipt, or git-claim verdicts into the opening ritual"
+                },
+                {
+                  "order": 3,
+                  "text": "making a mandatory startup test suite part of the technique instead of a project-local baseline choice"
+                },
+                {
+                  "order": 4,
+                  "text": "turning the ritual into task-priority, budget, evaluator, or orchestration doctrine"
+                },
+                {
+                  "order": 5,
+                  "text": "ignoring mismatches and continuing from inherited narration anyway"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the first edit happens before any visible context read or baseline check"
+                },
+                {
+                  "order": 2,
+                  "text": "the incoming session cannot name which current-state surface was inspected"
+                },
+                {
+                  "order": 3,
+                  "text": "a mismatch is found later that should have been visible at session start"
+                },
+                {
+                  "order": 4,
+                  "text": "opening notes start listing full mission rules, task policies, evaluator loops, or test matrices instead of the verified baseline"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require one current context read and one visible baseline check before mutation"
+                },
+                {
+                  "order": 2,
+                  "text": "record mismatches in the starting plan and let them redirect or stop the first move"
+                },
+                {
+                  "order": 3,
+                  "text": "keep detailed handoff packet creation in AOA-T-0057 and concrete claim verification in AOA-T-0059"
+                },
+                {
+                  "order": 4,
+                  "text": "treat project smoke/build/test commands as optional baseline checks, not as universal startup doctrine"
+                },
+                {
+                  "order": 5,
+                  "text": "keep the ritual short enough that a fresh session can perform it cold without hiding the actual first task"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0060` to `canonical` and use this note as the watch surface for symbolic openings, unchecked inherited context, startup-suite creep, task-routing drift, and long-running-harness overreach"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -34905,34 +35082,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around mission loops, state-file families, startup test doctrine, task routing, handoff authoring, and broader orchestration semantics"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around mission loops, state-file families, startup test doctrine, task routing, handoff authoring, and broader orchestration semantics"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same session-opening seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same session-opening seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family"
+                  "text": "`anthropics/cwc-long-running-agents` provides exact-fit public reinforcement beyond the donor family: its long-running convention says to read `PROGRESS.md` before doing anything else, create it if missing, then run `git log --oneline -10` and a project smoke/build/test check so the session starts from a visible baseline instead of a broken or stale handoff"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for the same pre-mutation read-and-verify ritual"
                 }
               ]
             },
@@ -34943,7 +35120,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is how a resumed session should re-read current context and verify baseline state before the first edit"
+                  "text": "this is the right canonical default when the main problem is how a resumed session should re-read current context and verify baseline state before the first edit"
                 },
                 {
                   "order": 2,
@@ -34952,6 +35129,10 @@
                 {
                   "order": 3,
                   "text": "it also remains smaller than total startup doctrine because it does not choose tasks, define baseline test policy, or ship an orchestrator contract"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the external reinforcement repeats the same \"read first, check baseline, then work\" shape without requiring task picking, episode loops, evaluator harnesses, or startup-test doctrine to become part of the bundle"
                 }
               ]
             },
@@ -34963,7 +35144,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -34978,7 +35159,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `cwc-long-running-agents` convention carries file-level Apache-2.0 SPDX metadata and no source code, private data, credentials, or restricted workflow details were copied into the technique"
                 }
               ]
             },
@@ -34989,11 +35170,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where resumed sessions visibly re-read and verify baseline state before the first mutation without widening into task routing, startup test doctrine, or orchestration stacks"
+                  "text": "future work can add another session-opening implementation, but it must preserve the narrow boundary: read a current context surface, check one visible baseline before mutation, record mismatches, and route task selection, detailed git-claim verification, baseline test doctrine, and orchestrator loops elsewhere"
                 }
               ]
             },
@@ -35004,11 +35185,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0060` `promoted`"
+                  "text": "move `AOA-T-0060` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the session-opening contract survives outside the current donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between the opening ritual, handoff packet authoring, git-claim verification, baseline testing, task routing, and full long-running-agent harnesses"
                 }
               ]
             }

@@ -112,6 +112,12 @@ See also:
 |---|---|---|---|---|
 | structured-handoff-before-compaction checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/structured-handoff-before-compaction/checks/structured-handoff-before-compaction-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) |
 
+### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| session-opening-ritual-before-work checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/checks/session-opening-ritual-before-work-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -129,12 +135,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| session-opening-ritual-before-work checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/checks/session-opening-ritual-before-work-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
 
 ### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
 

@@ -497,6 +497,32 @@
       }
     },
     {
+      "id": "AOA-T-0060",
+      "name": "session-opening-ritual-before-work",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
+      "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
+      "topology": {
+        "family": "handoff-continuation",
+        "capability_class": [
+          "handoff",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -569,32 +595,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0060",
-      "name": "session-opening-ritual-before-work",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions.",
-      "technique_path": "techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md",
-      "topology": {
-        "family": "handoff-continuation",
-        "capability_class": [
-          "handoff",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },

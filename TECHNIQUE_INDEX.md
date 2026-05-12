@@ -53,6 +53,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0055 | requirements-design-tasks-ladder | agent-workflows | canonical | Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack. |
 | AOA-T-0056 | channelized-agent-mailbox | agent-workflows | canonical | Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack. |
 | AOA-T-0057 | structured-handoff-before-compaction | agent-workflows | canonical | Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay. |
+| AOA-T-0060 | session-opening-ritual-before-work | agent-workflows | canonical | Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions. |
 | AOA-T-0053 | local-first-session-index | history | canonical | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. |
 
 ## Promoted techniques
@@ -62,7 +63,6 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
 | AOA-T-0058 | receipt-confirmed-handoff-packet | agent-workflows | promoted | Require an explicit receipt state for a handoff packet before the receiving side continues so ownership transfer stays reviewable instead of being inferred from delivery or silence. |
 | AOA-T-0059 | git-verified-handoff-claims | agent-workflows | promoted | Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone. |
-| AOA-T-0060 | session-opening-ritual-before-work | agent-workflows | promoted | Start a resumed or handed-off session with one visible read-and-verify ritual before the first mutation so work begins from current state rather than stale assumptions. |
 | AOA-T-0061 | cross-repo-resource-map-bootstrap | agent-workflows | promoted | Bootstrap cross-repo work from one explicit resource map so the next session can see which repos and surfaces matter before deeper continuation begins. |
 | AOA-T-0062 | episode-bounded-agent-loop | agent-workflows | promoted | Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy. |
 | AOA-T-0065 | mcp-gateway-proxy | agent-workflows | promoted | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
