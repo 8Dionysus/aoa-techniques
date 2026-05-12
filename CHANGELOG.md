@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0033 decision-rationale-recording` to `canonical` after
+  Markdown Architectural Decision Records showed an exact-fit public
+  one-decision record pattern with context/problem, considered options, chosen
+  outcome with justification, and accepted consequences, updating Audit queue
+  posture from `68` promoted techniques to `67`
 - promoted `AOA-T-0045 witness-trace-as-reviewable-artifact` to
   `canonical` after Maida / AgentDbg showed an exact-fit public trace-artifact
   contract with local `run.json`, ordered `events.jsonl`, LLM/tool/error/state

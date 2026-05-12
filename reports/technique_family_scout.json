@@ -176,8 +176,8 @@
       ],
       "counts": {
         "total": 4,
-        "canonical": 3,
-        "promoted": 1,
+        "canonical": 4,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 4,
@@ -204,8 +204,8 @@
       "technique_ids": [
         "AOA-T-0002",
         "AOA-T-0009",
-        "AOA-T-0034",
-        "AOA-T-0033"
+        "AOA-T-0033",
+        "AOA-T-0034"
       ],
       "techniques": [
         {
@@ -227,6 +227,15 @@
           "kind": "artifact"
         },
         {
+          "id": "AOA-T-0033",
+          "name": "decision-rationale-recording",
+          "domain": "docs",
+          "status": "canonical",
+          "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
+          "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
+          "kind": "artifact"
+        },
+        {
           "id": "AOA-T-0034",
           "name": "public-safe-artifact-sanitization",
           "domain": "docs",
@@ -234,15 +243,6 @@
           "summary": "Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning.",
           "technique_path": "techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md",
           "kind": "guardrail"
-        },
-        {
-          "id": "AOA-T-0033",
-          "name": "decision-rationale-recording",
-          "domain": "docs",
-          "status": "promoted",
-          "summary": "Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy.",
-          "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
-          "kind": "artifact"
         }
       ]
     },

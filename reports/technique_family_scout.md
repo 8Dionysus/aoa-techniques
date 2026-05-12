@@ -13,7 +13,7 @@ Use this report when you want to inspect likely family clusters without promotin
 |---|---|---|---|---|
 | `agent-workflows-core` | Safe bounded agent execution backbone, one-shot posture, and mutation seam discipline. | `5` | `5` | `0` |
 | `intent-chain` | Intent normalization, dry-run validation, and safe rollout of new intent types. | `2` | `1` | `1` |
-| `docs-boundary` | Document-role separation, status snapshots, rationale notes, and public-safe sharing hygiene. | `4` | `3` | `1` |
+| `docs-boundary` | Document-role separation, status snapshots, rationale notes, and public-safe sharing hygiene. | `4` | `4` | `0` |
 | `instruction-surface` | Composed, mirrored, layered, and propagated instruction or context surfaces with explicit source ownership. | `7` | `6` | `1` |
 | `evaluation-chain` | Machine-readable validation contract production and staged promotion from signal to enforcement. | `3` | `2` | `1` |
 | `published-summary` | Published summary storage, remediation, integrity, and rendering policy. | `4` | `4` | `0` |
@@ -78,14 +78,14 @@ Document-role separation, status snapshots, rationale notes, and public-safe sha
 Typical domains: `docs`.
 Typical kinds: `artifact`, `guardrail`.
 
-Counts: `total` 4, `canonical` 3, `promoted` 1.
+Counts: `total` 4, `canonical` 4, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Repository document role separation pattern that keeps status, plans, history, decisions, and run instructions in distinct canonical homes. |
 | [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Keep top-level status documents short and link-driven, while routing detailed execution state and history to their canonical homes. |
+| [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
 | [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) | `docs` | `guardrail` | `canonical` | Turn sensitive technical material into a shareable artifact by removing, redacting, or generalizing details while preserving the lesson and staying distinct from approval gating or execution planning. |
-| [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Keep one meaningful decision in a reviewable note with context, options, rationale, and consequences while staying out of source-of-truth governance and architecture taxonomy. |
 
 ## `instruction-surface`
 

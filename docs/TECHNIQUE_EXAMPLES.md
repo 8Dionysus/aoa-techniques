@@ -454,6 +454,12 @@ See also:
 | Concrete Subtree Fragmented Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 | Minimal Fragmented Agent Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
+### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Decision Rationale Note | `present` | `techniques/instruction/docs-boundary/decision-rationale-recording/examples/minimal-decision-rationale-note.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
+
 ### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 | example | body | example path | source |
@@ -489,12 +495,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Risk And Negative-Effect Lift | `present` | `techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/examples/minimal-risk-and-negative-effect-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) |
-
-### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Decision Rationale Note | `present` | `techniques/instruction/docs-boundary/decision-rationale-recording/examples/minimal-decision-rationale-note.md` | [TECHNIQUE.md](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) |
 
 ### [AOA-T-0035](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) - profile-preset-composition (`promoted`)
 

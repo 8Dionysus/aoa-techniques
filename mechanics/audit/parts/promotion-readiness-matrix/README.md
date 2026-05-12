@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `68` techniques
-- matrix categorization status: `68` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `67` techniques
+- matrix categorization status: `67` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Maida / AgentDbg's local run trace contract
+- latest graduation wave: [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from MADR's one-decision record template and own decision-record practice
+- prior graduation wave: [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Maida / AgentDbg's local run trace contract
 - prior graduation wave: [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus source-method surfaces
 - prior graduation wave: [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from ai-rulez's managed skill/rule fan-out, Claude Code's layered memory/rules precedence, and Cline Rules' fragment-first rule/context source layer
 - prior graduation wave: [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) and [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Metaflow Devstack's one-entrypoint local lifecycle surface and LOCOMO / OpenClaw's baseline-first additive benchmark surface
@@ -64,7 +65,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `23` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `22` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -141,11 +142,7 @@ Pack 7 is closed. [AOA-T-0045](../../../../techniques/history/history-artifacts/
 
 ### Pack 8 - Internal Docs Practice
 
-Shared blocker: each bundle is internally strong, but still needs another live consumer so it reads as a default pattern rather than one good local practice.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | Single-decision note contract is bounded and useful, but still narrow. | One second live consumer proving the same one-decision record pattern in practice. |
+Pack 8 is closed. [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) moved to `canonical` after MADR showed exact-fit public reinforcement for one decision record with context/problem, considered options, chosen outcome with justification, and accepted consequences.
 
 ### Pack 9 - Graph Work Coordination
 

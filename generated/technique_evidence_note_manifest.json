@@ -18612,6 +18612,183 @@
       "technique_path": "techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/docs-boundary/decision-rationale-recording/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0033"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-rationale-recording"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for preserving one meaningful decision as a compact, reviewable rationale note with visible context, alternatives, chosen path, rationale, and consequences"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on one decision record rather than widening into source-of-truth governance, architecture taxonomy, ADR tooling ownership, decision-log management, or generic changelog writing"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "decision notes become mandatory ceremony for trivial edits"
+                },
+                {
+                  "order": 2,
+                  "text": "the record names the chosen path but hides the rejected option or accepted cost"
+                },
+                {
+                  "order": 3,
+                  "text": "the note drifts into architecture classification, repository ownership, or source-of-truth placement instead of preserving rationale"
+                },
+                {
+                  "order": 4,
+                  "text": "multiple unrelated decisions get packed into one polished but hard-to-review artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "extra documentation can slow small changes when no meaningful decision exists"
+                },
+                {
+                  "order": 2,
+                  "text": "a structured decision note can create false confidence if the real tradeoff was never exposed"
+                },
+                {
+                  "order": 3,
+                  "text": "decision records can bury important signals if every routine edit receives the same durable treatment"
+                },
+                {
+                  "order": 4,
+                  "text": "ADR vocabulary can pull the technique toward architecture-governance posture when the needed move is only a bounded rationale record"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating every explanation, changelog entry, or status update as a decision record"
+                },
+                {
+                  "order": 2,
+                  "text": "using the note to decide where source truth should live instead of recording a decision already made"
+                },
+                {
+                  "order": 3,
+                  "text": "turning the record into a multi-decision policy document, taxonomy map, or tool adoption mandate"
+                },
+                {
+                  "order": 4,
+                  "text": "citing the note as proof that the decision was correct rather than evidence of why the decision was made"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the note has no explicit decision sentence"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers can see what was chosen but cannot see what was rejected"
+                },
+                {
+                  "order": 3,
+                  "text": "consequences are generic, missing, or all positive"
+                },
+                {
+                  "order": 4,
+                  "text": "the content starts assigning canonical owners, schema classes, or architecture categories rather than explaining a bounded choice"
+                },
+                {
+                  "order": 5,
+                  "text": "the record is longer than the underlying decision warrants"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reserve this technique for meaningful decisions with a real tradeoff"
+                },
+                {
+                  "order": 2,
+                  "text": "require at least one rejected option and one accepted consequence"
+                },
+                {
+                  "order": 3,
+                  "text": "split unrelated decisions into separate notes"
+                },
+                {
+                  "order": 4,
+                  "text": "route source-of-truth layout, boundary mapping, architecture classification, and decision-log tooling to neighboring techniques or owner surfaces"
+                },
+                {
+                  "order": 5,
+                  "text": "keep the note public-safe and small enough for a future reviewer to inspect without reopening the whole discussion"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0033` to `canonical` and use this note as the watch surface for ceremony drift, hidden-tradeoff drift, governance drift, architecture-taxonomy drift, and generic changelog drift"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/docs-boundary/decision-rationale-recording/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -18642,7 +18819,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -18661,7 +18838,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a clearer example and checklist for catching false-success summaries, but it is still a narrow docs pattern rather than a broadly proven default across multiple independent consumers"
+                  "text": "MADR provides exact-fit public reinforcement: its template and own decision records preserve one decision with context/problem, considered options, chosen outcome with justification, and accepted consequences"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle now has a checklist, a public-safe example, origin evidence, second-context adaptation, and external decision-record reinforcement beyond the `aoa-skills` source lineage"
                 }
               ]
             },
@@ -18680,11 +18861,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default docs pattern for a wider ecosystem"
+                  "text": "it is now the natural default when a project needs one bounded record that preserves context, alternatives, rationale, and consequences for later review"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "ADR tooling and decision-log management remain neighboring or downstream concerns rather than the technique's core contract"
                 }
               ]
             },
@@ -18696,7 +18877,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-22"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -18707,6 +18888,11 @@
                   "order": 3,
                   "key": "sanitization still holds",
                   "value_markdown": "the published technique keeps only the reusable decision-recording contract and strips origin-project identifiers, local discussion detail, and private context"
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the external reinforcement is from public MADR docs and decision records, not private internal decision logs or hidden discussion threads"
                 }
               ]
             },
@@ -18717,11 +18903,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer"
+                  "text": "future work can add more examples for non-architecture decisions, but no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "the technique may still need a dedicated sibling if multi-decision records become a separate reusable pattern"
+                  "text": "the line between one decision record, ADR tooling, decision-log governance, source-of-truth layout, and architecture taxonomy should stay guarded in future adaptations"
                 }
               ]
             },
@@ -18732,11 +18918,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0033` as `promoted`"
+                  "text": "move `AOA-T-0033` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after a second live consumer proves the pattern beyond the current origin-shaped use case"
+                  "text": "add an adverse-effects review to preserve the caution boundary after promotion"
                 }
               ]
             }
@@ -18866,6 +19052,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "human and agent contribution workflow over reviewable repository changes"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: Markdown Architectural Decision Records\n- repository: `adr/madr`\n- observed revision: `8135ed2e01503be852769402ec3eeb585bfe75a2`\n- public surfaces: `README.md`, `template/adr-template.md`, `docs/decisions/0003-provide-own-madr-tools.md`"
                 }
               ]
             },
@@ -18889,6 +19080,10 @@
                 {
                   "order": 4,
                   "text": "the result keeps the bounded rationale pattern while dropping private context and origin-specific detail"
+                },
+                {
+                  "order": 5,
+                  "text": "the external MADR reinforcement proves the same one-decision record shape in a mature public docs practice: a decision record names context and problem, considered options, chosen outcome with justification, and accepted consequences"
                 }
               ]
             },
@@ -18912,6 +19107,10 @@
                 {
                   "order": 4,
                   "text": "the technique still avoids source-of-truth governance and architecture taxonomy"
+                },
+                {
+                  "order": 5,
+                  "text": "the public reinforcement remains a decision-record format rather than a governance system, architecture taxonomy, or proof verdict"
                 }
               ]
             },
@@ -18931,6 +19130,10 @@
                 {
                   "order": 3,
                   "text": "public vocabulary can invite taxonomy-heavy writing if the boundary is not restated clearly"
+                },
+                {
+                  "order": 4,
+                  "text": "ADR vocabulary can over-specialize the technique toward architecture decisions unless the invariant remains \"one meaningful decision with visible rationale\""
                 }
               ]
             },
@@ -18950,6 +19153,18 @@
                 {
                   "order": 3,
                   "text": "The technique contract still centers practical reviewability rather than a larger governance model."
+                },
+                {
+                  "order": 4,
+                  "text": "MADR's `template/adr-template.md` carries the same review shape through `Context and Problem Statement`, `Considered Options`, `Decision Outcome`, and optional `Consequences`."
+                },
+                {
+                  "order": 5,
+                  "text": "MADR's own `docs/decisions/0003-provide-own-madr-tools.md` uses that shape in practice by naming a tooling decision, listing real alternatives, choosing the own-tooling option with justification, and accepting maintenance cost."
+                },
+                {
+                  "order": 6,
+                  "text": "`adr-tools` and the architecture-decision-record catalog were inspected as adjacent reinforcement: they support the ADR practice family, but MADR is the exact-fit public consumer for this bundle because it preserves the visible options and justification seam."
                 }
               ]
             },
@@ -18961,12 +19176,12 @@
                 {
                   "order": 1,
                   "key": "verdict",
-                  "value_markdown": "works"
+                  "value_markdown": "works across origin and external decision-record contexts"
                 },
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a docs technique for decision rationale recording"
+                  "value_markdown": "the adapted bundle now has exact-fit external reinforcement for one bounded decision rationale record without widening into source-of-truth governance, architecture taxonomy, or decision-log tooling ownership"
                 }
               ]
             }
