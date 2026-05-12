@@ -30,7 +30,7 @@ PILOT_BUNDLES = (
         "AOA-T-0064",
         "capability-discovery",
         "discovery",
-        "promoted",
+        "canonical",
         "techniques/docs/capability-discovery",
         "techniques/instruction/capability-registry/capability-discovery",
     ),

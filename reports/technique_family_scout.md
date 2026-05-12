@@ -21,7 +21,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `kag-source-lift` | Section, metadata, provenance, relation, repo-doc, and review-surface lift from authoritative markdown. | `8` | `3` | `5` |
 | `history-artifacts` | Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts. | `6` | `4` | `2` |
 | `runtime-truth-lifecycle` | Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark additive profiles. | `4` | `4` | `0` |
-| `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `2` | `1` |
+| `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `3` | `0` |
 | `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `2` | `1` |
 | `skill-discovery` | Editorial discovery and health visibility over upstream-owned skill sources. | `2` | `1` | `1` |
 | `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `3` | `0` |
@@ -213,13 +213,13 @@ Versioned capability or registry contracts and bounded lookup over published ent
 Typical domains: `docs`.
 Typical kinds: `artifact`, `discovery`.
 
-Counts: `total` 3, `canonical` 2, `promoted` 1.
+Counts: `total` 3, `canonical` 3, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0025](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Keep agent-facing capability contracts in a versioned, reviewable spec so capability changes stay explicit and reusable without turning the spec into routing or registry policy. |
 | [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine. |
-| [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | `docs` | `discovery` | `promoted` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. |
+| [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | `docs` | `discovery` | `canonical` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. |
 
 ## `capability-boundary`
 

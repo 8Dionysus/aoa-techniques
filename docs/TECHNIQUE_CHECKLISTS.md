@@ -474,6 +474,12 @@ See also:
 |---|---|---|---|---|
 | versioned-agent-registry-contract checklist | `absent` | `8` | `techniques/instruction/capability-registry/versioned-agent-registry-contract/checks/versioned-agent-registry-contract-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) |
 
+### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| capability-discovery checklist | `absent` | `8` | `techniques/instruction/capability-registry/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -509,12 +515,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
-
-### [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) - capability-discovery (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| capability-discovery checklist | `absent` | `8` | `techniques/instruction/capability-registry/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
 ### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
 

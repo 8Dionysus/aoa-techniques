@@ -371,6 +371,54 @@ endpoint subscription, trust or signature layers, marketplace catalogs, or
 capability schema documents unless they expose the versioned entry publication
 contract itself.
 
+## AOA-T-0064 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`nacos-group/nacos-group.github.io` at
+`405bf9a9ff2b66ba7f6f593344ef3c48ed644d52`, file
+`src/content/docs/next/en/manual/user/ai/agent-registry.md` sha
+`b72e1ba5c1a1e6675a2adba44fcca180b7313767`, provides the clean public source
+for Pack 21. The repository is Apache-2.0 licensed.
+
+Accepted evidence:
+
+- The guide has a distinct `Query Agent` section after publication, so
+  discovery is not collapsed into the entry-publication contract.
+- The SDK query path retrieves the default published `AgentCard` by
+  `agentName`, showing lookup over already-published registry entries.
+- The HTTP detail example uses explicit `namespaceId` and `agentName`
+  parameters to retrieve one AgentCard.
+- The list/search example uses explicit `pageNo`, `pageSize`, `agentName`,
+  `namespaceId`, and `search=blur` parameters to search AgentCards by name.
+- The console search text preserves the same visible user-facing lookup
+  concept: search by Agent name and open detail view.
+- The roadmap keeps skill/tag/description filtering as a future search
+  dimension, which is useful evidence that those fields should not be imported
+  as current canonical requirements.
+
+Rejected or bounded:
+
+- Do not import Nacos service deployment, console workflow, SDK lifecycle,
+  authentication, local endpoints, Spring AI Alibaba integration, or A2A
+  invocation into the technique.
+- Treat `subscribeAgentCard`, endpoint updates, endpoint selection, and
+  automatic client invocation as adjacent runtime/subscription behavior rather
+  than the bounded lookup contract.
+- Treat the `AOA-T-0063` publication evidence as a prerequisite context only:
+  this bundle owns lookup over published entries, not entry creation, version
+  publication, default-version mutation, or AgentCard payload schema.
+- Treat future skill/tag/description filtering, official registry protocol
+  work, ranking, trust policy, marketplace curation, and graph semantics as
+  future or sibling concerns until a source makes them current, bounded, and
+  reviewable as discovery rather than product governance.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: lookup over already-published entries,
+explicit query fields or parameters, bounded exact/wildcard/fuzzy behavior,
+pagination or limit semantics where present, and an explicit result shape
+that remains smaller than ranking, trust, endpoint selection, runtime
+invocation, marketplace curation, or registry governance.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

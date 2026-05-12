@@ -27,7 +27,7 @@ See also:
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `3` | `1` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `11` | `3` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
-| `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `1` | `1` |
+| `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `2` | `0` |
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `5` | `6` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `0` | `5` |
 | `assessment` | Classification, diagnosis, route comparison, or decision-support pattern that stays descriptive rather than mutating. | `10` | `0` | `10` |
@@ -300,7 +300,7 @@ Do not use this when:
 - the technique mainly versions or stores the authoritative contract
 - the main value is safety gating or route diagnosis
 
-Counts: `total` 2, `canonical` 1, `promoted` 1.
+Counts: `total` 2, `canonical` 2, `promoted` 0.
 
 | domain | entries |
 |---|---|
@@ -314,7 +314,7 @@ Counts: `total` 2, `canonical` 1, `promoted` 1.
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
 | [AOA-T-0041](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | `docs` | `canonical` | Curate a local discoverability layer over upstream-owned skill sources so selection stays editorial and reviewable without pretending the catalog owns sync, capability meaning, or registry policy. | [TECHNIQUE.md](../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) |
-| [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | `docs` | `promoted` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
+| [AOA-T-0064](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | `docs` | `canonical` | Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine. | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
 ## `handoff`
 

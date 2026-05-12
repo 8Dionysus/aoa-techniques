@@ -93,6 +93,7 @@ Closed precedents:
 - [AOA-T-0061](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) has exited this sprint lane through a canonical review after `openclaw-linear-plugin` closed the cross-repo startup-map gap with configured repo maps, selected repo sets, named worktree paths, injected project context, and first-read root instruction files.
 - [AOA-T-0062](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) has exited this sprint lane through a canonical review after Cloudflare's long-running Agents guide closed the bounded episode-loop gap with durable plan steps, checkpoints, one-step-at-a-time execution, next-step scheduling, failed-step state, re-planning, and human oversight boundaries.
 - [AOA-T-0063](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) has exited this sprint lane through a canonical review after Nacos's A2A Registry guide closed the named versioned registry-entry gap with namespace/name identity, unique versions, a current default published version, SDK and HTTP publication paths, and explicit AgentCard fields.
+- [AOA-T-0064](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) has exited this sprint lane through a canonical review after Nacos's A2A Registry guide closed the bounded discovery-query gap with SDK name lookup, HTTP detail lookup, explicit list/search parameters, and future search dimensions kept outside the current contract.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
@@ -113,6 +114,7 @@ Why this order:
 - `AOA-T-0061` is closed; future cross-repo startup work should split only if semantic context mapping, architecture inventories, repo authorization, worktree lifecycle, dispatch routing, model selection, or full workspace-platform governance becomes the actual object
 - `AOA-T-0062` is closed; future episode-loop work should split only if session-opening ritual, handoff packet shape, git-claim verification, runtime checkpointing, proof settlement, durable-job orchestration, supervision, budgeting, or full autonomous-agent lifecycle governance becomes the actual object
 - `AOA-T-0063` is closed; future registry-entry work should split only if capability-spec schema, discovery query behavior, fuzzy search, endpoint subscription, registry product workflow, trust or signature policy, marketplace curation, graph semantics, or registry governance becomes the actual object
+- `AOA-T-0064` is closed; future discovery work should split only if ranking, recommendation, endpoint subscription, runtime invocation, trust or signature policy, marketplace curation, graph semantics, registry product workflow, or broader registry protocol governance becomes the actual object
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real
   new-intent rollout artifact rather than NLU/eval/benchmark overlap

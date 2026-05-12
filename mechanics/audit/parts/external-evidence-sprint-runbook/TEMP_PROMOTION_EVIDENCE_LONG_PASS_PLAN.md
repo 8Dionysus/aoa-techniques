@@ -13,8 +13,9 @@ for `AOA-T-0055`, the Pack 13 closure for `AOA-T-0056`, the Pack 14
 closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
 `AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, the Pack 17
 closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
-19 closure for `AOA-T-0062`, and the Pack 20 closure for `AOA-T-0063`, the
-live promoted queue is `55` bundles. This
+19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, and the
+Pack 21 closure for `AOA-T-0064`, the live promoted queue is `54` bundles.
+This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -100,8 +101,12 @@ Current live constraint:
   evidence for namespace/name identity, unique versions, default published
   version, SDK and HTTP publication paths, and explicit AgentCard fields, and
   exits the live promoted queue through canonical review;
-- the live generated catalog currently contains `55` promoted techniques and
-  `52` canonical techniques;
+- `AOA-T-0064` closed during Stage 4 with exact-fit Nacos A2A Registry
+  evidence for SDK name lookup, HTTP detail lookup, explicit list/search
+  parameters, and future search dimensions kept outside the current contract,
+  and exits the live promoted queue through canonical review;
+- the live generated catalog currently contains `54` promoted techniques and
+  `53` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -113,15 +118,15 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, and Pack 20 closures is `55` promoted techniques,
+Pack 19, Pack 20, and Pack 21 closures is `54` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
-`AOA-T-0061`, `AOA-T-0062`, and `AOA-T-0063` counted as closed rows rather
-than remaining targets.
+`AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, and `AOA-T-0064` counted as closed
+rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -136,7 +141,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-four closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-five closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -197,7 +202,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | exact-fit second context; exits to canonical | `openclaw-linear-plugin` configured repo map, selected repo sets, per-repo worktree paths, project context injection, and first-read root instruction files close the cross-repo startup-map gap |
 | Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | exact-fit second context; exits to canonical | Cloudflare long-running Agents durable plan-step, checkpoint, next-step scheduling, failed-step state, re-planning, and human oversight boundaries close the bounded episode-loop gap |
 | Stage 4 | [AOA-T-0063 versioned-agent-registry-contract](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | docs / artifact | Pack 20 versioned agent registry contract | exact-fit second context; exits to canonical | Nacos A2A Registry namespace/name identity, unique versions, default published version, SDK and HTTP publication paths, and explicit AgentCard fields close the versioned registry-entry gap |
-| Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | pending |  |
+| Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | exact-fit second context; exits to canonical | Nacos A2A Registry SDK name lookup, HTTP detail lookup, explicit list/search parameters, and future search dimensions kept outside the contract close the bounded capability-discovery gap |
 | Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | pending |  |
 | Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | pending |  |
 | Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | pending |  |
@@ -355,7 +360,11 @@ families without collapsing them into one generic "agent workflow" proof lane.
     namespace/name identity, unique versions, a current default published
     version, SDK and HTTP publication paths, and explicit AgentCard fields
     including name, description, URL, version, and protocol version
-23. Pack 21 - Capability Discovery: `AOA-T-0064`
+23. Pack 21 - Capability Discovery: `AOA-T-0064` - closed;
+    exact-fit Nacos A2A Registry evidence found: SDK name lookup, HTTP detail
+    lookup with `namespaceId` and `agentName`, list search with `pageNo`,
+    `pageSize`, `agentName`, `namespaceId`, and `search=blur`, and future
+    skill/tag/description filtering kept outside the current contract
 24. Pack 22 - MCP Gateway Proxy: `AOA-T-0065`
 25. Pack 23 - Transcript Replay Artifact: `AOA-T-0066`
 26. Pack 24 - Transcript-Linked Code Lineage: `AOA-T-0067`
@@ -405,13 +414,13 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `55` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `54` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
     `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`,
-    `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, and
-    `AOA-T-0063` rows against generated catalog truth.
+    `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
+    and `AOA-T-0064` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1337,6 +1346,38 @@ Reject:
   authentication, console workflows, and SDK lifecycle;
 - trust/signature policy, capability-spec schema ownership, marketplace
   curation, graph semantics, or registry governance.
+
+### AOA-T-0064: `capability-discovery`
+
+Stage 4 Pack 21 verdict, 2026-05-12: exact-fit second context found.
+`nacos-group/nacos-group.github.io` keeps discovery as lookup over already
+published AgentCards through SDK name lookup, HTTP detail lookup, and explicit
+list/search parameters. This closes the discovery-query gap without widening
+into Nacos deployment, console workflows, SDK lifecycle, A2A invocation,
+endpoint subscription, ranking, trust policy, marketplace curation, graph
+semantics, or registry product governance.
+
+Exact evidence:
+
+- query appears as a distinct `Query Agent` section after publication;
+- SDK lookup retrieves the default published AgentCard by `agentName`;
+- HTTP detail lookup uses explicit `namespaceId` and `agentName` parameters;
+- list search uses explicit `pageNo`, `pageSize`, `agentName`, `namespaceId`,
+  and `search=blur` parameters;
+- console search remains name-driven and leads to detail view rather than
+  ranking or curation;
+- skill/tag/description filtering remains a future search dimension rather
+  than a current canonical requirement.
+
+Reject:
+
+- publication, version mutation, AgentCard payload schema, or default-version
+  contract work that belongs to `AOA-T-0063` or `AOA-T-0025`;
+- endpoint subscription, runtime invocation, service deployment,
+  authentication, console workflows, SDK lifecycle, and A2A client selection;
+- ranking, recommendation, trust/signature policy, marketplace curation, graph
+  semantics, official registry-protocol governance, or broad registry product
+  doctrine.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

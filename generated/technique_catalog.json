@@ -3604,7 +3604,7 @@
       "name": "capability-discovery",
       "domain": "docs",
       "kind": "discovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep capability lookup reviewable as explicit bounded queries over published registry entries so discovery stays separate from ranking, marketplace curation, trust policy, and registry product doctrine.",
       "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
       "origin": {
@@ -3622,12 +3622,12 @@
         "capability",
         "query"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-28",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -3651,6 +3651,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

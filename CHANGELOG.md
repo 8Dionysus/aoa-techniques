@@ -22,6 +22,16 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0064 capability-discovery` to `canonical` after Nacos's
+  A2A Registry guide showed exact-fit public reinforcement for bounded lookup
+  over already-published AgentCards: SDK lookup by name, HTTP detail lookup
+  with `namespaceId` and `agentName`, list search with `pageNo`, `pageSize`,
+  `agentName`, `namespaceId`, and `search=blur`, plus skill/tag/description
+  filtering kept as a future search dimension rather than silently imported,
+  while excluding publication, endpoint subscription, A2A invocation, ranking,
+  trust policy, registry console/product behavior, marketplace curation, graph
+  semantics, and registry governance, updating Audit queue posture from `55`
+  promoted techniques to `54`
 - promoted `AOA-T-0063 versioned-agent-registry-contract` to `canonical`
   after Nacos's A2A Registry guide showed exact-fit public reinforcement for
   named versioned AgentCard registry entries with namespace/name identity,

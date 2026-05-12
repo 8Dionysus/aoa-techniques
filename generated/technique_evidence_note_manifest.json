@@ -37785,6 +37785,183 @@
       "technique_path": "techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/instruction/capability-registry/capability-discovery/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0064"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "capability-discovery"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for locating already-published capability or agent records through one explicit bounded lookup contract"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve discovery as query over published entries without turning it into entry publication, capability-spec ownership, endpoint subscription, runtime invocation, ranking, trust or signature policy, marketplace curation, graph semantics, or registry product governance"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "query fields change without contract review, so discovery semantics drift while callers still believe the same lookup surface is in use"
+                },
+                {
+                  "order": 2,
+                  "text": "fuzzy matching or wildcard behavior expands until reviewers can no longer tell which records a query is allowed to return"
+                },
+                {
+                  "order": 3,
+                  "text": "result shape changes from identifiers or records into product-specific invocation, routing, trust, or editorial payloads"
+                },
+                {
+                  "order": 4,
+                  "text": "discovery starts querying hidden runtime state instead of already-published entries"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "tiny systems can gain unnecessary query-contract ceremony when manual lookup or a static index is enough"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can mistake explicit lookup for quality ranking, trustworthiness, or runtime readiness"
+                },
+                {
+                  "order": 3,
+                  "text": "discovery fields can become a dumping ground for reputation, policy, endpoint health, graph relations, or marketplace labels"
+                },
+                {
+                  "order": 4,
+                  "text": "a registry product can make the reusable contract look platform-specific if lookup, subscription, invocation, and UI browsing are described as one object"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating query filters as a backdoor for ranking, recommendation, trust, reputation, or governance policy"
+                },
+                {
+                  "order": 2,
+                  "text": "using discovery to redefine what the published entry means instead of requiring a separate publication contract"
+                },
+                {
+                  "order": 3,
+                  "text": "importing registry console search, SDK subscription, endpoint selection, A2A invocation, or service deployment into the technique"
+                },
+                {
+                  "order": 4,
+                  "text": "turning future filters such as skill, tag, or description search into current canonical requirements before the inspected source actually owns them"
+                },
+                {
+                  "order": 5,
+                  "text": "collapsing query metadata into graph semantics or marketplace curation"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot state the query fields, match behavior, and result shape without reading server code"
+                },
+                {
+                  "order": 2,
+                  "text": "new fields mainly explain policy, ranking, trust, endpoint availability, or graph relations rather than bounded lookup"
+                },
+                {
+                  "order": 3,
+                  "text": "the response payload starts selecting an endpoint, invoking an agent, asserting quality, or producing editorial placement"
+                },
+                {
+                  "order": 4,
+                  "text": "adjacent techniques such as versioned registry-entry contract, capability-spec versioning, marketplace curation, or relation lift are being copied into this bundle instead of linked or routed"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep query parameters, match behavior, pagination or limit semantics, and result shape visible in the discovery surface"
+                },
+                {
+                  "order": 2,
+                  "text": "require review when query fields, fuzzy or wildcard behavior, result shape, or response scope changes"
+                },
+                {
+                  "order": 3,
+                  "text": "route entry publication to AOA-T-0063 and capability schema work to AOA-T-0025"
+                },
+                {
+                  "order": 4,
+                  "text": "keep trust, signature, endpoint selection, runtime invocation, marketplace curation, graph semantics, registry runtime, and product-console behavior in their owning layers"
+                },
+                {
+                  "order": 5,
+                  "text": "mark future search dimensions as future or adjacent until a source makes them current and bounded"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0064` to `canonical` and use this note as the watch surface for query drift, fuzzy-match creep, hidden runtime-state lookup, result-shape creep, discovery/ranking collapse, trust-policy absorption, and registry-product creep"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/instruction/capability-registry/capability-discovery/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -37815,34 +37992,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around ranking, semantic linkage, trust filters, and registry runtime breadth"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around ranking, semantic linkage, trust filters, and registry runtime breadth"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same contract as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "text": "`nacos-group/nacos-group.github.io` provides exact-fit public reinforcement beyond the donor family: its A2A Registry guide separates query from publication, retrieves the default published AgentCard by name, exposes HTTP exact-name detail lookup with `namespaceId` and `agentName`, exposes list search with `pageNo`, `pageSize`, `agentName`, `namespaceId`, and `search=blur`, and keeps skills/tags/description filtering as a future search dimension rather than an imported current contract"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for the same bounded discovery-query contract"
                 }
               ]
             },
@@ -37853,11 +38030,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is making capability lookup explicit and reviewable over already-published entries instead of hiding discovery semantics in server code or registry product behavior"
+                  "text": "this is the right canonical default when the main problem is making capability lookup explicit and reviewable over already-published entries instead of hiding discovery semantics in server code or registry product behavior"
                 },
                 {
                   "order": 2,
                   "text": "it remains narrower than [AOA-T-0063](../../versioned-agent-registry-contract/TECHNIQUE.md) because it does not publish the entry contract, and it remains narrower than [AOA-T-0041](../../../skill-discovery/skill-marketplace-curation/TECHNIQUE.md) because it does not curate or rank discovery"
+                },
+                {
+                  "order": 3,
+                  "text": "it is now strong enough as a canonical default because the Nacos source repeats the same lookup-over-published-AgentCards shape in a separate live agent-registry family without requiring this bundle to absorb Nacos product semantics, endpoint subscription, A2A runtime invocation, console workflow, future filter roadmap, trust policy, or marketplace curation"
                 }
               ]
             },
@@ -37869,7 +38050,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -37884,7 +38065,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `nacos-group/nacos-group.github.io` source is Apache-2.0 licensed and no source code, credentials, private deployment state, local endpoints, or Nacos-specific runtime setup was copied into the technique"
                 }
               ]
             },
@@ -37895,11 +38076,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses explicit bounded discovery queries as a real lookup surface rather than only as imported documentation"
+                  "text": "future discovery sources can reinforce the default, but they must preserve the narrow boundary: one lookup surface over already-published entries, explicit query fields or parameters, bounded match behavior, explicit result shape, and clear separation from ranking, trust, runtime invocation, subscription, marketplace curation, and registry governance"
                 }
               ]
             },
@@ -37910,11 +38091,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0064` `promoted`"
+                  "text": "move `AOA-T-0064` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the discovery-query contract survives outside the donor repository"
+                  "text": "add an adverse-effects review to preserve the boundary between capability discovery, versioned registry-entry publication, capability-spec ownership, endpoint subscription, runtime invocation, trust or signature policy, marketplace curation, graph semantics, and registry product governance"
                 }
               ]
             }
