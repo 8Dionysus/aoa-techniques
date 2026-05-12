@@ -515,6 +515,28 @@
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
+      "id": "AOA-T-0068",
+      "name": "fail-closed-evidence-gate",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
+      "current_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
+      "family": "approval-evidence",
+      "proposed_trunk": "governance",
+      "proposed_shelf": "approval-evidence",
+      "proposed_future_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:approval-evidence",
+        "domain:agent-workflows",
+        "kind:guardrail",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -579,28 +601,6 @@
         "review_status:pilot-candidate"
       ],
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0068",
-      "name": "fail-closed-evidence-gate",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
-      "current_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
-      "family": "approval-evidence",
-      "proposed_trunk": "governance",
-      "proposed_shelf": "approval-evidence",
-      "proposed_future_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:approval-evidence",
-        "domain:agent-workflows",
-        "kind:guardrail",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0069",

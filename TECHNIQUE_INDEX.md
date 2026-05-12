@@ -62,6 +62,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0053 | local-first-session-index | history | canonical | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. |
 | AOA-T-0066 | transcript-replay-artifact | history | canonical | Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine. |
 | AOA-T-0067 | transcript-linked-code-lineage | history | canonical | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
+| AOA-T-0068 | fail-closed-evidence-gate | agent-workflows | canonical | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. |
 
 ## Promoted techniques
 
@@ -70,7 +71,6 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
 | AOA-T-0058 | receipt-confirmed-handoff-packet | agent-workflows | promoted | Require an explicit receipt state for a handoff packet before the receiving side continues so ownership transfer stays reviewable instead of being inferred from delivery or silence. |
 | AOA-T-0059 | git-verified-handoff-claims | agent-workflows | promoted | Verify concrete handoff claims against visible git state before continuation so the next session trusts repo evidence rather than memory or summary prose alone. |
-| AOA-T-0068 | fail-closed-evidence-gate | agent-workflows | promoted | Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings. |
 | AOA-T-0069 | approval-bound-durable-jobs | agent-workflows | promoted | Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform. |
 | AOA-T-0070 | two-stage-document-ocr-pipeline | agent-workflows | promoted | Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step. |
 | AOA-T-0020 | evidence-note-provenance-lift | docs | promoted | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |

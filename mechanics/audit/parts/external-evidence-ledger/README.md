@@ -473,6 +473,62 @@ review enforcement, dashboards, hosted search, transcript indexing, memory
 systems, or repository analytics unless they expose the direct code-to-evidence
 lineage seam itself.
 
+## AOA-T-0068 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`mvar-security/clawzero` at
+`17ac1e7ee69eaf32cb616f67ef37d0e9db5d7fe7` provides the clean primary public
+source for Pack 25. The repository is Apache-2.0 licensed and frames the
+object as a deterministic execution boundary between model output and tool
+execution, with sink-policy decisions and witness artifacts. OpenAI Agents
+SDK guardrails at `openai/openai-agents-python`
+`564584513f74e74f7916bd865ea77003d47b739c` provide supporting boundary
+semantics for blocking and tool guardrails, but not the primary proof.
+
+Accepted evidence:
+
+- ClawZero documents a boundary between model output and tool execution, and
+  states that enforcement happens before commands, credential access,
+  filesystem access, network requests, or other high-privilege tool calls run.
+- Its verified-claims surface records command-backed proof that shell
+  injection, unsigned package install, temporal taint, budget-limit, and
+  witness-chain paths produce reproducible block or verification outcomes.
+- Its tests show `protect_*` wrappers raising blocked execution before wrapped
+  LangChain, OpenClaw, and MCP calls proceed when the sink verdict is `block`.
+- Its witness tests and README keep the review evidence visible through one
+  witness artifact with timestamp, runtime, sink type, target, decision,
+  reason code, policy id, provenance, adapter, engine, and signature fields.
+- OpenAI Agents SDK supports the smaller tool-guardrail shape: blocking input
+  guardrails can run before an agent starts, tool input guardrails run before
+  custom function-tool execution, guardrail output can carry check details,
+  and tripwires or reject behavior halt or skip execution at the covered seam.
+
+Rejected or bounded:
+
+- Do not import ClawZero's attack demonstrations, named policy profiles,
+  adapter APIs, install commands, CLI families, temporal-taint engine, package
+  trust controls, SARIF export, compliance mapping, budget controls, or MVAR
+  governance as requirements for this technique.
+- Do not import signed-witness chains or cryptographic verification as the
+  default evidence requirement; this bundle only needs one reviewable evidence
+  artifact or equivalent surface.
+- Do not import OpenAI Agents SDK as a universal guarantee: parallel input
+  guardrails may run too late for side-effect prevention, tool guardrails cover
+  custom function tools rather than every hosted, built-in, handoff, or
+  platform tool path.
+- Treat HiddenLayer, TrueFoundry, AgentLock, MandateOS, and similar gateway or
+  authorization surfaces as adjacent pressure unless a future pass needs a
+  separate product-gateway or signed-authorization sibling; they are too broad
+  for this narrow canonical proof.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: one explicit verdict boundary before
+mutating execution, non-allow outcomes block side effects, and a reviewable
+evidence surface records the verdict basis. Do not reopen from broad policy
+authoring, human approval, signed-witness infrastructure, compliance export,
+attack-pack validation, gateway products, sandboxing, or durable job
+orchestration unless they expose the bounded fail-closed evidence gate itself.
+
 ## AOA-T-0065 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

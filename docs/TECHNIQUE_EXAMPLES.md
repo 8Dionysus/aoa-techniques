@@ -142,6 +142,12 @@ See also:
 |---|---|---|---|
 | minimal mcp-gateway-proxy | `present` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md` | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 
+### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal fail-closed-evidence-gate | `present` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -160,12 +166,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal fail-closed-evidence-gate | `present` | `techniques/governance/approval-evidence/fail-closed-evidence-gate/examples/minimal-fail-closed-evidence-gate.md` | [TECHNIQUE.md](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) |
 
 ### [AOA-T-0069](../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) - approval-bound-durable-jobs (`promoted`)
 

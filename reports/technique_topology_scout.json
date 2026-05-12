@@ -605,6 +605,33 @@
       }
     },
     {
+      "id": "AOA-T-0068",
+      "name": "fail-closed-evidence-gate",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
+      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
+      "topology": {
+        "family": "approval-evidence",
+        "capability_class": [
+          "choose",
+          "mutate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "runtime-state",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating",
+          "approval-required"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -677,33 +704,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0068",
-      "name": "fail-closed-evidence-gate",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Stop mutating execution at the boundary unless an explicit allow verdict exists, and emit reviewable evidence for blocked or allowed paths instead of relying on best-effort warnings.",
-      "technique_path": "techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md",
-      "topology": {
-        "family": "approval-evidence",
-        "capability_class": [
-          "choose",
-          "mutate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "runtime-state",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating",
-          "approval-required"
         ]
       }
     },
