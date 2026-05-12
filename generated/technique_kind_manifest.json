@@ -33,8 +33,8 @@
       ],
       "counts": {
         "total": 13,
-        "canonical": 9,
-        "promoted": 4,
+        "canonical": 10,
+        "promoted": 3,
         "by_domain": {
           "agent-workflows": 13,
           "docs": 0,
@@ -118,20 +118,20 @@
           "technique_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0055",
+          "name": "requirements-design-tasks-ladder",
+          "domain": "agent-workflows",
+          "status": "canonical",
+          "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
+          "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0005",
           "name": "new-intent-rollout-checklist",
           "domain": "agent-workflows",
           "status": "promoted",
           "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
           "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0055",
-          "name": "requirements-design-tasks-ladder",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
-          "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0092",

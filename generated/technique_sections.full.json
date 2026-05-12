@@ -4527,7 +4527,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep dependency coordination separate instead of widening this bundle into task-graph management\n- keep dry-run, contract, or approval machinery separate instead of folding it into the ladder\n- add a stronger second live context if another public repository uses the same bounded planning ladder outside the donor methodology family"
+          "content_markdown": "- keep dependency coordination separate instead of widening this bundle into task-graph management\n- keep dry-run, contract, or approval machinery separate instead of folding it into the ladder\n- preserve the SpecForge and Spec Kit evidence boundary: the reusable object is the requirements -> design -> tasks ladder, not their full agent platform, command suite, approval flow, memory layer, implementation execution, or spec-driven methodology stack"
         }
       ]
     },

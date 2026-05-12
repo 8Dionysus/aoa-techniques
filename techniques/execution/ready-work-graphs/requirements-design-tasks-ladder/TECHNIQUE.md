@@ -3,7 +3,7 @@ id: AOA-T-0055
 name: requirements-design-tasks-ladder
 domain: agent-workflows
 kind: workflow
-status: promoted
+status: canonical
 origin:
   project: gotalab/cc-sdd
   path: README.md + .kiro/specs/photo-albums-en/requirements.md + .kiro/specs/photo-albums-en/design.md + .kiro/specs/photo-albums-en/tasks.md
@@ -17,12 +17,12 @@ tags:
   - design
   - tasks
 summary: Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # requirements-design-tasks-ladder
@@ -183,4 +185,4 @@ See `checks/requirements-design-tasks-ladder-checklist.md`.
 
 - keep dependency coordination separate instead of widening this bundle into task-graph management
 - keep dry-run, contract, or approval machinery separate instead of folding it into the ladder
-- add a stronger second live context if another public repository uses the same bounded planning ladder outside the donor methodology family
+- preserve the SpecForge and Spec Kit evidence boundary: the reusable object is the requirements -> design -> tasks ladder, not their full agent platform, command suite, approval flow, memory layer, implementation execution, or spec-driven methodology stack

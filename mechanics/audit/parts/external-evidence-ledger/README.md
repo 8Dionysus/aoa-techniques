@@ -46,6 +46,7 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | Qodo / PR-Agent | A public review workflow can refresh review output after PR push or commit-like events, preserve visible findings as persistent review comments, and keep review artifacts distinct from auto-fix, auto-approval, merge, or CI-governance behavior. |
 | [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | Qodo / PR-Agent | A public review workflow can update one current findings surface across repeated commits, keep added/resolved findings visible by commit, and fold previous suggestions into bounded history without becoming backlog, remediation, or merge policy. |
 | [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | Claude Code skills lifecycle | A public agent skill system can carry invoked skills across auto-compaction within a budget, re-attach recent skill invocations after summary, and allow explicit re-invocation after compaction without becoming long-term memory, marketplace, installer, or full prompt-restoration doctrine. |
+| [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | SpecForge-Agent plus GitHub Spec Kit boundary check | A public agent workflow can keep requirements, design, and task artifacts distinct before implementation, with design derived from approved requirements and tasks derived from design plus requirements, without making the technique absorb full SDD, command, approval, memory, or implementation doctrine. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
 
 ## Active Lead Ledger
@@ -463,6 +464,46 @@ Future watch shape: keep `AOA-T-0054` centered on post-compaction skill
 availability, bounded reattachment, and explicit reload from canonical sources;
 route compaction summary policy, memory recall, installer behavior, marketplace
 curation, and full context reconstruction to sibling techniques.
+
+## AOA-T-0055 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0055` exited the
+promoted queue through bundle-local canonical review.
+
+Exact-fit source:
+
+- [SpecForge-Agent](https://github.com/wirelessr/SpecForge-Agent) at
+  `bfbc98f7be766b36e7979fb5fd9472d69a3d0c48` documents a complete
+  `Requirements -> Design -> Tasks -> Execution` workflow with phased approval.
+- Its `PlanAgent` creates `requirements.md`, `DesignAgent` builds `design.md`
+  from approved requirements, and `TasksAgent` reads both `design.md` and
+  `requirements.md` before writing `tasks.md`.
+- Its end-to-end workflow tests check that `requirements.md`, `design.md`, and
+  `tasks.md` exist and are generated before implementation proceeds.
+
+Supporting boundary check:
+
+- [GitHub Spec Kit](https://github.com/github/spec-kit) at
+  `765e60f1c46a242b44238ce1fc7bdd2a5e9cd1ab` exposes a visible
+  `spec.md` -> `plan.md` -> `tasks.md` spine. It supports the layer boundary,
+  but the technique intentionally does not import Spec Kit's full SDD command
+  suite, constitution checks, hooks, research artifacts, branch workflow, or
+  implementation flow.
+
+Rejected widening:
+
+- full spec-driven development doctrine;
+- Kiro or Spec Kit command suites;
+- approval orchestration;
+- agent platform architecture;
+- memory/session management;
+- implementation execution;
+- task dependency graph, ready-frontier, ranking, or staffing behavior.
+
+Future watch shape: keep `AOA-T-0055` centered on the pre-execution planning
+ladder. Split future work only if methodology adoption, approval flow, command
+automation, implementation execution, research/constitution gates, memory
+state, or dependency graph coordination becomes the actual object.
 
 ## Deferred Pack Watch
 

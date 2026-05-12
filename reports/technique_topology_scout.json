@@ -419,6 +419,33 @@
       }
     },
     {
+      "id": "AOA-T-0055",
+      "name": "requirements-design-tasks-ladder",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
+      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "topology": {
+        "family": "ready-work-graphs",
+        "capability_class": [
+          "plan",
+          "read",
+          "write"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "code",
+          "ui"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -435,33 +462,6 @@
         "substrate": [
           "conversation",
           "tool-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0055",
-      "name": "requirements-design-tasks-ladder",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
-      "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
-      "topology": {
-        "family": "ready-work-graphs",
-        "capability_class": [
-          "plan",
-          "read",
-          "write"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "code",
-          "ui"
         ],
         "execution_profile": "medium-agent",
         "risk_posture": [

@@ -31402,6 +31402,183 @@
       "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0055"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "requirements-design-tasks-ladder"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for keeping requirement, design, and task layers distinct before implementation starts"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on the bounded planning ladder rather than widening into full SDD doctrine, command suites, template ecosystems, approval workflows, task graphs, memory, or implementation execution"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "requirements stay vague, so design and tasks inherit ambiguity"
+                },
+                {
+                  "order": 2,
+                  "text": "design restates requirements instead of answering them with a solution shape"
+                },
+                {
+                  "order": 3,
+                  "text": "tasks are invented independently instead of being derived from visible design choices"
+                },
+                {
+                  "order": 4,
+                  "text": "the three layers become decorative headings over one undifferentiated planning blob"
+                },
+                {
+                  "order": 5,
+                  "text": "methodology, command, approval, or template concerns become the real object of the bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "simple changes can be slowed by unnecessary planning ceremony"
+                },
+                {
+                  "order": 2,
+                  "text": "teams can mistake the existence of three documents for actual traceability"
+                },
+                {
+                  "order": 3,
+                  "text": "over-detailed design can delay the first useful implementation slice"
+                },
+                {
+                  "order": 4,
+                  "text": "the ladder can pull in governance, staffing, research, memory, or execution policy if its stop line is not guarded"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating the technique as a mandate to adopt one spec-driven development stack"
+                },
+                {
+                  "order": 2,
+                  "text": "using `tasks.md` as a substitute for design review"
+                },
+                {
+                  "order": 3,
+                  "text": "hiding design decisions inside task lists to skip an explicit design layer"
+                },
+                {
+                  "order": 4,
+                  "text": "folding approval flow, auto-execution, task dependency graphs, or full project-management behavior into the ladder"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "tasks cannot name the design choice that produced them"
+                },
+                {
+                  "order": 2,
+                  "text": "design sections do not answer a visible requirement"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers discuss template compliance before layer traceability"
+                },
+                {
+                  "order": 4,
+                  "text": "the planning surface grows faster than the bounded work it is supposed to prepare"
+                },
+                {
+                  "order": 5,
+                  "text": "implementation begins while requirements, design, and tasks still contradict each other"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep each layer short, explicit, and reviewable"
+                },
+                {
+                  "order": 2,
+                  "text": "require a visible transition from requirement to design and from design to tasks"
+                },
+                {
+                  "order": 3,
+                  "text": "trim command, template, approval, and methodology language that does not serve the layer transition"
+                },
+                {
+                  "order": 4,
+                  "text": "route blocker graphs, ready-frontier derivation, implementation execution, approvals, and memory to neighboring techniques or owner repositories"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0055` to `canonical` and use this note as the watch surface for planning-theater drift, methodology-stack drift, task-list-without-design drift, and execution-policy drift"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -31432,34 +31609,38 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around command suites, template ecosystems, steering, project memory, validation commands, and methodology doctrine"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around command suites, template ecosystems, steering, project memory, validation commands, and methodology doctrine"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same requirement -> design -> task ladder as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` records the same requirement -> design -> task ladder as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor methodology family"
+                  "text": "SpecForge-Agent provides exact-fit public reinforcement: a `PlanAgent` creates `requirements.md`, a `DesignAgent` creates `design.md` from approved requirements, a `TasksAgent` reads both design and requirements before writing `tasks.md`, and end-to-end tests check the three artifacts before implementation"
+                },
+                {
+                  "order": 5,
+                  "text": "GitHub Spec Kit provides supporting boundary evidence through its visible `spec.md` -> `plan.md` -> `tasks.md` spine, but its broader SDD command suite, constitution gates, hooks, research documents, and implementation flow remain excluded"
+                },
+                {
+                  "order": 6,
+                  "text": "validation strength: the bundle now carries a checklist, an example, a clean external-origin note, a documentation-first second context, and public live reinforcement beyond the donor repository"
                 }
               ]
             },
@@ -31470,7 +31651,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is keeping requirement, design, and task layers visibly distinct before execution starts"
+                  "text": "this is the right canonical default when the main problem is preserving a visible planning ladder before implementation starts"
                 },
                 {
                   "order": 2,
@@ -31478,7 +31659,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it also remains narrower than [AOA-T-0049](../../dependency-aware-task-graph/TECHNIQUE.md) because it derives tasks from design without taking on task dependency coordination"
+                  "text": "it remains narrower than [AOA-T-0049](../../dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../ready-work-from-blocker-graph/TECHNIQUE.md) because it does not author blocker graphs, compute ready frontiers, rank work, or coordinate execution"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now the natural default when a bounded workflow needs requirements, design, and tasks to remain distinct and traceable without adopting a full SDD, agent-platform, approval, or implementation framework"
                 }
               ]
             },
@@ -31490,7 +31675,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -31505,7 +31690,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the external reinforcement comes from public MIT-licensed repositories and visible documentation, source code, and e2e tests rather than private project artifacts or hidden workflow state"
                 }
               ]
             },
@@ -31516,11 +31701,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "future work can add examples from non-agent planning practices, but no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface that treats requirement -> design -> task separation as a reusable object without widening into a full methodology stack"
+                  "text": "the boundary from methodology, approval flow, task execution, memory, command suites, and task-graph siblings should stay explicit so canonical review does not collapse the ladder into a larger workflow stack"
                 }
               ]
             },
@@ -31531,11 +31716,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0055` `promoted`"
+                  "text": "move `AOA-T-0055` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the requirements-design-tasks ladder survives outside the donor methodology family"
+                  "text": "add an adverse-effects review to preserve the caution boundary after promotion"
                 }
               ]
             }
@@ -31841,6 +32026,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first corpus that records one bounded pre-execution planning ladder rather than shipping the donor's command set, templates, or methodology framework"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: SpecForge-Agent\n- repository: `wirelessr/SpecForge-Agent`\n- observed revision: `bfbc98f7be766b36e7979fb5fd9472d69a3d0c48`\n- public surfaces: `README.md`, `autogen_framework/README.md`, `autogen_framework/workflow_manager.py`, `autogen_framework/agents/plan_agent.py`, `autogen_framework/agents/design_agent.py`, `autogen_framework/agents/tasks_agent.py`, `tests/e2e/workflow_test.sh`, and `tests/e2e/simple_workflow_test.sh`\n- supporting contrast: `github/spec-kit` at `765e60f1c46a242b44238ce1fc7bdd2a5e9cd1ab`, using only the visible `spec.md` -> `plan.md` -> `tasks.md` surface as a boundary check rather than importing its full SDD method"
                 }
               ]
             },
@@ -31890,6 +32080,11 @@
                   "order": 3,
                   "key": "safety rules",
                   "value_markdown": "the technique remains outside implementation workflow, runtime coordination, and wider methodology doctrine"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "SpecForge-Agent keeps `requirements.md`, `design.md`, and `tasks.md` as explicit workflow artifacts, generates design from approved requirements, generates tasks from design plus requirements, and tests the sequence before implementation"
                 }
               ]
             },
@@ -31932,6 +32127,22 @@
                 {
                   "order": 4,
                   "text": "the sample `tasks.md` includes requirement coverage notes, which shows the task layer remains traceable back to the earlier planning layers"
+                },
+                {
+                  "order": 5,
+                  "text": "SpecForge-Agent's public documentation names a complete `Requirements -> Design -> Tasks -> Execution` workflow with phased review and approval, keeping the first three layers separate before execution begins."
+                },
+                {
+                  "order": 6,
+                  "text": "SpecForge-Agent's `PlanAgent` creates `requirements.md`, `DesignAgent` builds `design.md` from approved requirements, and `TasksAgent` reads both `design.md` and `requirements.md` before writing `tasks.md`."
+                },
+                {
+                  "order": 7,
+                  "text": "SpecForge-Agent's end-to-end tests check that `requirements.md`, `design.md`, and `tasks.md` are generated in order before implementation."
+                },
+                {
+                  "order": 8,
+                  "text": "GitHub Spec Kit independently exposes the same visible planning spine as `spec.md` -> `plan.md` -> `tasks.md`, but its broader SDD command suite, constitution gates, hooks, research documents, and implementation flow remain out of scope for this technique."
                 }
               ]
             },
@@ -31942,7 +32153,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves one bounded requirement-to-design-to-task ladder without carrying over the donor's command suite, template system, or wider methodology stack"
+                  "text": "works across donor, documentation-first, SpecForge-Agent, and Spec Kit planning-spine contexts while preserving one bounded requirement-to-design-to-task ladder without carrying over command suites, template systems, approvals, agent orchestration, memory layers, implementation execution, or wider methodology stacks"
                 }
               ]
             }

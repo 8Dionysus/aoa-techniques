@@ -184,6 +184,19 @@ See also:
 - Validate by: a compaction event can happen without permanently losing skill discoverability; post-compaction sessions can still identify or reload needed skills...
 - Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
 
+### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`canonical`)
+
+- Summary: Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.
+- Intent: Keep requirements, design, and tasks as visibly separate planning layers so work can move...
+- Use when: a feature or change needs more than a one-line plan or the next execution slice depends on a...
+- Avoid when: the work is one tiny change with no real design question or the main need is a full...
+- Needs: one bounded requirement statement; one design response to that requirement; one bounded task set derived from the...
+- Produces: one visible requirement layer; one visible design layer; one bounded task layer for later implementation.
+- Core contract: requirements, design, and tasks remain distinct layers; design responds to a visible requirement instead of standing alone.
+- Main risk: design stays too vague to produce bounded tasks.
+- Validate by: tasks can be traced back to a visible design choice; design responds to a visible requirement; the three layers...
+- Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 - Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
@@ -196,19 +209,6 @@ See also:
 - Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
 - Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
 - Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
-
-### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
-
-- Summary: Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.
-- Intent: Keep requirements, design, and tasks as visibly separate planning layers so work can move...
-- Use when: a feature or change needs more than a one-line plan or the next execution slice depends on a...
-- Avoid when: the work is one tiny change with no real design question or the main need is a full...
-- Needs: one bounded requirement statement; one design response to that requirement; one bounded task set derived from the...
-- Produces: one visible requirement layer; one visible design layer; one bounded task layer for later implementation.
-- Core contract: requirements, design, and tasks remain distinct layers; design responds to a visible requirement instead of standing alone.
-- Main risk: design stays too vague to produce bounded tasks.
-- Validate by: tasks can be traced back to a visible design choice; design responds to a visible requirement; the three layers...
-- Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)
 
 ### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
 
