@@ -30,4 +30,4 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 
 - why this adaptation is reusable here: many receipt-like or invoice-like workflows need a visible post-OCR extraction seam that keeps target fields, template assumptions, and review fallbacks explicit
 - downstream repo impact: later execution packaging or ingestion workflows belong in `aoa-skills`, while this repository keeps only the reusable extraction contract
-- limits or follow-up review concerns: this import still needs one second live adopter beyond the donor parser family and documentation-first adaptation before any canonical discussion is honest
+- limits or follow-up review concerns: the original live-adopter gap is now closed by YomiToku as a second public workflow surface, while future review should keep OCR staging, LLM extraction, locale policy, bookkeeping automation, and product licensing boundaries outside this technique

@@ -1553,8 +1553,8 @@
       ],
       "counts": {
         "total": 5,
-        "canonical": 1,
-        "promoted": 4,
+        "canonical": 2,
+        "promoted": 3,
         "by_domain": {
           "agent-workflows": 5,
           "docs": 0,
@@ -1599,7 +1599,7 @@
           "id": "AOA-T-0071",
           "name": "template-backed-field-extraction-after-ocr",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser.",
           "technique_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
           "kind": "ingest"

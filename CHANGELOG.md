@@ -22,6 +22,18 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0071 template-backed-field-extraction-after-ocr` to
+  `canonical` after `kotaro-kinoshita/yomitoku` showed exact-fit public
+  reinforcement for schema-backed post-OCR field extraction: YAML schemas name
+  explicit field targets, rule-based extraction uses visible `cell_id`, `bbox`,
+  `description`, and `regex` methods, JSON output preserves normalized value,
+  raw text, source, cell ids, bounding boxes, and confidence, and missed fields
+  remain visible through `source: not_found` plus low confidence. YomiToku is
+  CC BY-NC-SA 4.0 licensed and is used as evidence only; OCR engines, layout
+  analyzers, LLM extraction services, schema products, locale doctrine,
+  bookkeeping flows, receipt or invoice apps, and total document-understanding
+  stacks stay outside the bundle, updating Audit queue posture from `48`
+  promoted techniques to `47`
 - promoted `AOA-T-0070 two-stage-document-ocr-pipeline` to `canonical` after
   `JaidedAI/EasyOCR` showed exact-fit public reinforcement for staged OCR:
   `readtext()` derives text regions through a separate detection step before

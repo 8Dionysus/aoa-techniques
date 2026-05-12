@@ -30,7 +30,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `1` | `0` |
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `2` | `0` |
 | `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `3` | `0` | `3` |
-| `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `1` | `4` |
+| `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `2` | `3` |
 | `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `0` | `4` |
 | `decision-routing` | Owner-layer routing, explicit fork cards, and route risk posture for next-step choice. | `3` | `0` | `3` |
 | `diagnosis-repair` | Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair. | `4` | `0` | `4` |
@@ -348,12 +348,12 @@ OCR, field extraction, normalization, dedupe, and semantic bucketing of external
 Typical domains: `agent-workflows`.
 Typical kinds: `ingest`.
 
-Counts: `total` 5, `canonical` 1, `promoted` 4.
+Counts: `total` 5, `canonical` 2, `promoted` 3.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0070](../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | `agent-workflows` | `ingest` | `canonical` | Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step. |
-| [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | `agent-workflows` | `ingest` | `promoted` | Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser. |
+| [AOA-T-0071](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | `agent-workflows` | `ingest` | `canonical` | Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser. |
 | [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | `agent-workflows` | `ingest` | `promoted` | Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma. |
 | [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | `agent-workflows` | `ingest` | `promoted` | Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation. |
 | [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | `agent-workflows` | `ingest` | `promoted` | Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract. |

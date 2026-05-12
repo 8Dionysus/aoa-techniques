@@ -581,6 +581,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0071",
+      "name": "template-backed-field-extraction-after-ocr",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser.",
+      "current_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "family": "media-ingest",
+      "proposed_trunk": "ingest",
+      "proposed_shelf": "media-ingest",
+      "proposed_future_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:media-ingest",
+        "domain:agent-workflows",
+        "kind:ingest",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -641,28 +663,6 @@
         "family:handoff-continuation",
         "domain:agent-workflows",
         "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0071",
-      "name": "template-backed-field-extraction-after-ocr",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser.",
-      "current_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
-      "family": "media-ingest",
-      "proposed_trunk": "ingest",
-      "proposed_shelf": "media-ingest",
-      "proposed_future_path": "techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:media-ingest",
-        "domain:agent-workflows",
-        "kind:ingest",
         "status:promoted",
         "review_status:pilot-candidate"
       ],

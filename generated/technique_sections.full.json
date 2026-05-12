@@ -5839,7 +5839,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep OCR staging separate unless a narrower bridge seam proves necessary\n- split duplicate handling or receipt-family packs only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps post-OCR field extraction explicit and reviewable"
+          "content_markdown": "- keep OCR staging separate unless a narrower bridge seam proves necessary\n- split duplicate handling or receipt-family packs only if those contracts survive independently\n- use future second contexts only to reinforce the same narrow post-OCR field-extraction seam\n- keep `YomiToku` as external reinforcement only; do not import its product, license posture, OCR engine, LLM mode, or Japanese-document specialization into this technique"
         }
       ]
     },

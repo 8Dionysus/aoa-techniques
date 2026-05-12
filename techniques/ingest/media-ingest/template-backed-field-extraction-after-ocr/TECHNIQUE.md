@@ -3,7 +3,7 @@ id: AOA-T-0071
 name: template-backed-field-extraction-after-ocr
 domain: agent-workflows
 kind: ingest
-status: promoted
+status: canonical
 origin:
   project: invoice2data + receiptparser + receipt-parser-legacy
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - templates
   - receipts
 summary: Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: requires
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # template-backed-field-extraction-after-ocr
@@ -182,4 +184,5 @@ See `checks/template-backed-field-extraction-after-ocr-checklist.md`.
 
 - keep OCR staging separate unless a narrower bridge seam proves necessary
 - split duplicate handling or receipt-family packs only if those contracts survive independently
-- add a stronger second live context if another public workflow keeps post-OCR field extraction explicit and reviewable
+- use future second contexts only to reinforce the same narrow post-OCR field-extraction seam
+- keep `YomiToku` as external reinforcement only; do not import its product, license posture, OCR engine, LLM mode, or Japanese-document specialization into this technique

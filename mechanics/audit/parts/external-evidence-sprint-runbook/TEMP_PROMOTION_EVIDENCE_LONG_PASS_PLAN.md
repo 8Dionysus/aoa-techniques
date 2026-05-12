@@ -16,8 +16,9 @@ closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
 19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, the
 Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, the
 Pack 23 closure for `AOA-T-0066`, the Pack 24 closure for `AOA-T-0067`, the
-Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, and
-the Pack 27 closure for `AOA-T-0070`, the live promoted queue is `48`
+Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, the
+Pack 27 closure for `AOA-T-0070`, and the Pack 28 closure for `AOA-T-0071`,
+the live promoted queue is `47`
 bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
@@ -139,8 +140,12 @@ Current live constraint:
   box/text/confidence results, structured dict/JSON output, and visible CRAFT
   detection plus CRNN/custom recognition stage boundaries, and exits the live
   promoted queue through canonical review;
-- the live generated catalog currently contains `48` promoted techniques and
-  `59` canonical techniques;
+- `AOA-T-0071` closed during Stage 4 with exact-fit `kotaro-kinoshita/yomitoku`
+  evidence for schema-defined field targets, visible rule methods, source
+  metadata, confidence, and explicit not-found posture, and exits the live
+  promoted queue through canonical review;
+- the live generated catalog currently contains `47` promoted techniques and
+  `60` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -152,7 +157,7 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26, and Pack 27 closures is `48` promoted techniques,
+Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26, Pack 27, and Pack 28 closures is `47` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
@@ -244,7 +249,7 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | exact-fit second context; exits to canonical | `mvar-security/clawzero` deterministic execution boundary, explicit block decisions, adapter-level blocked execution, and witness artifacts close the bounded fail-closed evidence-gate gap |
 | Stage 4 | [AOA-T-0069 approval-bound-durable-jobs](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | agent-workflows / handoff | Pack 26 approval-bound durable jobs | exact-fit second context; exits to canonical | `pydantic/pydantic-ai` deferred approval/external-call identity plus durable execution support closes the bounded approval-bound durable-job gap; LangGraph supports checkpoint/thread/resume boundary semantics |
 | Stage 4 | [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | agent-workflows / ingest | Pack 27 OCR staged handoff | exact-fit second context; exits to canonical | `JaidedAI/EasyOCR` separate detection and recognition methods, bounding-box/text/confidence results, and structured dict/JSON output close the staged OCR handoff gap |
-| Stage 4 | [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 28 post-OCR template field extraction | pending |  |
+| Stage 4 | [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 28 post-OCR template field extraction | exact-fit second context; exits to canonical | `kotaro-kinoshita/yomitoku` schema-defined fields, visible rule methods, raw text/source/cell/bbox/confidence metadata, and `not_found` posture close the post-OCR field extraction gap |
 | Stage 4 | [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | agent-workflows / ingest | Pack 29 perceptual media dedupe | pending |  |
 | Stage 4 | [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 30 semantic media bucketing | pending |  |
 | Stage 4 | [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | agent-workflows / ingest | Pack 31 Telegram export normalization | pending |  |
@@ -442,7 +447,8 @@ families without collapsing them into one generic "agent workflow" proof lane.
     serving, model training, benchmarks, template extraction, semantic media
     bucketing, and full document-understanding products stay outside the
     contract
-30. Pack 28 - Post-OCR Template Field Extraction: `AOA-T-0071`
+30. Pack 28 - Post-OCR Template Field Extraction: `AOA-T-0071` - closed;
+    exact-fit `kotaro-kinoshita/yomitoku` evidence
 31. Pack 29 - Perceptual Media Dedupe: `AOA-T-0072`
 32. Pack 30 - Semantic Media Bucketing: `AOA-T-0073`
 33. Pack 31 - Telegram Export Normalization: `AOA-T-0074`
@@ -485,14 +491,14 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `48` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `47` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
     `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`,
     `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
     `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`,
-    `AOA-T-0069`, and `AOA-T-0070` rows against generated catalog truth.
+    `AOA-T-0069`, `AOA-T-0070`, and `AOA-T-0071` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1688,6 +1694,46 @@ Reject:
   family for this bundle;
 - receipt schema law, invoice parsing, template extraction, semantic media
   bucketing, review-queue automation, OCR serving, benchmarks, and total
+  document-understanding products.
+
+### AOA-T-0071: `template-backed-field-extraction-after-ocr`
+
+Stage 4 Pack 28 verdict, 2026-05-12: exact-fit second context found.
+`kotaro-kinoshita/yomitoku` keeps the reusable object as one post-OCR or
+post-layout field extraction seam outside the invoice2data, receiptparser, and
+receipt-parser-legacy donor family: field targets are schema-defined, rule
+methods remain visible, output preserves source metadata and confidence, and
+missed extraction stays visible instead of becoming silent parser certainty.
+
+Exact evidence:
+
+- YomiToku's English README describes structured extraction from document
+  images and PDFs based on a YAML schema and JSON output;
+- `docs/extractor.en.md` defines field names, structures, value types,
+  normalization, `cell_id`, `bbox`, `description`, `regex`, and merge
+  behavior;
+- rule-based extraction follows an explicit method order and returns
+  `source: not_found` plus low confidence for missing scalar or table matches;
+- JSON output preserves normalized values, raw text, source, confidence,
+  cell ids, and bounding boxes for review;
+- `schema.py`, `rule_pipeline.py`, and `tests/test_extractor.py` show the
+  schema and extraction behavior in source, including `cell_id`, `bbox`,
+  regex, fallback, and not-found cases.
+
+Reject:
+
+- YomiToku OCR engine, layout analyzer, Japanese-document specialization,
+  model setup, LLM extraction mode, vLLM server behavior, visualization output,
+  commercial edition, or CC BY-NC-SA 4.0 license posture as invariant
+  requirements;
+- `codebywiam/invoice-ocr` as primary proof because it is an application-shaped
+  invoice OCR app with regex extraction and manual correction rather than the
+  narrower schema/evidence-metadata contract;
+- `nzregs/receipt-api` as primary proof because it is an older receipt API with
+  useful OCR-line reconstruction and regex extraction but weaker explicit
+  field-object and review-metadata boundaries;
+- OCR staging, receipt schema law, invoice application workflows, locale
+  doctrine, bookkeeping automation, storage, cleanup, and total
   document-understanding products.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
