@@ -22,6 +22,15 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0057 structured-handoff-before-compaction` to `canonical`
+  after `anthropics/cwc-long-running-agents` showed exact-fit public
+  reinforcement for a structured `PROGRESS.md` read before restart and kept
+  current across long-running sessions, with `openclaw-memory-kit` supporting
+  the compaction-specific `memory/handoff.md` flush-before-compression and
+  bootstrap-read path, while excluding transcript packaging, mailbox receipt,
+  git verification, memory search, hook policy, cron memory, and full
+  long-running-harness doctrine, updating Audit queue posture from `60`
+  promoted techniques to `59`
 - promoted `AOA-T-0056 channelized-agent-mailbox` to `canonical` after
   `mycel` showed exact-fit public reinforcement for an AI-agent mailbox with
   thread identity, replayable thread logs, sync cursor, local outbox retry,

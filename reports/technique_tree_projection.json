@@ -404,6 +404,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0057",
+      "name": "structured-handoff-before-compaction",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.",
+      "current_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
+      "family": "handoff-continuation",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "handoff-continuation",
+      "proposed_future_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:handoff-continuation",
+        "domain:agent-workflows",
+        "kind:handoff",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -424,28 +446,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0057",
-      "name": "structured-handoff-before-compaction",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay.",
-      "current_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
-      "family": "handoff-continuation",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "handoff-continuation",
-      "proposed_future_path": "techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:handoff-continuation",
-        "domain:agent-workflows",
-        "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
       "id": "AOA-T-0058",

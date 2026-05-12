@@ -55,7 +55,7 @@ AOA-T-0053,local-first-session-index,history,canonical,artifact,history-artifact
 AOA-T-0054,compaction-resilient-skill-loading,agent-workflows,canonical,recovery,review-compaction
 AOA-T-0055,requirements-design-tasks-ladder,agent-workflows,canonical,workflow,ready-work-graphs
 AOA-T-0056,channelized-agent-mailbox,agent-workflows,canonical,handoff,handoff-continuation
-AOA-T-0057,structured-handoff-before-compaction,agent-workflows,promoted,handoff,handoff-continuation
+AOA-T-0057,structured-handoff-before-compaction,agent-workflows,canonical,handoff,handoff-continuation
 AOA-T-0058,receipt-confirmed-handoff-packet,agent-workflows,promoted,handoff,handoff-continuation
 AOA-T-0059,git-verified-handoff-claims,agent-workflows,promoted,handoff,handoff-continuation
 AOA-T-0060,session-opening-ritual-before-work,agent-workflows,promoted,handoff,handoff-continuation

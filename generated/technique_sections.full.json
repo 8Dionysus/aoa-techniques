@@ -4691,7 +4691,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep receipt and acknowledgment semantics separate instead of widening this bundle into delivery protocol\n- keep git-verification and transcript-packaging siblings separate instead of using the handoff as a total truth surface\n- reopen the broader phase-synchronized handoff lane only if continuation permission and stop or return rules can be stated as a smaller bounded contract"
+          "content_markdown": "- keep receipt and acknowledgment semantics separate instead of widening this bundle into delivery protocol\n- keep git-verification and transcript-packaging siblings separate instead of using the handoff as a total truth surface\n- keep progress-file, memory-flush, and bootstrap examples bounded to the shared contract: one structured packet exists before context loss and is read before restart\n- do not import cron memory, vector search, session database, hook policy, or long-running harness governance when the useful move is only the continuation packet\n- reopen the broader phase-synchronized handoff lane only if continuation permission and stop or return rules can be stated as a smaller bounded contract"
         }
       ]
     },

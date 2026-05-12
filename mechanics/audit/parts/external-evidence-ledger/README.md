@@ -48,7 +48,55 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | Claude Code skills lifecycle | A public agent skill system can carry invoked skills across auto-compaction within a budget, re-attach recent skill invocations after summary, and allow explicit re-invocation after compaction without becoming long-term memory, marketplace, installer, or full prompt-restoration doctrine. |
 | [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | SpecForge-Agent plus GitHub Spec Kit boundary check | A public agent workflow can keep requirements, design, and task artifacts distinct before implementation, with design derived from approved requirements and tasks derived from design plus requirements, without making the technique absorb full SDD, command, approval, memory, or implementation doctrine. |
 | [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | `mycel` plus MCP Agent Mail license-bound adjacent check | A public AI-agent mailbox can keep stable message identity, bounded thread lanes, ordered replay, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows without making ACKs remote delivery proof or absorbing handoff authorization, transcript history, trust policy, encryption, adapters, or messaging-platform doctrine. |
+| [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | `cwc-long-running-agents` plus `openclaw-memory-kit` | A public long-running agent harness and a public OpenClaw memory kit both keep a structured progress or handoff packet visible before restart, compaction, or wake-up without making the packet a transcript, mailbox, git-verification, memory-search, hook-policy, cron-memory, or harness-governance system. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0057 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`anthropics/cwc-long-running-agents` at
+`ffd563d668a97a38d4aa092bf0d5b1507c046629` provides the clean primary public
+source for Pack 14. The source is Apache-2.0 licensed and frames
+agent-maintained handoff as a long-running-agent primitive rather than a
+transcript, mailbox, or memory product.
+
+Accepted evidence:
+
+- `README.md` names agent-maintained handoff as a core primitive because fresh
+  sessions have no memory and context-window summaries lose detail.
+- `claude-code-config/.claude/CLAUDE.md` requires each session to read
+  `PROGRESS.md` before doing anything else, create it with `Done`,
+  `In progress`, `Next`, and `Notes` sections if missing, and keep it current
+  after completed items.
+- `claude-code-config/README.md` describes the progress-file convention and
+  points unattended follow-on sessions at `claude -p "continue from
+  PROGRESS.md"`.
+- `claude-code-config/.claude/hooks/commit-on-stop.sh` is a backstop that
+  commits tracked work at session end so restart state stays durable, while
+  leaving the handoff convention itself as the reusable object.
+- `AlekseiUL/openclaw-memory-kit` at
+  `b154ad075ee96e7c20edcebf2e9aa93a02493262` supports the compaction-specific
+  boundary: `config/compaction.json` and `config/memory-flush.json` write
+  `memory/handoff.md` before compression, `templates/handoff.md` fixes the
+  handoff sections, and `templates/BOOTSTRAP.md` reads the handoff after
+  wake-up or compaction before continuing.
+
+Rejected or bounded:
+
+- Do not import `cwc-long-running-agents` evaluator, proof gate, kill switch,
+  steering hook, unattended loop, or full harness shape.
+- Do not import `openclaw-memory-kit` vector search, daily diary, consolidation
+  cron, session-history visibility, health checks, or memory product doctrine.
+- Treat `openai/codex#21673`, `NousResearch/hermes-agent#20372`, and
+  `NousResearch/hermes-agent#499` only as adjacent pressure because they are
+  issue or design-discussion surfaces, not landed workflow proof.
+- Keep receipt, git verification, transcript packaging, mailbox delivery,
+  memory recall, and phase permission outside this bundle.
+
+Future search shape: reopen only if a new source clarifies packet accuracy,
+handoff consumption, or automated pre-compaction triggering without shifting
+the bundle into memory systems, session databases, hook governance, transcript
+history, mailbox receipt, or full lifecycle orchestration.
 
 ## AOA-T-0056 External Evidence Notes
 
