@@ -1,7 +1,8 @@
 # Temporary Promotion Evidence Matrix-Wide Long-Pass Plan
 
 Status: temporary working plan for a full promotion-evidence pass over the
-current `82/82` promoted technique corpus. This file is not bundle authority,
+original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
+the live promoted queue is `81` bundles. This file is not bundle authority,
 not a promotion verdict, not generated output, and not durable searched-lane
 memory until distilled into bundle-local notes, the external evidence ledger,
 the promotion readiness matrix, or a closeout ledger.
@@ -20,19 +21,24 @@ The long pass continues the current Audit lane:
 Current live constraint:
 
 - the `AOA-T-0032` exemplar pass has been drafted in this branch;
+- `AOA-T-0026` closed during Stage A1 with exact-fit Aider
+  `.aider.chat.history.md` public artifact-family evidence and exits the live
+  promoted queue through canonical review;
 - unrelated `.agents/skills/**` changes are present in the worktree and must
   stay outside this long-pass scope unless the user explicitly routes them in;
-- this plan now targets the full current promoted matrix, not only the lead
+- this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
 ## Long-Pass Goal
 
 Move from one exemplar evidence cycle into a complete, repeatable,
-matrix-wide pass over all `82` current promoted techniques without faking
-canonical readiness.
+matrix-wide pass over the original `82` promoted-technique queue without faking
+canonical readiness. The live remaining queue after Stage A1 is `81` promoted
+techniques, with `AOA-T-0026` counted as a closed row rather than a remaining
+target.
 
-The pass succeeds only when every current promoted bundle exits with one of
-these outcomes:
+The pass succeeds only when every remaining promoted bundle, plus any original
+queue row that exits during the pass, has one of these outcomes:
 
 - exact-fit second evidence found and bundle-local notes updated honestly;
 - adjacent lane rejected and recorded so it is not searched again casually;
@@ -44,10 +50,11 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is a `82/82` promoted-corpus plan.
+This is an original `82/82` promoted-corpus plan with one closed canonical row.
 
-Do not call the pass complete while any current promoted bundle lacks one
-reviewed closeout row in the final ledger.
+Do not call the pass complete while any original promoted bundle lacks one
+reviewed closeout row in the final ledger, whether it remains promoted,
+exits to canonical, or closes with an exhausted/adjacent lane.
 
 At closeout, reconcile the final ledger against:
 
@@ -72,9 +79,9 @@ catalog truth.
 
 ## Matrix-Wide Candidate Order
 
-The order below covers the whole current promoted matrix. Pack names come from
-`promotion-readiness-matrix/README.md`; IDs are reconciled against generated
-catalog truth.
+The order below covers the current promoted matrix plus closed rows from the
+original queue. Pack names come from `promotion-readiness-matrix/README.md`;
+IDs are reconciled against generated catalog truth.
 
 ### Stage 0: Land The Exemplar Base
 
@@ -87,7 +94,8 @@ catalog truth.
 ### Stage 1: Lead Queue Closure
 
 1. Pack 4 lead row: `AOA-T-0032`
-2. Pack 7 lead row: `AOA-T-0026`
+2. Pack 7 lead row: `AOA-T-0026` - closed; exact-fit Aider artifact-family
+   evidence found, bundle-local canonical review approved
 3. Pack 3 lead row: `AOA-T-0036`
 
 Purpose: prove the exemplar rhythm across three different evidence shapes:
@@ -181,7 +189,8 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `82` current promoted IDs against generated catalog truth.
+44. Reconcile all `81` current promoted IDs plus the closed `AOA-T-0026` row
+    against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -378,7 +387,7 @@ Use the repo GitHub landing workflow after each full coherent stage:
 Suggested stage boundaries:
 
 - Stage A0: land `AOA-T-0032` exemplar package if it is still uncommitted.
-- Stage A1: `AOA-T-0026` cycle.
+- Stage A1: `AOA-T-0026` cycle - closed by canonical review.
 - Stage A2: `AOA-T-0036` cycle.
 - Stage A-closeout: lead queue closeout ledger or runbook update.
 - Stage B: markdown/source-lift cohort, one bundle or tight pair per PR.
@@ -405,6 +414,11 @@ Reject:
 - generic workflow audit or activity summaries.
 
 ### AOA-T-0026: `session-capture-as-repo-artifact`
+
+Stage A1 verdict: exact-fit second context found. Aider's public
+`.aider.chat.history.md` surface plus committed public repository artifacts
+closed the live-adopter gap without widening into memory, search, cloud
+history, or instruction authority.
 
 Exact evidence:
 

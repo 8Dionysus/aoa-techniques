@@ -26,6 +26,7 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0023](../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) | GitHub Copilot CLI's programmatic one-prompt fast path | A real shell-side single-shot operator path exists beyond donor documentation and local adaptation. |
 | [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) | GitHub Copilot agent-mode terminal-command confirmation plus GitHub Copilot CLI tool approvals | Public coding-agent surfaces keep mutation behind one explicit operator approval seam instead of hiding it inside generic autonomy. |
 | [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) | OpenAI Codex CLI `codex exec` | A real stdin/stdout/file-first one-shot operator path exists beyond donor documentation and local adaptation. |
+| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | Aider plus committed public `.aider.chat.history.md` artifacts | Local AI coding session capture can survive as a project-visible Markdown artifact beyond the donor product family. |
 | [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) | `claude-code-log` | Already-saved session transcripts can survive as portable Markdown review artifacts beyond the donor product family. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
 
@@ -36,7 +37,6 @@ These are the current live external-evidence lanes worth searching next.
 | technique | last checked lane | adjacent or insufficient fits already ruled out | exact proof still needed | next honest search shape |
 |---|---|---|---|---|
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | repo-local drift and evaluation-report lane plus public agent-markdown CI check/report lane, public prompt-eval CI lane, and the 2026-05-12 exemplar sweep over public context-report, token-budget, repo-packing, LLM-ready-docs, and CI reporting surfaces | local drift reports and composition audits; public instruction-check and workflow-report surfaces such as Continue `/check` and GitHub Agentic Workflows daily repo reports that emit PR checks or activity summaries; Promptfoo CI/CD and `promptfoo-action` surfaces that emit eval JSON or HTML, PR comments, and before/after prompt reports; GitHub Agentic Workflows token/audit reports, Repomix repo-packing and token-count surfaces, Repo Tokens badge-style token counts, `pytest-llm-report`, Calcis prompt cost estimates, and `llms-txt-action`, all of which are adjacent because they own workflow audit, context assembly, token/cost monitoring, test or prompt reports, or documentation conversion instead of the same CI-facing composition coverage or token-drift artifact | one second public CI-facing report over context composition coverage or token-drift that stays separate from composition mechanics, remediation policy, prompt-quality scoring, and generic PR policy checks | search public CI or docs-validation repos where assembled prompt or multi-fragment context coverage and token budgets are emitted as a read-only artifact, not just as eval matrices, pass or fail gates, token badges, repo-packing outputs, LLM-ready-doc generation, or activity digests |
-| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | repo-local witness, checkpoint, and history-adjacent lane plus public local session-store and session-browser/search lane | witness traces, transcript packaging, memory or recall systems, cloud-history wrappers, proposal-only surfaces such as OpenAI Codex issue `#2765`, GitHub Copilot CLI session-state storage under `~/.copilot/session-state/` plus a local SQLite session store that powers resume, `/chronicle`, and history Q&A, and local-first browser/search tools such as Agent Sessions, `cxresume`, `aichat`, and `coding_agent_session_search` that browse home-directory session logs, workspace pointer files, or unified local indexes rather than project-scoped repo artifacts | one second public repo-local session capture surface where history is kept as a reviewable project artifact rather than a memory product, search UI, or home-directory session store | search public repos and tools that write AI session history into versionable workspace directories or repo-visible artifact trees without adding search, recall, or instruction authority as the primary value proposition |
 | [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | repo-local runtime and lifecycle lane plus public compose prestart-render lane and public render-before-apply/template lane | lifecycle wrappers, readiness-only checks, config rendering without a real pre-start review seam, `OpenDAX`-style config-before-startup surfaces, CoreMedia's public `docker compose config --services` prestart step backed by Docker Compose config docs, Docker Compose `config` and experimental `alpha dry-run`, and Helm `template`; these lanes prove useful rendering or simulation before apply or startup, but not yet a distinct render-review contract over effective local runtime truth | one second public runtime surface where effective composed truth is rendered and explicitly reviewed before startup as its own safety seam | search operator repos where render output is a named pre-start review step over actual resolved runtime state, not just a template render, deployment preview, or dry-run helper before `up` or install |
 | [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | public transcript-log export and rich session-view lane | transcript and log review surfaces such as `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, session summaries, and Markdown or HTML review views, but they still package transcript or log inspection rather than a bounded witness trace with explicit state-delta review notes and a pre-writeback summary posture | one second downstream consumer where a bounded run emits a structured witness trace plus human-readable summary before any writeback, compost, or canon-lift step | search public agent-run review surfaces where step order, tool visibility, state deltas, and a review-first summary survive together as one trace artifact before later memory or promotion layers |
 
@@ -62,6 +62,9 @@ Searched and rejected as adjacent:
   and no composed-context report artifact.
 - `llms-txt-action`: useful documentation conversion for LLM consumption, but
   it generates LLM-ready docs rather than reporting on composition health.
+- OpenAI Codex issue `#2765`: useful public context-window pressure signal,
+  but an issue discussion is not a CI-facing report artifact over composed
+  context coverage or token drift.
 
 GitHub code search was also attempted for exact phrases around context
 composition, source coverage, token drift, and CI report artifacts. It found no
@@ -73,6 +76,35 @@ Next honest search shape: look for public docs-validation or prompt-build
 workflows that emit an artifact comparing expected prompt/context fragments
 against the assembled artifact plus token drift, while leaving assembly,
 scoring, and remediation to other surfaces.
+
+## AOA-T-0026 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0026` exited the
+promoted queue through a bundle-local canonical review.
+
+Searched and accepted:
+
+- Aider's public options reference documents a default `.aider.chat.history.md`
+  chat-history file.
+- Aider's public configuration docs make git-root configuration a normal
+  project-scoped shape.
+- Aider's public FAQ treats `.aider.chat.history.md` as Markdown chat logs that
+  can be copied into a gist or otherwise published as raw Markdown.
+- GitHub code search found committed `.aider.chat.history.md` artifacts in
+  public non-fork repositories, including `launchapp-dev/animus-cli`,
+  `terraphim/terraphim-ai`, and
+  `CEDARScript/cedarscript-llm-prompt-engineering`.
+
+Rejected as still adjacent:
+
+- Aider's release history also documents `.aider*` gitignore behavior, so
+  ignored local tool state is not enough by itself.
+- Session browsers, resume databases, local search products, transcript
+  packaging tools, and cloud-history wrappers remain sibling or adjacent lanes
+  unless the saved session itself is a project-visible artifact.
+
+Future watch shape: keep distinguishing deliberate project-visible session
+artifacts from accidental raw-log commits and ignored local tool history.
 
 ## Deferred Pack Watch
 

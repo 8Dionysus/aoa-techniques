@@ -632,6 +632,12 @@ See also:
 
 ## `history`
 
+### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Session Capture As Repo Artifact Checklist | `absent` | `7` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
+
 ### [AOA-T-0044](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -643,12 +649,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | local-first-session-index checklist | `absent` | `8` | `techniques/history/history-artifacts/local-first-session-index/checks/local-first-session-index-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
-
-### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Session Capture As Repo Artifact Checklist | `absent` | `7` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/checks/session-capture-as-repo-artifact-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
 

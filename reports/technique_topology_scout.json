@@ -2737,6 +2737,31 @@
       }
     },
     {
+      "id": "AOA-T-0026",
+      "name": "session-capture-as-repo-artifact",
+      "domain": "history",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
+      "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "topology": {
+        "family": "history-artifacts",
+        "capability_class": [
+          "write"
+        ],
+        "substrate": [
+          "history",
+          "instructions",
+          "memory-adjacent-artifacts",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0044",
       "name": "versionable-session-transcripts",
       "domain": "history",
@@ -2783,31 +2808,6 @@
           "docs",
           "data",
           "ui"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0026",
-      "name": "session-capture-as-repo-artifact",
-      "domain": "history",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
-      "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
-      "topology": {
-        "family": "history-artifacts",
-        "capability_class": [
-          "write"
-        ],
-        "substrate": [
-          "history",
-          "instructions",
-          "memory-adjacent-artifacts",
-          "human-approval-surfaces"
         ],
         "execution_profile": "small-agent",
         "risk_posture": [

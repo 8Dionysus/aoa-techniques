@@ -13245,6 +13245,179 @@
       "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0026"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-capture-as-repo-artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for first-save AI coding session capture as reviewable, project-visible history artifacts"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on deliberate artifact capture and project visibility rather than letting ignored local logs, memory systems, transcript export, search, or instruction authority become the real contract"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams commit raw session logs accidentally and later treat the accident as proof of good artifact discipline"
+                },
+                {
+                  "order": 2,
+                  "text": "ignored local chat-history files are mistaken for versioned project history even though they are not reviewable through the repository"
+                },
+                {
+                  "order": 3,
+                  "text": "captured sessions quietly become the de facto instruction source because stronger authored rules, decisions, or summaries are not maintained"
+                },
+                {
+                  "order": 4,
+                  "text": "canonical pressure widens the technique into transcript packaging, local search, cloud sync, or memory recall instead of preserving first-save capture"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "saved sessions can create large, noisy, or sensitive artifacts when a short summary or decision note would have been enough"
+                },
+                {
+                  "order": 2,
+                  "text": "local session history increases review, redaction, retention, and storage burden"
+                },
+                {
+                  "order": 3,
+                  "text": "easy artifact capture can tempt teams to publish private reasoning, credentials, paths, or internal chronology before sanitization"
+                },
+                {
+                  "order": 4,
+                  "text": "project-visible history can feel more authoritative than authored source-of-truth docs if the boundary is not kept explicit"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating every tool-created history file as commit-worthy without review"
+                },
+                {
+                  "order": 2,
+                  "text": "using session artifacts as canonical repository policy, future-agent instructions, or memory substrate"
+                },
+                {
+                  "order": 3,
+                  "text": "folding transcript export, indexing, dashboarding, or hosted sharing into the capture technique"
+                },
+                {
+                  "order": 4,
+                  "text": "using captured history to bypass decision records, handoff packets, or maintained status surfaces"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "contributors cannot explain which session artifacts are safe to retain, redact, share, or delete"
+                },
+                {
+                  "order": 2,
+                  "text": "repository rules start linking to session history where authored docs or decisions should be the source of truth"
+                },
+                {
+                  "order": 3,
+                  "text": "the saved artifact layer cannot be inspected without a cloud account, hidden runtime state, or a tool-specific search database"
+                },
+                {
+                  "order": 4,
+                  "text": "new guidance focuses more on search, memory, or transcript viewer features than on first-save artifact discipline"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "choose one explicit project-scoped artifact home and one review path before broad capture"
+                },
+                {
+                  "order": 2,
+                  "text": "review, redact, or summarize before committing or sharing raw session history"
+                },
+                {
+                  "order": 3,
+                  "text": "keep authored rules, decisions, status, summaries, memory objects, and transcript packages in their own surfaces"
+                },
+                {
+                  "order": 4,
+                  "text": "treat ignored local logs as adjacent evidence only until a project deliberately retains them as reviewable artifacts"
+                },
+                {
+                  "order": 5,
+                  "text": "split search, indexing, transcript packaging, cloud sync, and history-to-instructions behavior into sibling techniques or owning repos"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for accidental log commits, capture-as-policy drift, ignored-local-state confusion, and expansion into memory, search, transcript, or instruction authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -13275,7 +13448,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -13292,17 +13465,17 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same contract as a documentation-first adaptation with examples and a checklist"
+                  "value_markdown": "Aider plus the public `.aider.chat.history.md` artifact family now provides an independent public context where AI coding session history is saved as local Markdown and appears as committed project-visible artifacts in multiple public repositories"
                 },
                 {
                   "order": 3,
                   "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the promoted scale"
                 },
                 {
                   "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "value_markdown": "the bundle now carries one checklist, two examples, a clean external-origin note, one real public second context beyond the donor product family, and an adverse-effects review, so first-save capture as a project artifact is no longer proven only by imported documentation"
                 }
               ]
             },
@@ -13313,11 +13486,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is making AI coding sessions persist as local project history artifacts rather than disappear into transient chat state"
+                  "text": "this is the right canonical default when the main problem is making AI coding sessions persist as local project history artifacts rather than disappear into transient chat state"
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than memory or instruction techniques because it only owns capture and artifact discipline, not retrieval, recall, summarization policy, or instruction authority"
+                  "text": "it remains narrower than [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md) because it owns first-save capture and persistence, not post-capture transcript shaping"
+                },
+                {
+                  "order": 3,
+                  "text": "it remains narrower than [AOA-T-0053](../local-first-session-index/TECHNIQUE.md) because it owns the saved artifact layer, not derivative search or indexing over saved artifacts"
+                },
+                {
+                  "order": 4,
+                  "text": "the current evidence now shows that the capture-as-artifact contract survives outside the donor lineage in public Aider-based repository artifacts while keeping memory, search, and instruction authority out of scope"
                 }
               ]
             },
@@ -13329,7 +13510,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-21"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -13339,12 +13520,12 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable local-first session-artifact contract and excludes donor-specific cloud, search, and product-wrapper detail"
+                  "value_markdown": "the bundle keeps only the reusable local-first session-artifact contract and excludes donor-specific cloud, search, wrapper, account, and history-to-instructions behavior"
                 },
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the examples, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the examples, checklist, adaptation notes, and second-context evidence remain understandable without hidden donor-repo context"
                 }
               ]
             },
@@ -13355,11 +13536,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on deliberately retained project-visible session artifacts and does not widen into ignored tool-local state, transcript packaging, search/indexing, memory recall, or instruction authority"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses local-first session capture as a real history-artifact layer without widening into memory substrate or instruction policy"
+                  "text": "future review should keep watching the Aider-shaped edge where `.aider*` can be ignored by default; ignored local logs are adjacent until a project intentionally keeps the artifact reviewable and project-visible"
                 }
               ]
             },
@@ -13370,11 +13551,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0026` `promoted`"
+                  "text": "promote `AOA-T-0026` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the local-first session-artifact contract survives outside the donor repository"
+                  "text": "use `AOA-T-0026` as the default history technique when an AI-assisted project needs first-save local session capture as a reviewable history-artifact layer before transcript packaging, indexing, summaries, memory, or instruction distillation"
                 }
               ]
             }
@@ -13669,17 +13850,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Aider plus public `.aider.chat.history.md` artifact family"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public technique repository with authored bundle contracts, generated routing surfaces, and validator-backed markdown discipline"
+                  "value_markdown": "open-source terminal AI coding tool with repo-aware configuration and a default Markdown chat-history file"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "documentation-first corpus that records local-first history technique meaning rather than shipping the donor wrapper CLI"
+                  "value_markdown": "local Markdown chat history saved in or near the project tree, with public repositories showing those logs retained as committed project-visible artifacts"
                 }
               ]
             },
@@ -13691,22 +13872,22 @@
                 {
                   "order": 1,
                   "key": "paths",
-                  "value_markdown": "the donor uses `.specstory/history/`; this adaptation preserves that artifact idea generically without depending on the donor product wrapper"
+                  "value_markdown": "the donor uses `.specstory/history/`, while Aider's default chat-history file is `.aider.chat.history.md` and public repositories show both root-level and subdirectory-retained variants"
                 },
                 {
                   "order": 2,
                   "key": "services",
-                  "value_markdown": "cloud sync, search UI, login, and cross-tool product behavior are removed from the reusable contract"
+                  "value_markdown": "Aider also supports sharing copied chat logs through gists and has broader coding-tool behavior, but this adaptation narrows to the saved Markdown chat-history artifact"
                 },
                 {
                   "order": 3,
                   "key": "dependencies",
-                  "value_markdown": "the adaptation depends on project-scoped history artifacts and local-first persistence, not on the donor platform stack"
+                  "value_markdown": "the adaptation depends on local file capture and project visibility, not on the donor product wrapper, cloud sync, search UI, or memory database"
                 },
                 {
                   "order": 4,
                   "key": "operating assumptions",
-                  "value_markdown": "contributors should read the technique as a history-artifact pattern for AI-assisted repositories, not as installation guidance for the donor product"
+                  "value_markdown": "contributors should read this as capture-as-artifact evidence, not as an instruction to commit every raw Aider log or to treat ignored local logs as automatically versioned history"
                 }
               ]
             },
@@ -13718,17 +13899,17 @@
                 {
                   "order": 1,
                   "key": "contract",
-                  "value_markdown": "sessions are persisted as project-scoped history artifacts"
+                  "value_markdown": "AI coding sessions are persisted as local project-scoped artifacts"
                 },
                 {
                   "order": 2,
                   "key": "validation logic",
-                  "value_markdown": "the local artifact layer remains usable even without cloud sync"
+                  "value_markdown": "a reviewer can inspect or share the saved Markdown history later without hidden runtime state"
                 },
                 {
                   "order": 3,
                   "key": "safety rules",
-                  "value_markdown": "captured history stays separate from memory recall semantics and authored instruction authority"
+                  "value_markdown": "session history remains separate from authored instructions, memory recall, search ranking, and policy authority"
                 }
               ]
             },
@@ -13739,11 +13920,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can become vague if repositories save sessions locally but then quietly treat them as universal instructions"
+                  "text": "Aider also recommends `.aider*` gitignore behavior in its release history, so ordinary ignored local logs are adjacent until a project deliberately retains or publishes the artifact"
                 },
                 {
                   "order": 2,
-                  "text": "teams may over-associate session history with memory systems if the history boundary is not kept explicit"
+                  "text": "public `.aider.chat.history.md` files can be accidental leaks if teams do not review and sanitize them before commit or sharing"
+                },
+                {
+                  "order": 3,
+                  "text": "teams may mistake generic Aider chat history for a retention policy, memory substrate, or transcript-packaging technique unless the capture boundary stays explicit"
                 }
               ]
             },
@@ -13754,15 +13939,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the donor `README.md` describes a local-first workflow where supported AI coding tools save sessions into `.specstory/history/`"
+                  "text": "Aider's public options reference documents `--chat-history-file` with default `.aider.chat.history.md`."
                 },
                 {
                   "order": 2,
-                  "text": "the same public README keeps cloud sync optional and presents local artifact capture as the first durable layer"
+                  "text": "Aider's public configuration docs say `.aider.conf.yml` can live at the root of a git repository, making repo-scoped history configuration a first-class local shape."
                 },
                 {
                   "order": 3,
-                  "text": "the adjacent public `agent-skills` repository reinforces that `.specstory/history` can act as an inspectable artifact base for later summaries or organization, rather than only as hidden product state"
+                  "text": "Aider's public FAQ treats `.aider.chat.history.md` as Markdown chat logs that can be copied into a gist or otherwise published as raw Markdown."
+                },
+                {
+                  "order": 4,
+                  "text": "GitHub code search found committed `.aider.chat.history.md` artifacts in public non-fork repositories, including `launchapp-dev/animus-cli` at the repository root, `terraphim/terraphim-ai` under `crates/terraphim_atomic_client/`, and `CEDARScript/cedarscript-llm-prompt-engineering` under an examples tree."
+                },
+                {
+                  "order": 5,
+                  "text": "Those public artifacts preserve the reusable core: local AI coding sessions become inspectable Markdown project artifacts without making search, recall, cloud history, or instruction authority the primary object."
                 }
               ]
             },
@@ -13773,7 +13966,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over cloud, search, or memory-system breadth"
+                  "text": "works as a real public second context and closes the prior live-adopter gap for `AOA-T-0026`"
+                },
+                {
+                  "order": 2,
+                  "text": "canonical use remains bounded to deliberately retained, reviewable session artifacts; ignored local tool state, transcript export, search/indexing, and memory behavior stay adjacent or sibling concerns"
                 }
               ]
             }

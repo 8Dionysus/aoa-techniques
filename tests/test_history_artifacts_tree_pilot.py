@@ -33,7 +33,7 @@ PILOT_BUNDLES = (
         "session-capture-as-repo-artifact",
         "history",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/history/session-capture-as-repo-artifact",
         "techniques/history/history-artifacts/session-capture-as-repo-artifact",
     ),

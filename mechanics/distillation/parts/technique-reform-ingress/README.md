@@ -12,7 +12,7 @@ permission slip to remap techniques automatically.
 
 ## Current Contour
 
-- public corpus: `107` bundles, `25` canonical, `82` promoted
+- public corpus: `107` bundles, `26` canonical, `81` promoted
 - authoritative frontmatter axes: `domain`, `kind`
 - corpus tree: current authored path architecture across `10` trunks, `28`
   shelves, and `107` leaf bundles

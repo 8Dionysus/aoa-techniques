@@ -6,20 +6,19 @@ Use it when the question is not "which promoted bundle is generally closest to c
 
 This runbook is separate from the already-landed future-import `Wave A`, `Wave B`, and `Wave C` recorded in [Roadmap](../../../../ROADMAP.md).
 Those waves landed new techniques.
-This runbook is about strengthening existing `promoted` bundles without flipping status early.
-`AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, and `AOA-T-0023` have since exited this runbook through separate follow-up canonical reviews, so the active roster below now tracks the three remaining promoted candidates from the original Wave A pack.
+This runbook is about strengthening existing `promoted` bundles without flipping status before bundle-local canonical review can honestly support it.
+`AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, `AOA-T-0023`, and `AOA-T-0026` have since exited this runbook through separate follow-up canonical reviews, so the active roster below now tracks the two remaining promoted candidates from the original Wave A pack.
 
 ## Wave Goal
 
-Close the smallest honest blocker for the three remaining strongest current `promoted` candidates:
+Close the smallest honest blocker for the two remaining strongest current `promoted` candidates:
 
 - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
-- [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
 - [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md)
 
 ## Non-Goals
 
-- no status flips during the first pass
+- no status flips before bundle-local `canonical-readiness.md` can honestly approve promotion
 - no generated-surface edits while bundle-local evidence work is unresolved
 - no synthetic "second context" invented from another note in this repository
 - no widening a bundle just to make a candidate fit
@@ -74,7 +73,6 @@ If evidence lands, the preferred local update path is:
 | technique | why now | smallest blocker | evidence that counts | not enough | likely local files |
 |---|---|---|---|---|---|
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | Clean companion to canonical `AOA-T-0012`. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family where the same CI-facing context report exists as a real read-only artifact over composition health. | Composition-engine docs, remediation logic, provider telemetry, or a report that owns fixes rather than reporting drift. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact shape becomes clearer. |
-| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | Foundational `history` candidate. | One live second context beyond donor plus documentation-first adaptation. | A public repo or surface family that persists local-first AI session history as a reviewable project artifact without widening into memory or instruction policy. | Memory systems, recall/search products, transcript-only packaging, or cloud-history wrappers. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the artifact seam gets clearer. |
 | [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | Strong operator contract with one donor lineage only. | One second independent downstream consumer. | A local runtime surface where a pre-start rendered truth step is a real review seam over the effective composed runtime view. | Lifecycle wrappers, readiness-only checks, config publication without review, or a startup path where declared state and effective truth do not meaningfully diverge. | `notes/second-context-adaptation.md`, `notes/canonical-readiness.md`, maybe example/check wording if the render-review seam gets sharper. |
 
 ## Recommended Sequence
@@ -82,13 +80,12 @@ If evidence lands, the preferred local update path is:
 Run the wave in this order:
 
 1. [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
-2. [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
-3. [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md)
+2. [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md)
 
 Why this order:
 
-- `0032` and `0026` each lead a wider pack and can unlock later clustered proof waves
-- `0036` remains strong, but its second-consumer search is slightly more open-ended than the first two
+- `0032` still leads the report-only proof lane after the `0026` history-artifact gap closed
+- `0036` remains strong, but its second-consumer search is still more open-ended than the report-only `0032` lane
 
 ## Worker Briefs
 
@@ -104,19 +101,7 @@ Reject if:
 - the surface is really the composition engine
 - the surface is only diagnostics prose with no report artifact shape
 
-### Worker 2 - `AOA-T-0026`
-
-Question to answer:
-
-- is there one public repo or surface family where local-first session capture is preserved as a reviewable project artifact without drifting into memory, recall, or instruction authority?
-
-Reject if:
-
-- the value proposition is search, recall, or memory
-- the surface starts from post-capture packaging only
-- the history is cloud-wrapped or product-shaped rather than repo-local artifact discipline
-
-### Worker 3 - `AOA-T-0036`
+### Worker 2 - `AOA-T-0036`
 
 Question to answer:
 
@@ -156,14 +141,15 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 | [AOA-T-0034](../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) | `adjacent but insufficient` | `aoa-playbooks` and `aoa-skills` keep sanitization as a prerequisite or origin-lineage surface, not as a second exact-fit live consumer. |
 | [AOA-T-0023](../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md) | `adjacent but insufficient` | checkpointed or swarm-governed flows exist, but not the same shell-side single-shot fast path. |
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | `adjacent but insufficient` | drift reports, composition audits, and evaluation matrices exist, but not the same CI-facing context-report artifact. |
-| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | `adjacent but insufficient` | downstream witness and artifact-transition consumers exist, but not a second capture-as-artifact contract. |
+| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | `adjacent but insufficient` | downstream witness and artifact-transition consumers existed locally, but not a second capture-as-artifact contract; this was later closed by the external Aider artifact-family pass below. |
 | [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | `no exact-fit local consumer found` | the searched local lane shows origin and seed-soil, but not a second independent runtime consumer. |
+| [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | `exact-fit evidence found` | Aider plus committed public `.aider.chat.history.md` artifacts close the capture-as-project-artifact gap without widening into memory, search, or instruction policy. |
 
 Current implication:
 
-- `AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, and `AOA-T-0023` have since exited Wave A through separate follow-up canonical reviews and are now `canonical`
+- `AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, `AOA-T-0023`, and `AOA-T-0026` have since exited Wave A through separate follow-up canonical reviews and are now `canonical`
 - `AOA-T-0032` is now the closest remaining promoted queue item
-- reopen non-local or later-lane donor searches for `AOA-T-0032`, `AOA-T-0026`, and `AOA-T-0036`
+- reopen non-local or later-lane donor searches for `AOA-T-0032` and `AOA-T-0036`
 
 ## Validation And Merge Discipline
 

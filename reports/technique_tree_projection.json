@@ -2306,6 +2306,28 @@
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
+      "id": "AOA-T-0026",
+      "name": "session-capture-as-repo-artifact",
+      "domain": "history",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
+      "current_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "family": "history-artifacts",
+      "proposed_trunk": "history",
+      "proposed_shelf": "history-artifacts",
+      "proposed_future_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:history-artifacts",
+        "domain:history",
+        "kind:artifact",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
       "id": "AOA-T-0044",
       "name": "versionable-session-transcripts",
       "domain": "history",
@@ -2345,28 +2367,6 @@
         "domain:history",
         "kind:artifact",
         "status:canonical",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0026",
-      "name": "session-capture-as-repo-artifact",
-      "domain": "history",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
-      "current_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
-      "family": "history-artifacts",
-      "proposed_trunk": "history",
-      "proposed_shelf": "history-artifacts",
-      "proposed_future_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:history-artifacts",
-        "domain:history",
-        "kind:artifact",
-        "status:promoted",
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."

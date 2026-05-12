@@ -2144,12 +2144,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `getspecstory`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for local-first session history artifacts"
+          "content_markdown": "- adapted from open-source `getspecstory`\n- promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for local-first session history artifacts\n- promoted to `canonical` on 2026-05-12 after public Aider chat-history artifacts confirmed the capture-as-project-artifact contract outside the donor lineage"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- split out a dedicated history-to-summary sibling if reusable summarization flows prove stable beyond raw artifact capture\n- split out a dedicated history-to-instructions sibling if distilled instruction generation becomes reusable without widening memory semantics\n- add a stronger second live context if another public repository adopts the same local-first session-artifact contract"
+          "content_markdown": "- split out a dedicated history-to-summary sibling if reusable summarization flows prove stable beyond raw artifact capture\n- split out a dedicated history-to-instructions sibling if distilled instruction generation becomes reusable without widening memory semantics\n- keep watching for drift between deliberately retained project artifacts and tool-default ignored local logs, especially in Aider-style workflows"
         }
       ]
     },

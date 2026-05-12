@@ -37,7 +37,6 @@ Run the external evidence queue in this order:
 
 1. lead queue:
    - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
-   - [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)
    - [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md)
 2. markdown-first and fresh-extraction follow-through:
    - [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
@@ -48,14 +47,15 @@ Run the external evidence queue in this order:
    - [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
    - [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
-Closed shell-agent precedents:
+Closed precedents:
 
 - [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) and [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) have exited this sprint lane through separate canonical reviews.
+- [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) has exited this sprint lane through a separate canonical review after Aider's public `.aider.chat.history.md` artifact family closed the capture-as-artifact gap.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
 
-- `AOA-T-0032`, `AOA-T-0026`, and `AOA-T-0036` are the current closest live queue items
+- `AOA-T-0032` and `AOA-T-0036` are the current closest live queue items after `AOA-T-0026` exited through canonical review
 - `AOA-T-0020` plus `AOA-T-0046` through `AOA-T-0048` should not reopen until a real non-origin consumer exists
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design and should not consume the same sprint energy as the lead queue
 
