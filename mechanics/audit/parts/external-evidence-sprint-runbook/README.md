@@ -44,6 +44,9 @@ Run the external evidence queue in this order:
    - [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 3. long-gap holds:
    - [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
+     remains `promoted`; the 2026-05-12 Stage 2 long-pass search ruled out
+     generic intent-classification, assistant-eval, and IBN benchmark lanes as
+     adjacent, so reopen only from a rollout-specific signal
    - [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
 
 Closed precedents:
@@ -57,7 +60,9 @@ Why this order:
 
 - `AOA-T-0032` is still the clearest report-only blocker, but its currently known public lanes are searched; reopen it only from a new artifact-first signal instead of repeating context-compiler, fragment-assembly, graph, or repo-quality searches
 - `AOA-T-0020` plus `AOA-T-0046` through `AOA-T-0048` should not reopen until a real non-origin consumer exists
-- `AOA-T-0005` and `AOA-T-0022` stay long-gap by design and should not consume the same sprint energy as the lead queue
+- `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
+  now has searched-lane memory, so repeat searches should start from a real
+  new-intent rollout artifact rather than NLU/eval/benchmark overlap
 
 ## Swarm Layout
 

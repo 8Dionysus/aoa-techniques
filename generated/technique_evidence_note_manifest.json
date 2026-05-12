@@ -2072,6 +2072,26 @@
                   "order": 4,
                   "key": "public reuse check",
                   "value_markdown": "the repo-local examples and triage note are understandable without origin-project access, and the merged `atm10-agent` rollout records materially strengthen origin proof, but they still do not create a second non-origin live context for canonical promotion"
+                },
+                {
+                  "order": 5,
+                  "key": "2026-05-12 long-pass searched-lane result",
+                  "value_markdown": "no exact-fit second consumer found in the Stage 2 promotion-evidence pass"
+                },
+                {
+                  "order": 6,
+                  "key": "searched lane",
+                  "value_markdown": "public `expected_intent_type` / intent-evaluation repositories, assistant conversation-eval documentation, and chatbot/IBN intent-testing surfaces"
+                },
+                {
+                  "order": 7,
+                  "key": "adjacent public examples",
+                  "value_markdown": "PRISM Monitor's manufacturing\nintent-classification dataset, ARTE Chatbot's `intent_type` evaluation\nharness, CS4730 IBN benchmark fixtures, Rasa assistant testing, and Botpress\nADK evals all show useful intent or behavior validation patterns, but they do\nnot show one new intent being rolled into an existing dry-run chain through a\ncanonical fixture, dedicated smoke path, strict contract summary, published\nreview surface, and regression proof"
+                },
+                {
+                  "order": 8,
+                  "key": "conclusion",
+                  "value_markdown": "these lanes strengthen the negative boundary around the technique, but they do not close the second-context gap"
                 }
               ]
             },

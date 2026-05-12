@@ -109,6 +109,48 @@ workflows that emit an artifact comparing expected prompt/context fragments
 against the assembled artifact plus token drift, while leaving assembly,
 scoring, and remediation to other surfaces.
 
+## AOA-T-0005 Stage 2 Long-Pass Notes
+
+2026-05-12 result: no exact-fit second consumer found.
+The pass moved `AOA-T-0005` out of "not yet actively searched" posture and
+recorded the first durable adjacent-lane boundary for the long-gap donor row.
+
+Searched and rejected as adjacent:
+
+- GitHub code search for `expected_intent_type`, `new intent`, `intent_type`
+  plus dry-run / contract / fixture phrases found public intent-classification
+  and intent-benchmark surfaces, but no non-origin rollout record with the
+  full checklist shape.
+- [PRISM Monitor `InstructionRF/data/README.md`](https://github.com/PRISM-System/PRISM-Monitor/blob/f8680e27bb7e4b3494d9c3a17d3f704a41842b17/InstructionRF/data/README.md):
+  useful manufacturing intent-classification dataset with expected intent and
+  priority labels, but it is an evaluation dataset rather than a one-new-intent
+  extension through an existing dry-run chain.
+- [ARTE Chatbot `evaluation/intent_eval/run_eval.py`](https://github.com/creep1ng/arte-chatbot/blob/c0f20b994bba4ee8d63acaa86f5c8044d8e220b1/evaluation/intent_eval/run_eval.py):
+  useful `intent_type` classification harness with saved results and accuracy
+  thresholds, but the object is classifier evaluation against annotated
+  queries, not a rollout checklist with fixture, smoke, contract summary,
+  published review row, and regression coverage for one new intent path.
+- [CS4730 IBN `experiments/run_benchmarks.py`](https://github.com/siddu1324/cs4730-IBN/blob/191704ab4ce680e7b700867ce9e8ac99c6286f75/experiments/run_benchmarks.py):
+  useful intent-based networking benchmark that compares translators,
+  guardrails, policy rendering, and simulation outcomes against expected
+  intent types, but it is a benchmark/evaluation lane rather than a bounded
+  rollout record for adding one new intent to a shared chain.
+- [Rasa testing docs](https://legacy-docs-oss.rasa.com/docs/rasa/next/testing-your-assistant/):
+  useful assistant validation, test-story, NLU evaluation, and CI guidance, but
+  it validates conversation and NLU behavior after authoring rather than
+  recording a dry-run chain extension checklist.
+- [Botpress ADK eval docs](https://botpress.com/docs/adk/testing/evals):
+  useful conversation eval, tool assertion, workflow assertion, and regression
+  tagging shape, but it is an eval runner surface rather than a new-intent
+  rollout artifact.
+
+Next honest search shape: look for a public repository where an existing
+intent-to-plan or intent-to-action chain records the addition of exactly one
+new intent with a canonical fixture, dedicated smoke run, strict expected
+intent routing check, machine-readable summary, visible review artifact, and
+regression proof. Do not reopen generic chatbot NLU, intent-classification, or
+IBN benchmark lanes without a new rollout-specific signal.
+
 ## AOA-T-0026 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found, and `AOA-T-0026` exited the
@@ -178,7 +220,7 @@ These bundles still need external evidence, but no new bounded lane note is wort
 | technique | current blocker | next honest trigger |
 |---|---|---|
 | [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | still needs one second markdown-first corpus beyond the current donor family | one committed non-eval corpus that reuses typed note-kind and note-path provenance |
-| [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | remains a long-gap donor lane, not an active sprint target | one non-origin rollout record proving the same checklist on a real new-intent extension path |
+| [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | Stage 2 checked intent-classification, chatbot eval, and IBN benchmark lanes; they remain adjacent because they evaluate intents rather than recording one-new-intent dry-run-chain rollout | one non-origin rollout record proving the same checklist on a real new-intent extension path |
 | [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | remains a long-gap donor lane, not an active sprint target | one second committed corpus using the exact five-part `Risks` split |
 
 ## Notes

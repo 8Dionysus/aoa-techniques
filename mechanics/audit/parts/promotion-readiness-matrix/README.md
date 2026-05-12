@@ -79,7 +79,7 @@ Shared blocker: each bundle still needs a specific new live proof surface, and a
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | Strong companion checklist to canonical [AOA-T-0004](../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), but still origin-heavy. | One non-origin shared intent-chain rollout record showing the checklist used to add a new intent in practice. |
+| [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | Strong companion checklist to canonical [AOA-T-0004](../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), but still origin-heavy; the 2026-05-12 Stage 2 pass ruled out generic intent-classification, chatbot eval, and IBN benchmark lanes as adjacent. | One non-origin shared intent-chain rollout record showing the checklist used to add a new intent in practice. |
 | [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | Exact five-part `Risks` contract has one strong donor, not repeated reuse. | One second committed corpus reusing the same five-part `Risks` split without widening into generated policy or scoring. |
 
 ### Pack 2 - Shell-Agent Fast Path
