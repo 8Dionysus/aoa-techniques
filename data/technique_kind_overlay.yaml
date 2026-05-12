@@ -375,7 +375,7 @@ entries:
 - id: AOA-T-0062
   name: episode-bounded-agent-loop
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: handoff-continuation
 - id: AOA-T-0063

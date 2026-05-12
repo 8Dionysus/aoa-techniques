@@ -12,8 +12,9 @@ plus `AOA-T-0050`, and the Pack 10 closures for `AOA-T-0051` plus
 for `AOA-T-0055`, the Pack 13 closure for `AOA-T-0056`, the Pack 14
 closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
 `AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, the Pack 17
-closure for `AOA-T-0060`, and the Pack 18 closure for `AOA-T-0061`, the live
-promoted queue is `57` bundles. This
+closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, and the Pack
+19 closure for `AOA-T-0062`, the live
+promoted queue is `56` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -91,8 +92,12 @@ Current live constraint:
 - `AOA-T-0061` closed during Stage 3 with exact-fit
   `openclaw-linear-plugin` multi-repo dispatch map evidence and exits the live
   promoted queue through canonical review;
-- the live generated catalog currently contains `57` promoted techniques and
-  `50` canonical techniques;
+- `AOA-T-0062` closed during Stage 3 with exact-fit Cloudflare long-running
+  Agents evidence for durable plan steps, checkpoints, one-step-at-a-time
+  execution, failed-step state, re-planning, and human oversight boundaries,
+  and exits the live promoted queue through canonical review;
+- the live generated catalog currently contains `56` promoted techniques and
+  `51` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -104,14 +109,14 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, and Pack 18
-closures is `57` promoted techniques,
+closures plus the Pack 19 closure is `56` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
-`AOA-T-0061` counted as closed rows rather than remaining
+`AOA-T-0061`, and `AOA-T-0062` counted as closed rows rather than remaining
 targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
@@ -186,7 +191,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | adjacent lanes recorded; remains promoted | `confab-framework`, `LifeOS`, `session-handoff`, Mimir, SLOPE, and `cwc-long-running-agents` are adjacent or partial rather than clean proof of receiver-side handoff-claim verdicts against git evidence |
 | Stage 3 | [AOA-T-0060 session-opening-ritual-before-work](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | agent-workflows / handoff | Pack 17 session opening ritual before work | exact-fit second context; exits to canonical | `cwc-long-running-agents` `Always start here` convention closes the pre-mutation read-and-baseline-check gap |
 | Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | exact-fit second context; exits to canonical | `openclaw-linear-plugin` configured repo map, selected repo sets, per-repo worktree paths, project context injection, and first-read root instruction files close the cross-repo startup-map gap |
-| Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | pending |  |
+| Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | exact-fit second context; exits to canonical | Cloudflare long-running Agents durable plan-step, checkpoint, next-step scheduling, failed-step state, re-planning, and human oversight boundaries close the bounded episode-loop gap |
 | Stage 4 | [AOA-T-0063 versioned-agent-registry-contract](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | docs / artifact | Pack 20 versioned agent registry contract | pending |  |
 | Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | pending |  |
 | Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | pending |  |
@@ -331,7 +336,10 @@ external adopter, markdown-first reuse, or long-gap donor proof.
 20. Pack 18 - Cross-Repo Resource Map Bootstrap: `AOA-T-0061` - closed;
     exact-fit `openclaw-linear-plugin` multi-repo dispatch map evidence found,
     bundle-local canonical review approved
-21. Pack 19 - Episode-Bounded Agent Loop: `AOA-T-0062`
+21. Pack 19 - Episode-Bounded Agent Loop: `AOA-T-0062` - closed;
+    exact-fit Cloudflare long-running Agents durable plan-step, checkpoint,
+    next-step scheduling, failed-step state, re-planning, and human oversight
+    evidence found, bundle-local canonical review approved
 
 Purpose: close coordination, review, compaction, handoff, and continuation
 families without collapsing them into one generic "agent workflow" proof lane.
@@ -1244,6 +1252,48 @@ Reject:
   encyclopedias;
 - issue routing, complexity-tier model selection, worker / auditor governance,
   watchdogs, PR creation, authorization, or worktree lifecycle management.
+
+### AOA-T-0062: `episode-bounded-agent-loop`
+
+Stage 3 Pack 19 verdict, 2026-05-12: exact-fit second context found.
+`cloudflare/cloudflare-docs` keeps long-running agent work bounded through
+durable plans, per-step state, checkpoint recovery, one-step-at-a-time
+execution, explicit next-step scheduling after completion, failed-step state,
+re-planning, and human oversight checkpoints. This closes the episode-loop gap
+without widening into Cloudflare Durable Objects, Workers, schedule APIs,
+fibers, Workflows, sub-agent RPC, storage, deployment, context compression,
+proof settlement, or full autonomous-agent lifecycle governance.
+
+Exact evidence:
+
+- long-running work is broken into ordered plan steps rather than one
+  uninterrupted mission;
+- durable plan state records current step, step statuses, timestamps, and
+  results;
+- checkpointing and recovery let the next activation resume from durable state
+  rather than hidden memory;
+- a completed step advances the current step and schedules the next bounded
+  slice only after the prior slice closes;
+- a failed step is marked failed instead of silently continuing;
+- re-planning and human oversight remain visible review boundaries before
+  proceeding;
+- the source keeps the reusable object as plan / step / checkpoint / decision
+  flow rather than requiring this technique to absorb platform lifecycle
+  machinery.
+
+Reject:
+
+- runtime checkpointing that preserves process or prompt state without a
+  bounded work-episode decision;
+- context-compression systems that summarize actor turns but do not own the
+  work-slice boundary;
+- proof-gate or settlement systems where the episode is an evidence unit
+  rather than a longer-work segmentation unit;
+- generic workflow engines, durable-job platforms, or schedule APIs without a
+  visible continue / stop / re-plan decision at the slice boundary;
+- session-opening rituals, handoff packet templates, git-claim verification,
+  supervision, budgeting, task integrity systems, or full autonomous-platform
+  doctrine.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

@@ -549,6 +549,33 @@
       }
     },
     {
+      "id": "AOA-T-0062",
+      "name": "episode-bounded-agent-loop",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
+      "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
+      "topology": {
+        "family": "handoff-continuation",
+        "capability_class": [
+          "handoff",
+          "mutate",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "instructions",
+          "runtime-state"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -621,33 +648,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0062",
-      "name": "episode-bounded-agent-loop",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Break longer work into explicit episodes with checkpoints and continue, stop, or escalate decisions so continuation stays reviewable instead of slipping into open-ended autonomy.",
-      "technique_path": "techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md",
-      "topology": {
-        "family": "handoff-continuation",
-        "capability_class": [
-          "handoff",
-          "mutate",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "instructions",
-          "runtime-state"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },

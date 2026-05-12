@@ -22,6 +22,15 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0062 episode-bounded-agent-loop` to `canonical` after
+  Cloudflare's long-running Agents guide showed exact-fit public reinforcement
+  for durable plan steps, checkpoint recovery, one-step-at-a-time execution,
+  next-step scheduling after completion, failed-step state, re-planning, and
+  human oversight boundaries, while excluding Durable Objects, Workers,
+  schedules, fibers, Workflows, sub-agent RPC, runtime context compression,
+  proof settlement, supervision, budgeting, and full autonomous-agent
+  lifecycle governance, updating Audit queue posture from `57` promoted
+  techniques to `56`
 - promoted `AOA-T-0061 cross-repo-resource-map-bootstrap` to `canonical`
   after `calltelemetry/openclaw-linear-plugin` showed exact-fit public
   reinforcement for a multi-repo dispatch map: configured repo keys and paths,
