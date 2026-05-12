@@ -50,7 +50,50 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | `mycel` plus MCP Agent Mail license-bound adjacent check | A public AI-agent mailbox can keep stable message identity, bounded thread lanes, ordered replay, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows without making ACKs remote delivery proof or absorbing handoff authorization, transcript history, trust policy, encryption, adapters, or messaging-platform doctrine. |
 | [AOA-T-0057](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | `cwc-long-running-agents` plus `openclaw-memory-kit` | A public long-running agent harness and a public OpenClaw memory kit both keep a structured progress or handoff packet visible before restart, compaction, or wake-up without making the packet a transcript, mailbox, git-verification, memory-search, hook-policy, cron-memory, or harness-governance system. |
 | [AOA-T-0069](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | `pydantic/pydantic-ai` plus LangGraph boundary check | A public agent framework can end an agent run on deferred approvals or external calls, preserve pending-call identity, resume with saved message history and deferred results, and pair that with durable execution support without making the technique a scheduler or workflow-platform doctrine. |
+| [AOA-T-0070](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | `JaidedAI/EasyOCR` | A public OCR library can keep detection and recognition separately visible, return bounding boxes, recognized text, and confidence as one structured result, and leave downstream extraction or review outside the OCR handoff contract. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0070 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`JaidedAI/EasyOCR` at `363afb184047ce452e436f4224f3098422df872e`
+provides the clean public source for Pack 27. The repository is Apache-2.0
+licensed and repeats the staged OCR handoff outside the PaddleOCR/docTR donor
+family without requiring `aoa-techniques` to absorb model serving, training,
+benchmark, or document-understanding product doctrine.
+
+Accepted evidence:
+
+- `README.md` exposes standard OCR output as bounding box, recognized text,
+  and confidence tuples.
+- `easyocr/easyocr.py` keeps `detect()` and `recognize()` as separate methods;
+  `readtext()` runs detection first, then passes horizontal and free-form
+  region lists into recognition.
+- dictionary and JSON output modes preserve boxes, text, and confidence as one
+  structured result surface rather than forcing plain text as the invariant.
+- `custom_model.md`, `trainer/craft/README.md`, and `releasenotes.md` keep
+  recognition, CRAFT detection, and separate `detect` / `recognize` method
+  concerns visible enough to support the stage boundary.
+
+Rejected or bounded:
+
+- Do not import EasyOCR installation, Docker, model-download, custom training,
+  language-pack, demo, business-support, roadmap, or benchmark behavior.
+- OCRmyPDF was inspected as adjacent searchable-PDF layering, not a structured
+  OCR handoff proof.
+- Tesseract.js was inspected as adjacent OCR engine packaging, not a clear
+  detect/layout -> recognize -> handoff contract for this bundle.
+- Surya was inspected as adjacent document-understanding breadth with layout
+  analysis, reading order, table recognition, and GPL licensing, not the narrow
+  public proof for this Apache-2.0 technique corpus.
+- PaddleOCR and docTR remain donor-family evidence, so they do not count as
+  the independent second context.
+
+Future search shape: future sources can reinforce this canonical default only
+if they preserve the same narrow handoff seam: visible source regions or layout
+handles, recognized text, confidence or uncertainty, and a stop-line before
+field extraction, semantic media bucketing, automation, searchable-PDF output,
+model serving, benchmarking, or full document-understanding systems.
 
 ## AOA-T-0057 External Evidence Notes
 

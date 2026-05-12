@@ -559,6 +559,28 @@
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
+      "id": "AOA-T-0070",
+      "name": "two-stage-document-ocr-pipeline",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.",
+      "current_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "family": "media-ingest",
+      "proposed_trunk": "ingest",
+      "proposed_shelf": "media-ingest",
+      "proposed_future_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:media-ingest",
+        "domain:agent-workflows",
+        "kind:ingest",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -619,28 +641,6 @@
         "family:handoff-continuation",
         "domain:agent-workflows",
         "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0070",
-      "name": "two-stage-document-ocr-pipeline",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Stage OCR as detect or layout -> recognize -> structured handoff so downstream extraction stays reviewable, interchangeable, and confidence-aware instead of collapsing OCR and field logic into one opaque step.",
-      "current_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
-      "family": "media-ingest",
-      "proposed_trunk": "ingest",
-      "proposed_shelf": "media-ingest",
-      "proposed_future_path": "techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:media-ingest",
-        "domain:agent-workflows",
-        "kind:ingest",
         "status:promoted",
         "review_status:pilot-candidate"
       ],

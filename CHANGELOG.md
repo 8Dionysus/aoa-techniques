@@ -22,6 +22,17 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0070 two-stage-document-ocr-pipeline` to `canonical` after
+  `JaidedAI/EasyOCR` showed exact-fit public reinforcement for staged OCR:
+  `readtext()` derives text regions through a separate detection step before
+  recognition, public results preserve bounding boxes, recognized text, and
+  confidence, and dictionary or JSON modes keep those fields as a structured
+  handoff, while OCRmyPDF, Tesseract.js, Surya, PaddleOCR, and docTR were kept
+  out of the primary proof as searchable-PDF, engine-packaging, full
+  document-understanding, or donor-family lanes; serving, training, benchmark
+  doctrine, searchable-PDF generation, receipt schema law, template extraction,
+  semantic media bucketing, and automation stacks stay outside the bundle,
+  updating Audit queue posture from `49` promoted techniques to `48`
 - promoted `AOA-T-0069 approval-bound-durable-jobs` to `canonical` after
   `pydantic/pydantic-ai` showed exact-fit public reinforcement for deferred
   approval and external-tool calls that preserve pending call identity, return
