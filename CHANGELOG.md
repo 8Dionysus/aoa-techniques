@@ -22,6 +22,16 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0066 transcript-replay-artifact` to `canonical` after
+  `dataprofessor/cortex-replay` and Snowflake's public Cortex Code replay
+  guide showed exact-fit public reinforcement for transforming already-saved
+  AI coding session transcripts into one self-contained replay artifact with
+  explicit session selection, direct transcript input, turn/time filtering,
+  playback/bookmark/visibility controls, and secret redaction, while excluding
+  first-save capture, transcript packaging, local indexing, witness tracing,
+  hosted sharing, dashboards, replay editors, memory doctrine, and
+  replay-as-proof claims, updating Audit queue posture from `53` promoted
+  techniques to `52`
 - promoted `AOA-T-0065 mcp-gateway-proxy` to `canonical` after
   `smart-mcp-proxy/mcpproxy-go` showed exact-fit public reinforcement for one
   MCP client endpoint over multiple configured upstream MCP servers, connected

@@ -14,8 +14,8 @@ closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
 `AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, the Pack 17
 closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
 19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, the
-Pack 21 closure for `AOA-T-0064`, and the Pack 22 closure for `AOA-T-0065`,
-the live promoted queue is `53` bundles.
+Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, and
+the Pack 23 closure for `AOA-T-0066`, the live promoted queue is `52` bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
@@ -111,8 +111,13 @@ Current live constraint:
   servers, tool metadata discovery, mediated `call_tool_*` variants, and
   proxy-boundary sensitive-data inspection, and exits the live promoted queue
   through canonical review;
-- the live generated catalog currently contains `53` promoted techniques and
-  `54` canonical techniques;
+- `AOA-T-0066` closed during Stage 4 with exact-fit `dataprofessor/cortex-replay`
+  and Snowflake Cortex Code replay evidence for transforming already-saved
+  session transcripts into one self-contained replay artifact with bounded
+  selection, filtering, visibility, and redaction controls, and exits the live
+  promoted queue through canonical review;
+- the live generated catalog currently contains `52` promoted techniques and
+  `55` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -124,15 +129,15 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, Pack 20, Pack 21, and Pack 22 closures is `53` promoted techniques,
+Pack 19, Pack 20, Pack 21, Pack 22, and Pack 23 closures is `52` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
-`AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, and `AOA-T-0065`
-counted as closed rows rather than remaining targets.
+`AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`, and
+`AOA-T-0066` counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -147,7 +152,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-six closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-seven closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -210,7 +215,7 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0063 versioned-agent-registry-contract](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | docs / artifact | Pack 20 versioned agent registry contract | exact-fit second context; exits to canonical | Nacos A2A Registry namespace/name identity, unique versions, default published version, SDK and HTTP publication paths, and explicit AgentCard fields close the versioned registry-entry gap |
 | Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | exact-fit second context; exits to canonical | Nacos A2A Registry SDK name lookup, HTTP detail lookup, explicit list/search parameters, and future search dimensions kept outside the contract close the bounded capability-discovery gap |
 | Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | exact-fit second context; exits to canonical | `smart-mcp-proxy/mcpproxy-go` single MCP endpoint, multiple upstream servers, metadata indexing, mediated call variants, and proxy-boundary sensitive-data inspection close the bounded gateway-proxy gap |
-| Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | pending |  |
+| Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | exact-fit second context; exits to canonical | `dataprofessor/cortex-replay` plus Snowflake Cortex Code replay guide close the bounded post-capture replay-artifact gap |
 | Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | pending |  |
 | Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | pending |  |
 | Stage 4 | [AOA-T-0069 approval-bound-durable-jobs](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | agent-workflows / handoff | Pack 26 approval-bound durable jobs | pending |  |
@@ -377,7 +382,13 @@ families without collapsing them into one generic "agent workflow" proof lane.
     server-scoped tool names, mediated `call_tool_*` variants with intent
     fields, and sensitive-data inspection over arguments and responses at the
     proxy boundary
-25. Pack 23 - Transcript Replay Artifact: `AOA-T-0066`
+25. Pack 23 - Transcript Replay Artifact: `AOA-T-0066` - closed;
+    exact-fit `dataprofessor/cortex-replay` plus Snowflake Cortex Code replay
+    evidence found: already-saved session transcripts are selected from saved
+    session listings or direct transcript inputs, transformed into one
+    self-contained replay artifact, filtered by turn or time window, reviewed
+    through playback controls/bookmarks/visibility toggles, and redacted before
+    output while source-artifact authority stays visible
 26. Pack 24 - Transcript-Linked Code Lineage: `AOA-T-0067`
 27. Pack 25 - Fail-Closed Evidence Gate: `AOA-T-0068`
 28. Pack 26 - Approval-Bound Durable Jobs: `AOA-T-0069`
@@ -1433,6 +1444,44 @@ Reject:
   enterprise security-platform behavior;
 - registry publication, endpoint subscription, marketplace curation, graph
   semantics, or broader MCP platform governance.
+
+### AOA-T-0066: `transcript-replay-artifact`
+
+Stage 4 Pack 23 verdict, 2026-05-12: exact-fit second context found.
+`dataprofessor/cortex-replay` keeps the reusable object as one post-capture
+replay transformation over already-saved AI coding session transcripts: a
+saved session or direct transcript file is selected, optionally filtered by
+turn or time window, rendered into one self-contained interactive replay
+artifact, and reviewed with playback/bookmark/visibility controls while the
+source session artifact remains authoritative. Snowflake's public Cortex Code
+replay guide supports the same bounded workflow in a separate public assistant
+surface.
+
+Exact evidence:
+
+- Cortex Replay describes converting already-saved session transcripts into
+  self-contained interactive replay artifacts;
+- the CLI can list saved sessions, choose the latest or an explicit saved
+  session, accept a direct saved transcript input, and write one replay output;
+- turn and time filters keep replay scope explicit rather than pretending the
+  replay is always a complete transcript;
+- playback speed, bookmarks, and visibility toggles are output-review controls,
+  not the invariant itself;
+- secret redaction and filtering keep the replay derivative public-safe while
+  preserving the saved transcript as the stronger source artifact;
+- Snowflake's guide independently frames the replay as local/shareable review
+  output rather than a hosted dashboard or replay platform.
+
+Reject:
+
+- first-save session capture, transcript packaging, local-first indexing, or
+  witness trace forensics;
+- product-specific storage locations, account setup, install commands, live
+  capture behavior, hosted demo behavior, or shared viewer URLs;
+- theme systems, keyboard shortcuts, iframe embedding, dashboards, editors,
+  collaboration, analytics, or replay-platform doctrine;
+- memory doctrine, state-change proof, or treating replay output as stronger
+  source truth than the saved transcript or capture artifact.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

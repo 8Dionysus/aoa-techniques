@@ -544,8 +544,8 @@
       ],
       "counts": {
         "total": 14,
-        "canonical": 11,
-        "promoted": 3,
+        "canonical": 12,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 7,
@@ -656,7 +656,7 @@
           "id": "AOA-T-0066",
           "name": "transcript-replay-artifact",
           "domain": "history",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.",
           "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md"
         },

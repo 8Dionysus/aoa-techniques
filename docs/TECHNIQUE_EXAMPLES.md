@@ -681,7 +681,7 @@ See also:
 |---|---|---|---|
 | Minimal local-first session index | `present` | `techniques/history/history-artifacts/local-first-session-index/examples/minimal-local-first-session-index.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 
-### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|

@@ -2398,7 +2398,7 @@
       "name": "transcript-replay-artifact",
       "domain": "history",
       "kind": "artifact",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.",
       "current_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
       "family": "history-artifacts",
@@ -2410,7 +2410,7 @@
         "family:history-artifacts",
         "domain:history",
         "kind:artifact",
-        "status:promoted",
+        "status:canonical",
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."

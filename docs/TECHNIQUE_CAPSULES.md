@@ -1390,7 +1390,7 @@ See also:
 - Validate by: session artifacts already exist before indexing starts; the index can be rebuilt from local artifacts without hidden memory state...
 - Source: [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md)
 
-### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`canonical`)
 
 - Summary: Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.
 - Intent: Turn already-saved session history into a replayable artifact so reviewers can inspect message flow...
