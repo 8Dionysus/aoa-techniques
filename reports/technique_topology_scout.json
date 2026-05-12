@@ -576,6 +576,35 @@
       }
     },
     {
+      "id": "AOA-T-0065",
+      "name": "mcp-gateway-proxy",
+      "domain": "agent-workflows",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
+      "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
+      "topology": {
+        "family": "tool-gateway",
+        "capability_class": [
+          "coordinate",
+          "transform",
+          "observe"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "config",
+          "data"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "public-share",
+          "approval-required",
+          "external-evidence"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -648,35 +677,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0065",
-      "name": "mcp-gateway-proxy",
-      "domain": "agent-workflows",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
-      "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
-      "topology": {
-        "family": "tool-gateway",
-        "capability_class": [
-          "coordinate",
-          "transform",
-          "observe"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "config",
-          "data"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "public-share",
-          "approval-required",
-          "external-evidence"
         ]
       }
     },

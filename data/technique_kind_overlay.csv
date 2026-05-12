@@ -63,7 +63,7 @@ AOA-T-0061,cross-repo-resource-map-bootstrap,agent-workflows,canonical,handoff,h
 AOA-T-0062,episode-bounded-agent-loop,agent-workflows,promoted,handoff,handoff-continuation
 AOA-T-0063,versioned-agent-registry-contract,docs,promoted,artifact,capability-registry
 AOA-T-0064,capability-discovery,docs,promoted,discovery,capability-registry
-AOA-T-0065,mcp-gateway-proxy,agent-workflows,promoted,composition,tool-gateway
+AOA-T-0065,mcp-gateway-proxy,agent-workflows,canonical,composition,tool-gateway
 AOA-T-0066,transcript-replay-artifact,history,promoted,artifact,history-artifacts
 AOA-T-0067,transcript-linked-code-lineage,history,promoted,artifact,history-artifacts
 AOA-T-0068,fail-closed-evidence-gate,agent-workflows,promoted,guardrail,approval-evidence

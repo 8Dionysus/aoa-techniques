@@ -13,8 +13,9 @@ for `AOA-T-0055`, the Pack 13 closure for `AOA-T-0056`, the Pack 14
 closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
 `AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, the Pack 17
 closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
-19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, and the
-Pack 21 closure for `AOA-T-0064`, the live promoted queue is `54` bundles.
+19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, the
+Pack 21 closure for `AOA-T-0064`, and the Pack 22 closure for `AOA-T-0065`,
+the live promoted queue is `53` bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
@@ -105,8 +106,13 @@ Current live constraint:
   evidence for SDK name lookup, HTTP detail lookup, explicit list/search
   parameters, and future search dimensions kept outside the current contract,
   and exits the live promoted queue through canonical review;
-- the live generated catalog currently contains `54` promoted techniques and
-  `53` canonical techniques;
+- `AOA-T-0065` closed during Stage 4 with exact-fit `smart-mcp-proxy/mcpproxy-go`
+  evidence for one MCP client endpoint over multiple configured upstream
+  servers, tool metadata discovery, mediated `call_tool_*` variants, and
+  proxy-boundary sensitive-data inspection, and exits the live promoted queue
+  through canonical review;
+- the live generated catalog currently contains `53` promoted techniques and
+  `54` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -118,15 +124,15 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, Pack 20, and Pack 21 closures is `54` promoted techniques,
+Pack 19, Pack 20, Pack 21, and Pack 22 closures is `53` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
-`AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, and `AOA-T-0064` counted as closed
-rows rather than remaining targets.
+`AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, and `AOA-T-0065`
+counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -141,7 +147,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-five closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-six closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -203,7 +209,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | exact-fit second context; exits to canonical | Cloudflare long-running Agents durable plan-step, checkpoint, next-step scheduling, failed-step state, re-planning, and human oversight boundaries close the bounded episode-loop gap |
 | Stage 4 | [AOA-T-0063 versioned-agent-registry-contract](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | docs / artifact | Pack 20 versioned agent registry contract | exact-fit second context; exits to canonical | Nacos A2A Registry namespace/name identity, unique versions, default published version, SDK and HTTP publication paths, and explicit AgentCard fields close the versioned registry-entry gap |
 | Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | exact-fit second context; exits to canonical | Nacos A2A Registry SDK name lookup, HTTP detail lookup, explicit list/search parameters, and future search dimensions kept outside the contract close the bounded capability-discovery gap |
-| Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | pending |  |
+| Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | exact-fit second context; exits to canonical | `smart-mcp-proxy/mcpproxy-go` single MCP endpoint, multiple upstream servers, metadata indexing, mediated call variants, and proxy-boundary sensitive-data inspection close the bounded gateway-proxy gap |
 | Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | pending |  |
 | Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | pending |  |
 | Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | pending |  |
@@ -365,7 +371,12 @@ families without collapsing them into one generic "agent workflow" proof lane.
     lookup with `namespaceId` and `agentName`, list search with `pageNo`,
     `pageSize`, `agentName`, `namespaceId`, and `search=blur`, and future
     skill/tag/description filtering kept outside the current contract
-24. Pack 22 - MCP Gateway Proxy: `AOA-T-0065`
+24. Pack 22 - MCP Gateway Proxy: `AOA-T-0065` - closed; exact-fit
+    `smart-mcp-proxy/mcpproxy-go` evidence found: one MCP client endpoint over
+    multiple configured upstream servers, connected-server metadata indexing,
+    server-scoped tool names, mediated `call_tool_*` variants with intent
+    fields, and sensitive-data inspection over arguments and responses at the
+    proxy boundary
 25. Pack 23 - Transcript Replay Artifact: `AOA-T-0066`
 26. Pack 24 - Transcript-Linked Code Lineage: `AOA-T-0067`
 27. Pack 25 - Fail-Closed Evidence Gate: `AOA-T-0068`
@@ -1378,6 +1389,50 @@ Reject:
 - ranking, recommendation, trust/signature policy, marketplace curation, graph
   semantics, official registry-protocol governance, or broad registry product
   doctrine.
+
+### AOA-T-0065: `mcp-gateway-proxy`
+
+Stage 4 Pack 22 verdict, 2026-05-12: exact-fit second context found.
+`smart-mcp-proxy/mcpproxy-go` keeps the reusable object as one MCP gateway
+proxy seam over multiple configured upstream servers: clients connect to one
+MCP endpoint, the proxy connects to upstream servers, indexes tool metadata,
+uses server-scoped tool names, mediates execution through built-in call
+variants, and inspects arguments and responses for sensitive data at the proxy
+boundary. `TBXark/mcp-proxy` supports the simpler multi-server proxy shape but
+does not carry the primary proof because its public docs center per-server
+routes and aggregation more than mediated call/sanitization posture.
+
+Exact evidence:
+
+- MCPProxy documents one default MCP endpoint plus routing-mode endpoints under
+  the same proxy surface;
+- upstream-server docs configure multiple `mcpServers` and state that MCPProxy
+  connects to multiple MCP servers simultaneously with unified access through a
+  single endpoint;
+- search/discovery docs show retrieval and indexing of tool metadata,
+  including names, descriptions, and parameters, across connected servers;
+- MCP protocol docs expose `retrieve_tools`, server-scoped tool names, and
+  mediated `call_tool_read`, `call_tool_write`, and `call_tool_destructive`
+  variants with explicit intent fields;
+- sensitive-data detection docs inspect tool-call arguments and responses and
+  record redacted activity-log metadata, keeping inspection at the proxy
+  boundary;
+- `TBXark/mcp-proxy` confirms the simpler shape of multiple configured MCP
+  servers behind one HTTP proxy surface across `stdio`, `sse`, and
+  `streamable-http` upstream types.
+
+Reject:
+
+- full MCPProxy product behavior: tray app, web UI, package repositories,
+  dashboards, telemetry product, installer behavior, and release channels;
+- Docker isolation, process lifecycle, upstream restart commands, health
+  diagnostics, OAuth, token management, or user-facing management commands;
+- BM25 ranking, retrieve-tools selection policy, tool recommendation,
+  context-window optimization, or routing-mode doctrine;
+- quarantine governance, scanner plugins, RBAC, audit-dashboard policy, and
+  enterprise security-platform behavior;
+- registry publication, endpoint subscription, marketplace curation, graph
+  semantics, or broader MCP platform governance.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

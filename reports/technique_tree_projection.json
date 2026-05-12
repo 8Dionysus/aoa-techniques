@@ -492,6 +492,29 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0065",
+      "name": "mcp-gateway-proxy",
+      "domain": "agent-workflows",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
+      "current_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
+      "family": "tool-gateway",
+      "proposed_trunk": "tool-use",
+      "proposed_shelf": "tool-gateway",
+      "proposed_future_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:tool-gateway",
+        "domain:agent-workflows",
+        "kind:composition",
+        "status:canonical",
+        "review_status:candidate",
+        "tree_id_placement:tool-use/tool-gateway"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -556,29 +579,6 @@
         "review_status:pilot-candidate"
       ],
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0065",
-      "name": "mcp-gateway-proxy",
-      "domain": "agent-workflows",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
-      "current_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
-      "family": "tool-gateway",
-      "proposed_trunk": "tool-use",
-      "proposed_shelf": "tool-gateway",
-      "proposed_future_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:tool-gateway",
-        "domain:agent-workflows",
-        "kind:composition",
-        "status:promoted",
-        "review_status:candidate",
-        "tree_id_placement:tool-use/tool-gateway"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0068",

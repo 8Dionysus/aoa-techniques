@@ -38516,6 +38516,193 @@
       "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0065"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "mcp-gateway-proxy"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `smart-mcp-proxy/mcpproxy-go`"
+                },
+                {
+                  "order": 2,
+                  "text": "failure cases where one MCP gateway proxy seam is mistaken for lifecycle management, search ranking, security quarantine, registry governance, product UI, or a full MCP platform"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the gateway becomes an opaque tunnel and reviewers cannot inspect proxied tool metadata before calls"
+                },
+                {
+                  "order": 2,
+                  "text": "callers still rely on upstream-specific direct bindings, so the proxy is only another endpoint and not a meaningful mediation boundary"
+                },
+                {
+                  "order": 3,
+                  "text": "sanitization is claimed from a source that only forwards calls and does not inspect, filter, redact, or bound arguments and results"
+                },
+                {
+                  "order": 4,
+                  "text": "runtime lifecycle, upstream restart, Docker isolation, OAuth, or management commands become more central than the caller-facing proxy seam"
+                },
+                {
+                  "order": 5,
+                  "text": "BM25 ranking, routing modes, retrieve-tools policy, or recommendation behavior is treated as part of the gateway invariant"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a unified proxy can hide upstream-specific risk if metadata and call provenance are too thin"
+                },
+                {
+                  "order": 2,
+                  "text": "proxy success can encourage teams to skip reviewing risky upstream servers"
+                },
+                {
+                  "order": 3,
+                  "text": "product-rich gateway sources can pull the technique toward dashboards, quarantine governance, telemetry, installers, or enterprise policy faster than the atomic move can support"
+                },
+                {
+                  "order": 4,
+                  "text": "a gateway adds operational complexity compared with direct upstream access, especially for small tool sets"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "importing tray apps, web dashboards, package repositories, UI behavior, or release channels as if they were part of the technique"
+                },
+                {
+                  "order": 2,
+                  "text": "treating Docker isolation, process supervision, upstream health checks, OAuth, token management, or restart commands as required gateway-proxy behavior"
+                },
+                {
+                  "order": 3,
+                  "text": "using the proxy as a substitute for registry publication, capability discovery, marketplace curation, or trust-policy review"
+                },
+                {
+                  "order": 4,
+                  "text": "treating sensitive-data detection, quarantine, scanner plugins, RBAC, or audit dashboards as proof that every upstream tool is safe"
+                },
+                {
+                  "order": 5,
+                  "text": "folding tool ranking, context-window optimization, or routing-mode selection into the same technique"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "review prose cannot name the caller-facing proxy surface separately from the broader product or runtime"
+                },
+                {
+                  "order": 2,
+                  "text": "metadata lookup disappears and callers need upstream-specific manual knowledge before each call"
+                },
+                {
+                  "order": 3,
+                  "text": "proxy examples focus on management UI, install flow, OAuth setup, or Docker lifecycle instead of visible capability metadata and mediated tool calls"
+                },
+                {
+                  "order": 4,
+                  "text": "search quality, quarantine status, or dashboard state dominates the explanation"
+                },
+                {
+                  "order": 5,
+                  "text": "source evidence supports aggregation but not argument/result inspection, yet the bundle starts overclaiming sanitization"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep one explicit caller-facing gateway seam as the invariant center"
+                },
+                {
+                  "order": 2,
+                  "text": "require visible proxied metadata, capability shape, or server-scoped tool names before treating a source as strong evidence"
+                },
+                {
+                  "order": 3,
+                  "text": "keep mediated call paths distinct from registry publication, discovery ranking, and local service lifecycle"
+                },
+                {
+                  "order": 4,
+                  "text": "record partial support when a source proves only aggregation or routing, and reserve full canonical support for evidence with mediation and boundary inspection"
+                },
+                {
+                  "order": 5,
+                  "text": "split routing modes, tool ranking, quarantine governance, lifecycle orchestration, OAuth, UI/dashboard behavior, and MCP platform governance into sibling surfaces if they become the actual reusable object"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical tool-use technique when the implementation keeps gateway mediation, proxied metadata, and argument/result boundary review smaller than lifecycle, registry, ranking, quarantine, UI, or platform governance"
+                },
+                {
+                  "order": 2,
+                  "text": "use this note as the watch surface for proxy-product creep, lifecycle creep, search/ranking creep, security-platform creep, registry creep, and sanitization overclaim"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -38546,34 +38733,38 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around scanner posture, trust scoring, dashboards, lifecycle doctrine, and registry semantics"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around scanner posture, trust scoring, dashboards, lifecycle doctrine, and registry semantics"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same proxy seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same proxy seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor gateway family"
+                  "text": "`smart-mcp-proxy/mcpproxy-go` provides exact-fit public reinforcement beyond the donor gateway family: MCPProxy exposes one MCP endpoint for clients, connects to multiple configured upstream MCP servers, indexes tool metadata from connected servers, names upstream tools with a `server:tool` format, mediates tool execution through built-in `call_tool_*` variants, records audit-oriented intent and activity detail, and can scan tool-call arguments and responses for sensitive-data patterns at the proxy boundary"
+                },
+                {
+                  "order": 5,
+                  "text": "`TBXark/mcp-proxy` was checked as a supporting shape: it is a simpler MIT-licensed proxy that aggregates multiple configured MCP servers behind a single HTTP proxy surface, but it keeps per-server route keys and does not carry the same bounded tool-call mediation story as the primary evidence"
+                },
+                {
+                  "order": 6,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for the same gateway-proxy contract"
                 }
               ]
             },
@@ -38584,7 +38775,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is fronting several configured MCP servers through one explicit proxy seam instead of binding callers directly to each upstream surface"
+                  "text": "this is the right canonical default when the main problem is fronting several configured MCP servers through one explicit proxy seam instead of binding callers directly to each upstream surface"
                 },
                 {
                   "order": 2,
@@ -38593,6 +38784,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than [AOA-T-0042](../../../../instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md) because it does not score or preflight upstream trust or readiness before publication"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because MCPProxy repeats the same proxy-over-upstreams shape in a separate live project while still letting this bundle reject MCPProxy's wider product concerns: BM25 ranking policy, quarantine governance, Docker isolation, tray or web UI, OAuth, lifecycle management, activity-log product behavior, and full security-platform doctrine"
                 }
               ]
             },
@@ -38604,7 +38799,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -38619,7 +38814,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `smart-mcp-proxy/mcpproxy-go` and `TBXark/mcp-proxy` sources are MIT licensed and no source code, credentials, private endpoints, deployment secrets, tray/UI behavior, or local runtime setup was copied into the technique"
                 }
               ]
             },
@@ -38630,11 +38825,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses one bounded gateway proxy seam without widening into security-platform or runtime-product doctrine"
+                  "text": "future gateway sources can reinforce the default, but they must preserve the narrow boundary: one explicit caller-facing proxy surface, multiple configured upstream tool servers, visible metadata or capability inspection, mediated tool calls, and any argument/result sanitization kept at the proxy boundary rather than widened into product governance"
                 }
               ]
             },
@@ -38645,11 +38840,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0065` `promoted`"
+                  "text": "move `AOA-T-0065` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the proxy seam survives outside the donor gateway family"
+                  "text": "add an adverse-effects review to preserve the boundary between the gateway proxy seam, local runtime lifecycle, upstream health checks, registry discovery, ranking/search policy, security quarantine, UI/product behavior, and enterprise MCP platform governance"
                 }
               ]
             }

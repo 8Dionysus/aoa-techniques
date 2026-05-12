@@ -393,7 +393,7 @@ entries:
 - id: AOA-T-0065
   name: mcp-gateway-proxy
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: composition
   family: tool-gateway
 - id: AOA-T-0066

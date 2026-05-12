@@ -371,6 +371,59 @@ endpoint subscription, trust or signature layers, marketplace catalogs, or
 capability schema documents unless they expose the versioned entry publication
 contract itself.
 
+## AOA-T-0065 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`smart-mcp-proxy/mcpproxy-go` at
+`f4ad4e7c36ec8af24325f41453e9c88db8a9afde` provides the clean primary public
+source for Pack 22. The repository is MIT licensed. Supporting shape evidence
+was also checked in `TBXark/mcp-proxy` at
+`4f78891f47eb18578039ec8d45f827e998631f12`, also MIT licensed.
+
+Accepted evidence:
+
+- MCPProxy exposes one default MCP client endpoint and documents routing-mode
+  endpoints under the same proxy surface.
+- Its upstream-server docs configure multiple `mcpServers` and state that
+  MCPProxy connects to multiple MCP servers simultaneously while providing
+  unified access through a single endpoint.
+- The search/discovery docs show the proxy retrieving tool metadata from
+  connected upstream servers, indexing tool names, descriptions, and
+  parameters, and returning server-scoped tool results.
+- The MCP protocol docs keep tool execution mediated through built-in
+  `call_tool_read`, `call_tool_write`, and `call_tool_destructive` variants
+  using `server:tool` names and explicit intent fields.
+- Sensitive-data detection docs show a proxy-boundary inspection lane over tool
+  call arguments and responses, with redacted activity-log evidence rather
+  than source code or secret exposure.
+- `TBXark/mcp-proxy` supports the simpler shape of multiple configured MCP
+  servers behind one HTTP proxy surface, including `stdio`, `sse`, and
+  `streamable-http` upstream types and tool filters.
+
+Rejected or bounded:
+
+- Do not import MCPProxy's tray app, web UI, installer behavior, package
+  repositories, dashboards, telemetry product, or broader product lifecycle.
+- Do not import Docker isolation, process lifecycle, upstream restart logic,
+  health diagnostics, OAuth, token management, or user-facing management
+  commands as gateway-proxy requirements.
+- Do not import BM25 ranking, retrieve-tools selection policy, tool search
+  quality, tool recommendation, or context-window optimization as part of this
+  technique. They are adjacent selector/discovery concerns.
+- Do not import quarantine governance, scanner plugins, RBAC, audit-dashboard
+  policy, or enterprise security-platform doctrine. Only the narrow
+  proxy-boundary inspection/sanitization idea is relevant here.
+- Treat `TBXark/mcp-proxy` as supporting shape evidence, not as full proof of
+  the sanitization boundary, because its public docs center aggregation and
+  routes more than argument/result inspection.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve one explicit caller-facing proxy seam over configured upstream
+tool surfaces, visible metadata or capability inspection, mediated tool calls,
+and any argument/result filtering at the proxy boundary without making
+lifecycle, registry, ranking, quarantine, UI, or enterprise platform behavior
+part of the invariant.
+
 ## AOA-T-0064 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

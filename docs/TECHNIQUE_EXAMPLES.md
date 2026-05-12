@@ -136,6 +136,12 @@ See also:
 |---|---|---|---|
 | minimal episode-bounded agent loop | `present` | `techniques/continuity/handoff-continuation/episode-bounded-agent-loop/examples/minimal-episode-bounded-agent-loop.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) |
 
+### [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal mcp-gateway-proxy | `present` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md` | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -154,12 +160,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) - mcp-gateway-proxy (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal mcp-gateway-proxy | `present` | `techniques/tool-use/tool-gateway/mcp-gateway-proxy/examples/minimal-mcp-gateway-proxy.md` | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 
 ### [AOA-T-0068](../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) - fail-closed-evidence-gate (`promoted`)
 
