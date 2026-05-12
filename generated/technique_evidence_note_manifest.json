@@ -11192,6 +11192,26 @@
                   "order": 4,
                   "key": "public reuse check",
                   "value_markdown": "the pattern remains understandable without hidden automation or private source files"
+                },
+                {
+                  "order": 5,
+                  "key": "2026-05-12 long-pass searched-lane result",
+                  "value_markdown": "no exact-fit second corpus found in the Stage 2 promotion-evidence pass"
+                },
+                {
+                  "order": 6,
+                  "key": "searched lane",
+                  "value_markdown": "public exact-phrase code search for the five caution headings,\nworkspace sibling-corpus search beyond `aoa-skills`, and public AI risk /\nfailure / mitigation framework surfaces"
+                },
+                {
+                  "order": 7,
+                  "key": "adjacent public examples",
+                  "value_markdown": "OWASP LLM Top 10, Microsoft agentic AI\nfailure-mode taxonomy, Microsoft autonomous agentic AI risk guidance, and\nNIST AI RMF all provide useful risk, misuse, detection, mitigation, or\ngovernance language, but they are security/risk-management frameworks rather\nthan a committed markdown corpus reusing the exact five-part `Risks` split"
+                },
+                {
+                  "order": 8,
+                  "key": "conclusion",
+                  "value_markdown": "these lanes sharpen the boundary around `AOA-T-0022`, but they do not close the remaining independent-corpus gap"
                 }
               ]
             },
