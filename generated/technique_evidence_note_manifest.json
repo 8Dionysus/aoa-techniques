@@ -41512,6 +41512,173 @@
       "technique_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0069"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "approval-bound-durable-jobs"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `pydantic/pydantic-ai`, with LangGraph used only as supporting checkpoint/thread/resume boundary evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that the bundle remains one approval-bound durable-job contract, not a scheduler, queue platform, workflow product, human-approval doctrine, or total long-running-agent lifecycle"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a job appears paused for approval, but continuation can still happen without an explicit approval or result input"
+                },
+                {
+                  "order": 2,
+                  "text": "resume depends on hidden memory, current process state, or reconstructed narration instead of durable state, saved history, or a persisted checkpoint"
+                },
+                {
+                  "order": 3,
+                  "text": "approval payloads lose the pending job or tool-call identity needed to match the later decision back to the paused work"
+                },
+                {
+                  "order": 4,
+                  "text": "side effects before the approval seam are replayed on resume because the durable state does not record completed work or idempotency boundaries"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "durable jobs add persistence, identity, and status overhead that is unnecessary for short one-shot actions"
+                },
+                {
+                  "order": 2,
+                  "text": "approval seams can stall legitimate work if the waiting state is hard to inspect or unblock"
+                },
+                {
+                  "order": 3,
+                  "text": "platform examples can tempt contributors to import scheduler, queue, worker-fleet, or dashboard semantics into a technique that only needs one durable pause/resume seam"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using this bundle as a substitute for [fail-closed-evidence-gate](../../fail-closed-evidence-gate/TECHNIQUE.md) when the actual need is one immediate non-allow verdict before a side effect"
+                },
+                {
+                  "order": 2,
+                  "text": "using this bundle as a substitute for [AOA-T-0062](../../../../continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) when the actual need is step-bounded episode structure and re-planning"
+                },
+                {
+                  "order": 3,
+                  "text": "using this bundle as a substitute for [AOA-T-0028](../../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) when the actual need is simple human confirmation before a single mutation"
+                },
+                {
+                  "order": 4,
+                  "text": "importing durable-execution frameworks, queue brokers, workflow histories, cloud workers, retry policies, dashboards, or product-specific commands as invariant requirements"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot tell which job, tool call, or pending unit the approval belongs to"
+                },
+                {
+                  "order": 2,
+                  "text": "examples say \"resume\" but do not show durable state, saved history, checkpoint, pending-call ID, or equivalent continuity anchor"
+                },
+                {
+                  "order": 3,
+                  "text": "the explanation centers workers, schedules, retries, queues, deployments, observability, or fleet policy more than the approval-bound pause/resume contract"
+                },
+                {
+                  "order": 4,
+                  "text": "denial, timeout, missing approval, or stale approval outcomes are not represented as visible terminal or waiting states"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep a stable job, checkpoint, thread, pending-call, or message-history identity across pause and resume"
+                },
+                {
+                  "order": 2,
+                  "text": "require explicit approval, denial, or external result before continuation and record how it maps back to the pending unit"
+                },
+                {
+                  "order": 3,
+                  "text": "make waiting, denied, resumed, canceled, and completed states inspectable enough for a reviewer to distinguish them"
+                },
+                {
+                  "order": 4,
+                  "text": "route scheduler, queue, orchestration, retry, fleet, dashboard, and broad policy behavior to sibling techniques or owning systems instead of widening this bundle"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow handoff when the job or pending call keeps stable identity, waits at an explicit approval seam, and resumes from durable state, saved history, or checkpointed context rather than hidden memory"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb fail-closed side-effect gates, generic confirmation prompts, episode planning, workflow-platform governance, queue semantics, retry doctrine, worker-fleet control, or total durable-execution product behavior into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -41542,34 +41709,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around scheduler semantics, orchestration stacks, pack formats, and wider governance breadth"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around scheduler semantics, orchestration stacks, pack formats, and wider governance breadth"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same durable-job-across-approval contract as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same durable-job-across-approval contract as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor family"
+                  "text": "`pydantic/pydantic-ai` provides exact-fit public reinforcement beyond the donor family: deferred tools can end an agent run with `DeferredToolRequests`, preserve pending approval or external-call identities, let the caller gather approvals or results outside the agent process, and start a follow-up run with the original message history plus `DeferredToolResults`"
+                },
+                {
+                  "order": 5,
+                  "text": "Pydantic AI's durable-execution surface reinforces the longer-running side of the same contract by preserving progress across transient failures, restarts, asynchronous work, and human-in-the-loop workflows through public durable-system adapters"
+                },
+                {
+                  "order": 6,
+                  "text": "LangGraph provides supporting boundary evidence for checkpoint/thread/resume semantics: an interrupt saves graph state through a checkpointer, waits indefinitely for external input, uses a `thread_id` as the persistent cursor, and resumes through `Command(resume=...)`"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for approval-bound continuation from durable or serialized state"
                 }
               ]
             },
@@ -41580,7 +41755,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is preserving longer-running work across an explicit approval seam without falling back to hidden memory or widening into scheduler doctrine"
+                  "text": "this is the right canonical default when the main problem is preserving longer-running work across an explicit approval seam without falling back to hidden memory or widening into scheduler doctrine"
                 },
                 {
                   "order": 2,
@@ -41589,6 +41764,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than a one-shot boundary gate because it owns pause and resume continuity across longer-running work"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the second context repeats the key shape outside the donor family: a pending unit keeps identity, continuation waits for approval or external result, and the resumed run receives explicit state or history instead of relying on hidden memory"
                 }
               ]
             },
@@ -41600,7 +41779,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -41615,7 +41794,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected Pydantic AI and LangGraph sources are MIT licensed or official public docs, and no source code, private state, credentials, model outputs, job IDs, approval payloads, product setup instructions, or platform-specific backend wiring were copied into the technique"
                 }
               ]
             },
@@ -41626,11 +41805,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses durable approval-bound jobs without widening into scheduler or orchestration-platform doctrine"
+                  "text": "future sources can reinforce the default, but they must preserve the narrow boundary: one durable or serialized unit, one approval or external-result seam, explicit continuation input, and resume from durable state or saved history, without importing full scheduler products, workflow-platform governance, queue policy, fleet operations, background autonomy doctrine, or generic human-approval gates"
                 }
               ]
             },
@@ -41641,11 +41820,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0069` `promoted`"
+                  "text": "move `AOA-T-0069` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the durable-job contract survives outside the donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between approval-bound durable jobs, one-shot fail-closed gates, episode loops, generic queues, scheduler platforms, and full orchestration products"
                 }
               ]
             }

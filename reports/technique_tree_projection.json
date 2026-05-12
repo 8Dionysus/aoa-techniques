@@ -537,6 +537,28 @@
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
+      "id": "AOA-T-0069",
+      "name": "approval-bound-durable-jobs",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
+      "current_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
+      "family": "approval-evidence",
+      "proposed_trunk": "governance",
+      "proposed_shelf": "approval-evidence",
+      "proposed_future_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:approval-evidence",
+        "domain:agent-workflows",
+        "kind:handoff",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -601,28 +623,6 @@
         "review_status:pilot-candidate"
       ],
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0069",
-      "name": "approval-bound-durable-jobs",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Keep longer-running work durable across one explicit approval seam so checkpoint, pause, and resume remain reviewable without widening into a scheduler or orchestration platform.",
-      "current_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
-      "family": "approval-evidence",
-      "proposed_trunk": "governance",
-      "proposed_shelf": "approval-evidence",
-      "proposed_future_path": "techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:approval-evidence",
-        "domain:agent-workflows",
-        "kind:handoff",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0070",

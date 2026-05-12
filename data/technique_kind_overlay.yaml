@@ -417,7 +417,7 @@ entries:
 - id: AOA-T-0069
   name: approval-bound-durable-jobs
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: approval-evidence
 - id: AOA-T-0070
