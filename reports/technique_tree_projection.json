@@ -294,6 +294,50 @@
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
+      "id": "AOA-T-0051",
+      "name": "commit-triggered-background-review",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.",
+      "current_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
+      "family": "review-compaction",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "review-compaction",
+      "proposed_future_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:review-compaction",
+        "domain:agent-workflows",
+        "kind:workflow",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
+      "id": "AOA-T-0052",
+      "name": "review-findings-compaction",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
+      "current_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
+      "family": "review-compaction",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "review-compaction",
+      "proposed_future_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:review-compaction",
+        "domain:agent-workflows",
+        "kind:workflow",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -314,50 +358,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0051",
-      "name": "commit-triggered-background-review",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance.",
-      "current_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
-      "family": "review-compaction",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "review-compaction",
-      "proposed_future_path": "techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:review-compaction",
-        "domain:agent-workflows",
-        "kind:workflow",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0052",
-      "name": "review-findings-compaction",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface.",
-      "current_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
-      "family": "review-compaction",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "review-compaction",
-      "proposed_future_path": "techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:review-compaction",
-        "domain:agent-workflows",
-        "kind:workflow",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
       "id": "AOA-T-0054",

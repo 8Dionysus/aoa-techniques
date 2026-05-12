@@ -7,35 +7,62 @@
 
 ## Verdict
 
-- bounded defer for now
+- approve for canonical promotion
 
 ## Evidence summary
 
-- external origin: the imported technique has a bounded donor contract and explicit exclusions around trigger logic, fix loops, queue product breadth, and runtime specifics
-- second context: `aoa-techniques` now records the same findings-compaction contract as a documentation-first landing aid with one example and one checklist
-- external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale
-- validation strength: the bundle now carries a checklist, an example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository
+- external origin: the imported technique has a bounded donor contract and
+  explicit exclusions around trigger logic, fix loops, queue product breadth,
+  and runtime specifics
+- second context: `aoa-techniques` records the same findings-compaction
+  contract as a documentation-first landing aid with one example and one
+  checklist
+- external reinforcement: Qodo's persistent review comments update an existing
+  review comment when new commits are pushed instead of posting a fresh review
+  every time, keeping the active findings surface compact during repeated
+  review cycles
+- public docs reinforcement: Qodo records findings added per commit and
+  findings resolved per commit, while its update flow detects the latest delta,
+  generates suggestions from recent changes, merges them with overall PR
+  feedback, and marks recent findings distinctly
+- implementation reinforcement: open-source PR-Agent preserves a persistent
+  latest-suggestions comment with previous suggestions folded into history,
+  trims old history by configured length, validates suggestions against current
+  diff hunks, and uses incremental review logic to find new commits since the
+  previous review
+- validation strength: the bundle now has donor evidence, repo-local
+  adaptation, public product documentation, open-source implementation
+  surfaces, a checklist, an example, and an explicit adverse-effects review
 
 ## Default-use rationale
 
-- this is the right promoted default when the main reusable object is verify-and-consolidate hygiene for already-produced review findings
-- it remains distinct from `AOA-T-0051`, which owns the asynchronous trigger and artifact production step rather than the later compaction pass
-- it should stay narrower than remediation, issue triage, or queue governance even if those surfaces sit nearby in some donors
+- this is the right canonical default when the main reusable object is keeping
+  review findings current, smaller, and traceable across repeated review runs
+- it remains distinct from `AOA-T-0051`, which owns the review trigger and
+  artifact production step rather than the later compaction and refresh pass
+- it stays narrower than backlog policy, remediation automation, issue
+  triage, auto-approval, or full PR governance
 
 ## Fresh public-safety check
 
-- review date: 2026-03-27
+- review date: 2026-05-12
 - result: pass
-- sanitization still holds: the bundle keeps only the reusable findings-compaction contract and excludes donor-specific runtime and automation breadth
-- public reuse check: the example, checklist, and adaptation notes remain understandable without hidden donor-repo context
+- sanitization still holds: the bundle keeps only the reusable
+  findings-compaction contract and excludes donor-specific runtime, auto-fix,
+  approval, merge, and issue-management breadth
+- public reuse check: the example, checklist, adaptation notes, and Qodo /
+  PR-Agent evidence are understandable without hidden donor-repo context
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation
-- specifically, the bundle still needs another public workflow surface where current review findings are revalidated and consolidated before action
-- the boundary from `AOA-T-0051` should stay explicit so canonical review does not collapse trigger and compaction into one oversized technique
+- no blocker remains for canonical promotion
+- later evidence may strengthen provider-specific stale-finding policies, but
+  it should not widen this bundle into remediation, backlog ownership, or
+  platform governance
 
 ## Recommendation
 
-- keep `AOA-T-0052` `promoted`
-- defer canonical promotion until another live adopter confirms that the same bounded findings-compaction contract survives outside the donor repository
+- move `AOA-T-0052` to `canonical`
+- keep `AOA-T-0051` as the separate trigger-and-artifact sibling when the real
+  question is when review starts rather than how findings stay compact and
+  current

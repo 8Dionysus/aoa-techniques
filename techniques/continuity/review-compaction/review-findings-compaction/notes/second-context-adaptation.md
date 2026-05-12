@@ -31,9 +31,35 @@
 
 ## Evidence
 
+- source family: Qodo / open-source PR-Agent
+- public repository: `https://github.com/The-PR-Agent/pr-agent`
+- observed revision: `9ab2636f89952c69600dc2038d39f468de699fd0`
+- public docs: `https://docs.qodo.ai/code-review/get-started/use-qodo-in-prs/code-review/persistent-review-comments` and `https://docs.qodo.ai/v1/tools/tools-list/improve`
+- source surfaces inspected: `pr_agent/tools/pr_code_suggestions.py`, `pr_agent/tools/pr_reviewer.py`, `pr_agent/git_providers/github_provider.py`, `pr_agent/settings/configuration.toml`, `docs/docs/tools/improve.md`, and `docs/docs/tools/review.md`
+
+Qodo / PR-Agent closes the live-adopter gap because it keeps repeated review
+output compact during iterative pull request work. Qodo's persistent review
+comments update an existing review comment when new commits are pushed instead
+of posting a fresh review every time, keep findings visible in the pull
+request review, and maintain an audit trail of findings added and resolved per
+commit. Its update flow detects the latest delta, generates suggestions from
+recent changes, merges them with overall PR feedback, and marks recent findings
+distinctly.
+
+The open-source PR-Agent implementation reinforces the same shape: persistent
+suggestion comments keep the newest findings at the top, fold previous
+suggestions into bounded history, trim older history by configuration, validate
+suggestions against current diff hunks, and use incremental review state to
+find commits since the previous review. The boundary remains strict:
+auto-fix, auto-approval, chat, issue triage, and merge policy are adjacent
+provider features, not part of this technique's canonical default.
+
 - source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result
 
-- works as a documentation-first second context and preserves the findings-compaction contract without importing the donor compact runtime or remediation breadth
+- works as a documentation-first second context and now has external
+  reinforcement from Qodo / PR-Agent, preserving the findings-compaction
+  contract without importing donor compact runtime, remediation, backlog
+  policy, or auto-approval breadth

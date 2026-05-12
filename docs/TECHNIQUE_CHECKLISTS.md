@@ -76,23 +76,23 @@ See also:
 |---|---|---|---|---|
 | ready-work-from-blocker-graph checklist | `present` | `8` | `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/checks/ready-work-from-blocker-graph-checklist.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) |
 
-### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
+### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | commit-triggered-background-review checklist | `present` | `8` | `techniques/continuity/review-compaction/commit-triggered-background-review/checks/commit-triggered-background-review-checklist.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) |
 
-### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`promoted`)
+### [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) - review-findings-compaction (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | review-findings-compaction checklist | `present` | `8` | `techniques/continuity/review-compaction/review-findings-compaction/checks/review-findings-compaction-checklist.md` | [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) |
+
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 
 ### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
 

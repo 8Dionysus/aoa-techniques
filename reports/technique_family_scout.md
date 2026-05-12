@@ -25,7 +25,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `2` | `1` |
 | `skill-discovery` | Editorial discovery and health visibility over upstream-owned skill sources. | `2` | `1` | `1` |
 | `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `2` | `1` |
-| `review-compaction` | Background review triggering, findings compaction, and recovery of capability loading after compaction. | `3` | `0` | `3` |
+| `review-compaction` | Background review triggering, findings compaction, and recovery of capability loading after compaction. | `3` | `2` | `1` |
 | `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `0` | `7` |
 | `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `0` | `1` |
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `0` | `2` |
@@ -272,12 +272,12 @@ Background review triggering, findings compaction, and recovery of capability lo
 Typical domains: `agent-workflows`.
 Typical kinds: `workflow`, `handoff`.
 
-Counts: `total` 3, `canonical` 0, `promoted` 3.
+Counts: `total` 3, `canonical` 2, `promoted` 1.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. |
-| [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. |
+| [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. |
+| [AOA-T-0052](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. |
 | [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | `agent-workflows` | `recovery` | `promoted` | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. |
 
 ## `handoff-continuation`

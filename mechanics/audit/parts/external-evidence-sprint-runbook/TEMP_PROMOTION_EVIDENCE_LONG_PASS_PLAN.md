@@ -6,8 +6,9 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0038` plus `AOA-T-0039`, and Pack 4 closures for `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, and the Pack 5 closures for `AOA-T-0024`,
 `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`,
-the Pack 8 closure for `AOA-T-0033`, and the Pack 9 closures for `AOA-T-0049`
-plus `AOA-T-0050`, the live promoted queue is `65` bundles. This
+the Pack 8 closure for `AOA-T-0033`, the Pack 9 closures for `AOA-T-0049`
+plus `AOA-T-0050`, and the Pack 10 closures for `AOA-T-0051` plus
+`AOA-T-0052`, the live promoted queue is `63` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -63,8 +64,13 @@ Current live constraint:
   Taskwarrior dependency, blocked / blocking, unblocked, cycle-prevention, and
   prerequisite-completion evidence and exit the live promoted queue through
   canonical review;
-- the live generated catalog currently contains `65` promoted techniques and
-  `42` canonical techniques;
+- `AOA-T-0051` and `AOA-T-0052` closed during Stage 3 with exact-fit
+  Qodo / PR-Agent push-triggered review updates, persistent review comments,
+  visible findings, incremental update behavior, and per-commit findings
+  added/resolved audit trail and exit the live promoted queue through
+  canonical review;
+- the live generated catalog currently contains `63` promoted techniques and
+  `44` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -74,13 +80,14 @@ Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
-`AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, and Pack 9 closures is
-`65` promoted techniques,
+`AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, and Pack 10 closures is
+`63` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`, and
-`AOA-T-0050` counted as closed rows rather than remaining targets.
+`AOA-T-0050`, `AOA-T-0051`, and `AOA-T-0052` counted as closed rows rather than
+remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -95,7 +102,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with seventeen closed canonical rows.
+This is an original `82/82` promoted-corpus plan with nineteen closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -143,8 +150,8 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | exact-fit second context; exits to canonical | MADR one-decision record practice closes the decision-rationale gap |
 | Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | exact-fit second context; exits to canonical | Taskwarrior dependency graph state closes the blocker-aware graph gap |
 | Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | exact-fit second context; exits to canonical | Taskwarrior blocked / unblocked reports close the ready-frontier gap |
-| Stage 3 | [AOA-T-0051 commit-triggered-background-review](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
-| Stage 3 | [AOA-T-0052 review-findings-compaction](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | pending |  |
+| Stage 3 | [AOA-T-0051 commit-triggered-background-review](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | exact-fit second context; exits to canonical | Qodo / PR-Agent push-triggered review updates close the background review artifact gap |
+| Stage 3 | [AOA-T-0052 review-findings-compaction](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | exact-fit second context; exits to canonical | Qodo / PR-Agent persistent review comments and per-commit findings audit trail close the findings compaction gap |
 | Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | pending |  |
 | Stage 3 | [AOA-T-0055 requirements-design-tasks-ladder](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | agent-workflows / workflow | Pack 12 planning ladder | pending |  |
 | Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | pending |  |
@@ -267,7 +274,11 @@ external adopter, markdown-first reuse, or long-gap donor proof.
     exact-fit Taskwarrior dependency, blocked / blocking, unblocked,
     cycle-prevention, and prerequisite-completion evidence found, bundle-local
     canonical reviews approved
-12. Pack 10 - Background Review Loop: `AOA-T-0051`, `AOA-T-0052`
+12. Pack 10 - Background Review Loop: `AOA-T-0051`, `AOA-T-0052` - closed;
+    exact-fit Qodo / PR-Agent push-triggered review updates, persistent review
+    comments, visible findings, incremental update behavior, and per-commit
+    findings added/resolved audit trail found, bundle-local canonical reviews
+    approved
 13. Pack 11 - Post-Compaction Skill Recovery: `AOA-T-0054`
 14. Pack 12 - Planning Ladder: `AOA-T-0055`
 15. Pack 13 - Channelized Mailbox: `AOA-T-0056`
@@ -334,10 +345,11 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `65` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `63` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
-    and `AOA-T-0050` rows against generated catalog truth.
+    `AOA-T-0050`, `AOA-T-0051`, and `AOA-T-0052` rows against generated
+    catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -358,7 +370,7 @@ search result looks promising.
 
 1. Confirm current branch and intended diff.
 2. List unrelated dirty surfaces and mark them out of scope.
-3. Confirm `AOA-T-0032` plus closed rows from Pack 1 through Pack 9 are treated
+3. Confirm `AOA-T-0032` plus closed rows from Pack 1 through Pack 10 are treated
    as the landed calibration history described above, not as uncommitted branch
    state.
 4. Do not stage `.agents/skills/**` unless the user routes that separate skill
@@ -827,6 +839,60 @@ Reject:
 - priority queues that do not first exclude blocked work;
 - scheduling or staffing systems where ranking replaces blocker truth;
 - graph-authoring surfaces that do not derive a ready frontier.
+
+### AOA-T-0051: `commit-triggered-background-review`
+
+Stage 3 Pack 10 verdict, 2026-05-12: exact-fit second context found.
+Qodo / PR-Agent's public review workflow supports review after PR push or
+commit-like events, keeps review output visible in persistent pull request
+comments, and exposes review output through the GitHub Action surface. This
+closes the commit-triggered background review gap without widening into
+auto-fix, auto-approval, merge policy, review chat, alerting, broad CI, or
+PR-governance behavior.
+
+Exact evidence:
+
+- a PR push or commit-like event can trigger review work;
+- review output survives as an inspectable pull request artifact;
+- the artifact can be updated after later commits;
+- remediation, approval, merge, and broader governance remain adjacent
+  provider features rather than the bounded technique center.
+
+Reject:
+
+- generic CI checks with no review findings artifact;
+- auto-fix or auto-approval workflows where action policy is the real object;
+- PR dashboards or chat products where review triggering is incidental;
+- broad code-quality platforms whose center is scoring, policy, or merge
+  control rather than an inspectable review artifact.
+
+### AOA-T-0052: `review-findings-compaction`
+
+Stage 3 Pack 10 verdict, 2026-05-12: exact-fit second context found.
+Qodo's persistent review comments keep one visible review findings surface
+updated across repeated commits, record findings added and resolved by commit,
+and reduce review noise without discarding traceability. The open-source
+PR-Agent implementation reinforces this with persistent suggestion comments,
+bounded previous-suggestion history, current-diff validation, and incremental
+review state. This closes the findings-compaction gap without widening into
+backlog policy, issue triage, auto-remediation, approval, or merge governance.
+
+Exact evidence:
+
+- repeated review output updates one current findings surface rather than
+  producing unbounded duplicate comments;
+- findings added and resolved by commit remain visible;
+- latest findings stay distinct from older history;
+- current diff or recent change state is used before suggestions are carried
+  forward.
+
+Reject:
+
+- issue trackers that deduplicate tickets rather than review findings;
+- linters or scanners that emit new reports without compacting prior review
+  output;
+- auto-fix workflows where remediation replaces review hygiene;
+- dashboards where finding priority or policy becomes the object.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 
