@@ -22,6 +22,16 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0065 mcp-gateway-proxy` to `canonical` after
+  `smart-mcp-proxy/mcpproxy-go` showed exact-fit public reinforcement for one
+  MCP client endpoint over multiple configured upstream MCP servers, connected
+  tool metadata indexing, server-scoped tool names, mediated `call_tool_*`
+  variants with explicit intent fields, and sensitive-data inspection over
+  tool-call arguments and responses at the proxy boundary, while excluding
+  routing-mode policy, BM25 ranking, quarantine governance, Docker isolation,
+  lifecycle management, UI/dashboard behavior, OAuth, registry publication,
+  marketplace curation, and enterprise MCP platform doctrine, updating Audit
+  queue posture from `54` promoted techniques to `53`
 - promoted `AOA-T-0064 capability-discovery` to `canonical` after Nacos's
   A2A Registry guide showed exact-fit public reinforcement for bounded lookup
   over already-published AgentCards: SDK lookup by name, HTTP detail lookup

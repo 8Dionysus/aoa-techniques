@@ -23,7 +23,7 @@ See also:
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `10` | `3` |
 | `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `6` | `7` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `6` | `4` |
-| `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `5` | `2` |
+| `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `6` | `1` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `3` | `1` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `11` | `3` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
@@ -159,7 +159,7 @@ Do not use this when:
 - one source is being fanned out to multiple targets
 - the technique is mostly a work loop or approval boundary
 
-Counts: `total` 7, `canonical` 5, `promoted` 2.
+Counts: `total` 7, `canonical` 6, `promoted` 1.
 
 | domain | entries |
 |---|---|
@@ -174,7 +174,7 @@ Counts: `total` 7, `canonical` 5, `promoted` 2.
 |---|---|---|---|---|
 | [AOA-T-0031](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) | `agent-workflows` | `canonical` | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
 | [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | `canonical` | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
-| [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `promoted` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
+| [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `canonical` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) | `docs` | `canonical` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) |
 | [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | `docs` | `canonical` | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
 | [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) | `docs` | `canonical` | Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |

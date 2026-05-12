@@ -1365,8 +1365,8 @@
       ],
       "counts": {
         "total": 1,
-        "canonical": 0,
-        "promoted": 1,
+        "canonical": 1,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 1,
           "docs": 0,
@@ -1398,7 +1398,7 @@
           "id": "AOA-T-0065",
           "name": "mcp-gateway-proxy",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server.",
           "technique_path": "techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md",
           "kind": "composition"

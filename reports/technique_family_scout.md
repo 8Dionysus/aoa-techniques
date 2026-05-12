@@ -27,7 +27,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `3` | `0` |
 | `review-compaction` | Background review triggering, findings compaction, and recovery of capability loading after compaction. | `3` | `3` | `0` |
 | `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `5` | `2` |
-| `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `0` | `1` |
+| `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `1` | `0` |
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `0` | `2` |
 | `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `3` | `0` | `3` |
 | `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `0` | `5` |
@@ -306,11 +306,11 @@ One bounded caller surface over multiple upstream tool or MCP endpoints.
 Typical domains: `agent-workflows`.
 Typical kinds: `composition`.
 
-Counts: `total` 1, `canonical` 0, `promoted` 1.
+Counts: `total` 1, `canonical` 1, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `composition` | `promoted` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
+| [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `composition` | `canonical` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
 
 ## `approval-evidence`
 
