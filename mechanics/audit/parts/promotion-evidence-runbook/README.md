@@ -133,8 +133,9 @@ The goal is to reduce uncertainty and tighten evidence quality, not to force a c
 Current implication:
 
 - `AOA-T-0018`, `AOA-T-0013`, `AOA-T-0034`, `AOA-T-0023`, `AOA-T-0026`, and `AOA-T-0036` have since exited Wave A through separate follow-up canonical reviews and are now `canonical`
-- `AOA-T-0032` is now the closest remaining promoted queue item
-- reopen non-local or later-lane donor searches for `AOA-T-0032`
+- `AOA-T-0032` remains `promoted` after the 2026-05-12 Stage 1 long-pass sweep over context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces
+- do not rerun those adjacent lanes casually; reopen `AOA-T-0032` only when an artifact-first public workflow appears that compares expected source or fragment inventory against an assembled prompt/context artifact plus token deltas
+- the next matrix-wide continuation should move beyond the old Wave A lead queue and use the full promotion-readiness matrix order
 
 ## Validation And Merge Discipline
 

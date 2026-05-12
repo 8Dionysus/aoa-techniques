@@ -36,7 +36,7 @@ If the problem is really donor intake or a new extraction, use [External Import 
 Run the external evidence queue in this order:
 
 1. lead queue:
-   - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
+   - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) remains `promoted`; the 2026-05-12 Stage 1 long-pass sweep added searched-lane memory for context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces, but found no exact-fit second consumer
 2. markdown-first and fresh-extraction follow-through:
    - [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
    - [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
@@ -55,7 +55,7 @@ Closed precedents:
 
 Why this order:
 
-- `AOA-T-0032` is the current closest live queue item after `AOA-T-0026` and `AOA-T-0036` exited through canonical review
+- `AOA-T-0032` is still the clearest report-only blocker, but its currently known public lanes are searched; reopen it only from a new artifact-first signal instead of repeating context-compiler, fragment-assembly, graph, or repo-quality searches
 - `AOA-T-0020` plus `AOA-T-0046` through `AOA-T-0048` should not reopen until a real non-origin consumer exists
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design and should not consume the same sprint energy as the lead queue
 

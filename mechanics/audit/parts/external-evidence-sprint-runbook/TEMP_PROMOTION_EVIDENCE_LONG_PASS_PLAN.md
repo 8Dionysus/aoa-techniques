@@ -79,7 +79,7 @@ result has been distilled into the appropriate durable surface.
 
 | stage | technique | domain/kind | pack or lane | outcome | durable note |
 |---|---|---|---|---|---|
-| Stage 1 | [AOA-T-0032 context-report-for-ci](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | evaluation / validation | lead queue; Pack 4 report-only proof lane | pending |  |
+| Stage 1 | [AOA-T-0032 context-report-for-ci](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | evaluation / validation | lead queue; Pack 4 report-only proof lane | adjacent lanes recorded; remains promoted | `external-evidence-ledger` Stage 1 notes; bundle readiness gap sharpened |
 | Stage 2 | [AOA-T-0005 new-intent-rollout-checklist](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | agent-workflows / workflow | Pack 1 long-gap donor lane | pending |  |
 | Stage 2 | [AOA-T-0022 risk-and-negative-effect-lift](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | docs / lift | Pack 1 long-gap donor lane | pending |  |
 | Stage 2 | [AOA-T-0035 profile-preset-composition](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | docs / composition | Pack 3 runtime operator stack | pending |  |
@@ -492,6 +492,23 @@ Suggested stage boundaries:
 ## Bundle-Specific Contracts
 
 ### AOA-T-0032: `context-report-for-ci`
+
+Stage 1 verdict, 2026-05-12: no exact-fit second consumer found. LogicStamp
+Context, Claude Code Guide context-engineering CI drift detection, ctxloom,
+Depwire, and FastPace were searched as public context-compiler, context-drift,
+fragment-assembly, dependency-graph, and repo-quality report surfaces. They
+remain adjacent because they own compilation, freshness checks, assembly,
+graph context, governance, or quality scoring rather than the same separate
+read-only CI report over already-composed context source coverage plus token
+drift.
+
+Current next search shape:
+
+- artifact-first public workflows where CI compares an expected source or
+  fragment inventory against a generated prompt/context artifact;
+- token deltas are emitted in the same report;
+- assembly, scoring, remediation, graph compilation, and repo-quality verdicts
+  remain outside the report.
 
 Exact evidence:
 
