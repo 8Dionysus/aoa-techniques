@@ -22,6 +22,16 @@
 - result: pass
 - sanitization still holds: the bundle keeps the reusable markdown-first caution pattern and strips repo-local implementation trivia
 - public reuse check: the pattern remains understandable without hidden automation or private source files
+- 2026-05-12 long-pass searched-lane result: no exact-fit second corpus found in the Stage 2 promotion-evidence pass
+- searched lane: public exact-phrase code search for the five caution headings,
+  workspace sibling-corpus search beyond `aoa-skills`, and public AI risk /
+  failure / mitigation framework surfaces
+- adjacent public examples: OWASP LLM Top 10, Microsoft agentic AI
+  failure-mode taxonomy, Microsoft autonomous agentic AI risk guidance, and
+  NIST AI RMF all provide useful risk, misuse, detection, mitigation, or
+  governance language, but they are security/risk-management frameworks rather
+  than a committed markdown corpus reusing the exact five-part `Risks` split
+- conclusion: these lanes sharpen the boundary around `AOA-T-0022`, but they do not close the remaining independent-corpus gap
 
 ## Remaining gaps
 - the main missing proof is one more committed reuse of the exact five-part `Risks` contract beyond the first `aoa-skills` donor

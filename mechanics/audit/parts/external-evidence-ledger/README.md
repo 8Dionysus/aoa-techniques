@@ -151,6 +151,46 @@ intent routing check, machine-readable summary, visible review artifact, and
 regression proof. Do not reopen generic chatbot NLU, intent-classification, or
 IBN benchmark lanes without a new rollout-specific signal.
 
+## AOA-T-0022 Stage 2 Long-Pass Notes
+
+2026-05-12 result: no exact-fit second corpus found.
+The pass moved `AOA-T-0022` beyond the seeded `aoa-skills` donor and recorded
+which tempting public risk lanes are adjacent rather than closure evidence.
+
+Searched and rejected as adjacent:
+
+- GitHub code search for the exact heading family `Failure modes`, `Negative
+  effects`, `Misuse patterns`, `Detection signals`, and `Mitigations` found no
+  public non-AoA repository candidates.
+- Workspace search across sibling owner repositories found only the already
+  recorded `aoa-skills/skills/risk/aoa-sanitized-share/SKILL.md` exact donor;
+  `aoa-evals` uses `Failure modes` plus `Blind spots`, and `aoa-agents` service
+  certification uses a narrower `Failure modes` section, so both remain
+  adjacent contrast rather than the same five-part caution split.
+- [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/):
+  useful open security-risk taxonomy with mitigations around LLM application
+  vulnerabilities, but it is a vulnerability/governance framework rather than
+  a markdown-first caution section attached to reusable method bundles.
+- [Microsoft taxonomy of failure modes in AI agents](https://www.microsoft.com/en-us/security/blog/2025/04/24/new-whitepaper-outlines-the-taxonomy-of-failure-modes-in-ai-agents/):
+  useful failure-mode taxonomy with harm categories, effects, mitigations, and
+  detection/response opportunities, but it is a broad threat-modeling and
+  defensive strategy surface rather than the exact five authored caution
+  headings.
+- [Microsoft autonomous agentic AI risk guidance](https://learn.microsoft.com/en-us/security/zero-trust/sfi/manage-agentic-risk):
+  useful agentic-risk design, security, governance, monitoring, and misuse
+  guidance, but it organizes risks by design/security pillars rather than by
+  the five markdown caution distinctions.
+- [NIST AI RMF 1.0](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10):
+  useful cross-sector AI risk-management framework, but it is intentionally
+  use-case agnostic and governance-oriented rather than a committed reusable
+  corpus with the exact five-part `Risks` contract.
+
+Next honest search shape: look for a committed public or sibling corpus where
+authored reusable method, skill, playbook, or evaluation bundles use the exact
+five headings together as their risk section. Do not count broad AI safety,
+security taxonomy, governance framework, or `Failure modes` plus `Blind spots`
+surfaces unless they actually adopt the same five-part markdown contract.
+
 ## AOA-T-0026 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found, and `AOA-T-0026` exited the
@@ -221,7 +261,7 @@ These bundles still need external evidence, but no new bounded lane note is wort
 |---|---|---|
 | [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | still needs one second markdown-first corpus beyond the current donor family | one committed non-eval corpus that reuses typed note-kind and note-path provenance |
 | [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | Stage 2 checked intent-classification, chatbot eval, and IBN benchmark lanes; they remain adjacent because they evaluate intents rather than recording one-new-intent dry-run-chain rollout | one non-origin rollout record proving the same checklist on a real new-intent extension path |
-| [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | remains a long-gap donor lane, not an active sprint target | one second committed corpus using the exact five-part `Risks` split |
+| [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | Stage 2 checked exact-heading public code search, sibling corpus search, and broad AI risk/framework lanes; they remain adjacent unless the exact five-part markdown contract is present | one second committed corpus using the exact five-part `Risks` split |
 
 ## Notes
 

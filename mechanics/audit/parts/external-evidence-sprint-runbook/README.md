@@ -48,6 +48,10 @@ Run the external evidence queue in this order:
      generic intent-classification, assistant-eval, and IBN benchmark lanes as
      adjacent, so reopen only from a rollout-specific signal
    - [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
+     remains `promoted`; the 2026-05-12 Stage 2 long-pass search ruled out
+     exact-heading public code search, sibling contrast surfaces, and broad AI
+     risk-framework lanes as adjacent, so reopen only from a corpus that
+     actually adopts the same five-part markdown contract
 
 Closed precedents:
 
@@ -63,6 +67,10 @@ Why this order:
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real
   new-intent rollout artifact rather than NLU/eval/benchmark overlap
+- `AOA-T-0022` now has searched-lane memory too, so repeat searches should
+  start from committed authored bundles with all five caution headings rather
+  than broad risk taxonomy, security framework, or `Failure modes` plus
+  `Blind spots` overlap
 
 ## Swarm Layout
 
