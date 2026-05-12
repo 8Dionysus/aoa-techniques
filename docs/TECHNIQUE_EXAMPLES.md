@@ -106,18 +106,18 @@ See also:
 |---|---|---|---|
 | Minimal requirements-design-tasks ladder | `present` | `techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/examples/minimal-requirements-design-tasks-ladder.md` | [TECHNIQUE.md](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) |
 
+### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal channelized-agent-mailbox | `present` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Concrete Non-UI Intent Rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/concrete-non-ui-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
 | minimal-intent-rollout | `present` | `techniques/execution/intent-chain/new-intent-rollout-checklist/examples/minimal-intent-rollout.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal channelized-agent-mailbox | `present` | `techniques/continuity/handoff-continuation/channelized-agent-mailbox/examples/minimal-channelized-agent-mailbox.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) |
 
 ### [AOA-T-0057](../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) - structured-handoff-before-compaction (`promoted`)
 

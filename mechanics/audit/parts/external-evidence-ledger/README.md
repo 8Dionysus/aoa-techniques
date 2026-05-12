@@ -47,7 +47,53 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | Qodo / PR-Agent | A public review workflow can update one current findings surface across repeated commits, keep added/resolved findings visible by commit, and fold previous suggestions into bounded history without becoming backlog, remediation, or merge policy. |
 | [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | Claude Code skills lifecycle | A public agent skill system can carry invoked skills across auto-compaction within a budget, re-attach recent skill invocations after summary, and allow explicit re-invocation after compaction without becoming long-term memory, marketplace, installer, or full prompt-restoration doctrine. |
 | [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | SpecForge-Agent plus GitHub Spec Kit boundary check | A public agent workflow can keep requirements, design, and task artifacts distinct before implementation, with design derived from approved requirements and tasks derived from design plus requirements, without making the technique absorb full SDD, command, approval, memory, or implementation doctrine. |
+| [AOA-T-0056](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | `mycel` plus MCP Agent Mail license-bound adjacent check | A public AI-agent mailbox can keep stable message identity, bounded thread lanes, ordered replay, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows without making ACKs remote delivery proof or absorbing handoff authorization, transcript history, trust policy, encryption, adapters, or messaging-platform doctrine. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0056 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`heurema/mycel` at `4ffa460f3f5efe36f31ef064f26c514ac703ae7b`
+provides the clean primary public source for Pack 13. The source is MIT
+licensed and explicitly frames itself as an encrypted async mailbox for AI CLI
+agents rather than a generic messaging platform.
+
+Accepted evidence:
+
+- `README.md` names the mailbox use case for Claude Code, Codex CLI, and
+  Gemini CLI, shows `mycel inbox --json`, and exposes stable `msg_id`,
+  `thread_id`, `reply_to`, `read_status`, and `delivery_status` fields.
+- `docs/architecture.md` keeps the product boundary as "mailbox, not
+  messenger", sync-on-command, local-first, and transport-neutral mailbox
+  state.
+- `src/cli/thread.rs` creates bounded thread IDs, sends thread messages, and
+  logs thread messages ordered by creation time with logical message IDs.
+- `src/sync.rs` maintains sync cursors and fetches missing events through
+  Negentropy or overlap-window fetch before ingesting them into normalized
+  mailbox state.
+- `src/store/mod.rs` stores messages, threads, outbox retry state, sync state,
+  and explicit ACK rows keyed by logical `msg_id` plus sender.
+- `src/cli/inbox.rs` records local ACK rows after message receipt when ACK
+  tracking is enabled, while clearly noting that reverse remote ACK sending is
+  not complete in the inspected release.
+- `tests/integration.rs` and `tests/outbox_test.rs` cover thread IDs, ordered
+  thread queries, `msg_id` dedup/retry behavior, ACK rows, and outbox retry
+  state.
+
+Rejected or bounded:
+
+- Do not treat local ACK rows as remote delivery confirmation.
+- Do not import `mycel` encryption, trust tiers, relay routing, Nostr details,
+  A2A/MCP adapter planning, local-gateway plans, or product packaging.
+- `Dicklesworthstone/mcp_agent_mail` at
+  `0fd616a00161da7802594fa4e1e9aa0a8f5fa1ef` was inspected as a close
+  adjacent surface because it has agent identities, inbox/outbox, searchable
+  threads, and `acknowledge_message`, but its license rider makes it unsuitable
+  as the primary clean canonical evidence source for this public bundle.
+
+Future search shape: reopen only if a new source clarifies remote ACK proof or
+cross-agent thread/mailbox semantics without shifting the technique into
+handoff authorization, broker governance, or messaging-platform doctrine.
 
 ## Active Lead Ledger
 

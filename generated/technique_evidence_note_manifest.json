@@ -32166,6 +32166,191 @@
       "technique_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0056"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "channelized-agent-mailbox"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for keeping one durable agent mailbox or thread lane replayable and explicitly acknowledged across session gaps"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the bounded mailbox contract without turning delivery, read state, or ACK rows into handoff authorization, transcript history, trust policy, encryption doctrine, queue governance, or a full messaging platform"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "channel or thread identity drifts, so replay no longer names one bounded coordination lane"
+                },
+                {
+                  "order": 2,
+                  "text": "replay cursors, sync state, or thread logs miss messages or duplicate them without visible dedup logic"
+                },
+                {
+                  "order": 3,
+                  "text": "ACK state records receipt or local handling but is misread as remote delivery proof"
+                },
+                {
+                  "order": 4,
+                  "text": "receivers acknowledge messages before actually handling the work"
+                },
+                {
+                  "order": 5,
+                  "text": "mailbox history becomes the only handoff packet, hiding stop lines, verification state, or continuation permission"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "simple coordination can become too ceremonial when a direct note would suffice"
+                },
+                {
+                  "order": 2,
+                  "text": "long-lived mailboxes can accumulate stale messages and slow recovery"
+                },
+                {
+                  "order": 3,
+                  "text": "visible ACK bits can create false confidence if reviewers stop reading the actual work"
+                },
+                {
+                  "order": 4,
+                  "text": "channelized traffic can leak into product messaging, analytics, federation, encryption, or trust concerns that belong elsewhere"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating mailbox delivery as permission for the next agent to continue"
+                },
+                {
+                  "order": 2,
+                  "text": "using ACK state as proof that a task was completed correctly"
+                },
+                {
+                  "order": 3,
+                  "text": "collapsing unrelated work into one catch-all channel or thread"
+                },
+                {
+                  "order": 4,
+                  "text": "replacing transcript packaging, local history indexing, or witness export with live mailbox logs"
+                },
+                {
+                  "order": 5,
+                  "text": "importing a full broker, relay, encryption, or agent-platform stack when the reusable move only needs a bounded mailbox seam"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot tell which message sequence a receiver replayed"
+                },
+                {
+                  "order": 2,
+                  "text": "messages have ACKs but no visible evidence of the receiver's actual handling"
+                },
+                {
+                  "order": 3,
+                  "text": "channel or thread names become generic buckets like `general`, `all`, or `agent-chat`"
+                },
+                {
+                  "order": 4,
+                  "text": "implementation debate shifts from mailbox replay and acknowledgment to relay topology, trust tiers, dashboards, adapters, federation, or product delivery guarantees"
+                },
+                {
+                  "order": 5,
+                  "text": "session continuation claims cite the mailbox alone without a separate handoff or verification surface"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep each mailbox or thread tied to one bounded coordination lane"
+                },
+                {
+                  "order": 2,
+                  "text": "distinguish local handled/read ACK state from remote delivery confirmation"
+                },
+                {
+                  "order": 3,
+                  "text": "require replay from visible message IDs, thread logs, cursors, or sync state"
+                },
+                {
+                  "order": 4,
+                  "text": "route handoff authorization, transcript capture, history indexing, trust policy, and messaging-platform behavior to sibling techniques or owning repositories"
+                },
+                {
+                  "order": 5,
+                  "text": "split or retire channels when their purpose stops being reviewable"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0056` to `canonical` and use this note as the watch surface for ACK-overtrust, mailbox-as-handoff, replay ambiguity, catch-all channel drift, and messaging-platform expansion"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/handoff-continuation/channelized-agent-mailbox/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -32196,34 +32381,38 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around pub/sub governance, federation, trust and consent layers, analytics, installer flows, and full messaging-platform doctrine"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around pub/sub governance, federation, trust and consent layers, analytics, installer flows, and full messaging-platform doctrine"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same named-channel mailbox seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same named-channel mailbox seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository family"
+                  "text": "`mycel` provides exact-fit public reinforcement beyond the donor family: an AI CLI agent mailbox with stable `msg_id`, bounded `thread_id` lanes, ordered thread logs, per-relay sync cursors, local outbox retry, read and delivery state, and local ACK rows keyed by logical message ID"
+                },
+                {
+                  "order": 5,
+                  "text": "adjacent contrast: `MCP Agent Mail` shows a close agent mailbox and explicit acknowledgment surface, but its license rider keeps it out of the clean primary evidence role for this public canonical proof"
+                },
+                {
+                  "order": 6,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and a clean MIT public runtime reinforcement beyond the donor repository family"
                 }
               ]
             },
@@ -32234,7 +32423,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is durable channel transport with replay and explicit acknowledgment across session gaps"
+                  "text": "this is the right canonical default when the main problem is durable channel transport with replay and explicit acknowledgment across session gaps"
                 },
                 {
                   "order": 2,
@@ -32243,6 +32432,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than the active handoff narrowing lane because delivery and acknowledgment alone do not authorize continuation, stop, return, or escalation behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now the right canonical default when a workflow needs a bounded mailbox or thread lane with replayable history and explicit local acknowledgment state, while keeping remote delivery proof, trust policy, encryption, adapters, and platform behavior outside the reusable technique"
                 }
               ]
             },
@@ -32254,7 +32447,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -32269,7 +32462,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; `mycel` is public MIT evidence, and no source code, private data, credentials, or restricted workflow details are copied into the technique"
                 }
               ]
             },
@@ -32280,11 +32473,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface that uses named channels, replay, and explicit acknowledgment without widening into a full messaging platform or handoff-governance stack"
+                  "text": "future work can add another non-donor mailbox, queue, or agent-thread implementation, but it must preserve the narrow boundary: named lane, ordered replay or cursor, explicit ack or handled state, and no handoff authorization or messaging-platform doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "keep the `mycel` caveat visible: ACK is local/experimental in the inspected release and should not be sold as remote delivery confirmation"
                 }
               ]
             },
@@ -32295,11 +32492,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0056` `promoted`"
+                  "text": "move `AOA-T-0056` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the mailbox contract survives outside the donor repository family"
+                  "text": "add an adverse-effects review to preserve the boundary between mailbox delivery, local acknowledgment, continuation permission, transcript history, trust policy, and full messaging platforms"
                 }
               ]
             }
@@ -32605,6 +32802,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first corpus that records one bounded mailbox transport seam rather than shipping the donor's binary format, CLI surface, MCP server, or product packaging"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: mycel\n- repository: `heurema/mycel`\n- observed revision: `4ffa460f3f5efe36f31ef064f26c514ac703ae7b`\n- license: MIT\n- public surfaces: `README.md`, `docs/architecture.md`, `docs/rfc-v0.2-phase0-contracts.md`, `docs/plan-local-agent-mesh.md`, `src/cli/inbox.rs`, `src/cli/thread.rs`, `src/sync.rs`, `src/store/mod.rs`, `tests/integration.rs`, and `tests/outbox_test.rs`\n- adjacent contrast: `Dicklesworthstone/mcp_agent_mail` at `0fd616a00161da7802594fa4e1e9aa0a8f5fa1ef` shows a close mail-like agent coordination lane with explicit `acknowledge_message`, but its license rider makes it unsuitable as the primary clean canonical evidence source for this public bundle"
                 }
               ]
             },
@@ -32654,6 +32856,11 @@
                   "order": 3,
                   "key": "safety rules",
                   "value_markdown": "the technique remains outside handoff authorization, transcript packaging, history indexing, and wider platform doctrine"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "`mycel` keeps an AI-agent mailbox with thread identity, stable `msg_id`, `thread_id`, ordered thread log, sync cursor, local outbox retry, read/delivery state, and local ACK rows keyed by logical message id; its caveat is that ACK tracking is local and experimental rather than a remote delivery-confirmation guarantee"
                 }
               ]
             },
@@ -32673,6 +32880,10 @@
                 {
                   "order": 3,
                   "text": "the public bundle could drift into history or transcript doctrine if replay logs are treated as post-capture artifacts instead of as live mailbox transport"
+                },
+                {
+                  "order": 4,
+                  "text": "clean evidence can be confused with broad messaging-platform evidence; `MCP Agent Mail` is useful as an adjacent signal, but its license posture and broader agent-coordination surface should not become the bundle's canonical source"
                 }
               ]
             },
@@ -32700,6 +32911,30 @@
                 {
                   "order": 5,
                   "text": "`docs/public/SCENARIOS-AGENTIC-COMM.md` describes concurrent ordered delivery, self-messaging, and ack timeout scenarios, reinforcing that ordering and acknowledgment are part of the bounded contract"
+                },
+                {
+                  "order": 6,
+                  "text": "`mycel` describes itself as an encrypted async mailbox for AI CLI agents and keeps the product boundary as \"mailbox, not messenger\" with sync-on-command behavior, local-first same-user delivery, and transport-neutral mailbox state."
+                },
+                {
+                  "order": 7,
+                  "text": "`mycel` exposes machine-readable inbox rows with `msg_id`, `thread_id`, `reply_to`, `read_status`, and `delivery_status`, giving receivers a stable replay and review surface."
+                },
+                {
+                  "order": 8,
+                  "text": "`mycel` stores outbound messages before sending, retries relay delivery, maintains per-relay sync cursors, and uses set reconciliation or overlap-window fetches so missed messages can be recovered without a long-running daemon."
+                },
+                {
+                  "order": 9,
+                  "text": "`mycel thread` creates bounded thread IDs, sends messages to thread members, and logs thread messages ordered by creation time with logical message IDs."
+                },
+                {
+                  "order": 10,
+                  "text": "`mycel` records local ACK rows keyed by the original logical `msg_id` when ACK tracking is enabled, and its tests verify ACK insertion and duplicate-control behavior while explicitly limiting ACK semantics to local tracking in the current release."
+                },
+                {
+                  "order": 11,
+                  "text": "`MCP Agent Mail` was inspected as an adjacent close fit because it has agent identities, inbox/outbox, searchable threads, and explicit `acknowledge_message`; it is not used as primary evidence because the license rider is not clean for this public canonical proof role."
                 }
               ]
             },
@@ -32710,7 +32945,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves one bounded named-channel mailbox contract without carrying over the donor's platform breadth, file format specifics, or orchestration semantics"
+                  "text": "works across donor, documentation-first, and `mycel` contexts while preserving one bounded channelized mailbox contract: named mailbox or thread lane, ordered replay or sync cursor, and explicit local acknowledgment state. It does not carry over donor platform breadth, full messaging-product features, encryption or trust policy, remote ACK guarantees, adapters, transcript history, or handoff authorization."
                 }
               ]
             }

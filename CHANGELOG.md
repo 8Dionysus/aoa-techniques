@@ -22,6 +22,14 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0056 channelized-agent-mailbox` to `canonical` after
+  `mycel` showed exact-fit public reinforcement for an AI-agent mailbox with
+  thread identity, replayable thread logs, sync cursor, local outbox retry,
+  read/delivery state, and explicit local ACK rows, while keeping ACK semantics
+  distinct from remote delivery proof and excluding handoff authorization,
+  transcript history, trust policy, encryption, adapters, and full
+  messaging-platform doctrine, updating Audit queue posture from `61` promoted
+  techniques to `60`
 - promoted `AOA-T-0055 requirements-design-tasks-ladder` to `canonical`
   after SpecForge-Agent showed exact-fit public reinforcement for a
   requirements -> design -> tasks planning ladder before implementation, with

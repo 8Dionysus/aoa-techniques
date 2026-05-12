@@ -4609,7 +4609,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep handoff packet and continuation-permission doctrine separate instead of widening this bundle into cross-agent authorization\n- keep transcript packaging and history indexing separate instead of treating mailbox history as the post-capture artifact family\n- add a stronger second live context if another public workflow surface uses a bounded named-channel mailbox with replay and acknowledgment in practice"
+          "content_markdown": "- keep handoff packet and continuation-permission doctrine separate instead of widening this bundle into cross-agent authorization\n- keep transcript packaging and history indexing separate instead of treating mailbox history as the post-capture artifact family\n- preserve the `mycel` boundary: thread or mailbox identity, replayable history, sync cursor, outbox retry, read/delivery state, and explicit local ACK rows can reinforce this bundle, but remote delivery confirmation, trust tiers, encryption, transport routing, adapters, and agent-platform behavior remain outside the technique"
         }
       ]
     },
