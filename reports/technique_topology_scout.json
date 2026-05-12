@@ -2873,7 +2873,7 @@
       "name": "transcript-linked-code-lineage",
       "domain": "history",
       "kind": "artifact",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.",
       "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
       "topology": {

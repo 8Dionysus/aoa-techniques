@@ -719,8 +719,8 @@
       ],
       "counts": {
         "total": 6,
-        "canonical": 5,
-        "promoted": 1,
+        "canonical": 6,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 0,
@@ -802,7 +802,7 @@
           "id": "AOA-T-0067",
           "name": "transcript-linked-code-lineage",
           "domain": "history",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine.",
           "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
           "kind": "artifact"

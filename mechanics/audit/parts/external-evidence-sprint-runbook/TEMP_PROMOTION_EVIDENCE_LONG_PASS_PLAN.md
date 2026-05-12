@@ -14,8 +14,9 @@ closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
 `AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, the Pack 17
 closure for `AOA-T-0060`, the Pack 18 closure for `AOA-T-0061`, the Pack
 19 closure for `AOA-T-0062`, the Pack 20 closure for `AOA-T-0063`, the
-Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, and
-the Pack 23 closure for `AOA-T-0066`, the live promoted queue is `52` bundles.
+Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, the
+Pack 23 closure for `AOA-T-0066`, and the Pack 24 closure for `AOA-T-0067`,
+the live promoted queue is `51` bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
@@ -116,8 +117,13 @@ Current live constraint:
   session transcripts into one self-contained replay artifact with bounded
   selection, filtering, visibility, and redaction controls, and exits the live
   promoted queue through canonical review;
-- the live generated catalog currently contains `52` promoted techniques and
-  `55` canonical techniques;
+- `AOA-T-0067` closed during Stage 4 with exact-fit `ai4curation/ai-blame`
+  evidence for trace-derived line attribution, code anchors carrying session
+  metadata, and reviewer workflows that reopen saved transcripts from focused
+  line or block inspection, and exits the live promoted queue through
+  canonical review;
+- the live generated catalog currently contains `51` promoted techniques and
+  `56` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -129,7 +135,7 @@ canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
-Pack 19, Pack 20, Pack 21, Pack 22, and Pack 23 closures is `52` promoted techniques,
+Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, and Pack 24 closures is `51` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
@@ -137,7 +143,8 @@ with `AOA-T-0026`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`, and
-`AOA-T-0066` counted as closed rows rather than remaining targets.
+`AOA-T-0066`, and `AOA-T-0067` counted as closed rows rather than remaining
+targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -152,7 +159,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with twenty-seven closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty-eight closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -216,7 +223,7 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | exact-fit second context; exits to canonical | Nacos A2A Registry SDK name lookup, HTTP detail lookup, explicit list/search parameters, and future search dimensions kept outside the contract close the bounded capability-discovery gap |
 | Stage 4 | [AOA-T-0065 mcp-gateway-proxy](../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | agent-workflows / composition | Pack 22 MCP gateway proxy | exact-fit second context; exits to canonical | `smart-mcp-proxy/mcpproxy-go` single MCP endpoint, multiple upstream servers, metadata indexing, mediated call variants, and proxy-boundary sensitive-data inspection close the bounded gateway-proxy gap |
 | Stage 4 | [AOA-T-0066 transcript-replay-artifact](../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) | history / artifact | Pack 23 transcript replay artifact | exact-fit second context; exits to canonical | `dataprofessor/cortex-replay` plus Snowflake Cortex Code replay guide close the bounded post-capture replay-artifact gap |
-| Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | pending |  |
+| Stage 4 | [AOA-T-0067 transcript-linked-code-lineage](../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) | history / artifact | Pack 24 transcript-linked code lineage | exact-fit second context; exits to canonical | `ai4curation/ai-blame` trace-derived line blame, session metadata, and transcript view workflows close the bounded code-to-evidence lineage gap |
 | Stage 4 | [AOA-T-0068 fail-closed-evidence-gate](../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md) | agent-workflows / guardrail | Pack 25 fail-closed evidence gate | pending |  |
 | Stage 4 | [AOA-T-0069 approval-bound-durable-jobs](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | agent-workflows / handoff | Pack 26 approval-bound durable jobs | pending |  |
 | Stage 4 | [AOA-T-0070 two-stage-document-ocr-pipeline](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | agent-workflows / ingest | Pack 27 OCR staged handoff | pending |  |
@@ -389,7 +396,12 @@ families without collapsing them into one generic "agent workflow" proof lane.
     self-contained replay artifact, filtered by turn or time window, reviewed
     through playback controls/bookmarks/visibility toggles, and redacted before
     output while source-artifact authority stays visible
-26. Pack 24 - Transcript-Linked Code Lineage: `AOA-T-0067`
+26. Pack 24 - Transcript-Linked Code Lineage: `AOA-T-0067` - closed;
+    exact-fit `ai4curation/ai-blame` evidence found: AI execution traces
+    produce focused line or block attribution with session metadata, and
+    reviewer workflows can reopen saved transcripts from the code inspection
+    surface while scorecards, policies, dashboards, hosted search, repository
+    analytics, and memory recall stay outside the contract
 27. Pack 25 - Fail-Closed Evidence Gate: `AOA-T-0068`
 28. Pack 26 - Approval-Bound Durable Jobs: `AOA-T-0069`
 29. Pack 27 - OCR Staged Handoff: `AOA-T-0070`
@@ -1482,6 +1494,45 @@ Reject:
   collaboration, analytics, or replay-platform doctrine;
 - memory doctrine, state-change proof, or treating replay output as stronger
   source truth than the saved transcript or capture artifact.
+
+### AOA-T-0067: `transcript-linked-code-lineage`
+
+Stage 4 Pack 24 verdict, 2026-05-12: exact-fit second context found.
+`ai4curation/ai-blame` keeps the reusable object as one code-inspection seam
+back to saved AI-agent execution evidence: traces are parsed, blame output
+focuses on a file, line range, or block, each attributed line can carry model,
+timestamp, session id, and agent-tool metadata, and the review workflow can
+open the related saved transcript for context. `empathic/toolpath` supports the
+same provenance family by deriving path documents from conversation logs and
+mapping write/edit tool use into change entries keyed by file path, but it is
+supporting rather than primary proof because the bundle's center is a direct
+review/blame reopening seam.
+
+Exact evidence:
+
+- `ai-blame` describes itself as git blame for AI-assisted edits and exposes a
+  line-by-line blame command over a target file;
+- the blame command supports focused line ranges and block grouping for review;
+- blame metadata in source includes timestamp, model, session id, agent tool,
+  and optional agent version;
+- transcript docs define saved session records with messages, metadata, tool
+  and file-operation blocks, and source trace files;
+- documented workflows move from a suspect line or block to transcript listing
+  and transcript viewing for context;
+- trace-format docs show Claude and Codex-style traces preserving file paths,
+  timestamps, models, session identifiers, event/action fields, and content or
+  diff data.
+
+Reject:
+
+- desktop UI, cache implementation, annotation sidecars, install commands,
+  local trace-directory conventions, or provider-specific trace layouts;
+- stats, timeline, report, AI-percentage scoring, policy enforcement,
+  restricted-path gates, allowed-model rules, or CI governance;
+- transcript search, hosted search, dashboards, telemetry, repository
+  analytics, chat-with-history, or memory recall;
+- Toolpath share/resume behavior, graph-format governance, live watching, or
+  pathbase behavior.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

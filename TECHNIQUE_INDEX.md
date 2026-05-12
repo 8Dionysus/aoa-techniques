@@ -61,6 +61,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0065 | mcp-gateway-proxy | agent-workflows | canonical | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. |
 | AOA-T-0053 | local-first-session-index | history | canonical | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. |
 | AOA-T-0066 | transcript-replay-artifact | history | canonical | Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine. |
+| AOA-T-0067 | transcript-linked-code-lineage | history | canonical | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
 
 ## Promoted techniques
 
@@ -80,7 +81,6 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0048 | semantic-review-surface-lift | docs | promoted | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. |
 | AOA-T-0032 | context-report-for-ci | evaluation | promoted | Emit CI-facing reports for context composition, source coverage, token-estimate drift, and related composition checks without turning the report surface into the composition technique itself. |
 | AOA-T-0042 | upstream-skill-health-checking | evaluation | promoted | Check upstream-owned skill sources for availability and manifest-readiness before surfacing them as selectable inputs so broken entries stay visible and reviewable without widening into generic monitoring, registry governance, or security doctrine. |
-| AOA-T-0067 | transcript-linked-code-lineage | history | promoted | Link code history back to saved session evidence so reviewers can reopen the originating transcript or rationale without widening the bundle into generic repo analytics or memory doctrine. |
 | AOA-T-0071 | template-backed-field-extraction-after-ocr | agent-workflows | promoted | Extract bounded fields after OCR through explicit templates, heuristics, and missing-or-conflict signaling so structured receipt-like data stays reviewable instead of being guessed by one opaque parser. |
 | AOA-T-0072 | perceptual-media-dedupe-with-threshold-review | agent-workflows | promoted | Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma. |
 | AOA-T-0073 | semantic-media-bucketing-with-vision-plus-ocr | agent-workflows | promoted | Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation. |

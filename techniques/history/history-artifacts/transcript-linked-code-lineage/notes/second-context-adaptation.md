@@ -24,7 +24,7 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can collapse into [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md) if repositories expect a full run artifact instead of one bounded provenance link
+- the pattern can collapse into [AOA-T-0045](../../witness-trace-as-reviewable-artifact/TECHNIQUE.md) if repositories expect a full run artifact instead of one bounded provenance link
 - the public bundle could drift into analytics product behavior if dashboards or scorecards become more prominent than the lineage seam
 - teams may over-associate lineage with why-retrieval features because the donor bundles the two closely
 

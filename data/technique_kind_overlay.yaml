@@ -405,7 +405,7 @@ entries:
 - id: AOA-T-0067
   name: transcript-linked-code-lineage
   domain: history
-  status: promoted
+  status: canonical
   kind: artifact
   family: history-artifacts
 - id: AOA-T-0068

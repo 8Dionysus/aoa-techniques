@@ -139,7 +139,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `1` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `1` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `1` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `1` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `1` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `When to use`
 
@@ -251,7 +251,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `2` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `2` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `2` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `2` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `2` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `When not to use`
 
@@ -363,7 +363,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `3` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `3` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `3` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `3` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `3` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Inputs`
 
@@ -475,7 +475,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `4` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `4` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `4` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `4` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `4` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Outputs`
 
@@ -587,7 +587,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `5` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `5` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `5` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `5` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `5` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Core procedure`
 
@@ -699,7 +699,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `6` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `6` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `6` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `6` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `6` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Contracts`
 
@@ -811,7 +811,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `7` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `7` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `7` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `7` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `7` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Risks`
 
@@ -923,7 +923,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `8` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `8` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `8` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `8` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `8` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Validation`
 
@@ -1035,7 +1035,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `9` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `9` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `9` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `9` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `9` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## `Adaptation notes`
 
@@ -1147,7 +1147,7 @@ See also:
 | [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact | `history` | `canonical` | `10` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 | [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index | `history` | `canonical` | `10` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 | [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact | `history` | `canonical` | `10` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) |
-| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `promoted` | `10` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
+| [AOA-T-0067](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) - transcript-linked-code-lineage | `history` | `canonical` | `10` | [TECHNIQUE.md](../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md) |
 
 ## Boundaries
 

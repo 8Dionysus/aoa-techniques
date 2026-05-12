@@ -40018,6 +40018,193 @@
       "technique_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0067"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "transcript-linked-code-lineage"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `ai4curation/ai-blame`, with `empathic/toolpath` used only as supporting provenance-document shape evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "failure cases where code-to-session lineage is mistaken for full witness tracing, current handoff-claim verification, generic repo analytics, scorecards, policy enforcement, hosted search, or memory doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "code anchors break because line ranges, file paths, or diff hunks move without a stable evidence reference"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers treat lineage metadata as the evidence itself instead of reopening the saved transcript or trace artifact"
+                },
+                {
+                  "order": 3,
+                  "text": "attribution output becomes a model scorecard or contributor ranking surface"
+                },
+                {
+                  "order": 4,
+                  "text": "transcript lookup drifts into broad session search, Q and A, or memory recall instead of one bounded provenance reopening path"
+                },
+                {
+                  "order": 5,
+                  "text": "policy gates, CI enforcement, dashboards, or hosted analytics become more central than the code-to-evidence link"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "maintaining lineage links can add review overhead, especially when refactors churn line anchors"
+                },
+                {
+                  "order": 2,
+                  "text": "model and session attribution can be overtrusted when the source trace is partial, noisy, redacted, or tool-specific"
+                },
+                {
+                  "order": 3,
+                  "text": "provenance displays can create false confidence if they hide missing traces or unresolved anchors"
+                },
+                {
+                  "order": 4,
+                  "text": "teams may overfocus on who or which model touched a line instead of reviewing the code and source evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using lineage as a substitute for [AOA-T-0045](../../witness-trace-as-reviewable-artifact/TECHNIQUE.md) when a fuller run trace is needed"
+                },
+                {
+                  "order": 2,
+                  "text": "using lineage as a substitute for [AOA-T-0059](../../../../continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) when current handoff claims need git verification"
+                },
+                {
+                  "order": 3,
+                  "text": "importing AI percentage metrics, policy thresholds, dashboards, model allow lists, or contributor scorecards as technique requirements"
+                },
+                {
+                  "order": 4,
+                  "text": "publishing trace-derived lineage before public-safe redaction and source-scope review"
+                },
+                {
+                  "order": 5,
+                  "text": "treating transcript search, chat with history, or memory recall as part of the invariant core"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the lineage surface names a code anchor but cannot reopen the saved evidence artifact"
+                },
+                {
+                  "order": 2,
+                  "text": "the explanation starts with analytics, compliance, policy, or scorecard behavior instead of provenance reopening"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers ask the lineage pointer to prove correctness, authorship policy, or current repo state"
+                },
+                {
+                  "order": 4,
+                  "text": "examples include private trace paths, raw session identifiers, account names, local directories, hosted share links, or unsanitized transcript content"
+                },
+                {
+                  "order": 5,
+                  "text": "the source can only produce aggregate AI-contribution metrics and cannot map code anchors back to saved session evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep saved session or trace artifacts authoritative; lineage pointers are navigational aids"
+                },
+                {
+                  "order": 2,
+                  "text": "record anchor instability, missing traces, redaction, and unresolved evidence as limitations rather than silently filling gaps"
+                },
+                {
+                  "order": 3,
+                  "text": "prefer repo-relative or abstract anchors in public examples and avoid raw local trace paths or live session identifiers"
+                },
+                {
+                  "order": 4,
+                  "text": "route witness tracing, handoff verification, policy gates, telemetry, dashboards, hosted search, and memory recall to sibling surfaces"
+                },
+                {
+                  "order": 5,
+                  "text": "reject evidence that cannot survive without scorecards, hosted services, product dashboards, or broad retrieval UX"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical history technique when code anchors can reopen already-saved session evidence through a bounded inspection path and the saved evidence remains the source of truth"
+                },
+                {
+                  "order": 2,
+                  "text": "use this note as the watch surface for anchor brittleness, attribution overclaim, analytics creep, policy creep, hosted-search creep, and lineage replacing the underlying evidence artifact"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/history/history-artifacts/transcript-linked-code-lineage/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -40048,34 +40235,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around dashboards, metrics, retrieval UX, and wider analytics-product breadth"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around dashboards, metrics, retrieval UX, and wider analytics-product breadth"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same code-to-evidence lineage contract as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same code-to-evidence lineage contract as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor family"
+                  "text": "`ai4curation/ai-blame` provides exact-fit public reinforcement beyond the donor family: it parses AI agent execution traces, computes line-by-line blame with line number, line content, model, session id, timestamp, and agent tool metadata, and documents review workflows where a reviewer focuses on a line or block, then opens the related session transcript for context"
+                },
+                {
+                  "order": 5,
+                  "text": "`ai-blame` transcript docs keep the source evidence explicit: transcripts are complete session records with messages, metadata, tool/file-operation content blocks, and a source trace file, while transcript listing and viewing remain distinct from the blame output"
+                },
+                {
+                  "order": 6,
+                  "text": "`empathic/toolpath` supports the broader provenance-document shape by deriving Toolpath documents from Claude conversation logs and mapping write/edit tool use into change entries keyed by file path, but it remains supporting evidence rather than primary proof because its center of gravity is a provenance document format rather than a direct review/blame seam"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for code anchors reopening saved session evidence"
                 }
               ]
             },
@@ -40086,15 +40281,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is reopening saved session provenance from code review without widening into analytics or retrieval-product doctrine"
+                  "text": "this is the right canonical default when the main problem is reopening saved session provenance from code review without widening into analytics or retrieval-product doctrine"
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md) because it owns one provenance link from code back to existing evidence rather than a fuller run artifact"
+                  "text": "it remains narrower than [AOA-T-0045](../../witness-trace-as-reviewable-artifact/TECHNIQUE.md) because it owns one provenance link from code back to existing evidence rather than a fuller run artifact"
                 },
                 {
                   "order": 3,
-                  "text": "it also remains narrower than [AOA-T-0059](../../../../agent-workflows/git-verified-handoff-claims/TECHNIQUE.md) because it does not verify current handoff claims; it preserves historical lineage from code to saved evidence"
+                  "text": "it also remains narrower than [AOA-T-0059](../../../../continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) because it does not verify current handoff claims; it preserves historical lineage from code to saved evidence"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because `ai-blame` repeats the same code-line-to-session-evidence shape in a separate public implementation while letting this bundle reject model scorecards, policy gates, dashboard analytics, hosted search, transcript indexing, and free-form Q and A product behavior"
                 }
               ]
             },
@@ -40106,7 +40305,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -40121,7 +40320,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `ai4curation/ai-blame` source is BSD-3-Clause licensed and no source code, private trace data, local directories, session identifiers, account details, hosted URLs, or product-specific setup instructions were copied into the technique"
                 }
               ]
             },
@@ -40132,11 +40331,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses code-to-evidence lineage as a real reusable seam without widening into analytics or hosted search doctrine"
+                  "text": "future lineage sources can reinforce the default, but they must preserve the narrow boundary: already-saved execution traces or session artifacts, one code/file/line/diff anchor, a stable reference back to the saved evidence, and an inspection path that lets another reviewer reopen the source evidence without importing scorecards, dashboards, hosted search, policy enforcement, telemetry, memory doctrine, or broad retrieval UX"
                 }
               ]
             },
@@ -40147,11 +40346,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0067` `promoted`"
+                  "text": "move `AOA-T-0067` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the code-lineage contract survives outside the donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between code-to-session lineage, fuller witness traces, handoff claim verification, generic repo analytics, scorecards, policy gates, hosted search, and memory or retrieval products"
                 }
               ]
             }
@@ -40521,7 +40720,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md) if repositories expect a full run artifact instead of one bounded provenance link"
+                  "text": "the pattern can collapse into [AOA-T-0045](../../witness-trace-as-reviewable-artifact/TECHNIQUE.md) if repositories expect a full run artifact instead of one bounded provenance link"
                 },
                 {
                   "order": 2,

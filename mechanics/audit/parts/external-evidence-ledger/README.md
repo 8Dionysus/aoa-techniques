@@ -420,6 +420,59 @@ generic transcript packaging, session search/indexing, witness forensics,
 hosted sharing products, dashboards, replay editors, memory systems, or
 publishing platforms unless they expose the bounded replay-artifact seam itself.
 
+## AOA-T-0067 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`ai4curation/ai-blame` at
+`3892e208e6010ca4e9a936fe7d8143b0418c2fe2` provides the clean primary public
+source for Pack 24. The repository is BSD-3-Clause licensed and frames the
+object as extracting provenance from AI agent execution traces with
+git-blame-style line attribution plus transcript exploration. `empathic/toolpath`
+at `5ac423abbfe815699873d23031662c11b6747401` provides supporting
+Apache-2.0 provenance-document shape evidence, but not the primary proof.
+
+Accepted evidence:
+
+- `ai-blame` documents line-by-line blame for AI-assisted edits: a target file,
+  optional line range, line numbers, line content, model attribution, and block
+  grouping.
+- Its source model carries blame metadata with timestamp, model, session id,
+  agent tool, and optional agent version, so code anchors remain linked back
+  to saved trace evidence rather than becoming only display labels.
+- The documented review workflow focuses on a line or block, then opens the
+  related transcript for context through transcript list and transcript view.
+- Transcript docs define transcripts as saved session records with messages,
+  metadata, tool and file-operation content blocks, and the source trace file.
+- Trace-format docs show Claude and Codex-style traces carrying file path,
+  timestamp, model, session id, event/action, content or diff data, and source
+  trace records for later inspection.
+- `toolpath-claude` supports the same broad provenance family by deriving path
+  documents from conversation logs and mapping write/edit tool use to change
+  entries keyed by file path.
+
+Rejected or bounded:
+
+- Do not import desktop UI, cache implementation, annotation sidecar policy,
+  trace-directory conventions, local path examples, install commands, or agent
+  trace format specifics as technique requirements.
+- Do not import `ai-blame` stats, timeline, report, or annotate commands as
+  invariant behavior; they are adjacent tooling around the narrower lineage
+  seam.
+- Do not import Toolpath share/resume, graph format governance, provider
+  framework, live watching, or pathbase behavior as part of this bundle.
+- Treat Grain and Mobb Tracy as adjacent pressure: both describe code-to-
+  conversation transparency, but the searched surfaces widen into policy,
+  score, product, or hosted integration behavior rather than serving as the
+  primary clean proof for this public technique.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: code, file, line, diff, or commit
+anchors reopening already-saved session or trace evidence through a bounded
+review path. Do not reopen from generic AI-percentage scoring, policy gates,
+review enforcement, dashboards, hosted search, transcript indexing, memory
+systems, or repository analytics unless they expose the direct code-to-evidence
+lineage seam itself.
+
 ## AOA-T-0065 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.
