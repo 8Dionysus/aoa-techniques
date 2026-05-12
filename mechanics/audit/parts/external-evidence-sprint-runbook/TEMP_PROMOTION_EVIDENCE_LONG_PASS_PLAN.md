@@ -176,7 +176,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | exact-fit second context; exits to canonical | `mycel` bounded AI-agent mailbox closes the thread/mailbox replay and explicit local ACK gap |
 | Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | exact-fit second context; exits to canonical | `cwc-long-running-agents` progress-file handoff plus `openclaw-memory-kit` compaction memoryFlush handoff closes the pre-context-loss packet gap |
 | Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | adjacent lanes recorded; remains promoted | `cmux` request ACKs, Gas Town handoff mail/session cycling/escalation ACKs, and exact phrase GitHub code-search lanes are adjacent rather than proof of receiver-side packet acceptance before continuation |
-| Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | pending |  |
+| Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | adjacent lanes recorded; remains promoted | `confab-framework`, `LifeOS`, `session-handoff`, Mimir, SLOPE, and `cwc-long-running-agents` are adjacent or partial rather than clean proof of receiver-side handoff-claim verdicts against git evidence |
 | Stage 3 | [AOA-T-0060 session-opening-ritual-before-work](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | agent-workflows / handoff | Pack 17 session opening ritual before work | pending |  |
 | Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | pending |  |
 | Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | pending |  |
@@ -314,7 +314,10 @@ external adopter, markdown-first reuse, or long-gap donor proof.
 17. Pack 15 - Receipt-Confirmed Handoff Packet: `AOA-T-0058` - closed;
     adjacent-only `cmux` request ACK, Gas Town handoff/session-cycling, and
     exact phrase GitHub code-search lanes recorded, bundle remains promoted
-18. Pack 16 - Git-Verified Handoff Claims: `AOA-T-0059`
+18. Pack 16 - Git-Verified Handoff Claims: `AOA-T-0059` - closed;
+    adjacent-only broad claim-gate, inbound handoff-pack, session-pickup,
+    evidence-backed summary, compaction-state, and progress-plus-git lanes
+    recorded, bundle remains promoted
 19. Pack 17 - Session Opening Ritual Before Work: `AOA-T-0060`
 20. Pack 18 - Cross-Repo Resource Map Bootstrap: `AOA-T-0061`
 21. Pack 19 - Episode-Bounded Agent Loop: `AOA-T-0062`
@@ -1101,6 +1104,67 @@ Reject:
 - escalation acknowledgment, rejection policy, stop/return rules, or broad
   continuation governance;
 - queue, task-platform, broker, trust, encryption, or orchestration doctrine.
+
+### AOA-T-0059: `git-verified-handoff-claims`
+
+Stage 3 Pack 16 verdict, 2026-05-12: no exact-fit second context found.
+The bundle remains `promoted` because the strongest inspected public lanes
+either verify handoff claims against broader reality, collect git state for
+handoff or pickup, or preserve git-backed session orientation, but do not expose
+the narrow receiver-side verdict record over concrete handoff claims against
+git evidence.
+
+Searched evidence:
+
+- `confab-framework` 1.8.0 on PyPI is clean MIT public support for handoff
+  claim hygiene: it gates handoff files by extracting claims and checking
+  filesystem, environment, scripts, pipeline outputs, and count sources before
+  the next agent inherits false claims. It is broader than this bundle and not
+  specifically a git-evidence seam.
+- `marcusglee11/LifeOS` at
+  `46847c7c1f55b8c11f75137bbabffadf33f5cb29` has an inbound `from_codex`
+  `handoff-pack` mode, collects branch, recent commits, and git status, and
+  emits `Claims Verified` plus `Deltas from Claims`. It is close, but lacks
+  explicit license metadata and does not spell out a claim-by-claim git verdict
+  gate before continuation.
+- `antonwing77/session-handoff` at
+  `e441e1205cb33c8bbb06a2742fb897385b8f73f8` reads a handoff in pickup mode,
+  pulls the branch, checks `git log --oneline -5` and `git status`, and notes
+  discrepancies before starting. It is strong adjacent pickup discipline, but
+  lacks explicit license metadata and a separate verified/mismatch/unverifiable
+  handoff-claim output.
+- `HyunKN/Mimir-Skills` at
+  `037f40db0a570d3dfaa344e9922a8f56cb02c221` keeps handoff claims traceable to
+  decision records and derived summaries, with branch-state patterns and a
+  git-context collector, but the object is evidence-backed summary rather than
+  handoff claims verified against git.
+- SLOPE public docs describe compaction handoffs with git state, active claims,
+  review phase, and sprint context, but the visible docs do not close the
+  receiver-side handoff-claim verdict seam.
+- `cwc-long-running-agents` remains Pack 14 evidence: `PROGRESS.md` plus git
+  checkpoints are a second record for restart, not Pack 16's claim comparison
+  output.
+
+Exact evidence still needed:
+
+- one public workflow has an inbound handoff packet or handoff summary with
+  concrete file, commit, branch, or diff claims;
+- the receiver compares those claims against visible git evidence such as log,
+  status, diff, branch head, or file history before trusting the handoff;
+- the workflow records which claims are verified, mismatched, or unverifiable;
+- continuation follows the repo-backed verdict instead of the handoff narrative
+  when they disagree;
+- the seam remains smaller than generic claim hygiene, outbound handoff
+  generation, code review, provenance infrastructure, or orchestrator doctrine.
+
+Reject:
+
+- broad claim-verification frameworks without git-specific handoff verdicts;
+- outbound handoff writers that merely collect git state;
+- pickup rituals that check branch cleanliness without claim-by-claim outcomes;
+- decision-record summaries, session briefings, active-claim registries, or
+  compaction handoffs that do not compare handoff claims to git evidence;
+- full review, test, provenance, or orchestration systems.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

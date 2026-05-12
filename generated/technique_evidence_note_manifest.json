@@ -34371,6 +34371,11 @@
                   "order": 4,
                   "key": "validation strength",
                   "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family"
+                },
+                {
+                  "order": 5,
+                  "key": "2026-05-12 searched lanes",
+                  "value_markdown": "`confab-framework`, `marcusglee11/LifeOS`, `antonwing77/session-handoff`, `HyunKN/Mimir-Skills`, SLOPE, and `cwc-long-running-agents` were inspected and recorded as adjacent or partial rather than exact-fit proof"
                 }
               ]
             },
@@ -34432,6 +34437,10 @@
                 {
                   "order": 2,
                   "text": "specifically, the bundle still needs another public workflow surface where concrete handoff claims are checked against repo evidence before continuation without widening into generic code review or provenance doctrine"
+                },
+                {
+                  "order": 3,
+                  "text": "future searches should distinguish handoff-claim verification from broad claim hygiene, outbound handoff capture, branch-state summaries, session-start orientation, generic git-status checks, and full provenance or review frameworks"
                 }
               ]
             },

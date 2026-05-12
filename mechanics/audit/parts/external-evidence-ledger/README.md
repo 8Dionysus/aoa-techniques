@@ -130,6 +130,56 @@ Do not reopen from delivery ACKs, assignment records, request ACKs, escalation
 ACKs, session auto-prime hooks, general mailbox platforms, or transfer-control
 handoff APIs unless they also carry the receiver-side packet receipt gate.
 
+## AOA-T-0059 External Evidence Notes
+
+2026-05-12 result: no exact-fit second context found. Pack 16 remains useful
+because it separates git-backed handoff-claim verification from broader claim
+gates, outbound handoff capture, and session-start orientation surfaces.
+
+Searched and rejected as adjacent or partial:
+
+- `confab-framework` 1.8.0 on PyPI is MIT licensed and provides a strong
+  public handoff-claim verification lane: `confab gate` scans handoff files,
+  extracts claims, checks them against filesystem, environment, scripts,
+  pipeline outputs, and count sources, and flags failures before the next agent
+  sees them. This is clean supporting evidence for handoff claim hygiene, but
+  it is broader than the bundle and not specifically a git-state verification
+  seam for concrete handoff repo claims.
+- `marcusglee11/LifeOS` at
+  `46847c7c1f55b8c11f75137bbabffadf33f5cb29` has a `handoff-pack`
+  skill with an inbound `from_codex` mode, `git rev-parse`, `git log`, and
+  `git status` fact collection, plus `Claims Verified` and
+  `Deltas from Claims` output sections. This is close, but the inspected repo
+  has no explicit license metadata and the skill does not spell out a
+  claim-by-claim git verdict gate before continuation.
+- `antonwing77/session-handoff` at
+  `e441e1205cb33c8bbb06a2742fb897385b8f73f8` has a pickup mode that reads the
+  handoff, checks out and pulls the branch, runs `git log --oneline -5` and
+  `git status`, notes discrepancies from the handoff, and adjusts the plan
+  before work starts. This is a strong adjacent pickup discipline, but the
+  inspected repo has no explicit license metadata and the output is not a
+  distinct verified/mismatch/unverifiable handoff-claim record.
+- `HyunKN/Mimir-Skills` at
+  `037f40db0a570d3dfaa344e9922a8f56cb02c221` provides evidence-backed
+  handoff summaries, branch-state patterns, and a git-context collector, but
+  the source of truth is decision records and derived summaries rather than
+  handoff claims checked against git state.
+- SLOPE public docs and `srbryers/slope` describe compaction handoffs that
+  carry git state, active claims, review phase, and sprint context, but the
+  inspected public docs do not show a receiver-side claim-versus-git verdict
+  gate for a specific handoff packet.
+- `anthropics/cwc-long-running-agents` remains Pack 14 evidence: it uses
+  `PROGRESS.md` plus git checkpoints as a second record, but it does not by
+  itself close Pack 16's claim-verification output requirement.
+
+Future search shape: reopen only from a public workflow where an inbound
+handoff's concrete code, file, or commit claims are compared against visible
+git evidence and the receiver records verified, mismatched, and unverifiable
+claim outcomes before continuation. Do not reopen from generic claim hygiene,
+outbound handoff generation, git-state capture, session-start orientation,
+branch cleanliness checks, or full code-review/provenance systems unless they
+also expose the narrow handoff-claim verdict seam.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.
