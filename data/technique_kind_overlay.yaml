@@ -399,7 +399,7 @@ entries:
 - id: AOA-T-0066
   name: transcript-replay-artifact
   domain: history
-  status: promoted
+  status: canonical
   kind: artifact
   family: history-artifacts
 - id: AOA-T-0067

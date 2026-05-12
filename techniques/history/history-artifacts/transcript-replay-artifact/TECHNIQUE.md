@@ -3,7 +3,7 @@ id: AOA-T-0066
 name: transcript-replay-artifact
 domain: history
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: es617/claude-replay + wesm/agentsview
   path: README.md from es617/claude-replay + README.md from wesm/agentsview
@@ -17,12 +17,12 @@ tags:
   - review
   - sessions
 summary: Turn already-saved session history into a replayable artifact so reviewers can inspect message flow and timeline without reopening capture semantics or widening into hosted replay-platform doctrine.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -38,6 +38,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # transcript-replay-artifact

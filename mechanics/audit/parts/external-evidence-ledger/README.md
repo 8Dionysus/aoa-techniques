@@ -371,6 +371,55 @@ endpoint subscription, trust or signature layers, marketplace catalogs, or
 capability schema documents unless they expose the versioned entry publication
 contract itself.
 
+## AOA-T-0066 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`dataprofessor/cortex-replay` at
+`d61d46a7acbe55b3367f695a04e56eca24871320` provides the clean primary public
+source for Pack 23. The inspected repository carries an MIT license and frames
+the reusable object as converting already-saved AI coding session transcripts
+into one self-contained interactive replay artifact. Snowflake's public Cortex
+Code replay guide supports the same workflow as a separate public assistant
+surface and guide layer.
+
+Accepted evidence:
+
+- The README presents the object as converting saved JSON session transcripts
+  into self-contained interactive HTML replays with no external runtime
+  dependency for viewing.
+- The CLI can list saved sessions, select a latest or explicit saved session,
+  accept a direct transcript file, filter by turns or time windows, and write
+  one replay output.
+- The renderer preserves replayable flow with turn order, metadata, player
+  controls, speed, bookmarks, and visibility toggles while keeping the saved
+  transcript as the source artifact.
+- The parser and renderer keep filtering and secret redaction as replay-output
+  safety controls instead of publishing raw private session material.
+- Snowflake's guide independently describes saved-session transcript replay as
+  a shareable/local review artifact rather than a hosted replay platform.
+
+Rejected or bounded:
+
+- Do not import Cortex-specific storage locations, account setup, install
+  commands, product names as requirements, or live session capture behavior.
+- Do not import theme systems, keyboard shortcuts, hosted demo behavior,
+  iframe/embed behavior, dashboards, collaboration, analytics, or viewer
+  platform doctrine as technique invariants.
+- Do not treat a replay artifact as source truth or proof of state changes;
+  saved transcripts, capture artifacts, and witness traces keep those sibling
+  roles.
+- Treat `ai-replay` as same-lineage supporting pressure only unless a later
+  pass needs a separate Python-package lane; it was not needed for the primary
+  canonical proof.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: already-saved session artifacts,
+one derivative replay transformation, reviewable flow cues, visible filtering
+or redaction limits, and explicit source-artifact authority. Do not reopen from
+generic transcript packaging, session search/indexing, witness forensics,
+hosted sharing products, dashboards, replay editors, memory systems, or
+publishing platforms unless they expose the bounded replay-artifact seam itself.
+
 ## AOA-T-0065 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

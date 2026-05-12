@@ -51,7 +51,7 @@ PILOT_BUNDLES = (
         "transcript-replay-artifact",
         "history",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/history/transcript-replay-artifact",
         "techniques/history/history-artifacts/transcript-replay-artifact",
     ),

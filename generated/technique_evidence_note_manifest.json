@@ -39269,6 +39269,189 @@
       "technique_path": "techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/history/history-artifacts/transcript-replay-artifact/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0066"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "transcript-replay-artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `dataprofessor/cortex-replay` and Snowflake's public Cortex Code replay guide"
+                },
+                {
+                  "order": 2,
+                  "text": "failure cases where post-capture replay is mistaken for first-save capture, transcript packaging, local indexing, witness tracing, hosted sharing, dashboards, editors, or a replay platform"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the replay artifact loses the source-artifact reference and quietly becomes the only history surface"
+                },
+                {
+                  "order": 2,
+                  "text": "replay generation starts from live capture or runtime monitoring instead of an already-saved session artifact"
+                },
+                {
+                  "order": 3,
+                  "text": "visual replay polish hides missing turns, redacted context, or dropped tool-call results"
+                },
+                {
+                  "order": 4,
+                  "text": "hosted sharing, live demos, embedded viewers, or dashboard products become more central than the replay artifact"
+                },
+                {
+                  "order": 5,
+                  "text": "replay is treated as proof of state changes even though it lacks witness-level state deltas, review flags, or run-forensics semantics"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "replay can add packaging work where a plain transcript would be easier to review"
+                },
+                {
+                  "order": 2,
+                  "text": "a polished replay can overstate fidelity after filtering, time-window trimming, or secret redaction"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers may treat convenient playback as source truth and stop opening the saved transcript or capture artifact"
+                },
+                {
+                  "order": 4,
+                  "text": "replay-product features can pull the technique into accounts, publishing, analytics, or collaboration behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using replay as a substitute for [AOA-T-0044](../versionable-session-transcripts/TECHNIQUE.md), [AOA-T-0053](../local-first-session-index/TECHNIQUE.md), or [AOA-T-0045](../witness-trace-as-reviewable-artifact/TECHNIQUE.md)"
+                },
+                {
+                  "order": 2,
+                  "text": "importing skill installation, CLI packaging, theme systems, live demos, iframe embedding, or hosted viewer URLs as technique requirements"
+                },
+                {
+                  "order": 3,
+                  "text": "treating replay controls, playback speed, bookmarks, or UI chrome as the invariant instead of source-derived ordered flow"
+                },
+                {
+                  "order": 4,
+                  "text": "publishing replay artifacts before public-safe redaction and source-scope review"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the replay artifact cannot identify which saved session or transcript family it came from"
+                },
+                {
+                  "order": 2,
+                  "text": "the explanation starts with viewer product features instead of post-capture transformation and source-artifact authority"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers expect search, indexing, analytics, dashboard, witness, or proof behavior from the replay object"
+                },
+                {
+                  "order": 4,
+                  "text": "replay examples include private session IDs, local directory paths, account names, hosted share links, or unsanitized secrets"
+                },
+                {
+                  "order": 5,
+                  "text": "a replay source supports only hosted viewing or dashboards and cannot emit one bounded derivative artifact"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep replay derivative and source-linked: saved session artifacts remain authoritative"
+                },
+                {
+                  "order": 2,
+                  "text": "preserve order, turn boundaries, timestamps, or equivalent flow cues that make replay materially different from plain transcript text"
+                },
+                {
+                  "order": 3,
+                  "text": "record filtering, redaction, hidden thinking, hidden tool calls, or time-window choices as limitations of the replay"
+                },
+                {
+                  "order": 4,
+                  "text": "route transcript packaging, history indexing, witness tracing, hosted publishing, editor/dashboard behavior, and memory doctrine to sibling surfaces"
+                },
+                {
+                  "order": 5,
+                  "text": "reject replay evidence that cannot survive without accounts, hosted services, dashboards, or product-specific viewer semantics"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical history technique when the implementation starts from already-saved session artifacts, emits one bounded replay artifact, preserves reviewable flow cues, and keeps source-artifact authority visible"
+                },
+                {
+                  "order": 2,
+                  "text": "use this note as the watch surface for capture creep, viewer-product creep, hosted-sharing creep, replay-as-proof overclaim, and replay replacing saved transcript authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/history/history-artifacts/transcript-replay-artifact/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -39299,34 +39482,38 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around hosted viewers, dashboards, publish flows, and replay-product breadth"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around hosted viewers, dashboards, publish flows, and replay-product breadth"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same replay-artifact contract as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same replay-artifact contract as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor viewer family"
+                  "text": "`dataprofessor/cortex-replay` provides exact-fit public reinforcement beyond the original Claude/Codex/Cursor viewer family: it converts already-saved Cortex Code JSON session transcripts into one self-contained interactive HTML replay, supports listing saved sessions, selecting the most recent or a specific saved session, filtering turns and time ranges, adding bookmarks, controlling playback speed, hiding thinking or tool-call blocks, and redacting secrets before output"
+                },
+                {
+                  "order": 5,
+                  "text": "Snowflake's public Cortex Code replay guide independently frames the same workflow for a different AI coding assistant surface: sessions are already saved as JSON transcripts, `cortex-replay` generates a self-contained interactive HTML replay, and the output can be opened locally, shared, or embedded without depending on a hosted replay service"
+                },
+                {
+                  "order": 6,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for the same post-capture replay-artifact contract"
                 }
               ]
             },
@@ -39337,7 +39524,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is replaying already-saved session history for review without reopening capture semantics or widening into viewer-product doctrine"
+                  "text": "this is the right canonical default when the main problem is replaying already-saved session history for review without reopening capture semantics or widening into viewer-product doctrine"
                 },
                 {
                   "order": 2,
@@ -39346,6 +39533,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than [AOA-T-0053](../local-first-session-index/TECHNIQUE.md) because it does not build a general lookup layer across many saved sessions"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because Cortex Replay repeats the same saved-session-to-replay shape in a separate live assistant ecosystem while still letting this bundle reject Cortex-specific session directories, skill installation, themes, live demos, embedded iframes, hosted publishing, dashboard behavior, and broader viewer-platform semantics"
                 }
               ]
             },
@@ -39357,7 +39548,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -39372,7 +39563,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `dataprofessor/cortex-replay` source is MIT licensed and no source code, private session data, local directory names, session IDs, local account details, hosted URLs, or product-specific setup instructions were copied into the technique"
                 }
               ]
             },
@@ -39383,11 +39574,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that uses post-capture replay as a real reusable artifact without widening into viewer-platform doctrine"
+                  "text": "future replay sources can reinforce the default, but they must preserve the narrow boundary: already-saved session artifacts, one replay transformation, preserved order or flow cues, derivative replay output, source-artifact authority, and explicit separation from capture, packaging, indexing, witness forensics, hosted sharing, dashboards, editors, and replay platforms"
                 }
               ]
             },
@@ -39398,11 +39589,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0066` `promoted`"
+                  "text": "move `AOA-T-0066` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the replay artifact contract survives outside the donor viewer family"
+                  "text": "add an adverse-effects review to preserve the boundary between transcript replay, transcript packaging, local indexing, witness tracing, hosted viewers, dashboards, publishing, and product platform semantics"
                 }
               ]
             }

@@ -656,7 +656,7 @@ See also:
 |---|---|---|---|---|
 | local-first-session-index checklist | `absent` | `8` | `techniques/history/history-artifacts/local-first-session-index/checks/local-first-session-index-checklist.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
 
-### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
+### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
