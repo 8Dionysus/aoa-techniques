@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- recorded the 2026-05-12 Pack 15 evidence pass for `AOA-T-0058
+  receipt-confirmed-handoff-packet`; `cmux` request ACKs, Gas Town handoff
+  mail/session cycling/escalation ACKs, and exact phrase GitHub code-search
+  lanes were logged as adjacent rather than canonical proof, so the bundle
+  remains `promoted` and Audit queue counts stay unchanged
 - promoted `AOA-T-0057 structured-handoff-before-compaction` to `canonical`
   after `anthropics/cwc-long-running-agents` showed exact-fit public
   reinforcement for a structured `PROGRESS.md` read before restart and kept

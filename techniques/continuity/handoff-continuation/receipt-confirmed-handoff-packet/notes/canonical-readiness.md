@@ -13,6 +13,7 @@
 - second context: `aoa-techniques` now records the same handoff-receipt seam as a documentation-first adaptation with one example and one checklist
 - external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale
 - validation strength: the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family
+- 2026-05-12 searched lanes: `cmux` request ACKs, Gas Town handoff mail/session cycling/escalation ACKs, and exact phrase GitHub code-search lanes were inspected and recorded as adjacent rather than exact-fit proof
 
 ## Default-use rationale
 
@@ -31,6 +32,7 @@
 
 - the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
 - specifically, the bundle still needs another public workflow surface where a handoff packet must be explicitly accepted before continuation without widening into queue governance, mailbox transport, or broad approval policy
+- future searches should distinguish packet receipt from request acknowledgment, mail delivery, assignment, escalation acknowledgment, session auto-prime, and transfer-of-control handoff semantics
 
 ## Recommendation
 

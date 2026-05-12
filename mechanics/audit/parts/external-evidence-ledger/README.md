@@ -98,6 +98,38 @@ handoff consumption, or automated pre-compaction triggering without shifting
 the bundle into memory systems, session databases, hook governance, transcript
 history, mailbox receipt, or full lifecycle orchestration.
 
+## AOA-T-0058 External Evidence Notes
+
+2026-05-12 result: no exact-fit second context found. Pack 15 remains useful
+because it separates the handoff-receipt object from several tempting adjacent
+handoff and acknowledgment lanes before the long pass continues.
+
+Searched and rejected as adjacent:
+
+- `cmux` multi-agent protocol gist `409030b36c1889f8fc28c0448f05f95f`
+  defines a single-line agent-to-agent envelope, a handoff payload with
+  `task` and `context`, correlation IDs, and mandatory `ACK`/`RES` flow for
+  requests. This is close, but its `ACK` is a transport/request acknowledgment
+  meaning "received, working on it"; it does not prove reviewed acceptance of
+  a specific handoff packet before continuation.
+- `gastownhall/gastown` at
+  `2eafac9784301e6a8832a8fa32df9143a17c236a` provides a strong adjacent
+  session-cycling lane: `gt handoff`, generated handoff mail, fresh-session
+  auto-prime, pending-mail visibility, and explicit escalation acknowledgment.
+  This supports the broader handoff family, but the acknowledgment belongs to
+  escalation handling and the handoff mail is read-before-continue rather than
+  receipt-confirmed packet acceptance.
+- GitHub code search was attempted for exact phrase combinations around
+  `handoff packet`, `receipt`, `accepted`, `ACK`, and `continue`; no stronger
+  exact-fit public candidate surfaced in this pass.
+
+Future search shape: reopen only from a public workflow where a receiver records
+`accepted`, `reviewed`, `received`, or equivalent against a stable handoff
+packet reference and continuation is visibly blocked until that record exists.
+Do not reopen from delivery ACKs, assignment records, request ACKs, escalation
+ACKs, session auto-prime hooks, general mailbox platforms, or transfer-control
+handoff APIs unless they also carry the receiver-side packet receipt gate.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.
