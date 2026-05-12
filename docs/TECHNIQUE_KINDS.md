@@ -23,7 +23,7 @@ See also:
 | `workflow` | Ordered procedure for doing bounded work or coordinating state change. | `13` | `4` | `9` |
 | `guardrail` | Boundary, gate, or containment contract that prevents unsafe mutation, wrong routing, or hidden strictness. | `13` | `4` | `9` |
 | `validation` | Check, test, smoke, integrity, readiness, or proof pattern that emits or consumes explicit evidence. | `10` | `4` | `6` |
-| `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `2` | `5` |
+| `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `3` | `4` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `1` | `3` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `7` | `7` |
 | `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `4` | `8` |
@@ -159,7 +159,7 @@ Do not use this when:
 - one source is being fanned out to multiple targets
 - the technique is mostly a work loop or approval boundary
 
-Counts: `total` 7, `canonical` 2, `promoted` 5.
+Counts: `total` 7, `canonical` 3, `promoted` 4.
 
 | domain | entries |
 |---|---|
@@ -173,7 +173,7 @@ Counts: `total` 7, `canonical` 2, `promoted` 5.
 | technique | domain | status | summary | source |
 |---|---|---|---|---|
 | [AOA-T-0031](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) | `agent-workflows` | `canonical` | Make agent runs composable as shell-side one-shot tools through explicit stdin, stdout, files, and pipes without widening into generic shell advice or autonomous loops. | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
-| [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | `promoted` | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
+| [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | `agent-workflows` | `canonical` | Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles. | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
 | [AOA-T-0065](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) | `agent-workflows` | `promoted` | Front multiple configured MCP servers through one bounded gateway proxy so callers use one reviewable tool surface with explicit metadata and sanitization instead of binding directly to each upstream server. | [TECHNIQUE.md](../techniques/tool-use/tool-gateway/mcp-gateway-proxy/TECHNIQUE.md) |
 | [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) | `docs` | `canonical` | Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) |
 | [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) | `docs` | `promoted` | Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership. | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |

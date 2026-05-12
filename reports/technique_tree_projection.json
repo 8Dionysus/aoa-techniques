@@ -206,6 +206,28 @@
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
+      "id": "AOA-T-0036",
+      "name": "render-truth-before-startup",
+      "domain": "agent-workflows",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
+      "current_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
+      "family": "runtime-truth-lifecycle",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "runtime-truth-lifecycle",
+      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
+      "review_status": "boundary-watch",
+      "rationale_cues": [
+        "family:runtime-truth-lifecycle",
+        "domain:agent-workflows",
+        "kind:composition",
+        "status:canonical",
+        "review_status:boundary-watch"
+      ],
+      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -226,28 +248,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0036",
-      "name": "render-truth-before-startup",
-      "domain": "agent-workflows",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Render the actual composed runtime truth before startup so operators review the effective service and config view instead of relying only on declared profiles.",
-      "current_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
-      "family": "runtime-truth-lifecycle",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "runtime-truth-lifecycle",
-      "proposed_future_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
-      "review_status": "boundary-watch",
-      "rationale_cues": [
-        "family:runtime-truth-lifecycle",
-        "domain:agent-workflows",
-        "kind:composition",
-        "status:promoted",
-        "review_status:boundary-watch"
-      ],
-      "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
     },
     {
       "id": "AOA-T-0038",

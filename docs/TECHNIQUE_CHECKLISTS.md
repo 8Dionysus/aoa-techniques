@@ -52,17 +52,17 @@ See also:
 |---|---|---|---|---|
 | Shell-Composable Agent Invocation Checklist | `absent` | `7` | `techniques/execution/agent-workflows-core/shell-composable-agent-invocation/checks/shell-composable-agent-invocation-checklist.md` | [TECHNIQUE.md](../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) |
 
+### [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Render Truth Before Startup Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/checks/render-truth-before-startup-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | intent-rollout-checklist | `absent` | `11` | `techniques/execution/intent-chain/new-intent-rollout-checklist/checks/intent-rollout-checklist.md` | [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) |
-
-### [AOA-T-0036](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) - render-truth-before-startup (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Render Truth Before Startup Checklist | `absent` | `10` | `techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/checks/render-truth-before-startup-checklist.md` | [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) |
 
 ### [AOA-T-0038](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) - one-command-service-lifecycle (`promoted`)
 

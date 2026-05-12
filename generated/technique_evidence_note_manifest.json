@@ -18886,6 +18886,179 @@
       "technique_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0036"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "render-truth-before-startup"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for read-only pre-start review of resolved runtime truth"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on render/plan review before apply or startup rather than lifecycle ownership, readiness proof, deployment previews, or config publication"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "teams run a render command but never actually review the service set or resolved config before startup"
+                },
+                {
+                  "order": 2,
+                  "text": "rendered config is treated as a harmless artifact and leaks secrets, host paths, or local environment values"
+                },
+                {
+                  "order": 3,
+                  "text": "preview, dry-run, plan, or template output is mistaken for proof that the host is ready or the runtime will be healthy after launch"
+                },
+                {
+                  "order": 4,
+                  "text": "the technique widens into Docker Compose management, deployment orchestration, dashboard operation, image management, or prune policy"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a required render/review step can add friction when the runtime selection is already trivial"
+                },
+                {
+                  "order": 2,
+                  "text": "full rendered config can overwhelm reviewers when the service-list or plan view would answer the question"
+                },
+                {
+                  "order": 3,
+                  "text": "local rendered files can linger and become sensitive residue"
+                },
+                {
+                  "order": 4,
+                  "text": "canonical status can tempt later authors to treat every deployment preview as equivalent, even when it lacks resolved runtime truth or a human review seam"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "committing full rendered config or treating it as the new source of truth"
+                },
+                {
+                  "order": 2,
+                  "text": "replacing readiness checks, smoke tests, or lifecycle stop paths with a render-only step"
+                },
+                {
+                  "order": 3,
+                  "text": "using generic Helm, Kustomize, Skaffold, Terraform, or Docker dry-run output as proof of this technique without checking the exact pre-start runtime-truth seam"
+                },
+                {
+                  "order": 4,
+                  "text": "folding secret handling, volume lifecycle, image upgrade, dashboard, or remote deployment behavior into the render technique"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "guidance says \"start\" or \"apply\" before it answers what will actually start"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers cannot distinguish declared config, resolved runtime truth, readiness state, and post-start health"
+                },
+                {
+                  "order": 3,
+                  "text": "rendered output appears in public commits, issue comments, or generated docs without redaction"
+                },
+                {
+                  "order": 4,
+                  "text": "a tool's value proposition is deployment preview or lifecycle control, while the rendered service/config truth is incidental"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "make the review question explicit: what service/config truth will this runtime actually apply or start now"
+                },
+                {
+                  "order": 2,
+                  "text": "use service-list, plan, or config-hash views first; reserve full rendered config for deeper local review"
+                },
+                {
+                  "order": 3,
+                  "text": "mask, redact, keep local, or delete full rendered config after inspection"
+                },
+                {
+                  "order": 4,
+                  "text": "route readiness, smoke, lifecycle, deployment, monitoring, and proof verdicts to sibling techniques or owning repos"
+                },
+                {
+                  "order": 5,
+                  "text": "record adjacent preview tools as searched lanes unless they also provide a distinct operator review seam over resolved runtime truth"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for false readiness, secret leakage, deployment-preview drift, and expansion into lifecycle or runtime owner authority"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -18916,7 +19089,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -18931,11 +19104,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around pre-start rendered truth rather than lifecycle or readiness breadth"
+                  "text": "Dockform now provides an exact-fit public second context: it exposes a plan/apply workflow over Docker Compose stacks, analyzes planned service/config state, renders fully resolved Compose config, masks secrets by default, and asks for confirmation before applying the prebuilt plan unless explicitly skipped"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still proven mainly through one donor lineage"
+                  "text": "the second context adaptation keeps the contract bounded around pre-start rendered truth rather than lifecycle, readiness, deployment, dashboard, volume, secret, or image-management breadth"
+                },
+                {
+                  "order": 4,
+                  "text": "the bundle now has a checklist, a public-safe example, origin evidence, exact-fit second-context evidence, and an adverse-effects review, so the pattern is no longer proven mainly through one donor lineage"
                 }
               ]
             },
@@ -18946,7 +19123,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when the missing object is a reviewable pre-start render step over the actual composed runtime view"
+                  "text": "this is the right canonical default when the missing object is a reviewable pre-start render step over the actual composed runtime view"
                 },
                 {
                   "order": 2,
@@ -18954,33 +19131,38 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default workflow for every local runtime startup path"
+                  "text": "it remains narrower than `AOA-T-0035` because it assumes a selected runtime path and reviews the resolved output rather than owning profile/preset composition"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it remains narrower than `AOA-T-0037` and `AOA-T-0038` because it does not prove host readiness and does not own startup or shutdown"
+                },
+                {
+                  "order": 5,
+                  "text": "Dockform confirms that the default move can survive outside `abyss-stack`: preview or render resolved Compose runtime truth, review it locally, then hand off to apply/startup"
                 }
               ]
             },
             {
               "heading": "Fresh public-safety check",
               "order": 5,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "review date",
-                  "value_markdown": "2026-03-22"
+                  "text": "review date: 2026-05-12"
                 },
                 {
                   "order": 2,
-                  "key": "result",
-                  "value_markdown": "pass"
+                  "text": "result: pass"
                 },
                 {
                   "order": 3,
-                  "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the render-review seam while stripping donor-specific service names, deployed paths, and local secret material"
+                  "text": "sanitization still holds: the published technique keeps the render-review seam while stripping donor-specific service names, deployed paths, host details, and local secret material"
+                },
+                {
+                  "order": 4,
+                  "text": "Dockform evidence strengthens the public-safety boundary because its full-config render masks secrets by default and explicitly treats secret display as dangerous"
                 }
               ]
             },
@@ -18991,11 +19173,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer"
+                  "text": "no blocking promotion gap remains as long as the bundle stays centered on render/plan review of resolved runtime truth before apply/startup"
                 },
                 {
                   "order": 2,
-                  "text": "the separation from readiness checks and lifecycle wrappers should stay tested through future sibling imports"
+                  "text": "future review should keep rejecting surfaces that are only lifecycle wrappers, readiness checks, generic config renderers, deployment previews, or dry-run simulations without a distinct operator review seam over effective local runtime truth"
                 }
               ]
             },
@@ -19006,11 +19188,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0036` as `promoted`"
+                  "text": "promote `AOA-T-0036` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same pre-start render-review contract"
+                  "text": "use `AOA-T-0036` as the default runtime-truth technique when a selected local runtime should expose the actual resolved service/config view before startup, while routing host readiness, lifecycle, deployment, monitoring, and proof verdicts to sibling owners"
                 }
               ]
             }
@@ -19129,17 +19311,17 @@
                 {
                   "order": 1,
                   "key": "name",
-                  "value_markdown": "aoa-techniques"
+                  "value_markdown": "Dockform"
                 },
                 {
                   "order": 2,
                   "key": "environment",
-                  "value_markdown": "public documentation repository for reusable engineering techniques"
+                  "value_markdown": "public Docker Compose management tool for declarative stacks, multi-context Compose projects, SOPS-backed secrets, and plan/apply operation"
                 },
                 {
                   "order": 3,
                   "key": "runtime",
-                  "value_markdown": "human and agent contribution workflow over reviewable technique bundles"
+                  "value_markdown": "local operator workflow that previews desired changes, renders fully resolved Compose config for a stack, then applies the prebuilt plan to Docker Compose"
                 }
               ]
             },
@@ -19150,19 +19332,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "donor-specific service names, deployment paths, and command examples were rewritten into a portable pre-start render-review contract"
+                  "text": "the donor's `abyss-stack` render commands become Dockform's public `dockform plan`, `dockform compose render`, and `dockform apply` surfaces"
                 },
                 {
                   "order": 2,
-                  "text": "the donor's compose-specific runtime details were reduced to the more general idea of rendering the actual composed view before launch"
+                  "text": "the donor's selected profile/preset becomes Dockform's discovered or declared `context/stack` plus Compose profiles, environment files, inline environment, and SOPS-backed secrets"
                 },
                 {
                   "order": 3,
-                  "text": "secret-bearing output handling was kept as a public caution without carrying over donor-local file locations"
+                  "text": "the donor's lightweight service-list render maps to Dockform plan state and service detection over `docker compose config --services` plus config hashes"
                 },
                 {
                   "order": 4,
-                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes"
+                  "text": "the donor's deeper full-config render maps to `dockform compose render`, which renders the fully resolved Docker Compose config and masks secrets by default"
+                },
+                {
+                  "order": 5,
+                  "text": "the donor's startup handoff maps to Dockform `apply`, which builds the plan, shows it, asks for confirmation unless explicitly skipped, then applies the same prebuilt plan through Docker Compose"
                 }
               ]
             },
@@ -19173,19 +19359,23 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the render step still happens before startup"
+                  "text": "the review surface still happens before the stack is applied or started"
                 },
                 {
                   "order": 2,
-                  "text": "the render view still comes from the actual composed runtime rather than from declared profiles alone"
+                  "text": "the reviewed view still comes from resolved Docker Compose truth rather than only manifest narration"
                 },
                 {
                   "order": 3,
-                  "text": "service-list render remains the lighter pass and full config render remains the deeper local pass"
+                  "text": "service-level inspection remains the lighter pass and fully rendered config remains the deeper local pass"
                 },
                 {
                   "order": 4,
-                  "text": "full rendered config still stays local and potentially sensitive"
+                  "text": "full rendered config remains sensitive enough to need masking and local handling"
+                },
+                {
+                  "order": 5,
+                  "text": "startup, readiness, and lifecycle control remain outside the render-review atom"
                 }
               ]
             },
@@ -19196,15 +19386,15 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public wording can drift into generic configuration export if the pre-start review seam is not restated clearly"
+                  "text": "Dockform is a broader declarative management tool, so the technique must not absorb volume, secret, dashboard, image-upgrade, prune, or multi-host deployment ownership"
                 },
                 {
                   "order": 2,
-                  "text": "the bundle can widen into readiness or lifecycle semantics if it starts describing what should happen after the render step"
+                  "text": "Dockform's `plan` and `compose render` are separate commands, so the reusable evidence is the bounded plan/render-before-apply seam rather than one mandatory command name"
                 },
                 {
                   "order": 3,
-                  "text": "a generic example can hide the distinction between declared composition and actual rendered truth if it is too abstract"
+                  "text": "Docker Compose `config`, `--dry-run`, Helm `template`, Kustomize, or Skaffold render remain adjacent unless a source also preserves an explicit operator review seam before startup or apply"
                 }
               ]
             },
@@ -19215,15 +19405,27 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the public technique stays in `agent-workflows` because the reusable object is a pre-start operator step rather than a docs-only structure or an evaluation report"
+                  "text": "Dockform public docs describe it as a declarative Docker Compose workflow over stacks, supporting discovery, profiles, environment, secrets, and multi-context operation."
                 },
                 {
                   "order": 2,
-                  "text": "the donor already treats rendered truth as a separate layer from docs, composition introspection, and post-start validation"
+                  "text": "Dockform `dockform plan` is a read-only preview surface for the desired state before `dockform apply`."
                 },
                 {
                   "order": 3,
-                  "text": "the adapted bundle preserves the strongest bounded caution from the donor: full rendered config may be secret-bearing and should stay local"
+                  "text": "Dockform stack docs say plan/apply analyze planned services with `docker compose config --services`, running services with `docker compose ps`, and config drift with `docker compose config --hash`."
+                },
+                {
+                  "order": 4,
+                  "text": "Dockform `dockform compose render` renders a stack's fully resolved Docker Compose config and exposes masking controls, with `--show-secrets` explicitly marked dangerous."
+                },
+                {
+                  "order": 5,
+                  "text": "Dockform source confirms `apply` builds and prints a plan, requires confirmation unless `--skip-confirmation` is passed, then applies the same prebuilt plan; Docker Compose `up -d` is the later handoff, not the review step."
+                },
+                {
+                  "order": 6,
+                  "text": "Docker's own Compose docs support the substrate: `docker compose config` renders the actual data model to be applied to Docker Engine, while `docker compose --dry-run up` is still adjacent because it simulates command steps rather than owning the reviewable rendered-truth seam by itself."
                 }
               ]
             },
@@ -19235,12 +19437,12 @@
                 {
                   "order": 1,
                   "key": "verdict",
-                  "value_markdown": "works"
+                  "value_markdown": "exact-fit second context"
                 },
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded workflow technique for pre-start rendered runtime review"
+                  "value_markdown": "Dockform proves the same reusable move outside the donor lineage: render or preview resolved runtime truth before starting or applying a Compose stack, keep sensitive full config local or masked, and hand off to startup only after the reviewed plan/render seam"
                 }
               ]
             }

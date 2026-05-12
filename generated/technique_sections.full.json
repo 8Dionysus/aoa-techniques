@@ -2964,12 +2964,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- extracted from `abyss-stack`\n- promoted to `aoa-techniques` on 2026-03-22 as a bounded agent-workflow technique for pre-start rendered runtime review"
+          "content_markdown": "- extracted from `abyss-stack`\n- promoted to `aoa-techniques` on 2026-03-22 as a bounded agent-workflow technique for pre-start rendered runtime review\n- promoted to `canonical` on 2026-05-12 after Dockform confirmed the same plan/render-before-apply seam over resolved Docker Compose runtime truth outside the donor lineage"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep `contextual-host-doctor` as the readiness sibling rather than turning render review into host-preflight doctrine\n- keep `one-command-service-lifecycle` as the lifecycle sibling rather than absorbing startup control into this technique\n- add a second live context if another runtime stack uses the same pre-start rendered-truth seam"
+          "content_markdown": "- keep `contextual-host-doctor` as the readiness sibling rather than turning render review into host-preflight doctrine\n- keep `one-command-service-lifecycle` as the lifecycle sibling rather than absorbing startup control into this technique\n- keep watching for drift between rendered-truth review, deployment previews, readiness checks, and lifecycle control as more Compose-native tools adopt plan/apply workflows"
         }
       ]
     },

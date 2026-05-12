@@ -27,6 +27,7 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md) | GitHub Copilot agent-mode terminal-command confirmation plus GitHub Copilot CLI tool approvals | Public coding-agent surfaces keep mutation behind one explicit operator approval seam instead of hiding it inside generic autonomy. |
 | [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md) | OpenAI Codex CLI `codex exec` | A real stdin/stdout/file-first one-shot operator path exists beyond donor documentation and local adaptation. |
 | [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) | Aider plus committed public `.aider.chat.history.md` artifacts | Local AI coding session capture can survive as a project-visible Markdown artifact beyond the donor product family. |
+| [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | Dockform plan/render-before-apply plus masked full Compose render | Effective local runtime truth can be rendered, reviewed, and confirmed before startup without becoming lifecycle, readiness, deployment-preview, or secret-publication authority. |
 | [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) | `claude-code-log` | Already-saved session transcripts can survive as portable Markdown review artifacts beyond the donor product family. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
 
@@ -37,7 +38,6 @@ These are the current live external-evidence lanes worth searching next.
 | technique | last checked lane | adjacent or insufficient fits already ruled out | exact proof still needed | next honest search shape |
 |---|---|---|---|---|
 | [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | repo-local drift and evaluation-report lane plus public agent-markdown CI check/report lane, public prompt-eval CI lane, and the 2026-05-12 exemplar sweep over public context-report, token-budget, repo-packing, LLM-ready-docs, and CI reporting surfaces | local drift reports and composition audits; public instruction-check and workflow-report surfaces such as Continue `/check` and GitHub Agentic Workflows daily repo reports that emit PR checks or activity summaries; Promptfoo CI/CD and `promptfoo-action` surfaces that emit eval JSON or HTML, PR comments, and before/after prompt reports; GitHub Agentic Workflows token/audit reports, Repomix repo-packing and token-count surfaces, Repo Tokens badge-style token counts, `pytest-llm-report`, Calcis prompt cost estimates, and `llms-txt-action`, all of which are adjacent because they own workflow audit, context assembly, token/cost monitoring, test or prompt reports, or documentation conversion instead of the same CI-facing composition coverage or token-drift artifact | one second public CI-facing report over context composition coverage or token-drift that stays separate from composition mechanics, remediation policy, prompt-quality scoring, and generic PR policy checks | search public CI or docs-validation repos where assembled prompt or multi-fragment context coverage and token budgets are emitted as a read-only artifact, not just as eval matrices, pass or fail gates, token badges, repo-packing outputs, LLM-ready-doc generation, or activity digests |
-| [AOA-T-0036](../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md) | repo-local runtime and lifecycle lane plus public compose prestart-render lane and public render-before-apply/template lane | lifecycle wrappers, readiness-only checks, config rendering without a real pre-start review seam, `OpenDAX`-style config-before-startup surfaces, CoreMedia's public `docker compose config --services` prestart step backed by Docker Compose config docs, Docker Compose `config` and experimental `alpha dry-run`, and Helm `template`; these lanes prove useful rendering or simulation before apply or startup, but not yet a distinct render-review contract over effective local runtime truth | one second public runtime surface where effective composed truth is rendered and explicitly reviewed before startup as its own safety seam | search operator repos where render output is a named pre-start review step over actual resolved runtime state, not just a template render, deployment preview, or dry-run helper before `up` or install |
 | [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | public transcript-log export and rich session-view lane | transcript and log review surfaces such as `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, session summaries, and Markdown or HTML review views, but they still package transcript or log inspection rather than a bounded witness trace with explicit state-delta review notes and a pre-writeback summary posture | one second downstream consumer where a bounded run emits a structured witness trace plus human-readable summary before any writeback, compost, or canon-lift step | search public agent-run review surfaces where step order, tool visibility, state deltas, and a review-first summary survive together as one trace artifact before later memory or promotion layers |
 
 ## AOA-T-0032 Exemplar Sprint Notes
@@ -105,6 +105,39 @@ Rejected as still adjacent:
 
 Future watch shape: keep distinguishing deliberate project-visible session
 artifacts from accidental raw-log commits and ignored local tool history.
+
+## AOA-T-0036 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0036` exited the
+promoted queue through a bundle-local canonical review.
+
+Searched and accepted:
+
+- Dockform documents `plan` before `apply`, so the operator sees the planned
+  service/config change before Docker Compose startup is invoked.
+- Dockform documents `compose render` as a fully resolved Docker Compose config
+  render, with secrets masked by default unless explicitly shown.
+- Dockform source builds and prints the plan before confirmation, then applies
+  the already-built plan; its Docker Compose wrapper renders services, config
+  hashes, full config JSON, and raw resolved YAML before `docker compose up -d`.
+
+Rejected as still adjacent:
+
+- Plain `docker compose config`, `docker compose config --services`, and Docker
+  Compose `alpha dry-run` expose useful render or simulation primitives, but do
+  not by themselves establish the operator review seam.
+- Helm `template`, Kustomize build, Skaffold render, deployment previews, and
+  generic dry-run surfaces render manifests or deployment plans, but drift into
+  deployment-preview authority unless they center local runtime truth review.
+- `OpenDAX`-style config-before-startup lanes, Devcontainer
+  `read-configuration`, runtime utility pages, and Docker validation checklists
+  expose resolved configuration or service lists, but the object is readiness,
+  validation, or utility support rather than a distinct pre-start review
+  contract.
+
+Future watch shape: keep `AOA-T-0036` centered on the rendered-truth review seam
+and route lifecycle control, host readiness, deployment preview, and benchmark
+comparison back to their sibling techniques.
 
 ## Deferred Pack Watch
 
