@@ -22,7 +22,8 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 - earlier same-day graduation wave: [AOA-T-0026](../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Aider's `.aider.chat.history.md` session-artifact family and committed public repository examples
 - earlier graduation wave: [AOA-T-0028](../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md), [AOA-T-0031](../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md), [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md), and [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) moved to `canonical` on 2026-03-28 after exact-fit public reinforcement from GitHub Copilot coding-agent approvals, OpenAI Codex CLI `codex exec`, `claude-code-log`, and `coding-agent-search (cass)`
 - dominant blocker: most promoted bundles already have examples, checks, second-context adaptation, and canonical-readiness notes; the missing proof is usually one more live downstream adopter beyond the donor or documentation-first adaptation
-- fresh extraction watch: [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md), [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md), [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), [AOA-T-0100](../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md), [AOA-T-0105](../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md), [AOA-T-0106](../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md), and [AOA-T-0107](../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) still need second-context evidence before canonical discussion is honest
+- fresh extraction watch: [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md), [AOA-T-0097](../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md), [AOA-T-0098](../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md), [AOA-T-0099](../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md), [AOA-T-0100](../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md), [AOA-T-0105](../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md), [AOA-T-0106](../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md), and [AOA-T-0107](../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) still need second-context evidence before canonical discussion is honest
+- latest evidence-prep follow-through: [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) and [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) gained first second-context support on 2026-05-12 from `nuxt-content/nuxt-llms` and GitHub's issue / pull request template surfaces, but remain `promoted` while stronger default-use evidence is still missing
 
 ## Manual-first questbook pilot lane
 
@@ -62,9 +63,9 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `22` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `24` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
-| `fresh extraction lane` | `10` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
+| `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
 
 ## Swarm Rule
@@ -128,10 +129,10 @@ Shared blocker: the remaining promoted family members still need more live markd
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | Exact note-kind and note-path lift is still donor-family-shaped. | One second live markdown-first corpus beyond the current `aoa-evals` donor surface. |
-| [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | Fresh extraction with origin evidence only. | First second-context adaptation plus canonical-readiness review after one non-origin repo-doc routing consumer exists. |
-| [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | Fresh extraction with origin evidence only. | First second-context adaptation plus canonical-readiness review after one non-origin template-intake consumer exists. |
-| [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | Fresh extraction with origin evidence only. | First second-context adaptation plus canonical-readiness review after one non-origin semantic-review reader or consumer exists. |
+| [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | Exact note-kind and note-path lift is still donor-family-shaped; the 2026-05-12 Pack 6 pass ruled out Agent Loom as adjacent because it has typed markdown records and paths but no accepted derived note-kind/path provenance manifest. | One second live markdown-first corpus beyond the current `aoa-evals` donor surface that lifts typed note kind and path into a derived reader or manifest. |
+| [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | First second-context support recorded from `nuxt-content/nuxt-llms`; still promoted because the external proof is framework `llms.txt` reader generation rather than another repo-owned route manifest. | One more non-origin repo-owned docs route manifest or reader proving that the bounded source-doc set stays explicit outside framework-specific LLM docs generation. |
+| [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | First second-context support recorded from GitHub issue and pull request template behavior; still promoted because the external proof is platform-native intake rendering rather than a review-specific template manifest. | One public review-specific template manifest or intake reader that inventories authored templates without owning approval, triage, or review state. |
+| [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | Fresh extraction with origin evidence only; the 2026-05-12 Pack 6 pass ruled out AI review, code review summary, quality-report, and scoring lanes as adjacent. | First second-context adaptation plus canonical-readiness review after one non-origin authored semantic-review or boundary-review reader exists. |
 
 ### Pack 7 - History Artifacts
 
@@ -459,8 +460,9 @@ Closed wave:
    - history artifacts
    - goal: secure one more live adopter per coherent pack, then reopen bundle-local canonical reviews
 3. `Wave C - fresh extraction follow-through`
-   - `AOA-T-0046`, `AOA-T-0047`, `AOA-T-0048`, `AOA-T-0097`,
-     `AOA-T-0098`, `AOA-T-0099`, `AOA-T-0100`
+   - `AOA-T-0048`, `AOA-T-0097`,
+     `AOA-T-0098`, `AOA-T-0099`, `AOA-T-0100`, `AOA-T-0105`,
+     `AOA-T-0106`, `AOA-T-0107`
    - goal: add second-context and canonical-readiness scaffolding only after a real non-origin consumer exists
 4. `Wave D - narrow status-transition PRs`
    - open one `promoted -> canonical` PR per technique only after that bundle's own `canonical-readiness.md` can honestly switch to `approve for canonical promotion`

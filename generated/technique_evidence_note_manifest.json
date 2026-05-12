@@ -10286,6 +10286,10 @@
                 {
                   "order": 2,
                   "text": "a future canonical review should show that typed note kinds and note paths survive repeated use without turning into graph semantics or flattened metadata"
+                },
+                {
+                  "order": 3,
+                  "text": "the 2026-05-12 Pack 6 pass checked Agent Loom as a public markdown-first record corpus; it remains adjacent because it has typed evidence records and paths, but no accepted derived note-kind/path provenance manifest or reader surface matching this bundle's exact lift contract"
                 }
               ]
             },
@@ -25626,6 +25630,141 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0046"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repo-doc-surface-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`aoa-techniques` already projects a bounded repo-doc source set into generated repo-doc reader surfaces."
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "`nuxt-content/nuxt-llms` provides a public docs-to-`llms.txt` reader route, using configured sections and links as the bounded downstream reader object."
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now has origin evidence plus first non-origin reader evidence, but the second context is a framework module example rather than another repository's durable maintainer-facing route manifest."
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique is the right default when the exact question is \"which authored repo doc should this reader open next?\""
+                },
+                {
+                  "order": 2,
+                  "text": "it remains narrower than docs search, documentation conversion, policy routing, or full docs taxonomy."
+                },
+                {
+                  "order": 3,
+                  "text": "the fresh second-context evidence makes the pattern real beyond `aoa-techniques`, but canonical promotion should wait until one more public corpus or repo-owned route surface shows the same bounded source-owned docs set feeding a subordinate reader without framework-specific assumptions."
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-12"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the note names only public repository paths, public source behavior, and reusable source-lift boundaries."
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "an external reader can understand the pattern without OS Abyss, private docs, or hidden generator state."
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one more non-origin repo-owned source set or route manifest would show that the pattern is not only an `llms.txt` framework feature."
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should prove that local planning docs, deeper guides, and review surfaces still stay outside the bounded repo-doc source class."
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0046` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "carry the Nuxt LLMs evidence as first second-context support, not as a status flip"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
           "title": "Origin Evidence",
@@ -25701,6 +25840,162 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0046"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repo-doc-surface-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "nuxt-llms"
+                },
+                {
+                  "order": 2,
+                  "key": "repository",
+                  "value_markdown": "`nuxt-content/nuxt-llms`"
+                },
+                {
+                  "order": 3,
+                  "key": "observed revision",
+                  "value_markdown": "`6faa1c45e082274267eae9295b501ab0053d0365`"
+                },
+                {
+                  "order": 4,
+                  "key": "public surfaces",
+                  "value_markdown": "- `src/runtime/server/routes/llms.txt.get.ts`\n- `src/runtime/types.ts`"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "docs reader shape",
+                  "value_markdown": "Nuxt LLMs turns configured documentation sections into a `llms.txt` reader route made of titles, descriptions, links, and notes."
+                },
+                {
+                  "order": 2,
+                  "key": "source boundary",
+                  "value_markdown": "the reader route is downstream from configured documentation metadata rather than the authored docs themselves becoming generated truth."
+                },
+                {
+                  "order": 3,
+                  "key": "route purpose",
+                  "value_markdown": "the generated text surface answers \"which docs links should an LLM or reader open?\" rather than replacing the source documentation or becoming a product-wide docs taxonomy."
+                },
+                {
+                  "order": 4,
+                  "key": "adaptation fit",
+                  "value_markdown": "this closes the first non-origin repo-doc routing consumer for the bundle's bounded source-lift contract."
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "authored documentation and configured doc links remain the source layer."
+                },
+                {
+                  "order": 2,
+                  "text": "the derived reader is route-oriented and bounded."
+                },
+                {
+                  "order": 3,
+                  "text": "the reader output is useful because it points back to source docs instead of embedding all meaning."
+                },
+                {
+                  "order": 4,
+                  "text": "the surface does not claim release policy, status policy, scoring, or filesystem-wide doc discovery authority."
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "an `llms.txt` surface can be mistaken for a full docs authority if maintainers stop routing readers back to source docs."
+                },
+                {
+                  "order": 2,
+                  "text": "a framework module can hide which source set was intentionally selected unless the configuration remains explicit."
+                },
+                {
+                  "order": 3,
+                  "text": "broad \"LLM-ready docs\" tooling can drift into documentation conversion rather than repo-doc routing; this bundle only uses the bounded route-reader portion."
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`src/runtime/server/routes/llms.txt.get.ts` builds a text route from configured sections and link entries."
+                },
+                {
+                  "order": 2,
+                  "text": "`src/runtime/types.ts` defines section entries with `title`, optional `description`, and linked `href` values, keeping the reader surface route-shaped."
+                },
+                {
+                  "order": 3,
+                  "text": "the public module repository provides a real non-origin implementation of docs-to-reader projection without making the generated reader the authored source of meaning."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "first second-context adaptation recorded"
+                },
+                {
+                  "order": 2,
+                  "text": "keep `AOA-T-0046` promoted until canonical review has more than one fresh extraction proof point and a sharper default-use rationale"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -25708,6 +26003,141 @@
       "id": "AOA-T-0047",
       "technique_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0047"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "github-review-template-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`aoa-techniques` already projects authored `.github` issue and pull-request templates into a bounded review-template manifest."
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "GitHub's public template model turns authored repository templates into issue chooser entries, rendered issue forms, and pull request body intake surfaces."
+                },
+                {
+                  "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now has first non-origin intake evidence, but the second context is platform-native template rendering rather than another repo's explicit downstream template manifest or review reader."
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique is the right default when a repository needs a bounded prompt-shape lookup over review or intake templates."
+                },
+                {
+                  "order": 2,
+                  "text": "it is narrower than triage automation, approval policy, review-state storage, or workflow routing."
+                },
+                {
+                  "order": 3,
+                  "text": "the fresh evidence confirms that source templates can become downstream intake surfaces, but canonical promotion should wait until a review-specific consumer uses the template inventory as a derived reader without smuggling in workflow verdicts."
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-12"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the note cites public GitHub documentation and source-template behavior only."
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the pattern remains understandable as template intake, not as hidden GitHub policy or private repository workflow."
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "one public review-specific template manifest or intake reader beyond platform-native issue and pull request rendering would make the default-use case stronger."
+                },
+                {
+                  "order": 2,
+                  "text": "a future canonical review should confirm that the technique still refuses approval, triage, and review-state logic."
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0047` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "carry GitHub templates as first second-context support, not as a status flip"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",
@@ -25784,6 +26214,157 @@
               ]
             }
           ]
+        },
+        {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0047"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "github-review-template-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "name",
+                  "value_markdown": "GitHub issue and pull request templates"
+                },
+                {
+                  "order": 2,
+                  "key": "public source repository",
+                  "value_markdown": "`github/docs`"
+                },
+                {
+                  "order": 3,
+                  "key": "observed surfaces",
+                  "value_markdown": "- `content/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates.md`\n- `content/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository.md`\n- `content/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository.md`"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "intake lift",
+                  "value_markdown": "authored issue templates and pull request templates become contributor-facing intake surfaces in GitHub's issue chooser, rendered issue forms, and pull request body."
+                },
+                {
+                  "order": 2,
+                  "key": "source boundary",
+                  "value_markdown": "template files live in the repository or organization account, and their availability depends on committed source placement such as `.github/ISSUE_TEMPLATE` or `.github/PULL_REQUEST_TEMPLATE`."
+                },
+                {
+                  "order": 3,
+                  "key": "review boundary",
+                  "value_markdown": "the template layer shapes what contributors provide; it does not decide triage, approval, review outcome, or workflow state."
+                },
+                {
+                  "order": 4,
+                  "key": "adaptation fit",
+                  "value_markdown": "this closes the first non-origin template-intake consumer for the bundle's bounded source-lift contract."
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "authored templates remain the prompt source."
+                },
+                {
+                  "order": 2,
+                  "text": "the downstream surface is an intake reader or form, not a verdict engine."
+                },
+                {
+                  "order": 3,
+                  "text": "issue forms may structure inputs, but the result remains an issue body or pull request body for later human or workflow review."
+                },
+                {
+                  "order": 4,
+                  "text": "template chooser behavior supports routing to the right prompt shape without turning the manifest or UI into policy."
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "platform-native forms can tempt maintainers to treat structured intake as triage or approval logic."
+                },
+                {
+                  "order": 2,
+                  "text": "generic issue templates are too broad unless the template-to-intake boundary stays visible."
+                },
+                {
+                  "order": 3,
+                  "text": "pull request templates can be ordinary prompts; they count here only because GitHub exposes them as default contributor intake surfaces while source templates remain authored files."
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "GitHub's issue-template documentation describes templates on the default branch under `.github/ISSUE_TEMPLATE` and a template chooser for new issues."
+                },
+                {
+                  "order": 2,
+                  "text": "GitHub issue forms convert configured form inputs into a standard Markdown issue comment while keeping the form schema in repository-owned template files."
+                },
+                {
+                  "order": 3,
+                  "text": "GitHub pull request templates automatically populate the pull request body from committed template files, including `.github/PULL_REQUEST_TEMPLATE`."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "first second-context adaptation recorded"
+                },
+                {
+                  "order": 2,
+                  "text": "keep `AOA-T-0047` promoted until canonical review has a stronger review-specific intake consumer or manifest beyond platform-native template rendering"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -25791,6 +26372,141 @@
       "id": "AOA-T-0048",
       "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/notes/canonical-readiness.md",
+          "kind": "canonical_readiness",
+          "title": "Canonical Readiness",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0048"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-review-surface-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Verdict",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "defer strongly for now"
+                }
+              ]
+            },
+            {
+              "heading": "Evidence summary",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "origin evidence",
+                  "value_markdown": "`aoa-techniques` already has authored semantic-review docs and a derived semantic-review manifest."
+                },
+                {
+                  "order": 2,
+                  "key": "second context",
+                  "value_markdown": "none accepted yet."
+                },
+                {
+                  "order": 3,
+                  "key": "searched lane",
+                  "value_markdown": "the 2026-05-12 Pack 6 pass checked public review and evaluation products that summarize or score reviewed artifacts, but they did not preserve the same authored semantic-review doc as source plus bounded derived lookup surface."
+                }
+              ]
+            },
+            {
+              "heading": "Default-use rationale",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the technique is the right shape when a repository has authored cluster or boundary review docs and needs a subordinate reader surface."
+                },
+                {
+                  "order": 2,
+                  "text": "it is not the right shape for AI review scoring, code review summaries, quality dashboards, policy checks, or automated semantic verdicts."
+                },
+                {
+                  "order": 3,
+                  "text": "without a non-origin semantic-review reader, the bundle remains a fresh extraction rather than a default recommendation."
+                }
+              ]
+            },
+            {
+              "heading": "Fresh public-safety check",
+              "order": 5,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "review date",
+                  "value_markdown": "2026-05-12"
+                },
+                {
+                  "order": 2,
+                  "key": "result",
+                  "value_markdown": "pass"
+                },
+                {
+                  "order": 3,
+                  "key": "sanitization still holds",
+                  "value_markdown": "the bundle and this note keep review meaning public, authored, and source-linked."
+                },
+                {
+                  "order": 4,
+                  "key": "public reuse check",
+                  "value_markdown": "the pattern is understandable, but default recommendation still lacks external reuse."
+                }
+              ]
+            },
+            {
+              "heading": "Remaining gaps",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "find one public repository or tool where authored semantic-review or boundary-review markdown remains the source and a derived reader or manifest exposes cluster scope, findings, and next-step summary."
+                },
+                {
+                  "order": 2,
+                  "text": "reject AI review products, quality scores, and issue summaries unless they preserve authored review-doc source authority and bounded lookup."
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep `AOA-T-0048` `promoted`"
+                },
+                {
+                  "order": 2,
+                  "text": "do not add second-context evidence until a real semantic-review reader appears"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/notes/origin-evidence.md",
           "kind": "origin_evidence",

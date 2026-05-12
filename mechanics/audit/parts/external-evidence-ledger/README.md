@@ -432,9 +432,59 @@ These bundles still need external evidence, but no new bounded lane note is wort
 
 | technique | current blocker | next honest trigger |
 |---|---|---|
-| [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | still needs one second markdown-first corpus beyond the current donor family | one committed non-eval corpus that reuses typed note-kind and note-path provenance |
+| [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | Stage 2 Pack 6 checked Agent Loom; it remains adjacent because typed markdown evidence records and paths exist, but no derived note-kind/path provenance manifest or reader was accepted | one committed non-eval corpus that reuses typed note-kind and note-path provenance in a derived reader or manifest |
 | [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) | Stage 2 checked intent-classification, chatbot eval, and IBN benchmark lanes; they remain adjacent because they evaluate intents rather than recording one-new-intent dry-run-chain rollout | one non-origin rollout record proving the same checklist on a real new-intent extension path |
 | [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | Stage 2 checked exact-heading public code search, sibling corpus search, and broad AI risk/framework lanes; they remain adjacent unless the exact five-part markdown contract is present | one second committed corpus using the exact five-part `Risks` split |
+
+## AOA-T-0020 And AOA-T-0046 Through AOA-T-0048 Stage 2 Pack 6 Notes
+
+2026-05-12 result: Pack 6 moved two fresh source-lift rows from origin-only
+to first second-context support, and preserved two adjacent or unresolved lanes
+without forcing status changes.
+
+Exact-fit second-context support:
+
+- [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md):
+  `nuxt-content/nuxt-llms` at `6faa1c45e082274267eae9295b501ab0053d0365`
+  exposes a `llms.txt` route built from configured documentation sections,
+  titles, descriptions, links, and notes. This fits the bounded repo-doc
+  surface-lift contract because the generated reader points back to authored
+  docs instead of becoming docs truth, policy, scoring, or a filesystem-wide
+  taxonomy.
+- [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md):
+  GitHub's public issue and pull request template behavior turns authored
+  repository templates into issue chooser entries, rendered issue forms, and
+  pull request body intake surfaces. This fits the template-intake lift
+  contract as first second-context evidence, but not yet as a review-specific
+  manifest or state machine.
+
+Adjacent or unresolved lanes:
+
+- [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md):
+  Agent Loom at `0b8273c25c367bd64b7a9a31c95cfca26a620e7e` is a strong
+  public markdown-first record corpus with typed evidence records, audit
+  records, and record paths. It remains adjacent because the accepted source
+  surfaces preserve record grammar and repo-local graph reading, not the same
+  derived note-kind plus note-path provenance manifest or reader.
+- [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md):
+  public AI/code review and quality-report products were checked as likely
+  overlap, but they widen into scoring, summarization, policy checks, or
+  product review rather than preserving authored semantic-review markdown as
+  the source for a bounded derived cluster reader.
+
+Next honest search shape:
+
+- `AOA-T-0020`: a committed non-eval markdown corpus with typed support notes
+  lifted by kind and path into a derived reader or manifest.
+- `AOA-T-0046`: a second repo-owned docs route manifest outside framework
+  `llms.txt` generation, proving the source-set boundary survives in ordinary
+  maintainer docs.
+- `AOA-T-0047`: a review-specific template manifest or intake reader that
+  inventories authored templates without owning approval, triage, or review
+  state.
+- `AOA-T-0048`: an authored semantic-review or boundary-review markdown corpus
+  with a derived cluster/finding/next-step reader, not an AI review score or
+  generic review summary.
 
 ## Notes
 

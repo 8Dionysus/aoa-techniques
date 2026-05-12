@@ -22,6 +22,14 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- advanced the Stage 2 Pack 6 KAG/source-lift evidence pass without status
+  flips: `AOA-T-0046 repo-doc-surface-lift` gained first second-context
+  support from `nuxt-content/nuxt-llms`, `AOA-T-0047
+  github-review-template-lift` gained first second-context support from
+  GitHub issue and pull-request template surfaces, while `AOA-T-0020
+  evidence-note-provenance-lift` and `AOA-T-0048
+  semantic-review-surface-lift` recorded adjacent searched lanes and remain
+  promoted
 - promoted `AOA-T-0024 upstream-mirroring-with-provenance`, `AOA-T-0025
   capability-spec-versioning`, `AOA-T-0040 skill-vs-command-boundary`,
   `AOA-T-0041 skill-marketplace-curation`, and `AOA-T-0043
