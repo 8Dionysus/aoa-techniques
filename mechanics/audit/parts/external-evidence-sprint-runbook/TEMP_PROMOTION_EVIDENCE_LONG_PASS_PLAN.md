@@ -175,7 +175,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0055 requirements-design-tasks-ladder](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | agent-workflows / workflow | Pack 12 planning ladder | exact-fit second context; exits to canonical | SpecForge-Agent requirements/design/tasks artifact sequence closes the pre-execution planning ladder gap; GitHub Spec Kit supports the layer boundary without importing SDD doctrine |
 | Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | exact-fit second context; exits to canonical | `mycel` bounded AI-agent mailbox closes the thread/mailbox replay and explicit local ACK gap |
 | Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | exact-fit second context; exits to canonical | `cwc-long-running-agents` progress-file handoff plus `openclaw-memory-kit` compaction memoryFlush handoff closes the pre-context-loss packet gap |
-| Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | pending |  |
+| Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | adjacent lanes recorded; remains promoted | `cmux` request ACKs, Gas Town handoff mail/session cycling/escalation ACKs, and exact phrase GitHub code-search lanes are adjacent rather than proof of receiver-side packet acceptance before continuation |
 | Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | pending |  |
 | Stage 3 | [AOA-T-0060 session-opening-ritual-before-work](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | agent-workflows / handoff | Pack 17 session opening ritual before work | pending |  |
 | Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | pending |  |
@@ -311,7 +311,9 @@ external adopter, markdown-first reuse, or long-gap donor proof.
     exact-fit `cwc-long-running-agents` progress-file handoff and
     `openclaw-memory-kit` compaction memoryFlush handoff evidence found,
     bundle-local canonical review approved
-17. Pack 15 - Receipt-Confirmed Handoff Packet: `AOA-T-0058`
+17. Pack 15 - Receipt-Confirmed Handoff Packet: `AOA-T-0058` - closed;
+    adjacent-only `cmux` request ACK, Gas Town handoff/session-cycling, and
+    exact phrase GitHub code-search lanes recorded, bundle remains promoted
 18. Pack 16 - Git-Verified Handoff Claims: `AOA-T-0059`
 19. Pack 17 - Session Opening Ritual Before Work: `AOA-T-0060`
 20. Pack 18 - Cross-Repo Resource Map Bootstrap: `AOA-T-0061`
@@ -1055,6 +1057,50 @@ Reject:
   long-term memory recall;
 - full harness, evaluator, proof gate, kill switch, steering hook, unattended
   loop, cron, or lifecycle governance.
+
+### AOA-T-0058: `receipt-confirmed-handoff-packet`
+
+Stage 3 Pack 15 verdict, 2026-05-12: no exact-fit second context found.
+The bundle remains `promoted` because the strongest inspected public lanes
+show handoff delivery, request acknowledgment, session cycling, or escalation
+acknowledgment rather than a receiver-side receipt record for a specific
+handoff packet that gates continuation.
+
+Searched evidence:
+
+- `cmux` multi-agent protocol gist `409030b36c1889f8fc28c0448f05f95f`
+  has a handoff payload, correlation IDs, and mandatory `ACK`/`RES` flow for
+  requests, but the `ACK` means the receiver got the request and is working on
+  it rather than confirming reviewed acceptance of a packet before continuing.
+- `gastownhall/gastown` at
+  `2eafac9784301e6a8832a8fa32df9143a17c236a` has `gt handoff`, generated
+  handoff mail, fresh-session auto-prime, pending-mail visibility, and
+  escalation acknowledgment, but it does not expose a separate receipt state
+  that must exist before continuing from one specific handoff packet.
+- GitHub code search was attempted for exact combinations around `handoff
+  packet`, `receipt`, `accepted`, `ACK`, and `continue`; no stronger exact-fit
+  public candidate surfaced during this pass.
+
+Exact evidence still needed:
+
+- one public workflow has a stable handoff packet or handoff reference before
+  the receiving side continues;
+- the receiver records `accepted`, `reviewed`, `received`, or equivalent
+  against that packet or reference;
+- continuation is visibly blocked until that receiver-side receipt exists;
+- the receipt remains smaller than mailbox transport, queue governance,
+  request/delivery acknowledgment, escalation handling, or broad approval
+  workflow doctrine.
+
+Reject:
+
+- request ACKs, delivery receipts, thread read state, assignment records, or
+  generic mailbox acknowledgments;
+- session auto-prime, handoff mail, bootstrap read, or transfer-control
+  handoff semantics without a separate packet receipt gate;
+- escalation acknowledgment, rejection policy, stop/return rules, or broad
+  continuation governance;
+- queue, task-platform, broker, trust, encryption, or orchestration doctrine.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 
