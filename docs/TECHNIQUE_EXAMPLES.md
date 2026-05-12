@@ -418,6 +418,28 @@ See also:
 |---|---|---|---|
 | Direct Relation To Selection Hint | `present` | `techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/examples/direct-relation-to-selection-hint.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
 
+### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Multi-Target Skill Propagation | `present` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
+| Minimal Cross-Agent Skill Propagation | `present` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
+
+### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Hierarchical Rule Loading | `present` | `techniques/instruction/instruction-surface/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
+| Minimal Nested Rule Loading | `present` | `techniques/instruction/instruction-surface/nested-rule-loading/examples/minimal-nested-rule-loading.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
+
+### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Fragment-First Assembly | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-fragment-first-assembly.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
+| Concrete Subtree Fragmented Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
+| Minimal Fragmented Agent Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
+
 ### [AOA-T-0034](../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md) - public-safe-artifact-sanitization (`canonical`)
 
 | example | body | example path | source |
@@ -449,28 +471,6 @@ See also:
 |---|---|---|---|
 | Concrete Capability Upgrade With Compat Window | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/concrete-capability-upgrade-with-compat-window.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
 | Minimal Capability Spec Versioning | `present` | `techniques/instruction/capability-registry/capability-spec-versioning/examples/minimal-capability-spec-versioning.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md) |
-
-### [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) - cross-agent-skill-propagation (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Multi-Target Skill Propagation | `present` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/concrete-multi-target-skill-propagation.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
-| Minimal Cross-Agent Skill Propagation | `present` | `techniques/instruction/instruction-surface/cross-agent-skill-propagation/examples/minimal-cross-agent-skill-propagation.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) |
-
-### [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) - nested-rule-loading (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Hierarchical Rule Loading | `present` | `techniques/instruction/instruction-surface/nested-rule-loading/examples/concrete-hierarchical-rule-loading.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
-| Minimal Nested Rule Loading | `present` | `techniques/instruction/instruction-surface/nested-rule-loading/examples/minimal-nested-rule-loading.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md) |
-
-### [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) - fragmented-agent-context (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Fragment-First Assembly | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-fragment-first-assembly.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
-| Concrete Subtree Fragmented Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/concrete-subtree-fragmented-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
-| Minimal Fragmented Agent Context | `present` | `techniques/instruction/instruction-surface/fragmented-agent-context/examples/minimal-fragmented-agent-context.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) |
 
 ### [AOA-T-0033](../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) - decision-rationale-recording (`promoted`)
 

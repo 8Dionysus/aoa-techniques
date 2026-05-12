@@ -258,8 +258,8 @@
       ],
       "counts": {
         "total": 7,
-        "canonical": 2,
-        "promoted": 5,
+        "canonical": 5,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 7,
@@ -286,10 +286,10 @@
       "technique_ids": [
         "AOA-T-0012",
         "AOA-T-0013",
-        "AOA-T-0024",
         "AOA-T-0027",
         "AOA-T-0029",
         "AOA-T-0030",
+        "AOA-T-0024",
         "AOA-T-0035"
       ],
       "techniques": [
@@ -312,19 +312,10 @@
           "kind": "distribution"
         },
         {
-          "id": "AOA-T-0024",
-          "name": "upstream-mirroring-with-provenance",
-          "domain": "docs",
-          "status": "promoted",
-          "summary": "Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.",
-          "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
-          "kind": "distribution"
-        },
-        {
           "id": "AOA-T-0027",
           "name": "cross-agent-skill-propagation",
           "domain": "docs",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
           "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
           "kind": "distribution"
@@ -333,7 +324,7 @@
           "id": "AOA-T-0029",
           "name": "nested-rule-loading",
           "domain": "docs",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
           "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
           "kind": "composition"
@@ -342,10 +333,19 @@
           "id": "AOA-T-0030",
           "name": "fragmented-agent-context",
           "domain": "docs",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
           "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
           "kind": "composition"
+        },
+        {
+          "id": "AOA-T-0024",
+          "name": "upstream-mirroring-with-provenance",
+          "domain": "docs",
+          "status": "promoted",
+          "summary": "Mirror upstream-owned content into a curated local collection through an explicit source manifest and preserved provenance so the local copy stays reviewable without pretending to be the canonical source.",
+          "technique_path": "techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md",
+          "kind": "distribution"
         },
         {
           "id": "AOA-T-0035",

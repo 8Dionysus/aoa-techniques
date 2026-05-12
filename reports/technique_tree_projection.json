@@ -1514,6 +1514,72 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0027",
+      "name": "cross-agent-skill-propagation",
+      "domain": "docs",
+      "kind": "distribution",
+      "status": "canonical",
+      "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
+      "current_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
+      "family": "instruction-surface",
+      "proposed_trunk": "instruction",
+      "proposed_shelf": "instruction-surface",
+      "proposed_future_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:instruction-surface",
+        "domain:docs",
+        "kind:distribution",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
+      "id": "AOA-T-0029",
+      "name": "nested-rule-loading",
+      "domain": "docs",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
+      "current_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
+      "family": "instruction-surface",
+      "proposed_trunk": "instruction",
+      "proposed_shelf": "instruction-surface",
+      "proposed_future_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:instruction-surface",
+        "domain:docs",
+        "kind:composition",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
+      "id": "AOA-T-0030",
+      "name": "fragmented-agent-context",
+      "domain": "docs",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
+      "current_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
+      "family": "instruction-surface",
+      "proposed_trunk": "instruction",
+      "proposed_shelf": "instruction-surface",
+      "proposed_future_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:instruction-surface",
+        "domain:docs",
+        "kind:composition",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0034",
       "name": "public-safe-artifact-sanitization",
       "domain": "docs",
@@ -1622,72 +1688,6 @@
         "review_status:boundary-watch"
       ],
       "stop_line": "Review split, merge, owner, proof, or governance boundary before migration."
-    },
-    {
-      "id": "AOA-T-0027",
-      "name": "cross-agent-skill-propagation",
-      "domain": "docs",
-      "kind": "distribution",
-      "status": "promoted",
-      "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
-      "current_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
-      "family": "instruction-surface",
-      "proposed_trunk": "instruction",
-      "proposed_shelf": "instruction-surface",
-      "proposed_future_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:instruction-surface",
-        "domain:docs",
-        "kind:distribution",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0029",
-      "name": "nested-rule-loading",
-      "domain": "docs",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
-      "current_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
-      "family": "instruction-surface",
-      "proposed_trunk": "instruction",
-      "proposed_shelf": "instruction-surface",
-      "proposed_future_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:instruction-surface",
-        "domain:docs",
-        "kind:composition",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0030",
-      "name": "fragmented-agent-context",
-      "domain": "docs",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
-      "current_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
-      "family": "instruction-surface",
-      "proposed_trunk": "instruction",
-      "proposed_shelf": "instruction-surface",
-      "proposed_future_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:instruction-surface",
-        "domain:docs",
-        "kind:composition",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
       "id": "AOA-T-0033",

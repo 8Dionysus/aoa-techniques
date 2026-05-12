@@ -1803,6 +1803,83 @@
       }
     },
     {
+      "id": "AOA-T-0027",
+      "name": "cross-agent-skill-propagation",
+      "domain": "docs",
+      "kind": "distribution",
+      "status": "canonical",
+      "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
+      "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
+      "topology": {
+        "family": "instruction-surface",
+        "capability_class": [
+          "coordinate",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "docs",
+          "instructions"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "read-only",
+          "approval-required"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0029",
+      "name": "nested-rule-loading",
+      "domain": "docs",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
+      "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
+      "topology": {
+        "family": "instruction-surface",
+        "capability_class": [
+          "coordinate",
+          "transform",
+          "observe"
+        ],
+        "substrate": [
+          "docs",
+          "instructions"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0030",
+      "name": "fragmented-agent-context",
+      "domain": "docs",
+      "kind": "composition",
+      "status": "canonical",
+      "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
+      "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
+      "topology": {
+        "family": "instruction-surface",
+        "capability_class": [
+          "coordinate",
+          "transform",
+          "observe"
+        ],
+        "substrate": [
+          "docs",
+          "instructions",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "security-sensitive"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0034",
       "name": "public-safe-artifact-sanitization",
       "domain": "docs",
@@ -1930,83 +2007,6 @@
         "execution_profile": "orchestration-required",
         "risk_posture": [
           "mutating"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0027",
-      "name": "cross-agent-skill-propagation",
-      "domain": "docs",
-      "kind": "distribution",
-      "status": "promoted",
-      "summary": "Keep one canonical skill or rule source and propagate it to multiple agent-facing targets without turning each target into a hand-maintained source of truth.",
-      "technique_path": "techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md",
-      "topology": {
-        "family": "instruction-surface",
-        "capability_class": [
-          "coordinate",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "docs",
-          "instructions"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "read-only",
-          "approval-required"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0029",
-      "name": "nested-rule-loading",
-      "domain": "docs",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Load hierarchical rule layers with explicit precedence so nested additions stay subordinate to one canonical source of ownership.",
-      "technique_path": "techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md",
-      "topology": {
-        "family": "instruction-surface",
-        "capability_class": [
-          "coordinate",
-          "transform",
-          "observe"
-        ],
-        "substrate": [
-          "docs",
-          "instructions"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0030",
-      "name": "fragmented-agent-context",
-      "domain": "docs",
-      "kind": "composition",
-      "status": "promoted",
-      "summary": "Keep agent context in bounded fragments before deterministic assembly so modular authoring stays reviewable without collapsing into the final generated artifact.",
-      "technique_path": "techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md",
-      "topology": {
-        "family": "instruction-surface",
-        "capability_class": [
-          "coordinate",
-          "transform",
-          "observe"
-        ],
-        "substrate": [
-          "docs",
-          "instructions",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "security-sensitive"
         ]
       }
     },

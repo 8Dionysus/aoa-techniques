@@ -32,15 +32,15 @@
 ## Import-path assessment
 
 - result: pass
-- this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique
-- the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context
+- at import time, this was a successful bounded external import and the bundle was strong enough to enter the corpus as a `promoted` technique
+- at import time, the import path was strong enough for initial publication, but not strong enough to justify canonical default status without another live reuse context
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation
+- at import time, the smallest remaining gap was one live second context beyond the donor and documentation-first adaptation
 - this new adjacent import does not count as live closure evidence for `AOA-T-0013`, because one-source-to-many-target instruction distribution is a different contract from cross-agent skill or rule propagation
 
 ## Recommendation
 
-- accept `AOA-T-0027` as a bounded external import and publish it as `promoted`
-- defer any canonical review until another live adopter confirms that the shared-skill propagation contract survives outside the donor repository
+- import-time recommendation: accept `AOA-T-0027` as a bounded external import and initially classify it as `promoted`
+- later canonical review is owned by `notes/canonical-readiness.md` and `notes/adverse-effects-review.md`, not by this import receipt

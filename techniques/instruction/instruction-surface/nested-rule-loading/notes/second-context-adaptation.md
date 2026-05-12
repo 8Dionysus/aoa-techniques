@@ -5,16 +5,16 @@
 - name: nested-rule-loading
 
 ## Target project
-- name: aoa-techniques
-- environment: public library repository with technique bundles, generated catalog surfaces, and explicit provenance-note discipline
-- runtime: documentation-first repository that records the nested-loading pattern rather than shipping the donor loader itself
+- name: Claude Code memory and rules
+- environment: public Claude Code documentation for project, user, local, managed, nested, and path-scoped instruction surfaces
+- runtime: `CLAUDE.md`, `CLAUDE.local.md`, and `.claude/rules/` files loaded through directory hierarchy, import, and path-scope rules
 
 ## What changed
 
-- paths: the donor supports layered rule loading with explicit precedence; this adaptation presents that hierarchy as a generic public technique with one canonical source and subordinate nested layers
-- services: no MCP propagation, installer integration, or skills propagation is required in this repository
-- dependencies: the adaptation depends on declared source ownership, nested layer precedence, and repeatable loading, not on the donor CLI breadth
-- operating assumptions: contributors should treat nested layers as scoped additions and keep local wrapper notes visibly separate
+- paths: Claude Code loads `CLAUDE.md` and `CLAUDE.local.md` files while walking up from the working directory, discovers subtree files on demand, and also supports `.claude/rules/` markdown files with optional path scoping
+- services: no donor CLI, MCP propagation, skill propagation, installer behavior, or multi-target distribution is required for this proof
+- dependencies: the adaptation depends on declared scope, loading order, closer-file priority, and repeatable path-triggered rule inclusion
+- operating assumptions: parent instructions carry shared project context while nested files and path-scoped rules stay subordinate, scoped, and reviewable
 
 ## What stayed invariant
 
@@ -24,15 +24,17 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can become vague if a project adds nested layers but drops the canonical source as the actual ownership authority
-- some repositories may keep layered files but stop treating precedence as part of the real contract
+- Claude Code concatenates loaded files rather than enforcing a strict override engine, so the proof must stay on declared order and priority rather than hidden conflict resolution
+- project rules can become a fragment library if topic splits dominate the hierarchy question
+- path-scoped rules load lazily, so reviewers need to check the source hierarchy and the loaded context rather than only the session start view
 
 ## Evidence
 
-- the donor `README.md` describes hierarchical rule behavior with explicit precedence in the broader rule system
-- the public contract can be narrowed to nested loading without carrying over the rest of the donor breadth
-- this imported technique keeps the core at hierarchy plus precedence, which is reusable across repositories that layer rule sources
+- Claude Code memory documentation checked on 2026-05-12 states that `CLAUDE.md` files have scoped locations, more specific locations take precedence over broader ones, hierarchy files above the working directory load at launch, and subdirectory files load on demand
+- the same documentation describes filesystem-root-to-working-directory ordering, closer files being read later, and user-level rules loading before project rules so project rules have higher priority
+- `.claude/rules/` adds a recursive markdown rule layer with topic files, unconditional rules, and path-scoped rules that load only for matching files
 
 ## Result
 
-- works as a documentation-first second context and preserves the bounded core without carrying over donor-specific product breadth
+- exact-fit second context confirmed
+- the bundle can move from documentation-first promoted posture to canonical default, as long as it stays about hierarchical loading and explicit precedence rather than hidden prompt control, multi-target propagation, generic fragment management, or product-width Claude Code memory doctrine
