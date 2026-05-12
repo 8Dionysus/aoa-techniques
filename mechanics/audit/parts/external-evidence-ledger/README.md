@@ -37,7 +37,7 @@ These are the current live external-evidence lanes worth searching next.
 
 | technique | last checked lane | adjacent or insufficient fits already ruled out | exact proof still needed | next honest search shape |
 |---|---|---|---|---|
-| [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | repo-local drift and evaluation-report lane plus public agent-markdown CI check/report lane, public prompt-eval CI lane, and the 2026-05-12 exemplar sweep over public context-report, token-budget, repo-packing, LLM-ready-docs, and CI reporting surfaces | local drift reports and composition audits; public instruction-check and workflow-report surfaces such as Continue `/check` and GitHub Agentic Workflows daily repo reports that emit PR checks or activity summaries; Promptfoo CI/CD and `promptfoo-action` surfaces that emit eval JSON or HTML, PR comments, and before/after prompt reports; GitHub Agentic Workflows token/audit reports, Repomix repo-packing and token-count surfaces, Repo Tokens badge-style token counts, `pytest-llm-report`, Calcis prompt cost estimates, and `llms-txt-action`, all of which are adjacent because they own workflow audit, context assembly, token/cost monitoring, test or prompt reports, or documentation conversion instead of the same CI-facing composition coverage or token-drift artifact | one second public CI-facing report over context composition coverage or token-drift that stays separate from composition mechanics, remediation policy, prompt-quality scoring, and generic PR policy checks | search public CI or docs-validation repos where assembled prompt or multi-fragment context coverage and token budgets are emitted as a read-only artifact, not just as eval matrices, pass or fail gates, token badges, repo-packing outputs, LLM-ready-doc generation, or activity digests |
+| [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) | repo-local drift and evaluation-report lane plus public agent-markdown CI check/report lane, public prompt-eval CI lane, the 2026-05-12 exemplar sweep over public context-report, token-budget, repo-packing, LLM-ready-docs, and CI reporting surfaces, and the Stage 1 long-pass sweep over public context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces | local drift reports and composition audits; public instruction-check and workflow-report surfaces such as Continue `/check` and GitHub Agentic Workflows daily repo reports that emit PR checks or activity summaries; Promptfoo CI/CD and `promptfoo-action` surfaces that emit eval JSON or HTML, PR comments, and before/after prompt reports; GitHub Agentic Workflows token/audit reports, Repomix repo-packing and token-count surfaces, Repo Tokens badge-style token counts, `pytest-llm-report`, Calcis prompt cost estimates, `llms-txt-action`, LogicStamp Context, Claude Code Guide context-engineering CI drift detection, ctxloom, Depwire, and FastPace, all of which are adjacent because they own workflow audit, context assembly or compilation, configuration drift, fragment/profile injection, graph context, token/cost monitoring, test or prompt reports, repo-quality/governance reports, or documentation conversion instead of the same CI-facing composition coverage or token-drift artifact | one second public CI-facing report over context composition coverage or token-drift that stays separate from composition mechanics, remediation policy, prompt-quality scoring, generic PR policy checks, context compilers, fragment assemblers, and repo-quality dashboards | search artifact-first public CI or docs-validation repos where an expected source or fragment inventory is compared against an assembled prompt/context artifact and token deltas are emitted as a read-only report, not just as eval matrices, pass or fail gates, token badges, repo-packing outputs, LLM-ready-doc generation, product dashboards, graph compilers, or activity digests |
 | [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | public transcript-log export and rich session-view lane | transcript and log review surfaces such as `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, session summaries, and Markdown or HTML review views, but they still package transcript or log inspection rather than a bounded witness trace with explicit state-delta review notes and a pre-writeback summary posture | one second downstream consumer where a bounded run emits a structured witness trace plus human-readable summary before any writeback, compost, or canon-lift step | search public agent-run review surfaces where step order, tool visibility, state deltas, and a review-first summary survive together as one trace artifact before later memory or promotion layers |
 
 ## AOA-T-0032 Exemplar Sprint Notes
@@ -72,7 +72,39 @@ exact-match candidates before rate limiting stopped broader code-search
 expansion. Do not treat that rate limit as proof that no public candidate
 exists; treat it only as searched-lane memory for this pass.
 
-Next honest search shape: look for public docs-validation or prompt-build
+2026-05-12 Stage 1 long-pass result: no exact-fit second consumer found.
+The pass sharpened the false-positive boundary before the matrix-wide
+promotion-evidence pass moves beyond the old lead queue.
+
+Searched and rejected as adjacent:
+
+- [LogicStamp Context](https://github.com/LogicStamp/logicstamp-context):
+  strong public context compiler and CI-friendly stats / compare surface with
+  token estimates, generated `context.json` bundles, and context drift
+  validation, but the object is context compilation and validation rather than
+  a separate read-only report over an already-composed context's expected
+  source coverage plus token drift.
+- [Claude Code Guide context-engineering CI drift detection](https://cc.bruniaux.com/guide/context-engineering/):
+  useful profile and configuration drift discipline, but the object is
+  regenerated instruction configuration freshness rather than a
+  context-composition coverage artifact.
+- [ctxloom](https://ctxloom.dev/): useful fragment/profile assembly, remote
+  sync, and token optimization surface, but it owns assembly and injection
+  rather than an independent CI report observing a composed artifact.
+- [Depwire](https://depwire.dev/): useful graph context, impact analysis,
+  generated docs, and CI-ready JSON for code health signals, but not a
+  composed-context source-coverage and token-drift report.
+- [FastPace](https://fastpace.net/): useful read-only
+  repo-quality/context-score and governance reporting, but the object is
+  repository quality, audit, and guardrail posture rather than CI-facing
+  composition coverage.
+
+Next honest search shape: look for artifact-first public docs-validation or
+prompt-build workflows that commit or publish a CI report comparing expected
+source or fragment inventories against generated prompt/context artifacts plus
+token deltas.
+
+Previous next-shape wording: look for public docs-validation or prompt-build
 workflows that emit an artifact comparing expected prompt/context fragments
 against the assembled artifact plus token drift, while leaving assembly,
 scoring, and remediation to other surfaces.

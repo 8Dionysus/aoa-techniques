@@ -17191,7 +17191,19 @@
                 },
                 {
                   "order": 6,
-                  "text": "next honest search shape: look for a public repository or docs-validation workflow that emits an artifact over assembled prompt or multi-fragment context coverage and token drift, while keeping composition, scoring, and remediation outside the report"
+                  "text": "Stage 1 long-pass, 2026-05-12: defer still holds after inspecting newer public context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces"
+                },
+                {
+                  "order": 7,
+                  "text": "adjacent or insufficient surfaces from that pass: LogicStamp Context, Claude Code Guide context-engineering CI drift detection, ctxloom, Depwire, and FastPace repo-quality/context-score reports"
+                },
+                {
+                  "order": 8,
+                  "text": "why those surfaces do not close the gap: they are useful context compilation, configuration drift, fragment assembly, graph context, governance, or repo-quality surfaces, but none clearly emits the same separate read-only CI artifact over already-composed context source coverage plus token drift"
+                },
+                {
+                  "order": 9,
+                  "text": "next honest search shape: look for artifact-first public workflows where CI compares an expected source or fragment inventory against a generated prompt/context artifact and records token deltas, while keeping assembly, scoring, and remediation outside the report"
                 }
               ]
             },
