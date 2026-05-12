@@ -59,7 +59,7 @@ Tie-break rule: pick `handoff` when transfer, checkpoint, or resume is the cente
 - [AOA-T-0058](../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) - receipt-confirmed-handoff-packet (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `receipt`, `packet`, `continuation`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
 - [AOA-T-0056](../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) - channelized-agent-mailbox (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `continuation`, `mailbox`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
 - [AOA-T-0060](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) - session-opening-ritual-before-work (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `resume`, `continuation`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
-- [AOA-T-0059](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) - git-verified-handoff-claims (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `continuation`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
+- [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`agent-workflows`, current `handoff`): current-kind cues `handoff`, `continuation`; opposing `workflow` cues `workflow`. Verdict: `keep current kind`.
 
 ## Boundaries
 

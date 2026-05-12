@@ -369,7 +369,7 @@ entries:
 - id: AOA-T-0061
   name: cross-repo-resource-map-bootstrap
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: handoff-continuation
 - id: AOA-T-0062

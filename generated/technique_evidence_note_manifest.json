@@ -35600,6 +35600,187 @@
       "technique_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0061"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "cross-repo-resource-map-bootstrap"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for starting a cross-repo task from one bounded map of relevant repos, resource surfaces, and first-look paths"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "preserve the startup map without turning it into semantic context mapping, infrastructure inventory, dispatch policy, worktree lifecycle management, or workspace-platform governance"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the map names repos but does not say why each repo matters to the current task"
+                },
+                {
+                  "order": 2,
+                  "text": "the map lists broad projects while omitting the concrete files, docs, worktrees, or surfaces the next session should inspect first"
+                },
+                {
+                  "order": 3,
+                  "text": "the first-look path is missing, so a fresh session still has to infer startup order across repos"
+                },
+                {
+                  "order": 4,
+                  "text": "repo roles drift out of date because the map is treated as a permanent inventory instead of a task-bounded handoff object"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a small cross-repo task can gain too much ceremony when one repo-local handoff would be enough"
+                },
+                {
+                  "order": 2,
+                  "text": "contributors can mistake the startup map for an architecture model and stop maintaining the real architecture docs"
+                },
+                {
+                  "order": 3,
+                  "text": "infra, auth, issue-routing, and worktree details can crowd out the one bounded question: where should the next session look first across repo boundaries"
+                },
+                {
+                  "order": 4,
+                  "text": "agents can overtrust the map and skip current-state checks in the selected repos"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "listing every known repo, service, database, queue, board, and environment because they exist"
+                },
+                {
+                  "order": 2,
+                  "text": "using the map as a durable workspace encyclopedia rather than a current task startup aid"
+                },
+                {
+                  "order": 3,
+                  "text": "hiding repo roles behind names like `api`, `frontend`, or `core` without a task-specific reason"
+                },
+                {
+                  "order": 4,
+                  "text": "importing dispatch rules, model routing, worktree creation, or audit policy into the technique"
+                },
+                {
+                  "order": 5,
+                  "text": "replacing semantic bounded-context maps with a path list"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the map cannot be reviewed quickly before the next session starts"
+                },
+                {
+                  "order": 2,
+                  "text": "a reader cannot identify the first repo or first surface to inspect"
+                },
+                {
+                  "order": 3,
+                  "text": "listed resources are not tied to the current handoff, issue, or continuation goal"
+                },
+                {
+                  "order": 4,
+                  "text": "the artifact grows whenever the workspace grows, even if the current task does not need those repos"
+                },
+                {
+                  "order": 5,
+                  "text": "follow-up work fails because one named repo was present but the relevant file, doc, branch, or worktree surface was not named"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require one task-tied reason for every repo and every listed resource surface"
+                },
+                {
+                  "order": 2,
+                  "text": "mark one first-look repo or surface before listing optional supporting surfaces"
+                },
+                {
+                  "order": 3,
+                  "text": "prune any infrastructure or platform detail that does not affect the next bounded step"
+                },
+                {
+                  "order": 4,
+                  "text": "keep semantic context maps in AOA-T-0016 and session-opening ritual in AOA-T-0060 instead of merging them here"
+                },
+                {
+                  "order": 5,
+                  "text": "pair the map with current-state checks when the next session crosses into mutation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0061` to `canonical` and use this note as the watch surface for inventory creep, missing first-look paths, stale repo-role assumptions, and accidental absorption of multi-repo dispatch or workspace-platform machinery"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -35630,34 +35811,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around workspace-platform stacks, infrastructure inventories, collaboration-mode doctrine, and whole boot sequences"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around workspace-platform stacks, infrastructure inventories, collaboration-mode doctrine, and whole boot sequences"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same cross-repo startup seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same cross-repo startup seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the current donor family"
+                  "text": "`calltelemetry/openclaw-linear-plugin` provides exact-fit public reinforcement beyond the donor family: its multi-repo dispatch path keeps a `repos` map, resolves the selected repo set from issue body markers, labels, team mappings, or config fallback, creates named worktrees for each selected repo, injects the repo path map into worker and audit prompts, and tells agents to read `CLAUDE.md` and `AGENTS.md` in the worktree root before coding or auditing"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement for a bounded repo-and-resource startup map"
                 }
               ]
             },
@@ -35668,7 +35849,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is how to start a cross-repo task from one explicit map of repos and relevant surfaces"
+                  "text": "this is the right canonical default when the main problem is how to start a cross-repo task from one explicit map of repos and relevant surfaces"
                 },
                 {
                   "order": 2,
@@ -35677,6 +35858,10 @@
                 {
                   "order": 3,
                   "text": "it also remains smaller than total workspace-platform doctrine because it does not define infrastructure catalogs, project-board semantics, or a whole boot-sequence stack"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the external reinforcement repeats the same \"name relevant repos, map them to concrete starting surfaces, then begin work from those mapped surfaces\" shape without making the bundle absorb dispatch governance, issue routing, model selection, worktree lifecycle, or audit loops"
                 }
               ]
             },
@@ -35688,7 +35873,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -35703,7 +35888,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; the inspected `openclaw-linear-plugin` source includes an MIT license file, and no source code, private paths, credentials, Linear workspace details, or plugin-specific operational data were copied into the technique"
                 }
               ]
             },
@@ -35714,11 +35899,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where cross-repo continuation begins from an explicit startup map without widening into architecture inventory or full workspace-platform doctrine"
+                  "text": "future work can add another cross-repo startup implementation, but it must preserve the narrow boundary: name the repos, give each repo a task-tied role or path surface, show the first place to look, and route architecture inventories, topology stacks, dispatch policy, and full workspace-platform doctrine elsewhere"
                 }
               ]
             },
@@ -35729,11 +35914,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0061` `promoted`"
+                  "text": "move `AOA-T-0061` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the cross-repo startup-map contract survives outside the current donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between the startup map, semantic context mapping, infrastructure inventory, multi-repo dispatch, worktree management, and full workspace-platform governance"
                 }
               ]
             }

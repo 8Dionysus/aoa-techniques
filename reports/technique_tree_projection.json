@@ -448,6 +448,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0061",
+      "name": "cross-repo-resource-map-bootstrap",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Bootstrap cross-repo work from one explicit resource map so the next session can see which repos and surfaces matter before deeper continuation begins.",
+      "current_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "family": "handoff-continuation",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "handoff-continuation",
+      "proposed_future_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:handoff-continuation",
+        "domain:agent-workflows",
+        "kind:handoff",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -503,28 +525,6 @@
       "proposed_trunk": "continuity",
       "proposed_shelf": "handoff-continuation",
       "proposed_future_path": "techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:handoff-continuation",
-        "domain:agent-workflows",
-        "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0061",
-      "name": "cross-repo-resource-map-bootstrap",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Bootstrap cross-repo work from one explicit resource map so the next session can see which repos and surfaces matter before deeper continuation begins.",
-      "current_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
-      "family": "handoff-continuation",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "handoff-continuation",
-      "proposed_future_path": "techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md",
       "review_status": "pilot-candidate",
       "rationale_cues": [
         "family:handoff-continuation",

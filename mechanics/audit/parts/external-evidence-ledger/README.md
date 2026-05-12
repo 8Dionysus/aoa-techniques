@@ -218,6 +218,52 @@ check one visible current-state baseline, record mismatch or proceed decision,
 and keep task selection, detailed claim verification, and full boot doctrine
 outside the opening seam.
 
+## AOA-T-0061 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`calltelemetry/openclaw-linear-plugin` at
+`5b66f0e2fa17724f00858321a0c632df515182fc` provides the clean public source
+for Pack 18. The repository metadata does not expose an SPDX license, but the
+inspected `LICENSE` file is MIT.
+
+Accepted evidence:
+
+- The README documents multi-repo dispatch where a configured `repos` map names
+  short repo keys and filesystem paths.
+- The issue body marker `<!-- repos: api, frontend -->`, `repo:*` labels, team
+  mappings, and config fallback select which repos belong to the current issue.
+- Dispatch comments expose named worktree paths per selected repo so the next
+  worker can see where each repo lives for that task.
+- The pipeline builds a project context block containing the repo map and
+  injects it into worker and audit prompts.
+- Worker and audit prompts instruct agents to read `CLAUDE.md` and `AGENTS.md`
+  in the worktree root before coding or auditing, keeping concrete first-look
+  surfaces visible instead of leaving the agent to infer where to start.
+- The `multi-repo.ts` and `codex-worktree.ts` implementation keeps repo
+  resolution and per-repo worktree creation explicit and resumable.
+
+Rejected or bounded:
+
+- Do not import Linear issue routing, complexity-tier model selection,
+  multi-agent orchestration, worker / auditor pipeline, rework loops, PR
+  creation, watchdogs, or dispatch state.
+- Do not turn this bundle into worktree lifecycle management, multi-repo
+  authorization, or workspace-platform doctrine.
+- Treat `Zencoder` multi-repo docs as supporting pressure only: they describe
+  indexed repo maps and agents loading a repo map, but the inspected public
+  page is broader product documentation rather than a small task-bounded
+  repo-and-resource startup artifact.
+- Treat GitHub Agentic Workflows `MultiRepoOps` and `SideRepoOps` as adjacent
+  automation patterns: they show cross-repo target parameters, remote repo
+  access, and checkout paths, but not a compact current-task startup map with
+  repo roles and first-look resource surfaces.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the narrow artifact: selected repos, task-tied repo roles or
+paths, first-look surfaces, and an explicit boundary away from architecture
+inventories, topology stacks, dispatch policy, and full workspace-platform
+governance.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.
