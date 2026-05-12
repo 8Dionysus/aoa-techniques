@@ -33,8 +33,8 @@
       ],
       "counts": {
         "total": 13,
-        "canonical": 5,
-        "promoted": 8,
+        "canonical": 7,
+        "promoted": 6,
         "by_domain": {
           "agent-workflows": 13,
           "docs": 0,
@@ -86,18 +86,10 @@
           "technique_path": "techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md"
         },
         {
-          "id": "AOA-T-0005",
-          "name": "new-intent-rollout-checklist",
-          "domain": "agent-workflows",
-          "status": "promoted",
-          "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
-          "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md"
-        },
-        {
           "id": "AOA-T-0049",
           "name": "dependency-aware-task-graph",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
           "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md"
         },
@@ -105,9 +97,17 @@
           "id": "AOA-T-0050",
           "name": "ready-work-from-blocker-graph",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
           "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md"
+        },
+        {
+          "id": "AOA-T-0005",
+          "name": "new-intent-rollout-checklist",
+          "domain": "agent-workflows",
+          "status": "promoted",
+          "summary": "Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.",
+          "technique_path": "techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0051",

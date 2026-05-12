@@ -2724,7 +2724,7 @@
       "name": "dependency-aware-task-graph",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.",
       "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "origin": {
@@ -2742,12 +2742,12 @@
         "ready-work",
         "coordination"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-27",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -2771,6 +2771,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -2779,7 +2783,7 @@
       "name": "ready-work-from-blocker-graph",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.",
       "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "origin": {
@@ -2797,12 +2801,12 @@
         "queue",
         "frontier"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-27",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -2830,6 +2834,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

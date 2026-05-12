@@ -119,20 +119,7 @@ See also:
 - Validate by: one explicit operator-facing entrypoint starts the bounded local stack; prerequisite or build checks fail early or are reported clearly...
 - Source: [TECHNIQUE.md](../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md)
 
-### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
-
-- Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
-- Intent: Extend an existing intent -> plan -> dry-run -> contract-check pipeline with one new...
-- Use when: an automation chain already exists and the rollout is extending that shared chain, not redesigning it or one...
-- Avoid when: there is no stable intent-chain contract yet or the rollout path performs real side effects before dry-run validation.
-- Needs: an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place; a canonical fixture location...
-- Produces: one canonical fixture for the new intent; one dedicated smoke path for the new intent rollout; one...
-- Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
-- Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
-- Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
-- Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
-
-### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`promoted`)
+### [AOA-T-0049](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) - dependency-aware-task-graph (`canonical`)
 
 - Summary: Model multi-step coding work as explicit dependency nodes and edges so blocked state and ready work stay reviewable instead of hiding in chat memory.
 - Intent: Represent multi-step coding work as an explicit dependency graph so blocked state, ready state...
@@ -145,7 +132,7 @@ See also:
 - Validate by: a known blocked node becomes ready only when its prerequisite flips; blocked tasks can point to a real unmet...
 - Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md)
 
-### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`promoted`)
+### [AOA-T-0050](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) - ready-work-from-blocker-graph (`canonical`)
 
 - Summary: Derive the next bounded work queue from blocker-free graph state so operators choose from what is truly ready instead of narrating readiness from memory.
 - Intent: Turn an existing blocker graph into a bounded next-work queue so the next step...
@@ -157,6 +144,19 @@ See also:
 - Main risk: stale blocker state yields a wrong ready queue.
 - Validate by: only blocker-free eligible nodes appear in the queue; blocked reasons remain visible for excluded tasks; queue updates track graph...
 - Source: [TECHNIQUE.md](../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md)
+
+### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
+
+- Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
+- Intent: Extend an existing intent -> plan -> dry-run -> contract-check pipeline with one new...
+- Use when: an automation chain already exists and the rollout is extending that shared chain, not redesigning it or one...
+- Avoid when: there is no stable intent-chain contract yet or the rollout path performs real side effects before dry-run validation.
+- Needs: an existing intent-chain workflow with normalization, dry-run, and contract-check steps already in place; a canonical fixture location...
+- Produces: one canonical fixture for the new intent; one dedicated smoke path for the new intent rollout; one...
+- Core contract: one canonical fixture exists for each new intent rollout; the rollout path stays dry-run only.
+- Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
+- Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
+- Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 
 ### [AOA-T-0051](../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) - commit-triggered-background-review (`promoted`)
 

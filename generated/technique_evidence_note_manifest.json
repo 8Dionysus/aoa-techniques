@@ -27009,6 +27009,187 @@
       "technique_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0049"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "dependency-aware-task-graph"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for modeling bounded multi-step work as explicit dependency nodes and blocker edges before choosing ready execution slices"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on prerequisite edges, blocked reasons, ready frontier recomputation, and reviewable work slices rather than widening into memory, dispatch, ranking, staffing, full tracker, or project-management doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "graph nodes become vague themes instead of reviewable work slices"
+                },
+                {
+                  "order": 2,
+                  "text": "dependency edges encode preference or narrative order rather than true blockers"
+                },
+                {
+                  "order": 3,
+                  "text": "stale edges keep work blocked after the prerequisite is actually complete"
+                },
+                {
+                  "order": 4,
+                  "text": "cycles or hidden dependencies make the ready frontier misleading"
+                },
+                {
+                  "order": 5,
+                  "text": "the graph becomes a source of proof instead of a coordination surface feeding later review and validation"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "graph upkeep can slow simple work that needs only one bounded task"
+                },
+                {
+                  "order": 2,
+                  "text": "a clean graph can create false precision when completion signals are weak"
+                },
+                {
+                  "order": 3,
+                  "text": "teams can spend more effort curating dependency state than finishing work"
+                },
+                {
+                  "order": 4,
+                  "text": "the graph can pull in tracker, memory, dashboard, urgency, dispatch, or staffing expectations if the boundary is not guarded"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating every backlog item as a graph node even when no blocker relation matters"
+                },
+                {
+                  "order": 2,
+                  "text": "using graph state as a substitute for implementation review, tests, or release checks"
+                },
+                {
+                  "order": 3,
+                  "text": "hiding manual overrides or priority choices inside dependency edges"
+                },
+                {
+                  "order": 4,
+                  "text": "folding knowledge links, memory semantics, reporting, notifications, or task ownership policy into the graph contract"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "many nodes have no clear completion condition"
+                },
+                {
+                  "order": 2,
+                  "text": "blocked tasks cannot name the unmet prerequisite that keeps them closed"
+                },
+                {
+                  "order": 3,
+                  "text": "the ready frontier cannot be recomputed from visible graph state"
+                },
+                {
+                  "order": 4,
+                  "text": "dependency changes are made after the fact to justify a chosen next step"
+                },
+                {
+                  "order": 5,
+                  "text": "reviewers argue about ranking, ownership, or schedule before the blocker truth is even clear"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep nodes small enough to review and close"
+                },
+                {
+                  "order": 2,
+                  "text": "require explicit blocker edges and named blocked reasons"
+                },
+                {
+                  "order": 3,
+                  "text": "recompute the ready frontier after real state changes"
+                },
+                {
+                  "order": 4,
+                  "text": "keep graph authoring separate from ready-queue derivation, ranking, dispatch, memory, and project-management surfaces"
+                },
+                {
+                  "order": 5,
+                  "text": "route correctness claims to implementation review and validation instead of the graph itself"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0049` to `canonical` and use this note as the watch surface for graph-as-tracker drift, graph-as-memory drift, hidden-priority drift, stale-blocker drift, and proof-surface drift"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/execution/ready-work-graphs/dependency-aware-task-graph/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -27039,34 +27220,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around memory semantics, tracker product breadth, graph-link taxonomy, and runtime specifics"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around memory semantics, tracker product breadth, graph-link taxonomy, and runtime specifics"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same dependency-graph contract as a documentation-first landing aid with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same dependency-graph contract as a documentation-first landing aid with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries a checklist, an example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "text": "Taskwarrior provides exact-fit public reinforcement: dependency edges block downstream tasks, cycles are rejected, `BLOCKED` / `BLOCKING` state is derivable, and completing a prerequisite unblocks dependent work"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries a checklist, an example, a clean external-origin note, a documentation-first second context, and public live reinforcement beyond the donor repository"
                 }
               ]
             },
@@ -27085,7 +27266,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it should stay narrower than full tracker, memory, dispatch, or staffing doctrine even if those features sit nearby in some donors"
+                  "text": "it is now the natural default when a bounded workflow needs explicit prerequisite edges and blocker-aware ready work without adopting a full tracker, memory, dispatch, or staffing doctrine"
                 }
               ]
             },
@@ -27097,7 +27278,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-27"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -27112,7 +27293,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the external reinforcement is from public Taskwarrior documentation, tests, and dependency implementation, not private issue trackers or hidden project boards"
                 }
               ]
             },
@@ -27123,15 +27304,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "future work can add more examples for agent-specific work graphs, but no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where explicit dependency edges determine ready work in practice"
-                },
-                {
-                  "order": 3,
-                  "text": "the boundary from any future ready-frontier-only sibling should stay sharp so canonical review does not collapse adjacent graph techniques together"
+                  "text": "the boundary from ready-frontier-only siblings should stay sharp so canonical review does not collapse graph authoring, queue derivation, ranking, dispatch, and tracker behavior together"
                 }
               ]
             },
@@ -27142,11 +27319,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0049` `promoted`"
+                  "text": "move `AOA-T-0049` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the same bounded dependency-graph contract survives outside the donor repository"
+                  "text": "add an adverse-effects review to preserve the caution boundary after promotion"
                 }
               ]
             }
@@ -27456,33 +27633,38 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first repository where the graph contract is recorded and used to coordinate bounded landing work rather than shipped as a live tracker product"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: Taskwarrior\n- repository: `GothenburgBitFactory/taskwarrior`\n- observed revision: `88697406f78c363595667c270430439f304acd40`\n- public surfaces: `doc/man/task.1.in`, `test/dependencies.test.py`, `src/dependency.cpp`"
                 }
               ]
             },
             {
               "heading": "What changed",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "paths",
-                  "value_markdown": "donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
+                  "text": "paths: donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
                 },
                 {
                   "order": 2,
-                  "key": "services",
-                  "value_markdown": "this adaptation does not ship a tracker runtime, memory store, or ready-work command surface"
+                  "text": "services: this adaptation does not ship a tracker runtime, memory store, or ready-work command surface"
                 },
                 {
                   "order": 3,
-                  "key": "dependencies",
-                  "value_markdown": "the graph now coordinates bounded landing tasks and shared-surface updates rather than issues inside the donor tracker"
+                  "text": "dependencies: the graph now coordinates bounded landing tasks and shared-surface updates rather than issues inside the donor tracker"
                 },
                 {
                   "order": 4,
-                  "key": "operating assumptions",
-                  "value_markdown": "the graph is kept as a reviewable working surface for staging and landing work, not as a product-facing issue system"
+                  "text": "operating assumptions: the graph is kept as a reviewable working surface for staging and landing work, not as a product-facing issue system"
+                },
+                {
+                  "order": 5,
+                  "text": "the external Taskwarrior reinforcement proves the same dependency graph seam in a public task workflow: tasks can depend on other tasks, circular dependencies are rejected, `BLOCKED` / `BLOCKING` status is derivable, and completing a prerequisite can unblock downstream work"
                 }
               ]
             },
@@ -27505,6 +27687,11 @@
                   "order": 3,
                   "key": "safety rules",
                   "value_markdown": "the graph remains subordinate to implementation review, source markdown, and `python scripts/release_check.py`"
+                },
+                {
+                  "order": 4,
+                  "key": "boundary",
+                  "value_markdown": "the external evidence is the dependency/blocker seam, not Taskwarrior's full report, urgency, sync, context, or task-management feature set"
                 }
               ]
             },
@@ -27520,23 +27707,37 @@
                 {
                   "order": 2,
                   "text": "very small repo tasks may not need this much coordination structure"
+                },
+                {
+                  "order": 3,
+                  "text": "a mature task manager can tempt the technique to absorb reporting, urgency, context, sync, or full backlog behavior unless the blocker graph stays the invariant"
                 }
               ]
             },
             {
               "heading": "Evidence",
               "order": 6,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "source paths",
-                  "value_markdown": "`incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`"
+                  "text": "source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
-                  "key": "review surface or generated output touched",
-                  "value_markdown": "`TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing"
+                  "text": "review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing"
+                },
+                {
+                  "order": 3,
+                  "text": "Taskwarrior's public man page exposes `blocked`, `blocking`, and `unblocked` reports over tasks affected by dependencies."
+                },
+                {
+                  "order": 4,
+                  "text": "Taskwarrior's dependency tests reject self-dependencies and cycles, show acyclic graph support, expose `BLOCKED` / `BLOCKING` tags, and verify that completing a dependency unblocks the downstream task."
+                },
+                {
+                  "order": 5,
+                  "text": "Taskwarrior's dependency implementation explicitly walks dependency chains and handles chain repair when a blocking task is completed or deleted."
                 }
               ]
             },
@@ -27547,7 +27748,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded dependency-graph contract without importing the donor tracker runtime or memory breadth"
+                  "text": "works across donor, documentation-first, and Taskwarrior dependency-graph contexts while preserving the bounded dependency-graph contract without importing tracker runtime, memory breadth, urgency reports, sync, or full project-management doctrine"
                 }
               ]
             }
@@ -27559,6 +27760,187 @@
       "id": "AOA-T-0050",
       "technique_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0050"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "ready-work-from-blocker-graph"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current role",
+                  "value_markdown": "canonical default for deriving a next-work queue from blocker-free graph state once an explicit dependency graph already exists"
+                },
+                {
+                  "order": 2,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the bundle centered on blocker-free eligibility, visible excluded reasons, and frontier refresh rather than widening into graph authoring, ranking policy, staffing, dispatch, full tracker behavior, or generic prioritization doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "stale blocker state yields a ready queue that no longer matches reality"
+                },
+                {
+                  "order": 2,
+                  "text": "open-but-blocked tasks leak into the frontier because dependency truth is ignored"
+                },
+                {
+                  "order": 3,
+                  "text": "secondary ordering hints quietly replace blocker-free eligibility"
+                },
+                {
+                  "order": 4,
+                  "text": "manual overrides happen without a visible reason"
+                },
+                {
+                  "order": 5,
+                  "text": "the queue is treated as a complete prioritization policy instead of a readiness filter"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "operators may trust an outdated queue too much"
+                },
+                {
+                  "order": 2,
+                  "text": "a narrow readiness surface can look like full prioritization if ranking is not kept separate"
+                },
+                {
+                  "order": 3,
+                  "text": "queue maintenance can add friction when there is only one obvious next step"
+                },
+                {
+                  "order": 4,
+                  "text": "blocker-first selection can hide urgent work if urgency is not routed to a later, explicit prioritization layer"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "mixing readiness derivation with broad backlog ranking, staffing, or scheduling doctrine"
+                },
+                {
+                  "order": 2,
+                  "text": "using the queue to author the graph instead of deriving from an existing graph"
+                },
+                {
+                  "order": 3,
+                  "text": "treating all open work as ready because it is visible in the same system"
+                },
+                {
+                  "order": 4,
+                  "text": "making local overrides without recording why blocker truth was bypassed"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "excluded tasks do not show blocked reasons"
+                },
+                {
+                  "order": 2,
+                  "text": "a blocked task appears in the ready queue"
+                },
+                {
+                  "order": 3,
+                  "text": "queue order cannot be explained from visible inputs after blocker-free eligibility is checked"
+                },
+                {
+                  "order": 4,
+                  "text": "arguments about priority happen before blocker-free eligibility is established"
+                },
+                {
+                  "order": 5,
+                  "text": "the queue becomes the only work planning surface instead of handing off to execution and review"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "recompute the frontier after each meaningful graph or state change"
+                },
+                {
+                  "order": 2,
+                  "text": "keep blocked exclusions visible"
+                },
+                {
+                  "order": 3,
+                  "text": "apply secondary ordering only after blocker-free eligibility is established"
+                },
+                {
+                  "order": 4,
+                  "text": "route graph authoring back to `AOA-T-0049`"
+                },
+                {
+                  "order": 5,
+                  "text": "route ranking, staffing, dispatch, and tracker policy to separate owner surfaces"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "move `AOA-T-0050` to `canonical` and use this note as the watch surface for stale-frontier drift, ranking-policy drift, graph-authoring drift, hidden-override drift, and tracker-doctrine drift"
+                }
+              ]
+            }
+          ]
+        },
         {
           "note_path": "techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -27590,34 +27972,34 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around tracker product breadth, graph authoring, ranking doctrine, and runtime specifics"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around tracker product breadth, graph authoring, ranking doctrine, and runtime specifics"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same ready-frontier contract as a documentation-first landing aid with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same ready-frontier contract as a documentation-first landing aid with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries a checklist, an example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor repository"
+                  "text": "Taskwarrior provides exact-fit public reinforcement: blocked and blocking tasks are reportable, unblocked tasks can be surfaced separately, and completing a prerequisite removes `BLOCKED` state from downstream work"
+                },
+                {
+                  "order": 5,
+                  "text": "validation strength: the bundle now carries a checklist, an example, a clean external-origin note, a documentation-first second context, and public live reinforcement beyond the donor repository"
                 }
               ]
             },
@@ -27636,7 +28018,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "it should stay narrower than ranking doctrine, staffing policy, or full tracker behavior even if those features sit nearby in some donors"
+                  "text": "it is now the natural default when a workflow needs the next work queue to come from blocker-free state before any secondary prioritization, ranking, staffing, or broader tracker behavior"
                 }
               ]
             },
@@ -27648,7 +28030,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-27"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -27663,7 +28045,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the external reinforcement is from public Taskwarrior documentation and tests, not private queues, hidden boards, or local project state"
                 }
               ]
             },
@@ -27674,15 +28056,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "future work can add examples for agent-specific next-work frontiers, but no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public workflow surface where blocker-free state determines what is actually ready next"
-                },
-                {
-                  "order": 3,
-                  "text": "the boundary from `AOA-T-0049` should stay explicit so canonical review does not collapse graph authoring and queue derivation together"
+                  "text": "the boundary from `AOA-T-0049` should stay explicit so canonical review does not collapse graph authoring, queue derivation, ranking, dispatch, and tracker behavior together"
                 }
               ]
             },
@@ -27693,11 +28071,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0050` `promoted`"
+                  "text": "move `AOA-T-0050` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the same bounded ready-frontier contract survives outside the donor repository"
+                  "text": "add an adverse-effects review to preserve the caution boundary after promotion"
                 }
               ]
             }
@@ -28007,33 +28385,38 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first repository where existing staged dependency surfaces can be used to derive the next honest landing step without shipping the donor ready-work command itself"
+                },
+                {
+                  "order": 4,
+                  "key": "external reinforcement",
+                  "value_markdown": "- name: Taskwarrior\n- repository: `GothenburgBitFactory/taskwarrior`\n- observed revision: `88697406f78c363595667c270430439f304acd40`\n- public surfaces: `doc/man/task.1.in`, `test/dependencies.test.py`, `test/blocked.test.py`"
                 }
               ]
             },
             {
               "heading": "What changed",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "paths",
-                  "value_markdown": "donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
+                  "text": "paths: donor CLI and storage paths were replaced by markdown candidate bundles, landing notes, and the published technique bundle"
                 },
                 {
                   "order": 2,
-                  "key": "services",
-                  "value_markdown": "this adaptation does not ship a tracker runtime, queue API, or claim workflow surface"
+                  "text": "services: this adaptation does not ship a tracker runtime, queue API, or claim workflow surface"
                 },
                 {
                   "order": 3,
-                  "key": "dependencies",
-                  "value_markdown": "the queue now derives next landing work from existing blocker notes or graph surfaces rather than from the donor tracker implementation"
+                  "text": "dependencies: the queue now derives next landing work from existing blocker notes or graph surfaces rather than from the donor tracker implementation"
                 },
                 {
                   "order": 4,
-                  "key": "operating assumptions",
-                  "value_markdown": "the queue is treated as a bounded coordination seam inside repo work, not as a product-facing task board"
+                  "text": "operating assumptions: the queue is treated as a bounded coordination seam inside repo work, not as a product-facing task board"
+                },
+                {
+                  "order": 5,
+                  "text": "the external Taskwarrior reinforcement proves the same ready-frontier seam in a public task workflow: blocked tasks are visibly excluded, unblocked tasks can be reported, and completing a prerequisite removes `BLOCKED` state from downstream work"
                 }
               ]
             },
@@ -28056,6 +28439,11 @@
                   "order": 3,
                   "key": "safety rules",
                   "value_markdown": "dependency truth stays separate from later prioritization and from the broader execution workflow"
+                },
+                {
+                  "order": 4,
+                  "key": "boundary",
+                  "value_markdown": "the external evidence is the blocker-free frontier, not Taskwarrior's urgency scoring, scheduling, sync, context, or broader task-management product surface"
                 }
               ]
             },
@@ -28071,23 +28459,37 @@
                 {
                   "order": 2,
                   "text": "very small repo tasks may not need a separate ready-frontier surface at all"
+                },
+                {
+                  "order": 3,
+                  "text": "a public task manager can make blocker-free derivation look like full prioritization unless secondary ranking and report behavior stay outside the invariant"
                 }
               ]
             },
             {
               "heading": "Evidence",
               "order": 6,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "source paths",
-                  "value_markdown": "`incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`"
+                  "text": "source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`"
                 },
                 {
                   "order": 2,
-                  "key": "review surface or generated output touched",
-                  "value_markdown": "`TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing"
+                  "text": "review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing"
+                },
+                {
+                  "order": 3,
+                  "text": "Taskwarrior's public man page exposes `blocked`, `blocking`, and `unblocked` reports, giving a visible distinction between blocked work and blocker-free work."
+                },
+                {
+                  "order": 4,
+                  "text": "Taskwarrior's dependency tests verify that completing a dependency removes the `BLOCKED` state from the waiting task."
+                },
+                {
+                  "order": 5,
+                  "text": "Taskwarrior's blocked report test verifies that the blocking task appears while the blocked downstream task does not appear in the blocking report."
                 }
               ]
             },
@@ -28098,7 +28500,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the blocker-aware ready-frontier contract without importing the donor tracker runtime or broader prioritization doctrine"
+                  "text": "works across donor, documentation-first, and Taskwarrior blocker-frontier contexts while preserving the blocker-aware ready-frontier contract without importing tracker runtime, urgency ranking, sync, scheduling, or broader prioritization doctrine"
                 }
               ]
             }

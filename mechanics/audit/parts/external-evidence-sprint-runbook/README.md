@@ -83,6 +83,7 @@ Closed precedents:
 - [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) have exited this sprint lane through a canonical review after managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus closed the mirror-provenance, versioned-capability, skill-command, editorial-curation, and primary/supporting source-ordering gaps.
 - [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) has exited this sprint lane through a canonical review after Maida / AgentDbg closed the structured run trace artifact gap.
 - [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) has exited this sprint lane through a canonical review after MADR closed the one-decision rationale record gap.
+- [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) have exited this sprint lane through a canonical review after Taskwarrior closed the dependency-graph and blocker-free frontier gaps.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
@@ -93,6 +94,7 @@ Why this order:
 - `AOA-T-0046` and `AOA-T-0047` now have first second-context support; reopen them only from a stronger repo-owned route or review-template reader, not from generic docs generation or platform-native forms
 - `AOA-T-0048` should not reopen until a real non-origin semantic-review reader exists
 - `AOA-T-0033` is closed; future decision-record work should split into a sibling only if multi-decision records, ADR tooling, or decision-log governance become the actual object
+- `AOA-T-0049` and `AOA-T-0050` are closed; future graph work should split only if ranking, dispatch, graph health, or tracker policy becomes the actual object
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real
   new-intent rollout artifact rather than NLU/eval/benchmark overlap
