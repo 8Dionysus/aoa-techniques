@@ -92,7 +92,7 @@ Shared blocker: each remaining row still needs one more live consumer without co
 
 | technique | current posture | next honest promotion trigger |
 |---|---|---|
-| [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries. | One second downstream consumer using reviewable profile and preset layering. |
+| [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) | Docs-side runtime composition contract with clear sibling boundaries; the 2026-05-12 Stage 2 pass ruled out profile-only, option-preset, editor-profile, feature/template, overlay, and generic config-composition lanes as adjacent. | One second downstream consumer using reviewable module -> profile -> preset layering with preset-first resolution, first-appearance dedupe, and inspection before startup. |
 | [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) | Selector-aware preflight sibling. | One second live context proving preflight stays separate from render review and lifecycle control. |
 | [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) | Lifecycle sibling with clear exclusions around launcher doctrine. | One second live operator surface using one-entrypoint lifecycle ownership in practice. |
 | [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) | Evaluation sibling that stays additive rather than policy-shaped. | One second downstream consumer proving baseline-first additive comparison stays bounded. |
