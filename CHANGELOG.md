@@ -22,6 +22,15 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0061 cross-repo-resource-map-bootstrap` to `canonical`
+  after `calltelemetry/openclaw-linear-plugin` showed exact-fit public
+  reinforcement for a multi-repo dispatch map: configured repo keys and paths,
+  issue or label selected repo sets, named per-repo worktree paths, injected
+  project context, and first-read `CLAUDE.md` / `AGENTS.md` guidance before
+  coding or auditing, while excluding issue-routing, model selection, worktree
+  lifecycle, audit loops, semantic context maps, infrastructure inventories,
+  and full workspace-platform governance, updating Audit queue posture from
+  `58` promoted techniques to `57`
 - promoted `AOA-T-0060 session-opening-ritual-before-work` to `canonical`
   after `anthropics/cwc-long-running-agents` showed exact-fit public
   reinforcement for reading `PROGRESS.md` before any work, then checking recent

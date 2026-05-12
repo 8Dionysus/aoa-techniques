@@ -11,8 +11,9 @@ plus `AOA-T-0050`, and the Pack 10 closures for `AOA-T-0051` plus
 `AOA-T-0052`, the Pack 11 closure for `AOA-T-0054`, the Pack 12 closure
 for `AOA-T-0055`, the Pack 13 closure for `AOA-T-0056`, the Pack 14
 closure for `AOA-T-0057`, the Pack 15 adjacent-only closure for
-`AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, and the
-Pack 17 closure for `AOA-T-0060`, the live promoted queue is `58` bundles. This
+`AOA-T-0058`, the Pack 16 adjacent-only closure for `AOA-T-0059`, the Pack 17
+closure for `AOA-T-0060`, and the Pack 18 closure for `AOA-T-0061`, the live
+promoted queue is `57` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -87,8 +88,11 @@ Current live constraint:
   `cwc-long-running-agents` structured progress-file handoff evidence plus
   `openclaw-memory-kit` compaction memoryFlush handoff evidence and exits the
   live promoted queue through canonical review;
-- the live generated catalog currently contains `58` promoted techniques and
-  `49` canonical techniques;
+- `AOA-T-0061` closed during Stage 3 with exact-fit
+  `openclaw-linear-plugin` multi-repo dispatch map evidence and exits the live
+  promoted queue through canonical review;
+- the live generated catalog currently contains `57` promoted techniques and
+  `50` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -99,15 +103,15 @@ matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
-Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, and Pack 17 closures is
-`58` promoted techniques,
+Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, and Pack 18
+closures is `57` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
 `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
 `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`, `AOA-T-0055`,
-`AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, and `AOA-T-0060`
-counted as closed rows rather than remaining
+`AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
+`AOA-T-0061` counted as closed rows rather than remaining
 targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
@@ -181,7 +185,7 @@ appropriate durable surface.
 | Stage 3 | [AOA-T-0058 receipt-confirmed-handoff-packet](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md) | agent-workflows / handoff | Pack 15 receipt-confirmed handoff packet | adjacent lanes recorded; remains promoted | `cmux` request ACKs, Gas Town handoff mail/session cycling/escalation ACKs, and exact phrase GitHub code-search lanes are adjacent rather than proof of receiver-side packet acceptance before continuation |
 | Stage 3 | [AOA-T-0059 git-verified-handoff-claims](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) | agent-workflows / handoff | Pack 16 git-verified handoff claims | adjacent lanes recorded; remains promoted | `confab-framework`, `LifeOS`, `session-handoff`, Mimir, SLOPE, and `cwc-long-running-agents` are adjacent or partial rather than clean proof of receiver-side handoff-claim verdicts against git evidence |
 | Stage 3 | [AOA-T-0060 session-opening-ritual-before-work](../../../../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) | agent-workflows / handoff | Pack 17 session opening ritual before work | exact-fit second context; exits to canonical | `cwc-long-running-agents` `Always start here` convention closes the pre-mutation read-and-baseline-check gap |
-| Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | pending |  |
+| Stage 3 | [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) | agent-workflows / handoff | Pack 18 cross-repo resource map bootstrap | exact-fit second context; exits to canonical | `openclaw-linear-plugin` configured repo map, selected repo sets, per-repo worktree paths, project context injection, and first-read root instruction files close the cross-repo startup-map gap |
 | Stage 3 | [AOA-T-0062 episode-bounded-agent-loop](../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) | agent-workflows / handoff | Pack 19 episode-bounded agent loop | pending |  |
 | Stage 4 | [AOA-T-0063 versioned-agent-registry-contract](../../../../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) | docs / artifact | Pack 20 versioned agent registry contract | pending |  |
 | Stage 4 | [AOA-T-0064 capability-discovery](../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) | docs / discovery | Pack 21 capability discovery | pending |  |
@@ -324,7 +328,9 @@ external adopter, markdown-first reuse, or long-gap donor proof.
 19. Pack 17 - Session Opening Ritual Before Work: `AOA-T-0060` - closed;
     exact-fit `cwc-long-running-agents` `Always start here` evidence found,
     bundle-local canonical review approved
-20. Pack 18 - Cross-Repo Resource Map Bootstrap: `AOA-T-0061`
+20. Pack 18 - Cross-Repo Resource Map Bootstrap: `AOA-T-0061` - closed;
+    exact-fit `openclaw-linear-plugin` multi-repo dispatch map evidence found,
+    bundle-local canonical review approved
 21. Pack 19 - Episode-Bounded Agent Loop: `AOA-T-0062`
 
 Purpose: close coordination, review, compaction, handoff, and continuation
@@ -383,12 +389,13 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `58` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `57` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
     `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`,
-    `AOA-T-0059`, and `AOA-T-0060` rows against generated catalog truth.
+    `AOA-T-0059`, `AOA-T-0060`, and `AOA-T-0061` rows against generated
+    catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1205,6 +1212,38 @@ Reject:
   actually read and baseline-check before mutation;
 - handoff packet authoring, git-claim verdicts, mailbox receipt, or broad
   continuation governance.
+
+### AOA-T-0061: `cross-repo-resource-map-bootstrap`
+
+Stage 3 Pack 18 verdict, 2026-05-12: exact-fit second context found.
+`calltelemetry/openclaw-linear-plugin` keeps multi-repo dispatch startup
+bounded through a configured `repos` map, issue-body / label / team-mapping
+repo selection, named per-repo worktree paths, project context injection into
+worker and audit prompts, and first-read `CLAUDE.md` / `AGENTS.md` guidance in
+each worktree root. This closes the cross-repo startup-map gap without widening
+into issue routing, model selection, worktree lifecycle, audit loops, semantic
+context maps, infrastructure inventories, or full workspace-platform
+governance.
+
+Exact evidence:
+
+- the source keeps a visible map from short repo names to concrete repo paths;
+- the current task selects a bounded repo set before dispatch continues;
+- the dispatch confirmation exposes named per-repo worktree paths for the
+  receiving worker;
+- worker and audit prompts receive the repo map as project context;
+- first-look root instruction files are named before coding or auditing;
+- repo resolution and multi-worktree creation stay explicit and resumable,
+  while broader dispatch machinery remains outside the reusable technique.
+
+Reject:
+
+- generic multi-repo product docs without a task-bounded repo set;
+- cross-repo safe-output patterns that only target remote repositories;
+- architecture maps, topology diagrams, infra catalogs, or workspace
+  encyclopedias;
+- issue routing, complexity-tier model selection, worker / auditor governance,
+  watchdogs, PR creation, authorization, or worktree lifecycle management.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

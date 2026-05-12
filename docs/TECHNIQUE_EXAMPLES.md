@@ -124,6 +124,12 @@ See also:
 |---|---|---|---|
 | minimal session-opening ritual before work | `present` | `techniques/continuity/handoff-continuation/session-opening-ritual-before-work/examples/minimal-session-opening-ritual-before-work.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/session-opening-ritual-before-work/TECHNIQUE.md) |
 
+### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal cross-repo resource-map bootstrap | `present` | `techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -142,12 +148,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0061](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) - cross-repo-resource-map-bootstrap (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal cross-repo resource-map bootstrap | `present` | `techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/examples/minimal-cross-repo-resource-map-bootstrap.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md) |
 
 ### [AOA-T-0062](../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md) - episode-bounded-agent-loop (`promoted`)
 
