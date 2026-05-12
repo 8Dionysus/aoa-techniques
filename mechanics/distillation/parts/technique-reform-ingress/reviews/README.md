@@ -125,5 +125,15 @@ Current reviews:
 - [owner-boundary-bridge-residual-cross-wave-scan](owner-boundary-bridge-residual-cross-wave-scan.md)
 - [owner-boundary-bridge-long-pass-closeout-ledger](owner-boundary-bridge-long-pass-closeout-ledger.md)
 - [template-modernization-skill-support-pilot](template-modernization-skill-support-pilot.md)
+- [template-modernization-long-pass-corpus-triage](template-modernization-long-pass-corpus-triage.md)
+- [template-modernization-long-pass-proof-review](template-modernization-long-pass-proof-review.md)
+- [template-modernization-long-pass-execution-review](template-modernization-long-pass-execution-review.md)
+- [template-modernization-long-pass-continuity-review](template-modernization-long-pass-continuity-review.md)
+- [template-modernization-long-pass-instruction-review](template-modernization-long-pass-instruction-review.md)
+- [template-modernization-long-pass-knowledge-history-ingest-tool-review](template-modernization-long-pass-knowledge-history-ingest-tool-review.md)
+- [template-modernization-long-pass-governance-review](template-modernization-long-pass-governance-review.md)
+- [template-modernization-long-pass-recovery-review](template-modernization-long-pass-recovery-review.md)
+- [template-modernization-long-pass-residual-scan](template-modernization-long-pass-residual-scan.md)
+- [template-modernization-long-pass-closeout-ledger](template-modernization-long-pass-closeout-ledger.md)
 
 These files are review packets, not generated reports and not bundle authority.
