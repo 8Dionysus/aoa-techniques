@@ -3086,7 +3086,7 @@
       "name": "requirements-design-tasks-ladder",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
       "technique_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
       "origin": {
@@ -3104,12 +3104,12 @@
         "design",
         "tasks"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-28",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -3133,6 +3133,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

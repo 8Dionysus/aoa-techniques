@@ -360,6 +360,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0055",
+      "name": "requirements-design-tasks-ladder",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
+      "current_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "family": "ready-work-graphs",
+      "proposed_trunk": "execution",
+      "proposed_shelf": "ready-work-graphs",
+      "proposed_future_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:ready-work-graphs",
+        "domain:agent-workflows",
+        "kind:workflow",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -374,28 +396,6 @@
       "review_status": "candidate",
       "rationale_cues": [
         "family:intent-chain",
-        "domain:agent-workflows",
-        "kind:workflow",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0055",
-      "name": "requirements-design-tasks-ladder",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack.",
-      "current_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
-      "family": "ready-work-graphs",
-      "proposed_trunk": "execution",
-      "proposed_shelf": "ready-work-graphs",
-      "proposed_future_path": "techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:ready-work-graphs",
         "domain:agent-workflows",
         "kind:workflow",
         "status:promoted",

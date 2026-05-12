@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0055 requirements-design-tasks-ladder` to `canonical`
+  after SpecForge-Agent showed exact-fit public reinforcement for a
+  requirements -> design -> tasks planning ladder before implementation, with
+  GitHub Spec Kit used as a supporting boundary check while excluding full SDD,
+  command, approval, agent-platform, memory, and execution doctrine, updating
+  Audit queue posture from `62` promoted techniques to `61`
 - promoted `AOA-T-0054 compaction-resilient-skill-loading` to `canonical`
   after Claude Code's official skills lifecycle showed exact-fit public
   post-compaction skill reattachment and re-invocation from canonical skill

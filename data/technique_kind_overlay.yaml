@@ -333,7 +333,7 @@ entries:
 - id: AOA-T-0055
   name: requirements-design-tasks-ladder
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: ready-work-graphs
 - id: AOA-T-0056

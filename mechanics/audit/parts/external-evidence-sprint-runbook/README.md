@@ -86,6 +86,7 @@ Closed precedents:
 - [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) have exited this sprint lane through a canonical review after Taskwarrior closed the dependency-graph and blocker-free frontier gaps.
 - [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) have exited this sprint lane through a canonical review after Qodo / PR-Agent closed the push-triggered review artifact and persistent findings-compaction gaps.
 - [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) has exited this sprint lane through a canonical review after Claude Code's official skills lifecycle closed the post-compaction skill reattachment and re-invocation gap.
+- [AOA-T-0055](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) has exited this sprint lane through a canonical review after SpecForge-Agent closed the requirement, design, and task artifact ladder gap, with GitHub Spec Kit used only as supporting boundary evidence.
 - Use their entries in [External Evidence Ledger](../external-evidence-ledger/README.md) as closure examples, not as active search targets.
 
 Why this order:
@@ -99,6 +100,7 @@ Why this order:
 - `AOA-T-0049` and `AOA-T-0050` are closed; future graph work should split only if ranking, dispatch, graph health, or tracker policy becomes the actual object
 - `AOA-T-0051` and `AOA-T-0052` are closed; future review-loop work should split only if auto-fix, approval, merge policy, review chat, or full PR governance becomes the actual object
 - `AOA-T-0054` is closed; future post-compaction work should split only if compaction-summary policy, memory recall, full context reconstruction, installer behavior, marketplace curation, or product-wide skill lifecycle governance becomes the actual object
+- `AOA-T-0055` is closed; future planning-ladder work should split only if methodology adoption, approval flow, command automation, research or constitution gates, memory state, implementation execution, task dependency graphs, or ready-frontier coordination becomes the actual object
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design; `AOA-T-0005`
   now has searched-lane memory, so repeat searches should start from a real
   new-intent rollout artifact rather than NLU/eval/benchmark overlap
