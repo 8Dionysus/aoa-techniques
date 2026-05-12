@@ -823,8 +823,8 @@
       ],
       "counts": {
         "total": 4,
-        "canonical": 1,
-        "promoted": 3,
+        "canonical": 2,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 2,
           "docs": 0,
@@ -877,7 +877,7 @@
           "id": "AOA-T-0037",
           "name": "contextual-host-doctor",
           "domain": "evaluation",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Run selector-aware host-readiness checks before startup so environment drift becomes visible for the chosen runtime without widening into generic monitoring or lifecycle control.",
           "technique_path": "techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md",
           "kind": "validation"

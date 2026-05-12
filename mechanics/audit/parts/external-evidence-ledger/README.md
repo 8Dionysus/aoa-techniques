@@ -236,6 +236,46 @@ startup. Do not count profile-only systems, editor profiles, option presets,
 templates, overlays, or generic config renderers unless they carry the same
 layer contract.
 
+## AOA-T-0037 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found, and `AOA-T-0037` exited the
+promoted queue through a bundle-local canonical review.
+
+Searched and accepted:
+
+- [Get Physics Done README](https://github.com/psi-oss/get-physics-done/blob/000d8c829132a4a1419c5e9e89983146d8d1ae75/README.md)
+  documents `gpd doctor --runtime <runtime> --local` and
+  `gpd doctor --runtime <runtime> --global` as runtime-readiness checks for a
+  selected runtime target, and keeps paper/manuscript readiness warnings
+  distinct from `paper-build` truth.
+- [GPD CLI doctor command](https://github.com/psi-oss/get-physics-done/blob/000d8c829132a4a1419c5e9e89983146d8d1ae75/src/gpd/cli.py)
+  routes `doctor --runtime` into runtime-readiness mode with normalized
+  runtime, install scope, target directory, and optional live executable
+  probes.
+- [GPD health implementation](https://github.com/psi-oss/get-physics-done/blob/000d8c829132a4a1419c5e9e89983146d8d1ae75/src/gpd/core/health.py)
+  resolves runtime, scope, and target into one doctor context, checks
+  runtime-specific launcher/target/provider/toolchain surfaces, returns
+  `mode="runtime-readiness"` for selected runtime checks, and separates
+  failures from warnings.
+- [GPD installer preflight](https://github.com/psi-oss/get-physics-done/blob/000d8c829132a4a1419c5e9e89983146d8d1ae75/bin/install.js)
+  consumes the structured doctor report, treats `fail` checks as blockers,
+  preserves advisories, and points the operator back to the exact selected
+  `gpd doctor --runtime ...` command before continuing.
+
+Rejected as still adjacent:
+
+- Generic `doctor` commands such as package-manager, framework, editor, or
+  project-health diagnostics remain adjacent unless the selected runtime,
+  profile, preset, target, or equivalent selector changes which checks matter.
+- Permission gates, unattended-readiness validators, plan preflight, build
+  checks, smoke tests, and monitoring dashboards remain sibling surfaces unless
+  they preserve the same selected-target pre-start diagnostic seam.
+
+Future watch shape: keep `AOA-T-0037` centered on selected-target doctor
+readiness with item-level severity, and route render truth, lifecycle,
+permission alignment, plan validation, build truth, smoke, and monitoring back
+to their sibling techniques or owner repos.
+
 ## AOA-T-0026 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found, and `AOA-T-0026` exited the
