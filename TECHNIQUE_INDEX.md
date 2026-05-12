@@ -49,6 +49,7 @@ This file is the repository-wide map of public techniques.
 | AOA-T-0045 | witness-trace-as-reviewable-artifact | history | canonical | Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind. |
 | AOA-T-0051 | commit-triggered-background-review | agent-workflows | canonical | Trigger a bounded background review after a commit so findings survive as inspectable artifacts without widening into autonomous merge, rewrite, or CI governance. |
 | AOA-T-0052 | review-findings-compaction | agent-workflows | canonical | Compact and revalidate review findings against current code so repeated or stale findings do not overwhelm the current review surface. |
+| AOA-T-0054 | compaction-resilient-skill-loading | agent-workflows | canonical | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. |
 | AOA-T-0053 | local-first-session-index | history | canonical | Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine. |
 
 ## Promoted techniques
@@ -56,7 +57,6 @@ This file is the repository-wide map of public techniques.
 | id | name | domain | status | summary |
 |---|---|---|---|---|
 | AOA-T-0005 | new-intent-rollout-checklist | agent-workflows | promoted | Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift. |
-| AOA-T-0054 | compaction-resilient-skill-loading | agent-workflows | promoted | Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing. |
 | AOA-T-0055 | requirements-design-tasks-ladder | agent-workflows | promoted | Separate requirements, design, and task slices so implementation planning stays reviewable without importing a full spec-driven methodology stack. |
 | AOA-T-0056 | channelized-agent-mailbox | agent-workflows | promoted | Keep agent communication inside durable named channels with ordered replay and explicit acknowledgment so coordination survives session gaps without widening into a full messaging platform or handoff-governance stack. |
 | AOA-T-0057 | structured-handoff-before-compaction | agent-workflows | promoted | Write one structured handoff artifact before compaction or session rollover so the next session can resume from explicit state instead of hidden memory or transcript replay. |

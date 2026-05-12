@@ -3027,7 +3027,7 @@
       "name": "compaction-resilient-skill-loading",
       "domain": "agent-workflows",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
       "technique_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
       "origin": {
@@ -3045,12 +3045,12 @@
         "recovery",
         "context"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-28",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -3074,6 +3074,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

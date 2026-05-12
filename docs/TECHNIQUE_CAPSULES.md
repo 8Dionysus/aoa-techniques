@@ -171,6 +171,19 @@ See also:
 - Validate by: duplicate findings collapse into one representative; invalidated findings are removed or marked stale; current references still point to live...
 - Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md)
 
+### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`canonical`)
+
+- Summary: Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.
+- Intent: Restore a bounded skill-availability surface after context compaction so the session can rediscover and...
+- Use when: long-running sessions are expected to compact older context or skills are real capability artifacts with canonical sources.
+- Avoid when: the real problem is how skills or context are authored before runtime or the workflow needs deterministic multi-fragment...
+- Needs: one canonical skill source or discoverable skill set; one explicit compaction event or reduced-context boundary; one bounded...
+- Produces: one refreshed post-compaction skill-availability surface; one explicit path for reloading needed skills from canonical sources; lower risk...
+- Core contract: canonical skill sources remain authoritative; compaction recovery is explicit rather than hidden.
+- Main risk: the wrong skill list is reintroduced after compaction.
+- Validate by: a compaction event can happen without permanently losing skill discoverability; post-compaction sessions can still identify or reload needed skills...
+- Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 - Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
@@ -183,19 +196,6 @@ See also:
 - Main risk: fixture drift makes the rollout look green while real inputs have already diverged.
 - Validate by: the canonical fixture exists and matches the new intent contract; the smoke path runs the new intent through the...
 - Source: [TECHNIQUE.md](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
-
-### [AOA-T-0054](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) - compaction-resilient-skill-loading (`promoted`)
-
-- Summary: Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.
-- Intent: Restore a bounded skill-availability surface after context compaction so the session can rediscover and...
-- Use when: long-running sessions are expected to compact older context or skills are real capability artifacts with canonical sources.
-- Avoid when: the real problem is how skills or context are authored before runtime or the workflow needs deterministic multi-fragment...
-- Needs: one canonical skill source or discoverable skill set; one explicit compaction event or reduced-context boundary; one bounded...
-- Produces: one refreshed post-compaction skill-availability surface; one explicit path for reloading needed skills from canonical sources; lower risk...
-- Core contract: canonical skill sources remain authoritative; compaction recovery is explicit rather than hidden.
-- Main risk: the wrong skill list is reintroduced after compaction.
-- Validate by: a compaction event can happen without permanently losing skill discoverability; post-compaction sessions can still identify or reload needed skills...
-- Source: [TECHNIQUE.md](../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
 
 ### [AOA-T-0055](../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) - requirements-design-tasks-ladder (`promoted`)
 

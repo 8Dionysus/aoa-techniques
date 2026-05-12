@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `63` techniques
-- matrix categorization status: `63` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `62` techniques
+- matrix categorization status: `62` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Qodo / PR-Agent's push-triggered review updates, persistent review comments, visible findings, incremental update behavior, and per-commit findings added/resolved audit trail
+- latest graduation wave: [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Claude Code's official skill content lifecycle, including post-compaction reattachment and re-invocation from canonical skill sources
+- prior graduation wave: [AOA-T-0051](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) and [AOA-T-0052](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Qodo / PR-Agent's push-triggered review updates, persistent review comments, visible findings, incremental update behavior, and per-commit findings added/resolved audit trail
 - prior graduation wave: [AOA-T-0049](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Taskwarrior's dependency, blocked / blocking, unblocked, cycle-prevention, and prerequisite-completion behavior
 - prior graduation wave: [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from MADR's one-decision record template and own decision-record practice
 - prior graduation wave: [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Maida / AgentDbg's local run trace contract
@@ -67,7 +68,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `18` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `17` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -156,11 +157,7 @@ Pack 10 is closed. [AOA-T-0051](../../../../techniques/continuity/review-compact
 
 ### Pack 11 - Post-Compaction Skill Recovery
 
-Shared blocker: the donor and repo-local adaptation both show a bounded post-compaction recovery seam, but one more live adopter is still needed so the pattern reads as reusable workflow recovery rather than one plugin lineage plus one import.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | Post-compaction skill-availability recovery sibling with clear exclusions around full context reconstruction, marketplace discovery, and install doctrine. | One second public workflow surface where compaction triggers bounded skill rediscovery or reload from canonical sources without widening into general context restoration, memory recall, or plugin product semantics. |
+Pack 11 is closed. [AOA-T-0054](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) moved to `canonical` after Claude Code's official skills lifecycle showed exact-fit public reinforcement for invoked skills carried across auto-compaction within budget, re-attached after summary, and explicitly re-invokable when full content needs restoration without widening into memory recall, marketplace discovery, installer flow, arbitrary prompt-history replay, or full context reconstruction.
 
 ### Pack 12 - Planning Ladder
 

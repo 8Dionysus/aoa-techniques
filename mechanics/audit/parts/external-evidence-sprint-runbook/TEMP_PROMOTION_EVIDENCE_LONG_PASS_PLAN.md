@@ -8,7 +8,8 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`,
 the Pack 8 closure for `AOA-T-0033`, the Pack 9 closures for `AOA-T-0049`
 plus `AOA-T-0050`, and the Pack 10 closures for `AOA-T-0051` plus
-`AOA-T-0052`, the live promoted queue is `63` bundles. This
+`AOA-T-0052`, and the Pack 11 closure for `AOA-T-0054`, the live promoted
+queue is `62` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -69,8 +70,11 @@ Current live constraint:
   visible findings, incremental update behavior, and per-commit findings
   added/resolved audit trail and exit the live promoted queue through
   canonical review;
-- the live generated catalog currently contains `63` promoted techniques and
-  `44` canonical techniques;
+- `AOA-T-0054` closed during Stage 3 with exact-fit Claude Code skill lifecycle
+  evidence for post-compaction skill reattachment and re-invocation and exits
+  the live promoted queue through canonical review;
+- the live generated catalog currently contains `62` promoted techniques and
+  `45` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -80,14 +84,14 @@ Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
-`AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, and Pack 10 closures is
-`63` promoted techniques,
+`AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10, and
+Pack 11 closures is `62` promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
-`AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`, and
-`AOA-T-0050`, `AOA-T-0051`, and `AOA-T-0052` counted as closed rows rather than
-remaining targets.
+`AOA-T-0041`, `AOA-T-0043`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
+`AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` counted as closed
+rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -102,7 +106,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with nineteen closed canonical rows.
+This is an original `82/82` promoted-corpus plan with twenty closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -119,10 +123,11 @@ catalog truth.
 
 ## Current Live Promoted Accounting Table
 
-This table is the working slot map for the full pass. Every current promoted
-technique has exactly one row here. Fill the `outcome` and `durable note`
-columns only after the bundle has completed the phase rhythm below and the
-result has been distilled into the appropriate durable surface.
+This table is the working slot map for the full pass. Every live promoted
+target and every already-closed row from the original queue has exactly one row
+here. Fill the `outcome` and `durable note` columns only after the bundle has
+completed the phase rhythm below and the result has been distilled into the
+appropriate durable surface.
 
 | stage | technique | domain/kind | pack or lane | outcome | durable note |
 |---|---|---|---|---|---|
@@ -152,7 +157,7 @@ result has been distilled into the appropriate durable surface.
 | Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | exact-fit second context; exits to canonical | Taskwarrior blocked / unblocked reports close the ready-frontier gap |
 | Stage 3 | [AOA-T-0051 commit-triggered-background-review](../../../../techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | exact-fit second context; exits to canonical | Qodo / PR-Agent push-triggered review updates close the background review artifact gap |
 | Stage 3 | [AOA-T-0052 review-findings-compaction](../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md) | agent-workflows / workflow | Pack 10 background review loop | exact-fit second context; exits to canonical | Qodo / PR-Agent persistent review comments and per-commit findings audit trail close the findings compaction gap |
-| Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | pending |  |
+| Stage 3 | [AOA-T-0054 compaction-resilient-skill-loading](../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md) | agent-workflows / recovery | Pack 11 post-compaction skill recovery | exact-fit second context; exits to canonical | Claude Code skill content lifecycle closes the post-compaction skill reattachment and re-invocation gap |
 | Stage 3 | [AOA-T-0055 requirements-design-tasks-ladder](../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md) | agent-workflows / workflow | Pack 12 planning ladder | pending |  |
 | Stage 3 | [AOA-T-0056 channelized-agent-mailbox](../../../../techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md) | agent-workflows / handoff | Pack 13 channelized mailbox | pending |  |
 | Stage 3 | [AOA-T-0057 structured-handoff-before-compaction](../../../../techniques/continuity/handoff-continuation/structured-handoff-before-compaction/TECHNIQUE.md) | agent-workflows / handoff | Pack 14 structured handoff before compaction | pending |  |
@@ -279,7 +284,9 @@ external adopter, markdown-first reuse, or long-gap donor proof.
     comments, visible findings, incremental update behavior, and per-commit
     findings added/resolved audit trail found, bundle-local canonical reviews
     approved
-13. Pack 11 - Post-Compaction Skill Recovery: `AOA-T-0054`
+13. Pack 11 - Post-Compaction Skill Recovery: `AOA-T-0054` - closed;
+    exact-fit Claude Code post-compaction skill reattachment and re-invocation
+    evidence found, bundle-local canonical review approved
 14. Pack 12 - Planning Ladder: `AOA-T-0055`
 15. Pack 13 - Channelized Mailbox: `AOA-T-0056`
 16. Pack 14 - Structured Handoff Before Compaction: `AOA-T-0057`
@@ -345,11 +352,11 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `63` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `62` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
-    `AOA-T-0050`, `AOA-T-0051`, and `AOA-T-0052` rows against generated
-    catalog truth.
+    `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` rows against
+    generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -893,6 +900,35 @@ Reject:
   output;
 - auto-fix workflows where remediation replaces review hygiene;
 - dashboards where finding priority or policy becomes the object.
+
+### AOA-T-0054: `compaction-resilient-skill-loading`
+
+Stage 3 Pack 11 verdict, 2026-05-12: exact-fit second context found.
+Claude Code's official skills documentation records a bounded skill content
+lifecycle where invoked skills are carried across auto-compaction within a
+budget, re-attached after the summary, and explicitly re-invokable when full
+content must be restored after compaction. This closes the post-compaction
+skill-recovery gap without widening into long-term memory, marketplace
+installation, arbitrary prompt-history replay, or full context reconstruction.
+
+Exact evidence:
+
+- invoked skills are real capability sources whose content can be loaded into
+  the conversation;
+- auto-compaction carries invoked skills forward within a bounded token budget;
+- compaction re-attaches recent skill invocations after summary;
+- dropped or truncated skill content can be restored by explicit re-invocation
+  after compaction;
+- no long-term memory or full session-state restoration is claimed.
+
+Reject:
+
+- generic skill discovery without a compaction boundary;
+- marketplace or installer behavior;
+- transcript replay, memory recall, or context-summary doctrine;
+- full prompt reconstruction;
+- product-wide skill lifecycle governance where post-compaction recovery is
+  incidental rather than the object.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

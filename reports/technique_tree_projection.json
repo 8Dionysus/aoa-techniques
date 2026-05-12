@@ -338,6 +338,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0054",
+      "name": "compaction-resilient-skill-loading",
+      "domain": "agent-workflows",
+      "kind": "recovery",
+      "status": "canonical",
+      "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
+      "current_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "family": "review-compaction",
+      "proposed_trunk": "continuity",
+      "proposed_shelf": "review-compaction",
+      "proposed_future_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:review-compaction",
+        "domain:agent-workflows",
+        "kind:recovery",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -358,28 +380,6 @@
         "review_status:candidate"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0054",
-      "name": "compaction-resilient-skill-loading",
-      "domain": "agent-workflows",
-      "kind": "recovery",
-      "status": "promoted",
-      "summary": "Re-seed skill availability after context compaction so agents can reload needed skills from canonical sources without widening into full context reconstruction or prompt stuffing.",
-      "current_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
-      "family": "review-compaction",
-      "proposed_trunk": "continuity",
-      "proposed_shelf": "review-compaction",
-      "proposed_future_path": "techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:review-compaction",
-        "domain:agent-workflows",
-        "kind:recovery",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
       "id": "AOA-T-0055",

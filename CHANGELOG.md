@@ -22,6 +22,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0054 compaction-resilient-skill-loading` to `canonical`
+  after Claude Code's official skills lifecycle showed exact-fit public
+  post-compaction skill reattachment and re-invocation from canonical skill
+  sources, updating Audit queue posture from `63` promoted techniques to `62`
 - promoted `AOA-T-0051 commit-triggered-background-review` and `AOA-T-0052
   review-findings-compaction` to `canonical` after Qodo / PR-Agent showed
   exact-fit public push-triggered review updates, persistent review comments,
