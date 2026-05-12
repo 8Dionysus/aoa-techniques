@@ -266,7 +266,7 @@ relations:
                 self.assertEqual(domain, record.domain)
 
         self.assertEqual(set(validate_repo.DOMAIN_ORDER), seen_domains)
-        self.assertEqual("promoted", records_by_id["AOA-T-0026"].status)
+        self.assertEqual("canonical", records_by_id["AOA-T-0026"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0027"].status)
         self.assertEqual("canonical", records_by_id["AOA-T-0028"].status)
         self.assertEqual("promoted", records_by_id["AOA-T-0029"].status)
@@ -780,8 +780,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             domain_values,
         )
         self.assertEqual(validate_repo.KIND_VALUES, kind_values)
-        self.assertEqual(25, status_counts["canonical"])
-        self.assertEqual(82, status_counts["promoted"])
+        self.assertEqual(26, status_counts["canonical"])
+        self.assertEqual(81, status_counts["promoted"])
 
     def test_kind_manifest_matches_builder_projection_and_order(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
@@ -947,7 +947,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(25, len(canonical_records))
+        self.assertEqual(26, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -2566,7 +2566,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(25, adverse_note_count)
+        self.assertEqual(26, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"

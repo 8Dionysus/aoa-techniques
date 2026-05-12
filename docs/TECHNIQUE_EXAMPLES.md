@@ -656,6 +656,13 @@ See also:
 
 ## `history`
 
+### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Concrete Local-First Session History | `present` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
+| Minimal Session Capture As Repo Artifact | `present` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
+
 ### [AOA-T-0044](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) - versionable-session-transcripts (`canonical`)
 
 | example | body | example path | source |
@@ -667,13 +674,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal local-first session index | `present` | `techniques/history/history-artifacts/local-first-session-index/examples/minimal-local-first-session-index.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
-
-### [AOA-T-0026](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) - session-capture-as-repo-artifact (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Concrete Local-First Session History | `present` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/concrete-local-first-session-history.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
-| Minimal Session Capture As Repo Artifact | `present` | `techniques/history/history-artifacts/session-capture-as-repo-artifact/examples/minimal-session-capture-as-repo-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md) |
 
 ### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
 

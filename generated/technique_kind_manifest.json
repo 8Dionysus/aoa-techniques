@@ -544,8 +544,8 @@
       ],
       "counts": {
         "total": 14,
-        "canonical": 6,
-        "promoted": 8,
+        "canonical": 7,
+        "promoted": 7,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 7,
@@ -621,6 +621,14 @@
           "technique_path": "techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0026",
+          "name": "session-capture-as-repo-artifact",
+          "domain": "history",
+          "status": "canonical",
+          "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
+          "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0044",
           "name": "versionable-session-transcripts",
           "domain": "history",
@@ -635,14 +643,6 @@
           "status": "canonical",
           "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
           "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0026",
-          "name": "session-capture-as-repo-artifact",
-          "domain": "history",
-          "status": "promoted",
-          "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
-          "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0045",

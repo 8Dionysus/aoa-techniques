@@ -719,8 +719,8 @@
       ],
       "counts": {
         "total": 6,
-        "canonical": 2,
-        "promoted": 4,
+        "canonical": 3,
+        "promoted": 3,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 0,
@@ -745,14 +745,23 @@
         }
       },
       "technique_ids": [
+        "AOA-T-0026",
         "AOA-T-0044",
         "AOA-T-0053",
-        "AOA-T-0026",
         "AOA-T-0045",
         "AOA-T-0066",
         "AOA-T-0067"
       ],
       "techniques": [
+        {
+          "id": "AOA-T-0026",
+          "name": "session-capture-as-repo-artifact",
+          "domain": "history",
+          "status": "canonical",
+          "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
+          "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
+          "kind": "artifact"
+        },
         {
           "id": "AOA-T-0044",
           "name": "versionable-session-transcripts",
@@ -769,15 +778,6 @@
           "status": "canonical",
           "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
           "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md",
-          "kind": "artifact"
-        },
-        {
-          "id": "AOA-T-0026",
-          "name": "session-capture-as-repo-artifact",
-          "domain": "history",
-          "status": "promoted",
-          "summary": "Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.",
-          "technique_path": "techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md",
           "kind": "artifact"
         },
         {

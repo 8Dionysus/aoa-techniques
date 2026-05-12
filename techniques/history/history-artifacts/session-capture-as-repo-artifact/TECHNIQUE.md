@@ -3,7 +3,7 @@ id: AOA-T-0026
 name: session-capture-as-repo-artifact
 domain: history
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: getspecstory
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - local-first
   - transcripts
 summary: Capture AI coding sessions as versioned repo artifacts so project history stays searchable, reviewable, and reusable without turning session logs into memory or instruction policy.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-21
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # session-capture-as-repo-artifact
@@ -172,9 +174,10 @@ See `checks/session-capture-as-repo-artifact-checklist.md`.
 
 - adapted from open-source `getspecstory`
 - promoted into `aoa-techniques` on 2026-03-21 as a bounded external-import technique for local-first session history artifacts
+- promoted to `canonical` on 2026-05-12 after public Aider chat-history artifacts confirmed the capture-as-project-artifact contract outside the donor lineage
 
 ## Future evolution
 
 - split out a dedicated history-to-summary sibling if reusable summarization flows prove stable beyond raw artifact capture
 - split out a dedicated history-to-instructions sibling if distilled instruction generation becomes reusable without widening memory semantics
-- add a stronger second live context if another public repository adopts the same local-first session-artifact contract
+- keep watching for drift between deliberately retained project artifacts and tool-default ignored local logs, especially in Aider-style workflows

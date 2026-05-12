@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0026 session-capture-as-repo-artifact` to `canonical`
+  after the Aider `.aider.chat.history.md` artifact-family pass found a real
+  public second context in committed repository-visible session-history
+  artifacts, adding an adverse-effects review and updating Audit queue posture
+  from `82` promoted techniques to `81`
 - ran the `AOA-T-0032 context-report-for-ci` exemplar promotion-evidence
   sprint, keeping the bundle `promoted`, recording adjacent public
   context-report/token-budget/repo-packing/LLM-ready-docs lanes as searched
