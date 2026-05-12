@@ -2066,6 +2066,33 @@
       }
     },
     {
+      "id": "AOA-T-0063",
+      "name": "versioned-agent-registry-contract",
+      "domain": "docs",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.",
+      "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
+      "topology": {
+        "family": "capability-registry",
+        "capability_class": [
+          "write",
+          "read",
+          "interpret"
+        ],
+        "substrate": [
+          "docs",
+          "config",
+          "data",
+          "tool-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "public-share"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0020",
       "name": "evidence-note-provenance-lift",
       "domain": "docs",
@@ -2217,33 +2244,6 @@
         "execution_profile": "orchestration-required",
         "risk_posture": [
           "security-sensitive"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0063",
-      "name": "versioned-agent-registry-contract",
-      "domain": "docs",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.",
-      "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
-      "topology": {
-        "family": "capability-registry",
-        "capability_class": [
-          "write",
-          "read",
-          "interpret"
-        ],
-        "substrate": [
-          "docs",
-          "config",
-          "data",
-          "tool-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "public-share"
         ]
       }
     },

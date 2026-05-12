@@ -22,6 +22,16 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0063 versioned-agent-registry-contract` to `canonical`
+  after Nacos's A2A Registry guide showed exact-fit public reinforcement for
+  named versioned AgentCard registry entries with namespace/name identity,
+  unique versions, a current default published version, SDK and HTTP
+  publication paths, and explicit AgentCard fields including name,
+  description, URL, version, and protocol version, while excluding discovery
+  ranking, fuzzy search, endpoint subscription, A2A invocation, registry
+  console/product behavior, trust policy, marketplace curation, graph
+  semantics, and registry governance, updating Audit queue posture from `56`
+  promoted techniques to `55`
 - promoted `AOA-T-0062 episode-bounded-agent-loop` to `canonical` after
   Cloudflare's long-running Agents guide showed exact-fit public reinforcement
   for durable plan steps, checkpoint recovery, one-step-at-a-time execution,

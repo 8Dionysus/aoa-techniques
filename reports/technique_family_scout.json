@@ -905,8 +905,8 @@
       ],
       "counts": {
         "total": 3,
-        "canonical": 1,
-        "promoted": 2,
+        "canonical": 2,
+        "promoted": 1,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 3,
@@ -949,7 +949,7 @@
           "id": "AOA-T-0063",
           "name": "versioned-agent-registry-contract",
           "domain": "docs",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.",
           "technique_path": "techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md",
           "kind": "artifact"

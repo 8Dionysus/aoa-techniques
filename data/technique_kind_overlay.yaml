@@ -381,7 +381,7 @@ entries:
 - id: AOA-T-0063
   name: versioned-agent-registry-contract
   domain: docs
-  status: promoted
+  status: canonical
   kind: artifact
   family: capability-registry
 - id: AOA-T-0064

@@ -320,6 +320,57 @@ workflow engines, runtime checkpointing, context compression, settlement
 gates, or autonomous-platform lifecycle docs unless they expose the bounded
 episode-loop seam itself.
 
+## AOA-T-0063 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`nacos-group/nacos-group.github.io` at
+`405bf9a9ff2b66ba7f6f593344ef3c48ed644d52`, file
+`src/content/docs/next/en/manual/user/ai/agent-registry.md` sha
+`b72e1ba5c1a1e6675a2adba44fcca180b7313767`, provides the clean public source
+for Pack 20. The repository is Apache-2.0 licensed.
+
+Accepted evidence:
+
+- The guide frames Nacos as an A2A Registry for managing agents through agent
+  registration, namespace isolation, and version management.
+- AgentCards are treated as registry objects that align with the A2A
+  AgentCard definition while adding Nacos-local registry management details.
+- Agents are uniquely identified by `namespaceId` and `name`; names must be
+  unique inside a namespace and may repeat across namespaces.
+- AgentCards support multiple unique `version` values, require new versions
+  when AgentCard content changes, and select one current default published
+  version.
+- Consumers get the default published version by default, and can request a
+  specific version explicitly.
+- SDK publication constructs an `AgentCard` with explicit `name`,
+  `description`, `url`, `version`, and `protocolVersion`, then releases it to
+  the Nacos registry.
+- External-provider publication through console or HTTP API preserves the same
+  AgentCard payload shape rather than hiding the entry in runtime state.
+
+Rejected or bounded:
+
+- Do not import Nacos service deployment, console workflow, SDK lifecycle,
+  authentication, local endpoints, Spring AI Alibaba integration, or A2A
+  invocation into the technique.
+- Treat query/list/detail APIs, fuzzy search, skill/tag filtering, endpoint
+  subscription, and consumer-side request flow as adjacent to
+  `AOA-T-0064 capability-discovery`, not proof that the entry contract owns
+  discovery behavior.
+- Treat AgentCard field breadth, security schemes, signatures, capabilities,
+  transport interfaces, and provider metadata as payload details rather than
+  expanding this bundle into capability-spec ownership, trust policy, endpoint
+  selection, marketplace curation, or graph semantics.
+
+Future search shape: future sources can reinforce the canonical default only
+if they preserve the same narrow object: one registry-facing entry with
+explicit name or namespace/name identity, one visible version, one bounded
+payload or stable reference, and reviewable metadata or default-version
+semantics. Do not reopen from generic registry products, discovery search,
+endpoint subscription, trust or signature layers, marketplace catalogs, or
+capability schema documents unless they expose the versioned entry publication
+contract itself.
+
 ## AOA-T-0056 External Evidence Notes
 
 2026-05-12 result: exact-fit second context found.

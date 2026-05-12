@@ -22,7 +22,7 @@ PILOT_BUNDLES = (
         "AOA-T-0063",
         "versioned-agent-registry-contract",
         "artifact",
-        "promoted",
+        "canonical",
         "techniques/docs/versioned-agent-registry-contract",
         "techniques/instruction/capability-registry/versioned-agent-registry-contract",
     ),
