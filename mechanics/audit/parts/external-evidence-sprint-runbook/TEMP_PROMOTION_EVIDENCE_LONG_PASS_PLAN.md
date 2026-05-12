@@ -5,8 +5,8 @@ original `82/82` promoted technique corpus; after the `AOA-T-0026` A1 closure,
 `AOA-T-0036` A2 closure, `AOA-T-0037` Stage 2 closure, Pack 3 closures for
 `AOA-T-0038` plus `AOA-T-0039`, and Pack 4 closures for `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, and the Pack 5 closures for `AOA-T-0024`,
-`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, and `AOA-T-0043`, the live promoted
-queue is `69` bundles. This
+`AOA-T-0025`, `AOA-T-0040`, `AOA-T-0041`, `AOA-T-0043`, and `AOA-T-0045`,
+the live promoted queue is `68` bundles. This
 file is not bundle authority, not a promotion verdict, not generated output,
 and not durable searched-lane memory until distilled into bundle-local notes,
 the external evidence ledger, the promotion readiness matrix, or a closeout
@@ -52,8 +52,11 @@ Current live constraint:
 - `AOA-T-0042` remains the Pack 5 residual because the current manifest/doctor,
   registry-update, and security-risk lanes are adjacent rather than exact-fit
   pre-surface source-readiness evidence;
-- the live generated catalog currently contains `69` promoted techniques and
-  `38` canonical techniques;
+- `AOA-T-0045` closed during Stage 2 with exact-fit Maida / AgentDbg
+  local run trace evidence and exits the live promoted queue through canonical
+  review;
+- the live generated catalog currently contains `68` promoted techniques and
+  `39` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -63,12 +66,13 @@ Move from one exemplar evidence cycle into a complete, repeatable,
 matrix-wide pass over the original `82` promoted-technique queue without faking
 canonical readiness. The live remaining queue after the Pack 3 `AOA-T-0038`
 and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
-`AOA-T-0030` closures plus the Pack 5 closures is `69` promoted techniques,
+`AOA-T-0030` closures plus the Pack 5 and Pack 7 closures is `68` promoted
+techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
-`AOA-T-0041`, and `AOA-T-0043` counted as closed rows rather than remaining
-targets.
+`AOA-T-0041`, `AOA-T-0043`, and `AOA-T-0045` counted as closed rows rather
+than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -83,7 +87,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with eight closed canonical rows.
+This is an original `82/82` promoted-corpus plan with fourteen closed canonical rows.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -127,7 +131,7 @@ result has been distilled into the appropriate durable surface.
 | Stage 2 | [AOA-T-0046 repo-doc-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | first second-context support; remains promoted | `nuxt-content/nuxt-llms` `llms.txt` route recorded; needs stronger repo-owned route manifest before canonical promotion |
 | Stage 2 | [AOA-T-0047 github-review-template-lift](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | first second-context support; remains promoted | GitHub issue / pull request template intake recorded; needs review-specific template manifest before canonical promotion |
 | Stage 2 | [AOA-T-0048 semantic-review-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | docs / lift | Pack 6 KAG/source-lift evidence prep | adjacent lanes recorded; remains promoted | AI review, code review summary, quality-report, and scoring lanes ruled adjacent |
-| Stage 2 | [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | history / artifact | Pack 7 history artifacts remainder | pending |  |
+| Stage 2 | [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | history / artifact | Pack 7 history artifacts remainder | exact-fit second context; exits to canonical | Maida / AgentDbg local run trace contract closes the structured witness trace gap |
 | Stage 2 | [AOA-T-0033 decision-rationale-recording](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | docs / artifact | Pack 8 internal docs practice | pending |  |
 | Stage 3 | [AOA-T-0049 dependency-aware-task-graph](../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
 | Stage 3 | [AOA-T-0050 ready-work-from-blocker-graph](../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md) | agent-workflows / workflow | Pack 9 graph work coordination | pending |  |
@@ -240,7 +244,9 @@ CI-report artifact, history artifact, and runtime truth seam.
 8. Pack 6 - KAG / Source-Lift Evidence Prep: `AOA-T-0020`
    adjacent lane recorded; `AOA-T-0046` and `AOA-T-0047` first
    second-context support recorded; `AOA-T-0048` adjacent lanes recorded
-9. Pack 7 - History Artifacts remainder: `AOA-T-0045`
+9. Pack 7 - History Artifacts remainder: `AOA-T-0045` - closed; exact-fit
+   Maida / AgentDbg local run trace evidence found, bundle-local canonical
+   review approved
 10. Pack 8 - Internal Docs Practice: `AOA-T-0033`
 
 Purpose: close the older promoted families whose blockers are mostly live
@@ -316,9 +322,9 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `69` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `68` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
-    `AOA-T-0029`, and `AOA-T-0030` rows against
+    `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0045` rows against
     generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
@@ -709,6 +715,31 @@ Reject:
 - generic code review summaries;
 - AI review products with no source-provenance boundary;
 - scoring systems that replace authored review surfaces.
+
+### AOA-T-0045: `witness-trace-as-reviewable-artifact`
+
+Stage 2 Pack 7 verdict, 2026-05-12: exact-fit second context found. Maida /
+AgentDbg's public trace-format contract persists one local agent run as
+`run.json` plus ordered `events.jsonl`, including run metadata, LLM calls, tool
+calls, errors, state updates, loop-warning evidence, redaction/truncation, and
+a human-readable local timeline / summary panel. This closes the structured
+witness trace gap without widening into transcript packaging, hosted
+observability, memory writeback, or promotion policy.
+
+Exact evidence:
+
+- structured run trace artifact;
+- step or event order remains inspectable;
+- tool visibility and state deltas are captured when present;
+- one human-readable summary or timeline helps reviewers inspect the run before
+  downstream memory, compost, canon, or promotion layers.
+
+Reject:
+
+- plain transcript packaging;
+- session search or indexing without state-delta trace semantics;
+- hosted observability that owns monitoring or alert policy;
+- eval harnesses that score the run instead of preserving the review artifact.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

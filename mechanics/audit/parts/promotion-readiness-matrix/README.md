@@ -10,11 +10,12 @@ For the current actionable first wave, open [Promotion Evidence Runbook](../prom
 
 ## Current Posture
 
-- current promoted corpus: `69` techniques
-- matrix categorization status: `69` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
+- current promoted corpus: `68` techniques
+- matrix categorization status: `68` promoted techniques are explicitly categorized in the pack matrix below; Wave 0 matrix expansion is closed for `AOA-T-0075` through `AOA-T-0107`
 - current approve-now queue: none
 - closest current queue item: [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md), because it now leads the remaining active Wave A set and has the clearest report-only contract among the still-promoted bundles
-- latest graduation wave: [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus source-method surfaces
+- latest graduation wave: [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Maida / AgentDbg's local run trace contract
+- prior graduation wave: [AOA-T-0024](../../../../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0025](../../../../techniques/instruction/capability-registry/capability-spec-versioning/TECHNIQUE.md), [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md), and [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from managedcode/dotnet-skills, A2A Agent Card, Claude Code skills, VoltAgent awesome-agent-skills, and StableNexus source-method surfaces
 - prior graduation wave: [AOA-T-0027](../../../../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0029](../../../../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), and [AOA-T-0030](../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from ai-rulez's managed skill/rule fan-out, Claude Code's layered memory/rules precedence, and Cline Rules' fragment-first rule/context source layer
 - prior graduation wave: [AOA-T-0038](../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md) and [AOA-T-0039](../../../../techniques/execution/runtime-truth-lifecycle/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Metaflow Devstack's one-entrypoint local lifecycle surface and LOCOMO / OpenClaw's baseline-first additive benchmark surface
 - prior graduation wave: [AOA-T-0037](../../../../techniques/execution/runtime-truth-lifecycle/contextual-host-doctor/TECHNIQUE.md) moved to `canonical` on 2026-05-12 after exact-fit public reinforcement from Get Physics Done's selected-runtime `gpd doctor` readiness surface
@@ -63,7 +64,7 @@ It narrows the next search space and closes false-positive local lanes, but it d
 | `long-gap donor lane` | `2` | Needs one explicit new external or source-family proof surface. Repo-local wording work will not close the gap. |
 | `cross-context review-refresh lane` | `0` | No active promoted bundle remains in this lane right now; `AOA-T-0018` already exited through follow-up canonical review. |
 | `second-corpus evidence-prep lane` | `1` | Needs another live markdown-first corpus, not just another note or example inside this repo. |
-| `external live-adopter lane` | `24` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
+| `external live-adopter lane` | `23` | Already has donor intake, documentation-first adaptation, and canonical-readiness review; still needs another real adopter outside the donor repo. |
 | `internal-origin second-consumer lane` | `34` | Internal or origin-lineage bundle needs another downstream consumer plus sibling-boundary reinforcement. |
 | `fresh extraction lane` | `8` | Has origin evidence only, lacks second-context evidence, or is missing canonical-readiness scaffolding. The next step is second-context plus canonical-readiness work, not promotion debate. |
 | `v0.4 matrix-expansion lane` | `0` | Wave 0 is now categorized below. Reopen only when generated promotion readiness shows a newer promoted bundle outside the pack matrix. |
@@ -136,11 +137,7 @@ Shared blocker: the remaining promoted family members still need more live markd
 
 ### Pack 7 - History Artifacts
 
-Shared blocker: the remaining open history queue is now witness-trace review. Capture, transcript packaging, and local indexing already exited to `canonical`, but the witness sibling still needs more live artifact-first proof.
-
-| technique | current posture | next honest promotion trigger |
-|---|---|---|
-| [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Structured witness-trace sibling with a clear boundary from transcript packaging; the latest public transcript-log export lane remains adjacent because `claude-conversation-extractor` detailed exports and `claude-code-log` preserve tool use, terminal outputs, and summaries, but still package transcript or log review rather than a bounded witness trace with explicit state-delta review notes and pre-writeback summary posture. | One second downstream consumer outside the current witness/compost pilot lineage where a bounded run emits a structured trace artifact and human-readable summary before any writeback or promotion layer. |
+Pack 7 is closed. [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) moved to `canonical` after Maida / AgentDbg showed exact-fit public reinforcement for one local run trace artifact with run metadata, ordered events, state updates, tool and LLM calls, error and loop-warning evidence, redaction/truncation, and a human-readable timeline / summary panel.
 
 ### Pack 8 - Internal Docs Practice
 

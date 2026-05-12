@@ -2789,6 +2789,32 @@
       }
     },
     {
+      "id": "AOA-T-0045",
+      "name": "witness-trace-as-reviewable-artifact",
+      "domain": "history",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
+      "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
+      "topology": {
+        "family": "history-artifacts",
+        "capability_class": [
+          "write",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "history",
+          "memory-adjacent-artifacts",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0053",
       "name": "local-first-session-index",
       "domain": "history",
@@ -2808,32 +2834,6 @@
           "docs",
           "data",
           "ui"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0045",
-      "name": "witness-trace-as-reviewable-artifact",
-      "domain": "history",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
-      "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md",
-      "topology": {
-        "family": "history-artifacts",
-        "capability_class": [
-          "write",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "history",
-          "memory-adjacent-artifacts",
-          "human-approval-surfaces"
         ],
         "execution_profile": "small-agent",
         "risk_posture": [

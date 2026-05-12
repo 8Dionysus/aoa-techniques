@@ -3,7 +3,7 @@ id: AOA-T-0045
 name: witness-trace-as-reviewable-artifact
 domain: history
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: aoa-memo + aoa-playbooks
   path: docs/WITNESS_TRACE_CONTRACT.md + playbooks/witness-to-compost-pilot/PLAYBOOK.md
@@ -17,12 +17,12 @@ tags:
   - review
   - provenance
 summary: Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # witness-trace-as-reviewable-artifact

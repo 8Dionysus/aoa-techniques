@@ -669,17 +669,17 @@ See also:
 |---|---|---|---|
 | Minimal Versionable Session Transcripts | `present` | `techniques/history/history-artifacts/versionable-session-transcripts/examples/minimal-versionable-session-transcripts.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) |
 
+### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Witness Trace As Reviewable Artifact | `present` | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
+
 ### [AOA-T-0053](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) - local-first-session-index (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal local-first session index | `present` | `techniques/history/history-artifacts/local-first-session-index/examples/minimal-local-first-session-index.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) |
-
-### [AOA-T-0045](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) - witness-trace-as-reviewable-artifact (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Witness Trace As Reviewable Artifact | `present` | `techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/examples/minimal-witness-trace-as-reviewable-artifact.md` | [TECHNIQUE.md](../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) |
 
 ### [AOA-T-0066](../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md) - transcript-replay-artifact (`promoted`)
 

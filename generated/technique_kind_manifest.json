@@ -544,8 +544,8 @@
       ],
       "counts": {
         "total": 14,
-        "canonical": 8,
-        "promoted": 6,
+        "canonical": 9,
+        "promoted": 5,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 7,
@@ -637,20 +637,20 @@
           "technique_path": "techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0045",
+          "name": "witness-trace-as-reviewable-artifact",
+          "domain": "history",
+          "status": "canonical",
+          "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
+          "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0053",
           "name": "local-first-session-index",
           "domain": "history",
           "status": "canonical",
           "summary": "Build a local searchable index over already-saved session artifacts so teams can browse or query saved history without reopening capture semantics or turning the index into memory or dashboard doctrine.",
           "technique_path": "techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0045",
-          "name": "witness-trace-as-reviewable-artifact",
-          "domain": "history",
-          "status": "promoted",
-          "summary": "Preserve a bounded witness trace as a reviewable artifact with step visibility, state-delta notes, and human-readable summary so a nontrivial run can be inspected before any writeback or promotion without creating a new memory-object kind.",
-          "technique_path": "techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0066",
