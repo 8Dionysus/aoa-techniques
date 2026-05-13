@@ -3,7 +3,7 @@ id: AOA-T-0077
 name: harvest-packet-contract
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-donor-harvest/SKILL.md + skills/aoa-session-donor-harvest/references/harvest-packet-contract.md
@@ -17,12 +17,12 @@ tags:
   - reviewed-session
   - post-session
 summary: Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # harvest-packet-contract
@@ -182,9 +184,10 @@ See `checks/harvest-packet-contract-checklist.md`.
 
 - born in `aoa-skills` as the packet-contract seam inside `aoa-session-donor-harvest`
 - extracted into `aoa-techniques` on 2026-04-05 as a bounded reviewed-session packet contract
+- promoted to canonical on 2026-05-12 after `aoa-sdk`'s checkpoint-closeout bridge and closeout API showed a second live consumer for the packet spine: `HARVEST_PACKET.json` keeps session reference, reviewed artifact, accepted and deferred candidates, extract counts, owner distribution, evidence density, and checkpoint-review carry visible, while downstream owner follow-through reads accepted candidates without making the packet a memory store, routing authority, or final owner verdict
 
 ## Future evolution
 
 - keep donor extraction separate through `AOA-T-0075`
 - keep later family seams explicit instead of growing packet authority
-- add a second live context that uses the same bounded packet nucleus outside the current AoA session-harvest lineage
+- future external sources can reinforce the default only if the packet remains a small reviewed-session nucleus consumed by later seams without becoming memory canon, routing authority, dashboard schema, or final promotion verdict

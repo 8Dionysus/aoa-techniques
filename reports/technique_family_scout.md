@@ -31,7 +31,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `2` | `0` |
 | `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `3` | `0` | `3` |
 | `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `5` | `0` |
-| `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `0` | `4` |
+| `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `2` | `2` |
 | `decision-routing` | Owner-layer routing, explicit fork cards, and route risk posture for next-step choice. | `3` | `0` | `3` |
 | `diagnosis-repair` | Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair. | `4` | `0` | `4` |
 | `automation-governance` | Automation-worthiness, approval sensitivity, candidate routing, and promotion-boundary review. | `9` | `0` | `9` |
@@ -365,12 +365,12 @@ Harvest reviewed sessions into donor packs, bounded packets, progression deltas,
 Typical domains: `agent-workflows`.
 Typical kinds: `lift`, `artifact`, `handoff`.
 
-Counts: `total` 4, `canonical` 0, `promoted` 4.
+Counts: `total` 4, `canonical` 2, `promoted` 2.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
-| [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another. |
+| [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | `agent-workflows` | `lift` | `canonical` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
+| [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another. |
 | [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
 | [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
 

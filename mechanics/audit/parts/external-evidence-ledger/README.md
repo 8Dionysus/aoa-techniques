@@ -55,7 +55,84 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0072](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | `qarmin/czkawka` | A public media dedupe tool can keep perceptual similarity, explicit threshold tuning, reviewable grouped output, and default-off deletion separate from semantic media taxonomy, ranking, archive policy, and cleanup automation. |
 | [AOA-T-0073](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | `end1989/ai-image-classification` | A public offline media sorter can keep configured mixed-media labels, CLIP scoring, OCR side-text confidence, review thresholds, user correction, and separated file actions visible without turning bucketing into moderation, identity inference, duplicate grouping, or cleanup policy. |
 | [AOA-T-0074](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | `3bl3gamer/tg_history_dumper` | A public Telegram history dumper can preserve messages as local JSON Lines, media as message-linked files, related peers as JSONL side surfaces, and last-message-id continuation without turning normalization into auth, session, archive presentation, search, or memory doctrine. |
+| [AOA-T-0075](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | `aoa-sdk` checkpoint-closeout bridge plus LangSmith reviewed-run curation | A live SDK control-plane consumer can reread reviewed artifacts and checkpoint-review carry into bounded donor candidates, while public reviewed-run curation supports the same pressure to turn reviewed traces into bounded downstream records without making them memory or final routing truth. |
+| [AOA-T-0077](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | `aoa-sdk` `HARVEST_PACKET` consumer plus LangSmith reviewed-run curation | A live SDK closeout path can write and later consume one bounded harvest packet with accepted candidates, evidence anchors, owner hints, next surfaces, and nearest-wrong-target posture without letting the packet become memory canon, routing authority, or final owner acceptance. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0075 / AOA-T-0077 Cross-Context Evidence Notes
+
+2026-05-12 result: exact-fit live second context found.
+`aoa-sdk` at `f74c037e0f346713001516f7f3abddabbf64d02a` provides the
+clean primary source for Pack 32. This is sibling-repo evidence, not external
+import evidence: do not import SDK hook plumbing, `.aoa` storage layout,
+command wrappers, closeout execution code, or owner-handoff queue behavior into
+`aoa-techniques`.
+
+Accepted evidence:
+
+- `docs/session-growth-checkpoints.md` says checkpoint capture does not emit
+  `HARVEST_PACKET` or `CORE_SKILL_APPLICATION_RECEIPT`, and that full harvest
+  belongs to the reviewed closeout path.
+- The same doc says reviewed closeout builds `closeout-context.json`, rereads
+  the reviewed artifact, then executes donor harvest, progression lift, and
+  quest harvest in order while keeping the SDK bridge mechanical and requiring
+  an agent to apply the skill protocol.
+- `src/aoa_sdk/checkpoints/registry.py` blocks reviewed closeout when
+  checkpoint agent reviews are still pending.
+- `registry.py` aggregates runtime-session checkpoint notes, collects
+  shortlisted clusters, harvest/progression/upgrade candidate ids, lineage
+  hints, owner follow-through maps, and one ordered donor -> progression ->
+  quest skill plan.
+- `registry.py` builds accepted donor candidates from shortlisted clusters,
+  preserves deferred candidates when no candidate survives, and writes
+  `HARVEST_PACKET.json` with session ref, route ref, authority contract,
+  reviewed artifact ref, checkpoint-review carry, accepted candidates,
+  deferred candidates, extract counts, owner-layer distribution, and reviewed
+  evidence density.
+- `registry.py` writes `HARVEST_PACKET_RECEIPT.json` plus a core skill
+  application receipt for the donor harvest stage.
+- `tests/test_checkpoints.py` verifies that closeout chain artifacts carry
+  checkpoint semantic review material into the harvest packet, preserve
+  multi-commit review material, and emit donor/progression/quest artifacts and
+  receipts even without a local checkpoint note.
+- `tests/test_closeout.py` verifies that a closeout run can read accepted
+  candidates from a harvest packet into owner follow-through briefs with
+  source kind `harvest-candidate`, suggested action `draft-owner-artifact`,
+  owner repo, next surface, and unit name.
+
+Supporting public lane:
+
+- LangSmith's annotation queue docs describe human review over specific runs,
+  queue completion, reviewer notes, rubric feedback, and turning a reviewed
+  run's edited input/output into a corrected reference example added to a
+  dataset.
+- LangSmith's dataset docs describe dataset versioning, filtered or split
+  example views, and exporting filtered traces from experiments back to
+  datasets.
+- LangSmith's production logging automation guide describes `Add to Dataset`
+  and `Add to Annotation Queue` actions where selected runs carry inputs,
+  outputs, metadata, and feedback into bounded downstream datasets.
+- This lane is supporting, not primary proof, because it does not carry
+  AoA-style owner hints, nearest-wrong-target posture, or the `HARVEST_PACKET`
+  spine.
+
+Rejected or bounded:
+
+- SDK checkpoint capture, post-commit hooks, pre-push/pre-merge gates,
+  runtime-session ledgers, and local `.aoa` storage as invariant technique
+  requirements.
+- SDK closeout command names, report filenames, owner-handoff queue behavior,
+  and exact JSON field names beyond the portable packet shape.
+- LangSmith product workflows as a direct packet contract; they support
+  reviewed-run curation pressure but stay evaluation/dataset-centered.
+- Memory writeback, stats refresh, owner placement, progression scoring, quest
+  promotion, final owner acceptance, and evaluation dataset governance as
+  bundle-owned behavior.
+
+Future search shape: future sources can reinforce these canonical defaults
+only if reviewed run, trace, or session artifacts become bounded candidate
+records or packet nuclei with evidence anchors before later owner placement,
+evaluation, routing, memory, or promotion begins.
 
 ## AOA-T-0074 External Evidence Notes
 

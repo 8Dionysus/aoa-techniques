@@ -453,7 +453,7 @@ entries:
 - id: AOA-T-0075
   name: session-donor-harvest
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: lift
   family: donor-harvest
 - id: AOA-T-0076
@@ -465,7 +465,7 @@ entries:
 - id: AOA-T-0077
   name: harvest-packet-contract
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: donor-harvest
 - id: AOA-T-0078

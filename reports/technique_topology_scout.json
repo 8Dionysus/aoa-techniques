@@ -794,6 +794,63 @@
       }
     },
     {
+      "id": "AOA-T-0075",
+      "name": "session-donor-harvest",
+      "domain": "agent-workflows",
+      "kind": "lift",
+      "status": "canonical",
+      "summary": "Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion.",
+      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
+      "topology": {
+        "family": "donor-harvest",
+        "capability_class": [
+          "transform",
+          "summarize",
+          "write"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history",
+          "memory-adjacent-artifacts"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only",
+          "external-evidence"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0077",
+      "name": "harvest-packet-contract",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.",
+      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
+      "topology": {
+        "family": "donor-harvest",
+        "capability_class": [
+          "handoff",
+          "recover",
+          "learn-from-artifact"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only",
+          "degraded-mode",
+          "external-evidence"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -870,34 +927,6 @@
       }
     },
     {
-      "id": "AOA-T-0075",
-      "name": "session-donor-harvest",
-      "domain": "agent-workflows",
-      "kind": "lift",
-      "status": "promoted",
-      "summary": "Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion.",
-      "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
-      "topology": {
-        "family": "donor-harvest",
-        "capability_class": [
-          "transform",
-          "summarize",
-          "write"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history",
-          "memory-adjacent-artifacts"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only",
-          "external-evidence"
-        ]
-      }
-    },
-    {
       "id": "AOA-T-0076",
       "name": "owner-layer-triage",
       "domain": "agent-workflows",
@@ -920,35 +949,6 @@
         "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0077",
-      "name": "harvest-packet-contract",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another.",
-      "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
-      "topology": {
-        "family": "donor-harvest",
-        "capability_class": [
-          "handoff",
-          "recover",
-          "learn-from-artifact"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only",
-          "degraded-mode",
-          "external-evidence"
         ]
       }
     },
