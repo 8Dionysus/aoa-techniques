@@ -48,7 +48,7 @@ PILOT_BUNDLES = (
     (
         "AOA-T-0046",
         "repo-doc-surface-lift",
-        "promoted",
+        "canonical",
         "techniques/docs/repo-doc-surface-lift",
         "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift",
     ),

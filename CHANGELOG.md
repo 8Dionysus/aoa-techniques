@@ -22,6 +22,12 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0046 repo-doc-surface-lift` to `canonical` after the Nuxt
+  LLMs docs reader and the 8Dionysus public route-map manifest closed the
+  repo-owned docs route-manifest evidence gap, moving Audit queue posture from
+  `11` promoted techniques to `10` while keeping route readers subordinate to
+  authored docs and outside docs taxonomy, status policy, release authority,
+  and sibling-owner truth
 - promoted Packs 35 through 41 to `canonical`, moving `AOA-T-0084` through `AOA-T-0107` except already-closed `AOA-T-0090` after exact-fit sibling downstream or second-context evidence landed across progression, automation, quest review, workspace boundary, proof-loop, recovery, Method-growth adoption, and Agon review-evidence families. The pass updates bundle-local canonical-readiness, second-context, and adverse-effects notes, closes the fresh-extraction tail, records the long-pass closeout in Audit, and moves Audit queue posture from `34` promoted techniques to `11` while keeping skill execution, SDK runtime, playbook law, AoA center law, eval verdicts, runtime repair, routing/KAG, memo writeback, and owner acceptance outside the bundles
 - promoted `AOA-T-0080 session-drift-taxonomy`, `AOA-T-0081
   diagnosis-from-reviewed-evidence`, `AOA-T-0082

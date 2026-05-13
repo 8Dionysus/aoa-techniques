@@ -38,6 +38,7 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0040](../../../../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | Claude Code skills | Reusable `SKILL.md` capability bodies, supporting files, direct invocation, automatic loading, and invocation-control fields keep skill meaning distinct from user-facing command timing and session controls. |
 | [AOA-T-0041](../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md) | VoltAgent awesome-agent-skills | A curated public skill collection can add editorial discoverability through sections, descriptions, and outbound source links without owning underlying skill meaning, installer behavior, or registry governance. |
 | [AOA-T-0043](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | StableNexus Research Desk methodology | A public bridge-style method can keep one primary source-document card distinct from supporting sources while separating external material, interpretation, and implications. |
+| [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | `nuxt-content/nuxt-llms` plus 8Dionysus public route map | A bounded docs reader and a repo-owned route-map manifest can point back to authored docs/status surfaces without becoming docs taxonomy, status policy, release authority, or sibling-owner truth. |
 | [AOA-T-0044](../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md) | `claude-code-log` | Already-saved session transcripts can survive as portable Markdown review artifacts beyond the donor product family. |
 | [AOA-T-0045](../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md) | Maida / AgentDbg | A local-first agent debugger can persist one run as `run.json` plus ordered `events.jsonl`, including LLM calls, tool calls, errors, state updates, loop-warning evidence, redaction/truncation, and a human-readable timeline / summary panel without turning the trace into memory writeback or promotion policy. |
 | [AOA-T-0033](../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md) | Markdown Architectural Decision Records | A public decision-record practice can preserve one decision with context/problem, considered options, chosen outcome with justification, and accepted consequences without turning the note into source-of-truth governance, architecture taxonomy, or decision-log tooling ownership. |
@@ -92,7 +93,7 @@ These are the most useful recent examples of what honest queue closure looked li
 
 ## AOA-T-0084 Through AOA-T-0107 Cross-Context Evidence Notes
 
-2026-05-13 result: exact-fit downstream or second-context evidence found for Packs 35 through 41. This closes the newer promotion-evidence queue while leaving the residual promoted set at 11 techniques.
+2026-05-13 result: exact-fit downstream or second-context evidence found for Packs 35 through 41. This closed the newer promotion-evidence queue at the time; a later focused `AOA-T-0046` pass reduced the residual promoted set to 10 techniques.
 
 This is sibling-repo and downstream-consumer evidence, not external import proof. Do not import skill execution, SDK implementation detail, 8Dionysus projection ownership, playbook scenario law, AoA constitutional law, Agon doctrine, eval verdicts, runtime repair authority, KAG graph ownership, routing, memo writeback, owner acceptance, or proof doctrine into the technique bundles.
 
@@ -118,6 +119,25 @@ Rejected or bounded:
 - runtime self-healing, KAG graph ownership, routing, memo writeback, stats refresh, and final owner acceptance.
 
 Future search shape: future reinforcement should look for non-AoA or external-builder reuse of the same atomic moves. It should not reopen the 2026-05-13 canonical verdict unless the bundle contract itself drifts or a downstream consumer starts relying on authority the bundle explicitly does not own.
+
+## AOA-T-0046 Focused Route-Map Closure Notes
+
+2026-05-13 result: exact-fit repo-owned route-manifest evidence found for [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md).
+
+Accepted evidence:
+
+- `nuxt-content/nuxt-llms` remains the first route-reader support: configured docs sections and links render into a subordinate `llms.txt` reader without replacing authored docs.
+- 8Dionysus closes the missing repo-owned route-manifest gap: `docs/PUBLIC_ENTRY_POSTURE.md` owns the onboarding route table, `scripts/public_route_map_common.py` derives and validates `generated/public_route_map.min.json`, and `tests/test_public_route_map.py` keeps the surface `route-map-only`, orientation-focused, and free of low-context implementation refs.
+
+Rejected or bounded:
+
+- 8Dionysus public-entry ownership;
+- linked owner-repo authority;
+- release or support semantics;
+- general docs taxonomy;
+- local planning docs, deeper guides, semantic reviews, and status-policy engines.
+
+Future search shape: do not reopen `AOA-T-0046` unless a generated repo-doc reader starts replacing authored docs, a route manifest imports sibling-owner authority, or a future docs layer needs a distinct bounded source class.
 
 
 ## AOA-T-0080 / AOA-T-0081 / AOA-T-0082 / AOA-T-0083 Cross-Context Evidence Notes
@@ -1730,9 +1750,9 @@ Next honest search shape:
 
 - `AOA-T-0020`: a committed non-eval markdown corpus with typed support notes
   lifted by kind and path into a derived reader or manifest.
-- `AOA-T-0046`: a second repo-owned docs route manifest outside framework
-  `llms.txt` generation, proving the source-set boundary survives in ordinary
-  maintainer docs.
+- `AOA-T-0046`: closed by the 2026-05-13 focused route-map pass; reopen only
+  if the route-reader boundary drifts or a separate docs layer needs its own
+  source class.
 - `AOA-T-0047`: a review-specific template manifest or intake reader that
   inventories authored templates without owning approval, triage, or review
   state.

@@ -43,7 +43,6 @@ Run the remaining external evidence queue in this order:
    - [AOA-T-0059](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) remains `promoted`; reopen only from receiver-side verified, mismatched, or unverifiable handoff claims against git evidence before continuation
 2. markdown-first and KAG source-lift residuals:
    - [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) remains `promoted`; reopen only from a non-origin note-kind/path manifest or reader
-   - [AOA-T-0046](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) remains `promoted`; `nuxt-content/nuxt-llms` is first second-context support, but the next trigger is a second repo-owned docs route manifest outside framework-specific `llms.txt` generation
    - [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) remains `promoted`; GitHub issue and pull request templates are first second-context support, but the next trigger is a review-specific template manifest or intake reader beyond platform-native rendering
    - [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) remains `promoted`; reopen only from a non-origin semantic-review reader, not generic AI review, quality-report, scoring, or summary lanes
 3. long-gap holds:
@@ -52,6 +51,7 @@ Run the remaining external evidence queue in this order:
 
 Closed 2026-05-13 precedent:
 
+- `AOA-T-0046` exited this sprint lane through canonical review after `nuxt-content/nuxt-llms` supplied first route-reader support and the 8Dionysus public route map supplied the missing repo-owned route-manifest proof without importing profile owner authority.
 - Packs 35 through 41 exited this sprint lane through coherent canonical review after bundle-local readiness, second-context adaptation, and adverse-effects review support landed for `AOA-T-0084` through `AOA-T-0107` except already-closed `AOA-T-0090`.
 - The closeout used sibling downstream evidence from `aoa-skills`, `aoa-sdk`, 8Dionysus, `aoa-playbooks`, Agents-of-Abyss, and `aoa-evals` only as bounded consumer evidence; it did not import sibling owner authority into the technique bundles.
 - Use [External Evidence Ledger](../external-evidence-ledger/README.md) and the closeout ledger in this part as durable closure memory, not the retired temporary plan.
@@ -62,7 +62,7 @@ Why this order:
 
 - the fresh-extraction tail is now closed, so the active sprint should stop treating `AOA-T-0097` through `AOA-T-0107` as pending scaffolding
 - `AOA-T-0032`, `AOA-T-0035`, `AOA-T-0042`, `AOA-T-0058`, and `AOA-T-0059` need the sharpest receiver-side or source-readiness proof
-- `AOA-T-0020`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` need stronger corpus or review-reader evidence rather than another generic docs or AI-review lane
+- `AOA-T-0020`, `AOA-T-0047`, and `AOA-T-0048` need stronger corpus or review-reader evidence rather than another generic docs or AI-review lane
 - `AOA-T-0005` and `AOA-T-0022` stay long-gap by design and should reopen only from specific matching artifacts
 
 ## Swarm Layout

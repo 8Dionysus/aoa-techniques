@@ -484,6 +484,12 @@ See also:
 |---|---|---|---|
 | Minimal Multi-Source Primary Input Provenance | `present` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/examples/minimal-multi-source-primary-input-provenance.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Repo Doc Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
+
 ### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
 
 | example | body | example path | source |
@@ -525,12 +531,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Profile Preset Composition | `present` | `techniques/instruction/instruction-surface/profile-preset-composition/examples/minimal-profile-preset-composition.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
-
-### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Repo Doc Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
 

@@ -3784,12 +3784,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- shaped inside `aoa-techniques` while the repo-doc routing surface and manifest stabilized as a bounded reader companion\n- extracted into first public reusable form on 2026-03-23 as a docs-domain source-lift technique"
+          "content_markdown": "- shaped inside `aoa-techniques` while the repo-doc routing surface and manifest stabilized as a bounded reader companion\n- extracted into first public reusable form on 2026-03-23 as a docs-domain source-lift technique\n- promoted to canonical on 2026-05-13 after the Nuxt LLMs docs reader and the 8Dionysus public route-map manifest closed the cross-context evidence gap without widening the bundle into docs taxonomy, policy, or owner-route authority"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- clarify when a new public docs/status file should enter the bounded source set\n- strengthen second-context evidence once another markdown-first repository reuses the same repo-doc routing pattern\n- keep the source set bounded if deeper guides or planning docs start asking for their own route surface"
+          "content_markdown": "- clarify when a new public docs/status file should enter the bounded source set\n- keep the source set bounded if deeper guides, planning docs, review docs, or owner-route policy start asking for their own route surface\n- watch for route-map consumers treating the generated reader as source truth instead of opening the authored docs it points to"
         }
       ]
     },

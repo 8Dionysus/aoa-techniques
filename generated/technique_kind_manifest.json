@@ -683,8 +683,8 @@
       ],
       "counts": {
         "total": 12,
-        "canonical": 7,
-        "promoted": 5,
+        "canonical": 8,
+        "promoted": 4,
         "by_domain": {
           "agent-workflows": 3,
           "docs": 8,
@@ -744,6 +744,14 @@
           "technique_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md"
         },
         {
+          "id": "AOA-T-0046",
+          "name": "repo-doc-surface-lift",
+          "domain": "docs",
+          "status": "canonical",
+          "summary": "Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.",
+          "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md"
+        },
+        {
           "id": "AOA-T-0020",
           "name": "evidence-note-provenance-lift",
           "domain": "docs",
@@ -758,14 +766,6 @@
           "status": "promoted",
           "summary": "Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy.",
           "technique_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md"
-        },
-        {
-          "id": "AOA-T-0046",
-          "name": "repo-doc-surface-lift",
-          "domain": "docs",
-          "status": "promoted",
-          "summary": "Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.",
-          "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md"
         },
         {
           "id": "AOA-T-0047",

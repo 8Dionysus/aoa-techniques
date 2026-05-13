@@ -26,7 +26,7 @@ See also:
 | `composition` | Deterministic assembly of fragments, profiles, rules, or tool surfaces into one effective result. | `7` | `6` | `1` |
 | `distribution` | Fan-out, mirroring, parity, or version alignment of canonical truth across multiple surfaces. | `4` | `4` | `0` |
 | `artifact` | Durable artifact shape, storage, capture, snapshot, transcript, note, spec, or index contract. | `14` | `14` | `0` |
-| `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `7` | `5` |
+| `lift` | Bounded derivation of a secondary surface from an authoritative source while keeping the source authoritative. | `12` | `8` | `4` |
 | `discovery` | Editorial or query-oriented surfacing of capabilities or resources without taking ownership of their meaning. | `2` | `2` | `0` |
 | `handoff` | Checkpoint, packet, mailbox, receipt, continuation, or resume seam across runs, agents, approvals, or episodes. | `11` | `9` | `2` |
 | `ingest` | Normalization of raw external inputs into reviewable structured intermediates. | `5` | `5` | `0` |
@@ -262,7 +262,7 @@ Do not use this when:
 - the artifact being defined is itself the primary source of truth
 - the technique is mainly about raw input ingestion from external sources
 
-Counts: `total` 12, `canonical` 7, `promoted` 5.
+Counts: `total` 12, `canonical` 8, `promoted` 4.
 
 | domain | entries |
 |---|---|
@@ -281,9 +281,9 @@ Counts: `total` 12, `canonical` 7, `promoted` 5.
 | [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) | `docs` | `canonical` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) |
 | [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) | `docs` | `canonical` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) |
 | [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) | `docs` | `canonical` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) |
+| [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | `docs` | `canonical` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 | [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | `docs` | `promoted` | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) |
 | [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | `docs` | `promoted` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) |
-| [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | `docs` | `promoted` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 | [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | `docs` | `promoted` | Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) |
 | [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | `docs` | `promoted` | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
 | [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) | `evaluation` | `canonical` | Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior. | [TECHNIQUE.md](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md) |

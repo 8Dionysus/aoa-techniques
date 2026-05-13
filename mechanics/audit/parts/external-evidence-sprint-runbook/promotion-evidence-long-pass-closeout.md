@@ -8,7 +8,13 @@ The original `82/82` promoted-corpus promotion-evidence long pass is fully accou
 
 Packs 35 through 41 closed in this pass. `AOA-T-0084`, `AOA-T-0085`, `AOA-T-0086`, `AOA-T-0087`, `AOA-T-0088`, `AOA-T-0089`, `AOA-T-0091`, `AOA-T-0092`, `AOA-T-0093`, `AOA-T-0094`, `AOA-T-0095`, `AOA-T-0096`, `AOA-T-0097`, `AOA-T-0098`, `AOA-T-0099`, `AOA-T-0100`, `AOA-T-0101`, `AOA-T-0102`, `AOA-T-0103`, `AOA-T-0104`, `AOA-T-0105`, `AOA-T-0106`, and `AOA-T-0107` moved from `promoted` to `canonical` after bundle-local canonical-readiness, second-context adaptation, and adverse-effects review support landed.
 
-Expected generated truth after rebuild: `107` total bundles, `96` canonical, and `11` promoted.
+Expected generated truth after that rebuild: `107` total bundles, `96` canonical, and `11` promoted.
+
+Focused follow-up on 2026-05-13: `AOA-T-0046` later moved to `canonical`
+after the 8Dionysus public route map closed the missing repo-owned
+route-manifest proof beyond the earlier Nuxt LLMs reader evidence. Current
+generated truth after that follow-up is `107` total bundles, `97` canonical,
+and `10` promoted.
 
 ## Accepted Evidence Families
 
@@ -31,7 +37,6 @@ This closeout does not import sibling owner authority into the bundles. The tech
 - `AOA-T-0032` context report for CI.
 - `AOA-T-0035` profile preset composition.
 - `AOA-T-0042` upstream skill health checking.
-- `AOA-T-0046` repo doc surface lift.
 - `AOA-T-0047` GitHub review template lift.
 - `AOA-T-0048` semantic review surface lift.
 - `AOA-T-0058` receipt-confirmed handoff packet.

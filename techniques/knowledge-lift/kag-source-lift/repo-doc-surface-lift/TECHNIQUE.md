@@ -3,7 +3,7 @@ id: AOA-T-0046
 name: repo-doc-surface-lift
 domain: docs
 kind: lift
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: docs/REPO_DOC_SURFACE_LIFT_GUIDE.md
@@ -17,12 +17,12 @@ tags:
   - repo-docs
   - surface-lift
 summary: Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # repo-doc-surface-lift
@@ -170,9 +172,10 @@ See `checks/repo-doc-surface-lift-checklist.md`.
 
 - shaped inside `aoa-techniques` while the repo-doc routing surface and manifest stabilized as a bounded reader companion
 - extracted into first public reusable form on 2026-03-23 as a docs-domain source-lift technique
+- promoted to canonical on 2026-05-13 after the Nuxt LLMs docs reader and the 8Dionysus public route-map manifest closed the cross-context evidence gap without widening the bundle into docs taxonomy, policy, or owner-route authority
 
 ## Future evolution
 
 - clarify when a new public docs/status file should enter the bounded source set
-- strengthen second-context evidence once another markdown-first repository reuses the same repo-doc routing pattern
-- keep the source set bounded if deeper guides or planning docs start asking for their own route surface
+- keep the source set bounded if deeper guides, planning docs, review docs, or owner-route policy start asking for their own route surface
+- watch for route-map consumers treating the generated reader as source truth instead of opening the authored docs it points to

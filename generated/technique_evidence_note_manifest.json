@@ -26048,6 +26048,171 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0046"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repo-doc-surface-lift"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "canonical default for lifting one bounded public repo-doc or status set into a subordinate route reader or manifest"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current watch seam",
+                  "value_markdown": "keep the generated route surface derived, bounded, and source-pointing without letting it become docs taxonomy, policy authority, or sibling-owner truth"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the generated route map or reader starts replacing the authored docs it points to"
+                },
+                {
+                  "order": 2,
+                  "text": "maintainers widen the source set until planning docs, deeper guides, review docs, or local status notes become part of the same route class"
+                },
+                {
+                  "order": 3,
+                  "text": "route-map consumers treat linked owner repos, release semantics, or public support posture as if the generated reader owns them"
+                },
+                {
+                  "order": 4,
+                  "text": "generated outputs are edited by hand instead of being rebuilt from the bounded source docs"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a clean route surface can make sparse or stale docs look more complete than they are"
+                },
+                {
+                  "order": 2,
+                  "text": "external users may overread an orientation manifest as a policy engine or support promise"
+                },
+                {
+                  "order": 3,
+                  "text": "sibling repositories can lose owner clarity if route refs are treated as authority transfer instead of navigation"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "adding every useful markdown file to the repo-doc route surface because it is discoverable"
+                },
+                {
+                  "order": 2,
+                  "text": "using the reader to answer \"what is the policy?\" instead of \"which authored doc should I open?\""
+                },
+                {
+                  "order": 3,
+                  "text": "promoting framework-specific docs conversion, LLM-ready exports, or full docs search as if they were the same bounded repo-doc lift"
+                },
+                {
+                  "order": 4,
+                  "text": "importing owner-route doctrine, release validation, or semantic-review findings into the technique body"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the source set includes `TODO.md`, `PLANS.md`, broad roadmap debt, implementation paths, or review surfaces"
+                },
+                {
+                  "order": 2,
+                  "text": "a reviewer fixes meaning by changing generated JSON or text instead of editing source markdown and rebuilding"
+                },
+                {
+                  "order": 3,
+                  "text": "route entries point at low-context implementation files when public docs/status refs would answer the route question"
+                },
+                {
+                  "order": 4,
+                  "text": "readers stop opening the authored docs even when the question needs meaning, policy, or current owner truth"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the source set explicit and small, tied to a concrete public docs/status routing need"
+                },
+                {
+                  "order": 2,
+                  "text": "regenerate and validate the route surface from authored markdown rather than hand-editing outputs"
+                },
+                {
+                  "order": 3,
+                  "text": "route authority questions back to the owning docs and repositories immediately"
+                },
+                {
+                  "order": 4,
+                  "text": "split a new bounded source class when deeper guides, review surfaces, release policy, or docs taxonomy becomes the real object"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for route-reader overreach, generated-output authority drift, source-set widening, and sibling-owner authority import"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -26078,7 +26243,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -26099,8 +26264,13 @@
                 },
                 {
                   "order": 3,
+                  "key": "second repo-owned route-manifest context",
+                  "value_markdown": "8Dionysus derives `generated/public_route_map.min.json` from `docs/PUBLIC_ENTRY_POSTURE.md`, keeps `posture: route-map-only`, names canonical owner repos and authority refs, and validates the generated surface through builder and test coverage."
+                },
+                {
+                  "order": 4,
                   "key": "validation strength",
-                  "value_markdown": "the bundle now has origin evidence plus first non-origin reader evidence, but the second context is a framework module example rather than another repository's durable maintainer-facing route manifest."
+                  "value_markdown": "the bundle now has origin evidence, one public docs reader implementation, and one repo-owned public route manifest that preserves the same source-owned docs/status boundary without turning the generated reader into policy, release authority, or filesystem-wide docs taxonomy."
                 }
               ]
             },
@@ -26119,7 +26289,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "the fresh second-context evidence makes the pattern real beyond `aoa-techniques`, but canonical promotion should wait until one more public corpus or repo-owned route surface shows the same bounded source-owned docs set feeding a subordinate reader without framework-specific assumptions."
+                  "text": "it is now the canonical default for a bounded public docs/status source set that needs a subordinate route reader or manifest, provided the authored docs remain the authority and the generated surface only routes to them."
+                },
+                {
+                  "order": 4,
+                  "text": "it still must not absorb owner-route doctrine, release semantics, public support policy, deeper guide selection, local planning docs, or semantic-review surfaces."
                 }
               ]
             },
@@ -26131,7 +26305,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-05-12"
+                  "value_markdown": "2026-05-13"
                 },
                 {
                   "order": 2,
@@ -26157,11 +26331,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "one more non-origin repo-owned source set or route manifest would show that the pattern is not only an `llms.txt` framework feature."
+                  "text": "no blocking gap remains for canonical use as long as the generated reader stays subordinate to the authored docs/status set."
                 },
                 {
                   "order": 2,
-                  "text": "a future canonical review should prove that local planning docs, deeper guides, and review surfaces still stay outside the bounded repo-doc source class."
+                  "text": "future review should watch for generated route maps becoming source truth, linked owner repositories losing authority to the route surface, or the source set widening into planning docs, deeper guides, semantic reviews, status policy, release policy, or general docs discovery."
                 }
               ]
             },
@@ -26172,11 +26346,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0046` `promoted`"
+                  "text": "promote `AOA-T-0046` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "carry the Nuxt LLMs evidence as first second-context support, not as a status flip"
+                  "text": "use it as the default repo-doc route-surface lift when a bounded public docs/status layer needs a generated reader or manifest that points back to authored docs"
                 }
               ]
             }
@@ -26290,23 +26464,38 @@
               "fields": [
                 {
                   "order": 1,
-                  "key": "name",
+                  "key": "first support name",
                   "value_markdown": "nuxt-llms"
                 },
                 {
                   "order": 2,
-                  "key": "repository",
+                  "key": "first support repository",
                   "value_markdown": "`nuxt-content/nuxt-llms`"
                 },
                 {
                   "order": 3,
-                  "key": "observed revision",
+                  "key": "first support observed revision",
                   "value_markdown": "`6faa1c45e082274267eae9295b501ab0053d0365`"
                 },
                 {
                   "order": 4,
-                  "key": "public surfaces",
+                  "key": "first support public surfaces",
                   "value_markdown": "- `src/runtime/server/routes/llms.txt.get.ts`\n- `src/runtime/types.ts`"
+                },
+                {
+                  "order": 5,
+                  "key": "second support name",
+                  "value_markdown": "8Dionysus public route map"
+                },
+                {
+                  "order": 6,
+                  "key": "second support repository",
+                  "value_markdown": "`8Dionysus`"
+                },
+                {
+                  "order": 7,
+                  "key": "second support public surfaces",
+                  "value_markdown": "- `docs/PUBLIC_ENTRY_POSTURE.md`\n- `scripts/public_route_map_common.py`\n- `generated/public_route_map.min.json`\n- `tests/test_public_route_map.py`"
                 }
               ]
             },
@@ -26332,8 +26521,13 @@
                 },
                 {
                   "order": 4,
-                  "key": "adaptation fit",
-                  "value_markdown": "this closes the first non-origin repo-doc routing consumer for the bundle's bounded source-lift contract."
+                  "key": "route-map shape",
+                  "value_markdown": "8Dionysus turns one authored public-entry posture table into a compact generated route map with route ids, canonical owner repos, capsule refs, authority refs, and verification refs."
+                },
+                {
+                  "order": 5,
+                  "key": "second-context fit",
+                  "value_markdown": "8Dionysus closes the missing repo-owned route-manifest proof because the generated route map is explicitly `route-map-only`, derived from `docs/PUBLIC_ENTRY_POSTURE.md`, and validated without becoming owner authority for sibling repos."
                 }
               ]
             },
@@ -26357,6 +26551,10 @@
                 {
                   "order": 4,
                   "text": "the surface does not claim release policy, status policy, scoring, or filesystem-wide doc discovery authority."
+                },
+                {
+                  "order": 5,
+                  "text": "sibling owner truth stays in the owning repositories; the route map only points to canonical homes and verification refs."
                 }
               ]
             },
@@ -26376,6 +26574,14 @@
                 {
                   "order": 3,
                   "text": "broad \"LLM-ready docs\" tooling can drift into documentation conversion rather than repo-doc routing; this bundle only uses the bounded route-reader portion."
+                },
+                {
+                  "order": 4,
+                  "text": "a public route map can overreach if it starts owning linked repo semantics instead of remaining an orientation surface."
+                },
+                {
+                  "order": 5,
+                  "text": "route manifests can become noisy if low-context implementation refs replace the curated public docs/status layer."
                 }
               ]
             },
@@ -26395,6 +26601,22 @@
                 {
                   "order": 3,
                   "text": "the public module repository provides a real non-origin implementation of docs-to-reader projection without making the generated reader the authored source of meaning."
+                },
+                {
+                  "order": 4,
+                  "text": "`8Dionysus/docs/PUBLIC_ENTRY_POSTURE.md` owns the public onboarding table and states that the repository is a route map, not a hidden center of authority."
+                },
+                {
+                  "order": 5,
+                  "text": "`8Dionysus/scripts/public_route_map_common.py` parses that authored table, enforces exactly three public onboarding routes, validates canonical owner repos, blocks low-context `src/` and `scripts/` repo refs in route targets, and emits `generated/public_route_map.min.json`."
+                },
+                {
+                  "order": 6,
+                  "text": "`8Dionysus/generated/public_route_map.min.json` records `owner_repo`, `surface_kind`, `authority_ref`, `posture: route-map-only`, validation refs, and route entries back to authored owner surfaces."
+                },
+                {
+                  "order": 7,
+                  "text": "`8Dionysus/tests/test_public_route_map.py` checks the route map remains orientation-only, keeps expected canonical homes, preserves workspace/profile route refs, and does not leak implementation refs into the rendered payload."
                 }
               ]
             },
@@ -26405,11 +26627,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "first second-context adaptation recorded"
+                  "text": "cross-context adaptation accepted"
                 },
                 {
                   "order": 2,
-                  "text": "keep `AOA-T-0046` promoted until canonical review has more than one fresh extraction proof point and a sharper default-use rationale"
+                  "text": "the Nuxt LLMs reader proves the route-reader shape outside `aoa-techniques`"
+                },
+                {
+                  "order": 3,
+                  "text": "the 8Dionysus public route map proves the repo-owned route-manifest shape outside framework-specific `llms.txt` generation"
+                },
+                {
+                  "order": 4,
+                  "text": "promote `AOA-T-0046` to canonical while keeping owner authority, policy, release semantics, and broader docs taxonomy outside the bundle"
                 }
               ]
             }
