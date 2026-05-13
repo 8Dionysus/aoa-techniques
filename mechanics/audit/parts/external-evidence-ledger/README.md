@@ -54,7 +54,68 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0071](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | `kotaro-kinoshita/yomitoku` | A public document extractor can use schema-defined field targets, visible rule methods, source metadata, confidence, and not-found posture to turn OCR/layout output into bounded fields without becoming OCR staging, LLM extraction, or accounting automation. |
 | [AOA-T-0072](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | `qarmin/czkawka` | A public media dedupe tool can keep perceptual similarity, explicit threshold tuning, reviewable grouped output, and default-off deletion separate from semantic media taxonomy, ranking, archive policy, and cleanup automation. |
 | [AOA-T-0073](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | `end1989/ai-image-classification` | A public offline media sorter can keep configured mixed-media labels, CLIP scoring, OCR side-text confidence, review thresholds, user correction, and separated file actions visible without turning bucketing into moderation, identity inference, duplicate grouping, or cleanup policy. |
+| [AOA-T-0074](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | `3bl3gamer/tg_history_dumper` | A public Telegram history dumper can preserve messages as local JSON Lines, media as message-linked files, related peers as JSONL side surfaces, and last-message-id continuation without turning normalization into auth, session, archive presentation, search, or memory doctrine. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0074 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`3bl3gamer/tg_history_dumper` at
+`0058ab229043fc4af6b1859e0c367b9fd9b10d93` provides the clean public source
+for Pack 31. The repository is MIT licensed and is used as evidence only: do
+not import Go code, Telegram client setup, session-file handling, preview
+server behavior, config schema, account/contact/session dumps, or download
+implementation into `aoa-techniques`.
+
+Accepted evidence:
+
+- `README.md` states that the tool exports messages as JSON plus media from
+  specified dialogs, groups, and channels.
+- `README.md` also states that it fetches only messages newer than already
+  fetched ones and resumes interrupted file downloads.
+- `README.md` documents local message storage as JSON Lines under chat-specific
+  paths and related users/chats as JSON Lines peer surfaces.
+- `saver.go` exposes a `HistorySaver` boundary with `GetLastMessageID`,
+  `SaveRelatedUsers`, `SaveRelatedChats`, `SaveMessages`, `SaveStories`, and a
+  file-request callback.
+- `saver.go` reads the last saved message id from the append-only local JSONL
+  file and uses that as the continuation boundary.
+- `saver.go` appends messages with `_TL_LAYER`, resolves media requests before
+  writing each message, and derives media paths from chat id, message id,
+  filename, index-in-message, and media source.
+- `saver.go` keeps related users and chats as append-only JSONL records where
+  the latest record for each id wins.
+- `tg.go` requests messages newer than the saved id by setting `OffsetID` to
+  `lastMsgID + 1`.
+- `main.go` loads `lastID`, updates it from fetched messages, saves related
+  peers before messages, and only downloads a media file when the target path is
+  absent, allowing interrupted downloads to continue.
+
+Rejected or bounded:
+
+- `GeiserX/Telegram-Archive` reinforces incremental local Telegram backup
+  pressure, but it is product-heavy around web viewer behavior, auth setup,
+  realtime sync, deletion/edit sync, media deduplication, and database
+  deployment.
+- `jackwener/tg-cli` reinforces local-first SQLite sync, search, and export,
+  but it is weaker on media-reference preservation and also includes live
+  send/listen operations.
+- `groupultra/telegram-search` reinforces core message, reply, and media
+  normalization, but widens into search, embeddings, web UI, and storage
+  service behavior.
+- HTML, CSV, and Markdown converters were rejected as too lossy for media,
+  peer, reply, and resume-state preservation.
+- marketing, member-scraper, forwarding, bot-control, and cloud-backup projects
+  were rejected because their center of gravity is account action, outreach,
+  forwarding, or Telegram-as-storage rather than local Telegram-source
+  normalization.
+
+Future search shape: future sources can reinforce this canonical default only
+if they preserve Telegram-derived message objects, media references, peer or
+source provenance, append-only or resumable local storage, and a stop-line
+before auth bootstrap, session conversion, account/session dumps, search
+products, archive presentation, deletion/edit sync, curation, routing, recall,
+or memory writeback.
 
 ## AOA-T-0073 External Evidence Notes
 

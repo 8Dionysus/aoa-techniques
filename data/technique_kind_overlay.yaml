@@ -447,7 +447,7 @@ entries:
 - id: AOA-T-0074
   name: telegram-export-normalization-to-local-store
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: ingest
   family: media-ingest
 - id: AOA-T-0075

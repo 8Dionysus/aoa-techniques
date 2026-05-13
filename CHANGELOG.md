@@ -22,6 +22,20 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0074 telegram-export-normalization-to-local-store` to
+  `canonical` after `3bl3gamer/tg_history_dumper` showed exact-fit public
+  reinforcement for bounded Telegram-source normalization: messages are saved
+  as local JSON Lines, media files stay linked to chat and message ids, related
+  users and chats remain visible as JSONL peer surfaces, the last saved message
+  id drives incremental continuation, interrupted file downloads can resume,
+  and account/auth/session dumps stay optional adjacent surfaces rather than
+  the normalized message-store contract. `GeiserX/Telegram-Archive`,
+  `jackwener/tg-cli`, `groupultra/telegram-search`, HTML/CSV/Markdown
+  converters, and marketing/member-scraper projects were checked as wider,
+  adjacent, lossy, or out of scope, while auth bootstrap, session conversion,
+  account/session dumps, live control, archive presentation, search products,
+  deletion/edit sync, routing, recall, and memory writeback stay outside the
+  bundle, updating Audit queue posture from `45` promoted techniques to `44`
 - promoted `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr` to
   `canonical` after `end1989/ai-image-classification` showed exact-fit public
   reinforcement for bounded semantic media bucketing: configured mixed-media

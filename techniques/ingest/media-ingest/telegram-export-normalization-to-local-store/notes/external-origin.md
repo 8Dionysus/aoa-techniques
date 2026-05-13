@@ -30,4 +30,4 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 
 - why this adaptation is reusable here: many workflows need Telegram-origin data to become a resumable local structured store before later search, routing, or review can happen
 - downstream repo impact: later auth, agent-control, or memory workflows belong outside `aoa-techniques`, while this repository keeps only the reusable normalization contract
-- limits or follow-up review concerns: this import still needs one second live adopter beyond the donor Telegram family and documentation-first adaptation before any canonical discussion is honest
+- limits or follow-up review concerns: original import gap closed in the Pack 31 canonical review through `3bl3gamer/tg_history_dumper`; future review should keep auth, session conversion, archive presentation, search, routing, recall, and memory writeback outside this normalization bundle

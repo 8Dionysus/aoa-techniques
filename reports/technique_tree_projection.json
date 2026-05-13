@@ -647,6 +647,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0074",
+      "name": "telegram-export-normalization-to-local-store",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
+      "current_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "family": "media-ingest",
+      "proposed_trunk": "ingest",
+      "proposed_shelf": "media-ingest",
+      "proposed_future_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:media-ingest",
+        "domain:agent-workflows",
+        "kind:ingest",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -707,28 +729,6 @@
         "family:handoff-continuation",
         "domain:agent-workflows",
         "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0074",
-      "name": "telegram-export-normalization-to-local-store",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
-      "current_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
-      "family": "media-ingest",
-      "proposed_trunk": "ingest",
-      "proposed_shelf": "media-ingest",
-      "proposed_future_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:media-ingest",
-        "domain:agent-workflows",
-        "kind:ingest",
         "status:promoted",
         "review_status:pilot-candidate"
       ],

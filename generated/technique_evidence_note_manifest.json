@@ -45433,6 +45433,197 @@
       "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0074"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "telegram-export-normalization-to-local-store"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `3bl3gamer/tg_history_dumper`"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that the bundle remains one bounded Telegram-source normalization and resumable local-store contract, not auth bootstrap, session conversion, account/session dumping, live client control, archive presentation, search, routing, recall, memory writeback, or a general history-artifact doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "message ids, chat ids, sender fields, reply edges, or media references are normalized away into flat text"
+                },
+                {
+                  "order": 2,
+                  "text": "export and live-sync records are mixed without preserving source kind or resume boundary"
+                },
+                {
+                  "order": 3,
+                  "text": "a resume cursor skips messages after interruption or replays already-stored records as duplicates"
+                },
+                {
+                  "order": 4,
+                  "text": "media files are downloaded but lose their message-level source linkage"
+                },
+                {
+                  "order": 5,
+                  "text": "related users or chats drift from the messages that need them for review"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "local stores can look like memory or canon even when they are only source-normalized evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "Telegram auth and session artifacts can leak into normalized output paths if the boundary is weak"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream search, routing, or archive viewers can pressure the technique into product behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "preserving Telegram-derived data can increase privacy and retention risk if the local store is treated casually"
+                },
+                {
+                  "order": 5,
+                  "text": "generic history-capture language can erase the source-specific constraints that make this technique useful"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating the normalized store as final memory, recall truth, or curated archive by default"
+                },
+                {
+                  "order": 2,
+                  "text": "placing session files, auth secrets, API credentials, or account/session dumps beside normalized message objects"
+                },
+                {
+                  "order": 3,
+                  "text": "using this bundle as a Telegram control-plane, scraper, bot automation, or archive publishing recipe"
+                },
+                {
+                  "order": 4,
+                  "text": "collapsing media, reply, peer, and source provenance into a lossy CSV or text-only export while still claiming the technique"
+                },
+                {
+                  "order": 5,
+                  "text": "importing donor viewer, search, deletion/edit sync, media cleanup, or database deployment behavior as invariant requirements"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "outputs lack stable message ids, chat/source ids, sender fields, reply references, media refs, or source kind"
+                },
+                {
+                  "order": 2,
+                  "text": "resume after interruption produces missing, duplicated, or reordered message records"
+                },
+                {
+                  "order": 3,
+                  "text": "docs start explaining auth bootstrap, session conversion, account scraping, or live client actions as part of the technique"
+                },
+                {
+                  "order": 4,
+                  "text": "examples center search UX, archive publishing, memory ingestion, or routing rather than normalized local objects"
+                },
+                {
+                  "order": 5,
+                  "text": "media files cannot be traced back to the message and chat that produced them"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep one stable message object contract with visible Telegram/source identifiers"
+                },
+                {
+                  "order": 2,
+                  "text": "preserve media references and peer surfaces as reviewable companions to messages"
+                },
+                {
+                  "order": 3,
+                  "text": "keep resume state explicit and test interruption/restart behavior against duplicates and gaps"
+                },
+                {
+                  "order": 4,
+                  "text": "store auth/session/account artifacts outside the normalized local object surface"
+                },
+                {
+                  "order": 5,
+                  "text": "route search, archive presentation, routing, recall, memory writeback, deletion/edit sync, and viewer behavior to sibling techniques or owner repos"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow ingest technique when Telegram-derived message objects, media references, peer/source provenance, and resume state remain visible before later policy or action layers begin"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb auth bootstrap, session conversion, account/session dumping, search products, archive presentation, database deployment doctrine, media cleanup, deletion/edit sync, routing, recall, memory writeback, or broad history-artifact ownership into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -45463,34 +45654,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around auth bootstrap, session conversion, secret storage, control-plane behavior, and memory writeback"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around auth bootstrap, session conversion, secret storage, control-plane behavior, and memory writeback"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same Telegram-normalization seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same Telegram-normalization seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor Telegram family"
+                  "text": "`3bl3gamer/tg_history_dumper` provides exact-fit public reinforcement beyond the original donor Telegram family and repo-local documentation-first adaptation: it exports messages as JSON Lines plus media from dialogs, groups, and channels; fetches only messages newer than the last already-fetched item; resumes interrupted file downloads; stores messages under chat-specific local paths; keeps related users and chats as JSON Lines peer surfaces; records a Telegram API layer marker on saved message objects; reads the last saved message id from the append-only local file; requests history with `OffsetID = lastMsgID + 1`; derives media file paths from chat id, message id, filename, and media source; and keeps account/auth/session dumps as optional surfaces rather than as the normalized message-store contract"
+                },
+                {
+                  "order": 5,
+                  "text": "the inspected source is MIT licensed at commit `0058ab229043fc4af6b1859e0c367b9fd9b10d93` with commit date `2025-12-26T16:03:26+03:00`; inspected files include `README.md` (`61a3cada6eff63870cb5053dc5e456aeff4d3ccc`), `LICENSE` (`f75c3d5bbf2642271beb9a055f605f91768fe36f`), `saver.go` (`79545c068c6f62e9856aff8c97f4b123e3b8718c`), `main.go` (`5fa731efab9246c4a2b45b3e9d27e636d5964e80`), `tg.go` (`07d17b5c9cdf54626cbb8dbe111784a2d5f7a900`), `config.go` (`b096423b8b4eb1420afcc9d8b8623ec0f40402a8`), and `preview.go` (`d1a857589e7fdbad5be59b186460ca08a020e62a`)"
+                },
+                {
+                  "order": 6,
+                  "text": "adjacent lanes were checked and kept out of the canonical proof: `GeiserX/Telegram-Archive` strongly reinforces incremental local Telegram backup pressure but is product-heavy around viewer, auth setup, realtime sync, deletion/edit sync, deduplication, and database deployment; `jackwener/tg-cli` reinforces local-first SQLite sync/search/export but is weaker on media-reference preservation and also includes live send/listen operations; `groupultra/telegram-search` reinforces core message/media/reply normalization but widens into search, embedding, web app, and storage service behavior; one-off HTML/CSV/Markdown converters and marketing/member-scraper projects were rejected as too narrow, too lossy, or outside the provenance-preserving local-store seam"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, an import review, and live public cross-context reinforcement that repeats bounded Telegram-derived local storage outside the original donor README family"
                 }
               ]
             },
@@ -45501,7 +45700,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is turning Telegram-origin data into stable local objects with visible provenance and resumable storage"
+                  "text": "this is the right canonical default when the main problem is turning Telegram-origin data into stable local objects with visible provenance and resumable storage"
                 },
                 {
                   "order": 2,
@@ -45510,6 +45709,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than `telegram-account-auth-and-session-bridge` because it does not handle credentials, session conversion, or bootstrap approval"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the second public context repeats the key shape: Telegram messages are serialized into local append-only objects, media is preserved as message-linked files, related peers remain inspectable, and last-seen ids support continuation without turning the technique into auth, session, search, viewer, archive-product, or memory doctrine"
                 }
               ]
             },
@@ -45521,7 +45724,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -45531,12 +45734,12 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable normalization seam and excludes auth procedures, session secrets, control-plane behavior, and memory policy"
+                  "value_markdown": "the bundle keeps only the reusable normalization seam and excludes auth procedures, session secrets, session conversion, account/session dumps, live client control, viewer/UI behavior, search products, database deployment choices, media cleanup, deletion/edit sync, archive publication, and memory policy"
                 },
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; `3bl3gamer/tg_history_dumper` is cited only as public evidence, and the technique does not copy its Go source, Telegram client setup, session file handling, preview server, config schema, account/contact/session dumps, or download implementation"
                 }
               ]
             },
@@ -45547,11 +45750,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that keeps Telegram-source normalization explicit through stable local objects and visible provenance before later routing, recall, or memory actions begin"
+                  "text": "future sources can reinforce the default, but they must preserve the narrow boundary: Telegram-derived message objects, media references, peer/source provenance, append-only or resumable local storage, and a stop-line before auth bootstrap, session conversion, account/session dumps, search products, archive presentation, deletion/edit sync, curation, routing, recall, or memory writeback"
                 }
               ]
             },
@@ -45562,11 +45765,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0074` `promoted`"
+                  "text": "move `AOA-T-0074` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the source-specific normalization contract survives outside the donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between Telegram-source normalization, media storage, resume state, auth/session surfaces, archive products, search, routing, recall, and memory writeback"
                 }
               ]
             }
@@ -45695,7 +45898,7 @@
                 },
                 {
                   "order": 3,
-                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor Telegram family"
+                  "text": "the original import path was strong enough for initial publication, and the Pack 31 canonical review closed the remaining live-adopter gap with `3bl3gamer/tg_history_dumper`"
                 }
               ]
             },
@@ -45706,11 +45909,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no import-path blocker remains for canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "a future stronger context should show another public workflow where Telegram-derived messages become a resumable local object store with visible provenance before later routing, recall, or memory actions"
+                  "text": "future stronger contexts should still preserve the same stop-line: Telegram-derived messages and media become a resumable local object store with visible provenance before later routing, recall, search, archive presentation, auth/session, or memory actions"
                 }
               ]
             },
@@ -45725,7 +45928,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that the source-specific normalization contract survives outside the current donor family"
+                  "text": "use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` as the current canonical posture after the Pack 31 evidence review"
                 }
               ]
             }
@@ -45843,7 +46046,7 @@
                 {
                   "order": 3,
                   "key": "limits or follow-up review concerns",
-                  "value_markdown": "this import still needs one second live adopter beyond the donor Telegram family and documentation-first adaptation before any canonical discussion is honest"
+                  "value_markdown": "original import gap closed in the Pack 31 canonical review through `3bl3gamer/tg_history_dumper`; future review should keep auth, session conversion, archive presentation, search, routing, recall, and memory writeback outside this normalization bundle"
                 }
               ]
             }
@@ -45976,6 +46179,10 @@
                 {
                   "order": 3,
                   "text": "Chatistics, tg-archive, and telegram-mcp show Telegram-derived content being archived, analyzed, or surfaced through local structured storage and local-first tool-facing paths"
+                },
+                {
+                  "order": 4,
+                  "text": "live reinforcement: `3bl3gamer/tg_history_dumper` at `0058ab229043fc4af6b1859e0c367b9fd9b10d93` repeats the reusable seam outside the original donor set: Telegram messages and media are exported into local JSONL/files, related users and chats stay in JSONL peer surfaces, last saved message ids drive incremental continuation, media file paths are tied to chat/message ids, and interrupted media downloads can resume"
                 }
               ]
             },
@@ -45986,7 +46193,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over auth procedures, session bridging, memory doctrine, or donor runtime packaging"
+                  "text": "works as a documentation-first second context and now has live public reinforcement that preserves the bounded core without carrying over auth procedures, session bridging, memory doctrine, archive-product doctrine, or donor runtime packaging"
                 }
               ]
             }

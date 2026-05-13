@@ -18,8 +18,9 @@ Pack 21 closure for `AOA-T-0064`, the Pack 22 closure for `AOA-T-0065`, the
 Pack 23 closure for `AOA-T-0066`, the Pack 24 closure for `AOA-T-0067`, the
 Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, the
 Pack 27 closure for `AOA-T-0070`, the Pack 28 closure for `AOA-T-0071`,
-the Pack 29 closure for `AOA-T-0072`, and the Pack 30 closure for
-`AOA-T-0073`, the live promoted queue is `45`
+the Pack 29 closure for `AOA-T-0072`, the Pack 30 closure for
+`AOA-T-0073`, and the Pack 31 closure for `AOA-T-0074`, the live promoted
+queue is `44`
 bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
@@ -154,8 +155,13 @@ Current live constraint:
   labels, CLIP scoring, OCR side-text confidence, review thresholds, user
   corrections, and separated file actions, and exits the live promoted queue
   through canonical review;
-- the live generated catalog currently contains `45` promoted techniques and
-  `62` canonical techniques;
+- `AOA-T-0074` closed during Stage 4 with exact-fit
+  `3bl3gamer/tg_history_dumper` evidence for local JSONL message storage,
+  message-linked media files, peer JSONL side surfaces, last-message-id
+  continuation, and resumable interrupted media downloads, and exits the live
+  promoted queue through canonical review;
+- the live generated catalog currently contains `44` promoted techniques and
+  `63` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -168,7 +174,8 @@ and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
 Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26,
-Pack 27, Pack 28, Pack 29, and Pack 30 closures is `45` promoted techniques,
+Pack 27, Pack 28, Pack 29, Pack 30, and Pack 31 closures is `44` promoted
+techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
@@ -177,8 +184,8 @@ with `AOA-T-0026`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`,
 `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`, `AOA-T-0070`,
-`AOA-T-0071`, `AOA-T-0072`, and `AOA-T-0073` counted as closed rows rather
-than remaining targets.
+`AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, and `AOA-T-0074` counted as
+closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -193,7 +200,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with the Pack 30 canonical closure recorded.
+This is an original `82/82` promoted-corpus plan with the Pack 31 canonical closure recorded.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -264,7 +271,7 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0071 template-backed-field-extraction-after-ocr](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 28 post-OCR template field extraction | exact-fit second context; exits to canonical | `kotaro-kinoshita/yomitoku` schema-defined fields, visible rule methods, raw text/source/cell/bbox/confidence metadata, and `not_found` posture close the post-OCR field extraction gap |
 | Stage 4 | [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | agent-workflows / ingest | Pack 29 perceptual media dedupe | exact-fit second context; exits to canonical | `qarmin/czkawka` thresholded Similar Images grouping, similarity labels, JSON/text output, and default-off deletion close the perceptual dedupe gap |
 | Stage 4 | [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 30 semantic media bucketing | exact-fit second context; exits to canonical | `end1989/ai-image-classification` configured labels, CLIP scoring, OCR side text, review thresholds, correction records, and separated file actions close the semantic bucketing gap |
-| Stage 4 | [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | agent-workflows / ingest | Pack 31 Telegram export normalization | pending |  |
+| Stage 4 | [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | agent-workflows / ingest | Pack 31 Telegram export normalization | exact-fit second context; exits to canonical | `3bl3gamer/tg_history_dumper` local JSONL messages, message-linked media files, related peer JSONL surfaces, last-message-id continuation, and resumable interrupted media downloads close the Telegram export normalization gap |
 | Stage 5 | [AOA-T-0075 session-donor-harvest](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | agent-workflows / lift | Pack 32 reviewed session harvest spine | pending |  |
 | Stage 5 | [AOA-T-0077 harvest-packet-contract](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | agent-workflows / handoff | Pack 32 reviewed session harvest spine | pending |  |
 | Stage 5 | [AOA-T-0076 owner-layer-triage](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
@@ -465,7 +472,8 @@ families without collapsing them into one generic "agent workflow" proof lane.
     exact-fit `qarmin/czkawka` evidence
 32. Pack 30 - Semantic Media Bucketing: `AOA-T-0073` - closed;
     exact-fit `end1989/ai-image-classification` evidence
-33. Pack 31 - Telegram Export Normalization: `AOA-T-0074`
+33. Pack 31 - Telegram Export Normalization: `AOA-T-0074` - closed;
+    exact-fit `3bl3gamer/tg_history_dumper` evidence
 
 Purpose: close single-row infrastructure and ingest packs one by one, because
 each has a narrow substrate and false positives are likely.
@@ -505,15 +513,15 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `45` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `44` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
     `AOA-T-0055`, `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`,
     `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
     `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`,
-    `AOA-T-0069`, `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, and
-    `AOA-T-0073` rows against generated catalog truth.
+    `AOA-T-0069`, `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`,
+    and `AOA-T-0074` rows against generated catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1832,6 +1840,63 @@ Reject:
 - broad AI file organizers, cloud storage optimizers, duplicate cleanup tools,
   and media-management products whose center of gravity is action policy
   rather than bounded classification.
+
+### AOA-T-0074: `telegram-export-normalization-to-local-store`
+
+Stage 4 Pack 31 verdict, 2026-05-12: exact-fit second context found.
+`3bl3gamer/tg_history_dumper` keeps the reusable object as one
+Telegram-source normalization seam outside the original Telethon, TDLib,
+opentele, Chatistics, tg-archive, and telegram-mcp donor set: Telegram
+messages are appended as local JSON Lines, media files are linked to chat and
+message ids, related users and chats remain visible as JSONL peer surfaces,
+last saved message ids drive continuation, and interrupted media downloads can
+resume.
+
+Exact evidence:
+
+- `README.md` states that the tool exports messages as JSON plus media from
+  specified dialogs, groups, and channels;
+- `README.md` states that it gets only messages newer than already-fetched
+  messages and resumes interrupted file downloads;
+- `README.md` documents local message storage as JSON Lines under
+  chat-specific paths and related users/chats as JSON Lines peer surfaces;
+- `saver.go` exposes a `HistorySaver` interface with `GetLastMessageID`,
+  `SaveRelatedUsers`, `SaveRelatedChats`, `SaveMessages`, `SaveStories`, and
+  a file-request callback;
+- `saver.go` reads the last saved message id from the append-only local JSONL
+  file and uses that as the continuation boundary;
+- `saver.go` appends message objects with `_TL_LAYER`, resolves media requests
+  before writing each message, and derives media paths from chat id, message
+  id, filename, index-in-message, and media source;
+- `saver.go` keeps related users and chats as append-only JSONL records where
+  the latest record for each id wins;
+- `tg.go` requests messages newer than the saved id by setting `OffsetID` to
+  `lastMsgID + 1`;
+- `main.go` loads `lastID`, updates it from fetched messages, saves related
+  peers before messages, and only downloads a media file when the target path
+  is absent, allowing interrupted downloads to continue.
+
+Reject:
+
+- the donor app's Telegram client setup, session file handling, preview
+  server, config schema, account/contact/session dumps, and download
+  implementation as invariant requirements;
+- `GeiserX/Telegram-Archive` as primary proof because it reinforces
+  incremental local Telegram backup pressure but widens into web viewer,
+  auth setup, realtime sync, deletion/edit sync, media deduplication, and
+  database deployment;
+- `jackwener/tg-cli` as primary proof because it reinforces local-first SQLite
+  sync/search/export but is weaker on media-reference preservation and widens
+  into live send/listen operations;
+- `groupultra/telegram-search` as primary proof because it reinforces
+  message, reply, and media normalization but widens into search, embeddings,
+  web UI, and storage service behavior;
+- HTML, CSV, and Markdown converters because they are too lossy for media,
+  peer, reply, and resume-state preservation;
+- marketing, member-scraper, forwarding, bot-control, and cloud-backup
+  projects because their center of gravity is account action, outreach,
+  forwarding, or Telegram-as-storage rather than local Telegram-source
+  normalization.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

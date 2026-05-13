@@ -1553,8 +1553,8 @@
       ],
       "counts": {
         "total": 5,
-        "canonical": 4,
-        "promoted": 1,
+        "canonical": 5,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 5,
           "docs": 0,
@@ -1626,7 +1626,7 @@
           "id": "AOA-T-0074",
           "name": "telegram-export-normalization-to-local-store",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
           "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
           "kind": "ingest"

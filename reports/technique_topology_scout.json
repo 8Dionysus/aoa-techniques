@@ -767,6 +767,33 @@
       }
     },
     {
+      "id": "AOA-T-0074",
+      "name": "telegram-export-normalization-to-local-store",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
+      "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
+      "topology": {
+        "family": "media-ingest",
+        "capability_class": [
+          "read",
+          "transform",
+          "observe"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "docs",
+          "data"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "security-sensitive"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -839,33 +866,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0074",
-      "name": "telegram-export-normalization-to-local-store",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.",
-      "technique_path": "techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md",
-      "topology": {
-        "family": "media-ingest",
-        "capability_class": [
-          "read",
-          "transform",
-          "observe"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "docs",
-          "data"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "security-sensitive"
         ]
       }
     },

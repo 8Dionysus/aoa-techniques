@@ -178,6 +178,12 @@ See also:
 |---|---|---|---|
 | minimal-semantic-media-bucketing-with-vision-plus-ocr | `present` | `techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/examples/minimal-semantic-media-bucketing-with-vision-plus-ocr.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
 
+### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-telegram-export-normalization-to-local-store | `present` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/examples/minimal-telegram-export-normalization-to-local-store.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -196,12 +202,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal-telegram-export-normalization-to-local-store | `present` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/examples/minimal-telegram-export-normalization-to-local-store.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
 ### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 

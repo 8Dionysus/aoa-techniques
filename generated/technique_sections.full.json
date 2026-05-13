@@ -6080,12 +6080,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store"
+          "content_markdown": "- adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store\n- promoted to canonical on 2026-05-12 after `3bl3gamer/tg_history_dumper` showed a second public workflow where Telegram messages and media are written into append-only local JSONL/file surfaces, related peers stay visible, last saved message ids drive incremental continuation, and interrupted media downloads can resume without importing auth, session, viewer, search, or memory doctrine"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep auth/session bridging separate unless a narrower approved seam proves reusable\n- split out thread reconstruction or media-routing helpers only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps Telegram normalization explicit before later routing, recall, or memory actions"
+          "content_markdown": "- keep auth/session bridging separate unless a narrower approved seam proves reusable\n- split out thread reconstruction or media-routing helpers only if those contracts survive independently\n- future sources can reinforce the default only if Telegram-derived message objects, media references, peer/source provenance, and resume state stay visible before later routing, recall, search, archive presentation, auth, session, or memory actions begin"
         }
       ]
     },

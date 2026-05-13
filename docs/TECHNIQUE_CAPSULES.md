@@ -353,6 +353,19 @@ See also:
 - Validate by: the golden set includes memes, receipts, screenshots, and an other class; bucket labels stay inside the bounded taxonomy; low-confidence...
 - Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
 
+### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`canonical`)
+
+- Summary: Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.
+- Intent: Turn Telegram export or sync output into a bounded, provenance-preserving local store so later...
+- Use when: Telegram messages or Saved Messages need to become a local structured store or media references and reply edges...
+- Avoid when: the real problem is account auth, session conversion, or bootstrap or the workflow needs a live agent-control surface...
+- Needs: one Telegram export, API-derived message stream, or equivalent source batch; media download paths or media source references...
+- Produces: one normalized message object surface; one media reference map; one resumable local store.
+- Core contract: auth posture stays separate from normalization; message provenance remains visible.
+- Main risk: media references lose source linkage.
+- Validate by: a sample export with replies and media retains source ids and media references; resume after interruption preserves progress without...
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 - Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
@@ -391,19 +404,6 @@ See also:
 - Main risk: stale local git state produces a false sense of verification.
 - Validate by: at least one concrete handoff claim can be tied to visible git evidence; the verification result names the evidence...
 - Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md)
-
-### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
-
-- Summary: Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.
-- Intent: Turn Telegram export or sync output into a bounded, provenance-preserving local store so later...
-- Use when: Telegram messages or Saved Messages need to become a local structured store or media references and reply edges...
-- Avoid when: the real problem is account auth, session conversion, or bootstrap or the workflow needs a live agent-control surface...
-- Needs: one Telegram export, API-derived message stream, or equivalent source batch; media download paths or media source references...
-- Produces: one normalized message object surface; one media reference map; one resumable local store.
-- Core contract: auth posture stays separate from normalization; message provenance remains visible.
-- Main risk: media references lose source linkage.
-- Validate by: a sample export with replies and media retains source ids and media references; resume after interruption preserves progress without...
-- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 
 ### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
 
