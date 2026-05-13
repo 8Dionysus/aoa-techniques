@@ -3,7 +3,7 @@ id: AOA-T-0103
 name: adopted-practice-retention-review
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: mechanics/method-growth/parts/retention-checks/README.md + mechanics/method-growth/PROVENANCE.md
@@ -17,12 +17,12 @@ tags:
   - adoption
   - review
 summary: Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-05-03
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -38,6 +38,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # adopted-practice-retention-review

@@ -5,31 +5,32 @@
 - name: recommendation-truth-vs-host-actionability
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: aoa-sdk skill runtime recommendation gap decision
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the `aoa-sdk`-specific runtime seam was reduced to one bounded control-plane law for recommendation truth and host executability
-- exact install-root paths, JSON fields, and CLI details were moved into adaptation notes instead of the invariant core
-- the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 38 workspace boundary and proof loop
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- semantic recommendation is computed separately from host actionability
-- host actionability remains visible as an explicit annotation rather than a hidden filter
-- non-executable auto-actions are demoted instead of being left in runnable surfaces
-- router-only items remain visible when they still matter for confirmation or manual fallback
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public wording can drift into generic discovery or marketplace language if recommendation truth stops being the center
-- the bundle can drift into upstream-health or registry doctrine if host inventory precedence becomes too broad
-- a tiny example can understate how important actionability gaps are for honest risk gating
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is a control-plane actionability law, not a docs taxonomy
-- the public wording keeps workspace posture, upstream source readiness, and discovery semantics adjacent but separate
-- the origin evidence remains strong enough to justify a promoted bundle without importing `aoa-sdk`-specific CLI or path doctrine as invariants
+- the SDK note records the exact gap where router recommendations were semantically real but not directly host-executable
+- it rejects both ignoring unavailable recommendations and pretending an unavailable skill was used
+- it permits manual-equivalence fallback only when the same visible safety discipline is preserved
+- downstream evidence ref: `repo:aoa-sdk/docs/skill-runtime-recommendation-gap.md` hash `8b22f1b9e0478d8161fea494079125f315bdf90b`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one bounded recommendation-versus-executability split for skill-oriented control planes
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

@@ -3,7 +3,7 @@ id: AOA-T-0099
 name: isolated-service-stop-on-shared-substrate
 domain: system-recovery
 kind: recovery
-status: promoted
+status: canonical
 origin:
   project: abyss-stack
   path: docs/TOS_GRAPH_CURATION.md
@@ -17,12 +17,12 @@ tags:
   - runtime
   - closeout
 summary: Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-08
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -30,6 +30,12 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # isolated-service-stop-on-shared-substrate

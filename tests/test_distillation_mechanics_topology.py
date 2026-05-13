@@ -711,7 +711,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
 
         self.assertEqual("agent-workflows", technique["domain"])
         self.assertEqual("lift", technique["kind"])
-        self.assertEqual("promoted", technique["status"])
+        self.assertEqual("canonical", technique["status"])
         self.assertIn("Remap `AOA-T-0085` from `artifact` to `lift`", decision)
         self.assertIn("classification correction only", decision)
 

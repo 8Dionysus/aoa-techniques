@@ -126,3 +126,25 @@ Not changed:
 - no existing technique status changed
 - no canonical-readiness verdict changed
 - no generated promotion surface became authority
+
+## 2026-05-13 - Promotion Evidence Packs 35-41 Closeout
+
+Changed:
+
+- closed Packs 35 through 41 in the promotion-readiness matrix
+- moved the live promoted queue from `34` to `11` techniques
+- recorded downstream evidence for `AOA-T-0084` through `AOA-T-0107` except already-closed `AOA-T-0090` in the external evidence ledger
+- added a durable promotion-evidence long-pass closeout and retired the temporary working plan
+
+Verification lane:
+
+```bash
+python scripts/release_check.py
+git diff --check
+```
+
+Not changed:
+
+- no proof verdict moved into Audit
+- no sibling owner authority became technique authority
+- no generated promotion-readiness surface became source truth

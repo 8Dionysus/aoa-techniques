@@ -5,27 +5,30 @@
 - name: recommendation-truth-vs-host-actionability
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the adapted bundle keeps the contract narrow around recommendation truth, host actionability, and explicit inventory precedence
-- the bundle now has a checklist and a public-safe example, but live evidence is still concentrated in the current `aoa-sdk` lineage
+- the SDK note records the exact gap where router recommendations were semantically real but not directly host-executable
+- it rejects both ignoring unavailable recommendations and pretending an unavailable skill was used
+- it permits manual-equivalence fallback only when the same visible safety discipline is preserved
+
 
 ## Default-use rationale
-- this is useful when control planes recommend capabilities from a larger corpus than the current host can execute
-- it is strongest when operators need honest `activate_now` semantics without losing visibility into router-only relevance
-- it is not yet proven as the default law for every capability selector or router outside the present skill-runtime context
+- Use this as the default boundary check when a recommendation is true in one layer but actionability depends on the current host inventory.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not skill execution, host capability proof, or permission to fake a tool invocation.
 
 ## Fresh public-safety check
-- review date: 2026-04-06
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the published bundle keeps the bounded truth split while stripping local CLI and install-root specifics from the invariant core
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from a second live context outside `aoa-sdk`
-- router-only risk-gate handling still needs another context before a stricter canonical fail-fast posture would be justified
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-sdk/docs/skill-runtime-recommendation-gap.md` hash `8b22f1b9e0478d8161fea494079125f315bdf90b`
+- boundary preserved: semantic recommendation truth stays separate from host executability
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0093` as `promoted`
-- revisit canonical readiness only after another live capability-control-plane context proves the same recommendation-versus-executability seam
+- move `AOA-T-0093` to `canonical`

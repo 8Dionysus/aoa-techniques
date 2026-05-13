@@ -5,28 +5,30 @@
 - name: multi-axis-quest-overlay
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the second context adaptation kept the contract bounded around adjunct reflective overlay rather than lore or authority doctrine
-- the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage
+- the downstream evaluated progression skill declares `AOA-T-0085` as a technique dependency
+- quest hooks and chronicle stubs are emitted only as optional reflection after evidence-backed axis movement exists
+- the skill explicitly blocks quest flavor from becoming owner transfer, route authority, or fake progress
+
 
 ## Default-use rationale
-- this is useful when reviewed evidence already has a bounded base object and the missing piece is reflective route legibility
-- it is strongest when quest or RPG language can help without replacing owner truth, proof posture, or routing authority
-- it is not yet proven as the default reflective overlay technique for every narrative or progression surface
-- the current evidence supports promotion, but not canonical status
+- Use this as the default overlay when quest-shaped reflection should stay adjunct to reviewed progression evidence.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not quest promotion, RPG rank law, owner acceptance, or a routing trigger.
 
 ## Fresh public-safety check
-- review date: 2026-04-05
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the published technique keeps the reusable adjunct-overlay seam while stripping local lore conventions and role-specific wrappers
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage
-- the seam between progression evidence, route legibility, and reflective flavor should stay tested through future sibling use
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-session-progression-lift/SKILL.md` hash `c59992c035c302d968e523b4df4ebd98ad6af886`
+- boundary preserved: quest overlay remains optional reflection, not proof or promotion authority
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0085` as `promoted`
-- revisit canonical readiness only after at least one more live context proves the same adjunct quest-overlay boundary
+- move `AOA-T-0085` to `canonical`

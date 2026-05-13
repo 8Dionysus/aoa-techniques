@@ -1043,6 +1043,170 @@
       }
     },
     {
+      "id": "AOA-T-0084",
+      "name": "progression-evidence-lift",
+      "domain": "agent-workflows",
+      "kind": "lift",
+      "status": "canonical",
+      "summary": "Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.",
+      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
+      "topology": {
+        "family": "donor-harvest",
+        "capability_class": [
+          "transform",
+          "summarize",
+          "learn-from-artifact"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "data",
+          "history"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only",
+          "external-evidence"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0085",
+      "name": "multi-axis-quest-overlay",
+      "domain": "agent-workflows",
+      "kind": "lift",
+      "status": "canonical",
+      "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
+      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
+      "topology": {
+        "family": "donor-harvest",
+        "capability_class": [
+          "transform",
+          "summarize",
+          "choose"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "security-sensitive",
+          "external-evidence"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0086",
+      "name": "automation-fit-matrix",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.",
+      "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "compare",
+          "choose",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only",
+          "approval-required"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0087",
+      "name": "human-loop-to-first-landing",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
+      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "compare",
+          "choose",
+          "read"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only",
+          "degraded-mode"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0088",
+      "name": "approval-sensitivity-check",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.",
+      "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "compare",
+          "choose",
+          "read"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "ui",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating",
+          "approval-required",
+          "degraded-mode"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0089",
+      "name": "quest-unit-promotion-review",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure.",
+      "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "compare",
+          "choose",
+          "observe"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "memory-adjacent-artifacts",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0090",
       "name": "nearest-wrong-target-rejection",
       "domain": "agent-workflows",
@@ -1063,6 +1227,299 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0091",
+      "name": "workspace-root-ingress-and-mutation-gate",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.",
+      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
+      "topology": {
+        "family": "owner-truth-closeout",
+        "capability_class": [
+          "choose"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history",
+          "memory-adjacent-artifacts"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only",
+          "approval-required"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0092",
+      "name": "audit-to-closeout-proof-loop",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.",
+      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
+      "topology": {
+        "family": "owner-truth-closeout",
+        "capability_class": [
+          "plan",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "media",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0093",
+      "name": "recommendation-truth-vs-host-actionability",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice.",
+      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
+      "topology": {
+        "family": "capability-boundary",
+        "capability_class": [
+          "choose",
+          "observe",
+          "plan"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "runtime-state"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "security-sensitive"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0095",
+      "name": "github-only-owner-endcap-with-reality-sync",
+      "domain": "agent-workflows",
+      "kind": "workflow",
+      "status": "canonical",
+      "summary": "Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.",
+      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
+      "topology": {
+        "family": "owner-truth-closeout",
+        "capability_class": [
+          "plan",
+          "observe",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0096",
+      "name": "pinned-validation-matrix-before-generated-publish",
+      "domain": "agent-workflows",
+      "kind": "validation",
+      "status": "canonical",
+      "summary": "Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.",
+      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
+      "topology": {
+        "family": "owner-truth-closeout",
+        "capability_class": [
+          "validate",
+          "observe",
+          "read"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "tests",
+          "ui"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating",
+          "public-share"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0101",
+      "name": "local-pattern-adoption-gate",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "choose",
+          "recover",
+          "communicate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "data",
+          "ui"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "public-share",
+          "approval-required",
+          "degraded-mode"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0102",
+      "name": "skill-proposal-handoff-packet",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.",
+      "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "handoff",
+          "learn-from-artifact"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "data",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0103",
+      "name": "adopted-practice-retention-review",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "compare",
+          "choose",
+          "recover"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "data",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only",
+          "degraded-mode"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0104",
+      "name": "superseded-practice-obsolescence-route",
+      "domain": "agent-workflows",
+      "kind": "handoff",
+      "status": "canonical",
+      "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
+      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "handoff",
+          "choose"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "data",
+          "history"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "irreversible"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0105",
+      "name": "single-missing-evidence-request",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
+      "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
+      "topology": {
+        "family": "review-evidence",
+        "capability_class": [
+          "choose",
+          "mutate",
+          "validate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "data",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0107",
+      "name": "single-locus-claim-challenge",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
+      "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
+      "topology": {
+        "family": "review-evidence",
+        "capability_class": [
+          "choose",
+          "plan",
+          "mutate"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
         ]
       }
     },
@@ -1139,463 +1596,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0084",
-      "name": "progression-evidence-lift",
-      "domain": "agent-workflows",
-      "kind": "lift",
-      "status": "promoted",
-      "summary": "Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.",
-      "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
-      "topology": {
-        "family": "donor-harvest",
-        "capability_class": [
-          "transform",
-          "summarize",
-          "learn-from-artifact"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "data",
-          "history"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only",
-          "external-evidence"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0085",
-      "name": "multi-axis-quest-overlay",
-      "domain": "agent-workflows",
-      "kind": "lift",
-      "status": "promoted",
-      "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
-      "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
-      "topology": {
-        "family": "donor-harvest",
-        "capability_class": [
-          "transform",
-          "summarize",
-          "choose"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "security-sensitive",
-          "external-evidence"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0086",
-      "name": "automation-fit-matrix",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.",
-      "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "compare",
-          "choose",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only",
-          "approval-required"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0087",
-      "name": "human-loop-to-first-landing",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
-      "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "compare",
-          "choose",
-          "read"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only",
-          "degraded-mode"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0088",
-      "name": "approval-sensitivity-check",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.",
-      "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "compare",
-          "choose",
-          "read"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "ui",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating",
-          "approval-required",
-          "degraded-mode"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0089",
-      "name": "quest-unit-promotion-review",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure.",
-      "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "compare",
-          "choose",
-          "observe"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "memory-adjacent-artifacts",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0091",
-      "name": "workspace-root-ingress-and-mutation-gate",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.",
-      "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
-      "topology": {
-        "family": "owner-truth-closeout",
-        "capability_class": [
-          "choose"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history",
-          "memory-adjacent-artifacts"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only",
-          "approval-required"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0092",
-      "name": "audit-to-closeout-proof-loop",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.",
-      "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
-      "topology": {
-        "family": "owner-truth-closeout",
-        "capability_class": [
-          "plan",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "media",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0093",
-      "name": "recommendation-truth-vs-host-actionability",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice.",
-      "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
-      "topology": {
-        "family": "capability-boundary",
-        "capability_class": [
-          "choose",
-          "observe",
-          "plan"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "runtime-state"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "security-sensitive"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0095",
-      "name": "github-only-owner-endcap-with-reality-sync",
-      "domain": "agent-workflows",
-      "kind": "workflow",
-      "status": "promoted",
-      "summary": "Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.",
-      "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
-      "topology": {
-        "family": "owner-truth-closeout",
-        "capability_class": [
-          "plan",
-          "observe",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0096",
-      "name": "pinned-validation-matrix-before-generated-publish",
-      "domain": "agent-workflows",
-      "kind": "validation",
-      "status": "promoted",
-      "summary": "Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.",
-      "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
-      "topology": {
-        "family": "owner-truth-closeout",
-        "capability_class": [
-          "validate",
-          "observe",
-          "read"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "tests",
-          "ui"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating",
-          "public-share"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0101",
-      "name": "local-pattern-adoption-gate",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
-      "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "choose",
-          "recover",
-          "communicate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "data",
-          "ui"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "public-share",
-          "approval-required",
-          "degraded-mode"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0102",
-      "name": "skill-proposal-handoff-packet",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.",
-      "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "handoff",
-          "learn-from-artifact"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "data",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0103",
-      "name": "adopted-practice-retention-review",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
-      "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "compare",
-          "choose",
-          "recover"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "data",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only",
-          "degraded-mode"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0104",
-      "name": "superseded-practice-obsolescence-route",
-      "domain": "agent-workflows",
-      "kind": "handoff",
-      "status": "promoted",
-      "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
-      "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "handoff",
-          "choose"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "data",
-          "history"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "irreversible"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0105",
-      "name": "single-missing-evidence-request",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
-      "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
-      "topology": {
-        "family": "review-evidence",
-        "capability_class": [
-          "choose",
-          "mutate",
-          "validate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "data",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0107",
-      "name": "single-locus-claim-challenge",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
-      "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
-      "topology": {
-        "family": "review-evidence",
-        "capability_class": [
-          "choose",
-          "plan",
-          "mutate"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
         ]
       }
     },
@@ -2121,6 +2121,58 @@
       }
     },
     {
+      "id": "AOA-T-0094",
+      "name": "canonical-owner-with-validated-mirror",
+      "domain": "docs",
+      "kind": "distribution",
+      "status": "canonical",
+      "summary": "Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.",
+      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
+      "topology": {
+        "family": "owner-truth-closeout",
+        "capability_class": [
+          "coordinate",
+          "read",
+          "validate"
+        ],
+        "substrate": [
+          "docs",
+          "tests",
+          "config",
+          "data"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0106",
+      "name": "single-scoped-evidence-reference",
+      "domain": "docs",
+      "kind": "artifact",
+      "status": "canonical",
+      "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
+      "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
+      "topology": {
+        "family": "review-evidence",
+        "capability_class": [
+          "write",
+          "read",
+          "validate"
+        ],
+        "substrate": [
+          "docs",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0020",
       "name": "evidence-note-provenance-lift",
       "domain": "docs",
@@ -2272,58 +2324,6 @@
         "execution_profile": "orchestration-required",
         "risk_posture": [
           "security-sensitive"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0094",
-      "name": "canonical-owner-with-validated-mirror",
-      "domain": "docs",
-      "kind": "distribution",
-      "status": "promoted",
-      "summary": "Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.",
-      "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
-      "topology": {
-        "family": "owner-truth-closeout",
-        "capability_class": [
-          "coordinate",
-          "read",
-          "validate"
-        ],
-        "substrate": [
-          "docs",
-          "tests",
-          "config",
-          "data"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0106",
-      "name": "single-scoped-evidence-reference",
-      "domain": "docs",
-      "kind": "artifact",
-      "status": "promoted",
-      "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
-      "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
-      "topology": {
-        "family": "review-evidence",
-        "capability_class": [
-          "write",
-          "read",
-          "validate"
-        ],
-        "substrate": [
-          "docs",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
         ]
       }
     },
@@ -2637,7 +2637,7 @@
       "name": "degrade-reground-recover",
       "domain": "system-recovery",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.",
       "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
       "topology": {
@@ -2661,7 +2661,7 @@
       "name": "isolated-service-stop-on-shared-substrate",
       "domain": "system-recovery",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
       "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
       "topology": {
@@ -2689,7 +2689,7 @@
       "name": "stress-receipt-reground-closeout",
       "domain": "system-recovery",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.",
       "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "topology": {
@@ -2715,7 +2715,7 @@
       "name": "receipt-first-failure-analysis",
       "domain": "validation-patterns",
       "kind": "validation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.",
       "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
       "topology": {

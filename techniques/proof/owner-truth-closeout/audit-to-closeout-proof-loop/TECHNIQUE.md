@@ -3,7 +3,7 @@ id: AOA-T-0092
 name: audit-to-closeout-proof-loop
 domain: agent-workflows
 kind: workflow
-status: promoted
+status: canonical
 origin:
   project: Dionysus + AoA ecosystem repos
   path: reports/ecosystem-audits/2026-04-06.cross-repo.audit-remediation-session-harvest.md + aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md
@@ -17,12 +17,12 @@ tags:
   - proof
   - remediation
 summary: Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
 validation_strength: cross_context
-public_safety_reviewed_at: 2026-04-06
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # audit-to-closeout-proof-loop
@@ -197,4 +199,5 @@ See `checks/audit-to-closeout-proof-loop-checklist.md`.
 
 - keep findings compaction in `AOA-T-0052` instead of widening this bundle backward into review dedupe
 - keep scenario-level multi-repo choreography in `aoa-playbooks` instead of absorbing route semantics here
-- revisit canonical readiness only after another non-identical public context proves the same finding-first proof boundary
+- future adoption should keep the same finding-first proof boundary and add
+  external evidence only when it does not turn the loop into proof doctrine

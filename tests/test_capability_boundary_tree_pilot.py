@@ -33,7 +33,7 @@ PILOT_BUNDLES = (
         "recommendation-truth-vs-host-actionability",
         "agent-workflows",
         "guardrail",
-        "promoted",
+        "canonical",
         "techniques/agent-workflows/recommendation-truth-vs-host-actionability",
         "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability",
     ),

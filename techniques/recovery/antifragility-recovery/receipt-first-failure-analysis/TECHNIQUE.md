@@ -3,7 +3,7 @@ id: AOA-T-0098
 name: receipt-first-failure-analysis
 domain: validation-patterns
 kind: validation
-status: promoted
+status: canonical
 origin:
   project: ATM10-Agent
   path: docs/ANTIFRAGILITY_FIRST_WAVE.md
@@ -16,12 +16,12 @@ tags:
   - receipts
   - failure-analysis
 summary: Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-07
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -33,6 +33,10 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # receipt-first-failure-analysis

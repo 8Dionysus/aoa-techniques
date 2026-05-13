@@ -3,7 +3,7 @@ id: AOA-T-0106
 name: single-scoped-evidence-reference
 domain: docs
 kind: artifact
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/offer-evidence-reference-bundle-readiness-review.md
@@ -18,12 +18,12 @@ tags:
   - review
   - small-agent
 summary: Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-05-03
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -35,8 +35,12 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # single-scoped-evidence-reference
@@ -247,9 +251,7 @@ See `checks/single-scoped-evidence-reference-checklist.md`.
 
 ## Future evolution
 
-- collect a second-context adaptation from ordinary code review, documentation
-  review, or generated-output review
-- revisit canonical readiness only after second-context evidence shows the same
-  atom outside the Agon handoff
+- collect additional ordinary code-review, documentation-review, or
+  generated-output examples when they keep the atom to one scoped reference
 - use the bundle as evidence for future topology reform across family,
   capability, substrate, execution, and risk axes

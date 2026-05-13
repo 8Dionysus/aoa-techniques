@@ -5,31 +5,32 @@
 - name: approval-sensitivity-check
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: aoa-skills aoa-automation-opportunity-scan
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the skill-local checkpoint boundary was extracted into one standalone approval-sensitivity technique
-- AoA-specific approval gates, repair routes, and repo names moved into adaptation notes instead of the invariant core
-- the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 36 automation opportunity gates
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- one automation candidate still gets one approval-sensitivity verdict
-- hidden authority, missing rollback, and missing health checks still remain visible
-- `checkpoint_required` still stays a boundary flag rather than permission
-- low-risk read-only candidates still remain distinguishable from mutating ones
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public wording can drift into generic risk prose if one automation candidate is not kept explicit
-- the bundle can widen into general change-management doctrine if checkpoint language starts sounding sovereign
-- the example can understate how often the right outcome is a downgrade to repair or reviewed proposal rather than a positive automation lane
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one workflow-side checkpoint classification rather than a governance repository or playbook
-- the public wording keeps fit classification, landing choice, and approval burden separate
-- the origin evidence remains strong enough to justify a promoted public bundle without importing local approval commands or runtime wrappers
+- the downstream automation scan declares `AOA-T-0088` as a technique dependency
+- it marks checkpoint requirements when a route crosses self-change, hidden authority, or important mutation
+- approval sensitivity stays visible as a blocker or narrowing signal rather than a hidden policy override
+- downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-automation-opportunity-scan/SKILL.md` hash `133aba96a21474c1a455ab66f9689e43ca0b8f06`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one bounded approval-sensitivity check over an automation candidate
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

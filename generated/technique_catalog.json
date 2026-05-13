@@ -4768,7 +4768,7 @@
       "name": "progression-evidence-lift",
       "domain": "agent-workflows",
       "kind": "lift",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score.",
       "technique_path": "techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md",
       "origin": {
@@ -4786,12 +4786,12 @@
         "post-session",
         "mastery"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -4815,6 +4815,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -4823,7 +4827,7 @@
       "name": "multi-axis-quest-overlay",
       "domain": "agent-workflows",
       "kind": "lift",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.",
       "technique_path": "techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md",
       "origin": {
@@ -4841,12 +4845,12 @@
         "overlay",
         "reflection"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -4870,6 +4874,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -4878,7 +4886,7 @@
       "name": "automation-fit-matrix",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.",
       "technique_path": "techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md",
       "origin": {
@@ -4896,12 +4904,12 @@
         "fit-matrix",
         "reviewed-work"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -4925,6 +4933,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -4933,7 +4945,7 @@
       "name": "human-loop-to-first-landing",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.",
       "technique_path": "techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md",
       "origin": {
@@ -4951,12 +4963,12 @@
         "routing",
         "post-session"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -4980,6 +4992,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -4988,7 +5004,7 @@
       "name": "approval-sensitivity-check",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible.",
       "technique_path": "techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md",
       "origin": {
@@ -5006,12 +5022,12 @@
         "checkpoint",
         "risk"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5035,6 +5051,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5043,7 +5063,7 @@
       "name": "quest-unit-promotion-review",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure.",
       "technique_path": "techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md",
       "origin": {
@@ -5061,12 +5081,12 @@
         "reviewed-work",
         "boundaries"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-06",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5090,6 +5110,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5157,7 +5181,7 @@
       "name": "workspace-root-ingress-and-mutation-gate",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.",
       "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "origin": {
@@ -5175,12 +5199,12 @@
         "mutation-gate",
         "federation"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-06",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5208,6 +5232,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5216,7 +5244,7 @@
       "name": "audit-to-closeout-proof-loop",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone.",
       "technique_path": "techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md",
       "origin": {
@@ -5234,12 +5262,12 @@
         "proof",
         "remediation"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
       "validation_strength": "cross_context",
-      "public_safety_reviewed_at": "2026-04-06",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5263,6 +5291,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5271,7 +5303,7 @@
       "name": "recommendation-truth-vs-host-actionability",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice.",
       "technique_path": "techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md",
       "origin": {
@@ -5289,12 +5321,12 @@
         "actionability",
         "skills"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-06",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5318,6 +5350,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5326,7 +5362,7 @@
       "name": "canonical-owner-with-validated-mirror",
       "domain": "docs",
       "kind": "distribution",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.",
       "technique_path": "techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md",
       "origin": {
@@ -5344,12 +5380,12 @@
         "validation",
         "schemas"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-07",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5373,6 +5409,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5381,7 +5421,7 @@
       "name": "github-only-owner-endcap-with-reality-sync",
       "domain": "agent-workflows",
       "kind": "workflow",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.",
       "technique_path": "techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md",
       "origin": {
@@ -5399,12 +5439,12 @@
         "reality-sync",
         "closeout"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-07",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5428,6 +5468,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5436,7 +5480,7 @@
       "name": "pinned-validation-matrix-before-generated-publish",
       "domain": "agent-workflows",
       "kind": "validation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.",
       "technique_path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md",
       "origin": {
@@ -5454,12 +5498,12 @@
         "validation",
         "publish"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-07",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5487,6 +5531,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5495,7 +5543,7 @@
       "name": "degrade-reground-recover",
       "domain": "system-recovery",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater.",
       "technique_path": "techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md",
       "origin": {
@@ -5512,12 +5560,12 @@
         "recovery",
         "receipts"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-07",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5533,6 +5581,14 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5541,7 +5597,7 @@
       "name": "receipt-first-failure-analysis",
       "domain": "validation-patterns",
       "kind": "validation",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology.",
       "technique_path": "techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md",
       "origin": {
@@ -5558,12 +5614,12 @@
         "receipts",
         "failure-analysis"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-07",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5583,6 +5639,14 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5591,7 +5655,7 @@
       "name": "isolated-service-stop-on-shared-substrate",
       "domain": "system-recovery",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown.",
       "technique_path": "techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md",
       "origin": {
@@ -5609,12 +5673,12 @@
         "runtime",
         "closeout"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-08",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5626,6 +5690,18 @@
         {
           "kind": "origin_evidence",
           "path": "notes/origin-evidence.md"
+        },
+        {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5634,7 +5710,7 @@
       "name": "stress-receipt-reground-closeout",
       "domain": "system-recovery",
       "kind": "recovery",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.",
       "technique_path": "techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md",
       "origin": {
@@ -5652,12 +5728,12 @@
         "closeout",
         "recovery"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-16",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5677,6 +5753,14 @@
         {
           "kind": "second_context",
           "path": "notes/second-context-adaptation.md"
+        },
+        {
+          "kind": "canonical_readiness",
+          "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5685,7 +5769,7 @@
       "name": "local-pattern-adoption-gate",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.",
       "technique_path": "techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md",
       "origin": {
@@ -5703,12 +5787,12 @@
         "owner-consent",
         "rollback"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5732,6 +5816,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5740,7 +5828,7 @@
       "name": "skill-proposal-handoff-packet",
       "domain": "agent-workflows",
       "kind": "handoff",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.",
       "technique_path": "techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md",
       "origin": {
@@ -5758,12 +5846,12 @@
         "handoff",
         "owner-boundary"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5791,6 +5879,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5799,7 +5891,7 @@
       "name": "adopted-practice-retention-review",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit.",
       "technique_path": "techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md",
       "origin": {
@@ -5817,12 +5909,12 @@
         "adoption",
         "review"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5850,6 +5942,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5858,7 +5954,7 @@
       "name": "superseded-practice-obsolescence-route",
       "domain": "agent-workflows",
       "kind": "handoff",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.",
       "technique_path": "techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md",
       "origin": {
@@ -5876,12 +5972,12 @@
         "supersession",
         "owner-boundary"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5909,6 +6005,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5917,7 +6017,7 @@
       "name": "single-missing-evidence-request",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater.",
       "technique_path": "techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md",
       "origin": {
@@ -5935,12 +6035,12 @@
         "guardrail",
         "small-agent"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -5958,8 +6058,16 @@
           "path": "notes/origin-evidence.md"
         },
         {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5968,7 +6076,7 @@
       "name": "single-scoped-evidence-reference",
       "domain": "docs",
       "kind": "artifact",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer.",
       "technique_path": "techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md",
       "origin": {
@@ -5987,12 +6095,12 @@
         "review",
         "small-agent"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -6014,8 +6122,16 @@
           "path": "notes/origin-evidence.md"
         },
         {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -6024,7 +6140,7 @@
       "name": "single-locus-claim-challenge",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.",
       "technique_path": "techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md",
       "origin": {
@@ -6043,12 +6159,12 @@
         "evidence",
         "small-agent"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-05-03",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -6070,8 +6186,16 @@
           "path": "notes/origin-evidence.md"
         },
         {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     }

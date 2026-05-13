@@ -80,7 +80,7 @@ The current direction is:
 ## Current Checked Contour
 
 The current public corpus is the post-`v0.4.2` working contour: `107` bundles,
-`73` canonical, and `34` promoted.
+`96` canonical, and `11` promoted after the promotion-evidence Packs 35 through 41 closeout.
 
 Current anchors:
 
@@ -236,7 +236,7 @@ Previous review breadcrumb preserved for parity: Run the `proof/owner-truth-clos
 
 | Field | Direction |
 |---|---|
-| Current posture | Audit parts carry promotion readiness, evidence sprinting, and searched-lane memory. |
+| Current posture | Audit parts carry promotion readiness, evidence sprinting, and searched-lane memory. The latest full promotion-evidence closeout leaves `11` promoted residuals and no fresh-extraction tail in the active queue. |
 | Next honest move | Keep external-evidence work routed through the Audit and Distillation parts, then update bundle-local notes before shared queues. |
 | Guardrail | Root roadmap should name evidence pressure only at the horizon level; ledgers and queue details belong in Audit. |
 

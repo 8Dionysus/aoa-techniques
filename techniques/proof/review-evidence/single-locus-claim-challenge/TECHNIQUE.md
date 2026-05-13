@@ -3,7 +3,7 @@ id: AOA-T-0107
 name: single-locus-claim-challenge
 domain: agent-workflows
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: mechanics/distillation/parts/agon-candidate-handoff/gates/bundle-reviews/challenge-claim-bundle-readiness-review.md
@@ -18,12 +18,12 @@ tags:
   - evidence
   - small-agent
 summary: Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-05-03
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -35,8 +35,12 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # single-locus-claim-challenge
@@ -240,9 +244,7 @@ See `checks/single-locus-claim-challenge-checklist.md`.
 
 ## Future evolution
 
-- collect a second-context adaptation from ordinary code review, documentation
-  review, or generated-output review
-- revisit canonical readiness only after second-context evidence shows the same
-  one-locus challenge working without Agon vocabulary
+- collect additional ordinary code-review, documentation-review, or
+  generated-output examples when they keep the atom to one challenged locus
 - watch the boundary with evaluation so challenge pressure does not become a
   proof verdict by habit

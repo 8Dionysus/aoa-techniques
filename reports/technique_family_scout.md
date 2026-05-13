@@ -22,21 +22,21 @@ Use this report when you want to inspect likely family clusters without promotin
 | `history-artifacts` | Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts. | `6` | `6` | `0` |
 | `runtime-truth-lifecycle` | Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark additive profiles. | `4` | `4` | `0` |
 | `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `3` | `0` |
-| `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `2` | `1` |
+| `capability-boundary` | Explicit separation between capability meaning, input provenance, recommendation truth, and host actionability. | `3` | `3` | `0` |
 | `skill-discovery` | Editorial discovery and health visibility over upstream-owned skill sources. | `2` | `1` | `1` |
 | `ready-work-graphs` | Dependency-aware planning, frontier selection, and laddering from requirements to tasks. | `3` | `3` | `0` |
 | `review-compaction` | Background review triggering, findings compaction, and recovery of capability loading after compaction. | `3` | `3` | `0` |
 | `handoff-continuation` | Mailbox, packet, receipt, checkpoint, episode, and cross-repo continuation seams. | `7` | `5` | `2` |
 | `tool-gateway` | One bounded caller surface over multiple upstream tool or MCP endpoints. | `1` | `1` | `0` |
 | `approval-evidence` | Approval-gated mutation and durable work with explicit allow or block evidence. | `2` | `2` | `0` |
-| `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `3` | `0` | `3` |
+| `review-evidence` | Bounded review-state evidence requests, evidence references, and trace probes that narrow review without becoming proof or evaluation authority. | `3` | `3` | `0` |
 | `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `5` | `0` |
-| `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `2` | `2` |
+| `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `4` | `0` |
 | `decision-routing` | Owner-layer routing, explicit fork cards, and route risk posture for next-step choice. | `3` | `3` | `0` |
 | `diagnosis-repair` | Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair. | `4` | `4` | `0` |
-| `automation-governance` | Automation-worthiness, approval sensitivity, candidate routing, and promotion-boundary review. | `9` | `1` | `8` |
-| `owner-truth-closeout` | Ingress or mutation gates, proof-backed closeout, validated mirrors, and publish-readiness against owner truth. | `5` | `0` | `5` |
-| `antifragility-recovery` | Degraded continuation, regrounding, and receipt-first failure analysis. | `4` | `0` | `4` |
+| `automation-governance` | Automation-worthiness, approval sensitivity, candidate routing, and promotion-boundary review. | `9` | `9` | `0` |
+| `owner-truth-closeout` | Ingress or mutation gates, proof-backed closeout, validated mirrors, and publish-readiness against owner truth. | `5` | `5` | `0` |
+| `antifragility-recovery` | Degraded continuation, regrounding, and receipt-first failure analysis. | `4` | `4` | `0` |
 
 Unassigned family suggestions: `0`.
 
@@ -228,11 +228,11 @@ Explicit separation between capability meaning, input provenance, recommendation
 Typical domains: `docs`, `agent-workflows`.
 Typical kinds: `guardrail`.
 
-Counts: `total` 3, `canonical` 2, `promoted` 1.
+Counts: `total` 3, `canonical` 3, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. |
+| [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `canonical` | Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice. |
 | [AOA-T-0040](../techniques/instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md) | `docs` | `guardrail` | `canonical` | Separate reusable skill meaning from user-facing command invocation so shared capability stays portable without collapsing into slash-command syntax or command-specific workflow policy. |
 | [AOA-T-0043](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | `docs` | `guardrail` | `canonical` | Mark primary versus supporting source inputs explicitly when bridging multiple source surfaces so downstream readers and synthesis keep provenance priority visible without turning the bridge into graph semantics or ranking doctrine. |
 
@@ -333,13 +333,13 @@ Bounded review-state evidence requests, evidence references, and trace probes th
 Typical domains: `agent-workflows`, `docs`, `evaluation`.
 Typical kinds: `guardrail`, `artifact`, `assessment`.
 
-Counts: `total` 3, `canonical` 0, `promoted` 3.
+Counts: `total` 3, `canonical` 3, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
-| [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. |
-| [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `artifact` | `promoted` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
+| [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `canonical` | Ask for exactly one missing evidence object that could change a bounded review state so review can narrow without broad research, verdict overclaim, or proof theater. |
+| [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `canonical` | Challenge exactly one claim at one vulnerable locus, naming pressure reason and next support question so review can apply pressure without turning challenge into proof, tone, or adjudication. |
+| [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | `docs` | `artifact` | `canonical` | Offer exactly one scoped evidence reference with relevance, support limit, and reliance condition so review can use a source without treating it as proof, verdict, or source-truth transfer. |
 
 ## `media-ingest`
 
@@ -365,14 +365,14 @@ Harvest reviewed sessions into donor packs, bounded packets, progression deltas,
 Typical domains: `agent-workflows`.
 Typical kinds: `lift`, `artifact`, `handoff`.
 
-Counts: `total` 4, `canonical` 2, `promoted` 2.
+Counts: `total` 4, `canonical` 4, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | `agent-workflows` | `lift` | `canonical` | Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion. |
 | [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Keep one bounded HARVEST_PACKET contract over a reviewed session so downstream routing, diagnosis, repair, progression, and quest seams can consume explicit packet fields without silently replacing one another. |
-| [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
-| [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `lift` | `promoted` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
+| [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | `agent-workflows` | `lift` | `canonical` | Lift reviewed session evidence into a bounded multi-axis progression delta with explicit verdicts and small unlock hints so growth stays descriptive and evidence-backed instead of collapsing into one score. |
+| [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `agent-workflows` | `lift` | `canonical` | Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority. |
 
 ## `decision-routing`
 
@@ -412,19 +412,19 @@ Automation-worthiness, approval sensitivity, candidate routing, and promotion-bo
 Typical domains: `agent-workflows`.
 Typical kinds: `assessment`, `guardrail`.
 
-Counts: `total` 9, `canonical` 1, `promoted` 8.
+Counts: `total` 9, `canonical` 9, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
+| [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm. |
+| [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. |
+| [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. |
+| [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure. |
 | [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `canonical` | Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer. |
-| [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm. |
-| [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred. |
-| [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Classify whether an automation candidate crosses approval, rollback, or self-change boundaries so checkpoint-required posture appears before any seed-ready claim becomes credible. |
-| [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure. |
-| [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior. |
-| [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication. |
-| [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit. |
-| [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) | `agent-workflows` | `handoff` | `promoted` | Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact. |
+| [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `canonical` | Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior. |
+| [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication. |
+| [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Review one adopted practice against current evidence, usefulness, drift, and rollback posture so it stays active only while retention remains explicit. |
+| [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) | `agent-workflows` | `handoff` | `canonical` | Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact. |
 
 ## `owner-truth-closeout`
 
@@ -433,15 +433,15 @@ Ingress or mutation gates, proof-backed closeout, validated mirrors, and publish
 Typical domains: `agent-workflows`, `docs`.
 Typical kinds: `guardrail`, `workflow`, `validation`, `distribution`.
 
-Counts: `total` 5, `canonical` 0, `promoted` 5.
+Counts: `total` 5, `canonical` 5, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `promoted` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. |
-| [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone. |
-| [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | `agent-workflows` | `workflow` | `promoted` | Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing. |
-| [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | `agent-workflows` | `validation` | `promoted` | Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness. |
-| [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) | `docs` | `distribution` | `promoted` | Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned. |
+| [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | `agent-workflows` | `guardrail` | `canonical` | Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory. |
+| [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Turn a reviewed audit finding set into a live-confirmed, proof-backed closeout loop so remediation claims rest on named evidence instead of audit wording alone. |
+| [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | `agent-workflows` | `workflow` | `canonical` | Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing. |
+| [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | `agent-workflows` | `validation` | `canonical` | Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness. |
+| [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) | `docs` | `distribution` | `canonical` | Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned. |
 
 ## `antifragility-recovery`
 
@@ -450,14 +450,14 @@ Degraded continuation, regrounding, and receipt-first failure analysis.
 Typical domains: `system-recovery`, `validation-patterns`.
 Typical kinds: `recovery`, `validation`.
 
-Counts: `total` 4, `canonical` 0, `promoted` 4.
+Counts: `total` 4, `canonical` 4, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) | `system-recovery` | `recovery` | `promoted` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. |
-| [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `system-recovery` | `recovery` | `promoted` | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. |
-| [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) | `system-recovery` | `recovery` | `promoted` | Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading. |
-| [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) | `validation-patterns` | `validation` | `promoted` | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. |
+| [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) | `system-recovery` | `recovery` | `canonical` | Continue safely in a bounded degraded mode, reground against stronger sources, and recover later through explicit source-owned evidence instead of hidden repair theater. |
+| [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `system-recovery` | `recovery` | `canonical` | Stop one bounded service while keeping shared substrate services alive, then verify both target absence and substrate continuity so closeout does not widen into unnecessary teardown. |
+| [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) | `system-recovery` | `recovery` | `canonical` | Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading. |
+| [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) | `validation-patterns` | `validation` | `canonical` | Start failure review from source-owned receipts, separate facts from hypotheses, and tie any recovery change to explicit evidence rather than folklore or dashboard mythology. |
 
 ## Boundaries
 

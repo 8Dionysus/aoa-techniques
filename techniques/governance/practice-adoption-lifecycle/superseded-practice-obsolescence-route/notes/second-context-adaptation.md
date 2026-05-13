@@ -5,43 +5,33 @@
 - name: superseded-practice-obsolescence-route
 
 ## Target project
-- name: aoa-techniques
-- environment: public technique corpus with Method-growth mechanics and
-  promoted technique bundles
-- runtime: human and agent review workflow over adopted practice posture
+- name: aoa-skills method-growth retirement and owner-status surfaces
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the Method-growth obsolescence cycle was narrowed to one owner-aware route
-  packet
-- deletion, deprecation execution, proof, memory writeback, skill activation,
-  route behavior, and runtime change stayed outside the atom
-- AoA center pruning wording became boundary reinforcement rather than a hidden
-  runtime dependency
-- route labels became portable review labels: `supersede`, `merge`, `reanchor`,
-  `defer`, `drop`, and `deprecation_review`
+- the original promoted bundle was checked against Pack 40 method-growth extraction family
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- obsolescence and supersession remain explicit
-- source evidence and rollback or quarantine posture stay visible
-- owner receipt is required before any local status change
-- the smallest retained lesson survives even when the active practice does not
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- readers may overread the packet as permission to delete or mark deprecated
-- route labels can look like final verdicts if owner receipt is missing
-- retained lessons can drift into memory or proof authority if downstream hints
-  are not bounded
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is a
-  review-side handoff packet to the owner
-- the adjacent-technique notes keep retention review, nearest-wrong-target
-  rejection, and owner-layer triage separate
-- the example uses a portable shadowed-template case and does not require OS
-  Abyss deployment
+- method-growth exposes retirement pressure as reviewable regression, retention, quarantine, deprecation, and retirement routing
+- owner-status surfaces keep `superseded` and `superseded_by` as tracked state rather than silent cleanup
+- the part explicitly blocks source-linked deletion, provenance erasure, and proof verdict claims
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/retention-regression-retirement/README.md` hash `28b8d469805cac962677e58f4d95f29fb08a7ba3`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/docs/OWNER_STATUS_SURFACES.md` hash `live inspected owner-status surface`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one obsolescence route packet
-  rather than deletion, deprecation execution, proof, memory, skill, routing, or
-  runtime authority
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

@@ -5,32 +5,33 @@
 - name: adopted-practice-retention-review
 
 ## Target project
-- name: aoa-techniques
-- environment: public technique corpus with Method-growth mechanics and promoted technique bundles
-- runtime: human and agent review workflow over adopted practice posture
+- name: aoa-skills method-growth retention/regression/retirement part
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the Method-growth retention cycle was narrowed to one post-adoption review
-- lifecycle hooks such as request, readiness, shadow, decision, activation, and obsolescence stayed in mechanics
-- the review output became an assessment verdict rather than an activation, deletion, or proof action
-- AoA owner names moved into adaptation examples instead of the invariant core
+- the original promoted bundle was checked against Pack 40 method-growth extraction family
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- adopted practice still needs current evidence before it remains active
-- owner fit and reviewability remain visible
-- rollback, quarantine, or obsolescence route remains concrete
-- `retain` stays weaker than canonical promotion, proof claims, skill activation, memory writeback, or runtime change
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the retention review can become a ceremonial rubber stamp if current evidence is weak
-- the review can drift into obsolescence or deletion if the stop-line is not visible
-- the AoA example can look like required ecosystem structure unless public adaptation notes keep it optional
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one review-side assessment over an active practice
-- the adjacent-technique notes keep local adoption gate and nearest-wrong-target rejection separate
-- the example uses Method-growth only as an adaptation example and does not require OS Abyss deployment
+- method-growth routes adopted behavior into regression coverage, retention watch, quarantine fallback, deprecation, or retirement
+- adoption receipts cite readiness, shadow proof, rollback, retention, and owner-local authority before durable claims persist
+- retention review can hold, quarantine, or retire instead of silently keeping a weak practice alive
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/retention-regression-retirement/README.md` hash `28b8d469805cac962677e58f4d95f29fb08a7ba3`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/adoption-evidence-receipts/README.md` hash `a57931993ff471281ca94b5d4a6091fac10922b5`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one retention assessment rather than adoption, obsolescence, or skill activation
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

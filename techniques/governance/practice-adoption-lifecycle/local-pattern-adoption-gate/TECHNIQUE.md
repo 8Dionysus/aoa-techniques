@@ -3,7 +3,7 @@ id: AOA-T-0101
 name: local-pattern-adoption-gate
 domain: agent-workflows
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: mechanics/method-growth/parts/pattern-adoption/README.md + mechanics/method-growth/PROVENANCE.md
@@ -17,12 +17,12 @@ tags:
   - owner-consent
   - rollback
 summary: Gate one shared pattern before local adoption by requiring owner consent, compatibility evidence, rollback, and retention watch so precedent does not silently become durable behavior.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-05-03
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # local-pattern-adoption-gate

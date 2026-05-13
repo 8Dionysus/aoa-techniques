@@ -1,45 +1,37 @@
 # Second Context Adaptation
 
 ## Technique
-
 - id: AOA-T-0100
 - name: stress-receipt-reground-closeout
 
 ## Target project
-
-- a runtime substrate, routing layer, playbook layer, or control surface where
-  one bounded stress event must stay visible from receipt through closeout
+- name: aoa-playbooks stress harvest and runtime-chaos closeout route
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-
-- receipt schema names can change
-- the next bounded hop can point to routing, playbooks, KAG, or a local review surface
-- the degraded continuation may stay active or become an explicit hold
-- closeout storage paths and review mechanics can change
+- the original promoted bundle was checked against Pack 39 antifragility recovery fresh scaffolding
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-
-- one owner-local receipt comes first
-- degraded posture stays weaker than the normal path
-- blocked widening remains explicit
-- reviewed closeout arrives before stronger proof reading
-- eval bridge candidates stay evidence-only until a real eval consumes them
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-
-- a target repo may copy the wording while skipping the actual reviewed closeout artifact
-- routing or playbook consumers may overstate their role and obscure owner-local evidence
-- adaptation can get mistaken for blanket incident doctrine instead of one bounded recovery workflow
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-
-- the donor pack already showed the workflow across several owner layers, which
-  demonstrates that the sequence travels better than any single example file
-- the technique depends on boundary discipline more than on one particular
-  runtime, registry, or generated surface layout
+- the playbook names runtime stress lane, runtime re-entry gate, owner runtime receipt, runtime closeout receipt, regrounding ticket ref, and proof handoff candidate as expected artifacts
+- stress harvest keeps detect, bound, degrade, harvest, decide re-entry or hold, and adaptation as an explicit sequence
+- re-entry may resume, resume degraded, hold, or retire, and the decision must cite evidence rather than mood
+- downstream evidence ref: `repo:aoa-playbooks/playbooks/runtime-chaos-recovery/PLAYBOOK.md` hash `dbe27f08c3581d26150f73eafc56ed98c065c9a4`
+- downstream evidence ref: `repo:aoa-playbooks/docs/PLAYBOOK_STRESS_HARVEST.md` hash `ddd6a9b45c5b7caa9e17b096be8f28ec67f330e1`
 
 ## Result
-
-- the technique remains portable across owner repos as long as they preserve:
-  one owner-local receipt, one honest degraded continuation or hold, one
-  reviewed closeout artifact, and an explicit weaker-than-verdict eval bridge
+- verdict: works
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

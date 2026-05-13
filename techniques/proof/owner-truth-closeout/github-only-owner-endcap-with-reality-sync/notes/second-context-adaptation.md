@@ -5,43 +5,33 @@
 - name: github-only-owner-endcap-with-reality-sync
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable workflow techniques
-- runtime: human and agent contribution workflow over bounded technique bundles
+- name: aoa-playbooks owner-first landing with GitHub-only endcap
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the concrete `ATM10-Agent` product-edge wording was reduced to one reusable
-  owner-landing law
-- milestone numbers, issue numbers, PR numbers, and doc paths moved into origin
-  evidence and adaptation notes rather than the invariant core
-- the bundle was reduced to one technique doc, one checklist, one example, and
-  three evidence notes
+- the original promoted bundle was checked against Pack 38 workspace boundary and proof loop
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- the owner repository still lands first
-- GitHub still stays the declared execution surface when the route is
-  intentionally remote-only
-- coordination-layer lifecycle and reality surfaces still sync immediately after
-  merge
-- public claims still stay bounded to merged owner evidence and named checks
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public wording can collapse into generic GitHub contribution advice if
-  the owner-truth sync seam stops being central
-- the bundle can drift toward scenario-level remediation choreography that
-  belongs in `aoa-playbooks`
-- the bundle can overfit to `Dionysus` lineage habits if future contexts do not
-  test a different coordination layer
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the original run already included one real remote-only owner surface and one
-  real coordination-layer truth sync
-- the adapted bundle stays in `agent-workflows` because the reusable object is
-  one bounded landing-and-sync chain, not a docs doctrine or a playbook
-- origin evidence remains strong enough for a promoted bundle without importing
-  private host detail or broader product policy
+- the reviewed owner-first run closed only after the GitHub-only `ATM10-Agent` endcap merged and lineage reality sync recorded landed truth
+- the evidence names GitHub checks and owner-repo merges before closure rather than treating staged lineage as sufficient
+- the required-check contract coordinates GitHub check names without taking over owner repo validation meaning
+- downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-07.owner-first-capability-landing.md` hash `e4878751b1dcd747ab1f2c6babe79454a3cf0c9b`
+- downstream evidence ref: `repo:8Dionysus/docs/GITHUB_REQUIRED_CHECK_CONTRACTS.md` hash `390ebdbdc01362d569a8d0774a292794d0d8d9d5`
 
 ## Result
 - verdict: works
-- note: the adapted bundle reads as one bounded owner-closeout workflow rather
-  than as a generic GitHub handbook or remediation program
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

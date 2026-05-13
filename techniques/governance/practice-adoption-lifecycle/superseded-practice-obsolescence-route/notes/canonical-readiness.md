@@ -5,39 +5,31 @@
 - name: superseded-practice-obsolescence-route
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the adapted bundle keeps one bounded obsolescence route packet rather than
-  the full Method-growth lifecycle
-- the bundle has a checklist and a public-safe example, but live evidence is
-  still concentrated in the `aoa-techniques` Method-growth extraction wave
+- method-growth exposes retirement pressure as reviewable regression, retention, quarantine, deprecation, and retirement routing
+- owner-status surfaces keep `superseded` and `superseded_by` as tracked state rather than silent cleanup
+- the part explicitly blocks source-linked deletion, provenance erasure, and proof verdict claims
+
 
 ## Default-use rationale
-- this is useful when an adopted or shadowed practice should stop advancing
-  as-is without erasing its source evidence
-- it is strongest when a retention review has already identified supersession,
-  merge, reanchor, defer, drop, or deprecation-review pressure
-- it is not yet proven as the default obsolescence route outside the current
-  Method-growth lineage
+- Use this as the default route when an adopted or proposed practice appears superseded and must be retired, replaced, quarantined, or held with evidence.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not deletion authority, cleanup by taste, or proof verdict.
 
 ## Fresh public-safety check
-- review date: 2026-05-03
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the bundle keeps the reusable route packet while
-  stripping sensitive session detail, local command wrappers, and owner-local
-  acceptance mechanics
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from one second live context beyond Method-growth
-  mechanics
-- future use should confirm the route packet does not collapse into deletion or
-  deprecation execution
-- future use should verify that proof, memory, skill, routing, and runtime
-  consequences still route to their owners
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/retention-regression-retirement/README.md` hash `28b8d469805cac962677e58f4d95f29fb08a7ba3`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/docs/OWNER_STATUS_SURFACES.md` hash `live inspected owner-status surface`
+- boundary preserved: obsolescence route records replacement pressure without deleting owner truth
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0104` as `promoted`
-- revisit canonical readiness only after another local or external corpus proves
-  the same owner-aware obsolescence route over an adopted or shadowed practice
+- move `AOA-T-0104` to `canonical`

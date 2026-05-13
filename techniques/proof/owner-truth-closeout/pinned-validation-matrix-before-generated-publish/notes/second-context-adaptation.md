@@ -5,42 +5,32 @@
 - name: pinned-validation-matrix-before-generated-publish
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: aoa-playbooks split-wave generated-surface rollout
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- repo-specific second-wave PR tails were reduced to one bounded publish-hygiene
-  law about reproducing workflow-pinned validation inputs
-- concrete sibling repo names and one-off repair details were kept in evidence
-  notes instead of the invariant core
-- the adapted bundle was reduced to one technique doc, one checklist, one
-  example, and three evidence notes
+- the original promoted bundle was checked against Pack 38 workspace boundary and proof loop
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- generated publish confidence still depends on the same matrix that CI really
-  reads
-- local workspace state still cannot silently replace pinned sibling refs
-- publish still waits for the pinned-matrix pass rather than for a convenient
-  repo-local green check
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public wording can drift into generic CI advice if generated publish
-  posture stops being central
-- the bundle can widen into release automation or multi-repo choreography if
-  the pinned matrix is not kept sharply bounded
-- a tiny example can understate how much local `main` drift can mislead publish
-  decisions
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is
-  one bounded publish workflow law rather than an eval policy or playbook route
-- the wording preserves the generated-publish seam without pulling in private
-  workflow setup or broader wave doctrine
-- the origin evidence remains strong enough to justify a promoted bundle from
-  real cross-repo use
+- the split-wave run required sibling bridge publication before downstream consumers validated against live updated surfaces
+- the downstream validation pack reran repo-native validators, live workspace contract checks, and compatibility checks after bridge publication
+- the residual risk explicitly warns that generated-surface repos can false-green if workflow-pinned sibling refs are not reproduced before publish
+- downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-07.split-wave-cross-repo-rollout.md` hash `7ba4f12069ec67336a1fd893593e0159b9d6a7d8`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one pinned-matrix rule for
-  generated publish honesty
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context
