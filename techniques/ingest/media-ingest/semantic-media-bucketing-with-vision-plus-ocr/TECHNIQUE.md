@@ -3,7 +3,7 @@ id: AOA-T-0073
 name: semantic-media-bucketing-with-vision-plus-ocr
 domain: agent-workflows
 kind: ingest
-status: promoted
+status: canonical
 origin:
   project: CLIP + PaddleOCR
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - vision
   - ocr
 summary: Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations: []
 evidence:
@@ -34,6 +34,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # semantic-media-bucketing-with-vision-plus-ocr
@@ -176,9 +178,10 @@ See `checks/semantic-media-bucketing-with-vision-plus-ocr-checklist.md`.
 - adapted from open-source `CLIP` and `PaddleOCR`
 - landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing
+- promoted to canonical on 2026-05-12 after `end1989/ai-image-classification` showed a second public workflow with bounded labels, CLIP-based visual scoring, OCR side-text confidence adjustment, review thresholds, correction flow, and file-action separation
 
 ## Future evolution
 
 - keep duplicate grouping and OCR extraction separate unless narrower bridge seams prove reusable
 - split receipt-versus-proof or meme-family overlays only if those contracts survive independently
-- add a stronger second live context if another public workflow keeps semantic bucketing explicit before later routing or cleanup actions
+- future sources can reinforce the default only if bounded taxonomy, OCR side-channel handling, review thresholds, and stop-lines before moderation, identity inference, deletion, or auto-routing policy stay visible

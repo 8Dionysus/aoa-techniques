@@ -71,7 +71,7 @@ AOA-T-0069,approval-bound-durable-jobs,agent-workflows,canonical,handoff,approva
 AOA-T-0070,two-stage-document-ocr-pipeline,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0071,template-backed-field-extraction-after-ocr,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0072,perceptual-media-dedupe-with-threshold-review,agent-workflows,canonical,ingest,media-ingest
-AOA-T-0073,semantic-media-bucketing-with-vision-plus-ocr,agent-workflows,promoted,ingest,media-ingest
+AOA-T-0073,semantic-media-bucketing-with-vision-plus-ocr,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0074,telegram-export-normalization-to-local-store,agent-workflows,promoted,ingest,media-ingest
 AOA-T-0075,session-donor-harvest,agent-workflows,promoted,lift,donor-harvest
 AOA-T-0076,owner-layer-triage,agent-workflows,promoted,assessment,decision-routing

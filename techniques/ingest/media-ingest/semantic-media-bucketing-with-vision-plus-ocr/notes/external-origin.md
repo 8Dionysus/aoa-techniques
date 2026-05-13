@@ -30,4 +30,4 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 
 - why this adaptation is reusable here: many mixed-media workflows need one bounded taxonomy seam before later review, storage, or cleanup actions happen, especially when OCR can sharpen ambiguous text-heavy images
 - downstream repo impact: later routing or cleanup workflows belong in `aoa-skills`, while this repository keeps only the reusable classification contract
-- limits or follow-up review concerns: this import still needs one second live adopter beyond the donor classification family and documentation-first adaptation before any canonical discussion is honest
+- limits or follow-up review concerns: the original import gap closed in Pack 30 after `end1989/ai-image-classification` showed the same bounded media-bucketing seam outside the donor README family; future review should still reject duplicate grouping, OCR extraction ownership, moderation, identity inference, auto-move policy, deletion, archive policy, and full media-management product behavior as separate objects

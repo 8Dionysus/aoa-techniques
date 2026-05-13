@@ -739,6 +739,34 @@
       }
     },
     {
+      "id": "AOA-T-0073",
+      "name": "semantic-media-bucketing-with-vision-plus-ocr",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.",
+      "technique_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
+      "topology": {
+        "family": "media-ingest",
+        "capability_class": [
+          "read",
+          "transform",
+          "choose"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "media",
+          "ui"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "read-only",
+          "approval-required"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -811,34 +839,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0073",
-      "name": "semantic-media-bucketing-with-vision-plus-ocr",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.",
-      "technique_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
-      "topology": {
-        "family": "media-ingest",
-        "capability_class": [
-          "read",
-          "transform",
-          "choose"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "media",
-          "ui"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "read-only",
-          "approval-required"
         ]
       }
     },

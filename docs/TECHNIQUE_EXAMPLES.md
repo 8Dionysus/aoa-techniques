@@ -172,6 +172,12 @@ See also:
 |---|---|---|---|
 | minimal-perceptual-media-dedupe-with-threshold-review | `present` | `techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/examples/minimal-perceptual-media-dedupe-with-threshold-review.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
 
+### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal-semantic-media-bucketing-with-vision-plus-ocr | `present` | `techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/examples/minimal-semantic-media-bucketing-with-vision-plus-ocr.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -190,12 +196,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal-semantic-media-bucketing-with-vision-plus-ocr | `present` | `techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/examples/minimal-semantic-media-bucketing-with-vision-plus-ocr.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) |
 
 ### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
 
