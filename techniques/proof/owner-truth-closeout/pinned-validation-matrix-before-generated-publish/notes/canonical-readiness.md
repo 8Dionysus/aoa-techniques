@@ -5,42 +5,30 @@
 - name: pinned-validation-matrix-before-generated-publish
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the adapted bundle keeps the contract narrow around generated publish and
-  workflow-pinned validation inputs
-- the bundle now has a checklist and a public-safe example, and the
-  via-negativa owner wave added a second live replay of the same bounded
-  failure family
-- live evidence is stronger than it was at first promotion, but it is still
-  concentrated in the current AoA generated-surface sibling family
+- the split-wave run required sibling bridge publication before downstream consumers validated against live updated surfaces
+- the downstream validation pack reran repo-native validators, live workspace contract checks, and compatibility checks after bridge publication
+- the residual risk explicitly warns that generated-surface repos can false-green if workflow-pinned sibling refs are not reproduced before publish
+
 
 ## Default-use rationale
-- this is useful when generated outputs depend on sibling surfaces or mirrored
-  contracts that CI pins more strictly than a local workspace does
-- it is strongest when publish risk comes from false local confidence rather
-  than from ordinary code drift
-- it is not yet proven as the default publish posture outside the current AoA
-  cross-repo generated-surface context
+- Use this as the default pre-publish move when generated or derived surfaces depend on sibling refs, workflow pins, or bridge publication order.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not a general release checklist or proof that generated output is semantically correct.
 
 ## Fresh public-safety check
-- review date: 2026-04-08
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the published technique keeps the bounded
-  pinned-matrix rule while stripping private runner setup, credentials, and
-  broader release bureaucracy
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would still benefit from a second live generated-surface repo
-  outside the current `aoa-routing` and `aoa-skills` sibling family
-- the via-negativa replay strengthens confidence, but it still replays the same
-  family rather than proving a non-identical publish context
-- the seam between upstream health checks, split-wave playbooks, and generated
-  publish posture should stay explicit through future reuse
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-07.split-wave-cross-repo-rollout.md` hash `7ba4f12069ec67336a1fd893593e0159b9d6a7d8`
+- boundary preserved: validation pins must match the generated publish surface before publication trust grows
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0096` as `promoted`
-- revisit canonical readiness only after at least one more non-identical
-  generated-publish context proves the same pinned-matrix boundary
+- move `AOA-T-0096` to `canonical`

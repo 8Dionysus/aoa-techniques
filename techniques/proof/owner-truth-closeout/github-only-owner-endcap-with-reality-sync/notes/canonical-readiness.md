@@ -5,37 +5,31 @@
 - name: github-only-owner-endcap-with-reality-sync
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
-- origin evidence is strong enough for a promoted public bundle
-- the technique already has one reviewed end-to-end context with visible owner
-  issue plus PR plus CI plus merge plus post-merge truth sync
-- the bundle stays narrow around owner-first landing and immediate coordination
-  sync
+- origin evidence is strong enough to justify a promoted public bundle
+- the reviewed owner-first run closed only after the GitHub-only `ATM10-Agent` endcap merged and lineage reality sync recorded landed truth
+- the evidence names GitHub checks and owner-repo merges before closure rather than treating staged lineage as sufficient
+- the required-check contract coordinates GitHub check names without taking over owner repo validation meaning
+
 
 ## Default-use rationale
-- this is useful when a coordination layer must close a remote-only owner
-  surface without faking local execution
-- it is strongest when the route needs one bounded GitHub-native endcap and a
-  visible post-merge reality sync
-- it is not yet proven as the default remote-owner closeout law outside the
-  current AoA lineage
+- Use this as the default closeout move when a real owner surface lives only on GitHub and local workspace truth must be rebound after merge.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not release doctrine, branch-protection authority, or an excuse to skip owner validation.
 
 ## Fresh public-safety check
-- review date: 2026-04-07
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the published bundle keeps the owner-truth law
-  while stripping raw terminal output, local temporary paths, and private host
-  details
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from one more non-identical GitHub-only owner
-  context outside the current `ATM10-Agent` endcap
-- the seam against `AOA-T-0092` and future `aoa-playbooks` scenario capture
-  should stay explicit through future sibling use
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-07.owner-first-capability-landing.md` hash `e4878751b1dcd747ab1f2c6babe79454a3cf0c9b`
+- downstream evidence ref: `repo:8Dionysus/docs/GITHUB_REQUIRED_CHECK_CONTRACTS.md` hash `390ebdbdc01362d569a8d0774a292794d0d8d9d5`
+- boundary preserved: GitHub-only closure requires observed merge plus reality sync
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0095` as `promoted`
-- revisit canonical readiness only after another remote-only owner endcap shows
-  the same owner-first landing and post-merge truth-sync boundary
+- move `AOA-T-0095` to `canonical`

@@ -7561,7 +7561,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep findings compaction in `AOA-T-0052` instead of widening this bundle backward into review dedupe\n- keep scenario-level multi-repo choreography in `aoa-playbooks` instead of absorbing route semantics here\n- revisit canonical readiness only after another non-identical public context proves the same finding-first proof boundary"
+          "content_markdown": "- keep findings compaction in `AOA-T-0052` instead of widening this bundle backward into review dedupe\n- keep scenario-level multi-repo choreography in `aoa-playbooks` instead of absorbing route semantics here\n- future adoption should keep the same finding-first proof boundary and add\n  external evidence only when it does not turn the loop into proof doctrine"
         }
       ]
     },
@@ -7889,7 +7889,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- collect one more non-identical generated-surface repo or publish matrix\n  outside the current `aoa-routing` and `aoa-skills` sibling family before\n  considering canonical promotion\n- keep split-wave choreography in `aoa-playbooks` instead of widening this\n  technique into a release or rollout playbook\n- revisit canonical readiness only after the technique proves portable beyond\n  the current AoA generated-surface family"
+          "content_markdown": "- collect non-identical generated-surface repo or publish-matrix examples only\n  when they preserve the same pinned-validation-before-publish boundary\n- keep split-wave choreography in `aoa-playbooks` instead of widening this\n  technique into a release or rollout playbook\n- keep future external evidence narrower than release or rollout playbook\n  choreography"
         }
       ]
     },
@@ -8627,7 +8627,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- collect a second-context adaptation from ordinary code review, documentation\n  review, or generated-output review\n- revisit canonical readiness only after second-context evidence shows the same\n  atom outside the Agon handoff\n- watch the boundary with evaluation so missing evidence does not become a\n  proof verdict by habit"
+          "content_markdown": "- collect additional ordinary code-review, documentation-review, or\n  generated-output examples when they keep the atom to one missing object\n- watch the boundary with evaluation so missing evidence does not become a\n  proof verdict by habit"
         }
       ]
     },
@@ -8709,7 +8709,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- collect a second-context adaptation from ordinary code review, documentation\n  review, or generated-output review\n- revisit canonical readiness only after second-context evidence shows the same\n  atom outside the Agon handoff\n- use the bundle as evidence for future topology reform across family,\n  capability, substrate, execution, and risk axes"
+          "content_markdown": "- collect additional ordinary code-review, documentation-review, or\n  generated-output examples when they keep the atom to one scoped reference\n- use the bundle as evidence for future topology reform across family,\n  capability, substrate, execution, and risk axes"
         }
       ]
     },
@@ -8791,7 +8791,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- collect a second-context adaptation from ordinary code review, documentation\n  review, or generated-output review\n- revisit canonical readiness only after second-context evidence shows the same\n  one-locus challenge working without Agon vocabulary\n- watch the boundary with evaluation so challenge pressure does not become a\n  proof verdict by habit"
+          "content_markdown": "- collect additional ordinary code-review, documentation-review, or\n  generated-output examples when they keep the atom to one challenged locus\n- watch the boundary with evaluation so challenge pressure does not become a\n  proof verdict by habit"
         }
       ]
     }

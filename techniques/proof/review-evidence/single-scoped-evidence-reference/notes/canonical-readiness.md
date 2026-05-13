@@ -5,39 +5,32 @@
 - name: single-scoped-evidence-reference
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the gate card, example, checklist, evidence note, and bundle-readiness review
-  agree on the same small move
-- the bundle keeps the move portable outside OS Abyss and outside Agon when it
-  stays a read-only evidence reference
-- the current evidence is still concentrated in the Distillation Agon handoff
-  packet
+- Agon lawful move grammar defines `offer_evidence_reference` as providing a reviewable reference or artifact pointer without claiming final proof
+- the audit evidence ledger contract keeps evidence lists, freshness posture, confidence limits, and proof routes separate from verdicts or memory truth
+- the eval prebinding uses `offer_evidence_reference` inside an evidence-floor precheck while blocking truth decisions and ToS promotion
+
 
 ## Default-use rationale
-- this is useful when one source already exists and review needs to understand
-  what that source can and cannot support
-- it is strongest when a reviewer would otherwise accept a vague link, demand a
-  full citation bundle, or mistake a reference for proof
-- it is not yet proven as the default evidence-reference artifact outside the
-  current handoff lineage
+- Use this as the default one-reference artifact when an available source can support a bounded review claim only under explicit limits.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not proof, source-truth transfer, eval adequacy, or a multi-source provenance pack.
 
 ## Fresh public-safety check
-- review date: 2026-05-03
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the bundle keeps the reusable one-reference
-  artifact while excluding private session detail, Agon law, proof effects,
-  route mutation, memory writes, runtime behavior, KAG promotion, ToS canon,
-  and skill activation
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- no second-context adaptation has been captured yet
-- small-agent use still needs observation outside the handoff packet
-- the boundary with evaluation adequacy should be watched before default use
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:Agents-of-Abyss/mechanics/agon/parts/lawful-move-grammar/config/agon_lawful_moves.seed.json` hash `645ac975da7f41caf80e529919185f5daf6034b7`
+- downstream evidence ref: `repo:Agents-of-Abyss/mechanics/audit/parts/evidence-ledger/CONTRACT.md` hash `1429e709c5ac4c788f4487dd203e8713f149c3e2`
+- downstream evidence ref: `repo:aoa-evals/config/agon_eval_prebindings.seed.json` hash `1ea8d841cf7892d712a91d156373a763688a7dcb`
+- boundary preserved: one reference carries relevance, support scope, support limit, and reliance condition only
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0106` as `promoted`
-- revisit canonical readiness only after a second live context shows the same
-  one-reference artifact working without Agon vocabulary
+- move `AOA-T-0106` to `canonical`

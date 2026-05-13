@@ -5,27 +5,31 @@
 - name: audit-to-closeout-proof-loop
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the technique already has two reviewed AoA contexts with different blocker families
-- the bundle keeps the contract narrow around live finding confirmation, targeted proof, and final closeout
+- the reviewed closeout route starts from a closeout pack, owner handoff bundle, owner authorship bundle, validation pack, and merge record
+- it keeps closeout evidence tied to merged `main` and runtime parity instead of chat-memory continuity
+- it routes fresh owner-first landing or validator remediation away when the closeout loop is not the real anchor
+
 
 ## Default-use rationale
-- this is useful when teams need a stronger answer than "we patched it and the suite is green"
-- it is strongest when reviewed findings must be closed against current code and owner repositories
-- it is not yet proven as the default closeout law outside the current AoA remediation lineage
+- Use this as the default proof-loop move when an audit finding or reviewed closeout must survive into owner handoff, validation, merge, and reality sync.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not proof doctrine, eval verdict authority, or automatic owner acceptance.
 
 ## Fresh public-safety check
-- review date: 2026-04-06
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the published technique keeps the proof loop while stripping local audit files, path quirks, and session-specific telemetry
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from one more public context outside the current AoA remediation family
-- the seam against `AOA-T-0001` and `AOA-P-0018` should stay visible through future sibling use
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-08.closeout-owner-follow-through-continuity.md` hash `59159350d92e4536ba9f50e6e26071bac4aaba44`
+- downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-05.validation-driven-remediation.md` hash `live inspected reviewed remediation surface`
+- boundary preserved: audit-to-closeout proof stays finding-first and owner-rebound
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0092` as `promoted`
-- revisit canonical readiness only after another non-identical context proves the same finding-first proof loop
+- move `AOA-T-0092` to `canonical`

@@ -3,7 +3,7 @@ id: AOA-T-0089
 name: quest-unit-promotion-review
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-quest-harvest/SKILL.md + skills/aoa-quest-harvest/techniques.yaml + skills/aoa-quest-harvest/references/promotion-outcomes.md
@@ -17,12 +17,12 @@ tags:
   - reviewed-work
   - boundaries
 summary: Review one repeated reviewed quest unit and emit one bounded promotion verdict so leaf workflow, route, role, proof, and recall surfaces do not collapse into generic reuse pressure.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-06
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # quest-unit-promotion-review

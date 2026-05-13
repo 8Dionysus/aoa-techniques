@@ -3,7 +3,7 @@ id: AOA-T-0087
 name: human-loop-to-first-landing
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-automation-opportunity-scan/SKILL.md + skills/aoa-automation-opportunity-scan/references/playbook-seed-bridge.md
@@ -17,12 +17,12 @@ tags:
   - routing
   - post-session
 summary: Route one recurring human loop to the first honest automation-facing landing so seed-ready candidates become bounded skills or playbook seeds while unstable routes stay manual, repair-bound, or deferred.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # human-loop-to-first-landing

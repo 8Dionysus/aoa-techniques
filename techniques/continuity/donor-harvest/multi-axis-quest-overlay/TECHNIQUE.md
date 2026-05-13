@@ -3,7 +3,7 @@ id: AOA-T-0085
 name: multi-axis-quest-overlay
 domain: agent-workflows
 kind: lift
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-progression-lift/SKILL.md + skills/aoa-session-donor-harvest/references/rpg-reflection-posture.md
@@ -17,12 +17,12 @@ tags:
   - overlay
   - reflection
 summary: Add quest-, RPG-, or chronicle-shaped reflection to a bounded multi-axis progression result so route legibility improves without letting flavor overwrite owner truth, proof, or routing authority.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # multi-axis-quest-overlay

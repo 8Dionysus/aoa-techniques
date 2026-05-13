@@ -3,7 +3,7 @@ id: AOA-T-0094
 name: canonical-owner-with-validated-mirror
 domain: docs
 kind: distribution
-status: promoted
+status: canonical
 origin:
   project: Dionysus + aoa-stats + aoa-evals + aoa-skills
   path: reports/ecosystem-audits/2026-04-07.cross-repo.aoa-stats-fixpack-rollout-session-harvest.md + aoa-stats/schemas/stats-event-envelope.schema.json + aoa-stats/scripts/build_views.py + aoa-evals/schemas/stats-event-envelope.schema.json + aoa-evals/scripts/validate_repo.py + aoa-skills/config/project_core_skill_kernel.json
@@ -17,12 +17,12 @@ tags:
   - validation
   - schemas
 summary: Keep one canonical cross-repo contract owner and allow local mirrors only when explicit parity validation keeps owner metadata and vocabulary exactly aligned.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-07
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # canonical-owner-with-validated-mirror

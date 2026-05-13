@@ -5,32 +5,32 @@
 - name: multi-axis-quest-overlay
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: aoa-skills aoa-session-progression-lift
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- family-local RPG reflection posture became one bounded adjunct overlay technique
-- AoA lore and local campaign vocabulary moved into adaptation notes instead of the invariant core
-- the underlying progression evidence remained separate as the sibling `progression-evidence-lift` technique instead of staying fused into one broad bundle
-- the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 35 progression and quest reflection
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- the overlay still rests on reviewed evidence
-- flavor still remains adjunct rather than sovereign
-- owner and proof truth still remain elsewhere
-- narrative cues still stay small
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- public wording can drift into lore or metaphor if the underlying evidence-backed base is not kept explicit
-- the bundle can widen into authority theater if flavor starts granting rights or rank
-- a minimal example can understate how easily chronicle language can be mistaken for memory truth
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one bounded reflective workflow-side overlay rather than a role doctrine or memory system
-- the public wording still preserves the seam between evidence-backed progression and adjunct narrative flavor
-- the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- the downstream evaluated progression skill declares `AOA-T-0085` as a technique dependency
+- quest hooks and chronicle stubs are emitted only as optional reflection after evidence-backed axis movement exists
+- the skill explicitly blocks quest flavor from becoming owner transfer, route authority, or fake progress
+- downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-session-progression-lift/SKILL.md` hash `c59992c035c302d968e523b4df4ebd98ad6af886`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded adjunct quest-overlay technique
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

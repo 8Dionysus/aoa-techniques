@@ -66,6 +66,59 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0082](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | `aoa-sdk` closeout follow-through plus `aoa-skills` repair-cycle artifacts | A downstream closeout route can require diagnosis before surfacing bounded self-repair, and repair-cycle examples can preserve owner target, validation, rollback, approval, iteration, stop, and escalation posture without becoming playbook rollout. |
 | [AOA-T-0083](../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | `aoa-agents` checkpoint stack, `aoa-playbooks` checkpoint rollout, and `aoa-skills` repair-cycle artifacts | Downstream role and scenario surfaces can keep approval, rollback, health checks, iteration, and improvement logs explicit around repair while techniques remain smaller than role law, proof, runtime, or playbook authority. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+| [AOA-T-0084](../../../../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | `aoa-skills` `aoa-session-progression-lift` | A downstream skill can use multi-axis progression deltas as descriptive evidence posture without turning them into rank, proof, routing, or owner acceptance. |
+| [AOA-T-0085](../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | `aoa-skills` `aoa-session-progression-lift` | Quest-shaped reflection can sit over a progression base as reader context while owner truth and proof seams remain elsewhere. |
+| [AOA-T-0086](../../../../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | `aoa-skills` `aoa-automation-opportunity-scan` | Repeat-signal and readiness axes can block or narrow automation before scheduler or mutation authority exists. |
+| [AOA-T-0087](../../../../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) | `aoa-skills` `aoa-automation-opportunity-scan` | A recurring human loop can land as the smallest honest next artifact instead of becoming hidden automation pressure. |
+| [AOA-T-0088](../../../../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) | `aoa-skills` `aoa-automation-opportunity-scan` | Approval burden, rollback, self-change, and checkpoint posture can force checkpoint-required status before any automation seed claim. |
+| [AOA-T-0089](../../../../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) | `aoa-skills` `aoa-quest-harvest` plus `aoa-sdk` technique promotion receipt | One repeated reviewed quest unit can be triaged with one owner target and one reason without becoming skill, playbook, proof, memory, routing, or owner acceptance. |
+| [AOA-T-0091](../../../../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) | 8Dionysus shared-root ingress and mutation gate | Ingress and mutation guard evidence can prevent workspace route confusion before edits without importing root projection ownership. |
+| [AOA-T-0092](../../../../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) | `aoa-playbooks` closeout owner-followthrough and validation-remediation runs | Audit findings can close only through named evidence and owner follow-through rather than audit wording alone. |
+| [AOA-T-0093](../../../../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) | `aoa-sdk` skill-runtime recommendation gap | A true recommendation can remain visible when host actionability is blocked or routed elsewhere. |
+| [AOA-T-0094](../../../../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) | 8Dionysus source projection and workspace install surfaces | Canonical owner and validated mirror can stay separate while parity validation preserves metadata and vocabulary. |
+| [AOA-T-0095](../../../../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) | 8Dionysus GitHub required-check contracts plus `aoa-playbooks` owner-first landing | Remote GitHub anchors can rebind staging state and prevent local seed truth from outliving merge reality. |
+| [AOA-T-0096](../../../../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) | `aoa-playbooks` split-wave cross-repo rollout | Workflow-pinned refs can expose generated-publish false-green risk before publication. |
+| [AOA-T-0097](../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) | `aoa-playbooks` runtime-chaos recovery and stress lanes | Degraded-mode recovery can reground against stronger sources without hidden repair theater. |
+| [AOA-T-0098](../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) | `aoa-playbooks` runtime-chaos and stress-harvest surfaces | Failure reading can start from receipts and keep facts separate from hypotheses. |
+| [AOA-T-0099](../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) | `aoa-playbooks` ToS graph-curation run | An isolated helper service can be stopped while shared substrate continuity and target absence are verified. |
+| [AOA-T-0100](../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) | `aoa-playbooks` stress-lane and stress-harvest surfaces | Stress events can be recorded, regrounded, owner-routed, and closed from reviewed evidence. |
+| [AOA-T-0101](../../../../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) | `aoa-skills` Method-growth adoption lifecycle | Local adoption can require owner consent, compatibility, rollback, and retention evidence before durable adoption. |
+| [AOA-T-0102](../../../../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) | `aoa-skills` Method-growth skill proposal handoff | A technique-side review can emit a bounded skill proposal while `aoa-skills` acceptance remains separate. |
+| [AOA-T-0103](../../../../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) | `aoa-skills` Method-growth retention and regression checks | Adopted practice can be kept, revised, quarantined, or retired through explicit retention evidence. |
+| [AOA-T-0104](../../../../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) | `aoa-skills` Method-growth retirement and handoff receipts | Superseded practice can preserve owner receipt, retained lesson, and provenance without automatic deletion. |
+| [AOA-T-0105](../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) | Agents-of-Abyss Agon lawful moves, audit evidence ledger, playbook trials, and eval prebindings | A review can ask for exactly one missing evidence object without broad research, verdict overclaim, or proof theater. |
+| [AOA-T-0106](../../../../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) | Agents-of-Abyss Agon lawful moves, audit evidence ledger, playbook trials, and eval prebindings | A review can offer exactly one scoped reference without proof-by-link or source laundering. |
+| [AOA-T-0107](../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) | Agents-of-Abyss Agon lawful moves, audit evidence ledger, playbook trials, and eval prebindings | A review can challenge exactly one vulnerable claim locus without broad debate, hidden verdict, or tone-as-evidence drift. |
+
+## AOA-T-0084 Through AOA-T-0107 Cross-Context Evidence Notes
+
+2026-05-13 result: exact-fit downstream or second-context evidence found for Packs 35 through 41. This closes the newer promotion-evidence queue while leaving the residual promoted set at 11 techniques.
+
+This is sibling-repo and downstream-consumer evidence, not external import proof. Do not import skill execution, SDK implementation detail, 8Dionysus projection ownership, playbook scenario law, AoA constitutional law, Agon doctrine, eval verdicts, runtime repair authority, KAG graph ownership, routing, memo writeback, owner acceptance, or proof doctrine into the technique bundles.
+
+Accepted evidence:
+
+- `aoa-skills` `aoa-session-progression-lift` uses `AOA-T-0084` and `AOA-T-0085` through multi-axis progression delta, baseline posture, evidence posture, and quest reflection while keeping rank and owner acceptance outside the skill.
+- `aoa-skills` `aoa-automation-opportunity-scan` uses `AOA-T-0086`, `AOA-T-0087`, and `AOA-T-0088` through repeat signal, automation fit, first landing, approval sensitivity, rollback, and checkpoint posture without scheduler or mutating authority.
+- `aoa-skills` `aoa-quest-harvest` plus the SDK technique-promotion receipt surface reinforce `AOA-T-0089` as one repeated reviewed quest-unit verdict, not a final owner or playbook verdict.
+- 8Dionysus shared-root ingress, workspace-install, source-projection, and GitHub required-check contract surfaces reinforce `AOA-T-0091`, `AOA-T-0094`, and `AOA-T-0095` as owner/mirror/GitHub closeout moves.
+- `aoa-playbooks` owner-followthrough, validation-remediation, and split-wave rollout evidence reinforces `AOA-T-0092` and `AOA-T-0096` as proof-loop and pinned-validation moves, not playbook law.
+- `aoa-sdk` skill-runtime recommendation-gap evidence reinforces `AOA-T-0093` as a recommendation/actionability boundary.
+- `aoa-playbooks` runtime-chaos, stress-lane, stress-harvest, and ToS graph-curation surfaces reinforce `AOA-T-0097` through `AOA-T-0100` as recovery moves with visible stop-lines before runtime repair, KAG, proof, or eval authority.
+- `aoa-skills` Method-growth adoption, handoff, retention, and obsolescence surfaces reinforce `AOA-T-0101` through `AOA-T-0104` as practice-lifecycle moves without importing skill promotion or deletion authority.
+- Agents-of-Abyss Agon lawful-move grammar, Audit evidence-ledger contracts, `aoa-playbooks` Agon trials, and `aoa-evals` prebindings reinforce `AOA-T-0105` through `AOA-T-0107` as one-object review moves without importing Agon law or eval verdicts.
+
+Rejected or bounded:
+
+- skill workflow execution, activation, and scheduler behavior;
+- SDK command wrappers, hooks, storage, and runtime APIs;
+- 8Dionysus shared-root source ownership and projection implementation;
+- playbook scenario composition, trial success, and owner-followthrough authority;
+- AoA center doctrine, Agon law, eval adequacy, and proof verdicts;
+- runtime self-healing, KAG graph ownership, routing, memo writeback, stats refresh, and final owner acceptance.
+
+Future search shape: future reinforcement should look for non-AoA or external-builder reuse of the same atomic moves. It should not reopen the 2026-05-13 canonical verdict unless the bundle contract itself drifts or a downstream consumer starts relying on authority the bundle explicitly does not own.
+
 
 ## AOA-T-0080 / AOA-T-0081 / AOA-T-0082 / AOA-T-0083 Cross-Context Evidence Notes
 

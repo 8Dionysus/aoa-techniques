@@ -5,30 +5,33 @@
 - name: workspace-root-ingress-and-mutation-gate
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: 8Dionysus shared-root ingress and mutation gate contract
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the project-local `/srv/AbyssOS` posture was reduced to one bounded workspace law for ingress and guard passes
-- root path names, rollout mechanics, and closeout telemetry stayed in adaptation notes instead of the invariant core
-- the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 38 workspace boundary and proof loop
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- substantial workspace work still begins through one explicit ingress pass
-- risky mutation still requires one explicit guard pass beforehand
-- the workspace root and primary repo root remain explicit instead of being assumed from memory
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public wording can drift into generic startup advice if the ingress and guard outputs stop being central
-- the bundle can widen into bootstrap or install doctrine if workspace landing details are treated as invariants
-- a tiny example can understate how important `must_confirm` and `blocked_actions` are for real mutation gating
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one bounded workspace posture law rather than a playbook route
-- the public wording keeps install, bootstrap, and closeout logic adjacent but separate
-- the origin evidence remains strong enough to justify a promoted bundle without importing local root ownership or rollout specifics
+- the shared-root route requires choosing the owner repo, then running `aoa skills enter` before substantial work
+- it requires `aoa skills guard` before risky, mutating, infra, runtime, repo-config, or public-share actions
+- it treats `must_confirm` and `blocked_actions` as real boundaries instead of decorative reports
+- downstream evidence ref: `repo:8Dionysus/docs/AGENTS_ROOT_REFERENCE.md` hash `e8f689b8326749f6e5806befe982de2a8763e198`
+- downstream evidence ref: `repo:8Dionysus/docs/WORKSPACE_INSTALL.md` hash `5fcf2b3627a95b04fe93b7226330751b5d304c3a`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one bounded ingress-plus-guard posture for federated workspaces
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

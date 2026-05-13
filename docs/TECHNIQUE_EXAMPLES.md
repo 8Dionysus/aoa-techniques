@@ -238,11 +238,113 @@ See also:
 |---|---|---|---|
 | minimal checkpoint-bound-self-repair | `present` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/examples/minimal-checkpoint-bound-self-repair.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 
+### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal progression-evidence-lift | `present` | `techniques/continuity/donor-harvest/progression-evidence-lift/examples/minimal-progression-evidence-lift.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) |
+
+### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal multi-axis-quest-overlay | `present` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
+
+### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal automation-fit-matrix | `present` | `techniques/governance/automation-readiness/automation-fit-matrix/examples/minimal-automation-fit-matrix.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
+
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal human-loop-to-first-landing | `present` | `techniques/governance/automation-readiness/human-loop-to-first-landing/examples/minimal-human-loop-to-first-landing.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) |
+
+### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal approval-sensitivity-check | `present` | `techniques/governance/automation-readiness/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
+
+### [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal quest-unit-promotion-review | `present` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
+
 ### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | minimal nearest-wrong-target-rejection | `present` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
+
+### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal workspace-root-ingress-and-mutation-gate | `present` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
+
+### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal audit-to-closeout-proof-loop example | `present` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) |
+
+### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal recommendation-truth-vs-host-actionability | `present` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+
+### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Example | `present` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
+
+### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal pinned-validation-matrix-before-generated-publish | `present` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
+
+### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal local-pattern-adoption-gate | `present` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/examples/minimal-local-pattern-adoption-gate.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) |
+
+### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal skill-proposal handoff packet | `present` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/examples/minimal-skill-proposal-handoff-packet.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
+
+### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal adopted-practice retention review | `present` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/examples/minimal-adopted-practice-retention-review.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) |
+
+### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal superseded-practice obsolescence route | `present` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) |
+
+### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal single-missing-evidence request | `present` | `techniques/proof/review-evidence/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
+
+### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal single-locus claim challenge | `present` | `techniques/proof/review-evidence/single-locus-claim-challenge/examples/minimal-single-locus-claim-challenge.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
@@ -262,108 +364,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal progression-evidence-lift | `present` | `techniques/continuity/donor-harvest/progression-evidence-lift/examples/minimal-progression-evidence-lift.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) |
-
-### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal multi-axis-quest-overlay | `present` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/examples/minimal-multi-axis-quest-overlay.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
-
-### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal automation-fit-matrix | `present` | `techniques/governance/automation-readiness/automation-fit-matrix/examples/minimal-automation-fit-matrix.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
-
-### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal human-loop-to-first-landing | `present` | `techniques/governance/automation-readiness/human-loop-to-first-landing/examples/minimal-human-loop-to-first-landing.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) |
-
-### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal approval-sensitivity-check | `present` | `techniques/governance/automation-readiness/approval-sensitivity-check/examples/minimal-approval-sensitivity-check.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
-
-### [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal quest-unit-promotion-review | `present` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
-
-### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal workspace-root-ingress-and-mutation-gate | `present` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/examples/minimal-workspace-root-ingress-and-mutation-gate.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
-
-### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal audit-to-closeout-proof-loop example | `present` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/examples/minimal-audit-to-closeout-proof-loop.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) |
-
-### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal recommendation-truth-vs-host-actionability | `present` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/examples/minimal-recommendation-truth-vs-host-actionability.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
-
-### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Example | `present` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/examples/minimal-github-only-owner-endcap-with-reality-sync.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
-
-### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal pinned-validation-matrix-before-generated-publish | `present` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
-
-### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal local-pattern-adoption-gate | `present` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/examples/minimal-local-pattern-adoption-gate.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) |
-
-### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal skill-proposal handoff packet | `present` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/examples/minimal-skill-proposal-handoff-packet.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
-
-### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal adopted-practice retention review | `present` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/examples/minimal-adopted-practice-retention-review.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) |
-
-### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal superseded-practice obsolescence route | `present` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/examples/minimal-superseded-practice-obsolescence-route.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) |
-
-### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal single-missing-evidence request | `present` | `techniques/proof/review-evidence/single-missing-evidence-request/examples/minimal-single-missing-evidence-request.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
-
-### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal single-locus claim challenge | `present` | `techniques/proof/review-evidence/single-locus-claim-challenge/examples/minimal-single-locus-claim-challenge.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 
 ## `docs`
 
@@ -496,6 +496,18 @@ See also:
 |---|---|---|---|
 | minimal capability discovery | `present` | `techniques/instruction/capability-registry/capability-discovery/examples/minimal-capability-discovery.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
+### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Canonical Owner With Validated Mirror | `present` | `techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
+
+### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal single-scoped evidence reference | `present` | `techniques/proof/review-evidence/single-scoped-evidence-reference/examples/minimal-single-scoped-evidence-reference.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | example | body | example path | source |
@@ -531,18 +543,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Semantic Review Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
-
-### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Canonical Owner With Validated Mirror | `present` | `techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/examples/minimal-canonical-owner-with-validated-mirror.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
-
-### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal single-scoped evidence reference | `present` | `techniques/proof/review-evidence/single-scoped-evidence-reference/examples/minimal-single-scoped-evidence-reference.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
 
 ## `evaluation`
 
@@ -628,19 +628,19 @@ See also:
 
 ## `system-recovery`
 
-### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Degraded Handoff | `present` | `techniques/recovery/antifragility-recovery/degrade-reground-recover/examples/minimal-degraded-handoff.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) |
 
-### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
+### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal Isolated Service Stop | `present` | `techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/examples/minimal-isolated-service-stop.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
 
-### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
@@ -648,7 +648,7 @@ See also:
 
 ## `validation-patterns`
 
-### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|

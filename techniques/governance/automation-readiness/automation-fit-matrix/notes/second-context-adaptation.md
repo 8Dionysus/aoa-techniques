@@ -5,31 +5,32 @@
 - name: automation-fit-matrix
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: aoa-skills aoa-automation-opportunity-scan
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the skill-local readiness rows were extracted into one standalone matrix technique
-- AoA-specific automation targets and packet names moved into adaptation notes instead of the invariant core
-- the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 36 automation opportunity gates
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- one matrix still belongs to one reviewed recurring route
-- repeat signal, determinism, proof posture, reversibility, and approval sensitivity still remain visible
-- verdicts still stay descriptive rather than sovereign
-- the matrix still stays smaller than any later automation artifact
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public wording can drift into abstract readiness rhetoric if one concrete route is no longer named
-- row labels can look like a generic scorecard if the evidence-backed route posture is not kept explicit
-- the small example can understate the need to preserve unknown or weak rows honestly
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one workflow-side readiness matrix rather than a docs taxonomy or playbook
-- the public wording keeps the seam between fit classification, first landing, and checkpoint posture explicit
-- the origin evidence remains strong enough to justify a promoted public bundle without importing local automation queues or runtime wrappers
+- the evaluated downstream automation scan declares `AOA-T-0086` as a technique dependency
+- it classifies repeat signal, friction, determinism, input and output clarity, proof surface, reversibility, secret coupling, and approval sensitivity before naming readiness
+- `seed_ready` remains a readiness posture rather than permission for unattended execution
+- downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-automation-opportunity-scan/SKILL.md` hash `133aba96a21474c1a455ab66f9689e43ca0b8f06`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one bounded readiness matrix for a recurring reviewed route
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

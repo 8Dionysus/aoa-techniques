@@ -5,28 +5,33 @@
 - name: receipt-first-failure-analysis
 
 ## Target project
-- any owner repo that already has one source-owned receipt surface, one bounded failure family worth reviewing, and one explicit place to record adaptation deltas or follow-up proof
+- name: aoa-playbooks runtime-chaos-recovery stress receipt route
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the receipt schema can change
-- the stressor family vocabulary can change
-- the remediation surfaces can change
-- the downstream proof surfaces can change
+- the original promoted bundle was checked against Pack 39 antifragility recovery fresh scaffolding
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- review starts from the receipt instead of later summary language
-- fact versus hypothesis stays explicit
-- the change candidate stays narrow
-- the improvement check is named before stronger claims are made
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- a target project may have receipts that are too weak to support useful analysis even though the shape exists
-- the pattern can be widened into generic incident review if the bounded family is not named clearly
-- downstream proof surfaces can be overused until they eclipse the owner-local receipt
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the origin antifragility landing showed the pattern can stay compact while still producing a reviewable next-step shape
-- the receipt-first discipline remained stable even though the surrounding proof and stats layers were intentionally kept downstream
+- the playbook requires the active owner-local runtime receipt to be reviewed before further mutation
+- stress harvest starts from source-owned stressor or degradation receipts, stress handoff envelopes, runtime closeout receipts, eval reports, or evidence-citing reviewer notes
+- the route prevents broad anecdotes from becoming the main failure record
+- downstream evidence ref: `repo:aoa-playbooks/playbooks/runtime-chaos-recovery/PLAYBOOK.md` hash `dbe27f08c3581d26150f73eafc56ed98c065c9a4`
+- downstream evidence ref: `repo:aoa-playbooks/docs/PLAYBOOK_STRESS_HARVEST.md` hash `ddd6a9b45c5b7caa9e17b096be8f28ec67f330e1`
 
 ## Result
-- the pattern transfers cleanly to other owner repos when receipt ownership is already clear and the review stays bounded to one named failure family
+- verdict: works
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

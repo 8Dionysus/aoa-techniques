@@ -3,7 +3,7 @@ id: AOA-T-0093
 name: recommendation-truth-vs-host-actionability
 domain: agent-workflows
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: aoa-sdk + Dionysus
   path: src/aoa_sdk/skills/detector.py + src/aoa_sdk/models.py + src/aoa_sdk/cli/main.py + docs/skill-runtime-recommendation-gap.md + docs/skill-runtime-recommendation-gap-fix-spec.md + Dionysus/reports/ecosystem-audits/2026-04-06.aoa-sdk.skill-runtime-recommendation-gap-fix-session-harvest.md
@@ -17,12 +17,12 @@ tags:
   - actionability
   - skills
 summary: Keep router recommendation truth separate from host actionability so non-executable recommendations stay visible, canonical install roots stay authoritative, and runnable actions do not masquerade as merely relevant advice.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-06
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # recommendation-truth-vs-host-actionability

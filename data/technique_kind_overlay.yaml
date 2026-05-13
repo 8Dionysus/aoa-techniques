@@ -507,37 +507,37 @@ entries:
 - id: AOA-T-0084
   name: progression-evidence-lift
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: lift
   family: donor-harvest
 - id: AOA-T-0085
   name: multi-axis-quest-overlay
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: lift
   family: donor-harvest
 - id: AOA-T-0086
   name: automation-fit-matrix
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: automation-governance
 - id: AOA-T-0087
   name: human-loop-to-first-landing
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: automation-governance
 - id: AOA-T-0088
   name: approval-sensitivity-check
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: automation-governance
 - id: AOA-T-0089
   name: quest-unit-promotion-review
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: automation-governance
 - id: AOA-T-0090
@@ -549,102 +549,102 @@ entries:
 - id: AOA-T-0091
   name: workspace-root-ingress-and-mutation-gate
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: owner-truth-closeout
 - id: AOA-T-0092
   name: audit-to-closeout-proof-loop
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: owner-truth-closeout
 - id: AOA-T-0093
   name: recommendation-truth-vs-host-actionability
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: capability-boundary
 - id: AOA-T-0094
   name: canonical-owner-with-validated-mirror
   domain: docs
-  status: promoted
+  status: canonical
   kind: distribution
   family: owner-truth-closeout
 - id: AOA-T-0095
   name: github-only-owner-endcap-with-reality-sync
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: workflow
   family: owner-truth-closeout
 - id: AOA-T-0096
   name: pinned-validation-matrix-before-generated-publish
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: validation
   family: owner-truth-closeout
 - id: AOA-T-0097
   name: degrade-reground-recover
   domain: system-recovery
-  status: promoted
+  status: canonical
   kind: recovery
   family: antifragility-recovery
 - id: AOA-T-0098
   name: receipt-first-failure-analysis
   domain: validation-patterns
-  status: promoted
+  status: canonical
   kind: validation
   family: antifragility-recovery
 - id: AOA-T-0099
   name: isolated-service-stop-on-shared-substrate
   domain: system-recovery
-  status: promoted
+  status: canonical
   kind: recovery
   family: antifragility-recovery
 - id: AOA-T-0100
   name: stress-receipt-reground-closeout
   domain: system-recovery
-  status: promoted
+  status: canonical
   kind: recovery
   family: antifragility-recovery
 - id: AOA-T-0101
   name: local-pattern-adoption-gate
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: automation-governance
 - id: AOA-T-0102
   name: skill-proposal-handoff-packet
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: automation-governance
 - id: AOA-T-0103
   name: adopted-practice-retention-review
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: automation-governance
 - id: AOA-T-0104
   name: superseded-practice-obsolescence-route
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: handoff
   family: automation-governance
 - id: AOA-T-0105
   name: single-missing-evidence-request
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: review-evidence
 - id: AOA-T-0106
   name: single-scoped-evidence-reference
   domain: docs
-  status: promoted
+  status: canonical
   kind: artifact
   family: review-evidence
 - id: AOA-T-0107
   name: single-locus-claim-challenge
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: review-evidence

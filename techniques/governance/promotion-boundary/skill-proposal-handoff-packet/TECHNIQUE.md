@@ -3,7 +3,7 @@ id: AOA-T-0102
 name: skill-proposal-handoff-packet
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: mechanics/method-growth/parts/technique-to-skill-handoff/README.md + mechanics/method-growth/PROVENANCE.md
@@ -17,12 +17,12 @@ tags:
   - handoff
   - owner-boundary
 summary: Emit one bounded skill-proposal handoff packet from a technique-side adoption review so reusable practice does not become skill acceptance or activation by implication.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-05-03
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -38,6 +38,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # skill-proposal-handoff-packet

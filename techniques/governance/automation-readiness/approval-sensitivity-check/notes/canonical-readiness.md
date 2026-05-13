@@ -5,28 +5,30 @@
 - name: approval-sensitivity-check
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the second context adaptation kept the contract bounded around one checkpoint-required classification instead of widening into approval implementation or generic governance doctrine
-- the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA automation lineage
+- the downstream automation scan declares `AOA-T-0088` as a technique dependency
+- it marks checkpoint requirements when a route crosses self-change, hidden authority, or important mutation
+- approval sensitivity stays visible as a blocker or narrowing signal rather than a hidden policy override
+
 
 ## Default-use rationale
-- this is useful when an automation candidate may cross approval, rollback, or self-change boundaries and one explicit verdict is missing
-- it is strongest when teams need to distinguish low-risk read-only candidates from approval-heavy mutation paths before any seed-ready claim can stay honest
-- it is not yet proven as the default approval or checkpoint technique for every mutating workflow
-- the current evidence supports promotion, but not canonical status
+- Use this as the default check when automation pressure may cross approval, rollback, secret, or self-change boundaries.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not approval itself, mutation permission, or a proof verdict.
 
 ## Fresh public-safety check
-- review date: 2026-04-05
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the published technique keeps the approval-boundary seam while stripping local approval commands, runtime wrappers, and repo-local ops doctrine
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest automation lineage
-- the seam between checkpoint classification, generic confirmation, and full repair checkpoints should stay tested through future sibling use
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-automation-opportunity-scan/SKILL.md` hash `133aba96a21474c1a455ab66f9689e43ca0b8f06`
+- boundary preserved: approval sensitivity classifies the burden and stop line only
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0088` as `promoted`
-- revisit canonical readiness only after at least one more live context proves the same automation-bound checkpoint classification
+- move `AOA-T-0088` to `canonical`

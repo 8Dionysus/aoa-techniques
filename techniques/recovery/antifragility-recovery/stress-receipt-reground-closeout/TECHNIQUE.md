@@ -3,7 +3,7 @@ id: AOA-T-0100
 name: stress-receipt-reground-closeout
 domain: system-recovery
 kind: recovery
-status: promoted
+status: canonical
 origin:
   project: Dionysus
   path: aoa-chaos-wave1-seed/proposed/aoa-techniques/STRESS_RECEIPT_REGROUND_CLOSEOUT.candidate.md
@@ -17,12 +17,12 @@ tags:
   - closeout
   - recovery
 summary: Record one bounded stress event, preserve the smallest honest continuation, route through owner layers, and close out with reviewed evidence before any later proof reading.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-16
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -34,6 +34,10 @@ evidence:
     path: notes/origin-evidence.md
   - kind: second_context
     path: notes/second-context-adaptation.md
+  - kind: canonical_readiness
+    path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # stress-receipt-reground-closeout

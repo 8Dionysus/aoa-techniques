@@ -5,28 +5,31 @@
 - name: skill-proposal-handoff-packet
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the adapted bundle keeps one bounded proposal handoff rather than the full technique-to-skill lifecycle
-- the bundle has a checklist and a public-safe example, but live evidence is still concentrated in the `aoa-techniques` Method-growth extraction wave
+- the pattern-adoption handoff part routes a shared pattern toward a bounded skill proposal without automatic promotion
+- it asks whether the pattern belongs as technique, skill, overlay, playbook, or owner-local runbook before proposal
+- it preserves owner-consent, shadow proof, rollback, and retention watch before downstream adoption
+
 
 ## Default-use rationale
-- this is useful when technique-side adoption pressure suggests skill packaging but owner acceptance has not happened yet
-- it is strongest when repeated agent-facing use creates pressure to skip straight from reusable practice to a skill
-- it is not yet proven as the default skill-proposal handoff outside the current Method-growth lineage
+- Use this as the default packet when a technique-shaped pattern may become a skill but skill acceptance must stay with the receiving owner.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not skill creation, skill promotion, or downstream adoption.
 
 ## Fresh public-safety check
-- review date: 2026-05-03
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the bundle keeps the reusable handoff packet while stripping sensitive session detail, local command wrappers, and sibling-owner activation claims
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from one second live context where a receiving skill owner consumes the packet without treating it as skill acceptance
-- future use should confirm that packet fields are sufficient without becoming a skill body
-- future use should verify that command, playbook, eval, runtime, proof, and memory concerns still route to their owners
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/pattern-adoption-handoff/README.md` hash `5f5a532c6cd269d2afa0bf1c17717a0e5e8002f8`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/README.md` hash `5f4afaed7ce9ef676baabec7087006ce7833270d`
+- boundary preserved: the packet carries proposal evidence; it does not accept the skill
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0102` as `promoted`
-- revisit canonical readiness only after one reviewed receiving-owner use proves the proposal packet can carry the handoff without becoming skill acceptance
+- move `AOA-T-0102` to `canonical`

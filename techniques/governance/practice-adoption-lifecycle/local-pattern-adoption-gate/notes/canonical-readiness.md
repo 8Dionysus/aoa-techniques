@@ -5,27 +5,31 @@
 - name: local-pattern-adoption-gate
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the adapted bundle keeps one bounded adoption gate rather than the full Method-growth lifecycle
-- the bundle has a checklist and a public-safe example, but live evidence is still concentrated in the `aoa-techniques` Method-growth extraction wave
+- method-growth names adoption lifecycle posture as a local owner consent problem, not automatic uptake
+- the adoption-boundary part asks which owner can consent, hold, reject, or quarantine adoption before durable behavior changes
+- rollback and retention requirements are active outputs while owner acceptance stays outside the part
+
 
 ## Default-use rationale
-- this is useful when a shared pattern has precedent but local behavior should not change until owner consent, compatibility, rollback, and retention are visible
-- it is strongest when repeated usefulness creates pressure for silent adoption
-- it is not yet proven as the default adoption guard outside the current Method-growth lineage
+- Use this as the default gate when a shared practice or candidate skill is tempting but local owner adoption is not yet real.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not adoption approval, activation, release support, or downstream owner truth.
 
 ## Fresh public-safety check
-- review date: 2026-05-03
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the bundle keeps the reusable adoption gate while stripping private session detail, local command wrappers, and sibling-owner activation claims
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from one second live context beyond Method-growth mechanics
-- future use should confirm the seam against owner-layer triage and nearest-wrong-target rejection stays clear
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/README.md` hash `5f4afaed7ce9ef676baabec7087006ce7833270d`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/adoption-boundary/README.md` hash `40dc277504f428c723fda53f89e63c0d476bc270`
+- boundary preserved: local adoption requires explicit owner consent, rollback, and retention posture
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0101` as `promoted`
-- revisit canonical readiness only after another local or external corpus proves the same consent, rollback, and retention gate before adoption
+- move `AOA-T-0101` to `canonical`

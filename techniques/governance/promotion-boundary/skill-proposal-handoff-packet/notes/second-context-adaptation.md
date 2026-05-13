@@ -5,32 +5,33 @@
 - name: skill-proposal-handoff-packet
 
 ## Target project
-- name: aoa-skills
-- environment: bounded skill corpus that may consume technique dependencies
-- runtime: human and agent review workflow over skill bundle proposals
+- name: aoa-skills method-growth pattern adoption handoff
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the Method-growth handoff was narrowed to one proposal packet before skill acceptance
-- trigger boundary, workflow shape, risk, approval, rollback, and verification fields were retained as proposal context
-- accepted skill wording, command syntax, install behavior, and activation discipline were excluded from the technique
-- AoA repo names moved into adaptation examples rather than the invariant core
+- the original promoted bundle was checked against Pack 40 method-growth extraction family
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- technique canon remains separate from skill workflow meaning
-- the receiving owner decides whether any skill exists
-- technique dependencies are referenced rather than copied or redefined
-- the packet must state that it does not create, accept, install, or activate a skill
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the packet can look like a skill draft if workflow fields become too detailed
-- receiving owners can overread a proposal as pressure to accept
-- proof, scenario, memory, runtime, or command concerns can be misrouted to the skill owner because the packet format is convenient
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one handoff move
-- the adjacent-technique notes keep skill-command boundary, first automation landing, and local adoption gate separate
-- the example uses generic owner names and does not require OS Abyss deployment
+- the pattern-adoption handoff part routes a shared pattern toward a bounded skill proposal without automatic promotion
+- it asks whether the pattern belongs as technique, skill, overlay, playbook, or owner-local runbook before proposal
+- it preserves owner-consent, shadow proof, rollback, and retention watch before downstream adoption
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/pattern-adoption-handoff/README.md` hash `5f5a532c6cd269d2afa0bf1c17717a0e5e8002f8`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/README.md` hash `5f4afaed7ce9ef676baabec7087006ce7833270d`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a proposal packet rather than skill acceptance or activation
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

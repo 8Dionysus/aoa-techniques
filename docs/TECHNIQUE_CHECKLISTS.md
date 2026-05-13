@@ -232,11 +232,113 @@ See also:
 |---|---|---|---|---|
 | checkpoint-bound-self-repair checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 
+### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| progression-evidence-lift checklist | `absent` | `7` | `techniques/continuity/donor-harvest/progression-evidence-lift/checks/progression-evidence-lift-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) |
+
+### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| multi-axis-quest-overlay checklist | `absent` | `6` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
+
+### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| automation-fit-matrix checklist | `absent` | `7` | `techniques/governance/automation-readiness/automation-fit-matrix/checks/automation-fit-matrix-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
+
+### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| human-loop-to-first-landing checklist | `absent` | `7` | `techniques/governance/automation-readiness/human-loop-to-first-landing/checks/human-loop-to-first-landing-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) |
+
+### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| approval-sensitivity-check checklist | `absent` | `7` | `techniques/governance/automation-readiness/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
+
+### [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| quest-unit-promotion-review checklist | `absent` | `7` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
+
 ### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
+
+### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| workspace-root-ingress-and-mutation-gate checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
+
+### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) |
+
+### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
+
+### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| github-only-owner-endcap-with-reality-sync Checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
+
+### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
+
+### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| local-pattern-adoption-gate checklist | `absent` | `8` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) |
+
+### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| skill-proposal-handoff-packet checklist | `present` | `10` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
+
+### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| adopted-practice-retention-review checklist | `present` | `9` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) |
+
+### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) |
+
+### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| single-missing-evidence-request checklist | `present` | `10` | `techniques/proof/review-evidence/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
+
+### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| single-locus-claim-challenge checklist | `present` | `8` | `techniques/proof/review-evidence/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
@@ -255,108 +357,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| progression-evidence-lift checklist | `absent` | `7` | `techniques/continuity/donor-harvest/progression-evidence-lift/checks/progression-evidence-lift-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) |
-
-### [AOA-T-0085](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) - multi-axis-quest-overlay (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| multi-axis-quest-overlay checklist | `absent` | `6` | `techniques/continuity/donor-harvest/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) |
-
-### [AOA-T-0086](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) - automation-fit-matrix (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| automation-fit-matrix checklist | `absent` | `7` | `techniques/governance/automation-readiness/automation-fit-matrix/checks/automation-fit-matrix-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) |
-
-### [AOA-T-0087](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) - human-loop-to-first-landing (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| human-loop-to-first-landing checklist | `absent` | `7` | `techniques/governance/automation-readiness/human-loop-to-first-landing/checks/human-loop-to-first-landing-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/human-loop-to-first-landing/TECHNIQUE.md) |
-
-### [AOA-T-0088](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) - approval-sensitivity-check (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| approval-sensitivity-check checklist | `absent` | `7` | `techniques/governance/automation-readiness/approval-sensitivity-check/checks/approval-sensitivity-check-checklist.md` | [TECHNIQUE.md](../techniques/governance/automation-readiness/approval-sensitivity-check/TECHNIQUE.md) |
-
-### [AOA-T-0089](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) - quest-unit-promotion-review (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| quest-unit-promotion-review checklist | `absent` | `7` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
-
-### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| workspace-root-ingress-and-mutation-gate checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/checks/workspace-root-ingress-and-mutation-gate-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) |
-
-### [AOA-T-0092](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) - audit-to-closeout-proof-loop (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| audit-to-closeout-proof-loop checklist | `present` | `8` | `techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/checks/audit-to-closeout-proof-loop-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/audit-to-closeout-proof-loop/TECHNIQUE.md) |
-
-### [AOA-T-0093](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) - recommendation-truth-vs-host-actionability (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| recommendation-truth-vs-host-actionability checklist | `absent` | `8` | `techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/checks/recommendation-truth-vs-host-actionability-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/recommendation-truth-vs-host-actionability/TECHNIQUE.md) |
-
-### [AOA-T-0095](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) - github-only-owner-endcap-with-reality-sync (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| github-only-owner-endcap-with-reality-sync Checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md) |
-
-### [AOA-T-0096](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) - pinned-validation-matrix-before-generated-publish (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| pinned-validation-matrix-before-generated-publish checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/checks/pinned-validation-matrix-before-generated-publish-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/TECHNIQUE.md) |
-
-### [AOA-T-0101](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) - local-pattern-adoption-gate (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| local-pattern-adoption-gate checklist | `absent` | `8` | `techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/checks/local-pattern-adoption-gate-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/local-pattern-adoption-gate/TECHNIQUE.md) |
-
-### [AOA-T-0102](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) - skill-proposal-handoff-packet (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| skill-proposal-handoff-packet checklist | `present` | `10` | `techniques/governance/promotion-boundary/skill-proposal-handoff-packet/checks/skill-proposal-handoff-packet-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/skill-proposal-handoff-packet/TECHNIQUE.md) |
-
-### [AOA-T-0103](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) - adopted-practice-retention-review (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| adopted-practice-retention-review checklist | `present` | `9` | `techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/checks/adopted-practice-retention-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/adopted-practice-retention-review/TECHNIQUE.md) |
-
-### [AOA-T-0104](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) - superseded-practice-obsolescence-route (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| superseded-practice-obsolescence-route checklist | `present` | `11` | `techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/checks/superseded-practice-obsolescence-route-checklist.md` | [TECHNIQUE.md](../techniques/governance/practice-adoption-lifecycle/superseded-practice-obsolescence-route/TECHNIQUE.md) |
-
-### [AOA-T-0105](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) - single-missing-evidence-request (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| single-missing-evidence-request checklist | `present` | `10` | `techniques/proof/review-evidence/single-missing-evidence-request/checks/single-missing-evidence-request-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md) |
-
-### [AOA-T-0107](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) - single-locus-claim-challenge (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| single-locus-claim-challenge checklist | `present` | `8` | `techniques/proof/review-evidence/single-locus-claim-challenge/checks/single-locus-claim-challenge-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md) |
 
 ## `docs`
 
@@ -480,6 +480,18 @@ See also:
 |---|---|---|---|---|
 | capability-discovery checklist | `absent` | `8` | `techniques/instruction/capability-registry/capability-discovery/checks/capability-discovery-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md) |
 
+### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
+
+### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| single-scoped-evidence-reference checklist | `present` | `10` | `techniques/proof/review-evidence/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
+
 ### [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) - evidence-note-provenance-lift (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -515,18 +527,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
-
-### [AOA-T-0094](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) - canonical-owner-with-validated-mirror (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Canonical Owner With Validated Mirror Checklist | `absent` | `7` | `techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/checks/canonical-owner-with-validated-mirror-checklist.md` | [TECHNIQUE.md](../techniques/proof/owner-truth-closeout/canonical-owner-with-validated-mirror/TECHNIQUE.md) |
-
-### [AOA-T-0106](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) - single-scoped-evidence-reference (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| single-scoped-evidence-reference checklist | `present` | `10` | `techniques/proof/review-evidence/single-scoped-evidence-reference/checks/single-scoped-evidence-reference-checklist.md` | [TECHNIQUE.md](../techniques/proof/review-evidence/single-scoped-evidence-reference/TECHNIQUE.md) |
 
 ## `evaluation`
 
@@ -604,19 +604,19 @@ See also:
 
 ## `system-recovery`
 
-### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`promoted`)
+### [AOA-T-0097](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) - degrade-reground-recover (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Degrade Reground Recover Checklist | `absent` | `5` | `techniques/recovery/antifragility-recovery/degrade-reground-recover/checks/degrade-reground-recover-checklist.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md) |
 
-### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`promoted`)
+### [AOA-T-0099](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) - isolated-service-stop-on-shared-substrate (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Isolated Service Stop On Shared Substrate Checklist | `present` | `6` | `techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/checks/isolated-service-stop-on-shared-substrate-checklist.md` | [TECHNIQUE.md](../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md) |
 
-### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`promoted`)
+### [AOA-T-0100](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md) - stress-receipt-reground-closeout (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
@@ -624,7 +624,7 @@ See also:
 
 ## `validation-patterns`
 
-### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`promoted`)
+### [AOA-T-0098](../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md) - receipt-first-failure-analysis (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|

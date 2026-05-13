@@ -21,7 +21,9 @@ Close the smallest honest blocker for the remaining strongest current `promoted`
 - no generated-surface edits while bundle-local evidence work is unresolved
 - no synthetic "second context" invented from another note in this repository
 - no widening a bundle just to make a candidate fit
-- no multi-technique PRs
+- no multi-technique PRs unless a coherent evidence pack has bundle-local
+  readiness and adverse-effect review support for every touched bundle before
+  shared queue docs move
 
 ## Swarm Layout
 
@@ -140,7 +142,8 @@ Current implication:
 ## Validation And Merge Discipline
 
 - keep bundle edits narrow and local while evidence work is in flight
-- merge one technique per PR
+- merge one technique or one coherent evidence pack per PR when every touched
+  bundle has local readiness and adverse-effect review support
 - after a merge-ready bundle exists, run `python scripts/release_check.py`
 - only update shared docs such as [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md) when the bundle's blocker or lane meaning actually changed
 

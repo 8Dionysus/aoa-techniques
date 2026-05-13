@@ -3,7 +3,7 @@ id: AOA-T-0091
 name: workspace-root-ingress-and-mutation-gate
 domain: agent-workflows
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: aoa-sdk + 8Dionysus
   path: src/aoa_sdk/skills/detector.py + src/aoa_sdk/cli/main.py + docs/WORKSPACE_INSTALL.md + /srv/AGENTS.md
@@ -17,12 +17,12 @@ tags:
   - mutation-gate
   - federation
 summary: Enter federated workspaces through one explicit ingress pass and gate risky mutation through one explicit guard pass so session posture stays reviewable instead of hiding in operator memory.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-06
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -38,6 +38,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # workspace-root-ingress-and-mutation-gate

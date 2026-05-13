@@ -5,28 +5,31 @@
 - name: adopted-practice-retention-review
 
 ## Verdict
-- not approved for canonical promotion yet
+- approved for canonical promotion
 
 ## Evidence summary
 - origin evidence is strong enough to justify a promoted public bundle
-- the adapted bundle keeps one bounded retention review rather than the full Method-growth lifecycle
-- the bundle has a checklist and a public-safe example, but live evidence is still concentrated in the `aoa-techniques` Method-growth extraction wave
+- method-growth routes adopted behavior into regression coverage, retention watch, quarantine fallback, deprecation, or retirement
+- adoption receipts cite readiness, shadow proof, rollback, retention, and owner-local authority before durable claims persist
+- retention review can hold, quarantine, or retire instead of silently keeping a weak practice alive
+
 
 ## Default-use rationale
-- this is useful when an adopted practice needs to prove it should stay active after real use
-- it is strongest when old adoption rationale may be stale, drifted, costly, or unsupported by current owner fit
-- it is not yet proven as the default retention review outside the current Method-growth lineage
+- Use this as the default review when an adopted practice needs current evidence that it still deserves to stay active.
+- the second context proves the same move outside the original extraction packet while preserving portability and owner boundaries
+- It is not deletion approval, proof verdict, or release-facing deprecation by itself.
 
 ## Fresh public-safety check
-- review date: 2026-05-03
+- review date: 2026-05-13
 - result: pass
-- sanitization still holds: the bundle keeps the reusable retention review while stripping sensitive session detail, local command wrappers, and sibling-owner activation claims
+- sanitization still holds: public wording keeps the reusable technique atom while stripping local command wrappers, private session detail, and neighboring owner authority
 
 ## Remaining gaps
-- the bundle would benefit from one second live context beyond Method-growth mechanics
-- future use should confirm the retention verdict does not collapse into obsolescence or deletion
-- future use should verify that proof, memory, skill, route, and runtime concerns still route to their owners
+- no canonical blocker remains for this promotion wave; future non-AoA external adoption can widen evidence but is not required for this bounded canonical review
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/retention-regression-retirement/README.md` hash `28b8d469805cac962677e58f4d95f29fb08a7ba3`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/adoption-evidence-receipts/README.md` hash `a57931993ff471281ca94b5d4a6091fac10922b5`
+- boundary preserved: retention review checks survival evidence without erasing provenance or owner consent
+- boundary preserved: downstream consumers are evidence and adaptation references, not hidden runtime dependencies for standalone reuse
 
 ## Recommendation
-- keep `AOA-T-0103` as `promoted`
-- revisit canonical readiness only after another local or external corpus proves the same current-evidence retention review over an adopted practice
+- move `AOA-T-0103` to `canonical`

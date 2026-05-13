@@ -3,7 +3,7 @@ id: AOA-T-0086
 name: automation-fit-matrix
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-automation-opportunity-scan/SKILL.md + skills/aoa-automation-opportunity-scan/references/automation-fit-matrix.md
@@ -17,12 +17,12 @@ tags:
   - fit-matrix
   - reviewed-work
 summary: Classify one recurring manual route across repeat signal, determinism, proof posture, reversibility, and approval sensitivity so automation desire becomes a bounded verdict rather than vague enthusiasm.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # automation-fit-matrix

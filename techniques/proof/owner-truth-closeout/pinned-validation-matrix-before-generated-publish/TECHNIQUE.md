@@ -3,7 +3,7 @@ id: AOA-T-0096
 name: pinned-validation-matrix-before-generated-publish
 domain: agent-workflows
 kind: validation
-status: promoted
+status: canonical
 origin:
   project: aoa-routing + aoa-skills + Dionysus
   path: scripts/build_router.py + tests/test_live_workspace_contracts.py + scripts/publish_core_skill_receipts.py + reports/ecosystem-audits/2026-04-07.cross-repo.surface-detection-wave-rollout-session-harvest.md
@@ -17,12 +17,12 @@ tags:
   - validation
   - publish
 summary: Rebuild generated outputs against the same workflow-pinned sibling refs that CI will validate before publish so local green does not overstate merge-readiness.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-07
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -38,6 +38,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # pinned-validation-matrix-before-generated-publish
@@ -243,10 +245,9 @@ See `checks/pinned-validation-matrix-before-generated-publish-checklist.md`.
 
 ## Future evolution
 
-- collect one more non-identical generated-surface repo or publish matrix
-  outside the current `aoa-routing` and `aoa-skills` sibling family before
-  considering canonical promotion
+- collect non-identical generated-surface repo or publish-matrix examples only
+  when they preserve the same pinned-validation-before-publish boundary
 - keep split-wave choreography in `aoa-playbooks` instead of widening this
   technique into a release or rollout playbook
-- revisit canonical readiness only after the technique proves portable beyond
-  the current AoA generated-surface family
+- keep future external evidence narrower than release or rollout playbook
+  choreography

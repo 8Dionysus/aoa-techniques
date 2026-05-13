@@ -5,32 +5,33 @@
 - name: local-pattern-adoption-gate
 
 ## Target project
-- name: aoa-techniques
-- environment: public technique corpus with Method-growth mechanics and authored technique bundles
-- runtime: human and agent review workflow over portable technique documentation
+- name: aoa-skills method-growth adoption boundary
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the Method-growth adoption cycle was narrowed to one local gate before adoption
-- lifecycle hooks such as request, readiness, shadow, decision, activation, and retention stayed in mechanics
-- AoA owner names and downstream adoption-wave context moved into origin evidence and adaptation notes instead of the invariant core
-- the bundle was reduced to one `TECHNIQUE.md`, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 40 method-growth extraction family
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- adoption remains explicit
-- local owner consent remains required before durable behavior changes
-- evidence, rollback or quarantine, and retention watch remain visible
-- upstream approval does not become local adoption by itself
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- the public technique can widen into a full adoption workflow if lifecycle hooks are pulled into the core procedure
-- the gate can drift into a generic approval policy if one local behavior surface is not named
-- the AoA example can look like required ecosystem structure unless public adaptation notes keep it optional
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one review-side guardrail over a local behavior change
-- the bundle's adjacent-technique notes keep owner-layer triage and nearest-wrong-target rejection separate
-- the example uses Method-growth only as an adaptation example and does not require OS Abyss deployment
+- method-growth names adoption lifecycle posture as a local owner consent problem, not automatic uptake
+- the adoption-boundary part asks which owner can consent, hold, reject, or quarantine adoption before durable behavior changes
+- rollback and retention requirements are active outputs while owner acceptance stays outside the part
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/README.md` hash `5f4afaed7ce9ef676baabec7087006ce7833270d`
+- downstream evidence ref: `repo:aoa-skills/mechanics/method-growth/parts/adoption-boundary/README.md` hash `40dc277504f428c723fda53f89e63c0d476bc270`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as one local adoption gate rather than a full Method-growth mechanic
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

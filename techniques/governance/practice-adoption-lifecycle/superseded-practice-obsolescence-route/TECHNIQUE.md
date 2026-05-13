@@ -3,7 +3,7 @@ id: AOA-T-0104
 name: superseded-practice-obsolescence-route
 domain: agent-workflows
 kind: handoff
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: mechanics/method-growth/parts/obsolescence/README.md + mechanics/method-growth/PROVENANCE.md
@@ -17,12 +17,12 @@ tags:
   - supersession
   - owner-boundary
 summary: Route one adopted practice toward supersession, merge, reanchor, defer, drop, or deprecation review with owner receipt, retained lesson, and provenance intact.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-05-03
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: used_together_for
@@ -38,6 +38,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # superseded-practice-obsolescence-route

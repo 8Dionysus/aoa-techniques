@@ -5,32 +5,32 @@
 - name: progression-evidence-lift
 
 ## Target project
-- name: aoa-techniques
-- environment: public documentation repository for reusable engineering techniques
-- runtime: human and agent contribution workflow over portable technique bundles
+- name: aoa-skills aoa-session-progression-lift
+- environment: AoA sibling owner surface used as downstream evidence for a portable technique
+- runtime: reviewed repository documentation, skill, playbook, SDK, eval, or center-mechanic surface
 
 ## What changed
-- the skill-local progression delta became one bounded public progression-evidence technique
-- AoA axis naming and role-flavor detail moved into adaptation notes instead of the invariant core
-- optional quest- and RPG-shaped reflection stayed separate as the sibling `multi-axis-quest-overlay` technique instead of remaining fused into one broad bundle
-- the bundle was reduced to one technique doc, one checklist, one example, and three evidence notes
+- the original promoted bundle was checked against Pack 35 progression and quest reflection
+- the downstream evidence proves the same atom in a second owner context without importing that owner context into the technique
+- the bundle now has a canonical watch note for adverse effects
 
 ## What stayed invariant
-- progression still starts only from reviewed evidence
-- movement still stays multi-axis
-- verdicts still remain descriptive rather than sovereign
-- universal scores still remain out of scope
+- the technique remains one atomic move
+- owner truth stays with the downstream repo that owns the evidence surface
+- proof, routing, memory, runtime, skill execution, playbook choreography, KAG, ToS, and Agon authority stay outside the bundle unless the bundle already owns only a read-only citation or review move
+- standalone users can apply the technique from its own inputs, outputs, contracts, and validation checklist
 
 ## Risks introduced by adaptation
-- public wording can drift into generic motivation language if evidence-backed movement is not kept explicit
-- the bundle can widen into ranking doctrine if verdicts or unlock hints start granting authority
-- a minimal example can understate the importance of negative or zero movement
+- sibling-repo evidence can be overread as an OS Abyss dependency
+- downstream artifacts can tempt readers to copy local schema, command, or status vocabulary into the invariant core
+- promotion pressure can make a bounded technique look like owner acceptance or proof completion
 
 ## Evidence
-- the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session progression workflow rather than role law or routing policy
-- the public wording still preserves the seam between progression deltas and optional quest-flavor overlays
-- the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- the downstream evaluated skill declares `AOA-T-0084` as a manifest-backed technique dependency
+- it lifts reviewed evidence into a multi-axis progression delta with baseline posture before any comparative movement claim
+- it keeps movement posture, evidence posture, verdict, unlock hints, and receipts smaller than routing, owner truth, or progression authority
+- downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-session-progression-lift/SKILL.md` hash `c59992c035c302d968e523b4df4ebd98ad6af886`
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded progression-evidence-lift technique
+- note: the adapted bundle stays readable as a bounded portable technique while the downstream evidence remains only a reviewed second context

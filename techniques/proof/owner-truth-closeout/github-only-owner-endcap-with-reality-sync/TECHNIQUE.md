@@ -3,7 +3,7 @@ id: AOA-T-0095
 name: github-only-owner-endcap-with-reality-sync
 domain: agent-workflows
 kind: workflow
-status: promoted
+status: canonical
 origin:
   project: Dionysus + ATM10-Agent + AoA ecosystem repos
   path: reports/ecosystem-audits/2026-04-07.cross-repo.federated-audit-remediation-rollout-session-harvest.md + reports/ecosystem-audits/2026-04-07.federated-audit-remediation.wave-4-ws12-github-track-packet.md + https://github.com/8Dionysus/ATM10-Agent/pull/50
@@ -17,12 +17,12 @@ tags:
   - reality-sync
   - closeout
 summary: Close a remote-only owner surface through GitHub-native issue and PR flow, then rebind staging and reality checks to the merged owner anchors so seed-garden truth does not outlive the landing.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-07
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-13
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # github-only-owner-endcap-with-reality-sync
