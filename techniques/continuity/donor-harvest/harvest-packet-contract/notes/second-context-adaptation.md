@@ -29,6 +29,7 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is a bounded post-session workflow contract rather than a docs taxonomy or memory surface
 - the public wording still preserves the seam between packet shape and later family verdicts
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- later live reinforcement from `aoa-sdk` shows the same packet spine as a control-plane consumer: `HARVEST_PACKET.json` stays a bounded reviewed-session nucleus, while closeout owner follow-through reads accepted candidates from it without treating the packet as routing authority, memory canon, or final owner acceptance
 
 ## Result
 - verdict: works

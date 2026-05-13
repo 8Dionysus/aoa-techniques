@@ -73,9 +73,9 @@ AOA-T-0071,template-backed-field-extraction-after-ocr,agent-workflows,canonical,
 AOA-T-0072,perceptual-media-dedupe-with-threshold-review,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0073,semantic-media-bucketing-with-vision-plus-ocr,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0074,telegram-export-normalization-to-local-store,agent-workflows,canonical,ingest,media-ingest
-AOA-T-0075,session-donor-harvest,agent-workflows,promoted,lift,donor-harvest
+AOA-T-0075,session-donor-harvest,agent-workflows,canonical,lift,donor-harvest
 AOA-T-0076,owner-layer-triage,agent-workflows,promoted,assessment,decision-routing
-AOA-T-0077,harvest-packet-contract,agent-workflows,promoted,handoff,donor-harvest
+AOA-T-0077,harvest-packet-contract,agent-workflows,canonical,handoff,donor-harvest
 AOA-T-0078,decision-fork-cards,agent-workflows,promoted,assessment,decision-routing
 AOA-T-0079,risk-passport-lift,agent-workflows,promoted,assessment,decision-routing
 AOA-T-0080,session-drift-taxonomy,agent-workflows,promoted,assessment,diagnosis-repair

@@ -19,8 +19,8 @@ Pack 23 closure for `AOA-T-0066`, the Pack 24 closure for `AOA-T-0067`, the
 Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, the
 Pack 27 closure for `AOA-T-0070`, the Pack 28 closure for `AOA-T-0071`,
 the Pack 29 closure for `AOA-T-0072`, the Pack 30 closure for
-`AOA-T-0073`, and the Pack 31 closure for `AOA-T-0074`, the live promoted
-queue is `44`
+`AOA-T-0073`, the Pack 31 closure for `AOA-T-0074`, and the Pack 32 closures
+for `AOA-T-0075` plus `AOA-T-0077`, the live promoted queue is `42`
 bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
@@ -160,8 +160,14 @@ Current live constraint:
   message-linked media files, peer JSONL side surfaces, last-message-id
   continuation, and resumable interrupted media downloads, and exits the live
   promoted queue through canonical review;
-- the live generated catalog currently contains `44` promoted techniques and
-  `63` canonical techniques;
+- `AOA-T-0075` and `AOA-T-0077` closed during Stage 5 with exact-fit live
+  `aoa-sdk` checkpoint-closeout bridge evidence for reviewed-artifact reread,
+  checkpoint-review carry, bounded donor candidates, `HARVEST_PACKET.json`,
+  harvest packet receipts, and owner follow-through consumption, with
+  LangSmith reviewed-run curation kept as supporting public evidence, and exit
+  the live promoted queue through canonical review;
+- the live generated catalog currently contains `42` promoted techniques and
+  `65` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -174,8 +180,8 @@ and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
 Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26,
-Pack 27, Pack 28, Pack 29, Pack 30, and Pack 31 closures is `44` promoted
-techniques,
+Pack 27, Pack 28, Pack 29, Pack 30, Pack 31, and Pack 32 closures is `42`
+promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0024`, `AOA-T-0025`, `AOA-T-0040`,
@@ -184,8 +190,8 @@ with `AOA-T-0026`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`,
 `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`, `AOA-T-0070`,
-`AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, and `AOA-T-0074` counted as
-closed rows rather than remaining targets.
+`AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, `AOA-T-0074`, `AOA-T-0075`, and
+`AOA-T-0077` counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -200,7 +206,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with the Pack 31 canonical closure recorded.
+This is an original `82/82` promoted-corpus plan with the Pack 32 canonical closure recorded.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -272,8 +278,8 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0072 perceptual-media-dedupe-with-threshold-review](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | agent-workflows / ingest | Pack 29 perceptual media dedupe | exact-fit second context; exits to canonical | `qarmin/czkawka` thresholded Similar Images grouping, similarity labels, JSON/text output, and default-off deletion close the perceptual dedupe gap |
 | Stage 4 | [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | agent-workflows / ingest | Pack 30 semantic media bucketing | exact-fit second context; exits to canonical | `end1989/ai-image-classification` configured labels, CLIP scoring, OCR side text, review thresholds, correction records, and separated file actions close the semantic bucketing gap |
 | Stage 4 | [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | agent-workflows / ingest | Pack 31 Telegram export normalization | exact-fit second context; exits to canonical | `3bl3gamer/tg_history_dumper` local JSONL messages, message-linked media files, related peer JSONL surfaces, last-message-id continuation, and resumable interrupted media downloads close the Telegram export normalization gap |
-| Stage 5 | [AOA-T-0075 session-donor-harvest](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | agent-workflows / lift | Pack 32 reviewed session harvest spine | pending |  |
-| Stage 5 | [AOA-T-0077 harvest-packet-contract](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | agent-workflows / handoff | Pack 32 reviewed session harvest spine | pending |  |
+| Stage 5 | [AOA-T-0075 session-donor-harvest](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | agent-workflows / lift | Pack 32 reviewed session harvest spine | exact-fit second context; exits to canonical | `aoa-sdk` checkpoint-closeout bridge reviewed-artifact reread, checkpoint-review carry, bounded donor candidates, and donor harvest packet receipts close the session donor harvest gap; LangSmith reviewed-run curation supports the public reviewed-trace-to-bounded-record pressure |
+| Stage 5 | [AOA-T-0077 harvest-packet-contract](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | agent-workflows / handoff | Pack 32 reviewed session harvest spine | exact-fit second context; exits to canonical | `aoa-sdk` `HARVEST_PACKET.json` plus closeout owner follow-through consumption close the bounded harvest packet contract gap; LangSmith reviewed-run curation stays supporting evidence, not packet authority |
 | Stage 5 | [AOA-T-0076 owner-layer-triage](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
 | Stage 5 | [AOA-T-0078 decision-fork-cards](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
 | Stage 5 | [AOA-T-0079 risk-passport-lift](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
@@ -481,7 +487,8 @@ each has a narrow substrate and false positives are likely.
 ### Stage 5: Session Harvest, Owner Routing, Repair, Progression, Automation
 
 34. Pack 32 - Reviewed Session Harvest Spine: `AOA-T-0075`,
-    `AOA-T-0077`
+    `AOA-T-0077` - closed; exact-fit `aoa-sdk` checkpoint-closeout bridge
+    evidence plus supporting LangSmith reviewed-run curation
 35. Pack 33 - Owner Route Fork Discipline: `AOA-T-0076`,
     `AOA-T-0078`, `AOA-T-0079`, `AOA-T-0090`
 36. Pack 34 - Diagnosis And Repair Loop: `AOA-T-0080`,
@@ -513,7 +520,7 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `44` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `42` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
@@ -521,7 +528,8 @@ the blocker is structure plus second-context review.
     `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
     `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`,
     `AOA-T-0069`, `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`,
-    and `AOA-T-0074` rows against generated catalog truth.
+    `AOA-T-0074`, `AOA-T-0075`, and `AOA-T-0077` rows against generated
+    catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
     - all exact-fit findings;
@@ -1897,6 +1905,109 @@ Reject:
   projects because their center of gravity is account action, outreach,
   forwarding, or Telegram-as-storage rather than local Telegram-source
   normalization.
+
+### AOA-T-0075: `session-donor-harvest`
+
+Stage 5 Pack 32 verdict, 2026-05-12: exact-fit live second context found.
+`aoa-sdk` keeps the reusable object as one reviewed-artifact donor-harvest
+seam outside the originating `aoa-session-donor-harvest` skill bundle:
+checkpoint closeout rereads reviewed artifacts, blocks pending checkpoint
+reviews, carries semantic checkpoint-review material forward, builds bounded
+donor candidates, and leaves owner placement, progression, quest promotion,
+memory, and stats to later seams.
+
+Exact evidence:
+
+- `docs/session-growth-checkpoints.md` states that checkpoint capture does
+  not emit `HARVEST_PACKET` or `CORE_SKILL_APPLICATION_RECEIPT`;
+- the same doc states that full harvest belongs to the reviewed closeout path;
+- the same doc states that the bridge builds `closeout-context.json`, rereads
+  the reviewed artifact, then executes donor harvest, progression lift, and
+  quest harvest in order while remaining a mechanical artifact builder;
+- `registry.py` blocks reviewed closeout while checkpoint agent reviews remain
+  pending;
+- `registry.py` aggregates runtime-session checkpoint notes, shortlisted
+  clusters, harvest/progression/upgrade candidate ids, candidate lineage
+  hints, owner follow-through maps, and one ordered donor -> progression ->
+  quest skill plan;
+- `_build_donor_harvest_outputs` builds accepted candidates from shortlisted
+  clusters, preserves deferred candidates when none survive, and writes
+  donor-harvest output rooted in the reviewed artifact;
+- `tests/test_checkpoints.py` verifies that closeout chain outputs carry
+  checkpoint semantic review material into the harvest packet;
+- `tests/test_checkpoints.py` verifies that multiple reviewed checkpoint
+  commits remain visible in the harvest packet carry;
+- `tests/test_checkpoints.py` verifies that donor/progression/quest artifacts
+  and receipts are emitted even without a local checkpoint note.
+
+Supporting public evidence:
+
+- LangSmith annotation queues let human reviewers attach feedback to specific
+  runs, mark queue items reviewed, edit run inputs/outputs into corrected
+  reference examples, and add those examples to datasets;
+- LangSmith datasets and production automations show reviewed or filtered
+  traces/runs being moved into bounded downstream datasets with inputs,
+  outputs, metadata, and feedback.
+
+Reject:
+
+- `aoa-sdk` hook plumbing, `.aoa` storage layout, command names, closeout
+  execution code, runtime-session ledgers, and owner-handoff queues as
+  technique invariants;
+- LangSmith as primary proof for donor harvest because it is evaluation and
+  dataset centered and does not carry owner hints or nearest-wrong-target
+  posture;
+- checkpoint capture, transcript packaging, memory writeback, stats refresh,
+  owner placement, progression, quest promotion, and final promotion verdicts
+  as bundle-owned behavior.
+
+### AOA-T-0077: `harvest-packet-contract`
+
+Stage 5 Pack 32 verdict, 2026-05-12: exact-fit live second context found.
+`aoa-sdk` keeps the reusable object as one bounded `HARVEST_PACKET` nucleus
+outside the originating packet reference: the bridge writes a packet with
+reviewed-artifact and candidate evidence, and the closeout API later consumes
+accepted candidates into owner follow-through briefs without making the packet
+memory canon, routing authority, or final owner acceptance.
+
+Exact evidence:
+
+- `_build_donor_harvest_outputs` writes `HARVEST_PACKET.json` with
+  `artifact_kind`, `session_ref`, `route_ref`, authority contract, owner repo,
+  reviewed artifact reference, session trace references, checkpoint refs,
+  checkpoint-review carry, accepted candidates, deferred candidates, extract
+  counts, promotion candidate count, owner-layer distribution, and reviewed
+  evidence density;
+- the same function writes `HARVEST_PACKET_RECEIPT.json` and a core skill
+  application receipt for the donor harvest stage;
+- `tests/test_closeout.py` builds a harvest packet with accepted candidates
+  containing `candidate_ref`, `unit_name`, `abstraction_shape`,
+  `owner_repo_recommendation`, `chosen_next_artifact`,
+  `nearest_wrong_target`, `owner_reason`, and `evidence_anchors`;
+- `tests/test_closeout.py` verifies that `sdk.closeout.run(...)` reads that
+  packet into one owner follow-through brief with source kind
+  `harvest-candidate`, suggested action `draft-owner-artifact`, owner repo,
+  next surface, and unit name;
+- `tests/test_checkpoints.py` verifies that generated harvest packets carry
+  checkpoint-review refs, summaries, candidate notes, and applied skill names
+  into closeout outputs.
+
+Supporting public evidence:
+
+- LangSmith reviewed-run curation supports the broader reviewed-artifact to
+  bounded-record handoff pattern, especially annotation queues, corrected
+  reference examples, dataset versions, filtered trace export, and automation
+  actions into datasets or annotation queues.
+
+Reject:
+
+- SDK-local file paths, exact command wrappers, hook behavior, runtime ledger
+  rules, and closeout report naming as invariant packet requirements;
+- LangSmith as primary proof for the packet contract because its dataset
+  examples are not `HARVEST_PACKET` records and do not carry AoA's owner
+  posture;
+- hidden routing, diagnosis, repair, progression, quest, memory, stats, or
+  owner acceptance authority inside packet fields.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

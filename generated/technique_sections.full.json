@@ -6162,12 +6162,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `aoa-skills` as part of `aoa-session-donor-harvest`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded post-session donor-extraction workflow"
+          "content_markdown": "- born in `aoa-skills` as part of `aoa-session-donor-harvest`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded post-session donor-extraction workflow\n- promoted to canonical on 2026-05-12 after `aoa-sdk`'s checkpoint-closeout bridge provided a second live consumer that rereads a reviewed artifact, carries checkpoint review evidence forward, builds a bounded donor harvest packet with accepted and deferred candidates, and feeds downstream progression, quest, and owner follow-through seams without turning checkpoint capture or packet state into memory, routing, or promotion authority"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep owner placement separate through `AOA-T-0076` instead of widening this bundle into full routing doctrine\n- add a second live context that uses the same donor-pack boundary outside the current AoA session-harvest lineage\n- keep transcript packaging, replay, indexing, and final promotion verdicts in sibling techniques rather than reopening them here"
+          "content_markdown": "- keep owner placement separate through `AOA-T-0076` instead of widening this bundle into full routing doctrine\n- future external sources can reinforce the default only if reviewed run, trace, or session artifacts become bounded candidate packs with evidence anchors before owner placement, evaluation, routing, memory, or promotion begins\n- keep transcript packaging, replay, indexing, checkpoint capture, closeout execution, owner follow-through, and final promotion verdicts in sibling techniques or owner repos rather than reopening them here"
         }
       ]
     },
@@ -6326,12 +6326,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `aoa-skills` as the packet-contract seam inside `aoa-session-donor-harvest`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded reviewed-session packet contract"
+          "content_markdown": "- born in `aoa-skills` as the packet-contract seam inside `aoa-session-donor-harvest`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded reviewed-session packet contract\n- promoted to canonical on 2026-05-12 after `aoa-sdk`'s checkpoint-closeout bridge and closeout API showed a second live consumer for the packet spine: `HARVEST_PACKET.json` keeps session reference, reviewed artifact, accepted and deferred candidates, extract counts, owner distribution, evidence density, and checkpoint-review carry visible, while downstream owner follow-through reads accepted candidates without making the packet a memory store, routing authority, or final owner verdict"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep donor extraction separate through `AOA-T-0075`\n- keep later family seams explicit instead of growing packet authority\n- add a second live context that uses the same bounded packet nucleus outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep donor extraction separate through `AOA-T-0075`\n- keep later family seams explicit instead of growing packet authority\n- future external sources can reinforce the default only if the packet remains a small reviewed-session nucleus consumed by later seams without becoming memory canon, routing authority, dashboard schema, or final promotion verdict"
         }
       ]
     },

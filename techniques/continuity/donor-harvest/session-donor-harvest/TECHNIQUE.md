@@ -3,7 +3,7 @@ id: AOA-T-0075
 name: session-donor-harvest
 domain: agent-workflows
 kind: lift
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-donor-harvest/SKILL.md + skills/aoa-session-donor-harvest/techniques.yaml
@@ -17,12 +17,12 @@ tags:
   - harvest
   - post-session
 summary: Distill a reviewed session artifact into a bounded donor pack of reusable units so candidate practice, workflow, and scenario objects can be evaluated without turning session history into memory or forcing promotion.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # session-donor-harvest
@@ -193,9 +195,10 @@ See `checks/session-donor-harvest-checklist.md`.
 
 - born in `aoa-skills` as part of `aoa-session-donor-harvest`
 - extracted into `aoa-techniques` on 2026-04-05 as a bounded post-session donor-extraction workflow
+- promoted to canonical on 2026-05-12 after `aoa-sdk`'s checkpoint-closeout bridge provided a second live consumer that rereads a reviewed artifact, carries checkpoint review evidence forward, builds a bounded donor harvest packet with accepted and deferred candidates, and feeds downstream progression, quest, and owner follow-through seams without turning checkpoint capture or packet state into memory, routing, or promotion authority
 
 ## Future evolution
 
 - keep owner placement separate through `AOA-T-0076` instead of widening this bundle into full routing doctrine
-- add a second live context that uses the same donor-pack boundary outside the current AoA session-harvest lineage
-- keep transcript packaging, replay, indexing, and final promotion verdicts in sibling techniques rather than reopening them here
+- future external sources can reinforce the default only if reviewed run, trace, or session artifacts become bounded candidate packs with evidence anchors before owner placement, evaluation, routing, memory, or promotion begins
+- keep transcript packaging, replay, indexing, checkpoint capture, closeout execution, owner follow-through, and final promotion verdicts in sibling techniques or owner repos rather than reopening them here

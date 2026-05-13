@@ -184,6 +184,18 @@ See also:
 |---|---|---|---|
 | minimal-telegram-export-normalization-to-local-store | `present` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/examples/minimal-telegram-export-normalization-to-local-store.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
+### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal session-donor-harvest | `present` | `techniques/continuity/donor-harvest/session-donor-harvest/examples/minimal-session-donor-harvest.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
+
+### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal harvest-packet-contract | `present` | `techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | example | body | example path | source |
@@ -203,23 +215,11 @@ See also:
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
 
-### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal session-donor-harvest | `present` | `techniques/continuity/donor-harvest/session-donor-harvest/examples/minimal-session-donor-harvest.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
-
 ### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | minimal owner-layer-triage | `present` | `techniques/governance/decision-routing/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
-
-### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal harvest-packet-contract | `present` | `techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
 
 ### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 

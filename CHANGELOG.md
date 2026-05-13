@@ -22,6 +22,20 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0075 session-donor-harvest` and `AOA-T-0077
+  harvest-packet-contract` to `canonical` after `aoa-sdk`'s checkpoint-closeout
+  bridge showed exact-fit live reinforcement for reviewed session harvest:
+  reviewed closeout rereads reviewed artifacts, blocks pending checkpoint
+  reviews, carries semantic checkpoint-review evidence forward, builds bounded
+  donor candidates, writes `HARVEST_PACKET.json`, emits harvest packet and core
+  skill receipts, and lets the closeout API consume accepted candidates as
+  owner follow-through briefs. LangSmith annotation queues and dataset docs
+  were checked as supporting public reviewed-run curation evidence, not primary
+  packet proof, while checkpoint capture, transcript packaging, local `.aoa`
+  storage, exact SDK command wrappers, memory writeback, stats refresh, owner
+  placement, progression, quest promotion, evaluation dataset governance, and
+  final promotion verdicts stay outside the bundles, updating Audit queue
+  posture from `44` promoted techniques to `42`
 - promoted `AOA-T-0074 telegram-export-normalization-to-local-store` to
   `canonical` after `3bl3gamer/tg_history_dumper` showed exact-fit public
   reinforcement for bounded Telegram-source normalization: messages are saved

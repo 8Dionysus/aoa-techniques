@@ -46206,6 +46206,197 @@
       "technique_path": "techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/donor-harvest/session-donor-harvest/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0075"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-donor-harvest"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after live cross-context reinforcement from `aoa-sdk` checkpoint closeout and supporting public LangSmith reviewed-run curation docs"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that donor harvest remains one post-review extraction pass over a reviewed artifact, not checkpoint capture, transcript packaging, memory writeback, owner placement, quest promotion, or evaluation dataset curation"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "unreviewed live session notes are harvested as if they were reviewed artifacts"
+                },
+                {
+                  "order": 2,
+                  "text": "candidate records describe broad topics instead of bounded reusable units"
+                },
+                {
+                  "order": 3,
+                  "text": "evidence anchors are omitted, vague, or detached from the reviewed artifact"
+                },
+                {
+                  "order": 4,
+                  "text": "one donor pack silently chooses final owner placement or promotion status"
+                },
+                {
+                  "order": 5,
+                  "text": "hold and defer disappear, forcing weak residue into candidate records"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "over-harvesting can flood owner repos with thin candidates"
+                },
+                {
+                  "order": 2,
+                  "text": "teams may treat a rich donor pack as proof that a technique, skill, quest, or memory object is already accepted"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewed session history can become instruction authority if the evidence role is not kept explicit"
+                },
+                {
+                  "order": 4,
+                  "text": "checkpoint hints can be mistaken for final harvest output"
+                },
+                {
+                  "order": 5,
+                  "text": "reusable-unit extraction can be confused with dataset curation, transcript indexing, or generic summarization"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "running donor harvest during an active session before review"
+                },
+                {
+                  "order": 2,
+                  "text": "treating every repeated phrase or theme as a reusable unit"
+                },
+                {
+                  "order": 3,
+                  "text": "turning the donor pack into an owner-routing graph, memory object, or promotion ledger"
+                },
+                {
+                  "order": 4,
+                  "text": "using generated summaries as the primary source when the reviewed artifact is available"
+                },
+                {
+                  "order": 5,
+                  "text": "omitting weak, deferred, or rejected material to make the session look cleaner than it was"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "candidate names are nouns or themes instead of executable or reusable units"
+                },
+                {
+                  "order": 2,
+                  "text": "records lack evidence anchors back to reviewed artifacts"
+                },
+                {
+                  "order": 3,
+                  "text": "the donor pack includes final owner acceptance, proof verdict, memory writeback, or quest promotion language"
+                },
+                {
+                  "order": 4,
+                  "text": "checkpoint note fields appear as final harvest claims without a reread step"
+                },
+                {
+                  "order": 5,
+                  "text": "reviewers cannot explain why a candidate was kept, split, deferred, or dropped"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require one reviewed source artifact before any donor harvest pass"
+                },
+                {
+                  "order": 2,
+                  "text": "split merged clusters until each kept record names one reusable unit"
+                },
+                {
+                  "order": 3,
+                  "text": "preserve evidence anchors, owner hints, nearest wrong targets, and hold or defer outcomes as review aids, not final verdicts"
+                },
+                {
+                  "order": 4,
+                  "text": "route owner placement, quest promotion, memory writeback, evaluation, and transcript indexing to sibling techniques or owner repos"
+                },
+                {
+                  "order": 5,
+                  "text": "treat external reviewed-run curation systems as supporting analogy unless they preserve the donor-pack boundary directly"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow lift technique when the output remains a bounded donor pack rooted in reviewed evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb checkpoint capture, closeout execution, transcript packaging, local indexing, owner placement, quest promotion, memory writeback, stats refresh, or evaluation dataset governance into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/donor-harvest/session-donor-harvest/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -46236,7 +46427,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -46255,7 +46446,23 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "`aoa-sdk` now provides a second live consumer outside the originating `aoa-session-donor-harvest` skill bundle: the checkpoint-closeout bridge starts from a reviewed artifact, blocks pending checkpoint reviews, aggregates runtime-session checkpoint notes, rereads the reviewed artifact, derives an ordered donor -> progression -> quest plan, and builds donor harvest outputs without treating checkpoint capture as harvest verdict"
+                },
+                {
+                  "order": 4,
+                  "text": "the inspected `aoa-sdk` source is commit `f74c037e0f346713001516f7f3abddabbf64d02a` with commit date `2026-05-12T04:44:46+03:00`; inspected file hashes include `src/aoa_sdk/checkpoints/registry.py` (`71a6246f8f6ddcea3f33f540db50f2fc7cd39672`), `tests/test_checkpoints.py` (`326f6050516f26e031e8c8e88695139c028966df`), `tests/test_closeout.py` (`ba918ac60162a004c51d7c688dfebfd535e6e32d`), `README.md` (`c2f267fbe6fa4a652d41f17354f09f46edb73077`), `docs/session-growth-checkpoints.md` (`dc725cfaf477dabc1c8918bf34901cac0a83ee40`), and `docs/checkpoint-note-promotion.md` (`7f1778771ad4a87d162d40d993880f12146df6fd`)"
+                },
+                {
+                  "order": 5,
+                  "text": "exact `aoa-sdk` evidence: `_build_donor_harvest_outputs` creates accepted candidates from shortlisted clusters, emits a `HARVEST_PACKET.json` with `session_ref`, `route_ref`, authority contract, reviewed artifact reference, checkpoint review carry, accepted candidates, deferred candidates, extract counts, owner-layer distribution, and reviewed evidence density, then writes a `HARVEST_PACKET_RECEIPT.json` and a core skill application receipt"
+                },
+                {
+                  "order": 6,
+                  "text": "exact validation evidence: SDK tests assert closeout chain outputs carry checkpoint semantic review into `HARVEST_PACKET`, preserve multiple reviewed checkpoint reviews in the packet carry, emit harvest/progression/quest artifacts and receipts even without a local checkpoint note, and keep owner handoff rooted in evidence instead of hidden memory"
+                },
+                {
+                  "order": 7,
+                  "text": "supporting public external lane: LangSmith annotation queues publicly document a workflow where human reviewers attach feedback to specific runs, mark reviewed queue items complete, edit a run's input/output into a corrected reference example, and add it to a dataset; LangSmith dataset docs and automations further show traces/runs filtered or reviewed into datasets for testing, few-shot examples, or finetuning. This supports the broader reviewed-run-to-bounded-downstream-data pressure, but it stays supporting rather than primary proof because it does not carry AoA-style owner hints or donor-pack lineage fields"
                 }
               ]
             },
@@ -46266,7 +46473,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when the missing object is a bounded donor pack over a reviewed session artifact rather than a transcript export, recap, or final promotion verdict"
+                  "text": "this is the right canonical default when the missing object is a bounded donor pack over a reviewed session artifact rather than a transcript export, recap, checkpoint note, or final promotion verdict"
                 },
                 {
                   "order": 2,
@@ -46274,11 +46481,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default workflow for every post-session distillation problem"
+                  "text": "it is now proven across the origin skill bundle, the public technique adaptation, the SDK checkpoint-closeout consumer, and an external supporting reviewed-run data workflow"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it remains narrower than checkpoint capture, closeout execution, owner-layer triage, quest promotion, memory writeback, and evaluation dataset curation"
                 }
               ]
             },
@@ -46290,7 +46497,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -46300,7 +46507,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable donor-pack workflow while stripping local runtime wrapper detail and keeping AoA repo mapping in adaptation notes only"
+                  "value_markdown": "the published technique keeps the reusable donor-pack workflow while keeping AoA repo mapping in adaptation notes only and excluding SDK hook plumbing, local `.aoa` storage layout, exact command wrappers, checkpoint capture, closeout execution, owner handoff files, memory writeback, stats refresh, and final promotion authority"
                 }
               ]
             },
@@ -46311,11 +46518,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between donor extraction and later owner placement should stay tested through future sibling use"
+                  "text": "future sources can reinforce the default, but they must preserve the narrow boundary: reviewed artifact first, bounded candidate records, visible evidence anchors, hold or defer posture, and an explicit stop-line before owner placement, routing, memory, evaluation, or final promotion claims"
                 }
               ]
             },
@@ -46326,11 +46533,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0075` as `promoted`"
+                  "text": "move `AOA-T-0075` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same post-session donor-pack boundary"
+                  "text": "add an adverse-effects review so future edits do not widen donor harvest into checkpoint capture, transcript packaging, memory canon, owner placement, or promotion verdicts"
                 }
               ]
             }
@@ -46544,6 +46751,10 @@
                 {
                   "order": 3,
                   "text": "the donor evidence remains strong enough to justify a promoted public bundle without importing local runtime invocation details"
+                },
+                {
+                  "order": 4,
+                  "text": "later live reinforcement from `aoa-sdk` shows the same seam as a control-plane consumer: reviewed closeout builds donor harvest outputs from reviewed artifacts and checkpoint carry, preserves accepted and deferred candidates with evidence density, and hands the packet forward without making checkpoint notes, memory, or owner placement authoritative"
                 }
               ]
             },
@@ -46940,6 +47151,197 @@
       "technique_path": "techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/continuity/donor-harvest/harvest-packet-contract/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0077"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "harvest-packet-contract"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after live cross-context reinforcement from `aoa-sdk` checkpoint closeout and supporting public LangSmith reviewed-run curation docs"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that `HARVEST_PACKET` remains one bounded reviewed-session packet nucleus, not memory canon, routing authority, dashboard schema, owner acceptance, or a replacement for later family seams"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the packet becomes a recap blob instead of a container for bounded extract records"
+                },
+                {
+                  "order": 2,
+                  "text": "optional fields start carrying hidden routing, diagnosis, repair, progression, quest, or promotion verdicts"
+                },
+                {
+                  "order": 3,
+                  "text": "accepted candidates lack evidence refs, owner hints, next surfaces, or nearest-wrong-target posture"
+                },
+                {
+                  "order": 4,
+                  "text": "local SDK path, hook, or command details are treated as invariant packet requirements"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream consumers mutate packet meaning instead of reading it as a handoff surface"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "an oversized packet can blur the boundary between donor extraction and later owner seams"
+                },
+                {
+                  "order": 2,
+                  "text": "packet completeness can be mistaken for final owner acceptance or proof"
+                },
+                {
+                  "order": 3,
+                  "text": "optional family fields can create hidden authority if they are not explicitly subordinate"
+                },
+                {
+                  "order": 4,
+                  "text": "local storage layout can leak into the public technique as if it were the contract"
+                },
+                {
+                  "order": 5,
+                  "text": "consumers may skip rereading reviewed evidence because the packet looks structured"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating the packet as a universal session database, memory object, or dashboard schema"
+                },
+                {
+                  "order": 2,
+                  "text": "stuffing unresolved diagnosis, repair, progression, quest, or routing decisions into free-form packet fields"
+                },
+                {
+                  "order": 3,
+                  "text": "adding every downstream family field before that family seam is stable"
+                },
+                {
+                  "order": 4,
+                  "text": "emitting one packet before donor extraction has produced bounded extract records"
+                },
+                {
+                  "order": 5,
+                  "text": "allowing a packet consumer to overwrite sibling-owner verdicts"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot distinguish required packet spine from optional extensions"
+                },
+                {
+                  "order": 2,
+                  "text": "`session_ref`, reviewed artifact refs, extract records, or evidence refs are missing"
+                },
+                {
+                  "order": 3,
+                  "text": "optional fields read as accepted verdicts rather than pointers to later seams"
+                },
+                {
+                  "order": 4,
+                  "text": "the packet grows substantially whenever a new downstream consumer appears"
+                },
+                {
+                  "order": 5,
+                  "text": "owner follow-through starts from packet fields without carrying evidence refs forward"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the required packet spine small and explicit"
+                },
+                {
+                  "order": 2,
+                  "text": "require one bounded extract per reusable unit"
+                },
+                {
+                  "order": 3,
+                  "text": "preserve optional family fields as adjunct pointers only"
+                },
+                {
+                  "order": 4,
+                  "text": "keep later family seams explicit even when the packet links to them"
+                },
+                {
+                  "order": 5,
+                  "text": "route memory, routing, diagnosis, repair, progression, quest, and owner acceptance to sibling techniques or owner repos"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow handoff technique when the packet remains a reviewed-session nucleus that downstream seams consume without absorbing their authority"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb memory canon, routing authority, owner acceptance, closeout dashboard behavior, diagnosis, repair, progression, quest promotion, stats refresh, or local SDK storage detail into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/continuity/donor-harvest/harvest-packet-contract/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -46970,7 +47372,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -46989,7 +47391,23 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "`aoa-sdk` now provides a second live consumer outside the originating packet reference: the checkpoint-closeout bridge writes `HARVEST_PACKET.json` as a bounded packet nucleus, and the closeout API can later read the packet's accepted candidates into owner follow-through briefs without treating the packet as final owner truth"
+                },
+                {
+                  "order": 4,
+                  "text": "the inspected `aoa-sdk` source is commit `f74c037e0f346713001516f7f3abddabbf64d02a` with commit date `2026-05-12T04:44:46+03:00`; inspected file hashes include `src/aoa_sdk/checkpoints/registry.py` (`71a6246f8f6ddcea3f33f540db50f2fc7cd39672`), `tests/test_checkpoints.py` (`326f6050516f26e031e8c8e88695139c028966df`), `tests/test_closeout.py` (`ba918ac60162a004c51d7c688dfebfd535e6e32d`), `README.md` (`c2f267fbe6fa4a652d41f17354f09f46edb73077`), `docs/session-growth-checkpoints.md` (`dc725cfaf477dabc1c8918bf34901cac0a83ee40`), and `docs/checkpoint-note-promotion.md` (`7f1778771ad4a87d162d40d993880f12146df6fd`)"
+                },
+                {
+                  "order": 5,
+                  "text": "exact `aoa-sdk` evidence: the packet carries `artifact_kind: harvest_packet`, `session_ref`, `route_ref`, authority contract, owner repo, reviewed artifact reference, session trace references, checkpoint note and surface handoff refs, checkpoint-review carry, accepted candidates, deferred candidates, extract counts, promotion candidate count, owner-layer distribution, and reviewed evidence density"
+                },
+                {
+                  "order": 6,
+                  "text": "exact consumer evidence: `test_closeout_api_run_builds_owner_follow_through_from_harvest_packet` writes a harvest packet with accepted candidates containing `candidate_ref`, `unit_name`, `abstraction_shape`, `owner_repo_recommendation`, `chosen_next_artifact`, `nearest_wrong_target`, `owner_reason`, and `evidence_anchors`, then asserts `sdk.closeout.run(...)` emits an owner follow-through brief with source kind `harvest-candidate`, action `draft-owner-artifact`, owner repo, next surface, and unit name"
+                },
+                {
+                  "order": 7,
+                  "text": "supporting public external lane: LangSmith annotation queues and dataset docs show a different public packet-like path where reviewed runs are corrected into reference examples, copied with metadata or feedback into datasets, versioned, filtered, and consumed by evaluation. This supports the bounded reviewed-run handoff pressure, while staying supporting evidence because it does not own AoA's packet fields, owner hints, or nearest-wrong-target posture"
                 }
               ]
             },
@@ -47000,7 +47418,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when the missing object is a bounded post-session nucleus packet rather than donor extraction or a later verdict seam"
+                  "text": "this is the right canonical default when the missing object is a bounded post-session nucleus packet rather than donor extraction, checkpoint capture, or a later verdict seam"
                 },
                 {
                   "order": 2,
@@ -47008,11 +47426,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default packet contract for every post-session corpus"
+                  "text": "it is now proven across the origin skill reference, the public technique adaptation, the SDK checkpoint-closeout artifact builder, and a downstream closeout consumer that turns packet candidates into owner follow-through briefs"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it remains narrower than memory canon, routing authority, closeout dashboard schema, owner placement, diagnosis, repair, progression, quest verdict, or final promotion"
                 }
               ]
             },
@@ -47024,7 +47442,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -47034,7 +47452,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable packet contract while stripping local repo detail and skill-specific wrapper behavior"
+                  "value_markdown": "the published technique keeps the reusable packet contract while excluding SDK hook plumbing, local `.aoa` storage paths, exact closeout commands, full checkpoint capture, memory writeback, stats refresh, owner-handoff queue behavior, and final owner acceptance"
                 }
               ]
             },
@@ -47045,11 +47463,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between packet structure and later family verdicts should stay tested through future sibling use"
+                  "text": "future sources can reinforce the default, but they must keep the required packet spine small and keep optional family fields subordinate to later explicit seams"
                 }
               ]
             },
@@ -47060,11 +47478,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0077` as `promoted`"
+                  "text": "move `AOA-T-0077` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded packet spine"
+                  "text": "add an adverse-effects review so future edits do not let the packet become memory canon, routing authority, dashboard schema, or final owner verdict"
                 }
               ]
             }
@@ -47274,6 +47692,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "later live reinforcement from `aoa-sdk` shows the same packet spine as a control-plane consumer: `HARVEST_PACKET.json` stays a bounded reviewed-session nucleus, while closeout owner follow-through reads accepted candidates from it without treating the packet as routing authority, memory canon, or final owner acceptance"
                 }
               ]
             },

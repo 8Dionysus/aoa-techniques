@@ -178,6 +178,18 @@ See also:
 |---|---|---|---|---|
 | telegram-export-normalization-to-local-store checklist | `absent` | `6` | `techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/checks/telegram-export-normalization-to-local-store-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) |
 
+### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| session-donor-harvest checklist | `absent` | `8` | `techniques/continuity/donor-harvest/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
+
+### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| harvest-packet-contract checklist | `absent` | `7` | `techniques/continuity/donor-harvest/harvest-packet-contract/checks/harvest-packet-contract-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -196,23 +208,11 @@ See also:
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
 
-### [AOA-T-0075](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) - session-donor-harvest (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| session-donor-harvest checklist | `absent` | `8` | `techniques/continuity/donor-harvest/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
-
 ### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | owner-layer-triage checklist | `absent` | `8` | `techniques/governance/decision-routing/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
-
-### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| harvest-packet-contract checklist | `absent` | `7` | `techniques/continuity/donor-harvest/harvest-packet-contract/checks/harvest-packet-contract-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
 
 ### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
 

@@ -30,6 +30,7 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is a bounded post-session workflow, not a docs taxonomy or memory surface
 - the public wording still preserves the seam between donor extraction and later owner placement
 - the donor evidence remains strong enough to justify a promoted public bundle without importing local runtime invocation details
+- later live reinforcement from `aoa-sdk` shows the same seam as a control-plane consumer: reviewed closeout builds donor harvest outputs from reviewed artifacts and checkpoint carry, preserves accepted and deferred candidates with evidence density, and hands the packet forward without making checkpoint notes, memory, or owner placement authoritative
 
 ## Result
 - verdict: works
