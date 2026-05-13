@@ -22,6 +22,21 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr` to
+  `canonical` after `end1989/ai-image-classification` showed exact-fit public
+  reinforcement for bounded semantic media bucketing: configured mixed-media
+  labels stay explicit, CLIP image embeddings score those labels, OCR text and
+  confidence stay a separate side result, OCR text only boosts text-heavy
+  labels such as receipt, chat, and work, review and auto-move thresholds
+  remain distinct, user corrections stay visible, and file actions plus undo
+  stay outside classification. `chintan-projects/photo-triage-agent`,
+  `Aditya-Vasipalli/screensort` / Fragmenta, receipt-only extractors, and
+  broad cleanup products were checked as adjacent or too wide, while OCR
+  pipeline ownership, duplicate grouping, moderation or NSFW policy,
+  face/person identification, deletion, archive/move policy, UI workflows,
+  database schemas, model-serving detail, and full media-management behavior
+  stay outside the bundle, updating Audit queue posture from `46` promoted
+  techniques to `45`
 - promoted `AOA-T-0072 perceptual-media-dedupe-with-threshold-review` to
   `canonical` after `qarmin/czkawka` showed exact-fit public reinforcement for
   thresholded perceptual media dedupe: Similar Images finds visually similar

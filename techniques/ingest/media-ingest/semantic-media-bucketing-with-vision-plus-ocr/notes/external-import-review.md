@@ -32,15 +32,15 @@
 ## Import-path assessment
 
 - result: pass
-- this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique
-- the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor classification family
+- this was a successful bounded external import, and the later Pack 30 review confirmed the same seam in a second public source outside the original donor README family
+- `end1989/ai-image-classification` reinforces the import path by exposing configured mixed-media labels, CLIP-based label scoring, OCR text and confidence as side data, OCR-based confidence boosts for text-heavy categories, confidence thresholds for review versus later action eligibility, user correction records, and separated file-action/undo surfaces
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
-- a future stronger context should show another public workflow where mixed media are bucketed through bounded visual semantics plus OCR side text under explicit confidence gates before later routing or cleanup actions
+- no import-path blocker remains for canonical status
+- future stronger contexts should still show mixed media bucketed through bounded visual semantics plus OCR side text under explicit confidence or review gates before later routing, cleanup, moderation, identity inference, duplicate grouping, or archive actions
 
 ## Recommendation
 
-- accept `AOA-T-0073` as a bounded external import and publish it as `promoted`
-- defer any canonical review until another live adopter confirms that the confidence-aware media-bucketing contract survives outside the current donor family
+- keep this note as the original import review
+- use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` as the current canonical promotion and boundary review surfaces

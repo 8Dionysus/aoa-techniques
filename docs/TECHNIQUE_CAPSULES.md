@@ -340,6 +340,19 @@ See also:
 - Validate by: the corpus includes exact duplicates, crops, and edited variants; high-confidence groups and uncertain groups are visibly separated; thresholds can...
 - Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
 
+### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`canonical`)
+
+- Summary: Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.
+- Intent: Provide one bounded classification route for mixed media by combining visual semantics with OCR...
+- Use when: a media set needs coarse bucket labels before later routing or review or text-heavy images matter and OCR...
+- Avoid when: duplicate grouping is the real problem and taxonomy is unnecessary or the workflow needs identity inference, moderation policy...
+- Needs: one bounded media set; one explicit bucket taxonomy; one visual semantic model or equivalent scoring surface.
+- Produces: one bounded bucket label per classified item; one confidence signal for the bucket assignment; one review bucket...
+- Core contract: taxonomy stays bounded and explicit; OCR remains a side-channel, not hidden truth.
+- Main risk: memes and screenshots collide in the same bucket.
+- Validate by: the golden set includes memes, receipts, screenshots, and an other class; bucket labels stay inside the bounded taxonomy; low-confidence...
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 - Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
@@ -378,19 +391,6 @@ See also:
 - Main risk: stale local git state produces a false sense of verification.
 - Validate by: at least one concrete handoff claim can be tied to visible git evidence; the verification result names the evidence...
 - Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md)
-
-### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
-
-- Summary: Bucket mixed media through bounded visual semantics plus OCR side text so screenshots, memes, receipts, and other media classes remain reviewable under explicit confidence gates instead of widening into open-ended multimodal automation.
-- Intent: Provide one bounded classification route for mixed media by combining visual semantics with OCR...
-- Use when: a media set needs coarse bucket labels before later routing or review or text-heavy images matter and OCR...
-- Avoid when: duplicate grouping is the real problem and taxonomy is unnecessary or the workflow needs identity inference, moderation policy...
-- Needs: one bounded media set; one explicit bucket taxonomy; one visual semantic model or equivalent scoring surface.
-- Produces: one bounded bucket label per classified item; one confidence signal for the bucket assignment; one review bucket...
-- Core contract: taxonomy stays bounded and explicit; OCR remains a side-channel, not hidden truth.
-- Main risk: memes and screenshots collide in the same bucket.
-- Validate by: the golden set includes memes, receipts, screenshots, and an other class; bucket labels stay inside the bounded taxonomy; low-confidence...
-- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
 
 ### [AOA-T-0074](../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) - telegram-export-normalization-to-local-store (`promoted`)
 

@@ -44647,6 +44647,197 @@
       "technique_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0073"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-media-bucketing-with-vision-plus-ocr"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `end1989/ai-image-classification`"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that the bundle remains one bounded semantic media bucketing and review-threshold contract, not OCR extraction ownership, duplicate grouping, moderation policy, identity inference, face detection, file deletion, archive policy, auto-routing doctrine, UI workflow, database schema, or full media-management product behavior"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "OCR-heavy screenshots or receipts overpower the visual classification signal and make text artifacts look more certain than they are"
+                },
+                {
+                  "order": 2,
+                  "text": "vague taxonomy labels cause screenshots, memes, receipts, documents, and social-media captures to drift across buckets"
+                },
+                {
+                  "order": 3,
+                  "text": "one confidence threshold tuned for a small media set is reused as a universal review gate"
+                },
+                {
+                  "order": 4,
+                  "text": "low-confidence or conflicting items are forced into a final bucket because later storage or routing wants a single label"
+                },
+                {
+                  "order": 5,
+                  "text": "text extraction misses small, rotated, low-resolution, or multilingual text and weakens the bucket assignment without making uncertainty visible"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "bounded media bucketing can create review overhead when simple source folders or metadata would have been enough"
+                },
+                {
+                  "order": 2,
+                  "text": "confidence scores can look like final truth even though they only support a reviewable classification surface"
+                },
+                {
+                  "order": 3,
+                  "text": "OCR side text can leak into downstream policy if consumers treat it as proof rather than a classification aid"
+                },
+                {
+                  "order": 4,
+                  "text": "product examples with auto-organization, NSFW detection, or face/person surfaces can tempt contributors to import unrelated behavior into the smaller technique"
+                },
+                {
+                  "order": 5,
+                  "text": "broad label sets can become a hidden media ontology instead of one task-specific taxonomy"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using bucket labels as final truth for deletion, archive, migration, moderation, identity inference, or other destructive actions"
+                },
+                {
+                  "order": 2,
+                  "text": "treating OCR extraction as the center of the technique instead of a side-channel that may sharpen text-bearing images"
+                },
+                {
+                  "order": 3,
+                  "text": "replacing a bounded taxonomy with open-ended visual question answering or multimodal assistant behavior"
+                },
+                {
+                  "order": 4,
+                  "text": "using this bundle as a substitute for [perceptual-media-dedupe-with-threshold-review](../../perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) when the actual need is near-duplicate grouping"
+                },
+                {
+                  "order": 5,
+                  "text": "copying donor app thresholds, routes, UI behavior, database schema, NSFW labels, face-detection features, or file-manager actions into the invariant technique"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "examples center cleanup, move actions, moderation, face/person grouping, or storage organization more than bounded bucket labels and review thresholds"
+                },
+                {
+                  "order": 2,
+                  "text": "output no longer includes a confidence signal, review bucket, or equivalent uncertainty handle"
+                },
+                {
+                  "order": 3,
+                  "text": "OCR text silently changes labels without a visible note that text influenced the assignment"
+                },
+                {
+                  "order": 4,
+                  "text": "taxonomy additions happen without a corresponding review of ambiguous or conflicting media examples"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream systems consume labels without preserving the review status or threshold context"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the taxonomy small, explicit, and task-shaped"
+                },
+                {
+                  "order": 2,
+                  "text": "preserve a confidence signal, review band, or equivalent uncertainty handle with each bucket assignment"
+                },
+                {
+                  "order": 3,
+                  "text": "record when OCR influenced a label and keep OCR extraction ownership separate from media bucketing"
+                },
+                {
+                  "order": 4,
+                  "text": "route low-confidence, conflicting, or OCR-dominant cases into review rather than forcing a final class"
+                },
+                {
+                  "order": 5,
+                  "text": "keep duplicate grouping, moderation, identity inference, deletion, archiving, auto-routing, UI, and media-management product behavior outside the technique contract"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow ingest technique when bounded taxonomy, visual semantic scoring, OCR side-channel handling, confidence gates, and reviewability remain visible before later policy or action layers begin"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb OCR pipeline ownership, duplicate grouping, moderation or NSFW policy, face/person identification, file deletion, archive/move policy, route governance, UI workflows, database schemas, local model-serving detail, or full media-management product behavior into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -44677,34 +44868,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around duplicate grouping, OCR extraction ownership, moderation policy, identity inference, and donor serving detail"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around duplicate grouping, OCR extraction ownership, moderation policy, identity inference, and donor serving detail"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same media-bucketing seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same media-bucketing seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor classification family"
+                  "text": "`end1989/ai-image-classification` provides exact-fit public reinforcement beyond the original donor READMEs and repo-local documentation-first adaptation: its media sorter exposes an explicit label taxonomy that includes screenshot, meme, receipt, document, work, food, people, nature, and other-style buckets; computes CLIP image embeddings and scores them against configured labels; stores classification labels and confidence; keeps configurable review and auto-move thresholds; extracts OCR text and confidence as a separate result; uses OCR text only to boost label confidence for text-heavy categories such as receipts, chats, and work material; exposes a review band for confidence between `review` and `auto_move`; records user corrections separately; and keeps file movement plus undo in action/file-manager surfaces rather than making the classification itself a delete or archive verdict"
+                },
+                {
+                  "order": 5,
+                  "text": "the inspected source is MIT licensed at commit `e3f3500bf274e802d669ed38403b7637b0897366` with commit date `2026-02-09T22:12:35-07:00`; inspected files include `README.md` (`df0270a5ad3ab834004e338bfe4cb662ac868a90`), `LICENSE` (`47305393d09ff9d598e4883c455a8a6fea1283f1`), `docs/ARCHITECTURE.md` (`7899634051c6305f13601b62e9668ebe4f8c2cfb`), `docs/03_phase2_ocr_nsfw_routing.md` (`da4fb316540b84be538c7769114311d30eaf20d0`), `config/config.yaml` (`2a09c666c05db13c7e42a4eb0e1aed46ed2ca756`), `config/config_loader.py` (`802e26252b6008d1be928c538a90b0ea547954b9`), `pipeline/classify.py` (`09ffe3d0133720af2ecd895f97e46622492da86e`), `pipeline/ocr.py` (`65a4214cce477f033823f5cbafad4e55b5e57791`), `backend/database.py` (`f0b0ff89d28955c6a54bb54d322eca2062e45686`), and `pipeline/actions.py` (`62d635599c266465797bda70d3b25ef052f5c9bf`)"
+                },
+                {
+                  "order": 6,
+                  "text": "adjacent lanes were checked and kept out of the canonical proof: `chintan-projects/photo-triage-agent` supports photo triage pressure but does not show the same OCR-side-channel confidence seam; `Aditya-Vasipalli/screensort` / Fragmenta supports screenshot categories plus OCR but widens into intent extraction, calendar actions, structured data extraction, and Notion tasks; receipt-only extraction projects collapse into domain schema extraction rather than mixed-media bucketing; broad SaaS/file-classifier products route into cleanup, cloud storage, or action policy"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, an import review, and live public cross-context reinforcement that repeats bounded semantic media bucketing outside the original donor README family"
                 }
               ]
             },
@@ -44715,7 +44914,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is assigning a small explicit media taxonomy while keeping low-confidence or conflicting items visible for review"
+                  "text": "this is the right canonical default when the main problem is assigning a small explicit media taxonomy while keeping low-confidence or conflicting items visible for review"
                 },
                 {
                   "order": 2,
@@ -44724,6 +44923,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than [AOA-T-0070](../../two-stage-document-ocr-pipeline/TECHNIQUE.md) because it uses OCR only as side text rather than owning OCR staging itself"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the second public context repeats the key shape: visual semantics score a bounded taxonomy, OCR can adjust text-heavy categories without becoming truth, confidence bands determine review versus later action eligibility, corrections remain visible, and file actions stay outside the classification contract"
                 }
               ]
             },
@@ -44735,7 +44938,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -44745,12 +44948,12 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the bundle keeps only the reusable media-bucketing seam and excludes donor model-serving detail, moderation claims, identity inference, and downstream action policy"
+                  "value_markdown": "the bundle keeps only the reusable media-bucketing seam and excludes donor model-serving detail, moderation claims, identity inference, face/person analysis, auto-move policy, deletion, archive policy, UI/product flow, local database schema, and downstream action policy"
                 },
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; `end1989/ai-image-classification` is cited only as public evidence, and the technique does not copy its Python source, EasyOCR implementation, UI, database schema, NSFW module, face detection, file-manager behavior, or auto-organization product workflow"
                 }
               ]
             },
@@ -44761,11 +44964,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that keeps mixed-media bucketing explicit through bounded taxonomy and review gates before later routing or cleanup actions begin"
+                  "text": "future sources can reinforce the default, but they must preserve the narrow boundary: bounded media set, explicit taxonomy, visual semantic scoring, OCR as side-channel, confidence or review thresholds, and a stop-line before duplicate grouping, OCR extraction ownership, moderation, identity inference, file deletion, archive policy, auto-routing, or full media-management products"
                 }
               ]
             },
@@ -44776,11 +44979,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0073` `promoted`"
+                  "text": "move `AOA-T-0073` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the confidence-aware media-bucketing contract survives outside the donor family"
+                  "text": "add an adverse-effects review to preserve the boundary between semantic media bucketing, OCR side text, review thresholds, correction/review loops, moderation, identity inference, duplicate grouping, and later file actions"
                 }
               ]
             }
@@ -44905,11 +45108,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                  "text": "this was a successful bounded external import, and the later Pack 30 review confirmed the same seam in a second public source outside the original donor README family"
                 },
                 {
                   "order": 3,
-                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor classification family"
+                  "text": "`end1989/ai-image-classification` reinforces the import path by exposing configured mixed-media labels, CLIP-based label scoring, OCR text and confidence as side data, OCR-based confidence boosts for text-heavy categories, confidence thresholds for review versus later action eligibility, user correction records, and separated file-action/undo surfaces"
                 }
               ]
             },
@@ -44920,11 +45123,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no import-path blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "a future stronger context should show another public workflow where mixed media are bucketed through bounded visual semantics plus OCR side text under explicit confidence gates before later routing or cleanup actions"
+                  "text": "future stronger contexts should still show mixed media bucketed through bounded visual semantics plus OCR side text under explicit confidence or review gates before later routing, cleanup, moderation, identity inference, duplicate grouping, or archive actions"
                 }
               ]
             },
@@ -44935,11 +45138,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "accept `AOA-T-0073` as a bounded external import and publish it as `promoted`"
+                  "text": "keep this note as the original import review"
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that the confidence-aware media-bucketing contract survives outside the current donor family"
+                  "text": "use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` as the current canonical promotion and boundary review surfaces"
                 }
               ]
             }
@@ -45057,7 +45260,7 @@
                 {
                   "order": 3,
                   "key": "limits or follow-up review concerns",
-                  "value_markdown": "this import still needs one second live adopter beyond the donor classification family and documentation-first adaptation before any canonical discussion is honest"
+                  "value_markdown": "the original import gap closed in Pack 30 after `end1989/ai-image-classification` showed the same bounded media-bucketing seam outside the donor README family; future review should still reject duplicate grouping, OCR extraction ownership, moderation, identity inference, auto-move policy, deletion, archive policy, and full media-management product behavior as separate objects"
                 }
               ]
             }
@@ -45106,6 +45309,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first corpus that records the bounded media-bucketing pattern rather than shipping donor models, prompts, or OCR services"
+                },
+                {
+                  "order": 4,
+                  "key": "live reinforcement",
+                  "value_markdown": "`end1989/ai-image-classification` at commit `e3f3500bf274e802d669ed38403b7637b0897366` repeats the same media-bucketing seam in a public MIT-licensed offline media sorter, while NSFW detection, face detection, UI workflow, auto-organization, local database schema, and file actions stay evidence-only and out of the technique"
                 }
               ]
             },
@@ -45129,6 +45337,10 @@
                 {
                   "order": 4,
                   "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                },
+                {
+                  "order": 5,
+                  "text": "Pack 30 promoted the adaptation to a cross-context canonical default after `end1989/ai-image-classification` confirmed bounded labels, CLIP scoring, OCR confidence side data, review thresholds, user corrections, and separated action/undo behavior outside the original donor README family"
                 }
               ]
             },
@@ -45190,6 +45402,14 @@
                 {
                   "order": 3,
                   "text": "together they show why coarse media bucketing can remain explicit and reviewable before later action policy is decided"
+                },
+                {
+                  "order": 4,
+                  "text": "`end1989/ai-image-classification` shows the pattern as a live public workflow: configured labels include screenshot, meme, receipt, document, work, food, people, nature, and other-style buckets; CLIP embeddings score those labels; OCR results are stored with text, confidence, and regions; OCR text boosts relevant labels such as receipt, chat, and work without replacing the visual classifier; review and auto-move thresholds are separate; review items are selected from the confidence band below auto-move; and user corrections are recorded as a separate training signal"
+                },
+                {
+                  "order": 5,
+                  "text": "inspected `end1989/ai-image-classification` files: `README.md`, `LICENSE`, `docs/ARCHITECTURE.md`, `docs/03_phase2_ocr_nsfw_routing.md`, `config/config.yaml`, `config/config_loader.py`, `pipeline/classify.py`, `pipeline/ocr.py`, `backend/database.py`, and `pipeline/actions.py`"
                 }
               ]
             },
@@ -45200,7 +45420,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor model-serving detail, moderation claims, or OCR-runtime packaging"
+                  "text": "works as a documentation-first adaptation with live public reinforcement and preserves the bounded core without carrying over donor model-serving detail, EasyOCR or PaddleOCR runtime packaging, NSFW/moderation features, face detection, file-manager behavior, auto-organization policy, UI workflow, database schema, or open-ended multimodal assistant behavior"
                 }
               ]
             }

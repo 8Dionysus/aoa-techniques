@@ -5998,12 +5998,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- adapted from open-source `CLIP` and `PaddleOCR`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing"
+          "content_markdown": "- adapted from open-source `CLIP` and `PaddleOCR`\n- landed from `personal-media-ingest`\n- promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for confidence-aware mixed-media bucketing\n- promoted to canonical on 2026-05-12 after `end1989/ai-image-classification` showed a second public workflow with bounded labels, CLIP-based visual scoring, OCR side-text confidence adjustment, review thresholds, correction flow, and file-action separation"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep duplicate grouping and OCR extraction separate unless narrower bridge seams prove reusable\n- split receipt-versus-proof or meme-family overlays only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps semantic bucketing explicit before later routing or cleanup actions"
+          "content_markdown": "- keep duplicate grouping and OCR extraction separate unless narrower bridge seams prove reusable\n- split receipt-versus-proof or meme-family overlays only if those contracts survive independently\n- future sources can reinforce the default only if bounded taxonomy, OCR side-channel handling, review thresholds, and stop-lines before moderation, identity inference, deletion, or auto-routing policy stay visible"
         }
       ]
     },

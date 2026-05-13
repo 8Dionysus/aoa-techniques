@@ -53,7 +53,62 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0070](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | `JaidedAI/EasyOCR` | A public OCR library can keep detection and recognition separately visible, return bounding boxes, recognized text, and confidence as one structured result, and leave downstream extraction or review outside the OCR handoff contract. |
 | [AOA-T-0071](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | `kotaro-kinoshita/yomitoku` | A public document extractor can use schema-defined field targets, visible rule methods, source metadata, confidence, and not-found posture to turn OCR/layout output into bounded fields without becoming OCR staging, LLM extraction, or accounting automation. |
 | [AOA-T-0072](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | `qarmin/czkawka` | A public media dedupe tool can keep perceptual similarity, explicit threshold tuning, reviewable grouped output, and default-off deletion separate from semantic media taxonomy, ranking, archive policy, and cleanup automation. |
+| [AOA-T-0073](../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) | `end1989/ai-image-classification` | A public offline media sorter can keep configured mixed-media labels, CLIP scoring, OCR side-text confidence, review thresholds, user correction, and separated file actions visible without turning bucketing into moderation, identity inference, duplicate grouping, or cleanup policy. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0073 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`end1989/ai-image-classification` at
+`e3f3500bf274e802d669ed38403b7637b0897366` provides the clean public
+source for Pack 30. The repository is MIT licensed and is used as evidence
+only: do not import Python code, EasyOCR or PaddleOCR runtime packaging,
+database schema, UI workflow, NSFW/moderation features, face detection,
+auto-organization, move/delete behavior, or broader media-management
+assumptions into `aoa-techniques`.
+
+Accepted evidence:
+
+- `README.md` exposes an offline media sorter with CLIP classification, OCR
+  text extraction, review/correction flow, and configurable labels such as
+  family, work, receipts, memes, and landscapes.
+- `config/config.yaml` keeps the bucket taxonomy explicit, including people,
+  events, nature, food, screenshots, receipts, documents, work, art, and
+  other-style labels, with separate `auto_move` and `review` thresholds.
+- `config/config_loader.py` validates that the auto-move threshold cannot be
+  lower than the review threshold.
+- `pipeline/classify.py` scores image embeddings against configured labels,
+  stores label confidence, applies OCR text only as a bounded confidence boost
+  for text-heavy labels such as receipt, chat, and work, filters predictions
+  below the review threshold, and separates suggested route plus auto-move
+  eligibility from the label itself.
+- `pipeline/ocr.py` stores OCR text, average confidence, language, and text
+  regions as a side result rather than as final classification truth.
+- `backend/database.py` keeps classifications, OCR results, corrections, NSFW
+  results, and action logs in separate tables.
+- `pipeline/actions.py` keeps move, auto-move, and undo behavior in a separate
+  action manager so file actions do not become part of the semantic bucket
+  contract.
+
+Rejected or bounded:
+
+- `chintan-projects/photo-triage-agent` is adjacent pressure for local media
+  triage, but it does not show the same OCR-side-channel confidence seam.
+- `Aditya-Vasipalli/screensort` / Fragmenta is adjacent pressure for
+  screenshot categories plus OCR, but widens into intent extraction, calendar
+  events, structured data extraction, deletion, and Notion tasks.
+- Receipt-only tools were rejected because they become schema extraction or
+  bookkeeping workflows rather than mixed-media bucketing.
+- Broad AI file organizers and cleanup SaaS products were rejected where the
+  center of gravity was cloud storage, duplicate cleanup, auto-delete, or
+  storage migration instead of one bounded classification seam.
+
+Future search shape: future sources can reinforce this canonical default only
+if they preserve the same narrow seam: bounded media set, explicit taxonomy,
+visual semantic scoring, OCR as side-channel, confidence or review thresholds,
+and a stop-line before duplicate grouping, OCR pipeline ownership, moderation,
+identity inference, deletion, archiving, auto-routing, or full media-management
+product behavior.
 
 ## AOA-T-0072 External Evidence Notes
 
