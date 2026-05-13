@@ -208,6 +208,30 @@ See also:
 |---|---|---|---|---|
 | risk-passport-lift checklist | `absent` | `7` | `techniques/governance/decision-routing/risk-passport-lift/checks/risk-passport-lift-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
 
+### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| session-drift-taxonomy checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/session-drift-taxonomy/checks/session-drift-taxonomy-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) |
+
+### [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| diagnosis-from-reviewed-evidence checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/checks/diagnosis-from-reviewed-evidence-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) |
+
+### [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| repair-shape-from-diagnosis checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/checks/repair-shape-from-diagnosis-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) |
+
+### [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| checkpoint-bound-self-repair checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
+
 ### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -231,30 +255,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| session-drift-taxonomy checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/session-drift-taxonomy/checks/session-drift-taxonomy-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) |
-
-### [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| diagnosis-from-reviewed-evidence checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/checks/diagnosis-from-reviewed-evidence-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) |
-
-### [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| repair-shape-from-diagnosis checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/checks/repair-shape-from-diagnosis-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) |
-
-### [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| checkpoint-bound-self-repair checklist | `absent` | `7` | `techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/checks/checkpoint-bound-self-repair-checklist.md` | [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) |
 
 ### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 

@@ -61,7 +61,57 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0078](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | `aoa-playbooks` owner-followthrough plus evaluated `aoa-summon` boundary | Sibling route consumers can keep landing, seed staging, proof-first, reanchor, merge, defer, and drop branches explicit before action, while summon refuses to hide unresolved competing routes inside child execution. |
 | [AOA-T-0079](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | `aoa-summon` plus `aoa-sdk` A2A summon assessment | Difficulty, risk, control mode, delegate tier, split, reviewed-lane, and human-gate posture can choose, narrow, or block child-route execution without becoming risk scoring, approval policy, or dispatch authority. |
 | [AOA-T-0090](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | `aoa-playbooks` / `aoa-techniques` quest carry plus supporting `aoa-evals` owner-fit | Explicit nearest-wrong rejection can prevent convenience promotion into skill, proof, memo, KAG, routing, runtime, stats, or premature playbook authority while staying smaller than the verdict workflow itself. |
+| [AOA-T-0080](../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | `aoa-skills` `abyss-self-diagnostic-spine` plus evaluated self-diagnose | A downstream runtime-diagnostic overlay can use bounded drift labels before probable cause, owner hint, exit class, or repair posture without making taxonomy a diagnosis or runtime schema. |
+| [AOA-T-0081](../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | `aoa-skills` `abyss-self-diagnostic-spine` plus evaluated self-diagnose | A downstream runtime-diagnostic overlay can emit one read-only diagnosis artifact with symptoms, probable causes, confidence, freshness, owner hints, and unknowns before repair. |
+| [AOA-T-0082](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | `aoa-sdk` closeout follow-through plus `aoa-skills` repair-cycle artifacts | A downstream closeout route can require diagnosis before surfacing bounded self-repair, and repair-cycle examples can preserve owner target, validation, rollback, approval, iteration, stop, and escalation posture without becoming playbook rollout. |
+| [AOA-T-0083](../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | `aoa-agents` checkpoint stack, `aoa-playbooks` checkpoint rollout, and `aoa-skills` repair-cycle artifacts | Downstream role and scenario surfaces can keep approval, rollback, health checks, iteration, and improvement logs explicit around repair while techniques remain smaller than role law, proof, runtime, or playbook authority. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0080 / AOA-T-0081 / AOA-T-0082 / AOA-T-0083 Cross-Context Evidence Notes
+
+2026-05-12 result: exact-fit downstream context found for Pack 34.
+This is sibling-repo downstream evidence, not external import proof. Do not
+import project-runtime diagnostic overlays, SDK closeout execution, role-law,
+playbook scenario design, proof verdicts, memo writeback, stats refresh, or
+runtime self-healing into the technique bundles.
+
+Accepted evidence:
+
+- `aoa-skills` at `eed21463dfde1bf0791e8ccbe6fdeaf68f8f0aec` keeps
+  `abyss-self-diagnostic-spine` as a project overlay over
+  `aoa-session-self-diagnose`: one concrete runtime target, grouped evidence
+  axes, drift classes, confidence, freshness, unknowns, and one exit class are
+  emitted before repair authority.
+- `aoa-skills` evaluated `aoa-session-self-diagnose` and
+  `aoa-session-self-repair` as stay-evaluated skill surfaces, preserving
+  reviewed diagnosis before repair and prepared/executed/verified repair states
+  as distinct outcomes.
+- `aoa-sdk` at `931e7460ca4afb85dc20d400e8fad7d7d2c294e6` surfaces
+  `aoa-session-self-repair` from reviewed closeout only when a diagnosis
+  receipt exists and no repair-cycle receipt has landed.
+- `aoa-skills` growth-cycle examples preserve repair packets and repair-cycle
+  receipts with owner target, target artifact class, execution posture,
+  approval, rollback, health check, iteration limit, stop conditions, and
+  escalation route.
+- `aoa-agents` at `ff5c397d59916c9a791a04e27328f5f2f3a8bc5f` owns the
+  role-facing self-agent checkpoint stack, while `aoa-playbooks` at
+  `78069a795690b343c5f228d1614c3e48adeaaead` owns scenario-level checkpoint
+  rollout and owner-followthrough continuity.
+
+Rejected or bounded:
+
+- project-runtime diagnostic schemas and commands;
+- SDK closeout execution, hooks, storage layout, and owner-handoff queues;
+- skill workflow execution and status governance;
+- role-law and self-agent profile authority;
+- playbook scenario orchestration and real-run gate reviews;
+- proof verdicts, memo writeback, stats refresh, runtime self-healing, and
+  autonomous self-modification.
+
+Future search shape: future sources can reinforce these canonical defaults
+only if taxonomy, diagnosis, repair shape, and checkpoint posture stay as four
+separate moves with reviewed evidence before mutation and visible stop lines
+before owner, proof, role, playbook, runtime, or memory layers act.
 
 ## AOA-T-0076 / AOA-T-0078 / AOA-T-0079 / AOA-T-0090 Cross-Context Evidence Notes
 

@@ -1799,8 +1799,8 @@
       ],
       "counts": {
         "total": 4,
-        "canonical": 0,
-        "promoted": 4,
+        "canonical": 4,
+        "promoted": 0,
         "by_domain": {
           "agent-workflows": 4,
           "docs": 0,
@@ -1835,7 +1835,7 @@
           "id": "AOA-T-0080",
           "name": "session-drift-taxonomy",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape.",
           "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md",
           "kind": "assessment"
@@ -1844,7 +1844,7 @@
           "id": "AOA-T-0081",
           "name": "diagnosis-from-reviewed-evidence",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.",
           "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
           "kind": "assessment"
@@ -1853,7 +1853,7 @@
           "id": "AOA-T-0082",
           "name": "repair-shape-from-diagnosis",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.",
           "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md",
           "kind": "recovery"
@@ -1862,7 +1862,7 @@
           "id": "AOA-T-0083",
           "name": "checkpoint-bound-self-repair",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.",
           "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md",
           "kind": "recovery"

@@ -431,6 +431,58 @@ See also:
 - Validate by: each passport belongs to one explicit route; the field set stays small and reviewable; difficulty, risk, control mode, delegate...
 - Source: [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md)
 
+### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`canonical`)
+
+- Summary: Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape.
+- Intent: Classify repeated post-session friction into bounded drift types so a later diagnosis pass can...
+- Use when: the session is reviewed and several friction signals survived it or the next honest move is diagnosis rather...
+- Avoid when: the session is still live or unreviewed or the issue is already fully diagnosed.
+- Needs: one reviewed session artifact or harvest packet; observed frictions, failures, contradictions, or proof gaps; any repeated blockers...
+- Produces: one bounded drift-type list; one description of what each drift type means in the current case; one...
+- Core contract: taxonomy is read-only; drift type is not the same thing as probable cause.
+- Main risk: vague labels replace real classification.
+- Validate by: the source evidence is reviewed; drift labels stay bounded and reusable; symptom, drift type, and probable cause remain distinct.
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md)
+
+### [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`canonical`)
+
+- Summary: Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.
+- Intent: Turn reviewed friction evidence into a bounded diagnosis packet so symptoms, probable causes, owner...
+- Use when: the session is reviewed and repeated friction or contradiction survived it or the next honest move is diagnosis...
+- Avoid when: the session is still live or unreviewed or diagnosis already exists and the next honest move is repair.
+- Needs: one reviewed session artifact or harvest packet; explicit symptoms, frictions, contradictions, or failures; any drift taxonomy already...
+- Produces: one DIAGNOSIS_PACKET; one symptom list; one probable-cause layer with explicit uncertainty where needed.
+- Core contract: diagnosis starts from reviewed evidence; symptom and probable-cause layers stay distinct.
+- Main risk: symptoms and causes collapse into one vague narrative.
+- Validate by: the source evidence is reviewed and bounded; symptoms and probable causes stay distinct; likely owner hints remain explicit but...
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
+
+### [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`canonical`)
+
+- Summary: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.
+- Intent: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next...
+- Use when: a reviewed diagnosis already exists or the next honest move is a bounded repair packet rather than another...
+- Avoid when: diagnosis does not exist yet or the repair is large enough to be a playbook or broader rollout.
+- Needs: one reviewed diagnosis packet; likely owner targets or owner-layer hints; known validation surfaces.
+- Produces: one smallest honest repair shape; one primary owner target; one target artifact class or repair quest shape.
+- Core contract: diagnosis is a prerequisite; the chosen repair shape stays smaller than a scenario rollout.
+- Main risk: the chosen repair shape is larger than the diagnosis justifies.
+- Validate by: a reviewed diagnosis exists; the chosen repair shape is the smallest honest shape; one primary owner target is explicit.
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md)
+
+### [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`canonical`)
+
+- Summary: Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.
+- Intent: Keep self-repair behind explicit checkpoint posture so bounded repair stays reviewable and reversible instead...
+- Use when: a bounded repair shape already exists or the repair may touch important system surfaces.
+- Avoid when: no reviewed diagnosis or repair shape exists yet or the work is a small non-sensitive edit that does...
+- Needs: one bounded repair shape; relevant policy or constitution checks; approval posture.
+- Produces: one checkpoint-bound repair packet; one explicit approval or confirmation requirement; one rollback marker.
+- Core contract: self-repair is not free self-modification; important mutations require checkpoint posture.
+- Main risk: checkpoint posture is partial and one critical field is missing.
+- Validate by: a bounded repair shape exists first; checkpoint fields are all explicit; rollback and health-check posture are present.
+- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
+
 ### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`canonical`)
 
 - Summary: Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.
@@ -482,58 +534,6 @@ See also:
 - Main risk: stale local git state produces a false sense of verification.
 - Validate by: at least one concrete handoff claim can be tied to visible git evidence; the verification result names the evidence...
 - Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md)
-
-### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
-
-- Summary: Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape.
-- Intent: Classify repeated post-session friction into bounded drift types so a later diagnosis pass can...
-- Use when: the session is reviewed and several friction signals survived it or the next honest move is diagnosis rather...
-- Avoid when: the session is still live or unreviewed or the issue is already fully diagnosed.
-- Needs: one reviewed session artifact or harvest packet; observed frictions, failures, contradictions, or proof gaps; any repeated blockers...
-- Produces: one bounded drift-type list; one description of what each drift type means in the current case; one...
-- Core contract: taxonomy is read-only; drift type is not the same thing as probable cause.
-- Main risk: vague labels replace real classification.
-- Validate by: the source evidence is reviewed; drift labels stay bounded and reusable; symptom, drift type, and probable cause remain distinct.
-- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md)
-
-### [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) - diagnosis-from-reviewed-evidence (`promoted`)
-
-- Summary: Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.
-- Intent: Turn reviewed friction evidence into a bounded diagnosis packet so symptoms, probable causes, owner...
-- Use when: the session is reviewed and repeated friction or contradiction survived it or the next honest move is diagnosis...
-- Avoid when: the session is still live or unreviewed or diagnosis already exists and the next honest move is repair.
-- Needs: one reviewed session artifact or harvest packet; explicit symptoms, frictions, contradictions, or failures; any drift taxonomy already...
-- Produces: one DIAGNOSIS_PACKET; one symptom list; one probable-cause layer with explicit uncertainty where needed.
-- Core contract: diagnosis starts from reviewed evidence; symptom and probable-cause layers stay distinct.
-- Main risk: symptoms and causes collapse into one vague narrative.
-- Validate by: the source evidence is reviewed and bounded; symptoms and probable causes stay distinct; likely owner hints remain explicit but...
-- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md)
-
-### [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) - repair-shape-from-diagnosis (`promoted`)
-
-- Summary: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.
-- Intent: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next...
-- Use when: a reviewed diagnosis already exists or the next honest move is a bounded repair packet rather than another...
-- Avoid when: diagnosis does not exist yet or the repair is large enough to be a playbook or broader rollout.
-- Needs: one reviewed diagnosis packet; likely owner targets or owner-layer hints; known validation surfaces.
-- Produces: one smallest honest repair shape; one primary owner target; one target artifact class or repair quest shape.
-- Core contract: diagnosis is a prerequisite; the chosen repair shape stays smaller than a scenario rollout.
-- Main risk: the chosen repair shape is larger than the diagnosis justifies.
-- Validate by: a reviewed diagnosis exists; the chosen repair shape is the smallest honest shape; one primary owner target is explicit.
-- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md)
-
-### [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) - checkpoint-bound-self-repair (`promoted`)
-
-- Summary: Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.
-- Intent: Keep self-repair behind explicit checkpoint posture so bounded repair stays reviewable and reversible instead...
-- Use when: a bounded repair shape already exists or the repair may touch important system surfaces.
-- Avoid when: no reviewed diagnosis or repair shape exists yet or the work is a small non-sensitive edit that does...
-- Needs: one bounded repair shape; relevant policy or constitution checks; approval posture.
-- Produces: one checkpoint-bound repair packet; one explicit approval or confirmation requirement; one rollback marker.
-- Core contract: self-repair is not free self-modification; important mutations require checkpoint posture.
-- Main risk: checkpoint posture is partial and one critical field is missing.
-- Validate by: a bounded repair shape exists first; checkpoint fields are all explicit; rollback and health-check posture are present.
-- Source: [TECHNIQUE.md](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
 
 ### [AOA-T-0084](../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) - progression-evidence-lift (`promoted`)
 

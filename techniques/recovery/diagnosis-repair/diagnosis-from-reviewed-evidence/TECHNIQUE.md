@@ -3,7 +3,7 @@ id: AOA-T-0081
 name: diagnosis-from-reviewed-evidence
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-self-diagnose/SKILL.md + skills/aoa-session-self-diagnose/techniques.yaml
@@ -17,12 +17,12 @@ tags:
   - read-only
   - post-session
 summary: Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # diagnosis-from-reviewed-evidence
@@ -190,4 +192,4 @@ See `checks/diagnosis-from-reviewed-evidence-checklist.md`.
 
 - keep drift taxonomy separate through `AOA-T-0080`
 - keep repair packet planning separate through `AOA-T-0082`
-- add a second live context that uses the same diagnosis-from-reviewed-evidence seam outside the current AoA session-harvest lineage
+- keep project-runtime diagnostic overlays as downstream consumers rather than part of this bundle's invariant core

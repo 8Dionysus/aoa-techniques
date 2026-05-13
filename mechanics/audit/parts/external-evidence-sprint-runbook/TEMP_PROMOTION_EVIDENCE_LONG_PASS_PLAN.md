@@ -20,8 +20,9 @@ Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, the
 Pack 27 closure for `AOA-T-0070`, the Pack 28 closure for `AOA-T-0071`,
 the Pack 29 closure for `AOA-T-0072`, the Pack 30 closure for
 `AOA-T-0073`, the Pack 31 closure for `AOA-T-0074`, the Pack 32 closures
-for `AOA-T-0075` plus `AOA-T-0077`, and the Pack 33 closures for
-`AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090`, the live promoted queue is `38`
+for `AOA-T-0075` plus `AOA-T-0077`, the Pack 33 closures for
+`AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090`, and the Pack 34
+closures for `AOA-T-0080`, `AOA-T-0081`, `AOA-T-0082`, and `AOA-T-0083`, the live promoted queue is `34`
 bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
@@ -187,7 +188,7 @@ and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
 Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26,
-Pack 27, Pack 28, Pack 29, Pack 30, Pack 31, Pack 32, and Pack 33 closures is `38`
+Pack 27, Pack 28, Pack 29, Pack 30, Pack 31, Pack 32, Pack 33, and Pack 34 closures is `34`
 promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
@@ -198,7 +199,8 @@ with `AOA-T-0026`,
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`,
 `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`, `AOA-T-0070`,
 `AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, `AOA-T-0074`, `AOA-T-0075`,
-`AOA-T-0077`, `AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090`
+`AOA-T-0077`, `AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, `AOA-T-0090`,
+`AOA-T-0080`, `AOA-T-0081`, `AOA-T-0082`, and `AOA-T-0083`
 counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
@@ -214,7 +216,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with the Pack 33 canonical closure recorded.
+This is an original `82/82` promoted-corpus plan with the Pack 34 canonical closure recorded.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -292,10 +294,10 @@ appropriate durable surface.
 | Stage 5 | [AOA-T-0078 decision-fork-cards](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-playbooks` owner-followthrough branches and evaluated `aoa-summon` route-forks boundary close the visible branch-choice-before-action gap |
 | Stage 5 | [AOA-T-0079 risk-passport-lift](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-summon` plus `aoa-sdk` A2A summon assessment close the difficulty/risk/control/delegate/stop posture gap for choosing, narrowing, or blocking a child route |
 | Stage 5 | [AOA-T-0090 nearest-wrong-target-rejection](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | agent-workflows / guardrail | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-playbooks`, `aoa-techniques` quest carry, and supporting `aoa-evals` owner-fit surfaces close the nearest-plausible-wrong-target rejection gap |
-| Stage 5 | [AOA-T-0080 session-drift-taxonomy](../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | pending |  |
-| Stage 5 | [AOA-T-0081 diagnosis-from-reviewed-evidence](../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | pending |  |
-| Stage 5 | [AOA-T-0082 repair-shape-from-diagnosis](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | pending |  |
-| Stage 5 | [AOA-T-0083 checkpoint-bound-self-repair](../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | pending |  |
+| Stage 5 | [AOA-T-0080 session-drift-taxonomy](../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | exact-fit downstream context; exits to canonical | `aoa-skills` `abyss-self-diagnostic-spine` closes the runtime-body drift-taxonomy gap while keeping taxonomy smaller than diagnosis, owner hints, and repair |
+| Stage 5 | [AOA-T-0081 diagnosis-from-reviewed-evidence](../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | exact-fit downstream context; exits to canonical | `aoa-skills` `abyss-self-diagnostic-spine` closes the read-only diagnosis gap with target, evidence axes, symptoms, probable causes, owner hints, confidence, freshness, and unknowns before repair |
+| Stage 5 | [AOA-T-0082 repair-shape-from-diagnosis](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | exact-fit downstream context; exits to canonical | `aoa-sdk` closeout rules plus `aoa-skills` repair-cycle artifacts close the diagnosis-before-bounded-repair gap with owner target, validation, rollback, approval, iteration, stop, and escalation posture |
+| Stage 5 | [AOA-T-0083 checkpoint-bound-self-repair](../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | exact-fit downstream context; exits to canonical | `aoa-agents` checkpoint stack, `aoa-playbooks` checkpoint rollout, and `aoa-skills` repair-cycle artifacts close the approval/rollback/health/iteration/log checkpoint gap without granting role, proof, runtime, or playbook authority |
 | Stage 5 | [AOA-T-0084 progression-evidence-lift](../../../../techniques/continuity/donor-harvest/progression-evidence-lift/TECHNIQUE.md) | agent-workflows / lift | Pack 35 progression and quest reflection | pending |  |
 | Stage 5 | [AOA-T-0085 multi-axis-quest-overlay](../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/TECHNIQUE.md) | agent-workflows / lift | Pack 35 progression and quest reflection | pending |  |
 | Stage 5 | [AOA-T-0086 automation-fit-matrix](../../../../techniques/governance/automation-readiness/automation-fit-matrix/TECHNIQUE.md) | agent-workflows / assessment | Pack 36 automation opportunity gates | pending |  |
@@ -502,7 +504,9 @@ each has a narrow substrate and false positives are likely.
     downstream evidence from `aoa-playbooks`, `aoa-summon`, `aoa-sdk`, and
     supporting `aoa-evals` owner-fit surfaces
 36. Pack 34 - Diagnosis And Repair Loop: `AOA-T-0080`,
-    `AOA-T-0081`, `AOA-T-0082`, `AOA-T-0083`
+    `AOA-T-0081`, `AOA-T-0082`, `AOA-T-0083` - closed; exact-fit sibling
+    downstream evidence from `aoa-skills`, `aoa-sdk`, `aoa-agents`, and
+    `aoa-playbooks`
 37. Pack 35 - Progression And Quest Reflection: `AOA-T-0084`,
     `AOA-T-0085`
 38. Pack 36 - Automation Opportunity Gates: `AOA-T-0086`,
@@ -2139,6 +2143,101 @@ Reject:
 - skill, playbook, proof, memo, routing, KAG, runtime, or stats surfaces as
   convenient owner substitutes;
 - final promotion review or owner-object authoring as bundle-owned behavior.
+
+### AOA-T-0080: `session-drift-taxonomy`
+
+Stage 5 Pack 34 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-skills` `abyss-self-diagnostic-spine` uses bounded drift classes
+over runtime-body evidence before diagnosis exit class or repair authority.
+
+Exact evidence:
+
+- one concrete runtime target is resolved before symptoms are interpreted;
+- evidence is grouped by axis, freshness, confidence, and unknowns;
+- drift classes remain read-only and smaller than diagnosis, owner hints, and
+  repair planning;
+- reviewed self-diagnose status keeps drift and diagnosis evidence-shaped
+  rather than root-cause settlement.
+
+Reject:
+
+- runtime diagnostic schemas or commands as technique invariants;
+- owner verdicts, proof verdicts, or repair plans inside taxonomy;
+- hidden OS Abyss dependency for portable use.
+
+### AOA-T-0081: `diagnosis-from-reviewed-evidence`
+
+Stage 5 Pack 34 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-skills` `abyss-self-diagnostic-spine` emits one read-only
+diagnostic artifact from reviewed runtime and optional session evidence before
+repair follow-through.
+
+Exact evidence:
+
+- symptoms, probable causes, owner hints, confidence, freshness, and unknowns
+  are preserved distinctly;
+- one exit class is emitted without mutating repair, progression, quest, or
+  owner truth;
+- the overlay checklist requires repo-relative evidence refs and handoff
+  discipline;
+- evaluated self-diagnose status keeps generated summaries and stale claims
+  from becoming settled evidence.
+
+Reject:
+
+- proof authority or final root-cause settlement;
+- repair execution inside diagnosis;
+- runtime doctrine and project-local wrappers as invariant technique content.
+
+### AOA-T-0082: `repair-shape-from-diagnosis`
+
+Stage 5 Pack 34 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-sdk` and `aoa-skills` show diagnosis-before-repair routing and
+bounded repair packet artifacts without turning repair shape into a playbook or
+runtime self-healing loop.
+
+Exact evidence:
+
+- `aoa-sdk` closeout surfaces `aoa-session-self-repair` only when a diagnosis
+  receipt exists and no repair-cycle receipt has landed;
+- repair-cycle examples preserve owner target, target artifact class,
+  validation health check, rollback marker, approval posture, iteration limit,
+  stop conditions, and escalation route;
+- playbook real-run summaries keep post-repair continuity as owner handoff or
+  kept-open quest rather than direct skill, proof, memo, automation, runtime, or
+  playbook promotion.
+
+Reject:
+
+- prepared repair packets as executed or verified repair;
+- checkpoint stack, playbook rollout, proof, memory, stats, or owner-object
+  authorship as bundle-owned behavior;
+- generic self-improvement prose as repair shape.
+
+### AOA-T-0083: `checkpoint-bound-self-repair`
+
+Stage 5 Pack 34 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-agents`, `aoa-playbooks`, `aoa-sdk`, and `aoa-skills` all preserve
+checkpoint posture around meaningful self-repair without making the technique
+own role law, playbook execution, proof, or runtime autonomy.
+
+Exact evidence:
+
+- role-facing checkpoint stack names constitution or policy check, approval
+  gate, rollback marker, health check, iteration limit, and improvement log;
+- checkpoint rollout playbook keeps the same posture as scenario evidence,
+  with rollback/fallback and return-to-anchor rules;
+- repair-cycle artifacts preserve `checkpoint_required`, prepared-vs-verified
+  execution posture, approval, rollback, health check, stop conditions, and
+  escalation.
+
+Reject:
+
+- hidden self-modification or runtime self-healing;
+- role-law, proof-law, playbook scenario design, SDK execution, or memo/stats
+  authority as technique meaning;
+- generic confirmation gating as a substitute for repair-specific checkpoint
+  posture.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

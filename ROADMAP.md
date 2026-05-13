@@ -80,7 +80,7 @@ The current direction is:
 ## Current Checked Contour
 
 The current public corpus is the post-`v0.4.2` working contour: `107` bundles,
-`38` canonical, and `69` promoted.
+`73` canonical, and `34` promoted.
 
 Current anchors:
 

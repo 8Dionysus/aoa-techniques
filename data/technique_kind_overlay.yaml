@@ -483,25 +483,25 @@ entries:
 - id: AOA-T-0080
   name: session-drift-taxonomy
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: diagnosis-repair
 - id: AOA-T-0081
   name: diagnosis-from-reviewed-evidence
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: diagnosis-repair
 - id: AOA-T-0082
   name: repair-shape-from-diagnosis
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: recovery
   family: diagnosis-repair
 - id: AOA-T-0083
   name: checkpoint-bound-self-repair
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: recovery
   family: diagnosis-repair
 - id: AOA-T-0084
