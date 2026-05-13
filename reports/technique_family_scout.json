@@ -1553,8 +1553,8 @@
       ],
       "counts": {
         "total": 5,
-        "canonical": 2,
-        "promoted": 3,
+        "canonical": 3,
+        "promoted": 2,
         "by_domain": {
           "agent-workflows": 5,
           "docs": 0,
@@ -1608,7 +1608,7 @@
           "id": "AOA-T-0072",
           "name": "perceptual-media-dedupe-with-threshold-review",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
           "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
           "kind": "ingest"

@@ -22,6 +22,18 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0072 perceptual-media-dedupe-with-threshold-review` to
+  `canonical` after `qarmin/czkawka` showed exact-fit public reinforcement for
+  thresholded perceptual media dedupe: Similar Images finds visually similar
+  rather than byte-identical images, `max_difference` keeps strictness explicit,
+  hash algorithm and hash size remain tunable, grouped output preserves
+  difference-derived similarity labels and can be printed or saved as JSON, and
+  deletion stays a separate default-off option. Czkawka's relevant core and CLI
+  surfaces are MIT licensed and are used as evidence only; GUI/product workflow,
+  mixed-license assets, cache layout, delete method names, hardlink strategy,
+  semantic media taxonomy, archive policy, quality ranking, and full
+  media-management behavior stay outside the bundle, updating Audit queue
+  posture from `47` promoted techniques to `46`
 - promoted `AOA-T-0071 template-backed-field-extraction-after-ocr` to
   `canonical` after `kotaro-kinoshita/yomitoku` showed exact-fit public
   reinforcement for schema-backed post-OCR field extraction: YAML schemas name

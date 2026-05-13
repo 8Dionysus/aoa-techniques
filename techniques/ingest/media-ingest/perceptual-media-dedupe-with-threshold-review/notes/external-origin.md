@@ -30,4 +30,4 @@ It complements `TECHNIQUE.md` and records provenance, adaptation boundaries, and
 
 - why this adaptation is reusable here: many screenshot, meme, and photo collections need near-duplicate grouping to stay visible and reviewable before any preserve, delete, or archive decision happens
 - downstream repo impact: later action policies or cleanup workflows belong in `aoa-skills`, while this repository keeps only the reusable grouping contract
-- limits or follow-up review concerns: this import still needs one second live adopter beyond the donor dedupe family and documentation-first adaptation before any canonical discussion is honest
+- limits or follow-up review concerns: the original import gap closed in Pack 29 after `qarmin/czkawka` showed the same thresholded perceptual grouping seam outside the donor dedupe family; future review should still reject cleanup policy, semantic taxonomy, and ranking or quality-scoring doctrine as separate objects

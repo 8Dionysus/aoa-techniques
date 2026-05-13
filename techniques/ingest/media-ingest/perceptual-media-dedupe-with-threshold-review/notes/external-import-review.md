@@ -32,15 +32,15 @@
 ## Import-path assessment
 
 - result: pass
-- this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique
-- the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor dedupe family
+- this was a successful bounded external import, and the later Pack 29 review confirmed the same seam in a second public source outside the donor dedupe family
+- `qarmin/czkawka` reinforces the import path by exposing thresholded perceptual image grouping, visible grouped results, similarity labels, JSON or text output, and deletion as a separate default-off option
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
-- a future stronger context should show another public workflow where near-duplicate media are grouped through explicit thresholds and review buckets before later cleanup actions
+- no import-path blocker remains for canonical status
+- future stronger contexts should still show near-duplicate media grouped through explicit thresholds or bands and reviewable output before later cleanup, archive, semantic classification, or ranking actions
 
 ## Recommendation
 
-- accept `AOA-T-0072` as a bounded external import and publish it as `promoted`
-- defer any canonical review until another live adopter confirms that the reviewable duplicate-grouping contract survives outside the current donor family
+- keep this note as the original import review
+- use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` as the current canonical promotion and boundary review surfaces
