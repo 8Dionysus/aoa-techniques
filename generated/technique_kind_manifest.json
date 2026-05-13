@@ -164,8 +164,8 @@
       ],
       "counts": {
         "total": 13,
-        "canonical": 7,
-        "promoted": 6,
+        "canonical": 8,
+        "promoted": 5,
         "by_domain": {
           "agent-workflows": 8,
           "docs": 3,
@@ -196,7 +196,7 @@
           "id": "AOA-T-0090",
           "name": "nearest-wrong-target-rejection",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
           "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md"
         },
@@ -1031,8 +1031,8 @@
       ],
       "counts": {
         "total": 10,
-        "canonical": 0,
-        "promoted": 10,
+        "canonical": 3,
+        "promoted": 7,
         "by_domain": {
           "agent-workflows": 10,
           "docs": 0,
@@ -1047,7 +1047,7 @@
           "id": "AOA-T-0076",
           "name": "owner-layer-triage",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.",
           "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md"
         },
@@ -1055,7 +1055,7 @@
           "id": "AOA-T-0078",
           "name": "decision-fork-cards",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
           "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md"
         },
@@ -1063,7 +1063,7 @@
           "id": "AOA-T-0079",
           "name": "risk-passport-lift",
           "domain": "agent-workflows",
-          "status": "promoted",
+          "status": "canonical",
           "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
           "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md"
         },

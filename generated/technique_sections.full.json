@@ -6244,12 +6244,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `aoa-skills` as the owner-placement half of `aoa-session-donor-harvest`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded owner-layer placement workflow"
+          "content_markdown": "- born in `aoa-skills` as the owner-placement half of `aoa-session-donor-harvest`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded owner-layer placement workflow\n- promoted to `canonical` on 2026-05-12 after `aoa-playbooks` owner-followthrough and session-growth routes, sibling quest entries, and supporting `aoa-evals` owner-fit surfaces showed the same one-unit owner verdict plus nearest-wrong-target discipline outside the originating donor-harvest skill"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep donor extraction separate through `AOA-T-0075` instead of widening this bundle into a whole post-session harvest stack\n- add a second live context that uses the same one-unit placement verdict outside the current AoA session-harvest lineage\n- keep final quest promotion review, derivative bridge updates, and broader context-map design in sibling techniques"
+          "content_markdown": "- keep donor extraction separate through `AOA-T-0075` instead of widening this bundle into a whole post-session harvest stack\n- keep final quest promotion review, derivative bridge updates, and broader context-map design in sibling techniques\n- keep playbook, eval, memo, routing, KAG, and SDK consumers downstream of the owner verdict rather than letting them become first-authoring authority"
         }
       ]
     },
@@ -6408,12 +6408,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `aoa-skills` as the branch-card half of `aoa-session-route-forks`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded post-session branch-analysis workflow"
+          "content_markdown": "- born in `aoa-skills` as the branch-card half of `aoa-session-route-forks`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded post-session branch-analysis workflow\n- promoted to `canonical` on 2026-05-12 after `aoa-playbooks` owner-followthrough and session-growth routes plus the evaluated `aoa-summon` boundary showed explicit branch choice before action outside the originating route-forks skill"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep route passports smaller through `AOA-T-0079` instead of widening this bundle into policy metadata\n- keep playbook-scale scenario design outside this bundle\n- add a second live context that uses the same explicit branch-card seam outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep route passports smaller through `AOA-T-0079` instead of widening this bundle into policy metadata\n- keep playbook-scale scenario design outside this bundle\n- keep summon, playbook, routing, proof, and owner-followthrough consumers downstream of branch-card choice rather than letting cards become hidden route authority"
         }
       ]
     },
@@ -6490,12 +6490,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `aoa-skills` as the route-passport half of `aoa-session-route-forks`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded per-route posture technique"
+          "content_markdown": "- born in `aoa-skills` as the route-passport half of `aoa-session-route-forks`\n- extracted into `aoa-techniques` on 2026-04-05 as a bounded per-route posture technique\n- promoted to `canonical` on 2026-05-12 after `aoa-summon` and `aoa-sdk` A2A summon assessment used difficulty, risk, control mode, delegate tier, split, and human-gate posture to choose, narrow, or block child-route execution"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep branch-card meaning separate through `AOA-T-0078`\n- keep repair checkpoints separate through `AOA-T-0083`\n- add a second live context that uses the same small per-route posture seam outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep branch-card meaning separate through `AOA-T-0078`\n- keep repair checkpoints separate through `AOA-T-0083`\n- keep route-passport fields descriptive and bounded when consumed by playbooks, summon gates, SDK helpers, or routing readers"
         }
       ]
     },
@@ -7392,12 +7392,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- born in `aoa-skills` as the rejection half of `aoa-quest-harvest`\n- extracted into `aoa-techniques` on 2026-04-06 as a bounded nearest-wrong-target clarification technique"
+          "content_markdown": "- born in `aoa-skills` as the rejection half of `aoa-quest-harvest`\n- extracted into `aoa-techniques` on 2026-04-06 as a bounded nearest-wrong-target clarification technique\n- promoted to `canonical` on 2026-05-12 after `aoa-playbooks`, `aoa-techniques` quest carry, and supporting `aoa-evals` owner-fit surfaces used explicit nearest-wrong rejection to prevent convenience promotion into skill, memo, KAG, routing, proof, or playbook authority"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep final promotion review separate through `AOA-T-0089`\n- add a second live context outside the current AoA quest lineage\n- keep long-form anti-pattern doctrine outside this bundle"
+          "content_markdown": "- keep final promotion review separate through `AOA-T-0089`\n- keep long-form anti-pattern doctrine outside this bundle\n- keep nearest-wrong rejection paired to one chosen verdict when downstream consumers use it for owner follow-through, quest carry, or proof review"
         }
       ]
     },

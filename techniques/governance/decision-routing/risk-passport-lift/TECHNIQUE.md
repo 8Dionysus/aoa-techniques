@@ -3,7 +3,7 @@ id: AOA-T-0079
 name: risk-passport-lift
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-route-forks/SKILL.md + skills/aoa-session-route-forks/checks/review.md
@@ -17,12 +17,12 @@ tags:
   - branching
   - control-mode
 summary: Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # risk-passport-lift
@@ -181,9 +183,10 @@ See `checks/risk-passport-lift-checklist.md`.
 
 - born in `aoa-skills` as the route-passport half of `aoa-session-route-forks`
 - extracted into `aoa-techniques` on 2026-04-05 as a bounded per-route posture technique
+- promoted to `canonical` on 2026-05-12 after `aoa-summon` and `aoa-sdk` A2A summon assessment used difficulty, risk, control mode, delegate tier, split, and human-gate posture to choose, narrow, or block child-route execution
 
 ## Future evolution
 
 - keep branch-card meaning separate through `AOA-T-0078`
 - keep repair checkpoints separate through `AOA-T-0083`
-- add a second live context that uses the same small per-route posture seam outside the current AoA session-harvest lineage
+- keep route-passport fields descriptive and bounded when consumed by playbooks, summon gates, SDK helpers, or routing readers

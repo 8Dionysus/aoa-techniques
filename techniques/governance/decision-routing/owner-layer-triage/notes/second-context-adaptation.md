@@ -30,6 +30,7 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded placement workflow, not a docs taxonomy or routing system
 - the public wording still keeps one candidate, one owner, one rejected nearest-wrong target as the core seam
 - the donor evidence remains strong enough to justify a promoted public bundle without importing the whole AoA routing surface
+- live `aoa-playbooks` owner-followthrough and session-growth routes now consume the same owner repo, owner shape, and nearest-wrong-target posture before downstream follow-through, with `aoa-evals` preserving a bounded supporting owner-fit proof surface
 
 ## Result
 - verdict: works

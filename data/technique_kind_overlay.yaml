@@ -459,7 +459,7 @@ entries:
 - id: AOA-T-0076
   name: owner-layer-triage
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: decision-routing
 - id: AOA-T-0077
@@ -471,13 +471,13 @@ entries:
 - id: AOA-T-0078
   name: decision-fork-cards
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: decision-routing
 - id: AOA-T-0079
   name: risk-passport-lift
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: assessment
   family: decision-routing
 - id: AOA-T-0080
@@ -543,7 +543,7 @@ entries:
 - id: AOA-T-0090
   name: nearest-wrong-target-rejection
   domain: agent-workflows
-  status: promoted
+  status: canonical
   kind: guardrail
   family: automation-governance
 - id: AOA-T-0091

@@ -822,6 +822,32 @@
       }
     },
     {
+      "id": "AOA-T-0076",
+      "name": "owner-layer-triage",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.",
+      "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
+      "topology": {
+        "family": "decision-routing",
+        "capability_class": [
+          "compare",
+          "choose",
+          "observe"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "memory-adjacent-artifacts"
+        ],
+        "execution_profile": "medium-agent",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0077",
       "name": "harvest-packet-contract",
       "domain": "agent-workflows",
@@ -847,6 +873,84 @@
           "read-only",
           "degraded-mode",
           "external-evidence"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0078",
+      "name": "decision-fork-cards",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
+      "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
+      "topology": {
+        "family": "decision-routing",
+        "capability_class": [
+          "compare",
+          "choose",
+          "observe"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "history",
+          "runtime-state"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0079",
+      "name": "risk-passport-lift",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
+      "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
+      "topology": {
+        "family": "decision-routing",
+        "capability_class": [
+          "compare",
+          "choose",
+          "observe"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "runtime-state"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "mutating",
+          "approval-required"
+        ]
+      }
+    },
+    {
+      "id": "AOA-T-0090",
+      "name": "nearest-wrong-target-rejection",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
+      "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "topology": {
+        "family": "automation-governance",
+        "capability_class": [
+          "choose"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "small-agent",
+        "risk_posture": [
+          "read-only"
         ]
       }
     },
@@ -923,86 +1027,6 @@
         "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0076",
-      "name": "owner-layer-triage",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.",
-      "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
-      "topology": {
-        "family": "decision-routing",
-        "capability_class": [
-          "compare",
-          "choose",
-          "observe"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "memory-adjacent-artifacts"
-        ],
-        "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0078",
-      "name": "decision-fork-cards",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
-      "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
-      "topology": {
-        "family": "decision-routing",
-        "capability_class": [
-          "compare",
-          "choose",
-          "observe"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "history",
-          "runtime-state"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0079",
-      "name": "risk-passport-lift",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
-      "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
-      "topology": {
-        "family": "decision-routing",
-        "capability_class": [
-          "compare",
-          "choose",
-          "observe"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "runtime-state"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "mutating",
-          "approval-required"
         ]
       }
     },
@@ -1277,30 +1301,6 @@
           "human-approval-surfaces"
         ],
         "execution_profile": "medium-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0090",
-      "name": "nearest-wrong-target-rejection",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
-      "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
-      "topology": {
-        "family": "automation-governance",
-        "capability_class": [
-          "choose"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "small-agent",
         "risk_posture": [
           "read-only"
         ]

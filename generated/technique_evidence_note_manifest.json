@@ -46784,6 +46784,160 @@
       "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/governance/decision-routing/owner-layer-triage/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0076"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "owner-layer-triage"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making one owner-layer verdict the default move for one\nalready-isolated reusable unit."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "mixed units are forced into one owner before they are actually split"
+                },
+                {
+                  "order": 2,
+                  "text": "the chosen owner becomes the convenient repository rather than the honest\nprimary shape"
+                },
+                {
+                  "order": 3,
+                  "text": "nearest-wrong rejection is omitted, leaving boundary drift invisible"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream routing, KAG, eval, SDK, or playbook consumers are mistaken for\nfirst-authoring authority"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "premature owner certainty can hide weak evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "local repo taxonomy can overfit the verdict and reduce portability"
+                },
+                {
+                  "order": 3,
+                  "text": "obvious cases can become slower if every placement becomes ceremonial"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "treating usefulness as its own owner layer"
+                },
+                {
+                  "order": 2,
+                  "text": "routing every executable-looking unit to a skill surface"
+                },
+                {
+                  "order": 3,
+                  "text": "using derivative routing or graph surfaces as the first authored home"
+                },
+                {
+                  "order": 4,
+                  "text": "substituting owner triage for donor extraction, context mapping, or final\npromotion review"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot name one adjacent owner that was rejected"
+                },
+                {
+                  "order": 2,
+                  "text": "the proposed next artifact is larger than the verdict requires"
+                },
+                {
+                  "order": 3,
+                  "text": "several owner layers still look equally primary after the verdict"
+                },
+                {
+                  "order": 4,
+                  "text": "a derivative surface becomes the place where source-owned meaning is first\nauthored"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "split mixed units before placement"
+                },
+                {
+                  "order": 2,
+                  "text": "require one chosen owner, one next artifact, and one nearest-wrong target"
+                },
+                {
+                  "order": 3,
+                  "text": "keep derivative consumers downstream of source-owned authoring"
+                },
+                {
+                  "order": 4,
+                  "text": "preserve `hold` when evidence is still weak or mixed"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should sharpen the one-unit owner verdict without widening it into\necosystem route law, playbook authorship, eval proof, memory writeback, KAG\ntruth, or SDK execution policy."
+            }
+          ]
+        },
+        {
           "note_path": "techniques/governance/decision-routing/owner-layer-triage/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -46814,7 +46968,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -46833,7 +46987,19 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and a second live downstream consumer family outside the originating donor-harvest skill"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-playbooks` at `78069a795690b343c5f228d1614c3e48adeaaead` uses owner repo, owner shape, and nearest-wrong-target posture as prerequisites and decision points in `owner-followthrough-campaign` and `session-growth-cycle`"
+                },
+                {
+                  "order": 5,
+                  "text": "quest entries `AOA-PB-Q-0013` and `AOA-PB-Q-0014` show real reanchor outcomes where seed-wave and recurrence archive survivors stayed in owner-routed follow-through instead of becoming new skill, proof, memo, runtime, stats, or playbook authority"
+                },
+                {
+                  "order": 6,
+                  "text": "supporting `aoa-evals` at `de87cbf94ae2178edc1babff02e29db021b23fc0` defines `aoa-owner-fit-routing-quality` around chosen owner hypothesis, owner shape, rejected nearest-wrong target, and derivative-repo exclusion, but remains supporting proof because evals do not own the owner placement"
                 }
               ]
             },
@@ -46852,11 +47018,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default placement technique for every repository taxonomy or promotion system"
+                  "text": "it is now proven as the default local technique for one bounded AoA-style owner placement verdict before downstream playbook, eval, memo, routing, or SDK consumers act"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not a universal taxonomy law for every repository ecosystem"
                 }
               ]
             },
@@ -46868,7 +47034,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -46889,11 +47055,43 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between owner placement, context-map design, and final promotion review should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/owner-followthrough-campaign/PLAYBOOK.md` hash `af9b5609689a1895d7ae767b5e4825b5592580d3`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/session-growth-cycle/PLAYBOOK.md` hash `2d63533469c4897d6d0fa51f8f9a2e063372492c`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/quests/AOA-PB-Q-0013.yaml` hash `af3401f1c3c7be27092962b8f4fbde788bad230a`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/quests/AOA-PB-Q-0014.yaml` hash `af487c9f3db14d1dbcce50dec9c803f155c13d8f`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-evals/bundles/aoa-owner-fit-routing-quality/EVAL.md` hash `8058e9e0ce01904cb2d6fa2ffc3753225e592e6a`"
+                },
+                {
+                  "order": 7,
+                  "text": "downstream evidence ref: `repo:aoa-evals/bundles/aoa-owner-fit-routing-quality/notes/session-survivor-placement.md` hash `4cded6dcb8cceb254b0a07c57d0b4c2ab9ba8696`"
+                },
+                {
+                  "order": 8,
+                  "text": "boundary preserved: the technique still does not extract donor candidates, author playbooks, score eval quality, write memory, or decide final quest promotion"
+                },
+                {
+                  "order": 9,
+                  "text": "boundary preserved: `aoa-evals` is supporting owner-fit proof, not first-authoring authority"
+                },
+                {
+                  "order": 10,
+                  "text": "boundary preserved: derivative routing, KAG, stats, and SDK surfaces stay downstream of source-owned owner placement"
                 }
               ]
             },
@@ -46904,11 +47102,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0076` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same one-unit owner-placement boundary"
+                  "text": "move `AOA-T-0076` to `canonical`"
                 }
               ]
             }
@@ -47122,6 +47316,10 @@
                 {
                   "order": 3,
                   "text": "the donor evidence remains strong enough to justify a promoted public bundle without importing the whole AoA routing surface"
+                },
+                {
+                  "order": 4,
+                  "text": "live `aoa-playbooks` owner-followthrough and session-growth routes now consume the same owner repo, owner shape, and nearest-wrong-target posture before downstream follow-through, with `aoa-evals` preserving a bounded supporting owner-fit proof surface"
                 }
               ]
             },
@@ -47725,6 +47923,160 @@
       "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/governance/decision-routing/decision-fork-cards/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0078"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "decision-fork-cards"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making explicit branch cards the default move when one\nreviewed source still leaves materially different next routes."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "cards describe cosmetic variants of the same route"
+                },
+                {
+                  "order": 2,
+                  "text": "a preferred path is hidden as if no alternatives exist"
+                },
+                {
+                  "order": 3,
+                  "text": "route cards omit costs, risks, owner targets, or stop conditions"
+                },
+                {
+                  "order": 4,
+                  "text": "branch cards are mistaken for runtime routing authority"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "too many thin cards can create fake complexity"
+                },
+                {
+                  "order": 2,
+                  "text": "unresolved cards can encourage analysis loops when one route is already\nobvious"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream playbooks or summon gates may inherit branch noise if the route set\nis not pruned"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "writing fork cards before reviewed evidence exists"
+                },
+                {
+                  "order": 2,
+                  "text": "hiding a decision already made by only decorating the chosen route"
+                },
+                {
+                  "order": 3,
+                  "text": "using cards as a replacement for playbook design or route policy"
+                },
+                {
+                  "order": 4,
+                  "text": "turning quest-board vocabulary into execution authority"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "card differences are mostly names or tone"
+                },
+                {
+                  "order": 2,
+                  "text": "each card lacks at least one concrete downside"
+                },
+                {
+                  "order": 3,
+                  "text": "stop conditions are missing for risky or expensive routes"
+                },
+                {
+                  "order": 4,
+                  "text": "a downstream consumer treats the card set as permission to act"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require materially distinct routes"
+                },
+                {
+                  "order": 2,
+                  "text": "keep one gain, cost, risk, owner cue, and stop condition visible per route"
+                },
+                {
+                  "order": 3,
+                  "text": "preserve hold, defer, or reanchor when uncertainty is honest"
+                },
+                {
+                  "order": 4,
+                  "text": "keep route passports and execution gates separate from card authorship"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should keep fork cards advisory and branch-local without widening them\ninto playbook scenario design, summon authorization, routing policy, proof\nverdicts, or hidden recommendation machinery."
+            }
+          ]
+        },
+        {
           "note_path": "techniques/governance/decision-routing/decision-fork-cards/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -47755,7 +48107,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -47774,7 +48126,19 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and second downstream route consumers outside the originating route-forks skill"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-playbooks` at `78069a795690b343c5f228d1614c3e48adeaaead` uses explicit owner-followthrough branches such as direct owner-status landing, seed staging, proof-first, reanchor, merge, defer, and drop before action"
+                },
+                {
+                  "order": 5,
+                  "text": "`owner-followthrough-campaign` requires `aoa-session-route-forks` and names `route_followthrough_decision` as an expected artifact, making branch choice visible before mutation instead of letting follow-through drift by convenience"
+                },
+                {
+                  "order": 6,
+                  "text": "`aoa-summon` at `eed21463dfde1bf0791e8ccbe6fdeaf68f8f0aec` keeps unresolved competing next routes outside summon and routes them back to route-forks before child execution"
                 }
               ]
             },
@@ -47793,11 +48157,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default branching technique for every planning or scenario surface"
+                  "text": "it is now proven as the default local technique for keeping materially different next routes visible before an owner-followthrough or child-route decision"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not a full playbook design method, runtime routing policy, or hidden recommendation authority"
                 }
               ]
             },
@@ -47809,7 +48173,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -47830,11 +48194,39 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between branch cards, route passports, and larger scenario design should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/owner-followthrough-campaign/PLAYBOOK.md` hash `af9b5609689a1895d7ae767b5e4825b5592580d3`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/session-growth-cycle/PLAYBOOK.md` hash `2d63533469c4897d6d0fa51f8f9a2e063372492c`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-summon/SKILL.md` hash `606124d101f7de6baf4b5bcceef8991612b971cc`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-summon/checks/review.md` hash `455ee3ba8c2038c4f5220cb145bc7783dabc953b`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-skills/docs/decisions/2026-05-07-session-growth-evaluated-governance.md` hash `265996ffcbeb8ad75d47d3be06f9e45188aae713`"
+                },
+                {
+                  "order": 7,
+                  "text": "boundary preserved: fork cards still describe choices and do not decide owner authority by themselves"
+                },
+                {
+                  "order": 8,
+                  "text": "boundary preserved: playbook-scale scenario design, summon gating, SDK execution helpers, and eval proof stay downstream consumers"
+                },
+                {
+                  "order": 9,
+                  "text": "boundary preserved: unresolved competing routes must be made visible before execution rather than hidden inside summon or routing"
                 }
               ]
             },
@@ -47845,11 +48237,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0078` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same explicit branch-card boundary"
+                  "text": "move `AOA-T-0078` to `canonical`"
                 }
               ]
             }
@@ -48063,6 +48451,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers or repo-local routing tables"
+                },
+                {
+                  "order": 4,
+                  "text": "live `aoa-playbooks` owner-followthrough routes now require visible branch choices before action, and evaluated `aoa-summon` routes unresolved competing branches back to route-forks rather than hiding them inside child-route execution"
                 }
               ]
             },
@@ -48091,6 +48483,160 @@
       "id": "AOA-T-0079",
       "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/governance/decision-routing/risk-passport-lift/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0079"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "risk-passport-lift"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making a small per-route passport the default posture\nsurface for difficulty, risk, control mode, delegate tier, and stop conditions."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "passport fields become hidden routing scores"
+                },
+                {
+                  "order": 2,
+                  "text": "stop conditions disappear and risk becomes decorative"
+                },
+                {
+                  "order": 3,
+                  "text": "passports grow larger than the route they summarize"
+                },
+                {
+                  "order": 4,
+                  "text": "control mode or delegate tier is treated as sovereign approval policy"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "fake precision can create false confidence"
+                },
+                {
+                  "order": 2,
+                  "text": "repeated passports can over-formalize obvious low-risk routes"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream SDK or playbook consumers may inherit stale posture if the route\nchanges but the passport does not"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "attaching a passport before any explicit route exists"
+                },
+                {
+                  "order": 2,
+                  "text": "using passport fields as command dispatch policy"
+                },
+                {
+                  "order": 3,
+                  "text": "flattening uncertainty into one synthetic risk score"
+                },
+                {
+                  "order": 4,
+                  "text": "replacing repair checkpoints or approval gates with posture labels"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot explain what changed when the passport changed"
+                },
+                {
+                  "order": 2,
+                  "text": "difficulty, risk, control mode, or delegate tier labels are used as final\nauthority"
+                },
+                {
+                  "order": 3,
+                  "text": "meaningful risk has no stop condition"
+                },
+                {
+                  "order": 4,
+                  "text": "passport metadata outweighs route meaning"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the field set small"
+                },
+                {
+                  "order": 2,
+                  "text": "require stop-condition cues when risk or cost is meaningful"
+                },
+                {
+                  "order": 3,
+                  "text": "reject synthetic total scores"
+                },
+                {
+                  "order": 4,
+                  "text": "keep passports adjacent to branch cards and subordinate to actual execution\ngates"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should keep route-passport posture descriptive and reviewable without\nwidening it into risk scoring, approval governance, dispatch metadata, repair\nexecution, or SDK authority."
+            }
+          ]
+        },
         {
           "note_path": "techniques/governance/decision-routing/risk-passport-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -48122,7 +48668,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -48141,7 +48687,15 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and second downstream consumers where passport fields control route posture"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-summon` at `eed21463dfde1bf0791e8ccbe6fdeaf68f8f0aec` requires a quest passport with difficulty, risk, control mode, and delegate tier before one bounded child route may launch"
+                },
+                {
+                  "order": 5,
+                  "text": "`aoa-sdk` at `f74c037e0f346713001516f7f3abddabbf64d02a` models that passport and uses it in A2A summon assessment: `d3+` routes split, blocked control mode blocks delegation, high-risk or human-gated routes narrow to reviewed lanes or human gate, and stress can narrow or block without widening authority"
                 }
               ]
             },
@@ -48160,11 +48714,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default risk-posture technique for every branching or planning surface"
+                  "text": "it is now proven as the default local technique for per-route posture before summon, owner-followthrough, or SDK-assisted child-route decisions"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not a risk-scoring engine, approval policy, dispatch authority, or repair checkpoint"
                 }
               ]
             },
@@ -48176,7 +48730,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -48197,11 +48751,47 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between branch-card meaning, route passports, and repair checkpoints should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-summon/SKILL.md` hash `606124d101f7de6baf4b5bcceef8991612b971cc`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/core/session-growth/aoa-summon/checks/review.md` hash `455ee3ba8c2038c4f5220cb145bc7783dabc953b`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/src/aoa_sdk/a2a/rebase/models.py` hash `b8d116992bff3290d2e00287003c915b62354fa1`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/src/aoa_sdk/a2a/rebase/passports.py` hash `eac6264c1833a27430af6218818e0082085a1d77`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/examples/a2a/summon_return_checkpoint_e2e.fixture.json` hash `fd746905809680bfbc353a9267d3c22e9b6714ff`"
+                },
+                {
+                  "order": 7,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/tests/test_a2a_wave5_assessment.py` hash `e4962a05294ec31c64016324d2e8c5e74c28a33f`"
+                },
+                {
+                  "order": 8,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/tests/test_a2a_wave5_codex_and_closeout.py` hash `a05f5c2b82c17392b610c9f37caeb0b51f7fa2c4`"
+                },
+                {
+                  "order": 9,
+                  "text": "boundary preserved: the passport remains smaller than the branch card or summon result it informs"
+                },
+                {
+                  "order": 10,
+                  "text": "boundary preserved: difficulty, risk, control mode, and delegate tier remain descriptive route posture, not sovereign policy"
+                },
+                {
+                  "order": 11,
+                  "text": "boundary preserved: repair checkpoints, approval gates, SDK execution, and playbook scenario design stay separate"
                 }
               ]
             },
@@ -48212,11 +48802,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0079` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same small per-route posture boundary"
+                  "text": "move `AOA-T-0079` to `canonical`"
                 }
               ]
             }
@@ -48426,6 +49012,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local routing wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "live `aoa-summon` and `aoa-sdk` A2A summon assessment now consume difficulty, risk, control mode, delegate tier, split, reviewed-lane, and human-gate posture to choose, narrow, or block one child route"
                 }
               ]
             },
@@ -52097,6 +52687,160 @@
       "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0090"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "nearest-wrong-target-rejection"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making one adjacent wrong target explicit beside one\nchosen owner or promotion verdict."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the rejected target is dramatic rather than nearest and plausible"
+                },
+                {
+                  "order": 2,
+                  "text": "rejection language is used to defend a weak chosen verdict"
+                },
+                {
+                  "order": 3,
+                  "text": "the reason is rhetorical and does not clarify a boundary"
+                },
+                {
+                  "order": 4,
+                  "text": "the rejection widens into broad anti-pattern doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "forced rejection can create false certainty when `defer` is more honest"
+                },
+                {
+                  "order": 2,
+                  "text": "reviewers may over-focus on the wrong target instead of the chosen boundary"
+                },
+                {
+                  "order": 3,
+                  "text": "terse rejection can look like policy if the surrounding verdict is missing"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "naming a strawman no one would actually choose"
+                },
+                {
+                  "order": 2,
+                  "text": "using rejection to avoid revisiting a weak owner choice"
+                },
+                {
+                  "order": 3,
+                  "text": "rejecting whole neighboring organs instead of one bounded target for one\nbounded unit"
+                },
+                {
+                  "order": 4,
+                  "text": "treating nearest-wrong rejection as the promotion verdict itself"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the rejected target is not adjacent to the chosen one"
+                },
+                {
+                  "order": 2,
+                  "text": "the reason cannot name a concrete boundary difference"
+                },
+                {
+                  "order": 3,
+                  "text": "the same confusion remains after the rejection is written"
+                },
+                {
+                  "order": 4,
+                  "text": "the note reads like an anti-pattern essay rather than a small verdict aid"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require adjacency and plausibility"
+                },
+                {
+                  "order": 2,
+                  "text": "keep one short boundary-shaped reason"
+                },
+                {
+                  "order": 3,
+                  "text": "fall back to `hold`, `quest`, or `defer` when no honest chosen target exists"
+                },
+                {
+                  "order": 4,
+                  "text": "pair the rejection with the surrounding verdict rather than isolating it as\nstandalone doctrine"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should keep nearest-wrong rejection small, paired, and boundary-focused\nwithout replacing owner triage, quest promotion review, proof verdicts, memory\nwriteback, or playbook design."
+            }
+          ]
+        },
+        {
           "note_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -52127,7 +52871,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -52146,7 +52890,23 @@
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the live evidence is still concentrated in one AoA quest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and multiple downstream owner-boundary consumers outside the originating quest-harvest skill"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-playbooks` at `78069a795690b343c5f228d1614c3e48adeaaead` uses nearest-wrong-target posture as a prerequisite and decision-point guard in `owner-followthrough-campaign` and `session-growth-cycle`"
+                },
+                {
+                  "order": 5,
+                  "text": "`AOA-PB-Q-0013` and `AOA-PB-Q-0014` explicitly rejected `promote_to_skill` while keeping route-shaped seed-wave and recurrence archive survivors in owner-routed follow-through"
+                },
+                {
+                  "order": 6,
+                  "text": "`AOA-TECH-Q-0007` keeps a center-release technique-shaped signal in technique promotion-readiness rather than false skill ownership because skill was the nearest wrong target"
+                },
+                {
+                  "order": 7,
+                  "text": "supporting `aoa-evals` owner-fit surfaces make nearest-wrong-target quality inspectable while staying weaker than final owner-object proof"
                 }
               ]
             },
@@ -52165,7 +52925,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default rejection helper outside the current AoA promotion lineage"
+                  "text": "it is now proven as the default local guardrail for keeping chosen owner or promotion verdicts from collapsing into the closest convenient neighbor"
+                },
+                {
+                  "order": 4,
+                  "text": "it is still not a substitute for the verdict workflow itself"
                 }
               ]
             },
@@ -52177,7 +52941,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-06"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -52198,11 +52962,47 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second live context beyond the current quest-promotion family"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between nearest-wrong-target rejection and first owner placement should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/owner-followthrough-campaign/PLAYBOOK.md` hash `af9b5609689a1895d7ae767b5e4825b5592580d3`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/session-growth-cycle/PLAYBOOK.md` hash `2d63533469c4897d6d0fa51f8f9a2e063372492c`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/quests/AOA-PB-Q-0013.yaml` hash `af3401f1c3c7be27092962b8f4fbde788bad230a`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/quests/AOA-PB-Q-0014.yaml` hash `af487c9f3db14d1dbcce50dec9c803f155c13d8f`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-techniques/quests/techniques/captured/AOA-TECH-Q-0007.yaml` hash `67c73ed211477215de654a91c582f68858f9e1fa`"
+                },
+                {
+                  "order": 7,
+                  "text": "downstream evidence ref: `repo:aoa-evals/bundles/aoa-owner-fit-routing-quality/EVAL.md` hash `8058e9e0ce01904cb2d6fa2ffc3753225e592e6a`"
+                },
+                {
+                  "order": 8,
+                  "text": "downstream evidence ref: `repo:aoa-evals/bundles/aoa-owner-fit-routing-quality/fixtures/contract.json` hash `11d860e47d24bf0b0e7b5b6f49d06d48b57e981b`"
+                },
+                {
+                  "order": 9,
+                  "text": "boundary preserved: the rejection stays paired to one chosen verdict and one adjacent plausible wrong target"
+                },
+                {
+                  "order": 10,
+                  "text": "boundary preserved: the technique still does not choose final promotion, author the owner object, score proof, or write memory"
+                },
+                {
+                  "order": 11,
+                  "text": "boundary preserved: broad anti-pattern doctrine remains outside the bundle"
                 }
               ]
             },
@@ -52213,11 +53013,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0090` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same adjacent-target rejection boundary"
+                  "text": "move `AOA-T-0090` to `canonical`"
                 }
               ]
             }
@@ -52419,6 +53215,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local quest wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "live `aoa-playbooks`, `aoa-techniques` quest carry, and supporting `aoa-evals` owner-fit surfaces now use nearest-wrong-target posture to prevent false skill, proof, memo, KAG, routing, or playbook promotion"
                 }
               ]
             },

@@ -30,6 +30,7 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session workflow for explicit branch analysis
 - the public wording still preserves the seam between branch cards and smaller route-passport metadata
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers or repo-local routing tables
+- live `aoa-playbooks` owner-followthrough routes now require visible branch choices before action, and evaluated `aoa-summon` routes unresolved competing branches back to route-forks rather than hiding them inside child-route execution
 
 ## Result
 - verdict: works

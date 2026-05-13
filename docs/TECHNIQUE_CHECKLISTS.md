@@ -184,11 +184,35 @@ See also:
 |---|---|---|---|---|
 | session-donor-harvest checklist | `absent` | `8` | `techniques/continuity/donor-harvest/session-donor-harvest/checks/session-donor-harvest-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
 
+### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| owner-layer-triage checklist | `absent` | `8` | `techniques/governance/decision-routing/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
+
 ### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`canonical`)
 
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | harvest-packet-contract checklist | `absent` | `7` | `techniques/continuity/donor-harvest/harvest-packet-contract/checks/harvest-packet-contract-checklist.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
+
+### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| decision-fork-cards checklist | `absent` | `8` | `techniques/governance/decision-routing/decision-fork-cards/checks/decision-fork-cards-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) |
+
+### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| risk-passport-lift checklist | `absent` | `7` | `techniques/governance/decision-routing/risk-passport-lift/checks/risk-passport-lift-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
+
+### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
@@ -207,24 +231,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| owner-layer-triage checklist | `absent` | `8` | `techniques/governance/decision-routing/owner-layer-triage/checks/owner-layer-triage-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
-
-### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| decision-fork-cards checklist | `absent` | `8` | `techniques/governance/decision-routing/decision-fork-cards/checks/decision-fork-cards-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) |
-
-### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| risk-passport-lift checklist | `absent` | `7` | `techniques/governance/decision-routing/risk-passport-lift/checks/risk-passport-lift-checklist.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 
@@ -285,12 +291,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | quest-unit-promotion-review checklist | `absent` | `7` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/checks/quest-unit-promotion-review-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
-
-### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| nearest-wrong-target-rejection checklist | `absent` | `7` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/checks/nearest-wrong-target-rejection-checklist.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
 ### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 
