@@ -279,7 +279,7 @@ entries:
 - id: AOA-T-0046
   name: repo-doc-surface-lift
   domain: docs
-  status: promoted
+  status: canonical
   kind: lift
   family: kag-source-lift
 - id: AOA-T-0047

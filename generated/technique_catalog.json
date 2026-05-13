@@ -2571,7 +2571,7 @@
       "name": "repo-doc-surface-lift",
       "domain": "docs",
       "kind": "lift",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.",
       "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "origin": {
@@ -2589,12 +2589,12 @@
         "repo-docs",
         "surface-lift"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-23",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-13",
       "export_ready": true,
       "relations": [
         {
@@ -2618,6 +2618,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

@@ -18,7 +18,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `evaluation-chain` | Machine-readable validation contract production and staged promotion from signal to enforcement. | `3` | `2` | `1` |
 | `published-summary` | Published summary storage, remediation, integrity, and rendering policy. | `4` | `4` | `0` |
 | `skill-support` | Boundary-contract testing, invariant coverage, and bounded-context vocabulary around capability seams. | `3` | `3` | `0` |
-| `kag-source-lift` | Section, metadata, provenance, relation, repo-doc, and review-surface lift from authoritative markdown. | `8` | `3` | `5` |
+| `kag-source-lift` | Section, metadata, provenance, relation, repo-doc, and review-surface lift from authoritative markdown. | `8` | `4` | `4` |
 | `history-artifacts` | Capture, version, replay, index, and lineage-link session evidence as durable reviewable artifacts. | `6` | `6` | `0` |
 | `runtime-truth-lifecycle` | Render effective runtime truth, check host readiness, operate service lifecycle, and benchmark additive profiles. | `4` | `4` | `0` |
 | `capability-registry` | Versioned capability or registry contracts and bounded lookup over published entries. | `3` | `3` | `0` |
@@ -159,16 +159,16 @@ Section, metadata, provenance, relation, repo-doc, and review-surface lift from 
 Typical domains: `docs`.
 Typical kinds: `lift`.
 
-Counts: `total` 8, `canonical` 3, `promoted` 5.
+Counts: `total` 8, `canonical` 4, `promoted` 4.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
 | [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift stable technique markdown sections into derived section-level units while keeping the bundle markdown authoritative. |
 | [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Treat bounded frontmatter and derived catalog outputs as a metadata spine for bundle routing without replacing markdown meaning or growing schema past current needs. |
 | [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift small typed direct relations into bounded edge hints for derived consumers without turning them into graph semantics. |
+| [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `canonical` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. |
 | [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Use typed evidence note kinds and note paths as bounded provenance handles in derived manifests without flattening them into a note graph. |
 | [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift richer `Risks` language into bounded caution-oriented lookup and reuse without turning caution into metadata, scoring, or generated policy. |
-| [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy. |
 | [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring. |
 | [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) | `docs` | `lift` | `promoted` | Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts. |
 

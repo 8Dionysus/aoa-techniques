@@ -2066,6 +2066,30 @@
       }
     },
     {
+      "id": "AOA-T-0046",
+      "name": "repo-doc-surface-lift",
+      "domain": "docs",
+      "kind": "lift",
+      "status": "canonical",
+      "summary": "Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.",
+      "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
+      "topology": {
+        "family": "kag-source-lift",
+        "capability_class": [
+          "transform",
+          "summarize",
+          "observe"
+        ],
+        "substrate": [
+          "docs"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "security-sensitive"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0063",
       "name": "versioned-agent-registry-contract",
       "domain": "docs",
@@ -2247,30 +2271,6 @@
         "execution_profile": "medium-agent",
         "risk_posture": [
           "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0046",
-      "name": "repo-doc-surface-lift",
-      "domain": "docs",
-      "kind": "lift",
-      "status": "promoted",
-      "summary": "Lift one bounded set of authoritative repo docs and status files into derived routing knowledge without replacing the authored docs or widening into a docs taxonomy.",
-      "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
-      "topology": {
-        "family": "kag-source-lift",
-        "capability_class": [
-          "transform",
-          "summarize",
-          "observe"
-        ],
-        "substrate": [
-          "docs"
-        ],
-        "execution_profile": "orchestration-required",
-        "risk_posture": [
-          "security-sensitive"
         ]
       }
     },

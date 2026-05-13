@@ -468,6 +468,12 @@ See also:
 |---|---|---|---|---|
 | multi-source-primary-input-provenance Checklist | `absent` | `11` | `techniques/instruction/capability-boundary/multi-source-primary-input-provenance/checks/multi-source-primary-input-provenance-checklist.md` | [TECHNIQUE.md](../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) |
 
+### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Repo Doc Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
+
 ### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -509,12 +515,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | Profile Preset Composition Checklist | `absent` | `12` | `techniques/instruction/instruction-surface/profile-preset-composition/checks/profile-preset-composition-checklist.md` | [TECHNIQUE.md](../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md) |
-
-### [AOA-T-0046](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) - repo-doc-surface-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Repo Doc Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0047](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) - github-review-template-lift (`promoted`)
 
