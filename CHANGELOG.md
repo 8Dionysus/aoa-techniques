@@ -22,6 +22,20 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0080 session-drift-taxonomy`, `AOA-T-0081
+  diagnosis-from-reviewed-evidence`, `AOA-T-0082
+  repair-shape-from-diagnosis`, and `AOA-T-0083
+  checkpoint-bound-self-repair` to `canonical` after sibling downstream
+  evidence showed the diagnosis-and-repair loop in real use: `aoa-skills`
+  `abyss-self-diagnostic-spine` consumes drift taxonomy and read-only
+  diagnosis for runtime-body evidence before repair; `aoa-sdk` closeout rules
+  surface bounded self-repair only when diagnosis exists and no repair-cycle
+  receipt has landed; `aoa-skills` growth-cycle examples preserve repair
+  packets with owner target, validation, rollback, approval, iteration, stop,
+  and escalation posture; and `aoa-agents` plus `aoa-playbooks` keep
+  checkpoint posture explicit without giving techniques role-law, proof,
+  playbook, runtime, memory, or autonomous self-modification authority,
+  updating Audit queue posture from `38` promoted techniques to `34`
 - promoted `AOA-T-0076 owner-layer-triage`, `AOA-T-0078
   decision-fork-cards`, `AOA-T-0079 risk-passport-lift`, and `AOA-T-0090
   nearest-wrong-target-rejection` to `canonical` after sibling downstream

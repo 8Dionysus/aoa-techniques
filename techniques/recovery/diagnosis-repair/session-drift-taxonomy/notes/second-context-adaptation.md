@@ -29,7 +29,8 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded diagnosis-step workflow rather than a docs taxonomy or routing system
 - the public wording still preserves the seam between drift labels and later diagnosis verdicts
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- live `abyss-self-diagnostic-spine` now consumes the same drift-taxonomy seam for runtime-body diagnosis: it resolves one concrete target, groups evidence by axis, preserves freshness/confidence/unknowns, and keeps drift classes smaller than repair authority
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded reviewed-session drift-classification technique
+- note: the adapted bundle stays readable as a bounded reviewed-session and runtime-diagnostic drift-classification technique

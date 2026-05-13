@@ -49045,6 +49045,160 @@
       "technique_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0080"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "session-drift-taxonomy"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making a read-only drift taxonomy the default first\nclassification move when reviewed friction needs diagnosis later."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "taxonomy labels are mistaken for probable causes"
+                },
+                {
+                  "order": 2,
+                  "text": "one anecdote is inflated into structural drift"
+                },
+                {
+                  "order": 3,
+                  "text": "owner hints, repair shapes, or blame language leak into the taxonomy pass"
+                },
+                {
+                  "order": 4,
+                  "text": "local label sets become hidden portability requirements"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "over-classification can make weak evidence look stronger than it is"
+                },
+                {
+                  "order": 2,
+                  "text": "repeated labels can become jargon that hides the actual symptoms"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream diagnosis may inherit a stale or overconfident drift class"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using taxonomy as a substitute for diagnosis"
+                },
+                {
+                  "order": 2,
+                  "text": "naming a repair plan before the drift class is stable"
+                },
+                {
+                  "order": 3,
+                  "text": "classifying live, unreviewed friction as if it were reviewed evidence"
+                },
+                {
+                  "order": 4,
+                  "text": "forcing one favorite label when mixed or uncertain posture is more honest"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot separate symptom, drift type, probable cause, and repair"
+                },
+                {
+                  "order": 2,
+                  "text": "the taxonomy output contains owner verdicts or mutation instructions"
+                },
+                {
+                  "order": 3,
+                  "text": "confidence is higher than the evidence supports"
+                },
+                {
+                  "order": 4,
+                  "text": "the label set reads like project folklore rather than a bounded vocabulary"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require reviewed evidence before classification"
+                },
+                {
+                  "order": 2,
+                  "text": "keep mixed and uncertain outputs available"
+                },
+                {
+                  "order": 3,
+                  "text": "preserve diagnosis and repair as separate downstream moves"
+                },
+                {
+                  "order": 4,
+                  "text": "reduce project-local labels to adaptation examples"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should sharpen the drift-label seam without widening it into diagnosis,\nowner routing, proof, repair planning, or runtime diagnostic doctrine."
+            }
+          ]
+        },
+        {
           "note_path": "techniques/recovery/diagnosis-repair/session-drift-taxonomy/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -49075,7 +49229,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -49090,11 +49244,23 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around drift classification rather than broad diagnosis or blame doctrine"
+                  "text": "the second context adaptation kept the contract bounded around drift classification rather than broad diagnosis, blame doctrine, or repair planning"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and a second downstream diagnostic overlay outside the originating session-diagnose skill line"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-skills` at `eed21463dfde1bf0791e8ccbe6fdeaf68f8f0aec` now has the `abyss-self-diagnostic-spine` project overlay, which uses `AOA-T-0080` to classify runtime-body friction by target, axis, freshness, confidence, unknowns, and exit class before any repair claim"
+                },
+                {
+                  "order": 5,
+                  "text": "the same overlay keeps taxonomy read-only: it resolves the runtime diagnostic target, groups symptoms by evidence axis, names drift classes, and emits a diagnostic artifact without mutating quest, repair, progression, or owner truth"
+                },
+                {
+                  "order": 6,
+                  "text": "the evaluated `aoa-session-self-diagnose` status review reinforces the original split: diagnosis remains evidence-shaped, and drift labels do not become settled root-cause or repair evidence by themselves"
                 }
               ]
             },
@@ -49109,15 +49275,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "it is strongest when repeated post-session contradiction, proof blur, or route collapse should be classified without overclaiming a full diagnosis"
+                  "text": "it is strongest when repeated post-session or runtime-body contradiction, proof blur, route collapse, or freshness drift should be classified without overclaiming a full diagnosis"
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default taxonomy technique for every review or incident corpus"
+                  "text": "it is now proven as the default local technique for one read-only drift-taxonomy layer before downstream diagnosis or repair work"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not a universal incident taxonomy, owner verdict, proof surface, or repair plan"
                 }
               ]
             },
@@ -49129,7 +49295,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -49139,7 +49305,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable drift-taxonomy seam while stripping local blame conventions and repo-specific wording"
+                  "value_markdown": "the published technique keeps the reusable drift-taxonomy seam while stripping local blame conventions, runtime command wrappers, and repo-specific diagnostic plumbing"
                 }
               ]
             },
@@ -49150,11 +49316,35 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between taxonomy, full diagnosis, and repair planning should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/SKILL.md` hash `14e65b76c6749f8dab80fb7a610ab4bee89b9425`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/techniques.yaml` hash `24d60e2a7a473969ddebfbc764dd470f51980275`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/checks/review.md` hash `853cf9b87ab38006ba0c64a32ecf891de68893cf`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/examples/example.md` hash `31d8e40935895de5b87fb526f18dd0eaa9c4f0cf`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-skills/docs/reviews/status-promotions/aoa-session-self-diagnose.md` hash `6dadd6bea293728de65044e3039f2137cbad129f`"
+                },
+                {
+                  "order": 7,
+                  "text": "boundary preserved: taxonomy still names drift type only; symptoms, probable causes, owner hints, repair shapes, proof verdicts, and runtime diagnosis schemas stay outside this bundle"
+                },
+                {
+                  "order": 8,
+                  "text": "boundary preserved: `abyss-self-diagnostic-spine` is a downstream overlay, not a hidden OS Abyss dependency for portable use"
                 }
               ]
             },
@@ -49165,11 +49355,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0080` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded drift-taxonomy boundary"
+                  "text": "move `AOA-T-0080` to `canonical`"
                 }
               ]
             }
@@ -49379,6 +49565,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "live `abyss-self-diagnostic-spine` now consumes the same drift-taxonomy seam for runtime-body diagnosis: it resolves one concrete target, groups evidence by axis, preserves freshness/confidence/unknowns, and keeps drift classes smaller than repair authority"
                 }
               ]
             },
@@ -49395,7 +49585,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded reviewed-session drift-classification technique"
+                  "value_markdown": "the adapted bundle stays readable as a bounded reviewed-session and runtime-diagnostic drift-classification technique"
                 }
               ]
             }
@@ -49407,6 +49597,160 @@
       "id": "AOA-T-0081",
       "technique_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0081"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "diagnosis-from-reviewed-evidence"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making a read-only diagnosis packet the default move when\nreviewed friction has enough evidence to name symptoms, probable causes, owner\nhints, and unknowns before repair."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "symptoms and probable causes collapse into one narrative"
+                },
+                {
+                  "order": 2,
+                  "text": "likely owner hints are treated as final owner verdicts"
+                },
+                {
+                  "order": 3,
+                  "text": "unknowns disappear even though evidence remains mixed"
+                },
+                {
+                  "order": 4,
+                  "text": "suggested repair shapes become hidden mutation instructions"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "overconfident diagnosis can settle weak evidence too early"
+                },
+                {
+                  "order": 2,
+                  "text": "repeated diagnosis passes can delay an already justified bounded repair"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream repair may inherit an owner hint as if it were owner law"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "writing diagnosis from live debugging instead of reviewed evidence"
+                },
+                {
+                  "order": 2,
+                  "text": "using diagnosis as a replacement for repair planning"
+                },
+                {
+                  "order": 3,
+                  "text": "naming one convenient owner before the evidence supports it"
+                },
+                {
+                  "order": 4,
+                  "text": "silently fixing the issue while producing a diagnosis packet"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the packet has no evidence refs for meaningful symptoms"
+                },
+                {
+                  "order": 2,
+                  "text": "probable causes are written as certainty where confidence is thin"
+                },
+                {
+                  "order": 3,
+                  "text": "repair commands, edits, or playbook steps appear in the diagnosis output"
+                },
+                {
+                  "order": 4,
+                  "text": "reviewers cannot explain which evidence supports each cause"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require reviewed evidence refs before causes"
+                },
+                {
+                  "order": 2,
+                  "text": "keep owner hints explicitly non-sovereign"
+                },
+                {
+                  "order": 3,
+                  "text": "preserve unknowns and confidence posture"
+                },
+                {
+                  "order": 4,
+                  "text": "hand off to repair-shaping only after the diagnosis packet is readable"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should keep diagnosis read-only and evidence-shaped without widening it\ninto repair, owner-law, proof, runtime health, or incident-response doctrine."
+            }
+          ]
+        },
         {
           "note_path": "techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -49438,7 +49782,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -49453,11 +49797,23 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around read-only diagnosis rather than repair or blame doctrine"
+                  "text": "the second context adaptation kept the contract bounded around read-only diagnosis rather than repair, proof, owner-law, or blame doctrine"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and a second downstream diagnostic overlay outside the originating session-diagnose skill line"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-skills` at `eed21463dfde1bf0791e8ccbe6fdeaf68f8f0aec` now has the `abyss-self-diagnostic-spine` project overlay, which uses `AOA-T-0081` to turn runtime evidence and optional reviewed session references into one diagnostic artifact with symptoms, probable causes, owner hints, confidence, freshness, and unknowns"
+                },
+                {
+                  "order": 5,
+                  "text": "the overlay's checks require a concrete target before verdicts, repo-relative evidence refs, grouped evidence axes, explicit drift classes, confidence, freshness, unknowns, one exit class smaller than repair authority, and handoff without absorbing session, repair, progression, or quest canon"
+                },
+                {
+                  "order": 6,
+                  "text": "the evaluated `aoa-session-self-diagnose` status review reinforces the original split: diagnosis packets remain reviewed evidence surfaces and do not mutate anything yet"
                 }
               ]
             },
@@ -49472,15 +49828,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "it is strongest when symptoms, probable causes, owner hints, and unknowns all need to stay visible and distinct"
+                  "text": "it is strongest when symptoms, probable causes, owner hints, confidence, freshness, and unknowns all need to stay visible and distinct"
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default diagnosis technique for every review or incident surface"
+                  "text": "it is now proven as the default local technique for one read-only diagnosis packet before downstream repair, progression, quest, or owner follow-through"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not proof authority, final root-cause settlement, runtime doctrine, or repair execution"
                 }
               ]
             },
@@ -49492,7 +49848,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -49502,7 +49858,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable diagnosis seam while stripping local remediation details and repo-specific wrappers"
+                  "value_markdown": "the published technique keeps the reusable diagnosis seam while stripping local remediation details, runtime command wrappers, and repo-specific diagnostic plumbing"
                 }
               ]
             },
@@ -49513,11 +49869,35 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between taxonomy, diagnosis, and repair planning should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/SKILL.md` hash `14e65b76c6749f8dab80fb7a610ab4bee89b9425`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/techniques.yaml` hash `24d60e2a7a473969ddebfbc764dd470f51980275`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/checks/review.md` hash `853cf9b87ab38006ba0c64a32ecf891de68893cf`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-skills/skills/project/abyss/abyss-self-diagnostic-spine/examples/example.md` hash `31d8e40935895de5b87fb526f18dd0eaa9c4f0cf`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-skills/docs/reviews/status-promotions/aoa-session-self-diagnose.md` hash `6dadd6bea293728de65044e3039f2137cbad129f`"
+                },
+                {
+                  "order": 7,
+                  "text": "boundary preserved: diagnosis still starts from reviewed evidence, keeps symptoms and causes distinct, preserves unknowns, and does not perform repair"
+                },
+                {
+                  "order": 8,
+                  "text": "boundary preserved: `abyss-self-diagnostic-spine` is a downstream overlay, not a hidden OS Abyss dependency for portable use"
                 }
               ]
             },
@@ -49528,11 +49908,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0081` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same read-only diagnosis boundary"
+                  "text": "move `AOA-T-0081` to `canonical`"
                 }
               ]
             }
@@ -49746,6 +50122,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "live `abyss-self-diagnostic-spine` now consumes the same diagnosis seam for runtime-body evidence: it emits one read-only diagnostic artifact with symptoms, probable causes, owner hints, confidence, freshness, unknowns, and one exit class before repair"
                 }
               ]
             },
@@ -49762,7 +50142,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded diagnosis-from-reviewed-evidence technique"
+                  "value_markdown": "the adapted bundle stays readable as a bounded diagnosis-from-reviewed-evidence technique across reviewed session and project-runtime diagnostic contexts"
                 }
               ]
             }
@@ -49774,6 +50154,160 @@
       "id": "AOA-T-0082",
       "technique_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0082"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "repair-shape-from-diagnosis"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making one smallest honest repair shape the default move\nafter a reviewed diagnosis already exists."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a vague improvement wish is treated as a bounded repair"
+                },
+                {
+                  "order": 2,
+                  "text": "the chosen repair shape is larger than the diagnosis justifies"
+                },
+                {
+                  "order": 3,
+                  "text": "validation, owner target, or escalation remains implicit"
+                },
+                {
+                  "order": 4,
+                  "text": "checkpoint posture or playbook rollout replaces the repair-shape seam"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "too-small repair shapes can hide a wider scenario problem"
+                },
+                {
+                  "order": 2,
+                  "text": "too much repair ceremony can slow obvious small fixes"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream routes may treat a prepared packet as executed or verified"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "starting repair-shaping before diagnosis exists"
+                },
+                {
+                  "order": 2,
+                  "text": "choosing a scenario rollout as if it were one repair packet"
+                },
+                {
+                  "order": 3,
+                  "text": "using repair shape as roadmap planning"
+                },
+                {
+                  "order": 4,
+                  "text": "skipping escalation when the repair no longer fits one owner-facing unit"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers cannot name the diagnosis that justified the repair"
+                },
+                {
+                  "order": 2,
+                  "text": "the proposed artifact is larger than the diagnosis packet"
+                },
+                {
+                  "order": 3,
+                  "text": "validation is generic or missing"
+                },
+                {
+                  "order": 4,
+                  "text": "the same repair packet reopens because the real problem was wider"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require reviewed diagnosis first"
+                },
+                {
+                  "order": 2,
+                  "text": "name one primary owner target and one target artifact class"
+                },
+                {
+                  "order": 3,
+                  "text": "keep validation and stop conditions visible"
+                },
+                {
+                  "order": 4,
+                  "text": "hand checkpoint posture and scenario rollout to adjacent surfaces"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should keep repair shaping smaller than checkpoint execution, playbook\ncoordination, proof, memory writeback, runtime repair, or general\nself-improvement doctrine."
+            }
+          ]
+        },
         {
           "note_path": "techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -49805,7 +50339,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -49820,11 +50354,23 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around repair shaping rather than checkpoint or rollout doctrine"
+                  "text": "the second context adaptation kept the contract bounded around repair shaping rather than checkpoint doctrine, playbook rollout, or generic self-improvement"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and downstream route evidence where diagnosis must land before bounded repair follow-through"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-sdk` at `931e7460ca4afb85dc20d400e8fad7d7d2c294e6` surfaces `aoa-session-self-repair` only when a reviewed diagnosis receipt exists and no repair-cycle receipt has landed, making diagnosis-before-repair an executable closeout rule without running the repair itself"
+                },
+                {
+                  "order": 5,
+                  "text": "`aoa-skills` growth-cycle examples show a reviewed diagnosis packet followed by a bounded `REPAIR_PACKET`/repair-cycle receipt with target owner repo, target artifact class, execution posture, validation health check, rollback marker, approval posture, iteration limit, stop conditions, and escalation route"
+                },
+                {
+                  "order": 6,
+                  "text": "`aoa-playbooks` real-run and gate-review surfaces reinforce that post-repair closeout receipts can preserve a bounded repair packet and owner handoff without becoming a new skill, proof surface, memo, automation, runtime, or playbook promotion"
                 }
               ]
             },
@@ -49839,15 +50385,15 @@
                 },
                 {
                   "order": 2,
-                  "text": "it is strongest when a repair should stay smaller than a playbook but still needs validation and escalation cues"
+                  "text": "it is strongest when a repair should stay smaller than a playbook but still needs one owner target, validation plan, stop cue, and escalation path"
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default repair-shaping technique for every diagnosis-driven workflow"
+                  "text": "it is now proven as the default local technique for turning a reviewed diagnosis into one bounded repair-shape artifact before checkpoint posture or scenario rollout"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not a general self-improvement loop, checkpoint stack, playbook scenario, proof verdict, or runtime self-healing surface"
                 }
               ]
             },
@@ -49859,7 +50405,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -49869,7 +50415,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable repair-shaping seam while stripping local rollout and repo detail"
+                  "value_markdown": "the published technique keeps the reusable repair-shaping seam while stripping local closeout commands, `.aoa` storage layout, playbook route names, and repo-specific repair wrappers"
                 }
               ]
             },
@@ -49880,11 +50426,43 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between diagnosis, repair shape, and checkpoint posture should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-sdk/src/aoa_sdk/closeout/api.py` hash `346eb177214934df59971c5db4f987aae0a2310f`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/tests/test_closeout.py` hash `ba918ac60162a004c51d7c688dfebfd535e6e32d`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-skills/mechanics/growth-cycle/examples/session-growth-artifacts/diagnosis_packet.derived-visibility-handoff.json` hash `37101f6b0a30676dbe92dad9ed220493f17cd9bc`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-skills/mechanics/growth-cycle/examples/session-growth-artifacts/repair_cycle.kernel-maturity.json` hash `ec755ffec562a8b78c9eb11505c5b943b5dd22d2`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-skills/mechanics/growth-cycle/examples/session-growth-artifacts/repair_cycle_receipt.kernel-maturity.json` hash `4dc51d378e4cfb4b2d96e9fb40e6c6b0bdca0e11`"
+                },
+                {
+                  "order": 7,
+                  "text": "downstream evidence ref: `repo:aoa-skills/docs/reviews/status-promotions/aoa-session-self-repair.md` hash `0794e413dad92153bd96953837a8cbce641a8ce5`"
+                },
+                {
+                  "order": 8,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/docs/real-runs/2026-04-22.closeout-owner-follow-through-continuity.wave5-repair-post-closeout.md` hash `e96707ce656a5a945216392bc54d32cc137ec3de`"
+                },
+                {
+                  "order": 9,
+                  "text": "boundary preserved: repair shape still starts after diagnosis, stays smaller than scenario rollout, and does not own checkpoint posture"
+                },
+                {
+                  "order": 10,
+                  "text": "boundary preserved: SDK closeout rules, skill execution, playbook continuity, proof, memo, stats, and owner-object authorship stay downstream or neighboring surfaces"
                 }
               ]
             },
@@ -49895,11 +50473,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0082` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded repair-shaping boundary"
+                  "text": "move `AOA-T-0082` to `canonical`"
                 }
               ]
             }
@@ -50113,6 +50687,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "live `aoa-sdk` closeout rules now surface bounded self-repair only after diagnosis exists and no repair-cycle receipt has landed, while `aoa-skills` growth-cycle artifacts show diagnosis leading to one prepared repair packet with owner target, validation, rollback, iteration, stop, and escalation posture"
                 }
               ]
             },
@@ -50129,7 +50707,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded repair-shape-from-diagnosis technique"
+                  "value_markdown": "the adapted bundle stays readable as a bounded repair-shape-from-diagnosis technique without absorbing SDK closeout, skill execution, playbook, proof, memo, or runtime authority"
                 }
               ]
             }
@@ -50141,6 +50719,160 @@
       "id": "AOA-T-0083",
       "technique_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md",
       "notes": [
+        {
+          "note_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0083"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "checkpoint-bound-self-repair"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "bounded canonical default"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "markdown",
+              "markdown": "Review the effects of making explicit checkpoint posture the default guard\naround a meaningful bounded self-repair."
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "approval, rollback, health check, iteration, or improvement-log posture is partial"
+                },
+                {
+                  "order": 2,
+                  "text": "checkpoint posture is used before any bounded repair shape exists"
+                },
+                {
+                  "order": 3,
+                  "text": "repair still feels automatic because approval or rollback is implicit"
+                },
+                {
+                  "order": 4,
+                  "text": "role-law, proof-law, or playbook scenario design hides behind repair language"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "too much checkpoint ceremony can slow obviously safe tiny repairs"
+                },
+                {
+                  "order": 2,
+                  "text": "downstream agents may over-trust a checklist and stop asking whether the\nrepair should happen"
+                },
+                {
+                  "order": 3,
+                  "text": "improvement logs can become decorative if nobody rereads them"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "replacing repair shaping with checkpoint paperwork"
+                },
+                {
+                  "order": 2,
+                  "text": "treating approval posture as execution authority"
+                },
+                {
+                  "order": 3,
+                  "text": "hiding doctrine or role edits behind self-repair language"
+                },
+                {
+                  "order": 4,
+                  "text": "using retry loops as pseudo-progress instead of escalation"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "rollback markers or health checks are missing"
+                },
+                {
+                  "order": 2,
+                  "text": "no iteration limit is named for a risky repair route"
+                },
+                {
+                  "order": 3,
+                  "text": "reviewers cannot find the improvement-log or audit stub afterward"
+                },
+                {
+                  "order": 4,
+                  "text": "important surfaces changed without visible checkpoint evidence"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "require a bounded repair shape before checkpoint posture"
+                },
+                {
+                  "order": 2,
+                  "text": "keep approval, rollback, health check, iteration, and improvement log explicit"
+                },
+                {
+                  "order": 3,
+                  "text": "escalate when retries fail or the repair widens"
+                },
+                {
+                  "order": 4,
+                  "text": "hand role-law, proof-law, playbook, and runtime concerns to their owners"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "markdown",
+              "markdown": "Keep the canonical bundle and use this note as one bounded watch surface. Future\nchanges should keep checkpoint-bound self-repair explicit and reversible\nwithout widening it into role contracts, proof doctrine, playbook orchestration,\nruntime self-healing, or autonomous self-modification authority."
+            }
+          ]
+        },
         {
           "note_path": "techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
@@ -50172,7 +50904,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "not approved for canonical promotion yet"
+                  "text": "approved for canonical promotion"
                 }
               ]
             },
@@ -50187,11 +50919,23 @@
                 },
                 {
                   "order": 2,
-                  "text": "the second context adaptation kept the contract bounded around self-repair checkpoint posture rather than general approval doctrine"
+                  "text": "the second context adaptation kept the contract bounded around self-repair checkpoint posture rather than general approval governance, role law, or runtime autonomy"
                 },
                 {
                   "order": 3,
-                  "text": "the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one AoA session-harvest lineage"
+                  "text": "the bundle has a checklist, a public-safe example, and downstream route evidence where meaningful repair remains behind approval, rollback, health-check, iteration, and improvement-log posture"
+                },
+                {
+                  "order": 4,
+                  "text": "`aoa-agents` at `ff5c397d59916c9a791a04e27328f5f2f3a8bc5f` names the role-facing self-agent checkpoint stack: constitution or policy check, approval gate, rollback marker, post-change health check, bounded iteration limit, and explicit improvement log"
+                },
+                {
+                  "order": 5,
+                  "text": "`aoa-playbooks` at `78069a795690b343c5f228d1614c3e48adeaaead` keeps checkpoint rollout as scenario-level coordination while preserving approval, rollback, health checks, and improvement logs as explicit route evidence"
+                },
+                {
+                  "order": 6,
+                  "text": "`aoa-skills` growth-cycle examples show repair-cycle artifacts with `checkpoint_required`, approval posture, rollback marker, health check, bounded iteration limit, stop conditions, and prepared-vs-verified execution posture; `aoa-sdk` closeout rules keep diagnosis, repair, progression, and checkpoint-required follow-through ordered without executing hidden mutation"
                 }
               ]
             },
@@ -50202,19 +50946,19 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is useful when bounded self-repair needs explicit checkpoint posture around approval, rollback, health checks, and retries"
+                  "text": "this is useful when a bounded self-repair shape exists and meaningful mutation needs explicit approval, rollback, health-check, iteration, and improvement-log posture"
                 },
                 {
                   "order": 2,
-                  "text": "it is strongest when self-repair would otherwise feel automatic or unreviewable"
+                  "text": "it is strongest when self-repair would otherwise feel automatic, unreviewable, or larger than one repair packet"
                 },
                 {
                   "order": 3,
-                  "text": "it is not yet proven as the default checkpoint technique for every mutation workflow"
+                  "text": "it is now proven as the default local technique for checkpoint-bound self-repair posture around an already shaped repair"
                 },
                 {
                   "order": 4,
-                  "text": "the current evidence supports promotion, but not canonical status"
+                  "text": "it is still not role-law authorship, proof doctrine, playbook scenario design, runtime self-healing, generic confirmation gating, or autonomous self-modification authority"
                 }
               ]
             },
@@ -50226,7 +50970,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-04-05"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -50236,7 +50980,7 @@
                 {
                   "order": 3,
                   "key": "sanitization still holds",
-                  "value_markdown": "the published technique keeps the reusable self-repair checkpoint seam while stripping local approval commands and repo-specific wrappers"
+                  "value_markdown": "the published technique keeps the reusable self-repair checkpoint seam while stripping local approval commands, `.aoa` storage layout, role implementation details, and repo-specific wrappers"
                 }
               ]
             },
@@ -50247,11 +50991,43 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the bundle would benefit from a second independent downstream consumer outside the current AoA session-harvest lineage"
+                  "text": "no canonical blocker remains for this promotion wave; a future non-AoA external adoption would widen evidence further but is not required for this bounded local canonical review"
                 },
                 {
                   "order": 2,
-                  "text": "the seam between repair shaping, self-repair checkpoints, and general mutation confirmation should stay tested through future sibling use"
+                  "text": "downstream evidence ref: `repo:aoa-agents/docs/SELF_AGENT_CHECKPOINT_STACK.md` hash `017b723240ac017597423b68aeb3a2da55031c97`"
+                },
+                {
+                  "order": 3,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/self-agent-checkpoint-rollout/PLAYBOOK.md` hash `a0c99b1b62e3d92901a1dfad2bef81e25abd6922`"
+                },
+                {
+                  "order": 4,
+                  "text": "downstream evidence ref: `repo:aoa-playbooks/playbooks/session-growth-cycle/PLAYBOOK.md` hash `2d63533469c4897d6d0fa51f8f9a2e063372492c`"
+                },
+                {
+                  "order": 5,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/docs/SESSION_GROWTH_KERNEL_SIGNAL_RULES.md` hash `d9caa0c6c24b9f0d1edebaee43e3612487c639dc`"
+                },
+                {
+                  "order": 6,
+                  "text": "downstream evidence ref: `repo:aoa-sdk/schemas/closeout_followthrough_decision.schema.json` hash `72c58496adbb68edf3f39a40819e4bd5a5f780e9`"
+                },
+                {
+                  "order": 7,
+                  "text": "downstream evidence ref: `repo:aoa-skills/mechanics/growth-cycle/examples/session-growth-artifacts/repair_cycle.kernel-maturity.json` hash `ec755ffec562a8b78c9eb11505c5b943b5dd22d2`"
+                },
+                {
+                  "order": 8,
+                  "text": "downstream evidence ref: `repo:aoa-skills/mechanics/growth-cycle/examples/session-growth-artifacts/repair_cycle_receipt.kernel-maturity.json` hash `4dc51d378e4cfb4b2d96e9fb40e6c6b0bdca0e11`"
+                },
+                {
+                  "order": 9,
+                  "text": "boundary preserved: this technique governs checkpoint posture around an already shaped repair; it does not choose the repair shape, authorize role-law changes, score proof, or run a playbook"
+                },
+                {
+                  "order": 10,
+                  "text": "boundary preserved: `aoa-agents`, `aoa-playbooks`, `aoa-sdk`, and `aoa-skills` stay downstream or neighboring consumers, not hidden dependencies for portable technique use"
                 }
               ]
             },
@@ -50262,11 +51038,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0083` as `promoted`"
-                },
-                {
-                  "order": 2,
-                  "text": "revisit canonical readiness only after at least one more live context proves the same bounded self-repair checkpoint boundary"
+                  "text": "move `AOA-T-0083` to `canonical`"
                 }
               ]
             }
@@ -50480,6 +51252,10 @@
                 {
                   "order": 3,
                   "text": "the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers"
+                },
+                {
+                  "order": 4,
+                  "text": "live `aoa-agents`, `aoa-playbooks`, `aoa-sdk`, and `aoa-skills` surfaces now consume the same checkpoint seam: approval, rollback, health check, bounded iteration, improvement log, prepared-vs-verified posture, and route return remain explicit before meaningful self-repair can widen"
                 }
               ]
             },
@@ -50496,7 +51272,7 @@
                 {
                   "order": 2,
                   "key": "note",
-                  "value_markdown": "the adapted bundle stays readable as a bounded self-repair checkpoint technique"
+                  "value_markdown": "the adapted bundle stays readable as a bounded self-repair checkpoint technique without absorbing role law, playbook scenario design, SDK execution, proof, memo, or runtime authority"
                 }
               ]
             }

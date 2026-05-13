@@ -6577,7 +6577,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep full diagnosis separate through `AOA-T-0081`\n- keep owner verdicts and repair planning outside this bundle\n- add a second live context that uses the same bounded drift taxonomy outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep full diagnosis separate through `AOA-T-0081`\n- keep owner verdicts and repair planning outside this bundle\n- keep project-runtime diagnostic overlays as downstream consumers rather than part of this bundle's invariant core"
         }
       ]
     },
@@ -6659,7 +6659,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep drift taxonomy separate through `AOA-T-0080`\n- keep repair packet planning separate through `AOA-T-0082`\n- add a second live context that uses the same diagnosis-from-reviewed-evidence seam outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep drift taxonomy separate through `AOA-T-0080`\n- keep repair packet planning separate through `AOA-T-0082`\n- keep project-runtime diagnostic overlays as downstream consumers rather than part of this bundle's invariant core"
         }
       ]
     },
@@ -6741,7 +6741,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep diagnosis separate through `AOA-T-0081`\n- keep checkpoint posture separate through `AOA-T-0083`\n- add a second live context that uses the same bounded repair-shaping seam outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep diagnosis separate through `AOA-T-0081`\n- keep checkpoint posture separate through `AOA-T-0083`\n- keep SDK closeout and playbook follow-through as downstream consumers rather than part of this bundle's invariant core"
         }
       ]
     },
@@ -6823,7 +6823,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep repair shaping separate through `AOA-T-0082`\n- keep general mutation confirmation separate through `AOA-T-0028`\n- add a second live context that uses the same checkpoint-bound self-repair seam outside the current AoA session-harvest lineage"
+          "content_markdown": "- keep repair shaping separate through `AOA-T-0082`\n- keep general mutation confirmation separate through `AOA-T-0028`\n- keep agent-role checkpoint law and playbook rollout posture as downstream consumers rather than part of this bundle's invariant core"
         }
       ]
     },

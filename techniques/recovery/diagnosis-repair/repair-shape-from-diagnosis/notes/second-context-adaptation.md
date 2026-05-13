@@ -30,7 +30,8 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session workflow for repair shaping
 - the public wording still preserves the seam between diagnosis, repair shape, and checkpoint posture
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- live `aoa-sdk` closeout rules now surface bounded self-repair only after diagnosis exists and no repair-cycle receipt has landed, while `aoa-skills` growth-cycle artifacts show diagnosis leading to one prepared repair packet with owner target, validation, rollback, iteration, stop, and escalation posture
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded repair-shape-from-diagnosis technique
+- note: the adapted bundle stays readable as a bounded repair-shape-from-diagnosis technique without absorbing SDK closeout, skill execution, playbook, proof, memo, or runtime authority

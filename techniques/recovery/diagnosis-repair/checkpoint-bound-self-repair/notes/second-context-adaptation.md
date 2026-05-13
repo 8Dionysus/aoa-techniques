@@ -30,7 +30,8 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded workflow-side checkpoint stack rather than a general policy system
 - the public wording still preserves the seam between repair shape and checkpoint posture
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- live `aoa-agents`, `aoa-playbooks`, `aoa-sdk`, and `aoa-skills` surfaces now consume the same checkpoint seam: approval, rollback, health check, bounded iteration, improvement log, prepared-vs-verified posture, and route return remain explicit before meaningful self-repair can widen
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded self-repair checkpoint technique
+- note: the adapted bundle stays readable as a bounded self-repair checkpoint technique without absorbing role law, playbook scenario design, SDK execution, proof, memo, or runtime authority

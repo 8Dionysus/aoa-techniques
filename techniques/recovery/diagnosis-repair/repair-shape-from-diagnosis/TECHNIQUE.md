@@ -3,7 +3,7 @@ id: AOA-T-0082
 name: repair-shape-from-diagnosis
 domain: agent-workflows
 kind: recovery
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-self-repair/SKILL.md + skills/aoa-session-self-repair/techniques.yaml
@@ -17,12 +17,12 @@ tags:
   - bounded-change
   - post-session
 summary: Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: requires
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # repair-shape-from-diagnosis
@@ -186,4 +188,4 @@ See `checks/repair-shape-from-diagnosis-checklist.md`.
 
 - keep diagnosis separate through `AOA-T-0081`
 - keep checkpoint posture separate through `AOA-T-0083`
-- add a second live context that uses the same bounded repair-shaping seam outside the current AoA session-harvest lineage
+- keep SDK closeout and playbook follow-through as downstream consumers rather than part of this bundle's invariant core

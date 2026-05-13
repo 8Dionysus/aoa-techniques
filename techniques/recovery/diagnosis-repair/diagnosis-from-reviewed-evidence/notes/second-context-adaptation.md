@@ -30,7 +30,8 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded post-session workflow for diagnosis
 - the public wording still preserves the seam between diagnosis, taxonomy, and repair planning
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local skill wrappers
+- live `abyss-self-diagnostic-spine` now consumes the same diagnosis seam for runtime-body evidence: it emits one read-only diagnostic artifact with symptoms, probable causes, owner hints, confidence, freshness, unknowns, and one exit class before repair
 
 ## Result
 - verdict: works
-- note: the adapted bundle stays readable as a bounded diagnosis-from-reviewed-evidence technique
+- note: the adapted bundle stays readable as a bounded diagnosis-from-reviewed-evidence technique across reviewed session and project-runtime diagnostic contexts

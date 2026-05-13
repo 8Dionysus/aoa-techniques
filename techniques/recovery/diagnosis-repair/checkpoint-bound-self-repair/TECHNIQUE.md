@@ -3,7 +3,7 @@ id: AOA-T-0083
 name: checkpoint-bound-self-repair
 domain: agent-workflows
 kind: recovery
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-self-repair/SKILL.md + skills/aoa-session-self-repair/references/checkpoint-bridge.md
@@ -17,12 +17,12 @@ tags:
   - rollback
   - approval
 summary: Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # checkpoint-bound-self-repair
@@ -191,4 +193,4 @@ See `checks/checkpoint-bound-self-repair-checklist.md`.
 
 - keep repair shaping separate through `AOA-T-0082`
 - keep general mutation confirmation separate through `AOA-T-0028`
-- add a second live context that uses the same checkpoint-bound self-repair seam outside the current AoA session-harvest lineage
+- keep agent-role checkpoint law and playbook rollout posture as downstream consumers rather than part of this bundle's invariant core

@@ -33,7 +33,7 @@ Use this report when you want to inspect likely family clusters without promotin
 | `media-ingest` | OCR, field extraction, normalization, dedupe, and semantic bucketing of external media inputs. | `5` | `5` | `0` |
 | `donor-harvest` | Harvest reviewed sessions into donor packs, bounded packets, progression deltas, or overlay artifacts without forced promotion. | `4` | `2` | `2` |
 | `decision-routing` | Owner-layer routing, explicit fork cards, and route risk posture for next-step choice. | `3` | `3` | `0` |
-| `diagnosis-repair` | Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair. | `4` | `0` | `4` |
+| `diagnosis-repair` | Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-repair. | `4` | `4` | `0` |
 | `automation-governance` | Automation-worthiness, approval sensitivity, candidate routing, and promotion-boundary review. | `9` | `1` | `8` |
 | `owner-truth-closeout` | Ingress or mutation gates, proof-backed closeout, validated mirrors, and publish-readiness against owner truth. | `5` | `0` | `5` |
 | `antifragility-recovery` | Degraded continuation, regrounding, and receipt-first failure analysis. | `4` | `0` | `4` |
@@ -396,14 +396,14 @@ Drift taxonomy, diagnosis packets, repair shaping, and checkpoint-bound self-rep
 Typical domains: `agent-workflows`.
 Typical kinds: `assessment`, `recovery`.
 
-Counts: `total` 4, `canonical` 0, `promoted` 4.
+Counts: `total` 4, `canonical` 4, `promoted` 0.
 
 | technique | domain | kind | status | summary |
 |---|---|---|---|---|
-| [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape. |
-| [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | `agent-workflows` | `assessment` | `promoted` | Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet. |
-| [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | `agent-workflows` | `recovery` | `promoted` | Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout. |
-| [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | `agent-workflows` | `recovery` | `promoted` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. |
+| [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Classify repeated post-session friction into bounded drift types so diagnosis can say what kind of problem is present before it claims one probable cause, owner hint, or repair shape. |
+| [AOA-T-0081](../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | `agent-workflows` | `assessment` | `canonical` | Turn reviewed friction evidence into a bounded diagnosis packet that separates symptoms from probable causes, preserves unknowns, and names likely owner hints without mutating anything yet. |
+| [AOA-T-0082](../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | `agent-workflows` | `recovery` | `canonical` | Turn a reviewed diagnosis packet into the smallest honest repair shape so the next artifact stays bounded, owner-aware, and smaller than a scenario rollout. |
+| [AOA-T-0083](../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md) | `agent-workflows` | `recovery` | `canonical` | Keep self-repair behind explicit checkpoint posture with approval, rollback, health checks, iteration limits, and improvement-log visibility so repair stays reviewable instead of feeling like silent self-modification. |
 
 ## `automation-governance`
 
