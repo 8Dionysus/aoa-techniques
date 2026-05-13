@@ -33,14 +33,14 @@
 
 - result: pass
 - this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique
-- the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor Telegram family
+- the original import path was strong enough for initial publication, and the Pack 31 canonical review closed the remaining live-adopter gap with `3bl3gamer/tg_history_dumper`
 
 ## Remaining gaps
 
-- the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation
-- a future stronger context should show another public workflow where Telegram-derived messages become a resumable local object store with visible provenance before later routing, recall, or memory actions
+- no import-path blocker remains for canonical review
+- future stronger contexts should still preserve the same stop-line: Telegram-derived messages and media become a resumable local object store with visible provenance before later routing, recall, search, archive presentation, auth/session, or memory actions
 
 ## Recommendation
 
 - accept `AOA-T-0074` as a bounded external import and publish it as `promoted`
-- defer any canonical review until another live adopter confirms that the source-specific normalization contract survives outside the current donor family
+- use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` as the current canonical posture after the Pack 31 evidence review

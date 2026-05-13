@@ -3,7 +3,7 @@ id: AOA-T-0074
 name: telegram-export-normalization-to-local-store
 domain: agent-workflows
 kind: ingest
-status: promoted
+status: canonical
 origin:
   project: Telethon + TDLib + opentele + Chatistics + tg-archive + telegram-mcp
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - local-store
   - provenance
 summary: Normalize Telegram messages and media into a resumable local store with visible provenance so later workflows can inspect, route, or distill the data without collapsing auth, session, or memory doctrine into the storage contract.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations: []
 evidence:
@@ -34,6 +34,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # telegram-export-normalization-to-local-store
@@ -176,9 +178,10 @@ See `checks/telegram-export-normalization-to-local-store-checklist.md`.
 - adapted from open-source `Telethon`, `TDLib`, `opentele`, `Chatistics`, `tg-archive`, and `telegram-mcp`
 - landed from `personal-media-ingest`
 - promoted into `aoa-techniques` on 2026-03-28 as a bounded external-import technique for Telegram-source normalization into a local resumable store
+- promoted to canonical on 2026-05-12 after `3bl3gamer/tg_history_dumper` showed a second public workflow where Telegram messages and media are written into append-only local JSONL/file surfaces, related peers stay visible, last saved message ids drive incremental continuation, and interrupted media downloads can resume without importing auth, session, viewer, search, or memory doctrine
 
 ## Future evolution
 
 - keep auth/session bridging separate unless a narrower approved seam proves reusable
 - split out thread reconstruction or media-routing helpers only if those contracts survive independently
-- add a stronger second live context if another public workflow keeps Telegram normalization explicit before later routing, recall, or memory actions
+- future sources can reinforce the default only if Telegram-derived message objects, media references, peer/source provenance, and resume state stay visible before later routing, recall, search, archive presentation, auth, session, or memory actions begin

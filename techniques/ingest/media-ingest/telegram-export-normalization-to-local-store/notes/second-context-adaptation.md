@@ -34,7 +34,8 @@
 - Telethon and TDLib expose programmatic message retrieval, sync, and media access over Telegram data
 - opentele shows why session conversion and auth bridging are adjacent but separate concerns
 - Chatistics, tg-archive, and telegram-mcp show Telegram-derived content being archived, analyzed, or surfaced through local structured storage and local-first tool-facing paths
+- live reinforcement: `3bl3gamer/tg_history_dumper` at `0058ab229043fc4af6b1859e0c367b9fd9b10d93` repeats the reusable seam outside the original donor set: Telegram messages and media are exported into local JSONL/files, related users and chats stay in JSONL peer surfaces, last saved message ids drive incremental continuation, media file paths are tied to chat/message ids, and interrupted media downloads can resume
 
 ## Result
 
-- works as a documentation-first second context and preserves the bounded core without carrying over auth procedures, session bridging, memory doctrine, or donor runtime packaging
+- works as a documentation-first second context and now has live public reinforcement that preserves the bounded core without carrying over auth procedures, session bridging, memory doctrine, archive-product doctrine, or donor runtime packaging
