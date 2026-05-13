@@ -691,6 +691,28 @@
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
+      "id": "AOA-T-0076",
+      "name": "owner-layer-triage",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.",
+      "current_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
+      "family": "decision-routing",
+      "proposed_trunk": "governance",
+      "proposed_shelf": "decision-routing",
+      "proposed_future_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:decision-routing",
+        "domain:agent-workflows",
+        "kind:assessment",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
       "id": "AOA-T-0077",
       "name": "harvest-packet-contract",
       "domain": "agent-workflows",
@@ -709,6 +731,73 @@
         "kind:handoff",
         "status:canonical",
         "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
+      "id": "AOA-T-0078",
+      "name": "decision-fork-cards",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
+      "current_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
+      "family": "decision-routing",
+      "proposed_trunk": "governance",
+      "proposed_shelf": "decision-routing",
+      "proposed_future_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:decision-routing",
+        "domain:agent-workflows",
+        "kind:assessment",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
+      "id": "AOA-T-0079",
+      "name": "risk-passport-lift",
+      "domain": "agent-workflows",
+      "kind": "assessment",
+      "status": "canonical",
+      "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
+      "current_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
+      "family": "decision-routing",
+      "proposed_trunk": "governance",
+      "proposed_shelf": "decision-routing",
+      "proposed_future_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:decision-routing",
+        "domain:agent-workflows",
+        "kind:assessment",
+        "status:canonical",
+        "review_status:candidate"
+      ],
+      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
+    },
+    {
+      "id": "AOA-T-0090",
+      "name": "nearest-wrong-target-rejection",
+      "domain": "agent-workflows",
+      "kind": "guardrail",
+      "status": "canonical",
+      "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
+      "current_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "family": "automation-governance",
+      "proposed_trunk": "governance",
+      "proposed_shelf": "promotion-boundary",
+      "proposed_future_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
+      "review_status": "candidate",
+      "rationale_cues": [
+        "family:automation-governance",
+        "domain:agent-workflows",
+        "kind:guardrail",
+        "status:canonical",
+        "review_status:candidate",
+        "tree_id_placement:governance/promotion-boundary"
       ],
       "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
@@ -777,72 +866,6 @@
         "review_status:pilot-candidate"
       ],
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0076",
-      "name": "owner-layer-triage",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.",
-      "current_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
-      "family": "decision-routing",
-      "proposed_trunk": "governance",
-      "proposed_shelf": "decision-routing",
-      "proposed_future_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:decision-routing",
-        "domain:agent-workflows",
-        "kind:assessment",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0078",
-      "name": "decision-fork-cards",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
-      "current_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
-      "family": "decision-routing",
-      "proposed_trunk": "governance",
-      "proposed_shelf": "decision-routing",
-      "proposed_future_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:decision-routing",
-        "domain:agent-workflows",
-        "kind:assessment",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0079",
-      "name": "risk-passport-lift",
-      "domain": "agent-workflows",
-      "kind": "assessment",
-      "status": "promoted",
-      "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
-      "current_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
-      "family": "decision-routing",
-      "proposed_trunk": "governance",
-      "proposed_shelf": "decision-routing",
-      "proposed_future_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:decision-routing",
-        "domain:agent-workflows",
-        "kind:assessment",
-        "status:promoted",
-        "review_status:candidate"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
     },
     {
       "id": "AOA-T-0080",
@@ -1062,29 +1085,6 @@
         "family:automation-governance",
         "domain:agent-workflows",
         "kind:assessment",
-        "status:promoted",
-        "review_status:candidate",
-        "tree_id_placement:governance/promotion-boundary"
-      ],
-      "stop_line": "Use as placement evidence only; direct bundle reading is required before migration."
-    },
-    {
-      "id": "AOA-T-0090",
-      "name": "nearest-wrong-target-rejection",
-      "domain": "agent-workflows",
-      "kind": "guardrail",
-      "status": "promoted",
-      "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
-      "current_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
-      "family": "automation-governance",
-      "proposed_trunk": "governance",
-      "proposed_shelf": "promotion-boundary",
-      "proposed_future_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
-      "review_status": "candidate",
-      "rationale_cues": [
-        "family:automation-governance",
-        "domain:agent-workflows",
-        "kind:guardrail",
         "status:promoted",
         "review_status:candidate",
         "tree_id_placement:governance/promotion-boundary"

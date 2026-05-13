@@ -19,8 +19,9 @@ Pack 23 closure for `AOA-T-0066`, the Pack 24 closure for `AOA-T-0067`, the
 Pack 25 closure for `AOA-T-0068`, the Pack 26 closure for `AOA-T-0069`, the
 Pack 27 closure for `AOA-T-0070`, the Pack 28 closure for `AOA-T-0071`,
 the Pack 29 closure for `AOA-T-0072`, the Pack 30 closure for
-`AOA-T-0073`, the Pack 31 closure for `AOA-T-0074`, and the Pack 32 closures
-for `AOA-T-0075` plus `AOA-T-0077`, the live promoted queue is `42`
+`AOA-T-0073`, the Pack 31 closure for `AOA-T-0074`, the Pack 32 closures
+for `AOA-T-0075` plus `AOA-T-0077`, and the Pack 33 closures for
+`AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090`, the live promoted queue is `38`
 bundles.
 This
 file is not bundle authority, not a promotion verdict, not generated output,
@@ -166,8 +167,14 @@ Current live constraint:
   harvest packet receipts, and owner follow-through consumption, with
   LangSmith reviewed-run curation kept as supporting public evidence, and exit
   the live promoted queue through canonical review;
-- the live generated catalog currently contains `42` promoted techniques and
-  `65` canonical techniques;
+- `AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090` closed during
+  Stage 5 with sibling downstream evidence from `aoa-playbooks`,
+  `aoa-summon`, `aoa-sdk`, and supporting `aoa-evals` owner-fit surfaces for
+  owner repo, owner shape, nearest-wrong target, branch decision, risk
+  passport, split, reviewed-lane, human-gate, reanchor, defer, and stop
+  posture, and exit the live promoted queue through canonical review;
+- the live generated catalog currently contains `38` promoted techniques and
+  `69` canonical techniques;
 - this plan now targets the full promoted matrix, not only the lead
   sprint order.
 
@@ -180,7 +187,7 @@ and `AOA-T-0039` closures plus the Pack 4 `AOA-T-0027`, `AOA-T-0029`, and
 `AOA-T-0030` closures plus the Pack 5, Pack 7, Pack 8, Pack 9, Pack 10,
 Pack 11, Pack 12, Pack 13, Pack 14, Pack 15, Pack 16, Pack 17, Pack 18,
 Pack 19, Pack 20, Pack 21, Pack 22, Pack 23, Pack 24, Pack 25, Pack 26,
-Pack 27, Pack 28, Pack 29, Pack 30, Pack 31, and Pack 32 closures is `42`
+Pack 27, Pack 28, Pack 29, Pack 30, Pack 31, Pack 32, and Pack 33 closures is `38`
 promoted techniques,
 with `AOA-T-0026`,
 `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
@@ -190,8 +197,9 @@ with `AOA-T-0026`,
 `AOA-T-0056`, `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, and
 `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`, `AOA-T-0064`, `AOA-T-0065`,
 `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`, `AOA-T-0069`, `AOA-T-0070`,
-`AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, `AOA-T-0074`, `AOA-T-0075`, and
-`AOA-T-0077` counted as closed rows rather than remaining targets.
+`AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`, `AOA-T-0074`, `AOA-T-0075`,
+`AOA-T-0077`, `AOA-T-0076`, `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090`
+counted as closed rows rather than remaining targets.
 
 The pass succeeds only when every remaining promoted bundle, plus any original
 queue row that exits during the pass, has one of these outcomes:
@@ -206,7 +214,7 @@ the bundle-local `notes/canonical-readiness.md` can honestly move to
 
 ## Complete-Scope Rule
 
-This is an original `82/82` promoted-corpus plan with the Pack 32 canonical closure recorded.
+This is an original `82/82` promoted-corpus plan with the Pack 33 canonical closure recorded.
 
 Do not call the pass complete while any original promoted bundle lacks one
 reviewed closeout row in the final ledger, whether it remains promoted,
@@ -280,10 +288,10 @@ appropriate durable surface.
 | Stage 4 | [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | agent-workflows / ingest | Pack 31 Telegram export normalization | exact-fit second context; exits to canonical | `3bl3gamer/tg_history_dumper` local JSONL messages, message-linked media files, related peer JSONL surfaces, last-message-id continuation, and resumable interrupted media downloads close the Telegram export normalization gap |
 | Stage 5 | [AOA-T-0075 session-donor-harvest](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | agent-workflows / lift | Pack 32 reviewed session harvest spine | exact-fit second context; exits to canonical | `aoa-sdk` checkpoint-closeout bridge reviewed-artifact reread, checkpoint-review carry, bounded donor candidates, and donor harvest packet receipts close the session donor harvest gap; LangSmith reviewed-run curation supports the public reviewed-trace-to-bounded-record pressure |
 | Stage 5 | [AOA-T-0077 harvest-packet-contract](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | agent-workflows / handoff | Pack 32 reviewed session harvest spine | exact-fit second context; exits to canonical | `aoa-sdk` `HARVEST_PACKET.json` plus closeout owner follow-through consumption close the bounded harvest packet contract gap; LangSmith reviewed-run curation stays supporting evidence, not packet authority |
-| Stage 5 | [AOA-T-0076 owner-layer-triage](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
-| Stage 5 | [AOA-T-0078 decision-fork-cards](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
-| Stage 5 | [AOA-T-0079 risk-passport-lift](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | pending |  |
-| Stage 5 | [AOA-T-0090 nearest-wrong-target-rejection](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | agent-workflows / guardrail | Pack 33 owner route fork discipline | pending |  |
+| Stage 5 | [AOA-T-0076 owner-layer-triage](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-playbooks` owner-followthrough/session-growth routes plus supporting `aoa-evals` owner-fit surfaces close the one-owner, one-next-artifact, one-nearest-wrong-target placement gap |
+| Stage 5 | [AOA-T-0078 decision-fork-cards](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-playbooks` owner-followthrough branches and evaluated `aoa-summon` route-forks boundary close the visible branch-choice-before-action gap |
+| Stage 5 | [AOA-T-0079 risk-passport-lift](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | agent-workflows / assessment | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-summon` plus `aoa-sdk` A2A summon assessment close the difficulty/risk/control/delegate/stop posture gap for choosing, narrowing, or blocking a child route |
+| Stage 5 | [AOA-T-0090 nearest-wrong-target-rejection](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | agent-workflows / guardrail | Pack 33 owner route fork discipline | exact-fit downstream context; exits to canonical | `aoa-playbooks`, `aoa-techniques` quest carry, and supporting `aoa-evals` owner-fit surfaces close the nearest-plausible-wrong-target rejection gap |
 | Stage 5 | [AOA-T-0080 session-drift-taxonomy](../../../../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | pending |  |
 | Stage 5 | [AOA-T-0081 diagnosis-from-reviewed-evidence](../../../../techniques/recovery/diagnosis-repair/diagnosis-from-reviewed-evidence/TECHNIQUE.md) | agent-workflows / assessment | Pack 34 diagnosis and repair loop | pending |  |
 | Stage 5 | [AOA-T-0082 repair-shape-from-diagnosis](../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md) | agent-workflows / recovery | Pack 34 diagnosis and repair loop | pending |  |
@@ -490,7 +498,9 @@ each has a narrow substrate and false positives are likely.
     `AOA-T-0077` - closed; exact-fit `aoa-sdk` checkpoint-closeout bridge
     evidence plus supporting LangSmith reviewed-run curation
 35. Pack 33 - Owner Route Fork Discipline: `AOA-T-0076`,
-    `AOA-T-0078`, `AOA-T-0079`, `AOA-T-0090`
+    `AOA-T-0078`, `AOA-T-0079`, `AOA-T-0090` - closed; exact-fit sibling
+    downstream evidence from `aoa-playbooks`, `aoa-summon`, `aoa-sdk`, and
+    supporting `aoa-evals` owner-fit surfaces
 36. Pack 34 - Diagnosis And Repair Loop: `AOA-T-0080`,
     `AOA-T-0081`, `AOA-T-0082`, `AOA-T-0083`
 37. Pack 35 - Progression And Quest Reflection: `AOA-T-0084`,
@@ -520,7 +530,7 @@ the blocker is structure plus second-context review.
 
 ### Stage 7: Matrix-Wide Closeout
 
-44. Reconcile all `42` current promoted IDs plus the closed `AOA-T-0026`,
+44. Reconcile all `38` current promoted IDs plus the closed `AOA-T-0026`,
     `AOA-T-0036`, `AOA-T-0037`, `AOA-T-0038`, `AOA-T-0039`, `AOA-T-0027`,
     `AOA-T-0029`, `AOA-T-0030`, `AOA-T-0045`, `AOA-T-0033`, `AOA-T-0049`,
     `AOA-T-0050`, `AOA-T-0051`, `AOA-T-0052`, `AOA-T-0054`,
@@ -528,7 +538,8 @@ the blocker is structure plus second-context review.
     `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, `AOA-T-0062`, `AOA-T-0063`,
     `AOA-T-0064`, `AOA-T-0065`, `AOA-T-0066`, `AOA-T-0067`, `AOA-T-0068`,
     `AOA-T-0069`, `AOA-T-0070`, `AOA-T-0071`, `AOA-T-0072`, `AOA-T-0073`,
-    `AOA-T-0074`, `AOA-T-0075`, and `AOA-T-0077` rows against generated
+    `AOA-T-0074`, `AOA-T-0075`, `AOA-T-0077`, `AOA-T-0076`,
+    `AOA-T-0078`, `AOA-T-0079`, and `AOA-T-0090` rows against generated
     catalog truth.
 45. Produce one closeout ledger with:
     - all IDs accounted;
@@ -2008,6 +2019,126 @@ Reject:
   posture;
 - hidden routing, diagnosis, repair, progression, quest, memory, stats, or
   owner acceptance authority inside packet fields.
+
+### AOA-T-0076: `owner-layer-triage`
+
+Stage 5 Pack 33 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-playbooks` keeps the reusable object as one owner repo, one owner
+shape, one route-followthrough artifact, and one nearest-wrong target before
+later playbook, proof, memo, stats, routing, or SDK consumers act.
+
+Exact evidence:
+
+- `owner-followthrough-campaign` requires reviewed candidate identity, owner
+  repo, owner shape, nearest-wrong target, and route-followthrough surface
+  before mutation begins;
+- `session-growth-cycle` names owner repo, owner shape, and nearest-wrong target
+  as one of the explicit route checkpoints before seed staging, proof,
+  writeback, or stats refresh;
+- `AOA-PB-Q-0013` kept Agon seed-wave survivors under owner-routed follow-through
+  rather than promoting one broad wave into a skill, proof, memo, runtime, or
+  new playbook family;
+- `AOA-PB-Q-0014` kept recurrence archive survivors under owner-routed
+  follow-through while stats refresh remained subordinate;
+- `aoa-owner-fit-routing-quality` keeps chosen owner hypothesis, owner shape,
+  nearest-wrong target, and derivative-repo exclusion inspectable as supporting
+  proof without authoring owner truth.
+
+Reject:
+
+- playbook scenario design as part of the technique;
+- eval verdict authority as owner placement;
+- routing, KAG, memo, stats, SDK, or generated surfaces as first-authoring
+  homes;
+- context-map design and final quest promotion review as bundle-owned behavior.
+
+### AOA-T-0078: `decision-fork-cards`
+
+Stage 5 Pack 33 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-playbooks` and evaluated `aoa-summon` keep branch choice visible
+before action rather than letting owner follow-through or child execution hide
+the route decision.
+
+Exact evidence:
+
+- `owner-followthrough-campaign` requires a route-followthrough surface before
+  branch selection begins;
+- its decision points choose among direct owner-status landing, seed staging,
+  proof-first, reanchor, merge, defer, drop, diagnosis, and repair;
+- its canonical route invokes `aoa-session-route-forks` before owner movement
+  so follow-through does not drift by convenience;
+- `aoa-summon` explicitly refuses to launch a child route while multiple
+  plausible next routes still compete and routes that work back to route-forks;
+- the evaluated session-growth governance ADR records the route-forks/summon
+  boundary: fork cards may expose a selected child-route candidate, while summon
+  gates only one anchored child route.
+
+Reject:
+
+- turning branch cards into playbook scenario design;
+- using fork cards as runtime routing policy or summon authorization;
+- hiding a preferred route by erasing alternatives;
+- treating branch cards as proof, owner truth, or memory writeback.
+
+### AOA-T-0079: `risk-passport-lift`
+
+Stage 5 Pack 33 verdict, 2026-05-12: exact-fit sibling downstream context
+found. `aoa-summon` and `aoa-sdk` use the passport fields as small route
+posture that can allow, narrow, split, human-gate, or block child execution.
+
+Exact evidence:
+
+- `aoa-summon` requires a quest passport with difficulty, risk, control mode,
+  and delegate tier before one bounded child route may launch;
+- its review checklist requires proof that the passport was actually used for
+  lane selection;
+- `aoa-sdk` models `QuestPassport` with difficulty, risk, control mode,
+  delegate tier, fallback tier, wrapper class, route anchor, expected artifacts,
+  and self-agent posture;
+- `assess_summon` returns `split_required` for `d3+` routes, blocks
+  `control_mode: blocked`, gates high-risk or human-gated routes to reviewed
+  lanes or human gate, and keeps stress posture narrowing rather than widening;
+- the A2A summon-return fixture shows a contract-risk route landing in a
+  reviewed local lane with explicit reason codes, checkpoint bridge, memo
+  export, return plan, and owner publication plan.
+
+Reject:
+
+- risk scoring doctrine;
+- approval policy;
+- dispatch authority;
+- repair execution;
+- SDK A2A transport details or exact helper implementation as technique
+  invariants.
+
+### AOA-T-0090: `nearest-wrong-target-rejection`
+
+Stage 5 Pack 33 verdict, 2026-05-12: exact-fit sibling downstream context
+found. Playbook and quest surfaces used explicit nearest-wrong rejection to
+prevent convenient but false promotion into neighboring owner layers.
+
+Exact evidence:
+
+- `owner-followthrough-campaign` requires nearest-wrong target before mutation
+  and asks which owner repo and nearest-wrong target kept the route honest;
+- `session-growth-cycle` requires owner boundary and nearest-wrong-target
+  posture before owner landing starts;
+- `AOA-PB-Q-0013` rejected `promote_to_skill` while keeping the repeated unit as
+  a route-shaped owner-followthrough quest;
+- `AOA-PB-Q-0014` rejected `promote_to_skill` while keeping recurrence archive
+  follow-through route-shaped and stats-subordinate;
+- `AOA-TECH-Q-0007` rejected skill ownership for a technique-shaped AoA release
+  closeout signal, keeping it in technique promotion-readiness instead;
+- `aoa-owner-fit-routing-quality` makes nearest-wrong-target quality a
+  supporting proof question without making evals final owner authority.
+
+Reject:
+
+- using nearest-wrong rejection to choose the verdict by itself;
+- broad anti-pattern doctrine;
+- skill, playbook, proof, memo, routing, KAG, runtime, or stats surfaces as
+  convenient owner substitutes;
+- final promotion review or owner-object authoring as bundle-owned behavior.
 
 ### AOA-T-0005: `new-intent-rollout-checklist`
 

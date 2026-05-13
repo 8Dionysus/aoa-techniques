@@ -29,6 +29,7 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one bounded workflow-side posture summary rather than a docs taxonomy or approval system
 - the public wording still preserves the seam between branch-card meaning and smaller posture metadata
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local routing wrappers
+- live `aoa-summon` and `aoa-sdk` A2A summon assessment now consume difficulty, risk, control mode, delegate tier, split, reviewed-lane, and human-gate posture to choose, narrow, or block one child route
 
 ## Result
 - verdict: works

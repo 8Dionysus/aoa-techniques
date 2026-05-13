@@ -3,7 +3,7 @@ id: AOA-T-0076
 name: owner-layer-triage
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-donor-harvest/SKILL.md + skills/aoa-session-donor-harvest/references/owner-layer-map.md
@@ -17,12 +17,12 @@ tags:
   - classification
   - boundaries
 summary: Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # owner-layer-triage
@@ -191,9 +193,10 @@ See `checks/owner-layer-triage-checklist.md`.
 
 - born in `aoa-skills` as the owner-placement half of `aoa-session-donor-harvest`
 - extracted into `aoa-techniques` on 2026-04-05 as a bounded owner-layer placement workflow
+- promoted to `canonical` on 2026-05-12 after `aoa-playbooks` owner-followthrough and session-growth routes, sibling quest entries, and supporting `aoa-evals` owner-fit surfaces showed the same one-unit owner verdict plus nearest-wrong-target discipline outside the originating donor-harvest skill
 
 ## Future evolution
 
 - keep donor extraction separate through `AOA-T-0075` instead of widening this bundle into a whole post-session harvest stack
-- add a second live context that uses the same one-unit placement verdict outside the current AoA session-harvest lineage
 - keep final quest promotion review, derivative bridge updates, and broader context-map design in sibling techniques
+- keep playbook, eval, memo, routing, KAG, and SDK consumers downstream of the owner verdict rather than letting them become first-authoring authority

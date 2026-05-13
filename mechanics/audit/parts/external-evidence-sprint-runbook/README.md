@@ -37,6 +37,7 @@ Run the external evidence queue in this order:
 
 1. lead queue:
    - [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md) remains `promoted`; the 2026-05-12 Stage 1 long-pass sweep added searched-lane memory for context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces, but found no exact-fit second consumer
+   - Pack 33 closed on 2026-05-12: [AOA-T-0076](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md), [AOA-T-0078](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md), [AOA-T-0079](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md), and [AOA-T-0090](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) exited to `canonical` through sibling downstream evidence from `aoa-playbooks`, `aoa-summon`, `aoa-sdk`, and supporting `aoa-evals` owner-fit surfaces
 2. residual skill-ecosystem source-readiness lane:
    - [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
      remains `promoted`; the 2026-05-12 Pack 5 search ruled out manifest/doctor,

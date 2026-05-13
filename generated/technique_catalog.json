@@ -4296,7 +4296,7 @@
       "name": "owner-layer-triage",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Route one bounded reusable unit to one primary owner layer and one rejected nearest-wrong target so practice, workflow, scenario, proof, recall, and role surfaces stay distinct instead of collapsing into generic reuse.",
       "technique_path": "techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md",
       "origin": {
@@ -4314,12 +4314,12 @@
         "classification",
         "boundaries"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -4343,6 +4343,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -4410,7 +4414,7 @@
       "name": "decision-fork-cards",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.",
       "technique_path": "techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md",
       "origin": {
@@ -4428,12 +4432,12 @@
         "post-session",
         "decision-support"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -4457,6 +4461,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -4465,7 +4473,7 @@
       "name": "risk-passport-lift",
       "domain": "agent-workflows",
       "kind": "assessment",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Attach one small risk passport to each explicit next route so difficulty, risk, control mode, delegate tier, and stop-condition posture stay visible without turning branch analysis into hidden routing policy.",
       "technique_path": "techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md",
       "origin": {
@@ -4483,12 +4491,12 @@
         "branching",
         "control-mode"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-05",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -4512,6 +4520,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
@@ -5070,7 +5082,7 @@
       "name": "nearest-wrong-target-rejection",
       "domain": "agent-workflows",
       "kind": "guardrail",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.",
       "technique_path": "techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md",
       "origin": {
@@ -5088,12 +5100,12 @@
         "rejection",
         "review"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-04-06",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [
         {
@@ -5117,6 +5129,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

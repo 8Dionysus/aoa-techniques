@@ -57,7 +57,61 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0074](../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md) | `3bl3gamer/tg_history_dumper` | A public Telegram history dumper can preserve messages as local JSON Lines, media as message-linked files, related peers as JSONL side surfaces, and last-message-id continuation without turning normalization into auth, session, archive presentation, search, or memory doctrine. |
 | [AOA-T-0075](../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) | `aoa-sdk` checkpoint-closeout bridge plus LangSmith reviewed-run curation | A live SDK control-plane consumer can reread reviewed artifacts and checkpoint-review carry into bounded donor candidates, while public reviewed-run curation supports the same pressure to turn reviewed traces into bounded downstream records without making them memory or final routing truth. |
 | [AOA-T-0077](../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) | `aoa-sdk` `HARVEST_PACKET` consumer plus LangSmith reviewed-run curation | A live SDK closeout path can write and later consume one bounded harvest packet with accepted candidates, evidence anchors, owner hints, next surfaces, and nearest-wrong-target posture without letting the packet become memory canon, routing authority, or final owner acceptance. |
+| [AOA-T-0076](../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) | `aoa-playbooks` owner-followthrough/session-growth plus supporting `aoa-evals` owner-fit | Sibling downstream routes can require owner repo, owner shape, next artifact, and nearest-wrong-target posture before follow-through without turning playbooks, evals, routing, KAG, memo, SDK, or stats into first-authoring authority. |
+| [AOA-T-0078](../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) | `aoa-playbooks` owner-followthrough plus evaluated `aoa-summon` boundary | Sibling route consumers can keep landing, seed staging, proof-first, reanchor, merge, defer, and drop branches explicit before action, while summon refuses to hide unresolved competing routes inside child execution. |
+| [AOA-T-0079](../../../../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) | `aoa-summon` plus `aoa-sdk` A2A summon assessment | Difficulty, risk, control mode, delegate tier, split, reviewed-lane, and human-gate posture can choose, narrow, or block child-route execution without becoming risk scoring, approval policy, or dispatch authority. |
+| [AOA-T-0090](../../../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) | `aoa-playbooks` / `aoa-techniques` quest carry plus supporting `aoa-evals` owner-fit | Explicit nearest-wrong rejection can prevent convenience promotion into skill, proof, memo, KAG, routing, runtime, stats, or premature playbook authority while staying smaller than the verdict workflow itself. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0076 / AOA-T-0078 / AOA-T-0079 / AOA-T-0090 Cross-Context Evidence Notes
+
+2026-05-12 result: exact-fit downstream second context found for Pack 33.
+This is sibling-repo downstream evidence, not external import evidence. Do not
+import playbook scenario law, summon authorization, SDK execution behavior,
+eval proof, routing/KAG, memo writeback, stats refresh, or owner-object
+authorship into the technique bundles.
+
+Accepted evidence:
+
+- `aoa-playbooks` at `78069a795690b343c5f228d1614c3e48adeaaead` keeps owner
+  repo, owner shape, nearest-wrong target, route-followthrough decision,
+  stop/defer/drop/reanchor posture, and return anchors explicit in
+  `owner-followthrough-campaign` and `session-growth-cycle`.
+- `AOA-PB-Q-0013` and `AOA-PB-Q-0014` show concrete reanchor outcomes: seed-wave
+  and recurrence archive closeout survivors stayed in owner-routed
+  follow-through because the route shape was real but immediate promotion into
+  skill, proof, memo, stats, runtime, or new playbook authority was not honest.
+- `AOA-TECH-Q-0007` shows the same nearest-wrong-target posture in the
+  technique layer: the AoA v0.4.0 closeout signal stayed in
+  technique-promotion readiness rather than false skill ownership.
+- `aoa-skills` at `eed21463dfde1bf0791e8ccbe6fdeaf68f8f0aec` marks
+  `aoa-summon` evaluated, keeps branch choice outside summon when several
+  routes compete, and requires passport fields before choosing one child lane.
+- `aoa-sdk` at `f74c037e0f346713001516f7f3abddabbf64d02a` models
+  `QuestPassport` and uses A2A summon assessment to split `d3+`, block
+  `control_mode: blocked`, narrow high-risk or human-gated routes to reviewed
+  lanes or human gate, and keep stress posture narrowing rather than widening.
+
+Supporting proof lane:
+
+- `aoa-evals` at `de87cbf94ae2178edc1babff02e29db021b23fc0` defines
+  `aoa-owner-fit-routing-quality` around owner hypothesis, owner shape,
+  rejected nearest-wrong target, and derivative-repo exclusion.
+- This lane is supporting only: it can inspect owner-fit routing quality but it
+  does not author owner truth, final object quality, or derivative first
+  authorship.
+
+Rejected or bounded:
+
+- playbook scenario design;
+- summon authorization;
+- SDK execution and A2A transport;
+- eval verdict authority;
+- routing or KAG first authoring;
+- memo writeback;
+- stats refresh;
+- final quest promotion verdicts;
+- owner-object authorship.
 
 ## AOA-T-0075 / AOA-T-0077 Cross-Context Evidence Notes
 

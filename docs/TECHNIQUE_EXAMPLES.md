@@ -190,11 +190,35 @@ See also:
 |---|---|---|---|
 | minimal session-donor-harvest | `present` | `techniques/continuity/donor-harvest/session-donor-harvest/examples/minimal-session-donor-harvest.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md) |
 
+### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal owner-layer-triage | `present` | `techniques/governance/decision-routing/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
+
 ### [AOA-T-0077](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) - harvest-packet-contract (`canonical`)
 
 | example | body | example path | source |
 |---|---|---|---|
 | minimal harvest-packet-contract | `present` | `techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md` | [TECHNIQUE.md](../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md) |
+
+### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal decision-fork-cards | `present` | `techniques/governance/decision-routing/decision-fork-cards/examples/minimal-decision-fork-cards.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) |
+
+### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal risk-passport-lift | `present` | `techniques/governance/decision-routing/risk-passport-lift/examples/minimal-risk-passport-lift.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
+
+### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| minimal nearest-wrong-target-rejection | `present` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
@@ -214,24 +238,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal git-verified handoff claims | `present` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/examples/minimal-git-verified-handoff-claims.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0076](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) - owner-layer-triage (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal owner-layer-triage | `present` | `techniques/governance/decision-routing/owner-layer-triage/examples/minimal-owner-layer-triage.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md) |
-
-### [AOA-T-0078](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) - decision-fork-cards (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal decision-fork-cards | `present` | `techniques/governance/decision-routing/decision-fork-cards/examples/minimal-decision-fork-cards.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md) |
-
-### [AOA-T-0079](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) - risk-passport-lift (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal risk-passport-lift | `present` | `techniques/governance/decision-routing/risk-passport-lift/examples/minimal-risk-passport-lift.md` | [TECHNIQUE.md](../techniques/governance/decision-routing/risk-passport-lift/TECHNIQUE.md) |
 
 ### [AOA-T-0080](../techniques/recovery/diagnosis-repair/session-drift-taxonomy/TECHNIQUE.md) - session-drift-taxonomy (`promoted`)
 
@@ -292,12 +298,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | minimal quest-unit-promotion-review | `present` | `techniques/governance/promotion-boundary/quest-unit-promotion-review/examples/minimal-quest-unit-promotion-review.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/quest-unit-promotion-review/TECHNIQUE.md) |
-
-### [AOA-T-0090](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) - nearest-wrong-target-rejection (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| minimal nearest-wrong-target-rejection | `present` | `techniques/governance/promotion-boundary/nearest-wrong-target-rejection/examples/minimal-nearest-wrong-target-rejection.md` | [TECHNIQUE.md](../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md) |
 
 ### [AOA-T-0091](../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md) - workspace-root-ingress-and-mutation-gate (`promoted`)
 

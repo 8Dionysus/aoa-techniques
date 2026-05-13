@@ -3,7 +3,7 @@ id: AOA-T-0078
 name: decision-fork-cards
 domain: agent-workflows
 kind: assessment
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-session-route-forks/SKILL.md + skills/aoa-session-route-forks/techniques.yaml
@@ -17,12 +17,12 @@ tags:
   - post-session
   - decision-support
 summary: Turn one reviewed session or harvest packet into explicit decision fork cards so materially different next routes stay visible with gains, costs, owner targets, and stop conditions instead of collapsing into one hidden recommendation.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-05
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # decision-fork-cards
@@ -183,9 +185,10 @@ See `checks/decision-fork-cards-checklist.md`.
 
 - born in `aoa-skills` as the branch-card half of `aoa-session-route-forks`
 - extracted into `aoa-techniques` on 2026-04-05 as a bounded post-session branch-analysis workflow
+- promoted to `canonical` on 2026-05-12 after `aoa-playbooks` owner-followthrough and session-growth routes plus the evaluated `aoa-summon` boundary showed explicit branch choice before action outside the originating route-forks skill
 
 ## Future evolution
 
 - keep route passports smaller through `AOA-T-0079` instead of widening this bundle into policy metadata
 - keep playbook-scale scenario design outside this bundle
-- add a second live context that uses the same explicit branch-card seam outside the current AoA session-harvest lineage
+- keep summon, playbook, routing, proof, and owner-followthrough consumers downstream of branch-card choice rather than letting cards become hidden route authority

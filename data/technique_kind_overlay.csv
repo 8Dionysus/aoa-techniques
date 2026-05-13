@@ -74,10 +74,10 @@ AOA-T-0072,perceptual-media-dedupe-with-threshold-review,agent-workflows,canonic
 AOA-T-0073,semantic-media-bucketing-with-vision-plus-ocr,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0074,telegram-export-normalization-to-local-store,agent-workflows,canonical,ingest,media-ingest
 AOA-T-0075,session-donor-harvest,agent-workflows,canonical,lift,donor-harvest
-AOA-T-0076,owner-layer-triage,agent-workflows,promoted,assessment,decision-routing
+AOA-T-0076,owner-layer-triage,agent-workflows,canonical,assessment,decision-routing
 AOA-T-0077,harvest-packet-contract,agent-workflows,canonical,handoff,donor-harvest
-AOA-T-0078,decision-fork-cards,agent-workflows,promoted,assessment,decision-routing
-AOA-T-0079,risk-passport-lift,agent-workflows,promoted,assessment,decision-routing
+AOA-T-0078,decision-fork-cards,agent-workflows,canonical,assessment,decision-routing
+AOA-T-0079,risk-passport-lift,agent-workflows,canonical,assessment,decision-routing
 AOA-T-0080,session-drift-taxonomy,agent-workflows,promoted,assessment,diagnosis-repair
 AOA-T-0081,diagnosis-from-reviewed-evidence,agent-workflows,promoted,assessment,diagnosis-repair
 AOA-T-0082,repair-shape-from-diagnosis,agent-workflows,promoted,recovery,diagnosis-repair
@@ -88,7 +88,7 @@ AOA-T-0086,automation-fit-matrix,agent-workflows,promoted,assessment,automation-
 AOA-T-0087,human-loop-to-first-landing,agent-workflows,promoted,assessment,automation-governance
 AOA-T-0088,approval-sensitivity-check,agent-workflows,promoted,assessment,automation-governance
 AOA-T-0089,quest-unit-promotion-review,agent-workflows,promoted,assessment,automation-governance
-AOA-T-0090,nearest-wrong-target-rejection,agent-workflows,promoted,guardrail,automation-governance
+AOA-T-0090,nearest-wrong-target-rejection,agent-workflows,canonical,guardrail,automation-governance
 AOA-T-0091,workspace-root-ingress-and-mutation-gate,agent-workflows,promoted,guardrail,owner-truth-closeout
 AOA-T-0092,audit-to-closeout-proof-loop,agent-workflows,promoted,workflow,owner-truth-closeout
 AOA-T-0093,recommendation-truth-vs-host-actionability,agent-workflows,promoted,guardrail,capability-boundary

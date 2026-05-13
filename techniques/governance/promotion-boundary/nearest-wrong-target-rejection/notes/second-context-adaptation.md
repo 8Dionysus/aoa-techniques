@@ -28,6 +28,7 @@
 - the adapted bundle stays in `agent-workflows` because the reusable object is one review-side clarification move over a bounded verdict
 - the public wording keeps verdict choice, owner placement, and rejection distinct
 - the origin evidence remains strong enough to justify a promoted public bundle without importing local quest wrappers
+- live `aoa-playbooks`, `aoa-techniques` quest carry, and supporting `aoa-evals` owner-fit surfaces now use nearest-wrong-target posture to prevent false skill, proof, memo, KAG, routing, or playbook promotion
 
 ## Result
 - verdict: works

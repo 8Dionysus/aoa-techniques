@@ -22,6 +22,25 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- promoted `AOA-T-0076 owner-layer-triage`, `AOA-T-0078
+  decision-fork-cards`, `AOA-T-0079 risk-passport-lift`, and `AOA-T-0090
+  nearest-wrong-target-rejection` to `canonical` after sibling downstream
+  evidence from `aoa-playbooks`, `aoa-summon`, `aoa-sdk`, and supporting
+  `aoa-evals` owner-fit surfaces showed the owner/fork/passport/rejection
+  discipline changing real follow-through posture: owner-followthrough and
+  session-growth routes require owner repo, owner shape, nearest-wrong target,
+  branch decisions, stop/defer/drop/reanchor posture, and route artifacts
+  before action; real quest entries reanchored seed-wave and recurrence
+  archive survivors instead of promoting them into skills, proof, memo, stats,
+  runtime, or premature playbook authority; summon routes unresolved competing
+  branches back to route-forks; and SDK A2A passport assessment uses
+  difficulty, risk, control mode, delegate tier, split, reviewed-lane, and
+  human-gate posture to choose, narrow, or block child routes. This remains
+  sibling downstream evidence, not external import proof, while playbook
+  scenario design, summon authorization, SDK execution, eval verdicts,
+  routing/KAG, memo writeback, stats refresh, final promotion review, and
+  owner-object authorship stay outside the bundles, updating Audit queue
+  posture from `42` promoted techniques to `38`
 - promoted `AOA-T-0075 session-donor-harvest` and `AOA-T-0077
   harvest-packet-contract` to `canonical` after `aoa-sdk`'s checkpoint-closeout
   bridge showed exact-fit live reinforcement for reviewed session harvest:

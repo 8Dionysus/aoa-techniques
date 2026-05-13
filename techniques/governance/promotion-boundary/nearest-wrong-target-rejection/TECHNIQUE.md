@@ -3,7 +3,7 @@ id: AOA-T-0090
 name: nearest-wrong-target-rejection
 domain: agent-workflows
 kind: guardrail
-status: promoted
+status: canonical
 origin:
   project: aoa-skills
   path: skills/aoa-quest-harvest/SKILL.md + skills/aoa-quest-harvest/references/promotion-outcomes.md + skills/aoa-quest-harvest/checks/review.md
@@ -17,12 +17,12 @@ tags:
   - rejection
   - review
 summary: Reject the nearest wrong promotion target explicitly so repeated reviewed work does not collapse into the most convenient adjacent owner layer.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-04-06
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
   - type: complements
@@ -36,6 +36,8 @@ evidence:
     path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # nearest-wrong-target-rejection
@@ -177,9 +179,10 @@ See `checks/nearest-wrong-target-rejection-checklist.md`.
 
 - born in `aoa-skills` as the rejection half of `aoa-quest-harvest`
 - extracted into `aoa-techniques` on 2026-04-06 as a bounded nearest-wrong-target clarification technique
+- promoted to `canonical` on 2026-05-12 after `aoa-playbooks`, `aoa-techniques` quest carry, and supporting `aoa-evals` owner-fit surfaces used explicit nearest-wrong rejection to prevent convenience promotion into skill, memo, KAG, routing, proof, or playbook authority
 
 ## Future evolution
 
 - keep final promotion review separate through `AOA-T-0089`
-- add a second live context outside the current AoA quest lineage
 - keep long-form anti-pattern doctrine outside this bundle
+- keep nearest-wrong rejection paired to one chosen verdict when downstream consumers use it for owner follow-through, quest carry, or proof review
