@@ -327,6 +327,19 @@ See also:
 - Validate by: OCR handoff is the only bounded parsing input; the extracted field set is explicit and small enough to review...
 - Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md)
 
+### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`canonical`)
+
+- Summary: Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.
+- Intent: Make screenshot, meme, or photo deduplication reviewable by grouping near-duplicate media through perceptual similarity...
+- Use when: an image set contains exact duplicates, crops, edits, or recompressions that still need duplicate review or the reusable...
+- Avoid when: exact hashes alone are enough and near-duplicate handling is unnecessary or the real reusable object is semantic bucketing...
+- Needs: one bounded media set; one perceptual similarity method or equivalent near-duplicate handle; explicit thresholds or threshold bands.
+- Produces: one set of high-confidence duplicate groups; one set of uncertain groups or candidate pairs; one review bucket...
+- Core contract: the technique groups and flags near-duplicates; it does not own file deletion policy; thresholds stay explicit and tunable.
+- Main risk: edited memes collapse into the wrong groups.
+- Validate by: the corpus includes exact duplicates, crops, and edited variants; high-confidence groups and uncertain groups are visibly separated; thresholds can...
+- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 - Summary: Checklist for safely adding a new intent type to an intent-plan-dry-run chain without contract drift.
@@ -365,19 +378,6 @@ See also:
 - Main risk: stale local git state produces a false sense of verification.
 - Validate by: at least one concrete handoff claim can be tied to visible git evidence; the verification result names the evidence...
 - Source: [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md)
-
-### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
-
-- Summary: Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.
-- Intent: Make screenshot, meme, or photo deduplication reviewable by grouping near-duplicate media through perceptual similarity...
-- Use when: an image set contains exact duplicates, crops, edits, or recompressions that still need duplicate review or the reusable...
-- Avoid when: exact hashes alone are enough and near-duplicate handling is unnecessary or the real reusable object is semantic bucketing...
-- Needs: one bounded media set; one perceptual similarity method or equivalent near-duplicate handle; explicit thresholds or threshold bands.
-- Produces: one set of high-confidence duplicate groups; one set of uncertain groups or candidate pairs; one review bucket...
-- Core contract: the technique groups and flags near-duplicates; it does not own file deletion policy; thresholds stay explicit and tunable.
-- Main risk: edited memes collapse into the wrong groups.
-- Validate by: the corpus includes exact duplicates, crops, and edited variants; high-confidence groups and uncertain groups are visibly separated; thresholds can...
-- Source: [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md)
 
 ### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
 

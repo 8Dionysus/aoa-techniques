@@ -3,7 +3,7 @@ id: AOA-T-0072
 name: perceptual-media-dedupe-with-threshold-review
 domain: agent-workflows
 kind: ingest
-status: promoted
+status: canonical
 origin:
   project: imagededup + imgdupes
   path: README.md
@@ -17,12 +17,12 @@ tags:
   - perceptual-similarity
   - review
 summary: Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-28
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations: []
 evidence:
@@ -34,6 +34,8 @@ evidence:
     path: notes/external-import-review.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # perceptual-media-dedupe-with-threshold-review
@@ -180,4 +182,4 @@ See `checks/perceptual-media-dedupe-with-threshold-review-checklist.md`.
 
 - keep semantic bucketing separate unless a narrower bridge seam proves reusable
 - split out duplicate manifests or deletion policy only if those contracts survive independently
-- add a stronger second live context if another public workflow keeps perceptual dedupe explicit before later cleanup actions
+- future sources can reinforce the default only if perceptual grouping, explicit thresholds, reviewable group evidence, and action-policy separation stay visible before any cleanup, archive, or semantic classification workflow begins

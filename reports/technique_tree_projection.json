@@ -603,6 +603,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0072",
+      "name": "perceptual-media-dedupe-with-threshold-review",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
+      "current_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "family": "media-ingest",
+      "proposed_trunk": "ingest",
+      "proposed_shelf": "media-ingest",
+      "proposed_future_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:media-ingest",
+        "domain:agent-workflows",
+        "kind:ingest",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -663,28 +685,6 @@
         "family:handoff-continuation",
         "domain:agent-workflows",
         "kind:handoff",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0072",
-      "name": "perceptual-media-dedupe-with-threshold-review",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
-      "current_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
-      "family": "media-ingest",
-      "proposed_trunk": "ingest",
-      "proposed_shelf": "media-ingest",
-      "proposed_future_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:media-ingest",
-        "domain:agent-workflows",
-        "kind:ingest",
         "status:promoted",
         "review_status:pilot-candidate"
       ],

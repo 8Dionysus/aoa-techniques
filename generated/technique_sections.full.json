@@ -5921,7 +5921,7 @@
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- keep semantic bucketing separate unless a narrower bridge seam proves reusable\n- split out duplicate manifests or deletion policy only if those contracts survive independently\n- add a stronger second live context if another public workflow keeps perceptual dedupe explicit before later cleanup actions"
+          "content_markdown": "- keep semantic bucketing separate unless a narrower bridge seam proves reusable\n- split out duplicate manifests or deletion policy only if those contracts survive independently\n- future sources can reinforce the default only if perceptual grouping, explicit thresholds, reviewable group evidence, and action-policy separation stay visible before any cleanup, archive, or semantic classification workflow begins"
         }
       ]
     },

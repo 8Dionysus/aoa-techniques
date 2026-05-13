@@ -43861,6 +43861,197 @@
       "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0072"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "perceptual-media-dedupe-with-threshold-review"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "promotion from `promoted` to `canonical` after exact-fit public reinforcement from `qarmin/czkawka`"
+                },
+                {
+                  "order": 2,
+                  "text": "confirm that the bundle remains one thresholded perceptual grouping and review-output contract, not cleanup automation, archive policy, semantic media taxonomy, quality ranking, GUI selection workflow, cache design, hardlink strategy, or full media-management product"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "perceptual thresholds group visually similar but meaningfully different screenshots, memes, documents, or edited photos"
+                },
+                {
+                  "order": 2,
+                  "text": "one threshold tuned for one media family is reused across unrelated media without recalibration"
+                },
+                {
+                  "order": 3,
+                  "text": "borderline candidates are flattened into high-confidence groups and later treated as cleanup-safe"
+                },
+                {
+                  "order": 4,
+                  "text": "representative images hide why a group was formed or which member carries the actual evidence"
+                },
+                {
+                  "order": 5,
+                  "text": "group output drops similarity evidence, making reviewers unable to inspect why two files were paired"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewable grouping adds friction when exact hashes would have been enough"
+                },
+                {
+                  "order": 2,
+                  "text": "preserving candidate groups and uncertainty can increase storage and review workload for large media sets"
+                },
+                {
+                  "order": 3,
+                  "text": "users may over-trust a grouped result as a delete verdict even when the technique only produces candidates"
+                },
+                {
+                  "order": 4,
+                  "text": "threshold language can become local doctrine if teams stop recording why a value fits one media family"
+                },
+                {
+                  "order": 5,
+                  "text": "strong public dedupe tools can tempt contributors to import delete methods, hardlinks, cache behavior, GUI workflows, or media-management product assumptions into the smaller technique"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "auto-deleting all grouped images because they appear in one duplicate group"
+                },
+                {
+                  "order": 2,
+                  "text": "using this bundle as a substitute for [semantic-media-bucketing-with-vision-plus-ocr](../../semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) when the actual need is media classification"
+                },
+                {
+                  "order": 3,
+                  "text": "treating perceptual duplicates as evidence of semantic equivalence, authorship, provenance, or file quality"
+                },
+                {
+                  "order": 4,
+                  "text": "widening the bundle into archive policy, representative selection, quality scoring, ranking, hardlinking, or cleanup governance"
+                },
+                {
+                  "order": 5,
+                  "text": "copying donor CLI flags, GUI flows, cache formats, or delete method names into the invariant technique"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "review output cannot show the threshold, band, difference, score, or equivalent evidence behind a pair or group"
+                },
+                {
+                  "order": 2,
+                  "text": "candidate groups immediately trigger delete, archive, hardlink, or merge actions without a separate policy layer"
+                },
+                {
+                  "order": 3,
+                  "text": "examples center cleanup wins, storage savings, UI affordances, or product workflows more than thresholded grouping and visible uncertainty"
+                },
+                {
+                  "order": 4,
+                  "text": "false positives cluster around crops, memes, screenshots with shared layouts, watermarked images, or minor text edits"
+                },
+                {
+                  "order": 5,
+                  "text": "reviewers cannot tell which matches are high-confidence and which are borderline"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep deletion, archiving, hardlinking, ranking, and representative selection outside the technique contract"
+                },
+                {
+                  "order": 2,
+                  "text": "preserve a threshold, band, difference, similarity label, or equivalent review signal with each group or candidate pair"
+                },
+                {
+                  "order": 3,
+                  "text": "calibrate thresholds per media family and record when a stricter or looser value is being used"
+                },
+                {
+                  "order": 4,
+                  "text": "keep borderline matches visible as review candidates rather than collapsing them into high-confidence groups"
+                },
+                {
+                  "order": 5,
+                  "text": "test the smallest handoff by confirming that a downstream reviewer can inspect why files were grouped without running donor-specific product code"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "safe to promote as a canonical agent-workflow ingest technique when perceptual duplicate grouping remains bounded, thresholds stay explicit, group evidence remains reviewable, and later file actions are owned by a separate policy or workflow"
+                },
+                {
+                  "order": 2,
+                  "text": "keep future revisions narrow: do not absorb semantic media bucketing, deletion or archive policy, quality ranking, representative-selection doctrine, hardlink strategy, cache layout, GUI review workflows, storage cleanup, or full media-management product behavior into this bundle"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -43891,34 +44082,42 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "bounded defer for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
             {
               "heading": "Evidence summary",
               "order": 3,
-              "payload_type": "fields",
-              "fields": [
+              "payload_type": "items",
+              "items": [
                 {
                   "order": 1,
-                  "key": "external origin",
-                  "value_markdown": "the imported technique has a bounded donor contract and explicit exclusions around delete policy, semantic taxonomy, ranking doctrine, and donor runtime detail"
+                  "text": "external origin: the imported technique has a bounded donor contract and explicit exclusions around delete policy, semantic taxonomy, ranking doctrine, and donor runtime detail"
                 },
                 {
                   "order": 2,
-                  "key": "second context",
-                  "value_markdown": "`aoa-techniques` now records the same duplicate-grouping seam as a documentation-first adaptation with one example and one checklist"
+                  "text": "second context: `aoa-techniques` now records the same duplicate-grouping seam as a documentation-first adaptation with one example and one checklist"
                 },
                 {
                   "order": 3,
-                  "key": "external review",
-                  "value_markdown": "the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
+                  "text": "external review: the first import review passed and confirmed the technique is public-safe and bounded at the current scale"
                 },
                 {
                   "order": 4,
-                  "key": "validation strength",
-                  "value_markdown": "the bundle now carries one checklist, one example, a clean external-origin note, and one documentation-first second context, but it still lacks a live adopter beyond the donor dedupe family"
+                  "text": "`qarmin/czkawka` provides exact-fit public reinforcement beyond the `imagededup` and `imgdupes` donor family: its Similar Images surface finds images that are visually similar rather than byte-identical, exposes an explicit `max_difference` threshold, supports perceptual hash algorithm and hash-size tuning, groups similar image entries with per-entry difference and similarity labels, can print or save grouped results as JSON, and keeps deletion as a separate option with `NONE` as the default"
+                },
+                {
+                  "order": 5,
+                  "text": "Czkawka's inspected public source has MIT-licensed core and CLI surfaces at commit `612c93a6904e819d598f56c59c1f3be75ab42d25`; the repository has mixed licensing for non-core assets and GUI/application layers, so this bundle uses it as evidence only and does not import code, GUI behavior, icons, audio, app workflow, cache layout, delete method names, or product cleanup posture. Inspected files include `README.md` (`35eb6f82a24537bca7733f1124e8a7e7dcec00a1`), `Changelog.md` (`3e958cb054e57c07c92e5a07e4d183472bc91f1a`), `LICENSE_MIT_EVERYTHING_OUTSIDE_ANY_CARGO_APP_LIBRARY` (`ca43755e89be613ff2d2de1ebb30a1e57bf6d62c`), `czkawka_core/LICENSE_MIT` (`ca43755e89be613ff2d2de1ebb30a1e57bf6d62c`), `czkawka_core/src/tools/similar_images/mod.rs` (`7bdbabc24a683b3a159d2eb748f809b1446c5bd9`), `czkawka_core/src/tools/similar_images/core.rs` (`7395386e1f33706d525304b1d36f71c2a7137abe`), `czkawka_core/src/tools/similar_images/traits.rs` (`e8598e4d0a9aa0fe369a2f6ffa070f516f1cf9d8`), `czkawka_core/src/tools/similar_images/tests.rs` (`7ecf281eb562ce3af0514f7b731577fb4685f736`), `czkawka_cli/src/commands.rs` (`d367b1f85a1cb348b6f0f796f8d8cc9f6bf4419f`), and `czkawka_cli/src/main.rs` (`f6009b32e171fe75c3c729db17007612630d540b`)"
+                },
+                {
+                  "order": 6,
+                  "text": "adjacent lanes were checked and kept out of the canonical proof: Czkawka's duplicate files, music, video, empty-folder, cleanup, GUI selection, cache, and hardlink/delete paths are product or sibling behavior, not part of this technique; the reusable proof is only the thresholded perceptual image grouping and visible review output seam"
+                },
+                {
+                  "order": 7,
+                  "text": "validation strength: the bundle now carries one checklist, one example, a clean external-origin note, a documentation-first second context, and public cross-context reinforcement that repeats bounded perceptual dedupe outside the donor dedupe family"
                 }
               ]
             },
@@ -43929,7 +44128,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "this is the right promoted default when the main problem is grouping near-duplicate media while keeping borderline matches visible and later file actions separate"
+                  "text": "this is the right canonical default when the main problem is grouping near-duplicate media while keeping borderline matches visible and later file actions separate"
                 },
                 {
                   "order": 2,
@@ -43938,6 +44137,10 @@
                 {
                   "order": 3,
                   "text": "it also remains narrower than cleanup automation because it stops at duplicate grouping and review signals rather than preserve or delete decisions"
+                },
+                {
+                  "order": 4,
+                  "text": "it is now strong enough as a canonical default because the second public context repeats the key shape: perceptual similarity produces candidate groups, thresholds tune strictness, grouped results preserve enough evidence for review, and file actions stay separate from the grouping contract"
                 }
               ]
             },
@@ -43949,7 +44152,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-03-28"
+                  "value_markdown": "2026-05-12"
                 },
                 {
                   "order": 2,
@@ -43964,7 +44167,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context"
+                  "value_markdown": "the example, checklist, and adaptation notes remain understandable without hidden donor-repo context; Czkawka is cited only as public evidence, and the technique does not copy its Rust source, GUI application flow, mixed-license assets, cleanup commands, cache format, delete strategies, or broader media-management product behavior"
                 }
               ]
             },
@@ -43975,11 +44178,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor and documentation-first adaptation"
+                  "text": "no blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "specifically, the bundle still needs another public repository or surface family that keeps perceptual duplicate grouping explicit through thresholds and review buckets before later cleanup actions begin"
+                  "text": "future sources can reinforce the default, but they must preserve the narrow boundary: bounded media set, perceptual similarity, explicit threshold or similarity bands, reviewable groups or candidate pairs, and a stop-line before cleanup policy, archive policy, semantic taxonomy, ranking, quality scoring, or full media-management products"
                 }
               ]
             },
@@ -43990,11 +44193,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0072` `promoted`"
+                  "text": "move `AOA-T-0072` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "defer canonical promotion until another live adopter confirms that the reviewable duplicate-grouping contract survives outside the donor dedupe family"
+                  "text": "add an adverse-effects review to preserve the boundary between thresholded perceptual grouping, review output, cleanup/delete policy, semantic media bucketing, quality ranking, and media-management products"
                 }
               ]
             }
@@ -44119,11 +44322,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "this is a successful bounded external import and the bundle is strong enough to enter the corpus as a `promoted` technique"
+                  "text": "this was a successful bounded external import, and the later Pack 29 review confirmed the same seam in a second public source outside the donor dedupe family"
                 },
                 {
                   "order": 3,
-                  "text": "the import path is strong enough for initial publication, but not strong enough to justify canonical default status without another live adopter beyond the donor dedupe family"
+                  "text": "`qarmin/czkawka` reinforces the import path by exposing thresholded perceptual image grouping, visible grouped results, similarity labels, JSON or text output, and deletion as a separate default-off option"
                 }
               ]
             },
@@ -44134,11 +44337,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the smallest remaining gap is still one live second context beyond the donor family and documentation-first adaptation"
+                  "text": "no import-path blocker remains for canonical status"
                 },
                 {
                   "order": 2,
-                  "text": "a future stronger context should show another public workflow where near-duplicate media are grouped through explicit thresholds and review buckets before later cleanup actions"
+                  "text": "future stronger contexts should still show near-duplicate media grouped through explicit thresholds or bands and reviewable output before later cleanup, archive, semantic classification, or ranking actions"
                 }
               ]
             },
@@ -44149,11 +44352,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "accept `AOA-T-0072` as a bounded external import and publish it as `promoted`"
+                  "text": "keep this note as the original import review"
                 },
                 {
                   "order": 2,
-                  "text": "defer any canonical review until another live adopter confirms that the reviewable duplicate-grouping contract survives outside the current donor family"
+                  "text": "use `notes/canonical-readiness.md` and `notes/adverse-effects-review.md` as the current canonical promotion and boundary review surfaces"
                 }
               ]
             }
@@ -44271,7 +44474,7 @@
                 {
                   "order": 3,
                   "key": "limits or follow-up review concerns",
-                  "value_markdown": "this import still needs one second live adopter beyond the donor dedupe family and documentation-first adaptation before any canonical discussion is honest"
+                  "value_markdown": "the original import gap closed in Pack 29 after `qarmin/czkawka` showed the same thresholded perceptual grouping seam outside the donor dedupe family; future review should still reject cleanup policy, semantic taxonomy, and ranking or quality-scoring doctrine as separate objects"
                 }
               ]
             }
@@ -44320,6 +44523,11 @@
                   "order": 3,
                   "key": "runtime",
                   "value_markdown": "documentation-first corpus that records the bounded duplicate-grouping pattern rather than shipping donor CLIs, ANN indexes, or delete prompts"
+                },
+                {
+                  "order": 4,
+                  "key": "live reinforcement",
+                  "value_markdown": "`qarmin/czkawka` at commit `612c93a6904e819d598f56c59c1f3be75ab42d25` repeats the same perceptual image grouping seam in MIT-licensed core and CLI surfaces, while mixed-license GUI/assets/product layers stay evidence-only and out of the technique"
                 }
               ]
             },
@@ -44342,7 +44550,11 @@
                 },
                 {
                   "order": 4,
-                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and four bounded evidence notes"
+                  "text": "the bundle was reduced to one technique doc, one checklist, one example, and bounded evidence notes"
+                },
+                {
+                  "order": 5,
+                  "text": "Pack 29 promoted the adaptation to a cross-context canonical default after Czkawka confirmed thresholded perceptual grouping with reviewable grouped output outside the original donor family"
                 }
               ]
             },
@@ -44404,6 +44616,14 @@
                 {
                   "order": 3,
                   "text": "both donors show why duplicate grouping can remain useful before any later cleanup action or taxonomy choice is finalized"
+                },
+                {
+                  "order": 4,
+                  "text": "Czkawka's Similar Images path finds non-identical but visually similar images, exposes `max_difference` as a strictness threshold, supports hash algorithm and hash-size tuning, emits grouped image results with similarity labels derived from per-entry difference, supports JSON or text result output, and keeps deletion as a separate default-off option"
+                },
+                {
+                  "order": 5,
+                  "text": "inspected Czkawka files: `README.md`, `Changelog.md`, MIT license files for the relevant core/CLI surfaces, `czkawka_core/src/tools/similar_images/mod.rs`, `core.rs`, `traits.rs`, `tests.rs`, and `czkawka_cli/src/commands.rs` plus `main.rs`"
                 }
               ]
             },
@@ -44414,7 +44634,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "works as a documentation-first second context and preserves the bounded core without carrying over donor CLI behavior, delete defaults, or runtime indexing detail"
+                  "text": "works as a documentation-first adaptation with live public reinforcement and preserves the bounded core without carrying over donor CLI behavior, Czkawka delete methods, GUI behavior, cache layout, mixed-license assets, or runtime indexing detail"
                 }
               ]
             }

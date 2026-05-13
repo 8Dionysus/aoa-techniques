@@ -713,6 +713,32 @@
       }
     },
     {
+      "id": "AOA-T-0072",
+      "name": "perceptual-media-dedupe-with-threshold-review",
+      "domain": "agent-workflows",
+      "kind": "ingest",
+      "status": "canonical",
+      "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
+      "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
+      "topology": {
+        "family": "media-ingest",
+        "capability_class": [
+          "read",
+          "transform"
+        ],
+        "substrate": [
+          "conversation",
+          "tool-surfaces",
+          "media",
+          "human-approval-surfaces"
+        ],
+        "execution_profile": "orchestration-required",
+        "risk_posture": [
+          "read-only"
+        ]
+      }
+    },
+    {
       "id": "AOA-T-0005",
       "name": "new-intent-rollout-checklist",
       "domain": "agent-workflows",
@@ -783,32 +809,6 @@
           "memory-adjacent-artifacts"
         ],
         "execution_profile": "small-agent",
-        "risk_posture": [
-          "read-only"
-        ]
-      }
-    },
-    {
-      "id": "AOA-T-0072",
-      "name": "perceptual-media-dedupe-with-threshold-review",
-      "domain": "agent-workflows",
-      "kind": "ingest",
-      "status": "promoted",
-      "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
-      "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
-      "topology": {
-        "family": "media-ingest",
-        "capability_class": [
-          "read",
-          "transform"
-        ],
-        "substrate": [
-          "conversation",
-          "tool-surfaces",
-          "media",
-          "human-approval-surfaces"
-        ],
-        "execution_profile": "orchestration-required",
         "risk_posture": [
           "read-only"
         ]

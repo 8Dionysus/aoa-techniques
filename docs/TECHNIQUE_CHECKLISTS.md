@@ -160,6 +160,12 @@ See also:
 |---|---|---|---|---|
 | template-backed-field-extraction-after-ocr checklist | `absent` | `6` | `techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/checks/template-backed-field-extraction-after-ocr-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) |
 
+### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| perceptual-media-dedupe-with-threshold-review checklist | `absent` | `6` | `techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
+
 ### [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md) - new-intent-rollout-checklist (`promoted`)
 
 | checklist | intro | items | check path | source |
@@ -177,12 +183,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | git-verified-handoff-claims checklist | `absent` | `8` | `techniques/continuity/handoff-continuation/git-verified-handoff-claims/checks/git-verified-handoff-claims-checklist.md` | [TECHNIQUE.md](../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md) |
-
-### [AOA-T-0072](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) - perceptual-media-dedupe-with-threshold-review (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| perceptual-media-dedupe-with-threshold-review checklist | `absent` | `6` | `techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/checks/perceptual-media-dedupe-with-threshold-review-checklist.md` | [TECHNIQUE.md](../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) |
 
 ### [AOA-T-0073](../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md) - semantic-media-bucketing-with-vision-plus-ocr (`promoted`)
 

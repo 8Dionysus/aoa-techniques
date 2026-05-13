@@ -52,7 +52,59 @@ These are the most useful recent examples of what honest queue closure looked li
 | [AOA-T-0069](../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md) | `pydantic/pydantic-ai` plus LangGraph boundary check | A public agent framework can end an agent run on deferred approvals or external calls, preserve pending-call identity, resume with saved message history and deferred results, and pair that with durable execution support without making the technique a scheduler or workflow-platform doctrine. |
 | [AOA-T-0070](../../../../techniques/ingest/media-ingest/two-stage-document-ocr-pipeline/TECHNIQUE.md) | `JaidedAI/EasyOCR` | A public OCR library can keep detection and recognition separately visible, return bounding boxes, recognized text, and confidence as one structured result, and leave downstream extraction or review outside the OCR handoff contract. |
 | [AOA-T-0071](../../../../techniques/ingest/media-ingest/template-backed-field-extraction-after-ocr/TECHNIQUE.md) | `kotaro-kinoshita/yomitoku` | A public document extractor can use schema-defined field targets, visible rule methods, source metadata, confidence, and not-found posture to turn OCR/layout output into bounded fields without becoming OCR staging, LLM extraction, or accounting automation. |
+| [AOA-T-0072](../../../../techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md) | `qarmin/czkawka` | A public media dedupe tool can keep perceptual similarity, explicit threshold tuning, reviewable grouped output, and default-off deletion separate from semantic media taxonomy, ranking, archive policy, and cleanup automation. |
 | [AOA-T-0053](../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md) | `coding-agent-search (cass)` | A local searchable index over already-saved session artifacts can remain derivative, provenance-aware, and local-first beyond the donor product family. |
+
+## AOA-T-0072 External Evidence Notes
+
+2026-05-12 result: exact-fit second context found.
+`qarmin/czkawka` at `612c93a6904e819d598f56c59c1f3be75ab42d25`
+provides the clean public source for Pack 29. The relevant core and CLI
+surfaces are MIT licensed, while the repository also contains mixed-license
+GUI/application/assets surfaces. Use it as evidence only: do not import Rust
+code, GUI workflow, icons, audio, cache layout, delete strategy names, hardlink
+behavior, product cleanup posture, or broader media-management assumptions into
+`aoa-techniques`.
+
+Accepted evidence:
+
+- `README.md` exposes Similar Images as finding images that are not exactly the
+  same, including cases such as different resolution or watermarks.
+- `czkawka_cli/src/commands.rs` exposes `max_difference` as a bounded
+  `0-40` threshold with stricter/lower guidance and keeps perceptual hash
+  algorithm plus hash size as explicit options.
+- `czkawka_core/src/tools/similar_images/mod.rs` and `core.rs` carry
+  thresholded perceptual hash comparison, per-entry `difference`, similarity
+  presets/bands, and grouping through the similar-images result surface.
+- `czkawka_core/src/tools/similar_images/traits.rs` prints grouped similar
+  image results with dimensions, size, and similarity labels and can save the
+  same grouped results as JSON.
+- `czkawka_cli/src/main.rs` routes Similar Images results through the shared
+  print/save path, while delete behavior remains a separate advanced-delete
+  setting.
+- deletion is explicitly default-off through `NONE - do not delete files
+  (default)`.
+- `czkawka_core/src/tools/similar_images/tests.rs` covers threshold-sensitive
+  grouping counts across hash algorithms, filters, hash sizes, and similarity
+  values.
+
+Rejected or bounded:
+
+- Do not treat Czkawka's GUI selection flow, cache format, hardlinking,
+  duplicate-files cleanup, similar music/video tools, broken-files checks,
+  product comparison tables, or application packaging as part of this
+  technique.
+- Do not import mixed-license GUI/assets surfaces; the canonical proof uses
+  only public evidence from the relevant MIT-licensed core and CLI surfaces.
+- Do not widen perceptual dedupe into semantic media taxonomy, archive policy,
+  representative-selection doctrine, quality ranking, storage cleanup, or bulk
+  delete automation.
+
+Future search shape: future sources can reinforce this canonical default only
+if they preserve the same narrow grouping seam: bounded media set, perceptual
+similarity, explicit threshold or similarity bands, reviewable groups or
+candidate pairs, and a stop-line before deletion, archiving, semantic
+classification, ranking, or full media-management product behavior.
 
 ## AOA-T-0071 External Evidence Notes
 

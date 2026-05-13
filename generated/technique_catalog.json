@@ -4075,7 +4075,7 @@
       "name": "perceptual-media-dedupe-with-threshold-review",
       "domain": "agent-workflows",
       "kind": "ingest",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Group near-duplicate media through perceptual similarity and thresholded review buckets so cleanup stays reviewable instead of collapsing into silent deletion or one-threshold dogma.",
       "technique_path": "techniques/ingest/media-ingest/perceptual-media-dedupe-with-threshold-review/TECHNIQUE.md",
       "origin": {
@@ -4093,12 +4093,12 @@
         "perceptual-similarity",
         "review"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-28",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-12",
       "export_ready": true,
       "relations": [],
       "evidence": [
@@ -4117,6 +4117,10 @@
         {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },
