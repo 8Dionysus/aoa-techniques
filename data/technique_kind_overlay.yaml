@@ -291,7 +291,7 @@ entries:
 - id: AOA-T-0048
   name: semantic-review-surface-lift
   domain: docs
-  status: promoted
+  status: canonical
   kind: lift
   family: kag-source-lift
 - id: AOA-T-0049

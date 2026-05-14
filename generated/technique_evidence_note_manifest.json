@@ -27021,6 +27021,175 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "notes": [
         {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/notes/adverse-effects-review.md",
+          "kind": "adverse_effects_review",
+          "title": "Adverse Effects Review",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0048"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-review-surface-lift"
+                },
+                {
+                  "order": 3,
+                  "key": "current role",
+                  "value_markdown": "canonical default for lifting authored review markdown into a subordinate derived review-reader surface"
+                }
+              ]
+            },
+            {
+              "heading": "Review focus",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "current watch seam",
+                  "value_markdown": "keep review meaning in authored markdown while the derived surface exposes lookup posture, scope, evidence refs, signal summary, and next trigger without becoming a scoring or status engine"
+                }
+              ]
+            },
+            {
+              "heading": "Failure modes",
+              "order": 3,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "the generated review reader starts replacing the authored review doc as the place where meaning is argued"
+                },
+                {
+                  "order": 2,
+                  "text": "review-status fields become generic quality scores, promotion gates, or automated verdicts"
+                },
+                {
+                  "order": 3,
+                  "text": "maintainers widen the reader until it mixes semantic review, policy enforcement, relation cleanup, graph behavior, and local bundle readiness in one surface"
+                },
+                {
+                  "order": 4,
+                  "text": "sibling-layer verdicts or gate tokens are imported as technique authority instead of remaining evidence posture in their owning repository"
+                }
+              ]
+            },
+            {
+              "heading": "Negative effects",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a compact generated reader can hide how much judgment still lives in the source review notes"
+                },
+                {
+                  "order": 2,
+                  "text": "downstream readers may stop opening the authored review documents when the generated surface looks complete enough"
+                },
+                {
+                  "order": 3,
+                  "text": "review lookup can create false closure when the underlying cluster or boundary is still contested"
+                },
+                {
+                  "order": 4,
+                  "text": "sibling evidence can blur owner boundaries if playbook, eval, routing, or promotion semantics leak into the technique"
+                }
+              ]
+            },
+            {
+              "heading": "Misuse patterns",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "using the reader to decide status transitions or promotion outcomes"
+                },
+                {
+                  "order": 2,
+                  "text": "treating AI review summaries, code-review dashboards, quality scores, or issue triage reports as equivalent to authored review-note lift"
+                },
+                {
+                  "order": 3,
+                  "text": "editing generated JSON to fix review meaning instead of editing authored markdown and rebuilding"
+                },
+                {
+                  "order": 4,
+                  "text": "folding every nearby review or relation question into one semantic-review reader because it is convenient"
+                }
+              ]
+            },
+            {
+              "heading": "Detection signals",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "reviewers ask the generated surface for scores, approvals, or final decisions"
+                },
+                {
+                  "order": 2,
+                  "text": "the reader no longer links back to the authored review doc or reviewed evidence notes"
+                },
+                {
+                  "order": 3,
+                  "text": "generated fields expand toward policy checks, dashboards, graph ranking, or release gates"
+                },
+                {
+                  "order": 4,
+                  "text": "source review notes go stale while generated outputs continue to look current"
+                }
+              ]
+            },
+            {
+              "heading": "Mitigations",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep the reviewed corpus explicit and bounded before generating a reader"
+                },
+                {
+                  "order": 2,
+                  "text": "regenerate review-status surfaces from authored markdown and fail validation when required sections or evidence refs drift"
+                },
+                {
+                  "order": 3,
+                  "text": "route meaning changes, contested boundaries, and cluster splits back to authored review notes"
+                },
+                {
+                  "order": 4,
+                  "text": "split a new technique or sibling owner route when the real need becomes scoring, composition governance, graph semantics, or policy automation"
+                }
+              ]
+            },
+            {
+              "heading": "Recommendation",
+              "order": 8,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "keep current `canonical` status and use this note as the watch surface for review-reader authority drift, status-automation overreach, source-doc bypass, and sibling-owner import"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "note_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/notes/canonical-readiness.md",
           "kind": "canonical_readiness",
           "title": "Canonical Readiness",
@@ -27051,7 +27220,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "defer strongly for now"
+                  "text": "approve for canonical promotion"
                 }
               ]
             },
@@ -27068,12 +27237,17 @@
                 {
                   "order": 2,
                   "key": "second context",
-                  "value_markdown": "none accepted yet."
+                  "value_markdown": "`aoa-playbooks` keeps authored gate-review markdown and reviewed-run summaries as source surfaces, then derives `generated/playbook_review_status.min.json` through `scripts/generate_playbook_review_status.py`."
                 },
                 {
                   "order": 3,
+                  "key": "validation strength",
+                  "value_markdown": "the bundle now has origin evidence plus one non-origin sibling repository that reuses the same source-review to derived-reader split without turning the reader into scoring, policy, or status automation."
+                },
+                {
+                  "order": 4,
                   "key": "searched lane",
-                  "value_markdown": "the 2026-05-12 Pack 6 pass checked public review and evaluation products that summarize or score reviewed artifacts, but they did not preserve the same authored semantic-review doc as source plus bounded derived lookup surface."
+                  "value_markdown": "the 2026-05-12 Pack 6 pass correctly rejected generic AI/code review, quality-report, scoring, and summary products; the 2026-05-14 follow-up found an exact review-status reader in `aoa-playbooks`."
                 }
               ]
             },
@@ -27092,7 +27266,11 @@
                 },
                 {
                   "order": 3,
-                  "text": "without a non-origin semantic-review reader, the bundle remains a fresh extraction rather than a default recommendation."
+                  "text": "it is now the canonical default for a bounded authored review-note corpus that needs a derived reader exposing scope, evidence refs, findings or signal summary, and next-step posture while routing meaning back to markdown."
+                },
+                {
+                  "order": 4,
+                  "text": "it still must not absorb playbook composition governance, eval verdicts, owner acceptance, release gates, graph semantics, or promotion policy."
                 }
               ]
             },
@@ -27104,7 +27282,7 @@
                 {
                   "order": 1,
                   "key": "review date",
-                  "value_markdown": "2026-05-12"
+                  "value_markdown": "2026-05-14"
                 },
                 {
                   "order": 2,
@@ -27119,7 +27297,7 @@
                 {
                   "order": 4,
                   "key": "public reuse check",
-                  "value_markdown": "the pattern is understandable, but default recommendation still lacks external reuse."
+                  "value_markdown": "an external reader can understand the pattern from public repository paths and source-to-derived review boundaries without private transcript state."
                 }
               ]
             },
@@ -27130,11 +27308,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "find one public repository or tool where authored semantic-review or boundary-review markdown remains the source and a derived reader or manifest exposes cluster scope, findings, and next-step summary."
+                  "text": "no blocking gap remains for canonical use as long as the generated review reader stays subordinate to authored review notes."
                 },
                 {
                   "order": 2,
-                  "text": "reject AI review products, quality scores, and issue summaries unless they preserve authored review-doc source authority and bounded lookup."
+                  "text": "future review should watch for reader overreach into scoring, automatic verdicts, policy enforcement, relation cleanup, composition governance, or graph behavior."
                 }
               ]
             },
@@ -27145,11 +27323,11 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "keep `AOA-T-0048` `promoted`"
+                  "text": "promote `AOA-T-0048` to `canonical`"
                 },
                 {
                   "order": 2,
-                  "text": "do not add second-context evidence until a real semantic-review reader appears"
+                  "text": "use it when authored semantic-review, boundary-review, or gate-review markdown needs a derived lookup surface that preserves source authority and does not automate the review verdict"
                 }
               ]
             }
@@ -27227,6 +27405,178 @@
                 {
                   "order": 2,
                   "text": "the technique is not speculative; it is a compact generalization of the semantic-review behavior that `aoa-techniques` already uses"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "note_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/notes/second-context-adaptation.md",
+          "kind": "second_context",
+          "title": "Second Context Adaptation",
+          "note_shape": "typed_sections",
+          "intro_markdown": "",
+          "sections": [
+            {
+              "heading": "Technique",
+              "order": 1,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "id",
+                  "value_markdown": "AOA-T-0048"
+                },
+                {
+                  "order": 2,
+                  "key": "name",
+                  "value_markdown": "semantic-review-surface-lift"
+                }
+              ]
+            },
+            {
+              "heading": "Target project",
+              "order": 2,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "support name",
+                  "value_markdown": "aoa-playbooks review-status surface"
+                },
+                {
+                  "order": 2,
+                  "key": "support repository",
+                  "value_markdown": "`aoa-playbooks`"
+                },
+                {
+                  "order": 3,
+                  "key": "support public surfaces",
+                  "value_markdown": "- `docs/gate-reviews/*.md`\n- `docs/real-runs/*.md`\n- `docs/PLAYBOOK_EXECUTION_SEAM.md`\n- `scripts/generate_playbook_review_status.py`\n- `generated/playbook_review_status.min.json`"
+                }
+              ]
+            },
+            {
+              "heading": "What changed",
+              "order": 3,
+              "payload_type": "fields",
+              "fields": [
+                {
+                  "order": 1,
+                  "key": "source review shape",
+                  "value_markdown": "`aoa-playbooks` keeps gate-review notes as authored markdown with required sections for gate header, minimum evidence threshold, latest reviewed run, dual signal check, current verdict, and next trigger."
+                },
+                {
+                  "order": 2,
+                  "key": "review evidence boundary",
+                  "value_markdown": "reviewed run summaries stay as authored markdown under `docs/real-runs/`, and gate-review notes must reference the exact reviewed run summaries accepted for the owning playbook."
+                },
+                {
+                  "order": 3,
+                  "key": "derived reader shape",
+                  "value_markdown": "`generated/playbook_review_status.min.json` exposes compact review-status entries with gate-review ref, reviewed-run refs, threshold, verdict token, next trigger, and composition-signal summary."
+                },
+                {
+                  "order": 4,
+                  "key": "generator contract",
+                  "value_markdown": "`scripts/generate_playbook_review_status.py` parses authored markdown, rejects missing sections, validates playbook ids, checks reviewed-run references against the committed real-run summaries, and emits the derived reader."
+                },
+                {
+                  "order": 5,
+                  "key": "source-of-truth statement",
+                  "value_markdown": "`docs/PLAYBOOK_EXECUTION_SEAM.md` states that the review-status output is an evidence-posture surface for downstream readers, not a replacement for authored reviewed summaries or gate-review notes."
+                }
+              ]
+            },
+            {
+              "heading": "What stayed invariant",
+              "order": 4,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "authored review notes remain the source of review meaning."
+                },
+                {
+                  "order": 2,
+                  "text": "the derived reader is compact, review-shaped, and traceable back to markdown notes."
+                },
+                {
+                  "order": 3,
+                  "text": "the generated surface helps readers find review posture; it does not become the review authority."
+                },
+                {
+                  "order": 4,
+                  "text": "gate verdict tokens in `aoa-playbooks` remain playbook-layer evidence posture, not technique promotion verdicts."
+                },
+                {
+                  "order": 5,
+                  "text": "playbook scenario law, composition governance, real-run ownership, and release gates stay outside this technique."
+                }
+              ]
+            },
+            {
+              "heading": "Risks introduced by adaptation",
+              "order": 5,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "a clean review-status reader can look more authoritative than the underlying gate-review notes."
+                },
+                {
+                  "order": 2,
+                  "text": "verdict tokens such as `hold` or `composition-landed` can be mistaken for generic quality scores if the playbook boundary is ignored."
+                },
+                {
+                  "order": 3,
+                  "text": "the technique could overreach if it imports playbook composition semantics instead of only reusing the source-review to derived-reader split."
+                },
+                {
+                  "order": 4,
+                  "text": "future review-status fields could widen toward dashboards or automation unless the source-trace rule stays explicit."
+                }
+              ]
+            },
+            {
+              "heading": "Evidence",
+              "order": 6,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "`docs/gate-reviews/validation-driven-remediation.md` is an authored gate-review note with the required review sections and a bounded next trigger."
+                },
+                {
+                  "order": 2,
+                  "text": "`scripts/generate_playbook_review_status.py` requires gate-review sections, requires real-run summary sections, parses owning playbook ids, checks exact reviewed-run references, and renders `generated/playbook_review_status.min.json`."
+                },
+                {
+                  "order": 3,
+                  "text": "`generated/playbook_review_status.min.json` carries `gate_review_ref`, `reviewed_run_refs`, `minimum_evidence_threshold`, `gate_verdict`, `next_trigger`, and `composition_signal_summary` for downstream review lookup."
+                },
+                {
+                  "order": 4,
+                  "text": "`docs/PLAYBOOK_EXECUTION_SEAM.md` names `generated/playbook_review_status.min.json` as a downstream evidence-posture surface and explicitly keeps it subordinate to authored reviewed summaries and gate-review notes."
+                }
+              ]
+            },
+            {
+              "heading": "Result",
+              "order": 7,
+              "payload_type": "items",
+              "items": [
+                {
+                  "order": 1,
+                  "text": "cross-context adaptation accepted"
+                },
+                {
+                  "order": 2,
+                  "text": "`aoa-playbooks` closes the missing non-origin review-reader proof for this bundle"
+                },
+                {
+                  "order": 3,
+                  "text": "promote `AOA-T-0048` to canonical while keeping scoring, automated status transitions, graph semantics, playbook composition law, and review authority outside the technique"
                 }
               ]
             }

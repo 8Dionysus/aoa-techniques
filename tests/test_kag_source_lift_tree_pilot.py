@@ -62,7 +62,7 @@ PILOT_BUNDLES = (
     (
         "AOA-T-0048",
         "semantic-review-surface-lift",
-        "promoted",
+        "canonical",
         "techniques/docs/semantic-review-surface-lift",
         "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift",
     ),

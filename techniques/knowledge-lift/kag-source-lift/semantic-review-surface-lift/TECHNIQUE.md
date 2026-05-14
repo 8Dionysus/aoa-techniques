@@ -3,7 +3,7 @@ id: AOA-T-0048
 name: semantic-review-surface-lift
 domain: docs
 kind: lift
-status: promoted
+status: canonical
 origin:
   project: aoa-techniques
   path: docs/SEMANTIC_REVIEW_GUIDE.md
@@ -17,12 +17,12 @@ tags:
   - semantic-review
   - manifests
 summary: Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.
-maturity_score: 3
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true
-validation_strength: source_backed
-public_safety_reviewed_at: 2026-03-23
+validation_strength: cross_context
+public_safety_reviewed_at: 2026-05-14
 export_ready: true
 relations:
   - type: complements
@@ -30,8 +30,12 @@ relations:
 evidence:
   - kind: origin_evidence
     path: notes/origin-evidence.md
+  - kind: second_context
+    path: notes/second-context-adaptation.md
   - kind: canonical_readiness
     path: notes/canonical-readiness.md
+  - kind: adverse_effects_review
+    path: notes/adverse-effects-review.md
 ---
 
 # semantic-review-surface-lift
@@ -173,9 +177,9 @@ See `checks/semantic-review-surface-lift-checklist.md`.
 
 - shaped inside `aoa-techniques` while authored semantic-review docs and review-backed working sets became useful as a bounded lookup surface
 - extracted into first public reusable form on 2026-03-23 as part of the docs review-surface lift wave
+- promoted to canonical on 2026-05-14 after `aoa-playbooks` showed the same authored review-note to derived review-status reader split through gate-review notes, real-run summaries, and `generated/playbook_review_status.min.json`
 
 ## Future evolution
 
-- strengthen second-context evidence once another markdown-first corpus reuses the same review-lift split
 - clarify when a review cluster should be split rather than expanded
 - keep scoring, status automation, and relation-cleanup semantics deferred unless the current bounded lookup stops being enough

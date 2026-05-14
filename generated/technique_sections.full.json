@@ -3948,12 +3948,12 @@
         {
           "key": "promotion_history",
           "heading": "Promotion history",
-          "content_markdown": "- shaped inside `aoa-techniques` while authored semantic-review docs and review-backed working sets became useful as a bounded lookup surface\n- extracted into first public reusable form on 2026-03-23 as part of the docs review-surface lift wave"
+          "content_markdown": "- shaped inside `aoa-techniques` while authored semantic-review docs and review-backed working sets became useful as a bounded lookup surface\n- extracted into first public reusable form on 2026-03-23 as part of the docs review-surface lift wave\n- promoted to canonical on 2026-05-14 after `aoa-playbooks` showed the same authored review-note to derived review-status reader split through gate-review notes, real-run summaries, and `generated/playbook_review_status.min.json`"
         },
         {
           "key": "future_evolution",
           "heading": "Future evolution",
-          "content_markdown": "- strengthen second-context evidence once another markdown-first corpus reuses the same review-lift split\n- clarify when a review cluster should be split rather than expanded\n- keep scoring, status automation, and relation-cleanup semantics deferred unless the current bounded lookup stops being enough"
+          "content_markdown": "- clarify when a review cluster should be split rather than expanded\n- keep scoring, status automation, and relation-cleanup semantics deferred unless the current bounded lookup stops being enough"
         }
       ]
     },

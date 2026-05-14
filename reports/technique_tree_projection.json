@@ -1756,6 +1756,28 @@
       "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
     },
     {
+      "id": "AOA-T-0048",
+      "name": "semantic-review-surface-lift",
+      "domain": "docs",
+      "kind": "lift",
+      "status": "canonical",
+      "summary": "Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.",
+      "current_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
+      "family": "kag-source-lift",
+      "proposed_trunk": "knowledge-lift",
+      "proposed_shelf": "kag-source-lift",
+      "proposed_future_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
+      "review_status": "pilot-candidate",
+      "rationale_cues": [
+        "family:kag-source-lift",
+        "domain:docs",
+        "kind:lift",
+        "status:canonical",
+        "review_status:pilot-candidate"
+      ],
+      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
+    },
+    {
       "id": "AOA-T-0063",
       "name": "versioned-agent-registry-contract",
       "domain": "docs",
@@ -1921,28 +1943,6 @@
       "proposed_trunk": "knowledge-lift",
       "proposed_shelf": "kag-source-lift",
       "proposed_future_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
-      "review_status": "pilot-candidate",
-      "rationale_cues": [
-        "family:kag-source-lift",
-        "domain:docs",
-        "kind:lift",
-        "status:promoted",
-        "review_status:pilot-candidate"
-      ],
-      "stop_line": "Candidate for first direct-read migration review; do not move paths from projection alone."
-    },
-    {
-      "id": "AOA-T-0048",
-      "name": "semantic-review-surface-lift",
-      "domain": "docs",
-      "kind": "lift",
-      "status": "promoted",
-      "summary": "Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.",
-      "current_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
-      "family": "kag-source-lift",
-      "proposed_trunk": "knowledge-lift",
-      "proposed_shelf": "kag-source-lift",
-      "proposed_future_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "review_status": "pilot-candidate",
       "rationale_cues": [
         "family:kag-source-lift",

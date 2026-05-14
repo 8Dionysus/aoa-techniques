@@ -2681,7 +2681,7 @@
       "name": "semantic-review-surface-lift",
       "domain": "docs",
       "kind": "lift",
-      "status": "promoted",
+      "status": "canonical",
       "summary": "Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.",
       "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "origin": {
@@ -2699,12 +2699,12 @@
         "semantic-review",
         "manifests"
       ],
-      "maturity_score": 3,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
-      "validation_strength": "source_backed",
-      "public_safety_reviewed_at": "2026-03-23",
+      "validation_strength": "cross_context",
+      "public_safety_reviewed_at": "2026-05-14",
       "export_ready": true,
       "relations": [
         {
@@ -2718,8 +2718,16 @@
           "path": "notes/origin-evidence.md"
         },
         {
+          "kind": "second_context",
+          "path": "notes/second-context-adaptation.md"
+        },
+        {
           "kind": "canonical_readiness",
           "path": "notes/canonical-readiness.md"
+        },
+        {
+          "kind": "adverse_effects_review",
+          "path": "notes/adverse-effects-review.md"
         }
       ]
     },

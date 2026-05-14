@@ -130,8 +130,8 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             / "README.md"
         ).read_text(encoding="utf-8")
 
-        self.assertIn("current promoted corpus: `10` techniques", readiness)
-        self.assertIn("`10` promoted techniques are explicitly categorized", readiness)
+        self.assertIn("current promoted corpus: `9` techniques", readiness)
+        self.assertIn("`9` promoted techniques are explicitly categorized", readiness)
         self.assertIn("Wave 0 matrix expansion is closed", readiness)
         self.assertIn("`v0.4 matrix-expansion lane` | `0`", readiness)
         self.assertIn("Pack 40 - Method-Growth Extraction Family", readiness)
