@@ -22,5 +22,5 @@ edits.
 Run:
 
 ```bash
-python -m unittest tests.test_questbook_mechanics_topology
+python -m unittest discover -s mechanics/questbook/tests
 ```

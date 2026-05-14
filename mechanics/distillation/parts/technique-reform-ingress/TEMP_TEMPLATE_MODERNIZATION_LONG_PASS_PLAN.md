@@ -638,7 +638,7 @@ Use the smallest honest menu for plan-only changes:
 1. `git diff --check`
 2. public-safety grep over touched public-share files
 3. bridge-block grep over touched public-share files
-4. `python -m unittest tests.test_distillation_mechanics_topology`
+4. `python -m unittest discover -s mechanics/distillation/tests`
 5. `python scripts/validate_repo.py`
 
 Use the source-repair menu after any `TECHNIQUE.md` or validator change:
@@ -646,8 +646,8 @@ Use the source-repair menu after any `TECHNIQUE.md` or validator change:
 1. `git diff --check`
 2. public-safety grep over touched public-share files
 3. bridge-block grep over touched public-share files
-4. `python -m unittest tests.test_validate_repo`
-5. `python -m unittest tests.test_distillation_mechanics_topology`
+4. `python -m unittest discover -s tests -p 'test_validate_repo.py'`
+5. `python -m unittest discover -s mechanics/distillation/tests`
 6. `python scripts/validate_nested_agents.py`
 7. `python scripts/validate_repo.py`
 8. `python scripts/release_check.py`

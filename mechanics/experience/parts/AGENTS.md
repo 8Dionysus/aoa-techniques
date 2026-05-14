@@ -25,6 +25,6 @@ operating surfaces, not raw seed archives.
 ## Verify
 
 ```bash
-python -m unittest tests.test_experience_mechanics_topology
+python -m unittest discover -s mechanics/experience/tests
 python scripts/validate_repo.py
 ```

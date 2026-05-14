@@ -21,5 +21,5 @@ a provenance district, not the normal first route for current mechanics edits.
 Run:
 
 ```bash
-python -m unittest tests.test_rpg_mechanics_topology
+python -m unittest discover -s mechanics/rpg/tests
 ```

@@ -43,6 +43,12 @@ The format is intentionally simple and human-first.
   scout/tree report builders now live under the Distillation
   `technique-reform-ingress` part, and live receipt publishing now lives under
   the Recurrence `live-observation-producers` part
+- moved mechanic-owned tests out of root `tests/` into `mechanics/<slug>/tests/`
+  and `mechanics/tests/`, adding `scripts/run_tests.py` so release validation
+  still runs root-owned and mechanic-owned unittest suites together
+- retired the empty root `data/` district after all active data moved to owner
+  homes; future root data now requires a concrete repo-wide data contract and a
+  decision rather than a placeholder shelf
 - added a Canonical Retro Audit part and rechecked all `98` canonical
   techniques for metadata, evidence-declaration, and bundle-local verdict
   coherence; no canonical downgrade was justified, and stale metadata was

@@ -23,6 +23,6 @@ technique bundles, proof verdicts, health scores, or cleanup authority.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_antifragility_mechanics_topology
+python -m unittest discover -s mechanics/antifragility/tests
 python scripts/validate_repo.py
 ```

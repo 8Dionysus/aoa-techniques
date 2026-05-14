@@ -33,8 +33,9 @@ The same pass inspected the tracked root directories rather than stopping at
 the first suspicious path:
 
 - `.agents/` and `.github/` remain platform and agent-lane support surfaces.
-- `config/`, `data/`, and `examples/` now hold only route cards plus
-  repo-wide reserved surfaces.
+- `config/` and `examples/` now hold only route cards plus repo-wide reserved
+  surfaces; `data/` was later retired because no active repo-wide payload
+  remained.
 - `docs/`, `generated/`, `legacy/`, `techniques/`, and `tests/` remain
   repo-wide doctrine, generated readers, archive, canon, and verification
   surfaces.

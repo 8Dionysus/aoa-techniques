@@ -2,8 +2,8 @@
 
 ## Guidance for `scripts/`
 
-`scripts/` contains deterministic builders, validators, promotion helpers, and
-report tools for repo-wide technique canon surfaces.
+`scripts/` contains deterministic builders, validators, test runners,
+promotion helpers, and report tools for repo-wide technique canon surfaces.
 
 Scripts that only serve one mechanic part belong beside that part under
 `mechanics/<slug>/parts/<part>/scripts/`.

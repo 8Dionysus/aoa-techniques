@@ -24,6 +24,6 @@ not become canonical technique bundles.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_recurrence_mechanics_topology tests.test_recurrence_manifest_topology
+python -m unittest discover -s mechanics/recurrence/tests
 python scripts/validate_repo.py
 ```

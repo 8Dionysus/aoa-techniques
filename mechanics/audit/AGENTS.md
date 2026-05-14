@@ -48,14 +48,14 @@ semantics, or runtime behavior.
 For Audit topology changes:
 
 ```bash
-python -m unittest tests.test_audit_mechanics_topology
+python -m unittest discover -s mechanics/audit/tests
 ```
 
 For repository-level safety after structure changes:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 ## Closeout

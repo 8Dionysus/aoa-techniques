@@ -23,6 +23,6 @@ technique bundles or checkpoint implementation authority.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_checkpoint_mechanics_topology
+python -m unittest discover -s mechanics/checkpoint/tests
 python scripts/validate_repo.py
 ```

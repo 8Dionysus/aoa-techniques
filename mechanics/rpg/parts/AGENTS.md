@@ -22,5 +22,5 @@ local pressure area and the stronger owner boundaries around it.
 Run:
 
 ```bash
-python -m unittest tests.test_rpg_mechanics_topology
+python -m unittest discover -s mechanics/rpg/tests
 ```

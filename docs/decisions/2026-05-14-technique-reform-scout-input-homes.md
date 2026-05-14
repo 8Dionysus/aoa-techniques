@@ -35,8 +35,9 @@ contract.
 ## Consequences
 
 - Root `config/` stays focused on repo-wide configuration contracts.
-- Root `data/` remains reserved for future repo-wide data instead of holding a
-  mechanic-local overlay.
+- Root `data/` no longer holds the mechanic-local overlay; a later topology
+  decision retires the empty root district instead of keeping a placeholder
+  without an active repo-wide data contract.
 - The technique-reform part now owns the full scout loop: input config, overlay
   data, generated reports, review packets, and landing provenance.
 - Future scout-only reform inputs should be added under the

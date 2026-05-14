@@ -25,6 +25,6 @@ operating surfaces, not raw archives.
 ## Verify
 
 ```bash
-python -m unittest tests.test_audit_mechanics_topology
+python -m unittest discover -s mechanics/audit/tests
 python scripts/validate_repo.py
 ```

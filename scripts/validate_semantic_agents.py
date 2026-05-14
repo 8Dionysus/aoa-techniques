@@ -37,16 +37,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         ),
     ),
     AgentsDocSpec(
-        Path('data/AGENTS.md'),
-        (
-            'contract-adjacent',
-            'public-safe',
-            'derived',
-            'source of truth',
-            'validate_repo.py',
-        ),
-    ),
-    AgentsDocSpec(
         Path('examples/AGENTS.md'),
         (
             'technique canon',
@@ -102,7 +92,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'technique contracts',
             'generated parity',
             'public-safe',
-            'python -m unittest discover -s tests',
+            'python scripts/run_tests.py',
             'validate_semantic_agents.py',
         ),
     ),

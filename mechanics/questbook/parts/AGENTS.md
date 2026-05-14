@@ -25,6 +25,6 @@ technique bundles, quest source truth, or cross-owner authority.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_questbook_mechanics_topology
+python -m unittest discover -s mechanics/questbook/tests
 python scripts/validate_repo.py
 ```

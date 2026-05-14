@@ -22,5 +22,5 @@ mechanics edits.
 Run:
 
 ```bash
-python -m unittest tests.test_recurrence_mechanics_topology
+python -m unittest discover -s mechanics/recurrence/tests
 ```

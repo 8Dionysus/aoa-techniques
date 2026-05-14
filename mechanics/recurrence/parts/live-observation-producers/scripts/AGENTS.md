@@ -16,7 +16,7 @@ ambient credentials, or private session dumps.
 Verify with:
 
 ```bash
-python -m unittest tests.test_publish_live_receipts
-python -m unittest tests.test_recurrence_mechanics_topology
+python -m unittest discover -s mechanics/recurrence/tests -p 'test_publish_live_receipts.py'
+python -m unittest discover -s mechanics/recurrence/tests
 python scripts/validate_repo.py
 ```
