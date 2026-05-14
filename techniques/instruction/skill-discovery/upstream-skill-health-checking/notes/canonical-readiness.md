@@ -12,6 +12,7 @@
 - the second context adaptation kept the contract bounded around source availability and manifest-readiness before surfacing
 - the bundle now has a checklist and a public-safe example, but the pattern is still strongest through one wave of adjacent discovery infrastructure rather than multiple independent downstream consumers
 - 2026-05-12 Pack 5 search found useful adjacent skill-ecosystem surfaces, including `shskills` manifest plus `doctor`, `fast-agent` registry-backed skill install/update behavior, and Aescut registry risk checks, but each widens into install state, managed registry behavior, security or permission review, or update/doctor commands rather than the same minimal pre-surface source availability plus manifest-readiness verdict
+- 2026-05-14 residual queue pass: `aoa-skills` portable/export validation, `skills_ref_validation_manifest`, and `validate_agent_skills.py` remain adjacent internal conformance lanes; they do not check an upstream-owned source for reachability plus minimal manifest-readiness before surfacing. Exact GitHub phrase search returned no hits before secondary code-search limits.
 
 ## Default-use rationale
 - this is useful when the missing object is a bounded readiness verdict over upstream-owned skill sources before they become selectable inputs

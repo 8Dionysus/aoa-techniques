@@ -2092,6 +2092,11 @@
                   "order": 8,
                   "key": "conclusion",
                   "value_markdown": "these lanes strengthen the negative boundary around the technique, but they do not close the second-context gap"
+                },
+                {
+                  "order": 9,
+                  "key": "2026-05-14 residual queue pass",
+                  "value_markdown": "local and sibling scans still found only `atm10-agent` origin-family `M6.19` proof plus adjacent dry-run, A2A, and runtime surfaces; exact GitHub code search for `expected_intent_type`, dry-run, and contract-summary wording returned no hits before secondary code-search limits. No non-origin live reuse context was found."
                 }
               ]
             },
@@ -10290,6 +10295,10 @@
                 {
                   "order": 3,
                   "text": "the 2026-05-12 Pack 6 pass checked Agent Loom as a public markdown-first record corpus; it remains adjacent because it has typed evidence records and paths, but no accepted derived note-kind/path provenance manifest or reader surface matching this bundle's exact lift contract"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-14 residual queue pass: `aoa-stats`, `aoa-evals`, and Agents evidence refs plus `aoa-sdk` checkpoint/source-note refs remain adjacent because they preserve refs, not a derived markdown-first note-kind/path manifest or reader; exact GitHub `note_kind` / `note_path` search returned no hits."
                 }
               ]
             },
@@ -11216,6 +11225,11 @@
                   "order": 8,
                   "key": "conclusion",
                   "value_markdown": "these lanes sharpen the boundary around `AOA-T-0022`, but they do not close the remaining independent-corpus gap"
+                },
+                {
+                  "order": 9,
+                  "key": "2026-05-14 residual queue pass",
+                  "value_markdown": "exact five-heading local and sibling scans still found only `aoa-skills/skills/risk/aoa-sanitized-share/SKILL.md` outside `aoa-techniques`; exact GitHub phrase search returned no hits."
                 }
               ]
             },
@@ -18185,6 +18199,10 @@
                 },
                 {
                   "order": 9,
+                  "text": "2026-05-14 residual queue pass: `aoa-stats` source coverage and `aoa-routing` / `aoa-sdk` regrounding hints remain adjacent coverage-risk signals because they do not report token drift over an already-composed context artifact; exact GitHub phrase search for source coverage, token drift, and context report returned no hits."
+                },
+                {
+                  "order": 10,
                   "text": "next honest search shape: look for artifact-first public workflows where CI compares an expected source or fragment inventory against a generated prompt/context artifact and records token deltas, while keeping assembly, scoring, and remediation outside the report"
                 }
               ]
@@ -19833,6 +19851,11 @@
                   "order": 5,
                   "key": "2026-05-12 code-search check",
                   "value_markdown": "exact phrase searches for profile/preset/module resolution, first-appearance duplicate handling, and combined `--list-profiles` / `--list-presets` surfaces produced no public non-origin exact-fit candidate."
+                },
+                {
+                  "order": 6,
+                  "key": "2026-05-14 residual queue pass",
+                  "value_markdown": "the `abyss-stack` source checkout confirms that the origin implementation still carries `modules -> profiles -> presets`, preset-first resolution, first-appearance dedupe, and pre-launch inspection, but that is origin lineage rather than a second downstream consumer; exact GitHub phrase search returned no hits."
                 }
               ]
             },
@@ -23902,6 +23925,10 @@
                 {
                   "order": 4,
                   "text": "2026-05-12 Pack 5 search found useful adjacent skill-ecosystem surfaces, including `shskills` manifest plus `doctor`, `fast-agent` registry-backed skill install/update behavior, and Aescut registry risk checks, but each widens into install state, managed registry behavior, security or permission review, or update/doctor commands rather than the same minimal pre-surface source availability plus manifest-readiness verdict"
+                },
+                {
+                  "order": 5,
+                  "text": "2026-05-14 residual queue pass: `aoa-skills` portable/export validation, `skills_ref_validation_manifest`, and `validate_agent_skills.py` remain adjacent internal conformance lanes; they do not check an upstream-owned source for reachability plus minimal manifest-readiness before surfacing. Exact GitHub phrase search returned no hits before secondary code-search limits."
                 }
               ]
             },
@@ -26766,6 +26793,10 @@
                 {
                   "order": 2,
                   "text": "a future canonical review should confirm that the technique still refuses approval, triage, and review-state logic."
+                },
+                {
+                  "order": 3,
+                  "text": "2026-05-14 residual queue pass: `aoa-playbooks` review intake is a useful adjacent reader over review packet and status surfaces, but it carries gate verdict and composition posture and is not an inventory-only GitHub review-template manifest; exact GitHub phrase search returned no hits."
                 }
               ]
             },
@@ -34459,6 +34490,10 @@
                 {
                   "order": 3,
                   "text": "future searches should distinguish packet receipt from request acknowledgment, mail delivery, assignment, escalation acknowledgment, session auto-prime, and transfer-of-control handoff semantics"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-14 residual queue pass: `aoa-summon` consumes a return receipt or acceptance expectation before parent continuation, but it does not record receiver-side receipt of one specific handoff packet; exact GitHub phrase search returned no hits."
                 }
               ]
             },
@@ -35021,6 +35056,10 @@
                 {
                   "order": 3,
                   "text": "future searches should distinguish handoff-claim verification from broad claim hygiene, outbound handoff capture, branch-state summaries, session-start orientation, generic git-status checks, and full provenance or review frameworks"
+                },
+                {
+                  "order": 4,
+                  "text": "2026-05-14 residual queue pass: workspace search found commit-boundary and claim/evidence honesty surfaces, but no inbound handoff claim record with verified, mismatched, or unverifiable outcomes against git before continuation; exact GitHub phrase search returned no hits."
                 }
               ]
             },

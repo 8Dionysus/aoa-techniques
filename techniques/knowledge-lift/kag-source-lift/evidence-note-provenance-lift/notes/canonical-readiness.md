@@ -28,6 +28,7 @@
 - the main missing proof is live reuse in a second markdown-first corpus, not another eval bundle in the same donor family
 - a future canonical review should show that typed note kinds and note paths survive repeated use without turning into graph semantics or flattened metadata
 - the 2026-05-12 Pack 6 pass checked Agent Loom as a public markdown-first record corpus; it remains adjacent because it has typed evidence records and paths, but no accepted derived note-kind/path provenance manifest or reader surface matching this bundle's exact lift contract
+- 2026-05-14 residual queue pass: `aoa-stats`, `aoa-evals`, and Agents evidence refs plus `aoa-sdk` checkpoint/source-note refs remain adjacent because they preserve refs, not a derived markdown-first note-kind/path manifest or reader; exact GitHub `note_kind` / `note_path` search returned no hits.
 
 ## Recommendation
 - keep `AOA-T-0020` `promoted`
