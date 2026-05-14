@@ -16,7 +16,7 @@ tags:
   - telemetry
   - diagnostics
 summary: Read-only integrity verdict that checks telemetry and summary-layout invariants across latest published summaries without widening the hard fail surface.
-maturity_score: 4
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true

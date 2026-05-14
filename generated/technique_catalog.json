@@ -132,7 +132,7 @@
       "rigor_level": "strict",
       "reversibility": "moderate",
       "review_required": true,
-      "validation_strength": "source_backed",
+      "validation_strength": "cross_context",
       "public_safety_reviewed_at": "2026-03-15",
       "export_ready": true,
       "relations": [
@@ -376,7 +376,7 @@
       "rigor_level": "strict",
       "reversibility": "hard",
       "review_required": true,
-      "validation_strength": "source_backed",
+      "validation_strength": "cross_context",
       "public_safety_reviewed_at": "2026-03-15",
       "export_ready": true,
       "relations": [
@@ -430,7 +430,7 @@
         "summaries",
         "bounded"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
@@ -546,7 +546,7 @@
         "telemetry",
         "diagnostics"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "easy",
       "review_required": true,
@@ -667,7 +667,7 @@
         "traceability",
         "generated-artifact"
       ],
-      "maturity_score": 4,
+      "maturity_score": 5,
       "rigor_level": "bounded",
       "reversibility": "moderate",
       "review_required": true,

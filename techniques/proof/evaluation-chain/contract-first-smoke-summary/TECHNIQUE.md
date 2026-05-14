@@ -20,7 +20,7 @@ maturity_score: 5
 rigor_level: strict
 reversibility: moderate
 review_required: true
-validation_strength: source_backed
+validation_strength: cross_context
 public_safety_reviewed_at: 2026-03-15
 export_ready: true
 relations:

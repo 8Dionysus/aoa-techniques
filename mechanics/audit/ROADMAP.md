@@ -15,6 +15,8 @@ The active package already has:
 - external evidence sprint and ledger parts
 - review surfaces that can expose readiness pressure without mutating status
 - stop-lines that keep proof verdicts and owner acceptance outside this repo
+- a canonical retro-audit part that checks already-canonical rows for
+  metadata/evidence/verdict coherence without turning Audit into proof authority
 
 The weak roadmap shape came from a valid next-pass note. It now needs to read
 as a contour surface because Audit is a repeated route in technique reform.
@@ -31,7 +33,10 @@ as a contour surface because Audit is a repeated route in technique reform.
    [External Evidence Sprint Runbook](parts/external-evidence-sprint-runbook/README.md)
    and record real searched lanes in the
    [External Evidence Ledger](parts/external-evidence-ledger/README.md).
-4. Replace the current promotion wave runbook only after the remaining active
+4. Re-run [Canonical Retro Audit](parts/canonical-retro-audit/README.md) after
+   status, maturity, validation strength, or evidence declarations move for
+   canonical rows.
+5. Replace the current promotion wave runbook only after the remaining active
    Wave A candidates close or the lead queue changes.
 
 ## When Time Comes

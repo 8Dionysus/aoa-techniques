@@ -17,7 +17,7 @@ tags:
   - traceability
   - generated-artifact
 summary: Compose agent context from smaller fragments into a stable generated artifact with deterministic ordering and source traceability.
-maturity_score: 4
+maturity_score: 5
 rigor_level: bounded
 reversibility: moderate
 review_required: true
