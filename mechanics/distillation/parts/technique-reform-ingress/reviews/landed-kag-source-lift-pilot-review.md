@@ -10,7 +10,7 @@ Migration receipt:
 [Kag-Source-Lift Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -57,7 +57,7 @@ decision rationale form a clean document-boundary shelf before any path move.
 - [Kag-source-lift tree pilot receipt](../../../../../legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md)
 - [Technique tree projection rows for `kag-source-lift`,
   `docs-boundary`, `instruction-surface`, and boundary-watch instruction
-  shelves](../../../../../reports/technique_tree_projection.md)
+  shelves](../reports/technique_tree_projection.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)
 - [Landed instruction-surface pilot review](landed-instruction-surface-pilot-review.md)

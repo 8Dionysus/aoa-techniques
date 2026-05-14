@@ -87,8 +87,8 @@ Support files that clarified object shape:
 Supporting review and generated surfaces:
 
 - [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
-- [Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
-- [Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+- [Technique Topology Scout](../reports/technique_topology_scout.md)
+- [Technique Tree Projection](../reports/technique_tree_projection.md)
 - [Capability-Registry Direct-Read Migration Review](capability-registry-direct-read-migration-review.md)
 - [Landed Capability-Registry Pilot Review](landed-capability-registry-pilot-review.md)
 - [Capability-Boundary Direct-Read Migration Review](capability-boundary-direct-read-migration-review.md)

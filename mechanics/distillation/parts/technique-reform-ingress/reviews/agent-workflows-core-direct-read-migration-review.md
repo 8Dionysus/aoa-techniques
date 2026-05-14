@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Intent-Chain Pilot Review](landed-intent-chain-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -91,11 +91,11 @@ task's center changes.
   [adverse effects](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/notes/adverse-effects-review.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
-- [Agent-workflows core semantic review](../../../../../docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - [Kind ambiguity review for `AOA-T-0028`](second-kind-ambiguity-review-pack.md)
-- [Technique family scout rows for `agent-workflows-core`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `agent-workflows-core`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `agent-workflows-core`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `agent-workflows-core`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `agent-workflows-core`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `agent-workflows-core`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 

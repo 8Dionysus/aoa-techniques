@@ -10,7 +10,7 @@ Migration receipt:
 [Instruction-Surface Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -51,7 +51,7 @@ subordinate to authored markdown and outside KAG owner authority.
 - [Instruction-surface tree pilot receipt](../../../../../legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md)
 - [Technique tree projection rows for `instruction-surface`,
   `kag-source-lift`, `docs-boundary`, and boundary-watch instruction
-  shelves](../../../../../reports/technique_tree_projection.md)
+  shelves](../reports/technique_tree_projection.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)
 - initial direct-read headers and section maps for `AOA-T-0018`, `AOA-T-0019`,

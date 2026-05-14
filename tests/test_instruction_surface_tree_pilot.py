@@ -62,7 +62,7 @@ PILOT_BUNDLES = (
 )
 
 LIVE_LINK_SURFACES = (
-    "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
     "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",

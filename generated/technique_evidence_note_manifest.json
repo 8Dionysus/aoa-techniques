@@ -4157,7 +4157,7 @@
                 {
                   "order": 3,
                   "key": "semantic reinforcement",
-                  "value_markdown": "`docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` found the `AOA-T-0002` / `AOA-T-0009` seam `clear`, confirming that the snapshot discipline stays distinct from the broader source-of-truth layout"
+                  "value_markdown": "`mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` found the `AOA-T-0002` / `AOA-T-0009` seam `clear`, confirming that the snapshot discipline stays distinct from the broader source-of-truth layout"
                 },
                 {
                   "order": 4,
@@ -5713,7 +5713,7 @@
                 {
                   "order": 4,
                   "key": "semantic reinforcement",
-                  "value_markdown": "`docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md` kept the `AOA-T-0012` vs `AOA-T-0013` seam clear, confirming that one-output deterministic composition remains distinct from one-source multi-target rule distribution"
+                  "value_markdown": "`mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md` kept the `AOA-T-0012` vs `AOA-T-0013` seam clear, confirming that one-output deterministic composition remains distinct from one-source multi-target rule distribution"
                 },
                 {
                   "order": 5,

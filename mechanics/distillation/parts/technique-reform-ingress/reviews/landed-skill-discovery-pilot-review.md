@@ -10,7 +10,7 @@ Migration receipt:
 [Skill-Discovery Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -51,9 +51,9 @@ and practical, but they must not become one vague proof doctrine.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Skill-discovery tree pilot receipt](../../../../../legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md)
-- [Technique tree projection rows for `skill-discovery` and `skill-support`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `skill-discovery` and `skill-support`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `skill-discovery` and `skill-support`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `skill-discovery` and `skill-support`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `skill-discovery` and `skill-support`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `skill-discovery` and `skill-support`](../reports/technique_topology_scout.md)
 - [AOA-T-0016 bounded-context-map](../../../../../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md)
 - [AOA-T-0015 contract-test-design](../../../../../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md)
 - [AOA-T-0017 property-invariants](../../../../../techniques/proof/skill-support/property-invariants/TECHNIQUE.md)

@@ -25,7 +25,7 @@ the technique is executed against a real GitHub owner surface.
 - [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md)
 - [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md)
 - [execution-profile-registry-calibration-review](execution-profile-registry-calibration-review.md)
-- `reports/technique_topology_scout.json`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.json`
 - `techniques/proof/AGENTS.md`
 - `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/TECHNIQUE.md`
 - `techniques/proof/owner-truth-closeout/github-only-owner-endcap-with-reality-sync/checks/github-only-owner-endcap-with-reality-sync-checklist.md`

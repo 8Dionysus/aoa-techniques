@@ -7,8 +7,8 @@ generated scout rule, capsule builder, template, or technique leaf changed.
 
 ## Verdict
 
-Do not change `config/technique_topology_axes.yaml` or
-`scripts/build_topology_scout.py` in this wave.
+Do not change `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml` or
+`mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py` in this wave.
 
 The current registry and topology contract already say the important thing:
 `execution_profile` is a scout suitability estimate from authored technique
@@ -31,11 +31,11 @@ owner-route design. It should not be patched by a broad generated keyword rule.
 - [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md)
 - [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md)
 - [execution-profile-fixture-sketch-ledger](execution-profile-fixture-sketch-ledger.md)
-- `config/technique_topology_axes.yaml`
+- `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`
 - `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-- `scripts/build_topology_scout.py`
+- `mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`
 - `scripts/validate_repo.py`
-- `reports/technique_topology_scout.json`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.json`
 - `docs/decisions/2026-05-04-topology-scout-axis-registry.md`
 
 ## Current Source Shape

@@ -10,7 +10,7 @@ Migration receipt:
 [Review-Compaction Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -42,7 +42,7 @@ that shelf is the nearest continuity sibling and will test whether
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Review-compaction tree pilot receipt](../../../../../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
 - [Technique tree projection rows for `review-compaction` and
-  `handoff-continuation`](../../../../../reports/technique_tree_projection.md)
+  `handoff-continuation`](../reports/technique_tree_projection.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read

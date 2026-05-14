@@ -16,7 +16,7 @@ Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Status: pilot-validated, split-tail-closed, no path migration, not `tree_path`
 frontmatter.

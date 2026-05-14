@@ -22,9 +22,9 @@ Choose the path that matches your question:
   - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
   - [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
   - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
-  - [`../config/technique_topology_axes.yaml`](../config/technique_topology_axes.yaml)
+  - [`../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`](../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml)
     - scout value registry for capability, substrate, execution profile, and risk posture; not frontmatter truth
-  - [`../reports/technique_topology_scout.md`](../reports/technique_topology_scout.md)
+  - [`../mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`](../mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md)
     - generated scout projection over those axes; use for review pressure, not migration authority
   - [Technique Selection](TECHNIQUE_SELECTION.md)
   - [Selection Patterns](SELECTION_PATTERNS.md)
@@ -67,8 +67,8 @@ Choose the path that matches your question:
   - [Shadow Patterns](SHADOW_PATTERNS.md)
   - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
   - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-  - [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-  - [Evaluation-Chain Shadow Review](EVALUATION_CHAIN_SHADOW_REVIEW.md)
+  - [Published-Summary Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+  - [Evaluation-Chain Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md)
   - [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
   - one canonical bundle plus its `notes/adverse-effects-review.md`
 - I need to navigate the authoritative repo docs/status layer:
@@ -105,14 +105,14 @@ Choose the path that matches your question:
   - [`semantic-review-surface-lift`](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 - I need to inspect the semantic-review pilots:
   - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
-  - [Agent-Workflows Core Semantic Review](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-  - [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-  - [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
-  - [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
-  - [Intent-Chain Semantic Review](INTENT_CHAIN_SEMANTIC_REVIEW.md)
-  - [Instruction-Surface Semantic Review](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-  - [Skill-Support Semantic Review](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
-  - [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+  - [Agent-Workflows Core Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+  - [Published-Summary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+  - [Evaluation-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
+  - [Docs Boundary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+  - [Intent-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
+  - [Instruction-Surface Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
+  - [Skill-Support Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+  - [KAG Source Lift Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
 - I need release process guidance:
   - [Start Here](START_HERE.md)
   - [Releasing `aoa-techniques`](RELEASING.md)
@@ -235,8 +235,8 @@ These are human-authored guides that define bounded review, metadata, and docume
 
 These review-only docs inspect where caution language is most likely to blur neighboring canonical techniques or create false confidence.
 
-- [Published-Summary Shadow Review](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-- [Evaluation-Chain Shadow Review](EVALUATION_CHAIN_SHADOW_REVIEW.md)
+- [Published-Summary Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [Evaluation-Chain Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md)
 
 ### KAG-oriented boundary guides
 
@@ -276,7 +276,7 @@ These are reusable technique bundles extracted from the repo's current generated
 
 This review-only doc currently keeps the first five core KAG/source-lift techniques distinct while staying subordinate to authored markdown, with two canonical anchors plus three promoted companions.
 
-- [KAG Source Lift Semantic Review](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+- [KAG Source Lift Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
   - use when the family seams between section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift need one bounded review surface
 
 Later repo-surface, intake-surface, and review-surface lifts stay outside that family review until a wider family seam justifies refreshing it.
@@ -285,13 +285,13 @@ Later repo-surface, intake-surface, and review-surface lifts stay outside that f
 
 These review-only docs test whether nearby techniques still read as distinct, bounded patterns rather than one blurred package.
 
-- [Agent-Workflows Core Semantic Review](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-- [Published-Summary Semantic Review](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [Evaluation-Chain Semantic Review](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
-- [Docs Boundary Semantic Review](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
-- [Intent-Chain Semantic Review](INTENT_CHAIN_SEMANTIC_REVIEW.md)
-- [Instruction-Surface Semantic Review](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-- [Skill-Support Semantic Review](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+- [Agent-Workflows Core Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [Published-Summary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- [Evaluation-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
+- [Docs Boundary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+- [Intent-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
+- [Instruction-Surface Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
+- [Skill-Support Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 
 ## Recommended Reading Paths
 

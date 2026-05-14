@@ -5,7 +5,7 @@ It is not the AoA center recurrence part map and not a raw source inventory.
 
 | Part | Current role | Active source | Provenance |
 |---|---|---|---|
-| `live-observation-producers` | Names the local producer inputs that may feed technique review while keeping generated evidence advisory. | [parts/live-observation-producers](parts/live-observation-producers/README.md) | [PROVENANCE](PROVENANCE.md) |
+| `live-observation-producers` | Names the local producer inputs that may feed technique review while keeping generated evidence advisory. | [parts/live-observation-producers](parts/live-observation-producers/README.md), [scripts](parts/live-observation-producers/scripts/AGENTS.md), `parts/live-observation-producers/manifests/recurrence/component.techniques.canon-and-intake-beacons.json` | [PROVENANCE](PROVENANCE.md) |
 | `review-decision-closure` | Names how recurrence-fed technique beacons can close as review decisions without changing technique status. | [parts/review-decision-closure](parts/review-decision-closure/README.md) | [PROVENANCE](PROVENANCE.md) |
 
 ## Part Rule

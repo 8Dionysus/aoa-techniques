@@ -10,7 +10,7 @@ Migration receipt:
 [Intent-Chain Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-intent-chain-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -46,11 +46,11 @@ now-projected shelf and `AOA-T-0004` has already landed under `intent-chain`.
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Intent-chain tree pilot receipt](../../../../../legacy/receipts/2026-05-05-intent-chain-tree-pilot.md)
 - [Intent-chain direct-read migration review](intent-chain-direct-read-migration-review.md)
-- [Intent-chain semantic review](../../../../../docs/INTENT_CHAIN_SEMANTIC_REVIEW.md)
-- [Agent-workflows core semantic review](../../../../../docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-- [Technique family scout rows for `agent-workflows-core` and `intent-chain`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `agent-workflows-core`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `agent-workflows-core`](../../../../../reports/technique_tree_projection.md)
+- [Intent-chain semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
+- [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [Technique family scout rows for `agent-workflows-core` and `intent-chain`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `agent-workflows-core`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `agent-workflows-core`](../reports/technique_tree_projection.md)
 - [AOA-T-0001 plan-diff-apply-verify-report](../../../../../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md)
 - [AOA-T-0014 tdd-slice](../../../../../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md)
 - [AOA-T-0023 stateless-single-shot-agent](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md)

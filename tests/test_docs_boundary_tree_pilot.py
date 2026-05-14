@@ -46,7 +46,7 @@ PILOT_BUNDLES = (
 
 LIVE_LINK_SURFACES = (
     "docs/REPO_DOC_SURFACE_LIFT_GUIDE.md",
-    "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
     "docs/SELECTION_PATTERNS.md",
     "docs/TECHNIQUE_SELECTION.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",

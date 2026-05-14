@@ -90,7 +90,7 @@ They now include the canonical-only `adverse_effects_review` note role as one mo
 
 For current family maintenance, keep the authored note shapes stable before asking for richer provenance behavior. Fix note-body drift, guide drift, or bundle examples first; only add a new source class when those authored surfaces stop being enough.
 
-The first five reusable lift techniques now have a companion review surface in `docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
+The first five reusable lift techniques now have a companion review surface in `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
 
 Later repo-surface, intake-surface, and review-surface lifts can reuse the same source-first posture without automatically widening that family review. Refresh the family review only when those later lifts develop a real shared seam worth reviewing together.
 
@@ -106,16 +106,16 @@ The next implementation-oriented source-class pilot after GitHub review template
 - `generated/semantic_review_manifest.json`
 - `generated/semantic_review_manifest.min.json`
 
-Those files lift authored repo-level semantic review docs into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
+Those files lift authored repo-level semantic review packets into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
 
-The next implementation-oriented source-class pilot after semantic review docs now stays equally bounded:
+The next implementation-oriented source-class pilot after semantic review packets now stays equally bounded:
 
 - `generated/shadow_review_manifest.json`
 - `generated/shadow_review_manifest.min.json`
 
-Those files lift authored repo-level shadow review docs into derived caution-review knowledge only. They do not replace the markdown review surfaces, infer caution policy, or turn shadow seams into generated metadata.
+Those files lift authored repo-level shadow review packets into derived caution-review knowledge only. They do not replace the markdown review surfaces, infer caution policy, or turn shadow seams into generated metadata.
 
-The next implementation-oriented source-class pilot after shadow review docs now stays equally bounded:
+The next implementation-oriented source-class pilot after shadow review packets now stays equally bounded:
 
 - `generated/repo_doc_surface_manifest.json`
 - `generated/repo_doc_surface_manifest.min.json`

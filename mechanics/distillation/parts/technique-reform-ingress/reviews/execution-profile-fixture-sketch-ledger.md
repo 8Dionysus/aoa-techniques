@@ -36,9 +36,9 @@ This ledger distills:
 - [execution-profile-small-agent-remaining-shelves-review](execution-profile-small-agent-remaining-shelves-review.md)
 - [execution-profile-medium-agent-calibration-review](execution-profile-medium-agent-calibration-review.md)
 - [execution-profile-orchestration-boundary-review](execution-profile-orchestration-boundary-review.md)
-- `reports/technique_topology_scout.json`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.json`
 - `docs/TECHNIQUE_CAPSULES.md`
-- `config/technique_topology_axes.yaml`
+- `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`
 
 ## Ledger Totals
 

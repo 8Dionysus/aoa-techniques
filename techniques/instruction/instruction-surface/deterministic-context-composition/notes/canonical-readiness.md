@@ -11,7 +11,7 @@
 - external origin: `notes/external-origin.md` already records the donor source, retained bounded contract, and explicit exclusions around toolchain-specific donor behavior
 - external import review: `notes/external-import-review.md` already found the first external-import path readable, bounded, and public-safe without widening the bundle
 - second context: `notes/second-context-adaptation.md` shows the same contract surviving in `aoa-techniques` as a documentation-first adaptation rather than a donor-specific toolchain clone
-- semantic reinforcement: `docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md` kept the `AOA-T-0012` vs `AOA-T-0013` seam clear, confirming that one-output deterministic composition remains distinct from one-source multi-target rule distribution
+- semantic reinforcement: `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md` kept the `AOA-T-0012` vs `AOA-T-0013` seam clear, confirming that one-output deterministic composition remains distinct from one-source multi-target rule distribution
 - stronger validation: the bundle now carries two public-safe examples plus the existing checklist, which is stronger than the initial promoted import floor
 
 ## Default-use rationale

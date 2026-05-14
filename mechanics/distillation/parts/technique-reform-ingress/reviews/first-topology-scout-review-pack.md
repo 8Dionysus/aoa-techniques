@@ -4,12 +4,12 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Generated lens:
-[Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
+[Technique Topology Scout](../reports/technique_topology_scout.md)
 and
-[Technique Topology Scout JSON](../../../../../reports/technique_topology_scout.json)
+[Technique Topology Scout JSON](../reports/technique_topology_scout.json)
 
 Registry:
-[Technique Topology Axes](../../../../../config/technique_topology_axes.yaml)
+[Technique Topology Axes](../../../../../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml)
 
 Status: review-pack-landed, not a schema migration.
 
@@ -81,7 +81,7 @@ The topology scout makes that next lane sharper:
 ## Next Honest Move
 
 Build the kind ambiguity review pack from
-[Kind Ambiguity Audit](../../../../../reports/kind_ambiguity_audit.md), but do
+[Kind Ambiguity Audit](../reports/kind_ambiguity_audit.md), but do
 not trust the audit alone. Read the selected bundle files directly, then decide
 whether the issue is:
 

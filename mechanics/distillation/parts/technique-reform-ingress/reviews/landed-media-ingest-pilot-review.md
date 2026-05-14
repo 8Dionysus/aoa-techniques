@@ -10,7 +10,7 @@ Migration receipt:
 [Media-Ingest Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -47,7 +47,7 @@ instruction or knowledge-lift shelves move.
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Media-ingest tree pilot receipt](../../../../../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
 - [Technique tree projection rows for `media-ingest` and
-  `diagnosis-repair`](../../../../../reports/technique_tree_projection.md)
+  `diagnosis-repair`](../reports/technique_tree_projection.md)
 - `incoming/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`
 - `incoming/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
 - `python scripts/release_check.py` result recorded in the migration receipt

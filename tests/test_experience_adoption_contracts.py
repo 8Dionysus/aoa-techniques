@@ -9,13 +9,28 @@ from jsonschema import Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ADOPTION_CONTRACT_STEMS = (
-    "technique_adoption_boundary_check",
-    "technique_obsolescence_notice",
-    "technique_pattern_adoption_note",
-    "technique_retention_probe",
-    "technique_to_skill_handoff",
-)
+ADOPTION_CONTRACTS = {
+    "technique_adoption_boundary_check": (
+        "mechanics/method-growth/parts/adoption-boundaries/schemas/technique_adoption_boundary_check_v1.json",
+        "mechanics/method-growth/parts/adoption-boundaries/examples/technique_adoption_boundary_check.example.json",
+    ),
+    "technique_obsolescence_notice": (
+        "mechanics/method-growth/parts/obsolescence/schemas/technique_obsolescence_notice_v1.json",
+        "mechanics/method-growth/parts/obsolescence/examples/technique_obsolescence_notice.example.json",
+    ),
+    "technique_pattern_adoption_note": (
+        "mechanics/method-growth/parts/pattern-adoption/schemas/technique_pattern_adoption_note_v1.json",
+        "mechanics/method-growth/parts/pattern-adoption/examples/technique_pattern_adoption_note.example.json",
+    ),
+    "technique_retention_probe": (
+        "mechanics/method-growth/parts/retention-checks/schemas/technique_retention_probe_v1.json",
+        "mechanics/method-growth/parts/retention-checks/examples/technique_retention_probe.example.json",
+    ),
+    "technique_to_skill_handoff": (
+        "mechanics/method-growth/parts/technique-to-skill-handoff/schemas/technique_to_skill_handoff_v1.json",
+        "mechanics/method-growth/parts/technique-to-skill-handoff/examples/technique_to_skill_handoff.example.json",
+    ),
+}
 GUARDRAIL_BOOLEAN_FIELDS = {
     "authority_required",
     "derived_only",
@@ -43,8 +58,9 @@ ENUM_ESCAPE_VALUE = "__experience_adoption_not_allowed__"
 
 
 def load_contract(stem: str) -> tuple[dict[str, object], dict[str, object]]:
-    schema_path = ROOT / "schemas" / f"{stem}_v1.json"
-    example_path = ROOT / "examples" / f"{stem}.example.json"
+    schema_rel, example_rel = ADOPTION_CONTRACTS[stem]
+    schema_path = ROOT / schema_rel
+    example_path = ROOT / example_rel
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     example = json.loads(example_path.read_text(encoding="utf-8"))
     return schema, example
@@ -140,17 +156,17 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
 
     def test_experience_adoption_examples_match_schemas(self) -> None:
         missing_pairs: list[str] = []
-        for stem in ADOPTION_CONTRACT_STEMS:
-            schema_path = ROOT / "schemas" / f"{stem}_v1.json"
-            example_path = ROOT / "examples" / f"{stem}.example.json"
+        for stem, (schema_rel, example_rel) in ADOPTION_CONTRACTS.items():
+            schema_path = ROOT / schema_rel
+            example_path = ROOT / example_rel
             if not schema_path.exists():
                 missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
             if not example_path.exists():
                 missing_pairs.append(f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}")
         self.assertFalse(missing_pairs, "missing adoption contract pair(s): " + ", ".join(missing_pairs))
 
-        self.assertTrue(ADOPTION_CONTRACT_STEMS)
-        for stem in ADOPTION_CONTRACT_STEMS:
+        self.assertTrue(ADOPTION_CONTRACTS)
+        for stem in ADOPTION_CONTRACTS:
             with self.subTest(stem=stem):
                 schema, example = load_contract(stem)
                 Draft202012Validator.check_schema(schema)
@@ -158,8 +174,8 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
                 self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
 
     def test_experience_adoption_schemas_reject_escape_hatches(self) -> None:
-        self.assertTrue(ADOPTION_CONTRACT_STEMS)
-        for stem in ADOPTION_CONTRACT_STEMS:
+        self.assertTrue(ADOPTION_CONTRACTS)
+        for stem in ADOPTION_CONTRACTS:
             with self.subTest(stem=stem):
                 schema, example = load_contract(stem)
 
@@ -190,7 +206,7 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
 
     def test_experience_adoption_schemas_reject_guardrail_boolean_inversions(self) -> None:
         exercised = 0
-        for stem in ADOPTION_CONTRACT_STEMS:
+        for stem in ADOPTION_CONTRACTS:
             schema, example = load_contract(stem)
             payload = example.get("payload")
             if not isinstance(payload, dict):
@@ -208,7 +224,7 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
 
     def test_experience_adoption_schemas_reject_missing_required_payload_fields(self) -> None:
         exercised = 0
-        for stem in ADOPTION_CONTRACT_STEMS:
+        for stem in ADOPTION_CONTRACTS:
             schema, example = load_contract(stem)
             payload = example.get("payload")
             if not isinstance(payload, dict):
@@ -225,7 +241,7 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
         self.assertGreater(exercised, 0, "no required adoption payload fields were exercised")
 
     def test_experience_adoption_schemas_reject_invalid_numeric_ranges(self) -> None:
-        for stem in ADOPTION_CONTRACT_STEMS:
+        for stem in ADOPTION_CONTRACTS:
             schema, example = load_contract(stem)
             payload = example.get("payload")
             if not isinstance(payload, dict):
@@ -253,7 +269,7 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
 
     def test_experience_adoption_schemas_reject_non_string_array_items(self) -> None:
         exercised = 0
-        for stem in ADOPTION_CONTRACT_STEMS:
+        for stem in ADOPTION_CONTRACTS:
             schema, example = load_contract(stem)
             for section, key in array_field_targets(example):
                 exercised += 1
@@ -269,7 +285,7 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
 
     def test_experience_adoption_schemas_reject_enum_escape_values(self) -> None:
         exercised = 0
-        for stem in ADOPTION_CONTRACT_STEMS:
+        for stem in ADOPTION_CONTRACTS:
             schema, example = load_contract(stem)
             for key, prop in schema_properties(schema).items():
                 if not isinstance(prop, dict) or "enum" not in prop or key not in example:
@@ -295,7 +311,7 @@ class ExperienceAdoptionContractTests(unittest.TestCase):
 
     def test_experience_adoption_schemas_reject_const_escape_values(self) -> None:
         exercised = 0
-        for stem in ADOPTION_CONTRACT_STEMS:
+        for stem in ADOPTION_CONTRACTS:
             schema, example = load_contract(stem)
             for key, prop in schema_properties(schema).items():
                 if not isinstance(prop, dict) or "const" not in prop or key not in example:

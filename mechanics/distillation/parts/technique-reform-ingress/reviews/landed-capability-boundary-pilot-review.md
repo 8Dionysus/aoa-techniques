@@ -10,7 +10,7 @@ Migration receipt:
 [Capability-Boundary Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -60,11 +60,11 @@ governance, or routing policy.
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Capability-boundary tree pilot receipt](../../../../../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md)
 - [Technique tree projection rows for `capability-boundary` and
-  `skill-discovery`](../../../../../reports/technique_tree_projection.md)
+  `skill-discovery`](../reports/technique_tree_projection.md)
 - [Technique family scout rows for `capability-boundary` and
-  `skill-discovery`](../../../../../reports/technique_family_scout.md)
+  `skill-discovery`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `capability-boundary` and
-  `skill-discovery`](../../../../../reports/technique_topology_scout.md)
+  `skill-discovery`](../reports/technique_topology_scout.md)
 - [Landed capability-registry pilot review](landed-capability-registry-pilot-review.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 

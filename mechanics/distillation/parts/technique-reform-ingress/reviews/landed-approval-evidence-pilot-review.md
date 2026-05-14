@@ -10,7 +10,7 @@ Migration receipt:
 [Approval-Evidence Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -44,9 +44,9 @@ slice should run a direct-read review for `proof/review-evidence`.
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
 - [Approval-evidence tree pilot receipt](../../../../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
 - [Approval-evidence direct-read migration review](approval-evidence-direct-read-migration-review.md)
-- [Technique family scout rows for `approval-evidence` and `review-evidence`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `approval-evidence` and `review-evidence`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `approval-evidence` and `review-evidence`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `approval-evidence` and `review-evidence`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `approval-evidence` and `review-evidence`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `approval-evidence` and `review-evidence`](../reports/technique_tree_projection.md)
 - [AOA-T-0105 single-missing-evidence-request](../../../../../techniques/proof/review-evidence/single-missing-evidence-request/TECHNIQUE.md)
 - [AOA-T-0105 canonical readiness](../../../../../techniques/proof/review-evidence/single-missing-evidence-request/notes/canonical-readiness.md)
 - [AOA-T-0107 single-locus-claim-challenge](../../../../../techniques/proof/review-evidence/single-locus-claim-challenge/TECHNIQUE.md)

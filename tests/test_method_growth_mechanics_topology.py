@@ -34,6 +34,39 @@ OLD_FLAT_METHOD_GROWTH_FILES = (
     "mechanics/method-growth/TECHNIQUE_OBSOLESCENCE.md",
 )
 
+METHOD_GROWTH_CONTRACT_PACKETS = (
+    (
+        "mechanics/method-growth/parts/pattern-adoption/schemas/technique_pattern_adoption_note_v1.json",
+        "mechanics/method-growth/parts/pattern-adoption/examples/technique_pattern_adoption_note.example.json",
+        "schemas/technique_pattern_adoption_note_v1.json",
+        "examples/technique_pattern_adoption_note.example.json",
+    ),
+    (
+        "mechanics/method-growth/parts/adoption-boundaries/schemas/technique_adoption_boundary_check_v1.json",
+        "mechanics/method-growth/parts/adoption-boundaries/examples/technique_adoption_boundary_check.example.json",
+        "schemas/technique_adoption_boundary_check_v1.json",
+        "examples/technique_adoption_boundary_check.example.json",
+    ),
+    (
+        "mechanics/method-growth/parts/technique-to-skill-handoff/schemas/technique_to_skill_handoff_v1.json",
+        "mechanics/method-growth/parts/technique-to-skill-handoff/examples/technique_to_skill_handoff.example.json",
+        "schemas/technique_to_skill_handoff_v1.json",
+        "examples/technique_to_skill_handoff.example.json",
+    ),
+    (
+        "mechanics/method-growth/parts/retention-checks/schemas/technique_retention_probe_v1.json",
+        "mechanics/method-growth/parts/retention-checks/examples/technique_retention_probe.example.json",
+        "schemas/technique_retention_probe_v1.json",
+        "examples/technique_retention_probe.example.json",
+    ),
+    (
+        "mechanics/method-growth/parts/obsolescence/schemas/technique_obsolescence_notice_v1.json",
+        "mechanics/method-growth/parts/obsolescence/examples/technique_obsolescence_notice.example.json",
+        "schemas/technique_obsolescence_notice_v1.json",
+        "examples/technique_obsolescence_notice.example.json",
+    ),
+)
+
 
 class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
     def test_method_growth_active_surfaces_are_discoverable(self) -> None:
@@ -45,6 +78,44 @@ class MethodGrowthMechanicsTopologyTestCase(unittest.TestCase):
         for relative_path in OLD_FLAT_METHOD_GROWTH_FILES:
             with self.subTest(relative_path=relative_path):
                 self.assertFalse((REPO_ROOT / relative_path).exists())
+
+    def test_method_growth_contract_packets_live_under_parts(self) -> None:
+        for schema_path, example_path, old_schema_path, old_example_path in (
+            METHOD_GROWTH_CONTRACT_PACKETS
+        ):
+            with self.subTest(schema_path=schema_path):
+                self.assertTrue((REPO_ROOT / schema_path).is_file())
+                self.assertTrue((REPO_ROOT / example_path).is_file())
+                self.assertFalse((REPO_ROOT / old_schema_path).exists())
+                self.assertFalse((REPO_ROOT / old_example_path).exists())
+
+    def test_method_growth_contract_packet_routes_are_documented(self) -> None:
+        parts = (
+            REPO_ROOT / "mechanics" / "method-growth" / "PARTS.md"
+        ).read_text(encoding="utf-8")
+        provenance = (
+            REPO_ROOT / "mechanics" / "method-growth" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "method-growth" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Part-Local Contract Packets", parts)
+        self.assertIn("Contract Packet Bridge", provenance)
+
+        for required in (
+            "technique_pattern_adoption_note_v1.json",
+            "technique_adoption_boundary_check_v1.json",
+            "technique_to_skill_handoff_v1.json",
+            "technique_retention_probe_v1.json",
+            "technique_obsolescence_notice_v1.json",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, parts)
+                self.assertIn(required, provenance)
+
+        self.assertIn("Contract Packet Part Homes", landing_log)
+        self.assertIn("public part-local\n  schema URLs", landing_log)
 
     def test_method_growth_part_map_names_all_current_parts(self) -> None:
         parts = (REPO_ROOT / "mechanics" / "method-growth" / "PARTS.md").read_text(

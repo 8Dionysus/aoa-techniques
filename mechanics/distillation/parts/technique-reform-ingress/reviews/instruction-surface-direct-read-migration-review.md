@@ -4,13 +4,13 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Projection packet:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Prior pilot review:
 [Landed Diagnosis-Repair Pilot Review](landed-diagnosis-repair-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -45,9 +45,9 @@ generated surfaces, and validation move together.
 - canonical-readiness notes for `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`,
   `AOA-T-0027`, `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035`
 - checklists for all seven bundles
-- `reports/technique_tree_projection.md` rows for `instruction-surface`
-- `reports/technique_topology_scout.md` rows for `instruction-surface`
-- `reports/technique_family_scout.md` `instruction-surface` family section
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `instruction-surface`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md` rows for `instruction-surface`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_family_scout.md` `instruction-surface` family section
 - `mechanics/audit/parts/promotion-readiness-matrix/README.md` rows for the
   promoted instruction-surface siblings
 

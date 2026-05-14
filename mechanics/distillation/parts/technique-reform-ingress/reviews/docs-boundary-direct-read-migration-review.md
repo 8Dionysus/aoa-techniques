@@ -4,7 +4,7 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Projection packet:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Prior pilot review:
 [Landed Kag-Source-Lift Pilot Review](landed-kag-source-lift-pilot-review.md)
@@ -43,7 +43,7 @@ generated surfaces, and validation move together.
 - [AOA-T-0033 decision-rationale-recording](../../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
 - [Docs domain route card](../../../../../techniques/docs/AGENTS.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
-- `reports/technique_tree_projection.md` rows for `docs-boundary`,
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `docs-boundary`,
   `instruction-surface`, `capability-registry`, `capability-boundary`, and
   `skill-discovery`
 - [First family shelf review pack](first-family-shelf-review-pack.md)

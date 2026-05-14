@@ -10,7 +10,7 @@ Migration receipt:
 [Skill-Support Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-skill-support-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -51,9 +51,9 @@ path movement.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Skill-support tree pilot receipt](../../../../../legacy/receipts/2026-05-05-skill-support-tree-pilot.md)
-- [Technique tree projection rows for `skill-support` and `evaluation-chain`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `skill-support` and `evaluation-chain`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `skill-support` and `evaluation-chain`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `skill-support` and `evaluation-chain`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `skill-support` and `evaluation-chain`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `skill-support` and `evaluation-chain`](../reports/technique_topology_scout.md)
 - [Skill-support direct-read migration review](skill-support-direct-read-migration-review.md)
 - [Landed skill-discovery pilot review](landed-skill-discovery-pilot-review.md)
 - `python scripts/release_check.py` result recorded in the migration receipt

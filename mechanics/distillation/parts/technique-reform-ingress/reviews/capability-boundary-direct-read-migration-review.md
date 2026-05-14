@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed Capability-Registry Pilot Review](landed-capability-registry-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -59,10 +59,10 @@ validation.
 - [AOA-T-0041 skill-marketplace-curation](../../../../../techniques/instruction/skill-discovery/skill-marketplace-curation/TECHNIQUE.md)
 - [AOA-T-0042 upstream-skill-health-checking](../../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
 - [Technique family scout rows for `capability-boundary` and
-  `skill-discovery`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `capability-boundary`](../../../../../reports/technique_topology_scout.md)
+  `skill-discovery`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `capability-boundary`](../reports/technique_topology_scout.md)
 - [Technique tree projection rows for `capability-boundary` and
-  `skill-discovery`](../../../../../reports/technique_tree_projection.md)
+  `skill-discovery`](../reports/technique_tree_projection.md)
 - [Landed capability-registry pilot review](landed-capability-registry-pilot-review.md)
 
 ## Direct Bundle Read

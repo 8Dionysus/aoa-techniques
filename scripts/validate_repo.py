@@ -80,8 +80,8 @@ REQUIRED_STAGE1_FILES = (
     "schemas/index-entry.schema.json",
     "scripts/build_catalog.py",
     "scripts/build_kind_manifest.py",
-    "scripts/build_topology_scout.py",
-    "scripts/build_tree_projection.py",
+    "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py",
+    "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py",
     "scripts/build_capsules.py",
     "scripts/build_sections.py",
     "scripts/build_section_manifest.py",
@@ -141,13 +141,27 @@ REQUIRED_KIND_DOCTRINE_FILES = (
     "docs/TECHNIQUE_KIND_BASELINE.md",
     "docs/TECHNIQUE_KIND_HANDOFF_PACK.md",
 )
+TECHNIQUE_REFORM_INGRESS_DIR = "mechanics/distillation/parts/technique-reform-ingress"
+TECHNIQUE_REFORM_REPORTS_DIR = (
+    f"{TECHNIQUE_REFORM_INGRESS_DIR}/reports"
+)
+TECHNIQUE_REFORM_REPORT_LINK_PREFIX = "../../../../../"
+TECHNIQUE_KIND_COUNTS_REPORT_PATH = (
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_kind_counts.md"
+)
 REQUIRED_KIND_DATA_FILES = (
     "config/technique_kind_registry.yaml",
-    "config/technique_family_scout.yaml",
-    "config/technique_topology_axes.yaml",
-    "data/technique_kind_overlay.yaml",
-    "data/technique_kind_overlay.csv",
-    "reports/technique_kind_counts.md",
+    f"{TECHNIQUE_REFORM_INGRESS_DIR}/config/technique_family_scout.yaml",
+    f"{TECHNIQUE_REFORM_INGRESS_DIR}/config/technique_topology_axes.yaml",
+    f"{TECHNIQUE_REFORM_INGRESS_DIR}/data/technique_kind_overlay.yaml",
+    f"{TECHNIQUE_REFORM_INGRESS_DIR}/data/technique_kind_overlay.csv",
+    TECHNIQUE_KIND_COUNTS_REPORT_PATH,
+)
+SEMANTIC_REVIEW_PACKET_DIR = (
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic"
+)
+SHADOW_REVIEW_PACKET_DIR = (
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/shadow"
 )
 REQUIRED_KIND_SURFACE_FILES = (
     "generated/technique_kind_manifest.json",
@@ -155,15 +169,15 @@ REQUIRED_KIND_SURFACE_FILES = (
     "docs/TECHNIQUE_KINDS.md",
 )
 REQUIRED_KIND_REPORT_FILES = (
-    "reports/technique_family_scout.md",
-    "reports/technique_family_scout.json",
-    "reports/kind_ambiguity_audit.md",
-    "reports/technique_topology_scout.md",
-    "reports/technique_topology_scout.json",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_family_scout.md",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_family_scout.json",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/kind_ambiguity_audit.md",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_topology_scout.md",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_topology_scout.json",
 )
 REQUIRED_TREE_REPORT_FILES = (
-    "reports/technique_tree_projection.md",
-    "reports/technique_tree_projection.json",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_tree_projection.md",
+    f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_tree_projection.json",
 )
 KAG_EXPORT_TECHNIQUE_ID = "AOA-T-0043"
 KAG_EXPORT_SECTION_HANDLES = (
@@ -195,14 +209,14 @@ KAG_EXPORT_NON_IDENTITY_BOUNDARY = (
     "remains in aoa-techniques markdown."
 )
 SELECTION_REVIEW_DOCS = {
-    "agent_workflows_core": "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md",
-    "published_summary": "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
-    "evaluation_chain": "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
-    "docs_boundary": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
-    "intent_chain": "docs/INTENT_CHAIN_SEMANTIC_REVIEW.md",
-    "instruction_surface": "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md",
-    "skill_support": "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
-    "kag_source_lift": "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
+    "agent_workflows_core": f"{SEMANTIC_REVIEW_PACKET_DIR}/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md",
+    "published_summary": f"{SEMANTIC_REVIEW_PACKET_DIR}/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+    "evaluation_chain": f"{SEMANTIC_REVIEW_PACKET_DIR}/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
+    "docs_boundary": f"{SEMANTIC_REVIEW_PACKET_DIR}/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
+    "intent_chain": f"{SEMANTIC_REVIEW_PACKET_DIR}/INTENT_CHAIN_SEMANTIC_REVIEW.md",
+    "instruction_surface": f"{SEMANTIC_REVIEW_PACKET_DIR}/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md",
+    "skill_support": f"{SEMANTIC_REVIEW_PACKET_DIR}/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
+    "kag_source_lift": f"{SEMANTIC_REVIEW_PACKET_DIR}/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
 }
 WORKING_SET_SPECS = (
     {
@@ -345,8 +359,8 @@ COMMON_MOVE_SPECS = (
     },
 )
 SHADOW_REVIEW_DOCS = {
-    "published_summary": "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
-    "evaluation_chain": "docs/EVALUATION_CHAIN_SHADOW_REVIEW.md",
+    "published_summary": f"{SHADOW_REVIEW_PACKET_DIR}/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+    "evaluation_chain": f"{SHADOW_REVIEW_PACKET_DIR}/EVALUATION_CHAIN_SHADOW_REVIEW.md",
 }
 SHADOW_WORKING_SET_SPECS = (
     {
@@ -646,11 +660,10 @@ KIND_ORDER = (
 KIND_VALUES = set(KIND_ORDER)
 KIND_INDEX = {kind: index for index, kind in enumerate(KIND_ORDER)}
 TECHNIQUE_KIND_REGISTRY_PATH = "config/technique_kind_registry.yaml"
-TECHNIQUE_FAMILY_SCOUT_PATH = "config/technique_family_scout.yaml"
-TECHNIQUE_TOPOLOGY_AXES_PATH = "config/technique_topology_axes.yaml"
-TECHNIQUE_KIND_OVERLAY_PATH = "data/technique_kind_overlay.yaml"
-TECHNIQUE_KIND_OVERLAY_CSV_PATH = "data/technique_kind_overlay.csv"
-TECHNIQUE_KIND_COUNTS_REPORT_PATH = "reports/technique_kind_counts.md"
+TECHNIQUE_FAMILY_SCOUT_PATH = f"{TECHNIQUE_REFORM_INGRESS_DIR}/config/technique_family_scout.yaml"
+TECHNIQUE_TOPOLOGY_AXES_PATH = f"{TECHNIQUE_REFORM_INGRESS_DIR}/config/technique_topology_axes.yaml"
+TECHNIQUE_KIND_OVERLAY_PATH = f"{TECHNIQUE_REFORM_INGRESS_DIR}/data/technique_kind_overlay.yaml"
+TECHNIQUE_KIND_OVERLAY_CSV_PATH = f"{TECHNIQUE_REFORM_INGRESS_DIR}/data/technique_kind_overlay.csv"
 TOPOLOGY_SCOUT_AXIS_ORDER = (
     "capability_class",
     "substrate",
@@ -3397,7 +3410,7 @@ def parse_semantic_review_file(review_path: Path, repo_root: Path) -> SemanticRe
 
 def parse_semantic_reviews(repo_root: Path) -> tuple[SemanticReview, ...]:
     review_paths = sorted(
-        (repo_root / "docs").glob("*_SEMANTIC_REVIEW.md"),
+        (repo_root / SEMANTIC_REVIEW_PACKET_DIR).glob("*_SEMANTIC_REVIEW.md"),
         key=lambda path: path.relative_to(repo_root).as_posix(),
     )
     return tuple(parse_semantic_review_file(path, repo_root) for path in review_paths)
@@ -3616,7 +3629,7 @@ def parse_shadow_review_file(review_path: Path, repo_root: Path) -> ShadowReview
 
 def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
     review_paths = sorted(
-        (repo_root / "docs").glob("*_SHADOW_REVIEW.md"),
+        (repo_root / SHADOW_REVIEW_PACKET_DIR).glob("*_SHADOW_REVIEW.md"),
         key=lambda path: path.relative_to(repo_root).as_posix(),
     )
     return tuple(parse_shadow_review_file(path, repo_root) for path in review_paths)
@@ -5638,7 +5651,7 @@ def build_family_scout_markdown(report: dict[str, Any]) -> str:
         for technique in family["techniques"]:
             lines.append(
                 "| "
-                f"{selection_technique_link(technique)} | "
+                f"{selection_technique_link(technique, TECHNIQUE_REFORM_REPORT_LINK_PREFIX)} | "
                 f"`{technique['domain']}` | "
                 f"`{technique['kind']}` | "
                 f"`{technique['status']}` | "
@@ -5792,7 +5805,7 @@ def build_kind_ambiguity_audit_markdown(
             verdict = ambiguity_verdict(current_hits, other_hits)
             lines.extend(
                 [
-                    f"- {selection_technique_link(entry)} - {entry['name']} (`{entry['domain']}`, current `{entry['kind']}`): "
+                    f"- {selection_technique_link(entry, TECHNIQUE_REFORM_REPORT_LINK_PREFIX)} - {entry['name']} (`{entry['domain']}`, current `{entry['kind']}`): "
                     f"current-kind cues {format_keyword_hits(current_hits)}; opposing `{opposing_kind}` cues {format_keyword_hits(other_hits)}.{family_note} "
                     f"Verdict: `{verdict}`."
                 ]
@@ -5981,7 +5994,7 @@ def build_topology_scout_markdown(report: dict[str, Any]) -> str:
         "# Technique Topology Scout",
         "",
         "This file is generated from the topology axis registry, kind overlay, and generated catalog.",
-        "Do not edit it by hand; run `python scripts/build_topology_scout.py`.",
+        "Do not edit it by hand; run `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`.",
         "",
         TOPOLOGY_SCOUT_AUTHORITY_NOTE,
         "",
@@ -6021,7 +6034,7 @@ def build_topology_scout_markdown(report: dict[str, Any]) -> str:
         family = topology["family"] or "unassigned"
         lines.append(
             "| "
-            f"{selection_technique_link(entry)} | "
+            f"{selection_technique_link(entry, TECHNIQUE_REFORM_REPORT_LINK_PREFIX)} | "
             f"`{entry['domain']}` | "
             f"`{entry['kind']}` | "
             f"`{family}` | "
@@ -6134,7 +6147,7 @@ def build_tree_projection_markdown(report: dict[str, Any]) -> str:
         "# Technique Tree Projection",
         "",
         "This file is generated from the technique tree contract, family shelf review, kind overlay, and generated catalog.",
-        "Do not edit it by hand; run `python scripts/build_tree_projection.py`.",
+        "Do not edit it by hand; run `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py`.",
         "",
         TREE_PROJECTION_AUTHORITY_NOTE,
         "",
@@ -6177,7 +6190,7 @@ def build_tree_projection_markdown(report: dict[str, Any]) -> str:
         family = entry["family"] or "unassigned"
         lines.append(
             "| "
-            f"{selection_technique_link({'id': entry['id'], 'technique_path': entry['current_path']})} | "
+            f"{selection_technique_link({'id': entry['id'], 'technique_path': entry['current_path']}, TECHNIQUE_REFORM_REPORT_LINK_PREFIX)} | "
             f"`{entry['current_path']}` | "
             f"`{family}` | "
             f"`{entry['proposed_trunk']}` | "
@@ -6201,8 +6214,8 @@ def build_tree_projection_markdown(report: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def selection_technique_link(entry: dict[str, Any]) -> str:
-    return f"[{entry['id']}](../{entry['technique_path']})"
+def selection_technique_link(entry: dict[str, Any], relative_prefix: str = "../") -> str:
+    return f"[{entry['id']}]({relative_prefix}{entry['technique_path']})"
 
 
 def record_technique_link(repo_root: Path, record: TechniqueRecord) -> str:
@@ -6847,7 +6860,10 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
 
 def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
     records_by_id = {record.id: record for record in records}
-    review_doc_names = [Path(spec["review_doc"]).name for spec in SHADOW_WORKING_SET_SPECS]
+    review_doc_links = [
+        (Path(spec["review_doc"]).name, docs_relative_link(spec["review_doc"]))
+        for spec in SHADOW_WORKING_SET_SPECS
+    ]
 
     lines = [
         "# Shadow Patterns",
@@ -6862,7 +6878,7 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
         "See also:",
         "- [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)",
         "- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)",
-        *[f"- [{name}]({name})" for name in review_doc_names],
+        *[f"- [{name}]({link})" for name, link in review_doc_links],
         "",
         "## Working Sets",
         "",
@@ -6874,12 +6890,13 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
             for technique_id in spec["technique_ids"]
         )
         review_doc_name = Path(spec["review_doc"]).name
+        review_doc_link = docs_relative_link(spec["review_doc"])
         lines.extend(
             [
                 f"### {spec['title']}",
                 "",
                 f"- Techniques: {linked_techniques}",
-                f"- Review: [{review_doc_name}]({review_doc_name})",
+                f"- Review: [{review_doc_name}]({review_doc_link})",
                 f"- Why grouped: {spec['note']}",
                 "",
                 "| technique | current role | watch seam | main failure mode | note |",
@@ -7071,12 +7088,13 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
             selection_technique_link(entries_by_id[technique_id]) for technique_id in spec["technique_ids"]
         )
         review_doc_name = Path(spec["review_doc"]).name
+        review_doc_link = docs_relative_link(spec["review_doc"])
         lines.extend(
             [
                 f"### {spec['title']}",
                 "",
                 f"- Techniques: {linked_techniques}",
-                f"- Review: [{review_doc_name}]({review_doc_name})",
+                f"- Review: [{review_doc_name}]({review_doc_link})",
                 f"- Why grouped: {spec['note']}",
                 "",
             ]
@@ -7641,9 +7659,10 @@ def validate_kind_manifests(repo_root: Path) -> None:
 
 
 def validate_kind_scout_reports(repo_root: Path) -> None:
-    markdown_path = repo_root / "reports" / "technique_family_scout.md"
-    json_path = repo_root / "reports" / "technique_family_scout.json"
-    audit_path = repo_root / "reports" / "kind_ambiguity_audit.md"
+    reports_dir = repo_root / TECHNIQUE_REFORM_REPORTS_DIR
+    markdown_path = reports_dir / "technique_family_scout.md"
+    json_path = reports_dir / "technique_family_scout.json"
+    audit_path = reports_dir / "kind_ambiguity_audit.md"
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     registry = load_kind_registry(repo_root)
     family_scout = load_family_scout(repo_root)
@@ -7682,8 +7701,9 @@ def validate_kind_scout_reports(repo_root: Path) -> None:
 
 
 def validate_topology_scout_reports(repo_root: Path) -> None:
-    json_path = repo_root / "reports" / "technique_topology_scout.json"
-    markdown_path = repo_root / "reports" / "technique_topology_scout.md"
+    reports_dir = repo_root / TECHNIQUE_REFORM_REPORTS_DIR
+    json_path = reports_dir / "technique_topology_scout.json"
+    markdown_path = reports_dir / "technique_topology_scout.md"
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     axis_registry = load_topology_axes_registry(repo_root)
     kind_overlay = load_kind_overlay(repo_root)
@@ -7696,12 +7716,12 @@ def validate_topology_scout_reports(repo_root: Path) -> None:
     if actual_report != expected_report:
         fail(
             f"{json_path}: generated topology scout report is out of date; run "
-            f"'python scripts/build_topology_scout.py'"
+            f"'python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py'"
         )
     if actual_markdown != expected_markdown:
         fail(
             f"{markdown_path}: generated topology scout markdown is out of date; run "
-            f"'python scripts/build_topology_scout.py'"
+            f"'python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py'"
         )
     if actual_report.get("status") != "scout-only-non-authoritative":
         fail(f"{json_path}: status must stay 'scout-only-non-authoritative'")
@@ -7714,8 +7734,9 @@ def validate_topology_scout_reports(repo_root: Path) -> None:
 
 
 def validate_tree_projection_reports(repo_root: Path) -> None:
-    json_path = repo_root / "reports" / "technique_tree_projection.json"
-    markdown_path = repo_root / "reports" / "technique_tree_projection.md"
+    reports_dir = repo_root / TECHNIQUE_REFORM_REPORTS_DIR
+    json_path = reports_dir / "technique_tree_projection.json"
+    markdown_path = reports_dir / "technique_tree_projection.md"
     catalog = read_json(repo_root / "generated" / "technique_catalog.json")
     kind_overlay = load_kind_overlay(repo_root)
 
@@ -7727,12 +7748,12 @@ def validate_tree_projection_reports(repo_root: Path) -> None:
     if actual_report != expected_report:
         fail(
             f"{json_path}: generated tree projection report is out of date; run "
-            f"'python scripts/build_tree_projection.py'"
+            f"'python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py'"
         )
     if actual_markdown != expected_markdown:
         fail(
             f"{markdown_path}: generated tree projection markdown is out of date; run "
-            f"'python scripts/build_tree_projection.py'"
+            f"'python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py'"
         )
     if actual_report.get("status") != "projection-only-non-authoritative":
         fail(f"{json_path}: status must stay 'projection-only-non-authoritative'")

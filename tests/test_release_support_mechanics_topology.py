@@ -28,6 +28,21 @@ OLD_FLAT_RELEASE_SUPPORT_FILES = (
     "mechanics/release-support/SOVEREIGN_RELEASE_TECHNIQUES.md",
 )
 
+RELEASE_SUPPORT_CONTRACT_PACKETS = (
+    (
+        "mechanics/release-support/parts/installation-techniques/schemas/installation_technique_note_v1.json",
+        "mechanics/release-support/parts/installation-techniques/examples/installation_technique_note_v1.example.json",
+        "schemas/installation_technique_note_v1.json",
+        "examples/installation_technique_note_v1.example.json",
+    ),
+    (
+        "mechanics/release-support/parts/sovereign-release-techniques/schemas/sovereign_release_technique_note_v1.json",
+        "mechanics/release-support/parts/sovereign-release-techniques/examples/sovereign_release_technique_note_v1.example.json",
+        "schemas/sovereign_release_technique_note_v1.json",
+        "examples/sovereign_release_technique_note_v1.example.json",
+    ),
+)
+
 
 class ReleaseSupportMechanicsTopologyTestCase(unittest.TestCase):
     def test_release_support_active_surfaces_are_discoverable(self) -> None:
@@ -41,6 +56,41 @@ class ReleaseSupportMechanicsTopologyTestCase(unittest.TestCase):
         for relative_path in OLD_FLAT_RELEASE_SUPPORT_FILES:
             with self.subTest(relative_path=relative_path):
                 self.assertFalse((REPO_ROOT / relative_path).exists())
+
+    def test_release_support_contract_packets_live_under_parts(self) -> None:
+        for schema_path, example_path, old_schema_path, old_example_path in (
+            RELEASE_SUPPORT_CONTRACT_PACKETS
+        ):
+            with self.subTest(schema_path=schema_path):
+                self.assertTrue((REPO_ROOT / schema_path).is_file())
+                self.assertTrue((REPO_ROOT / example_path).is_file())
+                self.assertFalse((REPO_ROOT / old_schema_path).exists())
+                self.assertFalse((REPO_ROOT / old_example_path).exists())
+
+    def test_release_support_contract_packet_routes_are_documented(self) -> None:
+        parts = (
+            REPO_ROOT / "mechanics" / "release-support" / "PARTS.md"
+        ).read_text(encoding="utf-8")
+        provenance = (
+            REPO_ROOT / "mechanics" / "release-support" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "release-support" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Part-Local Contract Packets", parts)
+        self.assertIn("Contract Packet Bridge", provenance)
+
+        for required in (
+            "installation_technique_note_v1.json",
+            "sovereign_release_technique_note_v1.json",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, parts)
+                self.assertIn(required, provenance)
+
+        self.assertIn("Contract Packet Part Homes", landing_log)
+        self.assertIn("public part-local\n  schema URLs", landing_log)
 
     def test_release_support_part_map_names_all_current_parts(self) -> None:
         parts = (

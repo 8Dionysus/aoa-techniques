@@ -10,7 +10,7 @@ Migration receipt:
 [Antifragility-Recovery Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -51,9 +51,9 @@ trunk is accepted only from projection rows.
 - [Antifragility-recovery tree pilot receipt](../../../../../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md)
 - [Antifragility-recovery direct-read migration review](antifragility-recovery-direct-read-migration-review.md)
 - [Landed diagnosis-repair pilot review](landed-diagnosis-repair-pilot-review.md)
-- [Technique tree projection rows for `antifragility-recovery` and `ready-work-graphs`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `ready-work-graphs`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `ready-work-graphs`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `antifragility-recovery` and `ready-work-graphs`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `ready-work-graphs`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `ready-work-graphs`](../reports/technique_topology_scout.md)
 - [AOA-T-0049 dependency-aware-task-graph](../../../../../techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md)
 - [AOA-T-0050 ready-work-from-blocker-graph](../../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md)
 - [AOA-T-0055 requirements-design-tasks-ladder](../../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)

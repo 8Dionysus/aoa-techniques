@@ -40,7 +40,7 @@ PILOT_BUNDLES = (
 )
 
 LIVE_LINK_SURFACES = (
-    "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
     "docs/SELECTION_PATTERNS.md",
     "docs/TECHNIQUE_SELECTION.md",
     "mechanics/boundary-bridge/PROVENANCE.md",

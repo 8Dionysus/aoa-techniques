@@ -11,8 +11,8 @@ See also:
 - [Technique Selection](TECHNIQUE_SELECTION.md)
 - [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)
 - [`../config/technique_kind_registry.yaml`](../config/technique_kind_registry.yaml)
-- [`../data/technique_kind_overlay.yaml`](../data/technique_kind_overlay.yaml)
-- [`../reports/technique_kind_counts.md`](../reports/technique_kind_counts.md)
+- [`../mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml`](../mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml)
+- [`../mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md`](../mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md)
 - [`../generated/technique_catalog.min.json`](../generated/technique_catalog.min.json)
 
 ## Core Doctrine
@@ -51,7 +51,7 @@ If two kinds feel plausible, use the registry tie-break rules:
 The current canonical sources for this axis are:
 
 - `config/technique_kind_registry.yaml`
-- `data/technique_kind_overlay.yaml`
-- `reports/technique_kind_counts.md`
+- `mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md`
 
 The living corpus still belongs in the technique bundles and generated catalog. This guide only defines how to choose and review the axis.

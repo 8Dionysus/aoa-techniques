@@ -10,7 +10,7 @@ Migration receipt:
 [Published-Summary Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-published-summary-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -50,13 +50,13 @@ six history bundles directly before any path movement.
 - [History route card](../../../../../techniques/history/AGENTS.md)
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Published-summary tree pilot receipt](../../../../../legacy/receipts/2026-05-05-published-summary-tree-pilot.md)
-- [Technique tree projection rows for `published-summary` and `history-artifacts`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `published-summary` and `history-artifacts`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `published-summary` and `history-artifacts`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `published-summary` and `history-artifacts`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `published-summary` and `history-artifacts`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `published-summary` and `history-artifacts`](../reports/technique_topology_scout.md)
 - [Published-summary direct-read migration review](published-summary-direct-read-migration-review.md)
 - [Landed evaluation-chain pilot review](landed-evaluation-chain-pilot-review.md)
-- [Published-summary semantic review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [Published-summary shadow review](../../../../../docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [Published-summary semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- [Published-summary shadow review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
 - [AOA-T-0044 versionable-session-transcripts](../../../../../techniques/history/history-artifacts/versionable-session-transcripts/TECHNIQUE.md)
 - [AOA-T-0053 local-first-session-index](../../../../../techniques/history/history-artifacts/local-first-session-index/TECHNIQUE.md)
 - [AOA-T-0026 session-capture-as-repo-artifact](../../../../../techniques/history/history-artifacts/session-capture-as-repo-artifact/TECHNIQUE.md)

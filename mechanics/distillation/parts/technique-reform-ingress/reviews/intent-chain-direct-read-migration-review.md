@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Ready-Work-Graphs Pilot Review](landed-ready-work-graphs-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -65,13 +65,13 @@ and checking an intent-shaped execution chain before live action.
   [canonical readiness](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/notes/canonical-readiness.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
-- [Intent-chain semantic review](../../../../../docs/INTENT_CHAIN_SEMANTIC_REVIEW.md)
-- [Agent-workflows core semantic review](../../../../../docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [Intent-chain semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
+- [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - [AOA-T-0005 kind remap decision](../../../../../docs/decisions/2026-05-04-0005-kind-remap.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
-- [Technique family scout rows for `intent-chain`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `intent-chain`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `intent-chain`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `intent-chain`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `intent-chain`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `intent-chain`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 

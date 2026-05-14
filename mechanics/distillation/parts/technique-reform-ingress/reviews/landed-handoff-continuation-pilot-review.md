@@ -10,7 +10,7 @@ Migration receipt:
 [Handoff-Continuation Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -48,7 +48,7 @@ machinery and the next pressure should test a different root district.
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Handoff-continuation tree pilot receipt](../../../../../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
 - [Technique tree projection rows for `handoff-continuation` and
-  `media-ingest`](../../../../../reports/technique_tree_projection.md)
+  `media-ingest`](../reports/technique_tree_projection.md)
 - `incoming/chat-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md`
 - `incoming/chat-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md`
 - `python scripts/release_check.py` result recorded in the migration receipt

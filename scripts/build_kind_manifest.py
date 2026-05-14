@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from validate_repo import (
+    TECHNIQUE_REFORM_REPORTS_DIR,
     build_family_scout_markdown,
     build_family_scout_payload,
     build_kind_ambiguity_audit_markdown,
@@ -21,7 +22,7 @@ def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     generated_dir = repo_root / "generated"
     docs_dir = repo_root / "docs"
-    reports_dir = repo_root / "reports"
+    reports_dir = repo_root / TECHNIQUE_REFORM_REPORTS_DIR
     generated_dir.mkdir(exist_ok=True)
     docs_dir.mkdir(exist_ok=True)
     reports_dir.mkdir(exist_ok=True)

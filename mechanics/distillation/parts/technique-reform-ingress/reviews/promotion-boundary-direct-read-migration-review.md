@@ -10,7 +10,7 @@ Previous landed review:
 [Landed Automation-Readiness Pilot Review](landed-automation-readiness-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -66,9 +66,9 @@ not move files from this review pack alone.
 - [Automation-governance direct-read split review](automation-governance-direct-read-split-review.md)
 - [Automation-governance split expansion closeout](automation-governance-split-expansion-closeout.md)
 - [Landed automation-readiness pilot review](landed-automation-readiness-pilot-review.md)
-- [Technique family scout rows for `automation-governance`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `automation-governance`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `automation-governance`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `automation-governance`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `automation-governance`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `automation-governance`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 

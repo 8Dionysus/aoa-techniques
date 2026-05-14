@@ -10,7 +10,7 @@
 ## Evidence summary
 - origin evidence: `atm10-agent/docs/SOURCE_OF_TRUTH.md`, `README.md`, `MANIFEST.md`, and `docs/DECISIONS.md` already show lightweight snapshot discipline as an active doc-hygiene policy rather than a one-off cleanup
 - second context: `aoa-techniques` applies the same pattern to a smaller public repository where `README.md` stays short and links outward to `TECHNIQUE_INDEX.md`, `AGENTS.md`, `CONTRIBUTING.md`, and `SECURITY.md`
-- semantic reinforcement: `docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` found the `AOA-T-0002` / `AOA-T-0009` seam `clear`, confirming that the snapshot discipline stays distinct from the broader source-of-truth layout
+- semantic reinforcement: `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md` found the `AOA-T-0002` / `AOA-T-0009` seam `clear`, confirming that the snapshot discipline stays distinct from the broader source-of-truth layout
 - validation strength: the technique already has source-backed origin evidence, second-context adaptation, a reusable example, and a bounded checklist
 
 ## Default-use rationale

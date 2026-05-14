@@ -9,8 +9,8 @@ the source files that supported the first kind-axis pass.
 Current source pointers:
 
 - [`../config/technique_kind_registry.yaml`](../config/technique_kind_registry.yaml)
-- [`../data/technique_kind_overlay.yaml`](../data/technique_kind_overlay.yaml)
-- [`../reports/technique_kind_counts.md`](../reports/technique_kind_counts.md)
+- [`../mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml`](../mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml)
+- [`../mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md`](../mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md)
 
 Historical note:
 

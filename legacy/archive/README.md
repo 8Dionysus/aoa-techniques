@@ -12,7 +12,8 @@ Prefer narrower homes first:
 
 - `mechanics/<slug>/legacy/` for one mechanic's lineage
 - `docs/decisions/` for rationale
-- `generated/` or `reports/` for current reproducible outputs
+- `generated/` or mechanic-local `mechanics/**/reports/` for current
+  reproducible outputs
 - `incoming/` for unreviewed candidate quarantine
 
 Do not archive active source files without updating links, route docs, and

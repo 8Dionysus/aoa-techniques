@@ -65,11 +65,11 @@ Supporting review and generated surfaces:
 
 - [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
 - [Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md)
-- [Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
-- [Instruction-Surface Semantic Review](../../../../../docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-- [KAG Source Lift Semantic Review](../../../../../docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
-- [Docs Boundary Semantic Review](../../../../../docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
-- [Skill-Support Semantic Review](../../../../../docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+- [Technique Topology Scout](../reports/technique_topology_scout.md)
+- [Instruction-Surface Semantic Review](semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
+- [KAG Source Lift Semantic Review](semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+- [Docs Boundary Semantic Review](semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+- [Skill-Support Semantic Review](semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 
 ## Selector Prompts
 

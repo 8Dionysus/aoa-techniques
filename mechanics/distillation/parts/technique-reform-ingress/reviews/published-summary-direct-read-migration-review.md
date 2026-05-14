@@ -7,16 +7,16 @@ Preceding landed review:
 [Landed Evaluation-Chain Pilot Review](landed-evaluation-chain-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
 
 Prior semantic evidence:
-[Published-Summary Semantic Review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+[Published-Summary Semantic Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
 
 Prior shadow evidence:
-[Published-Summary Shadow Review](../../../../../docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+[Published-Summary Shadow Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
 
 Status: accepted-for-thirteenth-migration-pilot, not path migration, not
 `tree_path` frontmatter.
@@ -84,12 +84,12 @@ generated surfaces, and validation.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Techniques route card](../../../../../techniques/AGENTS.md)
-- [Technique family scout row for `published-summary`](../../../../../config/technique_family_scout.yaml)
-- [Technique tree projection rows for `published-summary`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `published-summary`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `published-summary`](../../../../../reports/technique_topology_scout.md)
-- [Published-summary semantic review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [Published-summary shadow review](../../../../../docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [Technique family scout row for `published-summary`](../../../../../mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml)
+- [Technique tree projection rows for `published-summary`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `published-summary`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `published-summary`](../reports/technique_topology_scout.md)
+- [Published-summary semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- [Published-summary shadow review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
 - [Landed evaluation-chain pilot review](landed-evaluation-chain-pilot-review.md)
 
 ## Direct Bundle Read

@@ -10,7 +10,7 @@ Migration receipt:
 [Ready-Work-Graphs Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -49,9 +49,9 @@ action-contract pressure than ready-work visibility.
 - [Ready-work-graphs tree pilot receipt](../../../../../legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md)
 - [Ready-work-graphs direct-read migration review](ready-work-graphs-direct-read-migration-review.md)
 - [Landed antifragility-recovery pilot review](landed-antifragility-recovery-pilot-review.md)
-- [Technique tree projection rows for `ready-work-graphs` and `intent-chain`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `intent-chain`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `intent-chain`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `ready-work-graphs` and `intent-chain`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `intent-chain`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `intent-chain`](../reports/technique_topology_scout.md)
 - [AOA-T-0004 intent-plan-dry-run-contract-chain](../../../../../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md)
 - [AOA-T-0005 new-intent-rollout-checklist](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 - `python scripts/release_check.py` result recorded in the migration receipt

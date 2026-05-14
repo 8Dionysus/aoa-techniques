@@ -23,15 +23,25 @@ PART_LOCAL_RECURRENCE_READMES = (
     "mechanics/recurrence/parts/review-decision-closure/README.md",
 )
 
+PART_LOCAL_LIVE_OBSERVATION_SCRIPT_ARTIFACTS = (
+    "mechanics/recurrence/parts/live-observation-producers/scripts/AGENTS.md",
+    "mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py",
+)
+
 OLD_FLAT_RECURRENCE_FILES = (
     "mechanics/recurrence/RECURRENCE_LIVE_OBSERVATION_PRODUCERS.md",
     "mechanics/recurrence/RECURRENCE_REVIEW_DECISION_CLOSURE.md",
+    "scripts/publish_live_receipts.py",
 )
 
 
 class RecurrenceMechanicsTopologyTestCase(unittest.TestCase):
     def test_recurrence_active_surfaces_are_discoverable(self) -> None:
-        for relative_path in ACTIVE_RECURRENCE_SURFACES + PART_LOCAL_RECURRENCE_READMES:
+        for relative_path in (
+            ACTIVE_RECURRENCE_SURFACES
+            + PART_LOCAL_RECURRENCE_READMES
+            + PART_LOCAL_LIVE_OBSERVATION_SCRIPT_ARTIFACTS
+        ):
             with self.subTest(relative_path=relative_path):
                 self.assertTrue((REPO_ROOT / relative_path).is_file())
 
@@ -99,6 +109,7 @@ class RecurrenceMechanicsTopologyTestCase(unittest.TestCase):
         for part_path in (
             "parts/live-observation-producers/README.md",
             "parts/review-decision-closure/README.md",
+            "parts/live-observation-producers/scripts/publish_live_receipts.py",
         ):
             with self.subTest(part_path=part_path):
                 self.assertIn(part_path, combined)

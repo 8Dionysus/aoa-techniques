@@ -10,7 +10,7 @@ Migration receipt:
 [Runtime-Truth-Lifecycle Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -54,9 +54,9 @@ slice should run a direct-read review for `proof/owner-truth-closeout`.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Runtime-truth-lifecycle tree pilot receipt](../../../../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
 - [Runtime-truth-lifecycle direct-read migration review](runtime-truth-lifecycle-direct-read-migration-review.md)
-- [Technique family scout rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../reports/technique_tree_projection.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [AOA-T-0091 workspace-root-ingress-and-mutation-gate](../../../../../techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md)

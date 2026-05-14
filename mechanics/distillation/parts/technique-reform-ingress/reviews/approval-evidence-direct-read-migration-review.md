@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Decision-Routing Pilot Review](landed-decision-routing-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -50,9 +50,9 @@ public-safety posture, and does not move files from this review pack alone.
 - [AOA-T-0069 canonical readiness](../../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/canonical-readiness.md)
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Technique family scout rows for `approval-evidence`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `approval-evidence`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `approval-evidence`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `approval-evidence`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `approval-evidence`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `approval-evidence`](../reports/technique_tree_projection.md)
 - [Landed decision-routing pilot review](landed-decision-routing-pilot-review.md)
 
 ## Direct Bundle Read

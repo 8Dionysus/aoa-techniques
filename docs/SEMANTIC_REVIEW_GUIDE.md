@@ -2,7 +2,7 @@
 
 This guide defines the bounded contract behind the semantic-review family.
 
-Use it when the question is how authored semantic review docs relate to their generated manifest and current downstream consumers, without turning semantic reviews into status automation or graph semantics.
+Use it when the question is how authored semantic review packets relate to their generated manifest and current downstream consumers, without turning semantic reviews into status automation or graph semantics.
 
 See also:
 - [Start Here](START_HERE.md)
@@ -12,21 +12,22 @@ See also:
 
 Current reviewed clusters:
 
-- [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-- [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
-- [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
-- [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md)
-- [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-- [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
-- [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+- [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
+- [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+- [INTENT_CHAIN_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
+- [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
+- [SKILL_SUPPORT_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+- [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
 
 This family uses one stable shape:
 
 - authoritative source:
-  - authored `*_SEMANTIC_REVIEW.md` docs
+  - authored `*_SEMANTIC_REVIEW.md` packets under
+    `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/`
 - reader model:
-  - the review docs themselves
+  - the review packets themselves
   - there is no separate generated reader surface in this wave
 - derived manifests:
   - `generated/semantic_review_manifest.json`
@@ -41,7 +42,7 @@ This family uses one stable shape:
 
 ## Source Contract
 
-Each semantic review doc stays human-authored and cluster-bounded.
+Each semantic review packet stays human-authored and cluster-bounded.
 
 It is allowed to answer:
 
@@ -53,11 +54,11 @@ It is not allowed to:
 
 - change bundle status by itself
 - replace canonical-readiness notes
-- define runtime routing policy beyond the bounded working sets already consumed from authored review docs
+- define runtime routing policy beyond the bounded working sets already consumed from authored review packets
 
 ## Derived Manifest Role
 
-The semantic-review manifest is a derived lookup aid over authored review docs.
+The semantic-review manifest is a derived lookup aid over authored review packets.
 
 It can expose:
 
@@ -67,7 +68,7 @@ It can expose:
 - next-step summary
 
 It must not become the source of truth for review meaning.
-If the manifest and authored review doc disagree, fix the authored review doc or regenerate the manifest.
+If the manifest and authored review packet disagree, fix the authored review packet or regenerate the manifest.
 
 ## Boundaries
 
@@ -78,7 +79,7 @@ If the manifest and authored review doc disagree, fix the authored review doc or
 
 ## Regeneration
 
-When semantic review docs change, regenerate and validate with:
+When semantic review packets change, regenerate and validate with:
 
 - `python -m pip install -r requirements-dev.txt`
 - `python scripts/build_semantic_review_manifest.py`

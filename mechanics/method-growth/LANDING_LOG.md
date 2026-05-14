@@ -3,6 +3,33 @@
 This log records structural landings for the `aoa-techniques` Method-growth
 mechanic.
 
+## 2026-05-14 - Contract Packet Part Homes
+
+Changed:
+
+- moved Method-growth JSON schema/example packets from root `schemas/` and
+  `examples/` into owning part-local `schemas/` and `examples/` directories
+- replaced old internal local-host JSON identifiers with public part-local
+  schema URLs without changing schema fields
+- updated part map and provenance so contract packets are found through the
+  owning Method-growth route, not root inventory
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_experience_adoption_contracts
+python -m unittest tests.test_method_growth_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not moved:
+
+- no Method-growth contract field was changed
+- no Method-growth packet became skill acceptance, skill activation, or hidden
+  technique promotion
+- no owner-local adoption or deletion was claimed
+
 ## 2026-05-01 - Active Parts Split
 
 Changed:

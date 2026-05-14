@@ -7,7 +7,7 @@ Projection packet:
 [First Tree Projection Review Pack](first-tree-projection-review-pack.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Prior pilot review:
 [Landed Review-Compaction Pilot Review](landed-review-compaction-pilot-review.md)
@@ -44,7 +44,7 @@ and root legacy receipts move together.
 - supporting `checks/`, `examples/`, and `notes/` files for the seven bundles,
   scanned for invariant, adjacency, validation, and drift-pressure cues
 - current references found by `rg` across the seven source bundles
-- `reports/technique_tree_projection.md` rows for `AOA-T-0056` through
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `AOA-T-0056` through
   `AOA-T-0062`
 
 ## Direct Read

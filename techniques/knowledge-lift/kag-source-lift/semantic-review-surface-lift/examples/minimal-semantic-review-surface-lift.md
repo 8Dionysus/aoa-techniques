@@ -27,7 +27,7 @@ Question: where does the broader document-role layout stop and the narrower snap
 ```json
 {
   "review_id": "docs_boundary",
-  "review_path": "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
+  "review_path": "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
   "title": "Docs Boundary Semantic Review",
   "findings": [
     "`AOA-T-0002` is semantically distinct as the broader source-of-truth layout pattern.",

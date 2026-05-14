@@ -39,6 +39,45 @@ OLD_FLAT_EXPERIENCE_FILES = (
     "mechanics/experience/SERVICE_CLARITY_TECHNIQUE.md",
 )
 
+EXPERIENCE_CONTRACT_PACKETS = (
+    (
+        "mechanics/experience/parts/appeal-reasoning/schemas/appeal_reasoning_step_v1.json",
+        "mechanics/experience/parts/appeal-reasoning/examples/appeal_reasoning_step.example.json",
+        "schemas/appeal_reasoning_step_v1.json",
+        "examples/appeal_reasoning_step.example.json",
+    ),
+    (
+        "mechanics/experience/parts/governance-precedent/schemas/technique_governance_precedent_v1.json",
+        "mechanics/experience/parts/governance-precedent/examples/technique_governance_precedent.example.json",
+        "schemas/technique_governance_precedent_v1.json",
+        "examples/technique_governance_precedent.example.json",
+    ),
+    (
+        "mechanics/experience/parts/sealed-decision/schemas/sealed_decision_technique_note_v1.json",
+        "mechanics/experience/parts/sealed-decision/examples/sealed_decision_technique_note_v1.example.json",
+        "schemas/sealed_decision_technique_note_v1.json",
+        "examples/sealed_decision_technique_note_v1.example.json",
+    ),
+    (
+        "mechanics/experience/parts/scope-boundary/schemas/scope_boundary_technique_note_v1.json",
+        "mechanics/experience/parts/scope-boundary/examples/scope_boundary_technique_note_v1.example.json",
+        "schemas/scope_boundary_technique_note_v1.json",
+        "examples/scope_boundary_technique_note_v1.example.json",
+    ),
+    (
+        "mechanics/experience/parts/handoff-compression/schemas/handoff_compression_technique_note_v1.json",
+        "mechanics/experience/parts/handoff-compression/examples/handoff_compression_technique_note_v1.example.json",
+        "schemas/handoff_compression_technique_note_v1.json",
+        "examples/handoff_compression_technique_note_v1.example.json",
+    ),
+    (
+        "mechanics/experience/parts/service-clarity/schemas/service_clarity_technique_note_v1.json",
+        "mechanics/experience/parts/service-clarity/examples/service_clarity_technique_note_v1.example.json",
+        "schemas/service_clarity_technique_note_v1.json",
+        "examples/service_clarity_technique_note_v1.example.json",
+    ),
+)
+
 
 class ExperienceMechanicsTopologyTestCase(unittest.TestCase):
     def test_experience_active_surfaces_are_discoverable(self) -> None:
@@ -50,6 +89,45 @@ class ExperienceMechanicsTopologyTestCase(unittest.TestCase):
         for relative_path in OLD_FLAT_EXPERIENCE_FILES:
             with self.subTest(relative_path=relative_path):
                 self.assertFalse((REPO_ROOT / relative_path).exists())
+
+    def test_experience_contract_packets_live_under_parts(self) -> None:
+        for schema_path, example_path, old_schema_path, old_example_path in (
+            EXPERIENCE_CONTRACT_PACKETS
+        ):
+            with self.subTest(schema_path=schema_path):
+                self.assertTrue((REPO_ROOT / schema_path).is_file())
+                self.assertTrue((REPO_ROOT / example_path).is_file())
+                self.assertFalse((REPO_ROOT / old_schema_path).exists())
+                self.assertFalse((REPO_ROOT / old_example_path).exists())
+
+    def test_experience_contract_packet_routes_are_documented(self) -> None:
+        parts = (REPO_ROOT / "mechanics" / "experience" / "PARTS.md").read_text(
+            encoding="utf-8"
+        )
+        provenance = (
+            REPO_ROOT / "mechanics" / "experience" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "experience" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("Part-Local Contract Packets", parts)
+        self.assertIn("Contract Packet Bridge", provenance)
+
+        for required in (
+            "appeal_reasoning_step_v1.json",
+            "technique_governance_precedent_v1.json",
+            "sealed_decision_technique_note_v1.json",
+            "scope_boundary_technique_note_v1.json",
+            "handoff_compression_technique_note_v1.json",
+            "service_clarity_technique_note_v1.json",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, parts)
+                self.assertIn(required, provenance)
+
+        self.assertIn("Contract Packet Part Homes", landing_log)
+        self.assertIn("public part-local\n  schema URLs", landing_log)
 
     def test_experience_part_map_names_all_current_parts(self) -> None:
         parts = (REPO_ROOT / "mechanics" / "experience" / "PARTS.md").read_text(

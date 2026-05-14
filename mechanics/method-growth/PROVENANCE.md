@@ -27,6 +27,20 @@ the active route just because they existed before this split.
 | Pre-split flat `TECHNIQUE_RETENTION_CHECKS.md` | [parts/retention-checks](parts/retention-checks/README.md) | Adopted practice needs evidence, rollback, and retention checks to remain active. |
 | Pre-split flat `TECHNIQUE_OBSOLESCENCE.md` | [parts/obsolescence](parts/obsolescence/README.md) | Obsolescence and supersession must be explicit instead of silently deleting owner evidence. |
 
+## Contract Packet Bridge
+
+These previous root schema/example packets now travel with the Method-growth
+part that interprets them. Their old internal local-host JSON identifiers were
+replaced with public part-local schema URLs; field semantics stayed unchanged.
+
+| Previous root packet | Active route | Distilled signal |
+|---|---|---|
+| `schemas/technique_pattern_adoption_note_v1.json` plus `examples/technique_pattern_adoption_note.example.json` | [parts/pattern-adoption](parts/pattern-adoption/README.md) | Pattern-adoption contract evidence belongs beside the pattern-adoption part. |
+| `schemas/technique_adoption_boundary_check_v1.json` plus `examples/technique_adoption_boundary_check.example.json` | [parts/adoption-boundaries](parts/adoption-boundaries/README.md) | Adoption-boundary contract evidence belongs beside the adoption-boundaries part. |
+| `schemas/technique_to_skill_handoff_v1.json` plus `examples/technique_to_skill_handoff.example.json` | [parts/technique-to-skill-handoff](parts/technique-to-skill-handoff/README.md) | Technique-to-skill handoff contract evidence belongs beside the handoff part. |
+| `schemas/technique_retention_probe_v1.json` plus `examples/technique_retention_probe.example.json` | [parts/retention-checks](parts/retention-checks/README.md) | Retention-probe contract evidence belongs beside the retention-checks part. |
+| `schemas/technique_obsolescence_notice_v1.json` plus `examples/technique_obsolescence_notice.example.json` | [parts/obsolescence](parts/obsolescence/README.md) | Obsolescence contract evidence belongs beside the obsolescence part. |
+
 ## Legacy Posture
 
 The pre-split files were current compact active surfaces rather than large wave

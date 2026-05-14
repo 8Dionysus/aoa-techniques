@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Review-Evidence Pilot Review](landed-review-evidence-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -66,9 +66,9 @@ public-safety posture, and does not move files from this review pack alone.
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
-- [Technique family scout rows for `runtime-truth-lifecycle`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `runtime-truth-lifecycle`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `runtime-truth-lifecycle`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `runtime-truth-lifecycle`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `runtime-truth-lifecycle`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `runtime-truth-lifecycle`](../reports/technique_tree_projection.md)
 - [Landed review-evidence pilot review](landed-review-evidence-pilot-review.md)
 
 ## Direct Bundle Read

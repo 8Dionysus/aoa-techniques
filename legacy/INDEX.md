@@ -46,7 +46,8 @@ Every future entry must name:
 - whether it is `raw`, `archive`, or `receipt` material
 - the active route, owner route, or explicit hold status
 - why it belongs in root legacy instead of `incoming/`,
-  `mechanics/<slug>/legacy/`, `generated/`, `reports/`, `docs/decisions/`, or
+  `mechanics/<slug>/legacy/`, `generated/`, mechanic-local
+  `mechanics/**/reports/`, `docs/decisions/`, or
   an active technique bundle
 
 Do not add placeholder receipts. Empty inventory is preferable to false

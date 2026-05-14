@@ -3,6 +3,15 @@
 These reviews turn scout evidence into human-readable next moves before any
 schema, template, validator, or frontmatter migration.
 
+Review packet families:
+
+- [semantic](semantic/README.md): authored semantic-review packets consumed by
+  `docs/SEMANTIC_REVIEW_GUIDE.md`, `docs/SELECTION_PATTERNS.md`, and the
+  semantic-review manifest.
+- [shadow](shadow/README.md): authored shadow-review packets consumed by
+  `docs/TECHNIQUE_SHADOW_GUIDE.md`, generated `docs/SHADOW_PATTERNS.md`, and
+  the shadow-review manifest.
+
 Current reviews:
 
 - [first-topology-scout-review-pack](first-topology-scout-review-pack.md)

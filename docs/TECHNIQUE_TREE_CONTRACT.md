@@ -164,8 +164,8 @@ migration waves land.
 
 The current projection surfaces are:
 
-- [Technique Tree Projection](../reports/technique_tree_projection.md)
-- [Technique Tree Projection JSON](../reports/technique_tree_projection.json)
+- [Technique Tree Projection](../mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md)
+- [Technique Tree Projection JSON](../mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.json)
 
 They are generated review surfaces only. They do not add `tree_path`
 frontmatter and do not authorize path movement by themselves.

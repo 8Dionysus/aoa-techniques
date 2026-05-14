@@ -62,7 +62,7 @@ legacy route.
 | Release history | `CHANGELOG.md` | release history belongs at root for public readers | do not store future direction or audit baselines here |
 | Thin example | `WALKTHROUGH.md` | one first example helps readers understand the canon path | stay one example; move broader tutorials into docs or examples |
 | Agent lane | `AGENTS.md`, `.agents/` | agent-facing route cards need stable local entry | do not replace civic docs or owner contracts |
-| Tooling, provenance, and machine districts | `.github/`, `config/`, `data/`, `docs/`, `examples/`, `generated/`, `incoming/`, `legacy/`, `mechanics/`, `quests/`, `reports/`, `schemas/`, `scripts/`, `templates/`, `tests/`, `techniques/` | source layout, provenance accounting, and tooling expect stable directories | each active district should keep local route guidance when needed; `legacy/` must stay indexed and subordinate to active routes |
+| Tooling, provenance, and machine districts | `.github/`, `config/`, `data/`, `docs/`, `examples/`, `generated/`, `incoming/`, `legacy/`, `mechanics/`, `quests/`, `schemas/`, `scripts/`, `templates/`, `tests/`, `techniques/` | source layout, provenance accounting, and tooling expect stable directories | each active district should keep local route guidance when needed; `legacy/` must stay indexed and subordinate to active routes |
 | Development requirements | `.gitignore`, `requirements-dev.txt` | development hygiene | stay technical and small |
 
 ## Surfaces That Should Not Live In Root
@@ -73,6 +73,12 @@ legacy route.
 | Repo-wide pre-migration receipt, pre-prune snapshot, or retired tail surface | `legacy/raw/`, `legacy/archive/`, or `legacy/receipts/` plus `legacy/INDEX.md` | root-wide history should stay auditable without becoming active canon, current direction, or candidate quarantine |
 | Mechanic runbook or part-local operating surface | `mechanics/<slug>/parts/<part>/README.md` | current mechanic behavior belongs with its package and part |
 | Mechanic landing history | `mechanics/<slug>/LANDING_LOG.md` | landings are checked history, not root direction |
+| Mechanic scout report, projection, or diagnostic readout | `mechanics/<slug>/parts/<part>/reports/` | mechanic-local evidence should live beside the mechanic route that interprets it |
+| Mechanic scout input config or overlay data | `mechanics/<slug>/parts/<part>/{config,data}/` | mechanic-local scout inputs and overlays should live beside the generated reports and reviews that consume them |
+| Mechanic-local script or helper | `mechanics/<slug>/parts/<part>/scripts/` | one-owner helper commands should live beside the mechanic part whose evidence they produce or publish |
+| Mechanic-local schema/example contract packet | `mechanics/<slug>/parts/<part>/{schemas,examples}/` | paired machine contracts that describe one mechanic part belong beside that part; root `schemas/` and `examples/` stay repo-wide |
+| Mechanic manifest or hook binding set | `mechanics/<slug>/parts/<part>/manifests/` | mechanic-local machine evidence should live beside the part that interprets and constrains it |
+| Agent-lane packet or swarm recipe | `.agents/<lane>/` | agent-facing lane guidance belongs under the agent district, not as a standalone root directory |
 | Donor intake notes, raw external records, or pre-prune candidate lists | `mechanics/distillation/legacy/raw/`, root `legacy/raw/` only for repo-wide non-mechanic preservation, or the owning candidate ledger | donor evidence should be inspectable without becoming canon or a second `incoming/` |
 | Generated catalog, capsule, or projection | `generated/` | generated surfaces are reproducible companions, not authored root truth |
 | Technique meaning | `techniques/**/TECHNIQUE.md` | root may route to technique meaning but must not re-author it |
@@ -112,6 +118,12 @@ cannot stay compact, route it to the owner surface that can carry the detail.
 | `WALKTHROUGH.md` | keep for now as one thin example | broader examples should move into `docs/` or `examples/` if this grows |
 | `AGENTS.md` | keep as agent route card | agent route law complements, but does not replace, public canon docs |
 | `legacy/` | add as root provenance district | preserves public-safe repo-wide raw, archive, and migration receipts while keeping `incoming/`, active bundles, generated surfaces, and mechanic-local legacy distinct |
+| previous root `reports/` scout package | move to `mechanics/distillation/parts/technique-reform-ingress/reports/` | the family, topology, kind ambiguity, and tree projection readouts are generated evidence for that Distillation part, not root entry surfaces |
+| previous root Distillation scout inputs in `config/` and `data/` | move scout-only family/topology registries and kind-overlay data to `mechanics/distillation/parts/technique-reform-ingress/{config,data}/` | the current `kind` registry remains root repo-wide config, while scout-only reform inputs belong beside the Distillation part and reports that interpret them |
+| previous root one-owner mechanic scripts | move technique-reform report builders to `mechanics/distillation/parts/technique-reform-ingress/scripts/` and live receipt publishing to `mechanics/recurrence/parts/live-observation-producers/scripts/` | root `scripts/` stays for repo-wide builders and validators; scripts that only serve one mechanic part belong with that part |
+| previous root `Spark/` agent lane | move to `.agents/spark/` | Spark guidance is an agent-lane packet, not a separate public root district |
+| previous root `manifests/recurrence/` package | move to `mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/` | recurrence beacons are mechanic-local observation evidence, not a root manifest district |
+| previous root mechanic-local JSON schema/example packets | move to owning `mechanics/<slug>/parts/<part>/{schemas,examples}/` homes | Experience, Method-growth, and Release-support contract packets describe part-local mechanics; root `schemas/` and `examples/` remain for repo-wide contracts and public examples |
 
 ## Final Rule
 

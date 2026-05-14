@@ -21,8 +21,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is whether a candidate is one atomic technique or a skill/playbook/chain wearing technique clothing
 - open [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is how a technique should be classified beyond the first `domain` and `kind`
 - open [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when the question is where technique bundles live in the scalable root tree or how a future path change should be staged
-- open `../config/technique_topology_axes.yaml` when the question is which scout values currently exist for capability, substrate, execution profile, or risk posture; these values are not frontmatter truth
-- open `../reports/technique_topology_scout.md` when you need the current generated projection over those scout axes before proposing any migration
+- open `../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml` when the question is which scout values currently exist for capability, substrate, execution profile, or risk posture; these values are not frontmatter truth
+- open `../mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md` when you need the current generated projection over those scout axes before proposing any migration
 - open [Charter](../CHARTER.md) when the question is what this repository may claim or own
 - open [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or rewriting a root or docs-root surface
 - open [Root Legacy](../legacy/README.md) when preserving repo-wide raw packets, retired tail surfaces, or path-migration receipts after active distillation
@@ -64,8 +64,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Repo Doc Surfaces](REPO_DOC_SURFACES.md) when the question is which authoritative repo doc to read next
 - open [Technique Capsules](TECHNIQUE_CAPSULES.md) when one small runtime card is enough
 - open [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md) when you need section, checklist, example, evidence-note, or bounded relation lift surfaces
-- open [SHADOW_PATTERNS.md](SHADOW_PATTERNS.md) and the semantic review docs when the question is about caution seams or boundary drift rather than first-pick selection
-- open [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md) when the question is how authored review docs relate to working sets and the semantic-review manifest without becoming policy
+- open [SHADOW_PATTERNS.md](SHADOW_PATTERNS.md) and the semantic review packets when the question is about caution seams or boundary drift rather than first-pick selection
+- open [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md) when the question is how authored review packets relate to working sets and the semantic-review manifest without becoming policy
 
 ## Current Corpus Posture
 

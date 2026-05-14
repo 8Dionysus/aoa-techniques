@@ -49,9 +49,9 @@ PILOT_BUNDLES = (
 )
 
 LIVE_LINK_SURFACES = (
-    "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
-    "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
-    "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md",
     "incoming/chat-history-lineage-governed-actions/docs/AGENT_READINESS_TELEMETRY_NARROWING_MEMO.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/second-kind-ambiguity-review-pack.md",

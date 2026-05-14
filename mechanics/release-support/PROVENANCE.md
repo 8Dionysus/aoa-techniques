@@ -14,6 +14,17 @@ source-to-active accounting, and its current raw inventory is empty.
 | Pre-split flat `INSTALLATION_TECHNIQUES.md` | [parts/installation-techniques](parts/installation-techniques/README.md) | Installation practice remains bounded by owner-local validation, operator review, and no runtime or source authority. |
 | Pre-split flat `SOVEREIGN_RELEASE_TECHNIQUES.md` | [parts/sovereign-release-techniques](parts/sovereign-release-techniques/README.md) | Release ritual practice remains bounded by no authority sealing, no operator substitution, and no policy precedent. |
 
+## Contract Packet Bridge
+
+These previous root schema/example packets now travel with the release-support
+part that interprets them. Their old internal local-host JSON identifiers were
+replaced with public part-local schema URLs; field semantics stayed unchanged.
+
+| Previous root packet | Active route | Preservation note |
+|---|---|---|
+| `schemas/installation_technique_note_v1.json` plus `examples/installation_technique_note_v1.example.json` | [parts/installation-techniques](parts/installation-techniques/README.md) | Installation technique note contract evidence belongs beside the installation-techniques part. |
+| `schemas/sovereign_release_technique_note_v1.json` plus `examples/sovereign_release_technique_note_v1.example.json` | [parts/sovereign-release-techniques](parts/sovereign-release-techniques/README.md) | Sovereign-release technique note contract evidence belongs beside the sovereign-release-techniques part. |
+
 ## AoA Center Relation
 
 `Agents-of-Abyss` owns release-support state-transition law, public support

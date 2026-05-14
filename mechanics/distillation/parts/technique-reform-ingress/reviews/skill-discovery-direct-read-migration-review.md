@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed Capability-Boundary Pilot Review](landed-capability-boundary-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -55,11 +55,11 @@ generated surfaces, and validation.
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
-- [Technique family scout row for `skill-discovery`](../../../../../config/technique_family_scout.yaml)
-- [Technique kind overlay row for `AOA-T-0041` and `AOA-T-0042`](../../../../../data/technique_kind_overlay.yaml)
-- [Technique tree projection rows for `skill-discovery`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `skill-discovery`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `skill-discovery`](../../../../../reports/technique_topology_scout.md)
+- [Technique family scout row for `skill-discovery`](../../../../../mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml)
+- [Technique kind overlay row for `AOA-T-0041` and `AOA-T-0042`](../../../../../mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml)
+- [Technique tree projection rows for `skill-discovery`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `skill-discovery`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `skill-discovery`](../reports/technique_topology_scout.md)
 - [Landed capability-boundary pilot review](landed-capability-boundary-pilot-review.md)
 
 ## Direct Bundle Read

@@ -16,7 +16,7 @@ Use the active route when it answers the task:
 - technique path architecture: `docs/TECHNIQUE_TREE_CONTRACT.md`
 - current candidate quarantine and staging: `incoming/`
 - mechanic-local lineage: `mechanics/<slug>/legacy/`
-- generated companions: `generated/` and `reports/`
+- generated companions: `generated/` and mechanic-local `mechanics/**/reports/`
 - repo-wide root placement law: `docs/ROOT_SURFACE_LAW.md`
 
 Open root legacy only when you need preserved repo-wide history, a
