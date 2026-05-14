@@ -44,5 +44,5 @@ Use the root validation path after changes:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```

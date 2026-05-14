@@ -50,7 +50,7 @@ technique promotion.
 For Distillation topology changes:
 
 ```bash
-python -m unittest tests.test_distillation_mechanics_topology
+python -m unittest discover -s mechanics/distillation/tests
 ```
 
 For the external candidate registry:
@@ -81,7 +81,7 @@ For repository-level safety after structure changes:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 ## Closeout

@@ -24,6 +24,6 @@ current operating surfaces, not raw adoption-wave archives.
 ## Verify
 
 ```bash
-python -m unittest tests.test_method_growth_mechanics_topology
+python -m unittest discover -s mechanics/method-growth/tests
 python scripts/validate_repo.py
 ```

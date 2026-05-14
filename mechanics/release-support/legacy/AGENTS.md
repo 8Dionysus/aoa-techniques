@@ -22,5 +22,5 @@ mechanics edits.
 Run:
 
 ```bash
-python -m unittest tests.test_release_support_mechanics_topology
+python -m unittest discover -s mechanics/release-support/tests
 ```

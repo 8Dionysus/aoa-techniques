@@ -63,9 +63,9 @@ It does not own:
 After changing this package, run:
 
 ```bash
-python -m unittest tests.test_rpg_mechanics_topology
+python -m unittest discover -s mechanics/rpg/tests
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 If nested AGENTS coverage changes, also run:

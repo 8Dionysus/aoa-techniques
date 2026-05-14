@@ -103,7 +103,7 @@ Use the root validation path after changes:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 If Agon binding candidates, questbook references, RPG references, manifests, or

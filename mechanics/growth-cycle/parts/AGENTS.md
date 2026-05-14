@@ -22,6 +22,6 @@ technique bundles.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_growth_cycle_mechanics_topology
+python -m unittest discover -s mechanics/growth-cycle/tests
 python scripts/validate_repo.py
 ```

@@ -21,6 +21,6 @@ lineage, not the active operating route.
 After legacy changes, run:
 
 ```bash
-python -m unittest tests.test_antifragility_mechanics_topology
+python -m unittest discover -s mechanics/antifragility/tests
 python scripts/validate_repo.py
 ```

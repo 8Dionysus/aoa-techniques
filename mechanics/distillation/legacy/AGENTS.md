@@ -21,5 +21,5 @@ not the active operating contract.
 ## Verify
 
 ```bash
-python -m unittest tests.test_distillation_mechanics_topology
+python -m unittest discover -s mechanics/distillation/tests
 ```

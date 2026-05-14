@@ -24,6 +24,6 @@ technique bundles or cross-owner authority.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_boundary_bridge_mechanics_topology
+python -m unittest discover -s mechanics/boundary-bridge/tests
 python scripts/validate_repo.py
 ```

@@ -125,7 +125,7 @@ Default validation:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 Use release checks or Agon-specific checks from `docs/AGENTS_ROOT_REFERENCE.md` when publication posture, broad generated outputs, or companion-candidate surfaces change.

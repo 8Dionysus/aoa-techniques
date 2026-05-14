@@ -98,7 +98,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 ## Release And Validation
 
 - run `python -m pip install -r requirements-dev.txt` once before local validation if this checkout does not already have the repo dev dependencies
-- for a read-only current-state pass, run `python scripts/validate_repo.py` and `python -m unittest discover -s tests`
+- for a read-only current-state pass, run `python scripts/validate_repo.py` and `python scripts/run_tests.py`
 - open [Releasing `aoa-techniques`](RELEASING.md) for the current release-prep doctrine
 - for the bounded release-prep parity path, run `python scripts/release_check.py`, then confirm `git status -sb` stayed clean
 - use the individual `build_*` commands only when you are intentionally regenerating one surface family during authored edits

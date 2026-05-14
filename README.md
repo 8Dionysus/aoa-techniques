@@ -58,7 +58,7 @@ Use the shortest route by need:
 - current direction: `ROADMAP.md`
 - durable obligations: `QUESTBOOK.md`
 - AoA cross-mechanics for technique movement: `mechanics/README.md`
-- verify current repo state: `python scripts/validate_repo.py` and `python -m unittest discover -s tests`
+- verify current repo state: `python scripts/validate_repo.py` and `python scripts/run_tests.py`
 - release-prep parity path: `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
 - deeper docs map: `docs/README.md`
 - authoring template: `templates/TECHNIQUE.template.md`
@@ -89,7 +89,7 @@ Use the shortest route by need:
 - review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
 - public readiness lens for the published corpus: `generated/technique_promotion_readiness.min.json`
 - owner-local live receipt publication for closeout/stats integration: `mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py` and `.aoa/live_receipts/technique-receipts.jsonl`
-- current verify and release-prep path: `python scripts/validate_repo.py`, `python -m unittest discover -s tests`, `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
+- current verify and release-prep path: `python scripts/validate_repo.py`, `python scripts/run_tests.py`, `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
 
 ## What belongs here
 
@@ -140,7 +140,8 @@ full intake history.
 - `legacy/` for public-safe repo-wide provenance, archive, and migration receipts
 - `mechanics/` for AoA cross-mechanic movement surfaces around technique canon
 - `docs/` for orientation, review doctrine, release, selection, generated-reader interpretation, and shadow surfaces
-- `scripts/` and `tests/` for validation and generation helpers
+- `scripts/` for repo-wide builders/runners, root `tests/` for repo-wide
+  validation, and `mechanics/**/tests/` for mechanic-owned checks
 
 ## Intended users
 

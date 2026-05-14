@@ -29,7 +29,7 @@
   ],
   "proof_surfaces": [
     "python scripts/validate_repo.py",
-    "python -m unittest discover -s tests",
+    "python scripts/run_tests.py",
     "python scripts/release_check.py"
   ],
   "receipt_surfaces": [
@@ -40,7 +40,7 @@
       "action": "revalidate",
       "commands": [
         "python scripts/validate_repo.py",
-        "python -m unittest discover -s tests"
+        "python scripts/run_tests.py"
       ],
       "notes": "keep technique canon and review surfaces internally consistent"
     },

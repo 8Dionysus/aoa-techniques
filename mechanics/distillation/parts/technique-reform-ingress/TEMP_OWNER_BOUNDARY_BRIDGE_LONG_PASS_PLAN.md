@@ -138,7 +138,7 @@ Use this exact loop for every wave:
 10. Validate the smallest honest surface:
     - `git diff --check`;
     - public-safety grep over touched files;
-    - `python -m unittest tests.test_distillation_mechanics_topology`;
+    - `python -m unittest discover -s mechanics/distillation/tests`;
     - `python scripts/validate_repo.py` for structural or index changes.
 11. Land each completed wave as its own commit/PR/merge during the execution
     pass.

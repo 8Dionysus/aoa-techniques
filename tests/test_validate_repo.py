@@ -59,7 +59,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
         )
 
         self.assertIn("python scripts/release_check.py", workflow)
-        self.assertNotIn("python -m unittest discover -s tests", workflow)
+        self.assertNotIn("python scripts/run_tests.py", workflow)
         self.assertNotIn("python scripts/validate_repo.py", workflow)
         self.assertNotIn("python scripts/build_catalog.py", workflow)
         self.assertNotIn("python scripts/build_shadow_review_manifest.py", workflow)
@@ -84,7 +84,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_shadow_review_manifest.py"),
                 ("python", "scripts/build_promotion_readiness.py"),
                 ("python", "scripts/build_kag_export.py"),
-                ("python", "-m", "unittest", "discover", "-s", "tests"),
+                ("python", "scripts/run_tests.py"),
                 ("python", "scripts/validate_nested_agents.py"),
                 ("python", "scripts/validate_repo.py"),
             ),
@@ -1066,7 +1066,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "domain/kind/status split",
             "machine-readable corpus view",
             "python scripts/validate_repo.py",
-            "python -m unittest discover -s tests",
+            "python scripts/run_tests.py",
             "python scripts/release_check.py",
             "git status -sb",
         ):
@@ -1080,7 +1080,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             readme,
         )
         self.assertIn("python scripts/validate_repo.py", readme)
-        self.assertIn("python -m unittest discover -s tests", readme)
+        self.assertIn("python scripts/run_tests.py", readme)
         self.assertIn("python scripts/release_check.py", readme)
         self.assertIn("git status -sb", readme)
         self.assertLess(
@@ -1831,7 +1831,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("REPO_DOC_SURFACES.md", kag_source_guide)
         self.assertIn("python scripts/release_check.py", readme)
         self.assertIn("python scripts/validate_repo.py", readme)
-        self.assertIn("python -m unittest discover -s tests", readme)
+        self.assertIn("python scripts/run_tests.py", readme)
         self.assertIn("python scripts/release_check.py", releasing)
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_kag_export.py", releasing)

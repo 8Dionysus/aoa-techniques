@@ -22,6 +22,6 @@ technique bundles or release authority.
 Use the package and root tests after part changes:
 
 ```bash
-python -m unittest tests.test_release_support_mechanics_topology
+python -m unittest discover -s mechanics/release-support/tests
 python scripts/validate_repo.py
 ```

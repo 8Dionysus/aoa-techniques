@@ -59,7 +59,7 @@ For repository-level safety after structure changes:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 ## Closeout

@@ -22,5 +22,5 @@ mechanics edits.
 Run:
 
 ```bash
-python -m unittest tests.test_boundary_bridge_mechanics_topology
+python -m unittest discover -s mechanics/boundary-bridge/tests
 ```

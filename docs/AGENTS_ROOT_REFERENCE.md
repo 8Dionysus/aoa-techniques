@@ -185,7 +185,7 @@ Minimum validation for meaning, schema, script, or generated-surface changes:
 
 ```bash
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```
 
 Use the broader release-prep path when the change touches publication posture,

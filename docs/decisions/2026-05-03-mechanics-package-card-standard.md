@@ -77,12 +77,12 @@ in `Agents-of-Abyss` unless a future owner-local need is proven.
 ## Verification
 
 The package-card standard is covered by
-`tests/test_mechanics_package_cards.py`.
+`mechanics/tests/test_mechanics_package_cards.py`.
 
 Verify with:
 
 ```bash
-python -m unittest tests.test_mechanics_package_cards
+python -m unittest discover -s mechanics/tests -p 'test_mechanics_package_cards.py'
 python scripts/validate_repo.py
-python -m unittest discover -s tests
+python scripts/run_tests.py
 ```

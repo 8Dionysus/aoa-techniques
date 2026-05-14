@@ -23,7 +23,7 @@ RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/build_shadow_review_manifest.py"),
     ("python", "scripts/build_promotion_readiness.py"),
     ("python", "scripts/build_kag_export.py"),
-    ("python", "-m", "unittest", "discover", "-s", "tests"),
+    ("python", "scripts/run_tests.py"),
     ("python", "scripts/validate_nested_agents.py"),
     ("python", "scripts/validate_repo.py"),
 )
