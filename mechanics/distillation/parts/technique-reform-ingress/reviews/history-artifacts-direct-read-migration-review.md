@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed Published-Summary Pilot Review](landed-published-summary-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -87,9 +87,9 @@ links, generated surfaces, and validation.
 - [AOA-T-0067 second context adaptation](../../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/notes/second-context-adaptation.md)
 - [History route card](../../../../../techniques/history/AGENTS.md)
 - [Techniques route card](../../../../../techniques/AGENTS.md)
-- [Technique tree projection rows for `history-artifacts`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `history-artifacts`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `history-artifacts`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `history-artifacts`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `history-artifacts`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `history-artifacts`](../reports/technique_topology_scout.md)
 - [Landed published-summary pilot review](landed-published-summary-pilot-review.md)
 
 ## Direct Bundle Read

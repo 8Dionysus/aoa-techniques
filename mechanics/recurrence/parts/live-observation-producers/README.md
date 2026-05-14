@@ -28,6 +28,18 @@ This part may produce:
 - an overlap-hold followthrough prompt
 - a canonical-pressure followthrough prompt
 
+## Manifest Surfaces
+
+The part-local recurrence manifest package is evidence only:
+
+- `manifests/recurrence/component.techniques.canon-and-intake-beacons.json`
+- `manifests/recurrence/hooks/component.techniques.canon-and-intake-beacons.hooks.json`
+
+## Script Surfaces
+
+- `scripts/publish_live_receipts.py` appends bounded technique-layer receipts
+  to `.aoa/live_receipts/technique-receipts.jsonl`.
+
 It may not produce:
 
 - a technique candidate by itself

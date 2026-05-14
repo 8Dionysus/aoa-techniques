@@ -8,7 +8,15 @@ import unittest
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-MODULE_PATH = REPO_ROOT / "scripts" / "publish_live_receipts.py"
+MODULE_PATH = (
+    REPO_ROOT
+    / "mechanics"
+    / "recurrence"
+    / "parts"
+    / "live-observation-producers"
+    / "scripts"
+    / "publish_live_receipts.py"
+)
 
 
 def load_module():

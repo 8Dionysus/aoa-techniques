@@ -71,8 +71,8 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_repo_doc_surface_manifest.py"),
                 ("python", "scripts/build_catalog.py"),
                 ("python", "scripts/build_kind_manifest.py"),
-                ("python", "scripts/build_topology_scout.py"),
-                ("python", "scripts/build_tree_projection.py"),
+                ("python", "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py"),
+                ("python", "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py"),
                 ("python", "scripts/build_capsules.py"),
                 ("python", "scripts/build_sections.py"),
                 ("python", "scripts/build_section_manifest.py"),
@@ -964,13 +964,22 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_docs_boundary_next_step_matches_generated_semantic_manifest(self) -> None:
         expected_phrase = "validator-synchronized with authored semantic reviews"
-        review_path = REPO_ROOT / "docs" / "DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
+        review_path = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "semantic"
+            / "DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
+        )
         review_content = review_path.read_text(encoding="utf-8")
         manifest = validate_repo.read_json(REPO_ROOT / "generated" / "semantic_review_manifest.json")
         manifest_entry = next(
             review
             for review in manifest["reviews"]
-            if review["review_path"] == "docs/DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
+            if review["review_path"] == "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md"
         )
 
         self.assertIn(expected_phrase, review_content)
@@ -978,12 +987,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_semantic_review_next_steps_match_generated_manifest(self) -> None:
         expected_phrases = {
-            "docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md": "keep this review as the canonical-core anchor",
-            "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
-            "docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
-            "docs/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "The next instruction-surface closure pressure should therefore stay on `AOA-T-0035`",
-            "docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017`",
-            "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep `AOA-T-0019` narrow as the canonical metadata spine",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md": "keep this review as the canonical-core anchor",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md": "open a new pilot only if future wording starts collapsing rendering policy back into the published-summary package",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md": "open a new pilot only if storage-layout detail starts crowding out rollout semantics",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md": "The next instruction-surface closure pressure should therefore stay on `AOA-T-0035`",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md": "keep this review focused on monitoring the documented watch seams around `AOA-T-0015` vs `AOA-T-0017`",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md": "keep `AOA-T-0019` narrow as the canonical metadata spine",
         }
         manifest = validate_repo.read_json(REPO_ROOT / "generated" / "semantic_review_manifest.json")
         reviews_by_path = {review["review_path"]: review for review in manifest["reviews"]}
@@ -1493,20 +1502,20 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual(
             {
-                "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
-                "docs/EVALUATION_CHAIN_SHADOW_REVIEW.md",
+                "mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+                "mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md",
             },
             set(reviews_by_path),
         )
-        self.assertEqual("Pair Map", reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].map_heading)
+        self.assertEqual("Pair Map", reviews_by_path["mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md"].map_heading)
         self.assertEqual(
             "Cluster Map",
-            reviews_by_path["docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md"].map_heading,
+            reviews_by_path["mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md"].map_heading,
         )
-        self.assertTrue(reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].seams)
+        self.assertTrue(reviews_by_path["mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md"].seams)
         self.assertEqual(
             "`clear`",
-            reviews_by_path["docs/EVALUATION_CHAIN_SHADOW_REVIEW.md"].overall_outcome,
+            reviews_by_path["mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md"].overall_outcome,
         )
 
     def test_repo_doc_surface_specs_are_bounded_and_structurally_valid(self) -> None:
@@ -1529,8 +1538,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "TODO.md",
                 "PLANS.md",
                 "docs/KAG_SOURCE_LIFT_GUIDE.md",
-                "docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
-                "docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
+                "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",
+                "mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md",
             }.isdisjoint(source_paths)
         )
         self.assertTrue(
@@ -1593,6 +1602,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ),
             surfaces_by_path["docs/ROOT_SURFACE_LAW.md"].top_level_sections,
         )
+
         self.assertEqual(
             (
                 "Core Contract",
@@ -1713,6 +1723,22 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ),
             surfaces_by_path["CHANGELOG.md"].top_level_sections,
         )
+
+    def test_spark_lane_lives_under_agents_district(self) -> None:
+        self.assertTrue((REPO_ROOT / ".agents" / "spark" / "AGENTS.md").is_file())
+        self.assertTrue((REPO_ROOT / ".agents" / "spark" / "SWARM.md").is_file())
+        self.assertFalse((REPO_ROOT / "Spark").exists())
+
+        root_law = (REPO_ROOT / "docs" / "ROOT_SURFACE_LAW.md").read_text(
+            encoding="utf-8"
+        )
+        decision = (
+            REPO_ROOT / "docs" / "decisions" / "2026-05-14-spark-agent-lane-home.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(".agents/spark/", root_law)
+        self.assertIn("agent-lane packet", root_law)
+        self.assertIn(".agents/spark/", decision)
 
     def test_repo_doc_surface_manifest_generated_surface_matches_builder(self) -> None:
         validate_repo.validate_repo_doc_surface_manifests(REPO_ROOT)
@@ -1906,10 +1932,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         family_scout = validate_repo.read_yaml(
-            REPO_ROOT / "config" / "technique_family_scout.yaml"
+            REPO_ROOT / validate_repo.TECHNIQUE_FAMILY_SCOUT_PATH
         )
         topology_axes = validate_repo.read_yaml(
-            REPO_ROOT / "config" / "technique_topology_axes.yaml"
+            REPO_ROOT / validate_repo.TECHNIQUE_TOPOLOGY_AXES_PATH
         )
 
         for target in (
@@ -1921,8 +1947,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "`substrate` | design axis",
             "`execution_profile` | design axis",
             "`risk_posture` | design axis",
-            "`config/technique_topology_axes.yaml`",
-            "`reports/technique_topology_scout.md`",
+            "`mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`",
+            "`mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`",
             "coding, documentation, validation, recovery, history, media, tool use",
             "The goal is a corpus that can grow very large",
         ):
@@ -1962,9 +1988,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_topology_scout_axis_registry_stays_below_frontmatter_truth(self) -> None:
         registry = validate_repo.load_topology_axes_registry(REPO_ROOT)
-        registry_text = (
-            REPO_ROOT / "config" / "technique_topology_axes.yaml"
-        ).read_text(encoding="utf-8")
+        registry_text = (REPO_ROOT / validate_repo.TECHNIQUE_TOPOLOGY_AXES_PATH).read_text(
+            encoding="utf-8"
+        )
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(
             encoding="utf-8"
         )
@@ -2001,7 +2027,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("learn-from-artifact", [value["id"] for value in axes["capability_class"]["values"]])
 
         self.assertIn("not frontmatter truth", start_here)
-        self.assertIn("config/technique_topology_axes.yaml", roadmap)
+        self.assertIn("mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml", roadmap)
         self.assertIn("not add required frontmatter fields", registry_text)
         self.assertIn("below bundle frontmatter", decision)
 
@@ -2009,9 +2035,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         axis_registry = validate_repo.load_topology_axes_registry(REPO_ROOT)
         kind_overlay = validate_repo.load_kind_overlay(REPO_ROOT)
-        report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_topology_scout.json")
+        report = validate_repo.read_json(REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_topology_scout.json")
         report_markdown = (
-            REPO_ROOT / "reports" / "technique_topology_scout.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_topology_scout.md"
         ).read_text(encoding="utf-8")
 
         expected_report = validate_repo.build_topology_scout_payload(
@@ -2034,9 +2060,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
     def test_tree_projection_report_is_builder_aligned_and_non_authoritative(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
         kind_overlay = validate_repo.load_kind_overlay(REPO_ROOT)
-        report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_tree_projection.json")
+        report = validate_repo.read_json(REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.json")
         report_markdown = (
-            REPO_ROOT / "reports" / "technique_tree_projection.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
 
         expected_report = validate_repo.build_tree_projection_payload(catalog, kind_overlay)
@@ -2475,12 +2501,12 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         registry = validate_repo.load_kind_registry(REPO_ROOT)
         family_scout = validate_repo.load_family_scout(REPO_ROOT)
         kind_overlay = validate_repo.load_kind_overlay(REPO_ROOT)
-        report = validate_repo.read_json(REPO_ROOT / "reports" / "technique_family_scout.json")
+        report = validate_repo.read_json(REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_family_scout.json")
         report_markdown = (
-            REPO_ROOT / "reports" / "technique_family_scout.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_family_scout.md"
         ).read_text(encoding="utf-8")
         audit_markdown = (
-            REPO_ROOT / "reports" / "kind_ambiguity_audit.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "kind_ambiguity_audit.md"
         ).read_text(encoding="utf-8")
 
         expected_report = validate_repo.build_family_scout_payload(
@@ -2520,9 +2546,9 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("Evaluation-Chain Shadow Review", docs_readme)
         self.assertIn("shadow_review_manifest.json", docs_readme)
         self.assertIn("docs/SHADOW_PATTERNS.md", readme)
-        self.assertIn("docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md", readme)
+        self.assertIn("mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md", readme)
         self.assertIn("generated/shadow_review_manifest.json", readme)
-        self.assertIn("docs/EVALUATION_CHAIN_SHADOW_REVIEW.md", readme)
+        self.assertIn("mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md", readme)
         self.assertIn("docs/SHADOW_PATTERNS.md", changelog)
         self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", changelog)
         self.assertIn("shadow_review_manifest.json", changelog)

@@ -10,7 +10,7 @@ Migration receipt:
 [Decision-Routing Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -47,9 +47,9 @@ slice should run a direct-read review for `governance/approval-evidence`.
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
 - [Decision-routing tree pilot receipt](../../../../../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md)
 - [Decision-routing direct-read migration review](decision-routing-direct-read-migration-review.md)
-- [Technique family scout rows for `decision-routing` and `approval-evidence`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `decision-routing` and `approval-evidence`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `decision-routing` and `approval-evidence`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `decision-routing` and `approval-evidence`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `decision-routing` and `approval-evidence`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `decision-routing` and `approval-evidence`](../reports/technique_tree_projection.md)
 - [AOA-T-0068 fail-closed-evidence-gate](../../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/TECHNIQUE.md)
 - [AOA-T-0068 canonical readiness](../../../../../techniques/governance/approval-evidence/fail-closed-evidence-gate/notes/canonical-readiness.md)
 - [AOA-T-0069 approval-bound-durable-jobs](../../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/TECHNIQUE.md)

@@ -30,8 +30,8 @@ Reviewed:
 
 - `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-- `config/technique_topology_axes.yaml`
-- `reports/technique_topology_scout.md`
+- `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`
 - `docs/TECHNIQUE_CAPSULES.md`
 - `techniques/continuity/AGENTS.md`
 - all `TECHNIQUE.md`, `examples/`, `checks/`, and `notes/` files under
@@ -56,7 +56,7 @@ boundary before scaling the pass.
 
 Use this rhythm for the long execution-profile pass:
 
-1. Choose one bounded cohort from `reports/technique_topology_scout.md`.
+1. Choose one bounded cohort from `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`.
 2. Read every target `TECHNIQUE.md` directly.
 3. Read examples, checks, notes, and capsule text for each target.
 4. Record whether the current profile is `scout-confirmed`,
@@ -91,7 +91,7 @@ Recommended order for the long pass:
 
 Passed locally:
 
-1. `python scripts/build_topology_scout.py`
+1. `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`
 2. `python -m unittest tests.test_distillation_mechanics_topology`
 3. `python scripts/validate_repo.py`
 4. `python scripts/release_check.py`

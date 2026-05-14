@@ -4,12 +4,12 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Generated lens:
-[Technique Family Scout](../../../../../reports/technique_family_scout.md)
+[Technique Family Scout](../reports/technique_family_scout.md)
 and
-[Technique Family Scout JSON](../../../../../reports/technique_family_scout.json)
+[Technique Family Scout JSON](../reports/technique_family_scout.json)
 
 Registry:
-[Technique Family Scout](../../../../../config/technique_family_scout.yaml)
+[Technique Family Scout](../../../../../mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -188,7 +188,7 @@ review status.
 
 Add a non-authoritative tree projection over all current bundles.
 This has now landed as
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 and its first human review pack.
 
 That projection should map technique ID, current source path, proposed `trunk`,

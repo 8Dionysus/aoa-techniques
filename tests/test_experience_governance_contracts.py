@@ -11,17 +11,27 @@ from jsonschema import Draft202012Validator
 ROOT = Path(__file__).resolve().parents[1]
 ENUM_ESCAPE_VALUE = "__experience_governance_not_allowed__"
 
-GOVERNANCE_CONTRACTS = (
-    ('appeal_reasoning_step', 'appeal_reasoning_step_v1.json'),
-    ('technique_governance_precedent', 'technique_governance_precedent_v1.json'),
-    ('sealed_decision_technique_note_v1', 'sealed_decision_technique_note_v1.json'),
-)
+GOVERNANCE_CONTRACTS = {
+    "appeal_reasoning_step": (
+        "mechanics/experience/parts/appeal-reasoning/schemas/appeal_reasoning_step_v1.json",
+        "mechanics/experience/parts/appeal-reasoning/examples/appeal_reasoning_step.example.json",
+    ),
+    "technique_governance_precedent": (
+        "mechanics/experience/parts/governance-precedent/schemas/technique_governance_precedent_v1.json",
+        "mechanics/experience/parts/governance-precedent/examples/technique_governance_precedent.example.json",
+    ),
+    "sealed_decision_technique_note_v1": (
+        "mechanics/experience/parts/sealed-decision/schemas/sealed_decision_technique_note_v1.json",
+        "mechanics/experience/parts/sealed-decision/examples/sealed_decision_technique_note_v1.example.json",
+    ),
+}
 
 
 
-def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[str, object]]:
-    schema_path = ROOT / "schemas" / schema_file
-    example_path = ROOT / "examples" / f"{stem}.example.json"
+def load_contract(stem: str) -> tuple[dict[str, object], dict[str, object]]:
+    schema_rel, example_rel = GOVERNANCE_CONTRACTS[stem]
+    schema_path = ROOT / schema_rel
+    example_path = ROOT / example_rel
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     example = json.loads(example_path.read_text(encoding="utf-8"))
     return schema, example
@@ -199,26 +209,26 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
     def test_experience_governance_examples_match_schemas(self) -> None:
         self.assertTrue(GOVERNANCE_CONTRACTS)
         missing_pairs: list[str] = []
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema_path = ROOT / "schemas" / schema_file
-            example_path = ROOT / "examples" / f"{stem}.example.json"
+        for stem, (schema_rel, example_rel) in GOVERNANCE_CONTRACTS.items():
+            schema_path = ROOT / schema_rel
+            example_path = ROOT / example_rel
             if not schema_path.exists():
                 missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
             if not example_path.exists():
                 missing_pairs.append(f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}")
         self.assertFalse(missing_pairs, "missing governance contract pair(s): " + ", ".join(missing_pairs))
 
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
+        for stem in GOVERNANCE_CONTRACTS:
             with self.subTest(stem=stem):
-                schema, example = load_contract(stem, schema_file)
+                schema, example = load_contract(stem)
                 Draft202012Validator.check_schema(schema)
                 errors = validation_errors(schema, example)
                 self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
 
     def test_experience_governance_schemas_reject_unknown_fields(self) -> None:
         exercised = 0
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in object_paths(example):
                 exercised += 1
                 with self.subTest(stem=stem, path=".".join(str(part) for part in path) or "top"):
@@ -231,8 +241,8 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
 
     def test_experience_governance_schemas_reject_wrong_types_for_every_field(self) -> None:
         exercised = 0
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, value in walk_values(example):
                 exercised += 1
                 with self.subTest(stem=stem, path=".".join(str(part) for part in path)):
@@ -243,8 +253,8 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
 
     def test_experience_governance_schemas_reject_missing_required_fields(self) -> None:
         exercised = 0
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in required_paths(schema, example):
                 exercised += 1
                 with self.subTest(stem=stem, path=".".join(str(part) for part in path)):
@@ -255,8 +265,8 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
 
     def test_experience_governance_schemas_reject_bad_array_items(self) -> None:
         exercised = 0
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in array_paths(example):
                 value = get_path(example, path)
                 if not isinstance(value, list):
@@ -276,8 +286,8 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
 
     def test_experience_governance_schemas_reject_const_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, _const_value in constrained_paths(schema, example, "const"):
                 if not path:
                     continue
@@ -290,8 +300,8 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
 
     def test_experience_governance_schemas_reject_enum_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, _enum_values in constrained_paths(schema, example, "enum"):
                 if not path:
                     continue
@@ -303,8 +313,8 @@ class ExperienceGovernanceContractTests(unittest.TestCase):
         self.assertGreater(exercised, 0, "no governance enum fields were exercised")
 
     def test_experience_governance_schemas_reject_invalid_numeric_ranges(self) -> None:
-        for stem, schema_file in GOVERNANCE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in GOVERNANCE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, value in walk_values(example):
                 if not isinstance(value, (int, float)) or isinstance(value, bool):
                     continue

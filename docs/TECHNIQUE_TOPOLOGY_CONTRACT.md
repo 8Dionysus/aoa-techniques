@@ -59,11 +59,11 @@ questions.
 | `tree_path` | architecture contract | authored placement spine for trunks, shelves, and leaf bundles | `docs/TECHNIQUE_TREE_CONTRACT.md`, future projection |
 | `domain` | authoritative frontmatter | first owner and review route | `docs/DOMAIN_MAP.md`, schema, validators |
 | `kind` | authoritative frontmatter | atomic move shape | `docs/TECHNIQUE_KIND_GUIDE.md`, `config/technique_kind_registry.yaml`, schema, validators |
-| `family` | scout-only | stable semantic shelf spanning domains or kinds | `config/technique_family_scout.yaml`, `reports/technique_family_scout.md` |
-| `capability_class` | design axis | what agent capability the move exercises | `config/technique_topology_axes.yaml`, future generated projection |
-| `substrate` | design axis | what object or medium the move operates on | `config/technique_topology_axes.yaml`, future generated projection |
-| `execution_profile` | design axis | what size or orchestration level can execute it | `config/technique_topology_axes.yaml`, future capsule/catalog field |
-| `risk_posture` | design axis | mutation, public-share, safety, reversibility, and approval posture | `config/technique_topology_axes.yaml`, future review/catalog field |
+| `family` | scout-only | stable semantic shelf spanning domains or kinds | `mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml`, `mechanics/distillation/parts/technique-reform-ingress/reports/technique_family_scout.md` |
+| `capability_class` | design axis | what agent capability the move exercises | `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, future generated projection |
+| `substrate` | design axis | what object or medium the move operates on | `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, future generated projection |
+| `execution_profile` | design axis | what size or orchestration level can execute it | `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, future capsule/catalog field |
+| `risk_posture` | design axis | mutation, public-share, safety, reversibility, and approval posture | `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, future review/catalog field |
 | `relations` | current bounded frontmatter plus future strengthening | direct composition, conflict, sequence, prerequisite, or alternative hints | current `relations` plus future typed relation guidance |
 
 ## Current Axes
@@ -139,14 +139,14 @@ rules.
 
 The scout value registry for `capability_class`, `substrate`,
 `execution_profile`, and `risk_posture` lives in
-`config/technique_topology_axes.yaml`.
+`mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`.
 
 That registry names allowed scout values only. It does not add required
 frontmatter fields, does not replace `domain` or `kind`, and does not authorize
 generated reports to remap bundle meaning automatically.
 
-The current generated readout is `reports/technique_topology_scout.md`, built
-by `python scripts/build_topology_scout.py`. Use it for review pressure before
+The current generated readout is `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`, built
+by `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`. Use it for review pressure before
 schema or frontmatter migration, not as a source of technique meaning.
 
 ### Capability Class

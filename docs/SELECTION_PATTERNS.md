@@ -34,49 +34,49 @@ If you still need repo-level orientation before following a working set or commo
 ### Agent-workflows canonical core
 
 - Techniques: [AOA-T-0001](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md), [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0014](../techniques/execution/agent-workflows-core/tdd-slice/TECHNIQUE.md)
-- Review: [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- Review: [AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - Why grouped: Canonical workflow backbone, intent-chain specialization, and bounded execution slicing for the current agent-workflows core.
 
 ### Published-summary cluster
 
 - Techniques: [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md)
-- Review: [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- Review: [PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
 - Why grouped: Storage, remediation, integrity, and rendering policy for published summary systems.
 
 ### Evaluation-chain pair
 
 - Techniques: [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md)
-- Review: [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
+- Review: [EVALUATION_CHAIN_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
 - Why grouped: Summary-contract production plus staged promotion from observation to narrow enforcement.
 
 ### Docs boundary pair
 
 - Techniques: [AOA-T-0002](../techniques/instruction/docs-boundary/source-of-truth-layout/TECHNIQUE.md), [AOA-T-0009](../techniques/instruction/docs-boundary/lightweight-status-snapshot/TECHNIQUE.md)
-- Review: [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
+- Review: [DOCS_BOUNDARY_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
 - Why grouped: Repository-wide document-role layout plus lightweight entrypoint snapshot discipline.
 
 ### Intent-chain pair
 
 - Techniques: [AOA-T-0004](../techniques/execution/intent-chain/intent-plan-dry-run-contract-chain/TECHNIQUE.md), [AOA-T-0005](../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
-- Review: [INTENT_CHAIN_SEMANTIC_REVIEW.md](INTENT_CHAIN_SEMANTIC_REVIEW.md)
+- Review: [INTENT_CHAIN_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - Why grouped: Artifact-first intent normalization and dry-run contract validation plus safe rollout of one new intent type on top of that chain.
 
 ### Instruction-surface cluster
 
 - Techniques: [AOA-T-0012](../techniques/instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md), [AOA-T-0013](../techniques/instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md), [AOA-T-0027](../techniques/instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), [AOA-T-0024](../techniques/instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), [AOA-T-0029](../techniques/instruction/instruction-surface/nested-rule-loading/TECHNIQUE.md), [AOA-T-0030](../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md)
-- Review: [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
+- Review: [INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
 - Why grouped: Fragment-first composition into one generated context artifact plus local single-source fan-out, managed-target propagation, upstream mirroring with provenance, hierarchical rule loading, and fragment-first source partitioning for adjacent instruction-facing surfaces.
 
 ### Skill-support cluster
 
 - Techniques: [AOA-T-0015](../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md), [AOA-T-0017](../techniques/proof/skill-support/property-invariants/TECHNIQUE.md), [AOA-T-0016](../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md)
-- Review: [SKILL_SUPPORT_SEMANTIC_REVIEW.md](SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+- Review: [SKILL_SUPPORT_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 - Why grouped: Boundary-contract evaluation, invariant coverage broadening, and semantic scoping for the current skill-support seam cluster.
 
 ### KAG/source-lift family
 
 - Techniques: [AOA-T-0018](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md), [AOA-T-0019](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md), [AOA-T-0020](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md), [AOA-T-0021](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md), [AOA-T-0022](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
-- Review: [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
+- Review: [KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
 - Why grouped: Section lift, metadata spine, provenance lift, bounded relation lift, and markdown-first caution lift for the current reusable KAG/source-lift family.
 
 ## Common Moves

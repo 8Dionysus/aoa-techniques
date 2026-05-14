@@ -10,7 +10,7 @@ Migration receipt:
 [Donor-Harvest Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -50,9 +50,9 @@ slice should run a direct-read review for `governance/decision-routing`.
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
 - [Donor-harvest tree pilot receipt](../../../../../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md)
 - [Donor-harvest direct-read migration review](donor-harvest-direct-read-migration-review.md)
-- [Technique family scout rows for `donor-harvest` and `decision-routing`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `donor-harvest` and `decision-routing`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `donor-harvest` and `decision-routing`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `donor-harvest` and `decision-routing`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `donor-harvest` and `decision-routing`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `donor-harvest` and `decision-routing`](../reports/technique_tree_projection.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [AOA-T-0076 owner-layer-triage](../../../../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md)
 - [AOA-T-0078 decision-fork-cards](../../../../../techniques/governance/decision-routing/decision-fork-cards/TECHNIQUE.md)

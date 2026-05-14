@@ -7,7 +7,7 @@ Split closeout:
 [Automation-Governance Split Expansion Closeout](automation-governance-split-expansion-closeout.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -61,9 +61,9 @@ posture, and does not move files from this review pack alone.
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
 - [Automation-governance direct-read split review](automation-governance-direct-read-split-review.md)
 - [Automation-governance split expansion closeout](automation-governance-split-expansion-closeout.md)
-- [Technique family scout rows for `automation-governance`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `automation-governance`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `automation-governance`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `automation-governance`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `automation-governance`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `automation-governance`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 

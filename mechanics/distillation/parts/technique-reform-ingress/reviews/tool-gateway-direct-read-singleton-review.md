@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Practice-Adoption-Lifecycle Pilot Review](landed-practice-adoption-lifecycle-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Family review:
 [First Family Shelf Review Pack](first-family-shelf-review-pack.md)
@@ -50,9 +50,9 @@ promotion, ToS canon, or canonical technique promotion.
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)
 - [Landed practice-adoption-lifecycle pilot review](landed-practice-adoption-lifecycle-pilot-review.md)
-- [Technique family scout row for `tool-gateway`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout row for `AOA-T-0065`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection row for `AOA-T-0065`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout row for `tool-gateway`](../reports/technique_family_scout.md)
+- [Technique topology scout row for `AOA-T-0065`](../reports/technique_topology_scout.md)
+- [Technique tree projection row for `AOA-T-0065`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 

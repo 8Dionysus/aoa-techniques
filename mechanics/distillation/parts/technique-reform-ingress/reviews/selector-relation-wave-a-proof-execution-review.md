@@ -83,10 +83,10 @@ Supporting review and generated surfaces:
 
 - [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
 - [Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md)
-- [Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
-- [Evaluation-Chain Semantic Review](../../../../../docs/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
-- [Published-Summary Semantic Review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [Intent-Chain Semantic Review](../../../../../docs/INTENT_CHAIN_SEMANTIC_REVIEW.md)
+- [Technique Topology Scout](../reports/technique_topology_scout.md)
+- [Evaluation-Chain Semantic Review](semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
+- [Published-Summary Semantic Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- [Intent-Chain Semantic Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - [Ready-Work-Graphs Direct-Read Migration Review](ready-work-graphs-direct-read-migration-review.md)
 - [Landed Ready-Work-Graphs Pilot Review](landed-ready-work-graphs-pilot-review.md)
 

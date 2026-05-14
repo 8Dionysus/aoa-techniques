@@ -73,7 +73,7 @@ LIVE_LINK_SURFACES = (
     "docs/REPO_DOC_SURFACE_LIFT_GUIDE.md",
     "docs/README.md",
     "docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md",
-    "docs/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
+    "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md",
     "docs/TECHNIQUE_SHADOW_GUIDE.md",
     "docs/FRONTMATTER_METADATA_SPINE_GUIDE.md",
     "docs/BOUNDED_RELATION_LIFT_GUIDE.md",

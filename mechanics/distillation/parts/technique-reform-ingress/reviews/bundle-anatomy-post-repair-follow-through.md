@@ -32,8 +32,8 @@ review posture, not work queues.
 
 Reviewed:
 
-- `config/technique_topology_axes.yaml`
-- `reports/technique_topology_scout.md`
+- `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`
 
 No change is needed. The registry already says scout axes do not add required
 frontmatter, do not replace `domain` or `kind`, and must not automatically

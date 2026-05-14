@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed History-Artifacts Pilot Review](landed-history-artifacts-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -68,9 +68,9 @@ and validation.
 - [Antifragility mechanic route card](../../../../antifragility/AGENTS.md)
 - [Antifragility mechanic README](../../../../antifragility/README.md)
 - [Antifragility provenance](../../../../antifragility/PROVENANCE.md)
-- [Technique tree projection rows for `antifragility-recovery`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `antifragility-recovery`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `antifragility-recovery`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `antifragility-recovery`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `antifragility-recovery`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `antifragility-recovery`](../reports/technique_topology_scout.md)
 - [Landed diagnosis-repair pilot review](landed-diagnosis-repair-pilot-review.md)
 - [Landed history-artifacts pilot review](landed-history-artifacts-pilot-review.md)
 

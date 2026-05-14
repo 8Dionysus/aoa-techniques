@@ -10,7 +10,7 @@ Migration receipt:
 [Review-Evidence Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -48,9 +48,9 @@ slice should run a direct-read review for `execution/runtime-truth-lifecycle`.
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Review-evidence tree pilot receipt](../../../../../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md)
 - [Review-evidence direct-read migration review](review-evidence-direct-read-migration-review.md)
-- [Technique family scout rows for `review-evidence` and `runtime-truth-lifecycle`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `review-evidence` and `runtime-truth-lifecycle`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `review-evidence` and `runtime-truth-lifecycle`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `review-evidence` and `runtime-truth-lifecycle`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `review-evidence` and `runtime-truth-lifecycle`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `review-evidence` and `runtime-truth-lifecycle`](../reports/technique_tree_projection.md)
 - [AOA-T-0036 render-truth-before-startup](../../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/TECHNIQUE.md)
 - [AOA-T-0036 canonical readiness](../../../../../techniques/execution/runtime-truth-lifecycle/render-truth-before-startup/notes/canonical-readiness.md)
 - [AOA-T-0038 one-command-service-lifecycle](../../../../../techniques/execution/runtime-truth-lifecycle/one-command-service-lifecycle/TECHNIQUE.md)

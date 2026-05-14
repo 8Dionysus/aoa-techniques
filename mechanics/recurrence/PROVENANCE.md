@@ -11,7 +11,7 @@ source-to-active accounting, and its current raw inventory is empty.
 
 | Previous surface | Current active home | Preservation note |
 |---|---|---|
-| Pre-split flat `RECURRENCE_LIVE_OBSERVATION_PRODUCERS.md` | [parts/live-observation-producers](parts/live-observation-producers/README.md) | Producer inputs remain advisory and cannot authorize status, candidate, hold, or promotion changes. |
+| Pre-split flat `RECURRENCE_LIVE_OBSERVATION_PRODUCERS.md`, previous root `manifests/recurrence/` beacon files, and former root live receipt publisher | [parts/live-observation-producers](parts/live-observation-producers/README.md), [part-local recurrence manifests](parts/live-observation-producers/manifests/recurrence/component.techniques.canon-and-intake-beacons.json), and [part-local live receipt script](parts/live-observation-producers/scripts/publish_live_receipts.py) | Producer inputs, beacon manifests, and live receipt publishing remain advisory and cannot authorize status, candidate, hold, or promotion changes. |
 | Pre-split flat `RECURRENCE_REVIEW_DECISION_CLOSURE.md` | [parts/review-decision-closure](parts/review-decision-closure/README.md) | Decision closure remains a review packet posture, not a technique-status mutation. |
 
 ## AoA Center Relation
@@ -38,6 +38,7 @@ Relevant center-side sources consulted for this split:
 
 Relevant local evidence already present:
 
-- `manifests/recurrence/component.techniques.canon-and-intake-beacons.json`
-- `manifests/recurrence/hooks/component.techniques.canon-and-intake-beacons.hooks.json`
+- `mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/component.techniques.canon-and-intake-beacons.json`
+- `mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/hooks/component.techniques.canon-and-intake-beacons.hooks.json`
+- `mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py`
 - `docs/decisions/2026-05-01-recurrence-cross-layer-registry-observation.md`

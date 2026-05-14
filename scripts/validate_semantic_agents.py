@@ -67,7 +67,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         ),
     ),
     AgentsDocSpec(
-        Path('reports/AGENTS.md'),
+        Path('mechanics/distillation/parts/technique-reform-ingress/reports/AGENTS.md'),
         (
             'diagnostic surfaces',
             'source-authored bundles',

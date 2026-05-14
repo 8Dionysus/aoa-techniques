@@ -58,8 +58,8 @@ Supporting review and generated surfaces:
 
 - [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
 - [Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md)
-- [Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
-- [Agent-Workflows Core Semantic Review](../../../../../docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [Technique Topology Scout](../reports/technique_topology_scout.md)
+- [Agent-Workflows Core Semantic Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - [Agent-Workflows-Core Direct-Read Migration Review](agent-workflows-core-direct-read-migration-review.md)
 - [Landed Agent-Workflows-Core Pilot Review](landed-agent-workflows-core-pilot-review.md)
 - [Runtime-Truth-Lifecycle Direct-Read Migration Review](runtime-truth-lifecycle-direct-read-migration-review.md)

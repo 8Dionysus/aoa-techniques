@@ -10,7 +10,7 @@ Migration receipt:
 [Docs-Boundary Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -52,7 +52,7 @@ resolution, or marketplace curation.
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Docs-boundary tree pilot receipt](../../../../../legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md)
 - [Technique tree projection rows for `docs-boundary`,
-  `capability-registry`, `capability-boundary`, and `skill-discovery`](../../../../../reports/technique_tree_projection.md)
+  `capability-registry`, `capability-boundary`, and `skill-discovery`](../reports/technique_tree_projection.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)
 - [Landed kag-source-lift pilot review](landed-kag-source-lift-pilot-review.md)

@@ -439,13 +439,15 @@ permission slip to remap techniques automatically.
 | [Technique Topology Contract](../../../../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) | classification is faceted and `domain + kind` are current truth | readiness to migrate every bundle frontmatter field |
 | [Technique Tree Contract](../../../../docs/TECHNIQUE_TREE_CONTRACT.md) | future root path architecture should be a tree of trunks, shelves, and leaf bundles | authority to move every bundle or make `tree_path` required frontmatter |
 | [Technique Kind Registry](../../../../config/technique_kind_registry.yaml) | current `kind` values and tie-break rules | that Agon handoff labels like `trace-probe` or `review` are valid kind values |
-| [Technique Family Scout](../../../../config/technique_family_scout.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
-| [Technique Topology Axes Registry](../../../../config/technique_topology_axes.yaml) | scout values for `capability_class`, `substrate`, `execution_profile`, and `risk_posture` | required frontmatter fields or automatic bundle remapping |
-| [Technique Topology Scout](../../../../reports/technique_topology_scout.md) | current generated projection over scout axes for review pressure | schema truth, migration authority, or bundle meaning |
+| [Technique Family Scout](config/technique_family_scout.yaml) | scout shelf candidates and family constraints | authoritative family assignment for every bundle |
+| [Technique Topology Axes Registry](config/technique_topology_axes.yaml) | scout values for `capability_class`, `substrate`, `execution_profile`, and `risk_posture` | required frontmatter fields or automatic bundle remapping |
+| [Technique Kind Overlay](data/technique_kind_overlay.yaml) | current scout overlay used by generated review reports | frontmatter truth, status truth, or path migration authority |
+| [Technique Topology Scout](reports/technique_topology_scout.md) | current generated projection over scout axes for review pressure | schema truth, migration authority, or bundle meaning |
+| [Scout Report Builders](scripts/AGENTS.md) | part-local commands rebuild topology scout and tree projection reports | repo-wide builder ownership, frontmatter truth, or path migration authority |
 | [First Topology Scout Review Pack](reviews/first-topology-scout-review-pack.md) | first human readout from the scout projection and the next review lane | schema migration, bundle remap authority, or proof of generated correctness |
-| [Technique Family Scout](../../../../reports/technique_family_scout.md) | generated family counts and likely clusters | automatic frontmatter migration authority |
-| [Technique Tree Projection](../../../../reports/technique_tree_projection.md) | generated trunk/shelf/path projection and current path drift audit over all `107` bundles | path migration, `tree_path` frontmatter truth, or proof that projection rows outrank authored bundles |
-| [Kind Ambiguity Audit](../../../../reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
+| [Technique Family Scout](reports/technique_family_scout.md) | generated family counts and likely clusters | automatic frontmatter migration authority |
+| [Technique Tree Projection](reports/technique_tree_projection.md) | generated trunk/shelf/path projection and current path drift audit over all `107` bundles | path migration, `tree_path` frontmatter truth, or proof that projection rows outrank authored bundles |
+| [Kind Ambiguity Audit](reports/kind_ambiguity_audit.md) | tie-break seams that deserve human review | automatic remap authority |
 | [First Kind Ambiguity Review Pack](reviews/first-kind-ambiguity-review-pack.md) | direct-read shortlist for later narrow remap work | frontmatter mutation, new kind authority, or status change |
 | [Second Kind Ambiguity Review Pack](reviews/second-kind-ambiguity-review-pack.md) | updated-audit read that routes `AOA-T-0054` to a `handoff` / `workflow` / `recovery` destination check | frontmatter mutation or proof that `AOA-T-0054` must move |
 | [AOA-T-0054 Kind Destination Check](reviews/0054-kind-destination-check.md) | direct-read destination verdict for `AOA-T-0054` from `handoff` toward `recovery` | schema migration, status promotion, or sibling-owner authority |

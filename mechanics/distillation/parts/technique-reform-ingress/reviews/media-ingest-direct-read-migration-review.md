@@ -10,7 +10,7 @@ Prior pilot review:
 [Landed Handoff-Continuation Pilot Review](landed-handoff-continuation-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -47,9 +47,9 @@ generated surfaces, and validation move together.
 - [External Technique Candidates - Personal Media Ingest](../../../../../incoming/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md)
 - [Personal Media Ingest - Planting Order](../../../../../incoming/personal-media-ingest/docs/PERSONAL_MEDIA_INGEST_PLANTING_ORDER.md)
 - [Personal Media Ingest Donor Sources](../../../../../incoming/personal-media-ingest/support/DONOR_SOURCES.md)
-- `reports/technique_tree_projection.md` rows for `AOA-T-0070` through
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `AOA-T-0070` through
   `AOA-T-0074`
-- `reports/technique_topology_scout.md` rows for `AOA-T-0070` through
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md` rows for `AOA-T-0070` through
   `AOA-T-0074`
 
 ## Direct Read

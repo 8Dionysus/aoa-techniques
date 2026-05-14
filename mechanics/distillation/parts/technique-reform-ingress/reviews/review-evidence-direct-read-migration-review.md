@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Approval-Evidence Pilot Review](landed-approval-evidence-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -52,9 +52,9 @@ public-safety posture, and does not move files from this review pack alone.
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
-- [Technique family scout rows for `review-evidence`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `review-evidence`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `review-evidence`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `review-evidence`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `review-evidence`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `review-evidence`](../reports/technique_tree_projection.md)
 - [Landed approval-evidence pilot review](landed-approval-evidence-pilot-review.md)
 
 ## Direct Bundle Read

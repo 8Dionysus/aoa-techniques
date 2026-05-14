@@ -4,13 +4,13 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Projection packet:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Prior pilot review:
 [Landed Media-Ingest Pilot Review](landed-media-ingest-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -42,9 +42,9 @@ generated surfaces, and validation move together.
 - canonical-readiness notes for `AOA-T-0080` through `AOA-T-0083`
 - origin-evidence notes for `AOA-T-0080` through `AOA-T-0083`
 - checklists and minimal examples for `AOA-T-0080` through `AOA-T-0083`
-- `reports/technique_tree_projection.md` rows for `AOA-T-0080` through
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `AOA-T-0080` through
   `AOA-T-0083`
-- `reports/technique_topology_scout.md` rows for `AOA-T-0080` through
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md` rows for `AOA-T-0080` through
   `AOA-T-0083`
 
 ## Direct Read

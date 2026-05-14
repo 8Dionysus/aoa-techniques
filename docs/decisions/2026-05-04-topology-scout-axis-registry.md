@@ -21,7 +21,7 @@ frontmatter migration.
 
 ## Decision
 
-Add `config/technique_topology_axes.yaml` as the scout value registry for
+Add `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml` as the scout value registry for
 `capability_class`, `substrate`, `execution_profile`, and `risk_posture`.
 
 The registry is a config-owned source for allowed scout values. It stays below bundle frontmatter, below schema, and below the authored topology contract.

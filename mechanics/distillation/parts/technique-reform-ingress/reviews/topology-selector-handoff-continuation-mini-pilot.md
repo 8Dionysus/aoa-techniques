@@ -7,7 +7,7 @@ Prior shelf reviews:
 [Landed Handoff-Continuation Pilot Review](landed-handoff-continuation-pilot-review.md)
 
 Generated lens:
-[Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
+[Technique Topology Scout](../reports/technique_topology_scout.md)
 
 Contracts:
 [Technique Atom Contract](../../../../../docs/TECHNIQUE_ATOM_CONTRACT.md),

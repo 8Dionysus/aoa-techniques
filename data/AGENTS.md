@@ -6,6 +6,10 @@
 
 Treat data changes as contract-adjacent. They may alter catalogs, reports, grouping, or downstream projections even when no Markdown changed.
 
+Root data is reserved for repo-wide data. Distillation kind-overlay and
+topology-review data live under
+`mechanics/distillation/parts/technique-reform-ingress/data/`.
+
 Keep data public-safe and reproducible. Do not add private transcripts, personal data, secret-bearing payloads, or local-only paths.
 
 If data is derived, document the source and rebuild path. If data is authored, keep ownership clear and avoid making generated files the source of truth.

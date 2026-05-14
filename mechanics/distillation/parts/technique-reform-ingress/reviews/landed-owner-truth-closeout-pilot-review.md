@@ -10,7 +10,7 @@ Migration receipt:
 [Owner-Truth-Closeout Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -58,9 +58,9 @@ slice should run a direct-read split review for
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [Owner-truth-closeout tree pilot receipt](../../../../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
 - [Owner-truth-closeout direct-read migration review](owner-truth-closeout-direct-read-migration-review.md)
-- [Technique family scout rows for `owner-truth-closeout` and `automation-governance`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `owner-truth-closeout` and `automation-governance`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `owner-truth-closeout` and `automation-governance`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `owner-truth-closeout` and `automation-governance`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `owner-truth-closeout` and `automation-governance`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `owner-truth-closeout` and `automation-governance`](../reports/technique_tree_projection.md)
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
 - [AOA-T-0086 automation-fit-matrix](../../../../../techniques/agent-workflows/automation-fit-matrix/TECHNIQUE.md)
 - [AOA-T-0087 human-loop-to-first-landing](../../../../../techniques/agent-workflows/human-loop-to-first-landing/TECHNIQUE.md)

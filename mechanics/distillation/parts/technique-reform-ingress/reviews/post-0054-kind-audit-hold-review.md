@@ -6,14 +6,14 @@ This packet closes the current `kind` remap lane after the landed
 [AOA-T-0054 destination check](0054-kind-destination-check.md).
 
 It starts from the current generated
-[Kind Ambiguity Audit](../../../../../reports/kind_ambiguity_audit.md), then
+[Kind Ambiguity Audit](../reports/kind_ambiguity_audit.md), then
 compares the remaining pressure against prior direct-read review packs, landed
 kind corrections, the living kind registry, and bundle summaries. It does not
 change frontmatter and does not authorize any later bundle remap by itself.
 
 ## Sources Read
 
-- current [Kind Ambiguity Audit](../../../../../reports/kind_ambiguity_audit.md)
+- current [Kind Ambiguity Audit](../reports/kind_ambiguity_audit.md)
 - [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
 - [Technique Kind Guide](../../../../../docs/TECHNIQUE_KIND_GUIDE.md)
 - [First Kind Ambiguity Review Pack](first-kind-ambiguity-review-pack.md)

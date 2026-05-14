@@ -22,6 +22,27 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- continued root/docs topology cleanup by moving semantic/shadow review packets
+  and technique-reform scout reports into the owning Distillation
+  `technique-reform-ingress` mechanic route, keeping root/docs surfaces as
+  readers and generated reports as evidence rather than technique authority
+- moved the root `Spark/` agent lane under `.agents/spark/` so fast-loop agent
+  guidance lives in the agent district instead of a standalone root directory
+- moved root `manifests/recurrence/` into the Recurrence
+  `live-observation-producers` part so beacon manifests and hook bindings stay
+  beside the mechanic route that constrains them
+- moved mechanic-local schema/example contract packets from root `schemas/` and
+  `examples/` into owning Experience, Method-growth, and Release-support parts;
+  root contract districts now stay repo-wide, and part-local JSON identifiers
+  now use public part-local schema URLs instead of the old internal local host
+- moved Distillation technique-reform scout input registries and kind-overlay
+  data from root `config/` and `data/` into the owning
+  `technique-reform-ingress` part while keeping the root kind registry as the
+  repo-wide `kind` contract
+- moved one-owner mechanic scripts out of root `scripts/`: technique-reform
+  scout/tree report builders now live under the Distillation
+  `technique-reform-ingress` part, and live receipt publishing now lives under
+  the Recurrence `live-observation-producers` part
 - added a Canonical Retro Audit part and rechecked all `98` canonical
   techniques for metadata, evidence-declaration, and bundle-local verdict
   coherence; no canonical downgrade was justified, and stale metadata was
@@ -963,7 +984,7 @@ This changelog entry uses the release-prep merge date.
 - capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `docs/TECHNIQUE_CAPSULE_GUIDE.md`, `generated/technique_capsules.json`, and `generated/technique_capsules.min.json`
 - repo-doc routing surfaces: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
 - source-lift reader and guide surfaces: `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
-- review routing surfaces: `docs/SHADOW_PATTERNS.md`, `docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `docs/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `generated/github_review_template_manifest.json`
+- review routing surfaces: `docs/SHADOW_PATTERNS.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `generated/github_review_template_manifest.json`
 - governance and intake surfaces under `.github/` plus the release and validation helpers under `scripts/`
 
 ### Validation

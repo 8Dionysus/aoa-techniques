@@ -11,18 +11,31 @@ CROSS_LAYER_REGISTRY = (
     "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/"
     "cross_layer_candidate_registry.min.json"
 )
+RECURRENCE_MANIFEST = (
+    "mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/"
+    "component.techniques.canon-and-intake-beacons.json"
+)
+RECURRENCE_HOOKS = (
+    "mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/"
+    "hooks/component.techniques.canon-and-intake-beacons.hooks.json"
+)
+ROOT_RECURRENCE_MANIFEST = (
+    "manifests/recurrence/component.techniques.canon-and-intake-beacons.json"
+)
+ROOT_RECURRENCE_HOOKS = (
+    "manifests/recurrence/hooks/component.techniques.canon-and-intake-beacons.hooks.json"
+)
 
 
 class RecurrenceManifestTopologyTestCase(unittest.TestCase):
     def load_manifest(self) -> dict:
-        return json.loads(
-            (
-                REPO_ROOT
-                / "manifests"
-                / "recurrence"
-                / "component.techniques.canon-and-intake-beacons.json"
-            ).read_text(encoding="utf-8")
-        )
+        return json.loads((REPO_ROOT / RECURRENCE_MANIFEST).read_text(encoding="utf-8"))
+
+    def test_recurrence_manifests_live_under_observation_producer_part(self) -> None:
+        self.assertTrue((REPO_ROOT / RECURRENCE_MANIFEST).is_file())
+        self.assertTrue((REPO_ROOT / RECURRENCE_HOOKS).is_file())
+        self.assertFalse((REPO_ROOT / ROOT_RECURRENCE_MANIFEST).exists())
+        self.assertFalse((REPO_ROOT / ROOT_RECURRENCE_HOOKS).exists())
 
     def test_cross_layer_registry_is_observation_evidence_not_decision_surface(self) -> None:
         manifest = self.load_manifest()

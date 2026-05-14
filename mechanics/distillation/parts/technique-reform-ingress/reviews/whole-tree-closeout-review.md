@@ -10,7 +10,7 @@ Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Root legacy index:
 [Root Legacy Index](../../../../../legacy/INDEX.md)
@@ -38,8 +38,8 @@ current placement spine.
 ## Sources Read
 
 - [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
-- [Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
-- [Technique Tree Projection JSON](../../../../../reports/technique_tree_projection.json)
+- [Technique Tree Projection](../reports/technique_tree_projection.md)
+- [Technique Tree Projection JSON](../reports/technique_tree_projection.json)
 - [Root Legacy](../../../../../legacy/README.md)
 - [Root Legacy Index](../../../../../legacy/INDEX.md)
 - [Landed Tool-Gateway Pilot Review](landed-tool-gateway-pilot-review.md)

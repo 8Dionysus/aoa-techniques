@@ -6,6 +6,8 @@ import unittest
 from functools import lru_cache
 from pathlib import Path
 
+from scripts import validate_repo
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -85,6 +87,15 @@ PART_LOCAL_AGON_CANDIDATE_HANDOFF_ARTIFACTS = (
 )
 
 PART_LOCAL_TECHNIQUE_REFORM_INGRESS_ARTIFACTS = (
+    "mechanics/distillation/parts/technique-reform-ingress/config/AGENTS.md",
+    "mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml",
+    "mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml",
+    "mechanics/distillation/parts/technique-reform-ingress/data/AGENTS.md",
+    "mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml",
+    "mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.csv",
+    "mechanics/distillation/parts/technique-reform-ingress/scripts/AGENTS.md",
+    "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py",
+    "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/README.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-topology-scout-review-pack.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/first-kind-ambiguity-review-pack.md",
@@ -220,6 +231,106 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         for relative_path in OLD_FLAT_DISTILLATION_FILES:
             with self.subTest(relative_path=relative_path):
                 self.assertFalse((REPO_ROOT / relative_path).exists())
+
+    def test_technique_reform_scout_inputs_live_under_ingress_part(self) -> None:
+        part_root = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+        )
+        expected_files = (
+            part_root / "config" / "technique_family_scout.yaml",
+            part_root / "config" / "technique_topology_axes.yaml",
+            part_root / "data" / "technique_kind_overlay.yaml",
+            part_root / "data" / "technique_kind_overlay.csv",
+        )
+        old_root_files = (
+            REPO_ROOT / "config" / "technique_family_scout.yaml",
+            REPO_ROOT / "config" / "technique_topology_axes.yaml",
+            REPO_ROOT / "data" / "technique_kind_overlay.yaml",
+            REPO_ROOT / "data" / "technique_kind_overlay.csv",
+        )
+
+        self.assertTrue((REPO_ROOT / "config" / "technique_kind_registry.yaml").is_file())
+        for expected_file in expected_files:
+            with self.subTest(expected_file=expected_file):
+                self.assertTrue(expected_file.is_file())
+        for old_root_file in old_root_files:
+            with self.subTest(old_root_file=old_root_file):
+                self.assertFalse(old_root_file.exists())
+
+    def test_technique_reform_scout_input_routes_are_documented(self) -> None:
+        part_readme = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+        parts = (REPO_ROOT / "mechanics" / "distillation" / "PARTS.md").read_text(
+            encoding="utf-8"
+        )
+        provenance = (
+            REPO_ROOT / "mechanics" / "distillation" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        landing_log = (
+            REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
+        ).read_text(encoding="utf-8")
+
+        for required in (
+            "config/technique_family_scout.yaml",
+            "config/technique_topology_axes.yaml",
+            "data/technique_kind_overlay.yaml",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, part_readme)
+
+        self.assertIn("scout config", parts)
+        self.assertIn("overlay data", parts)
+        self.assertIn("part-local family/topology scout inputs", provenance)
+        self.assertIn("Technique reform scout input homes", landing_log)
+        self.assertIn("root `config/technique_kind_registry.yaml` remains", landing_log)
+
+    def test_technique_reform_one_owner_scripts_live_under_ingress_part(self) -> None:
+        part_scripts = (
+            "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py",
+            "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py",
+        )
+        old_root_scripts = (
+            "scripts/build_topology_scout.py",
+            "scripts/build_tree_projection.py",
+        )
+
+        for relative_path in part_scripts:
+            with self.subTest(relative_path=relative_path):
+                self.assertTrue((REPO_ROOT / relative_path).is_file())
+
+        for relative_path in old_root_scripts:
+            with self.subTest(relative_path=relative_path):
+                self.assertFalse((REPO_ROOT / relative_path).exists())
+
+        parts = (REPO_ROOT / "mechanics" / "distillation" / "PARTS.md").read_text(
+            encoding="utf-8"
+        )
+        provenance = (
+            REPO_ROOT / "mechanics" / "distillation" / "PROVENANCE.md"
+        ).read_text(encoding="utf-8")
+        scripts_agents = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "scripts"
+            / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("scout scripts", parts)
+        self.assertIn("part-local scout scripts", provenance)
+        self.assertIn("one-owner technique-reform report builders", scripts_agents)
 
     def test_distillation_part_map_names_all_current_parts(self) -> None:
         parts = (REPO_ROOT / "mechanics" / "distillation" / "PARTS.md").read_text(
@@ -677,7 +788,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         self.assertIn("Second Kind Ambiguity Review Pack", review)
-        self.assertIn("updated `reports/kind_ambiguity_audit.md`", review)
+        self.assertIn("updated `mechanics/distillation/parts/technique-reform-ingress/reports/kind_ambiguity_audit.md`", review)
         self.assertIn("does not change frontmatter", review)
         self.assertIn("`AOA-T-0054`", review)
         self.assertIn("compaction-resilient-skill-loading", review)
@@ -966,7 +1077,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("review-compaction", ingress)
         self.assertIn("direct-read migration review", distillation_roadmap)
         self.assertIn("review-compaction", root_roadmap)
-        self.assertIn("reports/technique_tree_projection.md", tree_contract)
+        self.assertIn("mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md", tree_contract)
 
     def test_review_compaction_pilot_migration_is_landed_after_direct_read(self) -> None:
         ingress = (
@@ -8132,7 +8243,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
-            REPO_ROOT / "reports" / "technique_tree_projection.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
         agent_workflows_agents = (
             REPO_ROOT / "techniques" / "agent-workflows" / "AGENTS.md"
@@ -8269,7 +8380,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
-            REPO_ROOT / "reports" / "technique_tree_projection.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Tool-Gateway Direct-Read Singleton Review", review)
@@ -8357,7 +8468,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
-            REPO_ROOT / "reports" / "technique_tree_projection.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
         tool_use_agents = (
             REPO_ROOT / "techniques" / "tool-use" / "AGENTS.md"
@@ -8446,7 +8557,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
-            REPO_ROOT / "reports" / "technique_tree_projection.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Landed Tool-Gateway Pilot Review", review)
@@ -8516,12 +8627,12 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = json.loads(
-            (REPO_ROOT / "reports" / "technique_tree_projection.json").read_text(
+            (REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.json").read_text(
                 encoding="utf-8"
             )
         )
         projection_markdown = (
-            REPO_ROOT / "reports" / "technique_tree_projection.md"
+            REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
         ).read_text(encoding="utf-8")
 
         techniques = projection["techniques"]
@@ -8695,7 +8806,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = json.loads(
-            (REPO_ROOT / "reports" / "technique_tree_projection.json").read_text(
+            (REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.json").read_text(
                 encoding="utf-8"
             )
         )

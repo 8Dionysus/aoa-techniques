@@ -10,15 +10,15 @@ This surface is canonical-only. It stays bounded to authored markdown, typed adv
 See also:
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
 - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-- [PUBLISHED_SUMMARY_SHADOW_REVIEW.md](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-- [EVALUATION_CHAIN_SHADOW_REVIEW.md](EVALUATION_CHAIN_SHADOW_REVIEW.md)
+- [PUBLISHED_SUMMARY_SHADOW_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [EVALUATION_CHAIN_SHADOW_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md)
 
 ## Working Sets
 
 ### Published-summary shadow cluster
 
 - Techniques: [AOA-T-0006](../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md), [AOA-T-0008](../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md), [AOA-T-0010](../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md), [AOA-T-0011](../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md)
-- Review: [PUBLISHED_SUMMARY_SHADOW_REVIEW.md](PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- Review: [PUBLISHED_SUMMARY_SHADOW_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
 - Why grouped: Canonical storage, remediation, integrity, and rendering techniques whose caution language now shares one bounded shadow watch surface.
 
 | technique | current role | watch seam | main failure mode | note |
@@ -31,7 +31,7 @@ See also:
 ### Evaluation-chain shadow pair
 
 - Techniques: [AOA-T-0003](../techniques/proof/evaluation-chain/contract-first-smoke-summary/TECHNIQUE.md), [AOA-T-0007](../techniques/proof/evaluation-chain/signal-first-gate-promotion/TECHNIQUE.md)
-- Review: [EVALUATION_CHAIN_SHADOW_REVIEW.md](EVALUATION_CHAIN_SHADOW_REVIEW.md)
+- Review: [EVALUATION_CHAIN_SHADOW_REVIEW.md](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md)
 - Why grouped: Canonical producer-contract and staged-enforcement techniques whose caution language now shares one bounded evaluation-chain shadow watch surface.
 
 | technique | current role | watch seam | main failure mode | note |

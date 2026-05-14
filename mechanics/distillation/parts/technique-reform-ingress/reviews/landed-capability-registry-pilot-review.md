@@ -10,7 +10,7 @@ Migration receipt:
 [Capability-Registry Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-capability-registry-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -55,7 +55,7 @@ runtime execution doctrine.
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Capability-registry tree pilot receipt](../../../../../legacy/receipts/2026-05-04-capability-registry-tree-pilot.md)
 - [Technique tree projection rows for `capability-registry`,
-  `capability-boundary`, and `skill-discovery`](../../../../../reports/technique_tree_projection.md)
+  `capability-boundary`, and `skill-discovery`](../reports/technique_tree_projection.md)
 - [Landed docs-boundary pilot review](landed-docs-boundary-pilot-review.md)
 - `python scripts/release_check.py` result recorded in the migration receipt
 

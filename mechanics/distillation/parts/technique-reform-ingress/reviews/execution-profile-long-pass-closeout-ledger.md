@@ -79,8 +79,8 @@ No technique meaning or generated source truth moved:
 - no `domain`, `kind`, status, ID, relations, or source-lift changes;
 - no `execution_profile` frontmatter;
 - no schema migration;
-- no `config/technique_topology_axes.yaml` change;
-- no `scripts/build_topology_scout.py` rule change;
+- no `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml` change;
+- no `mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py` rule change;
 - no generated scout, capsule, catalog, section, checklist, evidence-note, or
   KAG output changes beyond release-check parity rewrites that produced no
   durable diff;
@@ -142,7 +142,7 @@ likely either:
 
 Required before landing this closeout wave:
 
-1. `python scripts/build_topology_scout.py`
+1. `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`
 2. `python -m unittest tests.test_distillation_mechanics_topology`
 3. `python scripts/validate_repo.py`
 4. `python scripts/release_check.py`

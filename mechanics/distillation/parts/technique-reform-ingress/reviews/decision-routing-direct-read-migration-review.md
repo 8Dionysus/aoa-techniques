@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Donor-Harvest Pilot Review](landed-donor-harvest-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -52,9 +52,9 @@ public-safety posture, and does not move files from this review pack alone.
 - [AOA-T-0079 canonical readiness](../../../../../techniques/governance/decision-routing/risk-passport-lift/notes/canonical-readiness.md)
 - [Techniques route card](../../../../../techniques/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Technique family scout rows for `decision-routing`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `decision-routing`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `decision-routing`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `decision-routing`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `decision-routing`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `decision-routing`](../reports/technique_tree_projection.md)
 - [Landed donor-harvest pilot review](landed-donor-harvest-pilot-review.md)
 
 ## Direct Bundle Read

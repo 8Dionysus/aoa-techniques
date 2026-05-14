@@ -10,7 +10,7 @@ Migration receipt:
 [Agent-Workflows-Core Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -46,10 +46,10 @@ slice should run a direct-read review for `continuity/donor-harvest`.
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Agent-workflows-core tree pilot receipt](../../../../../legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md)
 - [Agent-workflows-core direct-read migration review](agent-workflows-core-direct-read-migration-review.md)
-- [Agent-workflows core semantic review](../../../../../docs/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-- [Technique family scout rows for `agent-workflows-core` and `donor-harvest`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `agent-workflows-core` and `donor-harvest`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `agent-workflows-core` and `donor-harvest`](../../../../../reports/technique_tree_projection.md)
+- [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
+- [Technique family scout rows for `agent-workflows-core` and `donor-harvest`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `agent-workflows-core` and `donor-harvest`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `agent-workflows-core` and `donor-harvest`](../reports/technique_tree_projection.md)
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
 - [AOA-T-0075 session-donor-harvest](../../../../../techniques/continuity/donor-harvest/session-donor-harvest/TECHNIQUE.md)
 - [AOA-T-0077 harvest-packet-contract](../../../../../techniques/continuity/donor-harvest/harvest-packet-contract/TECHNIQUE.md)

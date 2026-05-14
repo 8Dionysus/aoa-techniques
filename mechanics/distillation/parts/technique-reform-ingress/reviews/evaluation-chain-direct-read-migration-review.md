@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed Skill-Support Pilot Review](landed-skill-support-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -69,10 +69,10 @@ generated surfaces, and validation.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Techniques route card](../../../../../techniques/AGENTS.md)
-- [Technique family scout row for `evaluation-chain`](../../../../../config/technique_family_scout.yaml)
-- [Technique tree projection rows for `evaluation-chain`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `evaluation-chain`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `evaluation-chain`](../../../../../reports/technique_topology_scout.md)
+- [Technique family scout row for `evaluation-chain`](../../../../../mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml)
+- [Technique tree projection rows for `evaluation-chain`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `evaluation-chain`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `evaluation-chain`](../reports/technique_topology_scout.md)
 - [Landed skill-support pilot review](landed-skill-support-pilot-review.md)
 
 ## Direct Bundle Read

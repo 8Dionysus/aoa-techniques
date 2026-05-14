@@ -24,7 +24,7 @@ CURRENT_RELEASE_TECHNIQUES = (
 
 CURRENT_RELEASE_SURFACES = (
     "generated/technique_promotion_readiness.min.json",
-    "scripts/publish_live_receipts.py",
+    "mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py",
     "docs/VIA_NEGATIVA_CHECKLIST.md",
 )
 

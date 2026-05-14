@@ -10,7 +10,7 @@ Migration receipt:
 [Evaluation-Chain Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -47,13 +47,13 @@ four published-summary bundles directly before any path movement.
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Evaluation-chain tree pilot receipt](../../../../../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md)
-- [Technique tree projection rows for `evaluation-chain` and `published-summary`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `evaluation-chain` and `published-summary`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `evaluation-chain` and `published-summary`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `evaluation-chain` and `published-summary`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `evaluation-chain` and `published-summary`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `evaluation-chain` and `published-summary`](../reports/technique_topology_scout.md)
 - [Evaluation-chain direct-read migration review](evaluation-chain-direct-read-migration-review.md)
 - [Landed skill-support pilot review](landed-skill-support-pilot-review.md)
-- [Published-summary semantic review](../../../../../docs/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [Published-summary shadow review](../../../../../docs/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
+- [Published-summary semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
+- [Published-summary shadow review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
 - [AOA-T-0006 latest-alias-plus-history-copy](../../../../../techniques/proof/published-summary/latest-alias-plus-history-copy/TECHNIQUE.md)
 - [AOA-T-0008 published-summary-remediation-snapshot](../../../../../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md)
 - [AOA-T-0010 telemetry-integrity-snapshot](../../../../../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md)

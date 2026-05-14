@@ -4,13 +4,13 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Projection packet:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Prior pilot review:
 [Landed Instruction-Surface Pilot Review](landed-instruction-surface-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -44,7 +44,7 @@ generated surfaces, and validation move together.
 - [AOA-T-0047 github-review-template-lift](../../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
 - [AOA-T-0048 semantic-review-surface-lift](../../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 - [Docs domain route card](../../../../../techniques/docs/AGENTS.md)
-- `reports/technique_tree_projection.md` rows for `kag-source-lift`,
+- `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `kag-source-lift`,
   `docs-boundary`, `instruction-surface`, `capability-registry`,
   `capability-boundary`, and `skill-discovery`
 - [First family shelf review pack](first-family-shelf-review-pack.md)

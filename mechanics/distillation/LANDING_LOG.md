@@ -3,6 +3,142 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-14 - Technique reform scout script homes
+
+Changed:
+
+- moved `build_topology_scout.py` and `build_tree_projection.py` from root
+  `scripts/` into
+  [technique reform scripts](parts/technique-reform-ingress/scripts/)
+- kept shared parsing and validation logic in root `scripts/validate_repo.py`
+  because it still validates repo-wide generated parity and frontmatter
+  contracts
+- updated release-check, validators, docs, tests, and generated report command
+  hints to use the part-local command paths
+- recorded the placement rationale in
+  [mechanic-script-homes](../../docs/decisions/2026-05-14-mechanic-script-homes.md)
+
+Verification lane:
+
+```bash
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
+python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo
+python scripts/validate_repo.py
+python scripts/release_check.py
+git diff --check
+```
+
+Not moved:
+
+- root `scripts/validate_repo.py` remains the repo-wide validator and shared
+  helper surface
+- root `scripts/build_kind_manifest.py` remains root because it writes root
+  generated kind manifests and reader docs as well as mechanic reports
+
+## 2026-05-14 - Technique reform scout input homes
+
+Changed:
+
+- moved scout-only family and topology input registries from root `config/`
+  into [technique reform config](parts/technique-reform-ingress/config/)
+- moved kind-overlay YAML/CSV data from root `data/` into
+  [technique reform data](parts/technique-reform-ingress/data/)
+- kept root `config/technique_kind_registry.yaml` as the repo-wide current
+  `kind` contract
+- updated builders, validators, generated report source maps, docs, and tests
+  so scout inputs route through the Distillation part that interprets them
+
+Verification lane:
+
+```bash
+python scripts/build_kind_manifest.py
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
+python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+git diff --check
+```
+
+Not moved:
+
+- root `config/technique_kind_registry.yaml` remains the current `kind`
+  registry
+- no technique bundle, frontmatter field, status, relation, or schema changed
+- no scout-only input became frontmatter truth or automatic remap authority
+
+## 2026-05-14 - Technique reform reports mechanics home
+
+Changed:
+
+- moved generated scout and projection reports from root `reports/` into
+  [technique reform reports](parts/technique-reform-ingress/reports/)
+- updated report builders, validators, and tests to use the mechanic-local
+  report home
+- updated root, docs, legacy, and review links so `reports/` is not treated as
+  the current root home for technique-reform evidence
+- regenerated kind, family, topology, and tree scout reports with relative links
+  from the deeper mechanic-local route
+- recorded the placement rationale in
+  [technique-reform-report-home](../../docs/decisions/2026-05-14-technique-reform-report-home.md)
+
+Verification lane:
+
+```bash
+python scripts/build_kind_manifest.py
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
+python scripts/validate_semantic_agents.py
+python -m unittest tests.test_validate_repo
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+git diff --check
+```
+
+Not moved:
+
+- no technique bundle moved
+- no technique frontmatter, status, or relation changed
+- no generated report became source truth
+- no proof, eval, or public-share authority was imported into Distillation
+
+## 2026-05-14 - Review packet mechanics home
+
+Changed:
+
+- moved authored semantic-review packets from flat `docs/` into
+  [semantic review packets](parts/technique-reform-ingress/reviews/semantic/)
+- moved authored shadow-review packets from flat `docs/` into
+  [shadow review packets](parts/technique-reform-ingress/reviews/shadow/)
+- kept public reader routes in `docs/SEMANTIC_REVIEW_GUIDE.md`,
+  `docs/SELECTION_PATTERNS.md`, `docs/TECHNIQUE_SHADOW_GUIDE.md`, and
+  `docs/SHADOW_PATTERNS.md`
+- updated the semantic and shadow manifests so the mechanics packet paths are
+  the source paths, not aliases back to `docs/`
+- recorded the placement rationale in
+  [review-packet-mechanics-home](../../docs/decisions/2026-05-14-review-packet-mechanics-home.md)
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_validate_repo
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
+
+Not moved:
+
+- no technique bundle moved
+- no technique frontmatter, status, or relation changed
+- no generated output became source truth
+- historical raw legacy receipts were not rewritten
+
 ## 2026-05-06 - Roadmap contour cleanup
 
 Changed:
@@ -2917,9 +3053,9 @@ Not moved:
 Changed:
 
 - added generated
-  [technique_tree_projection](../../reports/technique_tree_projection.md)
+  [technique_tree_projection](parts/technique-reform-ingress/reports/technique_tree_projection.md)
   reports over all `107` bundles
-- added `scripts/build_tree_projection.py` and validator parity for the
+- added `mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py` and validator parity for the
   projection surface
 - added
   [first-tree-projection-review-pack](parts/technique-reform-ingress/reviews/first-tree-projection-review-pack.md)
@@ -2929,7 +3065,7 @@ Changed:
 Verification lane:
 
 ```bash
-python scripts/build_tree_projection.py
+python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
 python -m unittest tests.test_distillation_mechanics_topology
 python scripts/validate_repo.py
 python -m unittest discover -s tests

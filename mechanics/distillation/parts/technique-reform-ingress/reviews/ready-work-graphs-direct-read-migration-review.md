@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed Antifragility-Recovery Pilot Review](landed-antifragility-recovery-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -65,9 +65,9 @@ surfaces, and validates the repository.
 - [AOA-T-0055 external import review](../../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/external-import-review.md)
 - [AOA-T-0055 canonical readiness](../../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/notes/canonical-readiness.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Technique tree projection rows for `ready-work-graphs`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `ready-work-graphs`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `ready-work-graphs`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `ready-work-graphs`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `ready-work-graphs`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `ready-work-graphs`](../reports/technique_topology_scout.md)
 - [Landed antifragility-recovery pilot review](landed-antifragility-recovery-pilot-review.md)
 
 ## Direct Bundle Read

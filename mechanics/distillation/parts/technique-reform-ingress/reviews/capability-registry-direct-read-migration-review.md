@@ -7,7 +7,7 @@ Preceding landed review:
 [Landed Docs-Boundary Pilot Review](landed-docs-boundary-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -50,7 +50,7 @@ cards, root legacy receipts, links, generated surfaces, and validation.
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
 - [Landed docs-boundary pilot review](landed-docs-boundary-pilot-review.md)
 - [Technique tree projection rows for `capability-registry`,
-  `capability-boundary`, and `skill-discovery`](../../../../../reports/technique_tree_projection.md)
+  `capability-boundary`, and `skill-discovery`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 

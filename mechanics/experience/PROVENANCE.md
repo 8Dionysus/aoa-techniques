@@ -29,6 +29,21 @@ the active route just because they existed before this split.
 | Pre-split flat `HANDOFF_COMPRESSION_TECHNIQUE.md` | [parts/handoff-compression](parts/handoff-compression/README.md) | Handoff compression remains owner-local contract behavior, not live office execution. |
 | Pre-split flat `SERVICE_CLARITY_TECHNIQUE.md` | [parts/service-clarity](parts/service-clarity/README.md) | Service clarity remains bounded by owner consent and upstream runtime stop-lines. |
 
+## Contract Packet Bridge
+
+These previous root schema/example packets now travel with the Experience part
+that interprets them. Their old internal local-host JSON identifiers were
+replaced with public part-local schema URLs; field semantics stayed unchanged.
+
+| Previous root packet | Active route | Distilled signal |
+|---|---|---|
+| `schemas/appeal_reasoning_step_v1.json` plus `examples/appeal_reasoning_step.example.json` | [parts/appeal-reasoning](parts/appeal-reasoning/README.md) | Appeal reasoning contract evidence belongs beside the appeal part. |
+| `schemas/technique_governance_precedent_v1.json` plus `examples/technique_governance_precedent.example.json` | [parts/governance-precedent](parts/governance-precedent/README.md) | Governance precedent contract evidence belongs beside the governance-precedent part. |
+| `schemas/sealed_decision_technique_note_v1.json` plus `examples/sealed_decision_technique_note_v1.example.json` | [parts/sealed-decision](parts/sealed-decision/README.md) | Sealed-decision note contract evidence belongs beside the sealed-decision part. |
+| `schemas/scope_boundary_technique_note_v1.json` plus `examples/scope_boundary_technique_note_v1.example.json` | [parts/scope-boundary](parts/scope-boundary/README.md) | Scope-boundary contract evidence belongs beside the scope-boundary part. |
+| `schemas/handoff_compression_technique_note_v1.json` plus `examples/handoff_compression_technique_note_v1.example.json` | [parts/handoff-compression](parts/handoff-compression/README.md) | Handoff-compression contract evidence belongs beside the handoff-compression part. |
+| `schemas/service_clarity_technique_note_v1.json` plus `examples/service_clarity_technique_note_v1.example.json` | [parts/service-clarity](parts/service-clarity/README.md) | Service-clarity contract evidence belongs beside the service-clarity part. |
+
 ## Center Context Bridge
 
 | Context source | Active route | Distilled signal |

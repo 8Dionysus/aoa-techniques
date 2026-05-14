@@ -4,9 +4,9 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 and
-[Technique Tree Projection JSON](../../../../../reports/technique_tree_projection.json)
+[Technique Tree Projection JSON](../reports/technique_tree_projection.json)
 
 Upstream review:
 [First Family Shelf Review Pack](first-family-shelf-review-pack.md)

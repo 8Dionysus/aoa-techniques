@@ -4,7 +4,7 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Generated lens:
-[Kind Ambiguity Audit](../../../../../reports/kind_ambiguity_audit.md)
+[Kind Ambiguity Audit](../reports/kind_ambiguity_audit.md)
 
 Kind source:
 [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)

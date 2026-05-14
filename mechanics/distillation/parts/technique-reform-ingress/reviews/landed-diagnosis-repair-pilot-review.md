@@ -10,7 +10,7 @@ Migration receipt:
 [Diagnosis-Repair Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -45,7 +45,7 @@ test a docs-rooted instruction district before the more derived
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [Diagnosis-repair tree pilot receipt](../../../../../legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md)
 - [Technique tree projection rows for `diagnosis-repair`,
-  `instruction-surface`, and `kag-source-lift`](../../../../../reports/technique_tree_projection.md)
+  `instruction-surface`, and `kag-source-lift`](../reports/technique_tree_projection.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)
 - `python scripts/release_check.py` result recorded in the migration receipt

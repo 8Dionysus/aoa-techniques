@@ -10,7 +10,7 @@ Migration receipt:
 [History-Artifacts Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -52,9 +52,9 @@ read the four recovery bundles directly before any path movement.
 - [History route card](../../../../../techniques/history/AGENTS.md)
 - [Root legacy index](../../../../../legacy/INDEX.md)
 - [History-artifacts tree pilot receipt](../../../../../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md)
-- [Technique tree projection rows for `history-artifacts` and `antifragility-recovery`](../../../../../reports/technique_tree_projection.md)
-- [Technique family scout rows for `history-artifacts` and `antifragility-recovery`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `history-artifacts` and `antifragility-recovery`](../../../../../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `history-artifacts` and `antifragility-recovery`](../reports/technique_tree_projection.md)
+- [Technique family scout rows for `history-artifacts` and `antifragility-recovery`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `history-artifacts` and `antifragility-recovery`](../reports/technique_topology_scout.md)
 - [History-artifacts direct-read migration review](history-artifacts-direct-read-migration-review.md)
 - [Landed published-summary pilot review](landed-published-summary-pilot-review.md)
 - [AOA-T-0097 degrade-reground-recover](../../../../../techniques/recovery/antifragility-recovery/degrade-reground-recover/TECHNIQUE.md)

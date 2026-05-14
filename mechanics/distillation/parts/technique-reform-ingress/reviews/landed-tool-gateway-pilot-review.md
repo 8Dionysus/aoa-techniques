@@ -10,7 +10,7 @@ Migration receipt:
 [Tool-Gateway Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -49,9 +49,9 @@ slice should be the whole-tree closeout review.
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Tool-gateway tree pilot receipt](../../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
 - [Tool-gateway direct-read singleton review](tool-gateway-direct-read-singleton-review.md)
-- [Technique family scout row for `tool-gateway`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout row for `tool-gateway`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection row for `tool-gateway`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout row for `tool-gateway`](../reports/technique_family_scout.md)
+- [Technique topology scout row for `tool-gateway`](../reports/technique_topology_scout.md)
+- [Technique tree projection row for `tool-gateway`](../reports/technique_tree_projection.md)
 
 ## Landed Shape Read
 

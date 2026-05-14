@@ -3,7 +3,7 @@
 Status: review-pack-landed, no frontmatter remap by itself.
 
 This packet is the fresh read after the first kind ambiguity shortlist closed.
-It starts from the updated `reports/kind_ambiguity_audit.md`, then checks the
+It starts from the updated `mechanics/distillation/parts/technique-reform-ingress/reports/kind_ambiguity_audit.md`, then checks the
 remaining pressure against direct bundle text, the kind registry, and the first
 review pack.
 
@@ -11,10 +11,10 @@ It does not change frontmatter and does not authorize a broad remap wave.
 
 ## Source Packet
 
-- updated `reports/kind_ambiguity_audit.md`
+- updated `mechanics/distillation/parts/technique-reform-ingress/reports/kind_ambiguity_audit.md`
 - [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
 - [Technique Kind Guide](../../../../../docs/TECHNIQUE_KIND_GUIDE.md)
-- [Technique Topology Scout](../../../../../reports/technique_topology_scout.md)
+- [Technique Topology Scout](../reports/technique_topology_scout.md)
 - [First Kind Ambiguity Review Pack](first-kind-ambiguity-review-pack.md)
 
 ## Verdict

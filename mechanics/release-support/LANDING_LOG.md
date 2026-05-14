@@ -4,6 +4,27 @@ This log records checked structural landings for the `aoa-techniques`
 release-support package. It is not a live release-status surface and not a
 substitute for technique review, public-claim proof, or owner acceptance.
 
+## 2026-05-14 - Contract Packet Part Homes
+
+- Moved release-support JSON schema/example packets from root `schemas/` and
+  `examples/` into owning part-local `schemas/` and `examples/` directories.
+- Replaced old internal local-host JSON identifiers with public part-local
+  schema URLs without changing schema fields.
+- Updated part map and provenance so contract packets are found through the
+  owning release-support route, not root inventory.
+- Did not change release-support contract fields, claim release authority,
+  claim public support proof, or promote release-support pressure into direct
+  owner acceptance.
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_experience_release_contracts
+python -m unittest tests.test_release_support_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
 ## 2026-05-02
 
 - Split the two pre-split flat release-support files into active part-local

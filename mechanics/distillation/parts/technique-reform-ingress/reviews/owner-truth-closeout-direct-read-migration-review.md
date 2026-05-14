@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Runtime-Truth-Lifecycle Pilot Review](landed-runtime-truth-lifecycle-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -75,9 +75,9 @@ public-safety posture, and does not move files from this review pack alone.
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
-- [Technique family scout rows for `owner-truth-closeout`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `owner-truth-closeout`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `owner-truth-closeout`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `owner-truth-closeout`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `owner-truth-closeout`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `owner-truth-closeout`](../reports/technique_tree_projection.md)
 - [Landed runtime-truth-lifecycle pilot review](landed-runtime-truth-lifecycle-pilot-review.md)
 
 ## Direct Bundle Read

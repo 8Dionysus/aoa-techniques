@@ -101,18 +101,34 @@ def is_rfc3339_datetime(value: object) -> bool:
             return False
     return True
 
-RELEASE_CONTRACTS = (
-    ('handoff_compression_technique_note_v1', 'handoff_compression_technique_note_v1.json'),
-    ('installation_technique_note_v1', 'installation_technique_note_v1.json'),
-    ('scope_boundary_technique_note_v1', 'scope_boundary_technique_note_v1.json'),
-    ('service_clarity_technique_note_v1', 'service_clarity_technique_note_v1.json'),
-    ('sovereign_release_technique_note_v1', 'sovereign_release_technique_note_v1.json'),
-)
+RELEASE_CONTRACTS = {
+    "handoff_compression_technique_note_v1": (
+        "mechanics/experience/parts/handoff-compression/schemas/handoff_compression_technique_note_v1.json",
+        "mechanics/experience/parts/handoff-compression/examples/handoff_compression_technique_note_v1.example.json",
+    ),
+    "installation_technique_note_v1": (
+        "mechanics/release-support/parts/installation-techniques/schemas/installation_technique_note_v1.json",
+        "mechanics/release-support/parts/installation-techniques/examples/installation_technique_note_v1.example.json",
+    ),
+    "scope_boundary_technique_note_v1": (
+        "mechanics/experience/parts/scope-boundary/schemas/scope_boundary_technique_note_v1.json",
+        "mechanics/experience/parts/scope-boundary/examples/scope_boundary_technique_note_v1.example.json",
+    ),
+    "service_clarity_technique_note_v1": (
+        "mechanics/experience/parts/service-clarity/schemas/service_clarity_technique_note_v1.json",
+        "mechanics/experience/parts/service-clarity/examples/service_clarity_technique_note_v1.example.json",
+    ),
+    "sovereign_release_technique_note_v1": (
+        "mechanics/release-support/parts/sovereign-release-techniques/schemas/sovereign_release_technique_note_v1.json",
+        "mechanics/release-support/parts/sovereign-release-techniques/examples/sovereign_release_technique_note_v1.example.json",
+    ),
+}
 
 
-def load_contract(stem: str, schema_file: str) -> tuple[dict[str, object], dict[str, object]]:
-    schema_path = ROOT / "schemas" / schema_file
-    example_path = ROOT / "examples" / f"{stem}.example.json"
+def load_contract(stem: str) -> tuple[dict[str, object], dict[str, object]]:
+    schema_rel, example_rel = RELEASE_CONTRACTS[stem]
+    schema_path = ROOT / schema_rel
+    example_path = ROOT / example_rel
     schema = json.loads(schema_path.read_text(encoding="utf-8"))
     example = json.loads(example_path.read_text(encoding="utf-8"))
     return schema, example
@@ -337,26 +353,26 @@ class ExperienceReleaseContractTests(unittest.TestCase):
     def test_experience_release_examples_match_schemas(self) -> None:
         self.assertTrue(RELEASE_CONTRACTS)
         missing_pairs: list[str] = []
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema_path = ROOT / "schemas" / schema_file
-            example_path = ROOT / "examples" / f"{stem}.example.json"
+        for stem, (schema_rel, example_rel) in RELEASE_CONTRACTS.items():
+            schema_path = ROOT / schema_rel
+            example_path = ROOT / example_rel
             if not schema_path.exists():
                 missing_pairs.append(f"{example_path.relative_to(ROOT)} -> {schema_path.relative_to(ROOT)}")
             if not example_path.exists():
                 missing_pairs.append(f"{schema_path.relative_to(ROOT)} -> {example_path.relative_to(ROOT)}")
         self.assertFalse(missing_pairs, "missing release contract pair(s): " + ", ".join(missing_pairs))
 
-        for stem, schema_file in RELEASE_CONTRACTS:
+        for stem in RELEASE_CONTRACTS:
             with self.subTest(stem=stem):
-                schema, example = load_contract(stem, schema_file)
+                schema, example = load_contract(stem)
                 Draft202012Validator.check_schema(schema)
                 errors = validation_errors(schema, example)
                 self.assertFalse(errors, f"{stem}: {errors[0].message}" if errors else stem)
 
     def test_experience_release_schemas_reject_unknown_fields(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in object_paths(example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
@@ -369,8 +385,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_wrong_types_for_every_field(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, value in walk_values(example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
@@ -381,8 +397,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_missing_required_fields(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in required_paths(schema, example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
@@ -393,8 +409,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_bad_array_items(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in array_paths(example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
@@ -410,8 +426,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_empty_strings(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path in string_paths(example):
                 with self.subTest(stem=stem, path=path):
                     mutated = copy.deepcopy(example)
@@ -422,8 +438,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_const_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, _constraint in constrained_paths(schema, example, "const"):
                 with self.subTest(stem=stem, path=path):
                     value = get_path(example, path)
@@ -435,8 +451,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_enum_escapes(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, _constraint in constrained_paths(schema, example, "enum"):
                 with self.subTest(stem=stem, path=path):
                     value = get_path(example, path)
@@ -448,8 +464,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_reject_bad_datetime_formats(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, constraint in constrained_paths(schema, example, "format"):
                 if constraint != "date-time":
                     continue
@@ -472,8 +488,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
 
     def test_experience_release_schemas_accept_rfc3339_datetime_variants(self) -> None:
         exercised = 0
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, constraint in constrained_paths(schema, example, "format"):
                 if constraint != "date-time":
                     continue
@@ -494,8 +510,8 @@ class ExperienceReleaseContractTests(unittest.TestCase):
         self.assertGreater(exercised, 0)
 
     def test_experience_release_schemas_reject_numeric_bound_escapes(self) -> None:
-        for stem, schema_file in RELEASE_CONTRACTS:
-            schema, example = load_contract(stem, schema_file)
+        for stem in RELEASE_CONTRACTS:
+            schema, example = load_contract(stem)
             for path, value in walk_values(example):
                 if not isinstance(value, (int, float)) or isinstance(value, bool):
                     continue

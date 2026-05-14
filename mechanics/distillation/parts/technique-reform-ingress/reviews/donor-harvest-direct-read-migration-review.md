@@ -7,7 +7,7 @@ Previous landed review:
 [Landed Agent-Workflows-Core Pilot Review](landed-agent-workflows-core-pilot-review.md)
 
 Generated lens:
-[Technique Tree Projection](../../../../../reports/technique_tree_projection.md)
+[Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Tree contract:
 [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
@@ -58,9 +58,9 @@ public-safety posture, and does not move files from this review pack alone.
 - [AOA-T-0085 canonical readiness](../../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/notes/canonical-readiness.md)
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Technique family scout rows for `donor-harvest`](../../../../../reports/technique_family_scout.md)
-- [Technique topology scout rows for `donor-harvest`](../../../../../reports/technique_topology_scout.md)
-- [Technique tree projection rows for `donor-harvest`](../../../../../reports/technique_tree_projection.md)
+- [Technique family scout rows for `donor-harvest`](../reports/technique_family_scout.md)
+- [Technique topology scout rows for `donor-harvest`](../reports/technique_topology_scout.md)
+- [Technique tree projection rows for `donor-harvest`](../reports/technique_tree_projection.md)
 
 ## Direct Bundle Read
 
