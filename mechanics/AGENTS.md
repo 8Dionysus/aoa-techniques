@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Route card for the `aoa-techniques/mechanics/` surface.
+## Applies to
 
-## Purpose
+This card applies to `mechanics/` and all descendants unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 `mechanics/` owns reusable practice-motion surfaces for `aoa-techniques`.
 These files describe how practice moves through the repo by participating in
@@ -39,7 +42,7 @@ It does not own:
   questbook references
 - AoA constitutional doctrine, which belongs in `Agents-of-Abyss`
 
-## Start here
+## Read before editing
 
 1. Read the repository root `AGENTS.md`, `README.md`, `ROADMAP.md`, and
    `docs/START_HERE.md`.
@@ -55,7 +58,7 @@ It does not own:
    `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, and
    `docs/RELEASING.md`.
 
-## Local law
+## Boundaries
 
 - Mechanics may route, constrain, stage, and prepare movement, but they do not
   silently promote candidates into canon.
@@ -97,7 +100,7 @@ It does not own:
   outputs, risks, and validation, promote it into `techniques/` through the
   normal review path instead of letting it sprawl here.
 
-## Verify
+## Validation
 
 Use the root validation path after changes:
 
@@ -109,3 +112,10 @@ python scripts/run_tests.py
 If Agon binding candidates, questbook references, RPG references, manifests, or
 generated reader surfaces change, run their named builders or validators before
 closeout.
+
+## Closeout
+
+Report the mechanic package, part, request receipt, provenance, generated
+surface, or test lane changed; source surfaces consulted; checks run; checks
+skipped; and whether any candidate should move toward a technique bundle,
+remain mechanics-owned, or route to a sibling AoA owner.

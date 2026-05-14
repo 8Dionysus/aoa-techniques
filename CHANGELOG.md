@@ -8,6 +8,10 @@ The format is intentionally simple and human-first.
 
 ### Added
 
+- added repo-local `DESIGN.md`, `DESIGN.AGENTS.md`, AGENTS mesh guardrails,
+  `config/agents_mesh.json`, generated `agents_mesh.min.json`, validators, and
+  tests so the Agents-of-Abyss agent-surface principle is adapted into a
+  checkable `aoa-techniques` mesh with canonical and migration card statuses
 - promoted `AOA-T-0101 local-pattern-adoption-gate` from the Method-growth
   pattern-adoption part as one atomic guardrail before durable local adoption
 - promoted `AOA-T-0102 skill-proposal-handoff-packet` from the Method-growth

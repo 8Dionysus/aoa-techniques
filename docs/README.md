@@ -13,6 +13,8 @@ Choose the path that matches your question:
 - I need one repo-only entrypoint first:
   - [Start Here](START_HERE.md)
   - [Charter](../CHARTER.md)
+  - [System Design](../DESIGN.md)
+  - [Agent Surface Design](../DESIGN.AGENTS.md)
   - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
   - [Root Surface Law](ROOT_SURFACE_LAW.md)
 - I need to pick a technique now:
@@ -179,7 +181,7 @@ These are small local derived cards for runtime lookup. They stay subordinate to
 ### Generated docs/status manifests
 
 These are derived public route/canon/status source-lift surfaces. They stay
-subordinate to the 19 authoritative public route/canon/status files and do not
+subordinate to the 21 authoritative public route/canon/status files and do not
 replace those docs as the source of truth.
 
 - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)

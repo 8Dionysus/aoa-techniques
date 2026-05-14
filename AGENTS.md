@@ -2,7 +2,12 @@
 
 Root route card for `aoa-techniques`.
 
-## Purpose
+## Applies to
+
+This card applies to the whole `aoa-techniques` repository. For any touched
+path, read this card first and then the nearest nested `AGENTS.md`.
+
+## Role
 
 `aoa-techniques` is the public practice canon of AoA.
 It stores reusable, sanitized, bounded, reviewable engineering techniques that can later be lifted into skills, evals, routing, KAG exports, or other derived artifacts.
@@ -27,24 +32,30 @@ It does not own:
 - skill workflow meaning, proof doctrine, routing, role contracts, memory, playbooks, KAG substrate meaning, or stats summaries
 - private project operations, secrets, or infrastructure detail
 
-## Start here
+`DESIGN.md` names the repository system form. `DESIGN.AGENTS.md` names the
+agent-facing surface form. This card is the operational route card for agents.
+
+## Read before editing
 
 1. `README.md`
 2. `CHARTER.md`
-3. `docs/START_HERE.md`
-4. `docs/TECHNIQUE_ATOM_CONTRACT.md`
-5. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-6. `docs/TECHNIQUE_TREE_CONTRACT.md` when corpus path architecture, tree projection, or bundle moves matter
-7. `ROADMAP.md` when direction, horizons, or repo-level future triggers move
-8. `docs/ROOT_SURFACE_LAW.md` when root or docs-root placement changes
-9. `legacy/README.md` when root-wide raw, archive, or receipt provenance changes
-10. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
-11. `WALKTHROUGH.md`
-12. `docs/TECHNIQUE_SELECTION.md`
-13. `docs/TECHNIQUE_KIND_GUIDE.md`
-14. the target `techniques/**/TECHNIQUE.md`
-15. affected generated catalogs, capsules, feat cards, or source-lift outputs
-16. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
+3. `DESIGN.md`
+4. `DESIGN.AGENTS.md`
+5. `docs/START_HERE.md`
+6. `docs/TECHNIQUE_ATOM_CONTRACT.md`
+7. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+8. `docs/TECHNIQUE_TREE_CONTRACT.md` when corpus path architecture, tree projection, or bundle moves matter
+9. `ROADMAP.md` when direction, horizons, or repo-level future triggers move
+10. `docs/ROOT_SURFACE_LAW.md` when root or docs-root placement changes
+11. `docs/guardrails/AGENTS_MESH_PROTOCOL.md` when agent-card coverage, shape, or generated mesh surfaces move
+12. `legacy/README.md` when root-wide raw, archive, or receipt provenance changes
+13. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
+14. `WALKTHROUGH.md`
+15. `docs/TECHNIQUE_SELECTION.md`
+16. `docs/TECHNIQUE_KIND_GUIDE.md`
+17. the target `techniques/**/TECHNIQUE.md`
+18. affected generated catalogs, capsules, feat cards, agent-mesh mirrors, or source-lift outputs
+19. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
 
 ## Route modes
 
@@ -54,6 +65,7 @@ It does not own:
 | `technique-authoring` | you will add, split, promote, or revise one technique | `docs/TECHNIQUE_ATOM_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> target bundle |
 | `tree-structure` | you will design, project, or migrate corpus path architecture | `docs/TECHNIQUE_TREE_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> affected generated surfaces |
 | `root-editing` | you will add, move, delete, or rewrite a root or docs-root surface | `CHARTER.md` -> `docs/ROOT_SURFACE_LAW.md` |
+| `agent-surface-design` | you will add, move, normalize, or validate agent-facing cards | `DESIGN.AGENTS.md` -> `docs/guardrails/AGENTS_MESH_PROTOCOL.md` -> nearest `AGENTS.md` |
 | `legacy-provenance` | you will preserve repo-wide raw packets, archived tails, or path-migration receipts | `legacy/README.md` -> `legacy/INDEX.md` -> active owner route |
 | `direction-change` | roadmap, corpus-scale pressure, portability posture, or future triggers change | `ROADMAP.md` |
 | `mechanic-change` | practice movement, donor intake, audit, recurrence, checkpoint, RPG, or release-support surfaces change | `mechanics/README.md` -> nearest mechanic `AGENTS.md` |
@@ -112,6 +124,19 @@ Update only the ones that moved; otherwise say no update was needed.
 - neighboring owner repositories when the change routes or constrains their
   truth.
 
+## Boundaries
+
+- Do not turn a technique into a skill, eval, route, playbook, memory object,
+  role contract, runtime behavior, or ToS source.
+- Do not treat generated catalogs, capsules, source-lift outputs, or AGENTS
+  mesh mirrors as authored meaning.
+- Do not hide project-private residue, secrets, unreduced transcripts, or
+  machine-local assumptions inside portable practice.
+- Do not let a local `AGENTS.md` card override `TECHNIQUE.md`, source docs,
+  schemas, builders, validators, or a stronger sibling owner.
+- Do not make root files, docs-root files, or top-level directories without
+  checking `docs/ROOT_SURFACE_LAW.md`.
+
 ## Route away when
 
 - the object is an executable workflow, not a reusable practice
@@ -119,7 +144,7 @@ Update only the ones that moved; otherwise say no update was needed.
 - the change is proof, routing, memory, role, playbook, KAG, or stats meaning
 - the idea is vague philosophy without an operational method
 
-## Verify
+## Validation
 
 Default validation:
 
@@ -130,7 +155,16 @@ python scripts/run_tests.py
 
 Use release checks or Agon-specific checks from `docs/AGENTS_ROOT_REFERENCE.md` when publication posture, broad generated outputs, or companion-candidate surfaces change.
 
-## Report
+For agent-surface changes, run the AGENTS mesh lane:
+
+```bash
+python scripts/validate_agents_md_shape.py
+python scripts/validate_agents_mesh.py
+python scripts/build_agents_mesh_index.py --check
+python scripts/validate_agents_mesh_index.py
+```
+
+## Closeout
 
 State the technique, technique family, root surface, mechanic, or GitHub
 platform surface changed; whether IDs, kind, domain, state, adaptation notes,

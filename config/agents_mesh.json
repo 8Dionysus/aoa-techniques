@@ -1,0 +1,58 @@
+{
+  "schema_version": "aoa_techniques_agents_mesh_v1",
+  "authority_ref": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+  "design_ref": "DESIGN.AGENTS.md",
+  "system_design_ref": "DESIGN.md",
+  "root_agents_ref": "AGENTS.md",
+  "route_contract_ref": "docs/START_HERE.md",
+  "generated_ref": "generated/agents_mesh.min.json",
+  "canonical_required_headings": [
+    "## Applies to",
+    "## Role",
+    "## Read before editing",
+    "## Boundaries",
+    "## Validation",
+    "## Closeout"
+  ],
+  "canonical_cards": [
+    "AGENTS.md",
+    ".agents/AGENTS.md",
+    ".agents/skills/AGENTS.md",
+    ".agents/spark/AGENTS.md",
+    ".github/AGENTS.md",
+    "config/AGENTS.md",
+    "docs/AGENTS.md",
+    "docs/guardrails/AGENTS.md",
+    "examples/AGENTS.md",
+    "generated/AGENTS.md",
+    "incoming/AGENTS.md",
+    "legacy/AGENTS.md",
+    "mechanics/AGENTS.md",
+    "mechanics/tests/AGENTS.md",
+    "quests/AGENTS.md",
+    "schemas/AGENTS.md",
+    "scripts/AGENTS.md",
+    "techniques/AGENTS.md",
+    "templates/AGENTS.md",
+    "tests/AGENTS.md"
+  ],
+  "migration_allowed": true,
+  "top_level_exemptions": [
+    ".aoa",
+    ".git",
+    ".pytest_cache",
+    "__pycache__"
+  ],
+  "ignored_directory_names": [
+    ".aoa",
+    ".git",
+    ".pytest_cache",
+    "__pycache__"
+  ],
+  "validation_commands": [
+    "python scripts/validate_agents_md_shape.py",
+    "python scripts/validate_agents_mesh.py",
+    "python scripts/build_agents_mesh_index.py --check",
+    "python scripts/validate_agents_mesh_index.py"
+  ]
+}

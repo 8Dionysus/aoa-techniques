@@ -34,6 +34,8 @@ exactly:
 
 - `README.md`
 - `CHARTER.md`
+- `DESIGN.md`
+- `DESIGN.AGENTS.md`
 - `docs/START_HERE.md`
 - `docs/ECOSYSTEM_CONTEXT.md`
 - `docs/ROOT_SURFACE_LAW.md`

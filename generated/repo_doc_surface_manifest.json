@@ -67,6 +67,50 @@
       ]
     },
     {
+      "doc_id": "design",
+      "doc_path": "DESIGN.md",
+      "title": "aoa-techniques System Design",
+      "surface_group": "canon/authority",
+      "bounded_role": "root system-form surface for the reusable practice canon and standalone plus AoA organ posture",
+      "top_level_sections": [
+        "Role",
+        "Design Thesis",
+        "Design as Appearance",
+        "Design as Anatomy",
+        "Design as Operation",
+        "Design as Aim",
+        "Design Principles",
+        "Good Design Feels Like",
+        "Bad Design Smells Like",
+        "Relationship to Other Root Surfaces",
+        "Use by Agents"
+      ]
+    },
+    {
+      "doc_id": "design_agents",
+      "doc_path": "DESIGN.AGENTS.md",
+      "title": "aoa-techniques Agent Surface Design",
+      "surface_group": "canon/authority",
+      "bounded_role": "root agent-surface design form for the AGENTS mesh and portable agent guidance",
+      "top_level_sections": [
+        "Role",
+        "Design Thesis",
+        "Design as Appearance",
+        "Design as Anatomy",
+        "Design as Operation",
+        "Design as Authority",
+        "Canonical Card Shape",
+        "Applies to",
+        "Role",
+        "Read before editing",
+        "Boundaries",
+        "Validation",
+        "Closeout",
+        "Migration Posture",
+        "Design Principles"
+      ]
+    },
+    {
       "doc_id": "start_here",
       "doc_path": "docs/START_HERE.md",
       "title": "Start Here",
@@ -202,16 +246,18 @@
       "surface_group": "contribution/policy",
       "bounded_role": "contributor doctrine for public-safe planning, focused diffs, verification, and reporting",
       "top_level_sections": [
-        "Purpose",
+        "Applies to",
+        "Role",
         "Owner lane",
-        "Start here",
+        "Read before editing",
         "Route modes",
         "AGENTS stack law",
         "GitHub landing workflow",
         "Post-change route review",
+        "Boundaries",
         "Route away when",
-        "Verify",
-        "Report",
+        "Validation",
+        "Closeout",
         "Full reference"
       ]
     },
