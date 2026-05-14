@@ -56,12 +56,12 @@ legacy route.
 
 | Class | Allowed examples | Why root is justified | Guardrail |
 |---|---|---|---|
-| Public entry and authority | `README.md`, `CHARTER.md` | they define the public door and repository authority boundary | stay compact and route to stronger contracts |
+| Public entry and authority | `README.md`, `CHARTER.md`, `DESIGN.md`, `DESIGN.AGENTS.md` | they define the public door, authority boundary, system form, and agent-surface form | stay compact and route to stronger contracts |
 | Corpus map and direction | `TECHNIQUE_INDEX.md`, `ROADMAP.md`, `QUESTBOOK.md` | they expose current corpus shape, direction, and durable obligations | do not become generated manifests, audit ledgers, or changelog copies |
 | Public governance and legal | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `LICENSE` | contributors and platforms expect them at root | do not become technique doctrine catalogs |
 | Release history | `CHANGELOG.md` | release history belongs at root for public readers | do not store future direction or audit baselines here |
 | Thin example | `WALKTHROUGH.md` | one first example helps readers understand the canon path | stay one example; move broader tutorials into docs or examples |
-| Agent lane | `AGENTS.md`, `.agents/` | agent-facing route cards need stable local entry | do not replace civic docs or owner contracts |
+| Agent lane | `AGENTS.md`, `.agents/`, `config/agents_mesh.json`, `generated/agents_mesh.min.json`, `docs/guardrails/AGENTS_MESH_PROTOCOL.md` | agent-facing route cards need stable local entry and checkable coverage | do not replace civic docs, source docs, generated-source builders, or owner contracts |
 | Tooling, provenance, and machine districts | `.github/`, `config/`, `docs/`, `examples/`, `generated/`, `incoming/`, `legacy/`, `mechanics/`, `quests/`, `schemas/`, `scripts/`, `templates/`, `tests/`, `techniques/` | source layout, provenance accounting, and tooling expect stable directories | each active district should keep local route guidance when needed; `legacy/` must stay indexed and subordinate to active routes |
 | Development requirements | `.gitignore`, `requirements-dev.txt` | development hygiene | stay technical and small |
 
@@ -112,6 +112,8 @@ cannot stay compact, route it to the owner surface that can carry the detail.
 | Surface | Decision | Why |
 |---|---|---|
 | `CHARTER.md` | add | the practice canon needs a root authority boundary distinct from README and AGENTS |
+| `DESIGN.md` | add | the practice canon needs a root system-form surface distinct from charter authority, roadmap direction, technique contracts, and agent instructions |
+| `DESIGN.AGENTS.md` | add | agent-facing surface design needs a root form guide so local cards can copy discipline without copying another repo's wording |
 | `README.md` | keep and slim toward public front door | it should introduce and route, not index every active detail |
 | `ROADMAP.md` | keep as live direction | historical closure audit detail belongs to Audit legacy, while root roadmap owns horizons and update rules |
 | previous closure-audit `ROADMAP.md` | move to `mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md` | preserves the evidence without making old audit detail the live direction surface |
@@ -119,6 +121,7 @@ cannot stay compact, route it to the owner surface that can carry the detail.
 | `TECHNIQUE_INDEX.md` | keep | public corpus map by ID, status, domain, and summary is root-worthy |
 | `WALKTHROUGH.md` | keep for now as one thin example | broader examples should move into `docs/` or `examples/` if this grows |
 | `AGENTS.md` | keep as agent route card | agent route law complements, but does not replace, public canon docs |
+| `docs/guardrails/` AGENTS mesh protocol and index | add | agent-card coverage, canonical-card shape, generated freshness, and migration posture are guardrail law rather than technique meaning |
 | `legacy/` | add as root provenance district | preserves public-safe repo-wide raw, archive, and migration receipts while keeping `incoming/`, active bundles, generated surfaces, and mechanic-local legacy distinct |
 | previous root `reports/` scout package | move to `mechanics/distillation/parts/technique-reform-ingress/reports/` | the family, topology, kind ambiguity, and tree projection readouts are generated evidence for that Distillation part, not root entry surfaces |
 | previous root Distillation scout inputs in `config/` and `data/` | move scout-only family/topology registries and kind-overlay data to `mechanics/distillation/parts/technique-reform-ingress/{config,data}/` | the current `kind` registry remains root repo-wide config, while scout-only reform inputs belong beside the Distillation part and reports that interpret them |

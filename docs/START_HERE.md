@@ -9,6 +9,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 - the public practice canon of AoA
 - the source of truth for technique meaning, IDs, bounded contracts, adaptation notes, and generated technique surfaces built from those authored sources
 - a repository with an explicit authority boundary in [Charter](../CHARTER.md)
+- a repository with an explicit system form in [Design](../DESIGN.md) and an
+  agent-surface form in [Agent Surface Design](../DESIGN.AGENTS.md)
 - the home for atomic executable moves: one technique should be compact enough to classify, template, verify, and hand to a small agent after orchestration supplies the right context
 - a standalone public library: external builders should be able to take one technique, capsule, or bundle into their own agent system without deploying OS Abyss or the whole AoA ecosystem
 - the owner of the technique topology contract: `domain` and `kind` are current frontmatter truth, while family, capability, substrate, execution profile, risk posture, and relation topology are explicit design axes for future scale
@@ -24,6 +26,11 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open `../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml` when the question is which scout values currently exist for capability, substrate, execution profile, or risk posture; these values are not frontmatter truth
 - open `../mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md` when you need the current generated projection over those scout axes before proposing any migration
 - open [Charter](../CHARTER.md) when the question is what this repository may claim or own
+- open [Design](../DESIGN.md) when the question is what shape the practice
+  canon should preserve as it grows
+- open [Agent Surface Design](../DESIGN.AGENTS.md) and
+  [AGENTS Mesh Protocol](guardrails/AGENTS_MESH_PROTOCOL.md) when the question
+  is how local `AGENTS.md` cards should be shaped, validated, or migrated
 - open [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or rewriting a root or docs-root surface
 - open [Root Legacy](../legacy/README.md) when preserving repo-wide raw packets, retired tail surfaces, or path-migration receipts after active distillation
 - open [`plan-diff-apply-verify-report`](../techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) when you want one concrete canonical bundle before any chooser or generated surface
@@ -62,6 +69,8 @@ Use it when you want one bounded answer to what to open next without guessing be
 ## If You Need Derived Surfaces
 
 - open [Repo Doc Surfaces](REPO_DOC_SURFACES.md) when the question is which authoritative repo doc to read next
+- open `../generated/agents_mesh.min.json` when a low-context agent needs the
+  current generated view of canonical and migration `AGENTS.md` cards
 - open [Technique Capsules](TECHNIQUE_CAPSULES.md) when one small runtime card is enough
 - open [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md) when you need section, checklist, example, evidence-note, or bounded relation lift surfaces
 - open [SHADOW_PATTERNS.md](SHADOW_PATTERNS.md) and the semantic review packets when the question is about caution seams or boundary drift rather than first-pick selection

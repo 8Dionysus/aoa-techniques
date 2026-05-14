@@ -72,6 +72,8 @@ RISK_SUBSECTION_HEADINGS = (
 
 REQUIRED_SUPPORT_DIRS = ("checks", "examples", "notes")
 REQUIRED_STAGE1_FILES = (
+    "DESIGN.md",
+    "DESIGN.AGENTS.md",
     "docs/CANONICAL_RUBRIC.md",
     "docs/DOMAIN_MAP.md",
     "schemas/technique.schema.json",
@@ -93,8 +95,16 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_shadow_review_manifest.py",
     "scripts/build_promotion_readiness.py",
     "scripts/build_repo_doc_surface_manifest.py",
+    "scripts/agents_mesh_common.py",
+    "scripts/build_agents_mesh_index.py",
+    "scripts/validate_agents_md_shape.py",
+    "scripts/validate_agents_mesh.py",
+    "scripts/validate_agents_mesh_index.py",
     "scripts/build_kag_export.py",
     "scripts/release_check.py",
+    "config/agents_mesh.json",
+    "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
+    "docs/guardrails/AGENTS_MESH_INDEX.md",
     "generated/technique_catalog.json",
     "generated/technique_catalog.min.json",
     "generated/technique_capsules.json",
@@ -117,6 +127,7 @@ REQUIRED_STAGE1_FILES = (
     "generated/technique_promotion_readiness.min.json",
     "generated/repo_doc_surface_manifest.json",
     "generated/repo_doc_surface_manifest.min.json",
+    "generated/agents_mesh.min.json",
     "generated/kag_export.json",
     "generated/kag_export.min.json",
 )
@@ -459,6 +470,11 @@ REPO_DOC_NAVIGATION_SPECS = (
         "note": "Use the Charter for the repository authority boundary, Ecosystem Context for the layer-position note, then Start Here for the shortest bounded route through the rest of the public surface.",
     },
     {
+        "question": "Where do system design and agent-surface design live?",
+        "doc_ids": ("design", "design_agents", "agents", "root_surface_law"),
+        "note": "Use DESIGN for practice-canon system form, DESIGN.AGENTS for the agent-facing mesh form, AGENTS for operational route law, and Root Surface Law for placement.",
+    },
+    {
         "question": "Where do root and docs-root placement rules live?",
         "doc_ids": ("root_surface_law", "charter", "docs_readme"),
         "note": "Use Root Surface Law before adding or moving root or docs-root surfaces, with the Charter and docs map as supporting route context.",
@@ -501,6 +517,18 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_path": "CHARTER.md",
         "surface_group": "canon/authority",
         "bounded_role": "root authority boundary for the reusable practice canon and standalone plus AoA organ posture",
+    },
+    {
+        "doc_id": "design",
+        "doc_path": "DESIGN.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "root system-form surface for the reusable practice canon and standalone plus AoA organ posture",
+    },
+    {
+        "doc_id": "design_agents",
+        "doc_path": "DESIGN.AGENTS.md",
+        "surface_group": "canon/authority",
+        "bounded_role": "root agent-surface design form for the AGENTS mesh and portable agent guidance",
     },
     {
         "doc_id": "start_here",
@@ -3636,8 +3664,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 19:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 19 authoritative public route/canon/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 21:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 21 authoritative public route/canon/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
@@ -7028,7 +7056,7 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
             "## Boundaries",
             "",
             "- The source of meaning stays in the authored docs themselves.",
-            "- The bounded source set is exactly the 19 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- The bounded source set is exactly the 21 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
             "- This surface and its manifest are routing aids only. They do not become a new source of truth, root-authority replacement, or status-policy engine.",
             "",
         ]

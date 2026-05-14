@@ -40,3 +40,8 @@ python scripts/validate_repo.py
 python -m unittest tests.test_validate_repo tests.test_questbook_mechanics_topology
 ```
 
+## Closeout
+
+Report quest files changed, lane and lifecycle state, generated quest surfaces
+rebuilt or left untouched, checks run, checks skipped, and any owner-route
+acceptance still needed.

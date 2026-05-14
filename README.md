@@ -28,6 +28,8 @@ external reader who only wants the bounded practice.
 | Function | Surface |
 |---|---|
 | Names the practice-canon boundary | [CHARTER](CHARTER.md) |
+| Names the practice-canon system form | [DESIGN](DESIGN.md) |
+| Names the agent-facing route mesh form | [DESIGN.AGENTS](DESIGN.AGENTS.md) |
 | Opens the shortest public route | [Start Here](docs/START_HERE.md) |
 | Defines what counts as one technique | [Technique Atom Contract](docs/TECHNIQUE_ATOM_CONTRACT.md) |
 | Defines the classification topology | [Technique Topology Contract](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
@@ -48,6 +50,8 @@ Use the shortest route by need:
 
 - repo-owned entrypoint: `docs/START_HERE.md`
 - authority boundary: `CHARTER.md`
+- system-form design: `DESIGN.md`
+- agent-surface design and mesh posture: `DESIGN.AGENTS.md`
 - atomic technique contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - classification topology contract: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - scalable corpus tree contract: `docs/TECHNIQUE_TREE_CONTRACT.md`
@@ -84,7 +88,7 @@ Use the shortest route by need:
 - Agon owner-binding companion surfaces: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/PARTS.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json`, and `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
 - selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
 - runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
-- root placement, root legacy, repo-doc routing, and authoritative doc/status manifests: `docs/ROOT_SURFACE_LAW.md`, `legacy/README.md`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
+- root placement, root legacy, agent mesh, repo-doc routing, and authoritative doc/status manifests: `docs/ROOT_SURFACE_LAW.md`, `legacy/README.md`, `DESIGN.AGENTS.md`, `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, `generated/agents_mesh.min.json`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
 - source-lift, KAG, and section families: `docs/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json`, `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
 - review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
 - public readiness lens for the published corpus: `generated/technique_promotion_readiness.min.json`
@@ -140,6 +144,7 @@ full intake history.
 - `legacy/` for public-safe repo-wide provenance, archive, and migration receipts
 - `mechanics/` for AoA cross-mechanic movement surfaces around technique canon
 - `docs/` for orientation, review doctrine, release, selection, generated-reader interpretation, and shadow surfaces
+- `.agents/` for agent-facing companion lanes and local agent route support
 - `scripts/` for repo-wide builders/runners, root `tests/` for repo-wide
   validation, and `mechanics/**/tests/` for mechanic-owned checks
 

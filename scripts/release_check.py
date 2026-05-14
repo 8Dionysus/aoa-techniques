@@ -8,6 +8,7 @@ from pathlib import Path
 
 RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/build_repo_doc_surface_manifest.py"),
+    ("python", "scripts/build_agents_mesh_index.py"),
     ("python", "scripts/build_catalog.py"),
     ("python", "scripts/build_kind_manifest.py"),
     ("python", "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py"),
@@ -23,6 +24,10 @@ RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/build_shadow_review_manifest.py"),
     ("python", "scripts/build_promotion_readiness.py"),
     ("python", "scripts/build_kag_export.py"),
+    ("python", "scripts/validate_agents_md_shape.py"),
+    ("python", "scripts/validate_agents_mesh.py"),
+    ("python", "scripts/build_agents_mesh_index.py", "--check"),
+    ("python", "scripts/validate_agents_mesh_index.py"),
     ("python", "scripts/run_tests.py"),
     ("python", "scripts/validate_nested_agents.py"),
     ("python", "scripts/validate_repo.py"),
