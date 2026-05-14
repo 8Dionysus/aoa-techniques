@@ -12,6 +12,7 @@ active parts.
 | Flat `CROSS_LAYER_TECHNIQUE_CANDIDATES.md` | [parts/cross-layer-candidate-ledger](../parts/cross-layer-candidate-ledger/README.md) | Cross-layer candidate pressure stays distinct from the external-only intake surface. | active-moved |
 | [raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md) | [parts/cross-layer-candidate-ledger](../parts/cross-layer-candidate-ledger/README.md) | Pre-prune receipt for the active cross-layer candidate ledger before compacting landed wave execution order, worker-role notes, and seam rationale out of the active route. | preserved-receipt |
 | Flat `LONG_GAP_CANON_DESIGN.md` | [parts/long-gap-reentry](../parts/long-gap-reentry/README.md) | Older promoted material needs external reinforcement before canonical review. | active-moved |
+| [raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md](raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md) | [parts/technique-reform-ingress](../parts/technique-reform-ingress/README.md) | Snapshot of the old root roadmap tree-migration breadcrumb chain before the root roadmap was slimmed back to live direction. | preserved-receipt |
 
 ## Rule
 

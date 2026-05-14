@@ -45,3 +45,13 @@ notes, and seam rationale.
 
 Candidate counts, verdicts, landed anchors, and registry authority did not
 change.
+
+## 2026-05-14 - Root roadmap breadcrumb receipt
+
+Preserved the old root roadmap before slimming it back to live repo direction:
+
+- `ROADMAP.md` -> `legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md`
+
+The active root roadmap now points to owner surfaces instead of carrying the
+tree-migration breadcrumb chain. Distillation tests read this raw receipt for
+historical migration assertions.

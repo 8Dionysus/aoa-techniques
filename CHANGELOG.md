@@ -26,6 +26,14 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- slimmed old root Markdown entry surfaces by turning `README.md` back into a
+  compact public front door and reducing `ROADMAP.md` to live repo direction;
+  detailed mechanic runbooks, generated readers, semantic/shadow reviews, tree
+  migration breadcrumbs, and audit ledgers now route through owner surfaces
+  instead of being re-indexed from root
+- added a local `docs/decisions/AGENTS.md` and `docs/decisions/TEMPLATE.md`,
+  and reshaped current decision notes toward the Agents-of-Abyss decision
+  pattern: decisions explain why, current source surfaces define what
 - continued root/docs topology cleanup by moving semantic/shadow review packets
   and technique-reform scout reports into the owning Distillation
   `technique-reform-ingress` mechanic route, keeping root/docs surfaces as

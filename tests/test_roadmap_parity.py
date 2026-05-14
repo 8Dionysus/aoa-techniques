@@ -55,8 +55,9 @@ class RoadmapParityTestCase(unittest.TestCase):
 
         self.assertIn("Current release: `v0.4.2`", readme)
         self.assertIn("## [0.4.0]", changelog)
-        self.assertIn("`v0.4.2`", roadmap)
-        self.assertIn("`107` bundles", roadmap)
+        self.assertIn("authored technique bundles | `107`", roadmap)
+        self.assertIn("canonical bundles | `98`", roadmap)
+        self.assertIn("promoted bundles | `9`", roadmap)
         self.assertIn("repo-level direction", roadmap)
         self.assertIn("mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md", roadmap)
         self.assertIn("does not own technique status by itself", roadmap)
@@ -79,11 +80,9 @@ class RoadmapParityTestCase(unittest.TestCase):
         for surface in CURRENT_RELEASE_SURFACES:
             with self.subTest(surface=surface):
                 self.assertTrue((REPO_ROOT / surface).is_file())
-                self.assertIn(surface, readme)
 
     def test_root_roadmap_preserves_old_audit_detail_in_audit_legacy(self) -> None:
         roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
-        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         legacy_roadmap = (
             REPO_ROOT
             / "mechanics"
@@ -114,7 +113,6 @@ class RoadmapParityTestCase(unittest.TestCase):
             legacy_roadmap,
         )
         self.assertIn("requested_not_landed", legacy_roadmap)
-        self.assertIn("mechanics/agon/parts/move-technique-bridge/README.md", readme)
 
 
 if __name__ == "__main__":

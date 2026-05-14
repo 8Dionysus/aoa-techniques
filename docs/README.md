@@ -82,6 +82,10 @@ Choose the path that matches your question:
   - [Root Legacy](../legacy/README.md)
   - [Root Legacy Index](../legacy/INDEX.md)
   - [Root Surface Law](ROOT_SURFACE_LAW.md)
+- I need durable rationale for a structural or route choice:
+  - [Decisions District](decisions/README.md)
+  - [Decisions AGENTS](decisions/AGENTS.md)
+  - [Decision Template](decisions/TEMPLATE.md)
 - I need to understand KAG-oriented lift boundaries:
   - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
   - [KAG Export](KAG_EXPORT.md)
@@ -347,12 +351,14 @@ These are outside `docs/` but matter when navigating the repo:
 - [AGENTS](../AGENTS.md)
 - [WALKTHROUGH](../WALKTHROUGH.md)
 - [CHANGELOG](../CHANGELOG.md)
+- [Decisions](decisions/README.md)
 
 ## Notes
 
 - Prefer [Start Here](START_HERE.md) when the question is "where should I begin inside this repo before choosing a deeper surface?"
 - Prefer [Charter](../CHARTER.md) when the question is "what may this repository claim or own?"
 - Prefer [Root Surface Law](ROOT_SURFACE_LAW.md) when the question is "does this file belong in root, docs root, mechanics, generated, decisions, or a bundle?"
+- Prefer [Decisions](decisions/README.md) when the question is "why was this route, owner split, validator, or placement chosen?"
 - Prefer [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is "what counts as one technique instead of a skill, playbook, or chain?"
 - Prefer [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is "which classes, families, categories, or axes should organize a large technique corpus?"
 - Prefer [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when the question is "where should technique bundles live in a scalable root tree?"

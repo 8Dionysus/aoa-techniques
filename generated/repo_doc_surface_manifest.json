@@ -36,17 +36,11 @@
       "surface_group": "entrypoint/map",
       "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
       "top_level_sections": [
-        "What this repo does",
-        "Start here",
-        "Quick routes",
-        "Deeper routes",
-        "What belongs here",
-        "Core principles",
-        "Maturity model",
-        "Repository structure",
-        "Intended users",
-        "What a good technique includes",
-        "Contribution model",
+        "Start Here",
+        "Root Surfaces",
+        "What Belongs Here",
+        "Repository Shape",
+        "Validation",
         "License"
       ]
     },
