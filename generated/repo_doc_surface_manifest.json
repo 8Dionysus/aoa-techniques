@@ -34,14 +34,17 @@
       "doc_path": "README.md",
       "title": "aoa-techniques",
       "surface_group": "entrypoint/map",
-      "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
+      "bounded_role": "root entrypoint for repository purpose, scope, and first handoff",
       "top_level_sections": [
+        "What This Repository Does",
         "Start Here",
-        "Root Surfaces",
-        "What Belongs Here",
-        "Repository Shape",
-        "Validation",
-        "License"
+        "Route Modes",
+        "Technique Check",
+        "Current Contour",
+        "Practice Mechanics",
+        "Technical Districts",
+        "Machine Companions",
+        "Working Rule"
       ]
     },
     {

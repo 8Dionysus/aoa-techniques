@@ -18,7 +18,7 @@ See also:
 
 | question | open | why |
 |---|---|---|
-| Where should I start if I am new to the repository? | [aoa-techniques](../README.md) (`README.md`), [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Start with the root README, then use the Charter, Start Here, and technique index for bounded navigation. |
+| Where should I start if I am new to the repository? | [aoa-techniques](../README.md) (`README.md`), [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`), [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) (`TECHNIQUE_INDEX.md`) | Use the root README only for purpose and first handoff, then use the Charter, Start Here, and technique index for bounded navigation. |
 | Where is the repo-only self-serve route before deeper guides split out? | [Start Here](START_HERE.md) (`docs/START_HERE.md`), [Documentation Map](README.md) (`docs/README.md`) | Use Start Here for the shortest repo-owned route, then open the docs map only when you need the deeper guide and generated-surface tree. |
 | Where is this repository positioned inside the AoA layer map? | [aoa-techniques Charter](../CHARTER.md) (`CHARTER.md`), [Ecosystem Context](ECOSYSTEM_CONTEXT.md) (`docs/ECOSYSTEM_CONTEXT.md`), [Start Here](START_HERE.md) (`docs/START_HERE.md`) | Use the Charter for the repository authority boundary, Ecosystem Context for the layer-position note, then Start Here for the shortest bounded route through the rest of the public surface. |
 | Where do system design and agent-surface design live? | [aoa-techniques System Design](../DESIGN.md) (`DESIGN.md`), [aoa-techniques Agent Surface Design](../DESIGN.AGENTS.md) (`DESIGN.AGENTS.md`), [AGENTS.md](../AGENTS.md) (`AGENTS.md`), [Root Surface Law](ROOT_SURFACE_LAW.md) (`docs/ROOT_SURFACE_LAW.md`) | Use DESIGN for practice-canon system form, DESIGN.AGENTS for the agent-facing mesh form, AGENTS for operational route law, and Root Surface Law for placement. |
@@ -34,7 +34,7 @@ Open these first when the question is where to start or which public repo map or
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start Here`, `Root Surfaces`, `What Belongs Here`, `Repository Shape`, `Validation`, `License` |
+| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first handoff | `What This Repository Does`, `Start Here`, `Route Modes`, `Technique Check`, `Current Contour`, `Practice Mechanics`, `Technical Districts`, `Machine Companions`, `Working Rule` |
 | [Start Here](START_HERE.md) (`docs/START_HERE.md`) | repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions | `What This Repo Is`, `If You Need One Technique Now`, `If You Need To Understand Maturity And Review`, `If You Need Derived Surfaces`, `Current Corpus Posture`, `Repo-Only Operating Contract`, `When To Leave This Repo`, `Release And Validation` |
 | [Documentation Map](README.md) (`docs/README.md`) | docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint | `Start Here`, `Surface Types`, `Recommended Reading Paths`, `Companion Repository Surfaces`, `Notes` |
 

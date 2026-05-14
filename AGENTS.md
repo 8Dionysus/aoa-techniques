@@ -32,43 +32,44 @@ It does not own:
 - skill workflow meaning, proof doctrine, routing, role contracts, memory, playbooks, KAG substrate meaning, or stats summaries
 - private project operations, secrets, or infrastructure detail
 
-`DESIGN.md` names the repository system form. `DESIGN.AGENTS.md` names the
-agent-facing surface form. This card is the operational route card for agents.
+[DESIGN](DESIGN.md) names the repository system form. [DESIGN.AGENTS](DESIGN.AGENTS.md)
+names the agent-facing surface form. This card is the operational route card
+for agents.
 
 ## Read before editing
 
-1. `README.md`
-2. `CHARTER.md`
-3. `DESIGN.md`
-4. `DESIGN.AGENTS.md`
-5. `docs/START_HERE.md`
-6. `docs/TECHNIQUE_ATOM_CONTRACT.md`
-7. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-8. `docs/TECHNIQUE_TREE_CONTRACT.md` when corpus path architecture, tree projection, or bundle moves matter
-9. `ROADMAP.md` when direction, horizons, or repo-level future triggers move
-10. `docs/ROOT_SURFACE_LAW.md` when root or docs-root placement changes
-11. `docs/guardrails/AGENTS_MESH_PROTOCOL.md` when agent-card coverage, shape, or generated mesh surfaces move
-12. `legacy/README.md` when root-wide raw, archive, or receipt provenance changes
-13. `mechanics/README.md` when the change touches AoA mechanics or practice movement around canon
-14. `WALKTHROUGH.md`
-15. `docs/TECHNIQUE_SELECTION.md`
-16. `docs/TECHNIQUE_KIND_GUIDE.md`
+1. [README](README.md)
+2. [CHARTER](CHARTER.md)
+3. [DESIGN](DESIGN.md)
+4. [DESIGN.AGENTS](DESIGN.AGENTS.md)
+5. [START_HERE](docs/START_HERE.md)
+6. [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md)
+7. [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md)
+8. [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) when corpus path architecture, tree projection, or bundle moves matter
+9. [ROADMAP](ROADMAP.md) when direction, horizons, or repo-level future triggers move
+10. [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) when root or docs-root placement changes
+11. [AGENTS_MESH_PROTOCOL](docs/guardrails/AGENTS_MESH_PROTOCOL.md) when agent-card coverage, shape, or generated mesh surfaces move
+12. [Root Legacy](legacy/README.md) when root-wide raw, archive, or receipt provenance changes
+13. [Mechanics](mechanics/README.md) when the change touches AoA mechanics or practice movement around canon
+14. [WALKTHROUGH](WALKTHROUGH.md)
+15. [TECHNIQUE_SELECTION](docs/TECHNIQUE_SELECTION.md)
+16. [TECHNIQUE_KIND_GUIDE](docs/TECHNIQUE_KIND_GUIDE.md)
 17. the target `techniques/**/TECHNIQUE.md`
 18. affected generated catalogs, capsules, feat cards, agent-mesh mirrors, or source-lift outputs
-19. `docs/AGENTS_ROOT_REFERENCE.md` for preserved full root branches
+19. [AGENTS_ROOT_REFERENCE](docs/AGENTS_ROOT_REFERENCE.md) for preserved full root branches
 
 ## Route modes
 
 | Route mode | Use when | Start surface |
 |---|---|---|
-| `first-reading` | you need the shortest public overview | `README.md` -> `CHARTER.md` -> `docs/START_HERE.md` |
-| `technique-authoring` | you will add, split, promote, or revise one technique | `docs/TECHNIQUE_ATOM_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> target bundle |
-| `tree-structure` | you will design, project, or migrate corpus path architecture | `docs/TECHNIQUE_TREE_CONTRACT.md` -> `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` -> affected generated surfaces |
-| `root-editing` | you will add, move, delete, or rewrite a root or docs-root surface | `CHARTER.md` -> `docs/ROOT_SURFACE_LAW.md` |
-| `agent-surface-design` | you will add, move, normalize, or validate agent-facing cards | `DESIGN.AGENTS.md` -> `docs/guardrails/AGENTS_MESH_PROTOCOL.md` -> nearest `AGENTS.md` |
-| `legacy-provenance` | you will preserve repo-wide raw packets, archived tails, or path-migration receipts | `legacy/README.md` -> `legacy/INDEX.md` -> active owner route |
-| `direction-change` | roadmap, corpus-scale pressure, portability posture, or future triggers change | `ROADMAP.md` |
-| `mechanic-change` | practice movement, donor intake, audit, recurrence, checkpoint, RPG, or release-support surfaces change | `mechanics/README.md` -> nearest mechanic `AGENTS.md` |
+| `first-reading` | you need the shortest public overview | [README](README.md) -> [CHARTER](CHARTER.md) -> [START_HERE](docs/START_HERE.md) |
+| `technique-authoring` | you will add, split, promote, or revise one technique | [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md) -> [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) -> target bundle |
+| `tree-structure` | you will design, project, or migrate corpus path architecture | [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) -> [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) -> affected generated surfaces |
+| `root-editing` | you will add, move, delete, or rewrite a root or docs-root surface | [CHARTER](CHARTER.md) -> [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) |
+| `agent-surface-design` | you will add, move, normalize, or validate agent-facing cards | [DESIGN.AGENTS](DESIGN.AGENTS.md) -> [AGENTS_MESH_PROTOCOL](docs/guardrails/AGENTS_MESH_PROTOCOL.md) -> nearest `AGENTS.md` |
+| `legacy-provenance` | you will preserve repo-wide raw packets, archived tails, or path-migration receipts | [Root Legacy](legacy/README.md) -> [Legacy Index](legacy/INDEX.md) -> active owner route |
+| `direction-change` | roadmap, corpus-scale pressure, portability posture, or future triggers change | [ROADMAP](ROADMAP.md) |
+| `mechanic-change` | practice movement, donor intake, audit, recurrence, checkpoint, RPG, or release-support surfaces change | [Mechanics](mechanics/README.md) -> nearest mechanic `AGENTS.md` |
 | `generated-parity` | generated catalogs, capsules, source-lift, or repo-doc surfaces change | source doc -> builder -> generated output -> validator/test |
 
 ## AGENTS stack law
@@ -82,8 +83,8 @@ agent-facing surface form. This card is the operational route card for agents.
 
 ## GitHub landing workflow
 
-Root `AGENTS.md` owns the repository-wide branch, PR, CI, and merge route.
-`.github/AGENTS.md` owns the GitHub-native files that support it.
+Root [AGENTS](AGENTS.md) owns the repository-wide branch, PR, CI, and merge route.
+[.github/AGENTS](.github/AGENTS.md) owns the GitHub-native files that support it.
 
 When the user asks to commit, push, and merge in this repository, use this
 route:
@@ -108,19 +109,19 @@ and report the exact blocker instead of guessing.
 Before closeout, check whether the change actually affects these surfaces.
 Update only the ones that moved; otherwise say no update was needed.
 
-- `ROADMAP.md` when repo-level direction, corpus topology, standalone
+- [ROADMAP](ROADMAP.md) when repo-level direction, corpus topology, standalone
   portability, mechanics-to-canon interface, root source-of-truth posture, or a
   concrete future trigger changed.
-- `CHANGELOG.md` when public docs, validation, repository structure, GitHub
+- [CHANGELOG](CHANGELOG.md) when public docs, validation, repository structure, GitHub
   intake, generated readers, or release-visible behavior changed.
-- `docs/decisions/` when future agents need the rationale for a route,
+- [decisions](docs/decisions/) when future agents need the rationale for a route,
   workflow, topology, validator, source-of-truth, or ownership choice.
 - generated surfaces, builders, validators, and tests when a source-backed
   machine companion changed.
 - mechanic `ROADMAP.md`, `LANDING_LOG.md`, `REQUEST_RECEIPTS.md`, `PARTS.md`,
   or `PROVENANCE.md` when mechanic direction, landing, owner-request receipt,
   active part, or legacy bridge changed.
-- `QUESTBOOK.md` or `quests/` when a durable obligation should survive the diff.
+- [QUESTBOOK](QUESTBOOK.md) or [quests](quests/) when a durable obligation should survive the diff.
 - neighboring owner repositories when the change routes or constrains their
   truth.
 
@@ -135,7 +136,7 @@ Update only the ones that moved; otherwise say no update was needed.
 - Do not let a local `AGENTS.md` card override `TECHNIQUE.md`, source docs,
   schemas, builders, validators, or a stronger sibling owner.
 - Do not make root files, docs-root files, or top-level directories without
-  checking `docs/ROOT_SURFACE_LAW.md`.
+  checking [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
 
 ## Route away when
 
@@ -153,7 +154,7 @@ python scripts/validate_repo.py
 python scripts/run_tests.py
 ```
 
-Use release checks or Agon-specific checks from `docs/AGENTS_ROOT_REFERENCE.md` when publication posture, broad generated outputs, or companion-candidate surfaces change.
+Use release checks or Agon-specific checks from [AGENTS_ROOT_REFERENCE](docs/AGENTS_ROOT_REFERENCE.md) when publication posture, broad generated outputs, or companion-candidate surfaces change.
 
 For agent-surface changes, run the AGENTS mesh lane:
 
@@ -173,4 +174,4 @@ validation ran. If a PR was merged, name the GitHub merge method that landed.
 
 ## Full reference
 
-`docs/AGENTS_ROOT_REFERENCE.md` preserves the former detailed root guidance, including branch docs, promotion posture, review rules, and specialized validation paths.
+[AGENTS_ROOT_REFERENCE](docs/AGENTS_ROOT_REFERENCE.md) preserves the former detailed root guidance, including branch docs, promotion posture, review rules, and specialized validation paths.
