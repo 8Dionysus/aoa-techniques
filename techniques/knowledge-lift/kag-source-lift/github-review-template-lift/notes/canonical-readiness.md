@@ -26,6 +26,7 @@
 ## Remaining gaps
 - one public review-specific template manifest or intake reader beyond platform-native issue and pull request rendering would make the default-use case stronger.
 - a future canonical review should confirm that the technique still refuses approval, triage, and review-state logic.
+- 2026-05-14 residual queue pass: `aoa-playbooks` review intake is a useful adjacent reader over review packet and status surfaces, but it carries gate verdict and composition posture and is not an inventory-only GitHub review-template manifest; exact GitHub phrase search returned no hits.
 
 ## Recommendation
 - keep `AOA-T-0047` `promoted`

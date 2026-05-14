@@ -32,6 +32,7 @@
   governance language, but they are security/risk-management frameworks rather
   than a committed markdown corpus reusing the exact five-part `Risks` split
 - conclusion: these lanes sharpen the boundary around `AOA-T-0022`, but they do not close the remaining independent-corpus gap
+- 2026-05-14 residual queue pass: exact five-heading local and sibling scans still found only `aoa-skills/skills/risk/aoa-sanitized-share/SKILL.md` outside `aoa-techniques`; exact GitHub phrase search returned no hits.
 
 ## Remaining gaps
 - the main missing proof is one more committed reuse of the exact five-part `Risks` contract beyond the first `aoa-skills` donor

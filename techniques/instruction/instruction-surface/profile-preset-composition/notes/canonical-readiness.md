@@ -24,6 +24,7 @@
 - sanitization still holds: the published technique keeps only the reusable layering and inspection contract while stripping donor-specific ports, host paths, and local lifecycle detail
 - 2026-05-12 long-pass check: no exact-fit second consumer found in the searched public lanes. Docker Compose service profiles, SoS report profiles/presets, VS Code Profiles, Dev Container Features/Templates, and Kustomize bases/overlays are useful adjacent composition patterns, but they do not carry the same three-layer `modules -> profiles -> presets` contract with preset-first resolution, first-appearance dedupe, and read-only inspection as one bounded technique.
 - 2026-05-12 code-search check: exact phrase searches for profile/preset/module resolution, first-appearance duplicate handling, and combined `--list-profiles` / `--list-presets` surfaces produced no public non-origin exact-fit candidate.
+- 2026-05-14 residual queue pass: the `abyss-stack` source checkout confirms that the origin implementation still carries `modules -> profiles -> presets`, preset-first resolution, first-appearance dedupe, and pre-launch inspection, but that is origin lineage rather than a second downstream consumer; exact GitHub phrase search returned no hits.
 
 ## Remaining gaps
 - the bundle would benefit from a second independent downstream consumer

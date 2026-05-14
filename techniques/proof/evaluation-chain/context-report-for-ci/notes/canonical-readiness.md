@@ -33,6 +33,7 @@
 - Stage 1 long-pass, 2026-05-12: defer still holds after inspecting newer public context-compiler, context-drift, fragment-assembly, dependency-graph, and repo-quality report surfaces
 - adjacent or insufficient surfaces from that pass: LogicStamp Context, Claude Code Guide context-engineering CI drift detection, ctxloom, Depwire, and FastPace repo-quality/context-score reports
 - why those surfaces do not close the gap: they are useful context compilation, configuration drift, fragment assembly, graph context, governance, or repo-quality surfaces, but none clearly emits the same separate read-only CI artifact over already-composed context source coverage plus token drift
+- 2026-05-14 residual queue pass: `aoa-stats` source coverage and `aoa-routing` / `aoa-sdk` regrounding hints remain adjacent coverage-risk signals because they do not report token drift over an already-composed context artifact; exact GitHub phrase search for source coverage, token drift, and context report returned no hits.
 - next honest search shape: look for artifact-first public workflows where CI compares an expected source or fragment inventory against a generated prompt/context artifact and records token deltas, while keeping assembly, scoring, and remediation outside the report
 
 ## Recommendation

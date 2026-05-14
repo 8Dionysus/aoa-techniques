@@ -139,6 +139,30 @@ Rejected or bounded:
 
 Future search shape: do not reopen `AOA-T-0046` unless a generated repo-doc reader starts replacing authored docs, a route manifest imports sibling-owner authority, or a future docs layer needs a distinct bounded source class.
 
+## 2026-05-14 Residual Nine Queue Pass
+
+Result: no canonical status flips. All nine remaining `promoted` bundles were rechecked as one coherent queue, and each exited with a fresh exact/adjacent/no-fit verdict rather than a forced closure.
+
+Searched lanes:
+
+- local workspace and sibling-source scans across `/srv/AbyssOS` and selected source checkouts, excluding generated, private, and heavy runtime areas where practical
+- source-checkout confirmation for the `abyss-stack` profile/preset evidence, treated as origin lineage for `AOA-T-0035`, not as a second consumer
+- exact-phrase GitHub code search for each bundle's object layer; the early exact searches returned no hits, and later searches hit GitHub's secondary code-search limit
+
+Bundle verdicts:
+
+- [AOA-T-0005](../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md): still only `atm10-agent` origin-family `M6.19` proof plus adjacent dry-run, A2A, and runtime surfaces; no non-origin new-intent rollout record with fixture, smoke, strict contract summary, review artifact, and regression proof.
+- [AOA-T-0020](../../../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md): `evidence_refs`, checkpoint note refs, and source-note refs are adjacent provenance support, but they do not form a markdown-first note-kind/path manifest or reader beyond the eval donor surface.
+- [AOA-T-0022](../../../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md): the exact five-heading scan still found only the first `aoa-skills` donor outside this repo; no second independent corpus reusing the same five-part `Risks` split.
+- [AOA-T-0032](../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md): `aoa-stats` source coverage and routing/SDK regrounding hints are adjacent coverage-risk surfaces, not a read-only CI report over composed-context coverage plus token drift.
+- [AOA-T-0035](../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md): `abyss-stack` source evidence confirms the exact origin implementation for modules, profiles, presets, preset-first resolution, dedupe, and inspection; because it is origin lineage, it does not close the second-consumer gap.
+- [AOA-T-0042](../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md): `aoa-skills` portable/export validation and `skills_ref_validation_manifest` are adjacent internal conformance lanes, not upstream-owned source reachability plus minimal manifest-readiness before catalog or selector surfacing.
+- [AOA-T-0047](../../../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md): `aoa-playbooks` review intake is adjacent but too broad because it carries gate verdict and composition posture; it is not an inventory-only GitHub review-template manifest.
+- [AOA-T-0058](../../../../techniques/continuity/handoff-continuation/receipt-confirmed-handoff-packet/TECHNIQUE.md): `aoa-summon` consumes a return receipt or acceptance expectation, but does not record receiver-side receipt of a specific handoff packet before continuation.
+- [AOA-T-0059](../../../../techniques/continuity/handoff-continuation/git-verified-handoff-claims/TECHNIQUE.md): commit-boundary and claim/evidence honesty surfaces remain adjacent; no inbound handoff claim record was found with verified, mismatched, or unverifiable outcomes against git before continuation.
+
+Future search shape: reopen a residual row only from a new exact object-layer signal. Do not rerun the same exact phrases or sibling-adjacent lanes without new evidence.
+
 
 ## AOA-T-0080 / AOA-T-0081 / AOA-T-0082 / AOA-T-0083 Cross-Context Evidence Notes
 
