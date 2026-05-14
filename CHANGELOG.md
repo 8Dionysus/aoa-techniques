@@ -31,6 +31,8 @@ The format is intentionally simple and human-first.
   detailed mechanic runbooks, generated readers, semantic/shadow reviews, tree
   migration breadcrumbs, and audit ledgers now route through owner surfaces
   instead of being re-indexed from root
+- tightened [README](README.md) again after GitHub review so it no longer duplicates
+  license, contribution, security, conduct, or validation-command surfaces
 - added a local `docs/decisions/AGENTS.md` and `docs/decisions/TEMPLATE.md`,
   and reshaped current decision notes toward the Agents-of-Abyss decision
   pattern: decisions explain why, current source surfaces define what

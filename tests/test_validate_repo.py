@@ -1077,15 +1077,16 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
     def test_root_readme_surfaces_concrete_bundle_and_current_verify_routes(self) -> None:
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+        start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
 
         self.assertIn(
             "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
             readme,
         )
-        self.assertIn("python scripts/validate_repo.py", readme)
-        self.assertIn("python scripts/run_tests.py", readme)
-        self.assertIn("python scripts/release_check.py", readme)
-        self.assertIn("git status -sb", readme)
+        self.assertIn("python scripts/validate_repo.py", start_here)
+        self.assertIn("python scripts/run_tests.py", start_here)
+        self.assertIn("python scripts/release_check.py", start_here)
+        self.assertIn("git status -sb", start_here)
         self.assertLess(
             readme.index("techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md"),
             readme.index("docs/README.md"),
@@ -1563,12 +1564,15 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual(
             (
+                "What This Repository Does",
                 "Start Here",
-                "Root Surfaces",
-                "What Belongs Here",
-                "Repository Shape",
-                "Validation",
-                "License",
+                "Route Modes",
+                "Technique Check",
+                "Current Contour",
+                "Practice Mechanics",
+                "Technical Districts",
+                "Machine Companions",
+                "Working Rule",
             ),
             surfaces_by_path["README.md"].top_level_sections,
         )
@@ -1814,21 +1818,103 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", kag_source_guide)
         self.assertIn("docs/REPO_DOC_SURFACES.md", readme)
-        self.assertIn("generated/repo_doc_surface_manifest.json", readme)
-        self.assertIn("docs/REPO_DOC_SURFACE_LIFT_GUIDE.md", readme)
+        self.assertIn("generated/repo_doc_surface_manifest.min.json", readme)
         self.assertIn("REPO_DOC_SURFACES.md", changelog)
         self.assertIn("repo_doc_surface_manifest.json", changelog)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", changelog)
         self.assertIn("repo_doc_surface_manifest.json", kag_source_guide)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", kag_source_guide)
         self.assertIn("REPO_DOC_SURFACES.md", kag_source_guide)
-        self.assertIn("python scripts/release_check.py", readme)
-        self.assertIn("python scripts/validate_repo.py", readme)
-        self.assertIn("python scripts/run_tests.py", readme)
         self.assertIn("python scripts/release_check.py", releasing)
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_kag_export.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
+
+    def test_root_readme_does_not_duplicate_github_native_or_validation_surfaces(
+        self,
+    ) -> None:
+        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
+
+        for duplicate_heading in (
+            "## License",
+            "## Validation",
+            "## Root Surfaces",
+        ):
+            with self.subTest(heading=duplicate_heading):
+                self.assertNotIn(duplicate_heading, readme)
+
+        for command in (
+            "python scripts/validate_repo.py",
+            "python scripts/run_tests.py",
+            "python scripts/release_check.py",
+            "git status -sb",
+        ):
+            with self.subTest(command=command):
+                self.assertNotIn(command, readme)
+
+        self.assertNotIn("CODE_OF_CONDUCT.md", readme)
+        self.assertNotIn("SECURITY.md", readme)
+        self.assertNotIn("CONTRIBUTING.md", readme)
+        self.assertNotIn("LICENSE", readme)
+        self.assertIn("AGENTS.md", readme)
+
+    def test_public_route_surfaces_use_active_links_for_concrete_targets(
+        self,
+    ) -> None:
+        surfaces = {
+            "README.md": (REPO_ROOT / "README.md").read_text(encoding="utf-8"),
+            "ROADMAP.md": (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8"),
+            "AGENTS.md": (REPO_ROOT / "AGENTS.md").read_text(encoding="utf-8"),
+            "docs/ROOT_SURFACE_LAW.md": (
+                REPO_ROOT / "docs" / "ROOT_SURFACE_LAW.md"
+            ).read_text(encoding="utf-8"),
+        }
+        concrete_route_targets = (
+            "docs/START_HERE.md",
+            "docs/TECHNIQUE_ATOM_CONTRACT.md",
+            "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
+            "docs/TECHNIQUE_TREE_CONTRACT.md",
+            "docs/ROOT_SURFACE_LAW.md",
+            "TECHNIQUE_INDEX.md",
+        )
+
+        for surface_name, surface in surfaces.items():
+            for target in concrete_route_targets:
+                with self.subTest(surface=surface_name, target=target):
+                    self.assertNotIn(f"`{target}`", surface)
+
+        self.assertIn("[TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md)", surfaces["README.md"])
+        self.assertIn("[TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md)", surfaces["ROADMAP.md"])
+        self.assertIn("[TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md)", surfaces["AGENTS.md"])
+        self.assertIn("[README](../README.md)", surfaces["docs/ROOT_SURFACE_LAW.md"])
+
+    def test_public_route_surface_links_resolve(self) -> None:
+        link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+        surfaces = (
+            "README.md",
+            "ROADMAP.md",
+            "AGENTS.md",
+            "CHANGELOG.md",
+            "docs/ROOT_SURFACE_LAW.md",
+            "docs/REPO_DOC_SURFACES.md",
+            "docs/decisions/2026-05-14-root-md-surface-slimming.md",
+        )
+
+        for relative_path in surfaces:
+            path = REPO_ROOT / relative_path
+            for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+                for target in link_pattern.findall(line):
+                    if (
+                        "://" in target
+                        or target.startswith("#")
+                        or target.startswith("mailto:")
+                    ):
+                        continue
+                    target_path = target.split("#", 1)[0]
+                    if not target_path:
+                        continue
+                    with self.subTest(surface=relative_path, line=line_number, target=target):
+                        self.assertTrue((path.parent / target_path).exists())
 
     def test_decisions_district_has_local_route_and_template(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")

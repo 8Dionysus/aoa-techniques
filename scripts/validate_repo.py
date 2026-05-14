@@ -457,7 +457,7 @@ REPO_DOC_NAVIGATION_SPECS = (
     {
         "question": "Where should I start if I am new to the repository?",
         "doc_ids": ("readme", "charter", "start_here", "technique_index"),
-        "note": "Start with the root README, then use the Charter, Start Here, and technique index for bounded navigation.",
+        "note": "Use the root README only for purpose and first handoff, then use the Charter, Start Here, and technique index for bounded navigation.",
     },
     {
         "question": "Where is the repo-only self-serve route before deeper guides split out?",
@@ -510,7 +510,7 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_id": "readme",
         "doc_path": "README.md",
         "surface_group": "entrypoint/map",
-        "bounded_role": "root entrypoint for repository purpose, scope, and first-read routing",
+        "bounded_role": "root entrypoint for repository purpose, scope, and first handoff",
     },
     {
         "doc_id": "charter",
