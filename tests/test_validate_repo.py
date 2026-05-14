@@ -1047,6 +1047,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "parts/long-gap-reentry/README.md",
             "parts/external-evidence-sprint-runbook/README.md",
             "parts/external-evidence-ledger/README.md",
+            "parts/canonical-retro-audit/README.md",
             "parts/cross-layer-candidate-ledger/README.md",
             "aoa-skills",
             "aoa-evals",

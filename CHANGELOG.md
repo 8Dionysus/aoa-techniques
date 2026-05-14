@@ -22,6 +22,11 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- added a Canonical Retro Audit part and rechecked all `98` canonical
+  techniques for metadata, evidence-declaration, and bundle-local verdict
+  coherence; no canonical downgrade was justified, and stale metadata was
+  aligned for `AOA-T-0003`, `AOA-T-0007`, `AOA-T-0008`, `AOA-T-0010`, and
+  `AOA-T-0012`
 - promoted `AOA-T-0046 repo-doc-surface-lift` to `canonical` after the Nuxt
   LLMs docs reader and the 8Dionysus public route-map manifest closed the
   repo-owned docs route-manifest evidence gap, moving Audit queue posture from

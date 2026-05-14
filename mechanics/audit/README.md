@@ -79,6 +79,9 @@ bundle status would move, update the bundle-local evidence route first.
   sprint path for evidence-gated external technique candidates.
 - [External Evidence Ledger](parts/external-evidence-ledger/README.md):
   searched-lane and evidence status ledger.
+- [Canonical Retro Audit](parts/canonical-retro-audit/README.md):
+  retro-checks over already-canonical rows so stale metadata or contradictory
+  verdicts do not hide inside the canon.
 
 Audit can name blockers, searched evidence, and readiness posture. It does not
 issue proof verdicts or silently flip technique status.

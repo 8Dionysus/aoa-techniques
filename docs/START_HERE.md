@@ -48,6 +48,7 @@ Use it when you want one bounded answer to what to open next without guessing be
 - open [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md) when the question is how to run the current first evidence-prep swarm without widening bundle meaning or faking closure
 - open [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md) when the question is how to run the live external-proof search over the remaining `promoted` queue without repeating stale lanes
 - open [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md) when the question is which external lanes have already been searched, rejected as adjacent, or honestly closed
+- open [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md) when the question is whether already-`canonical` rows still line up with their metadata, evidence declarations, and bundle-local verdicts
 - open [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md) when the question is what can be extracted from an external donor without importing foreign doctrine
 - open [External Import Runbook](../mechanics/distillation/parts/external-import-runbook/README.md) when the question is how to take one bounded donor from triage to merge without inventing a new maintainer path
 - open [Long-Gap Canon Design](../mechanics/distillation/parts/long-gap-reentry/README.md) when the question is why a remaining `promoted` technique still needs an external donor path

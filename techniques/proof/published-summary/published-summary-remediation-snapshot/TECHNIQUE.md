@@ -16,7 +16,7 @@ tags:
   - summaries
   - bounded
 summary: Read-only aggregation pattern that turns latest published summaries into a bounded remediation snapshot without replaying history or changing runtime behavior.
-maturity_score: 4
+maturity_score: 5
 rigor_level: bounded
 reversibility: easy
 review_required: true

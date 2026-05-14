@@ -28,6 +28,7 @@ PART_LOCAL_AUDIT_READMES = (
     "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/audit/parts/external-evidence-sprint-runbook/README.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
+    "mechanics/audit/parts/canonical-retro-audit/README.md",
 )
 
 OLD_FLAT_AUDIT_FILES = (
@@ -66,6 +67,7 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             "promotion-evidence-runbook",
             "external-evidence-sprint-runbook",
             "external-evidence-ledger",
+            "canonical-retro-audit",
         ):
             with self.subTest(part_name=part_name):
                 self.assertIn(part_name, parts)
@@ -129,6 +131,14 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             / "external-evidence-ledger"
             / "README.md"
         ).read_text(encoding="utf-8")
+        retro = (
+            REPO_ROOT
+            / "mechanics"
+            / "audit"
+            / "parts"
+            / "canonical-retro-audit"
+            / "README.md"
+        ).read_text(encoding="utf-8")
 
         self.assertIn("current promoted corpus: `9` techniques", readiness)
         self.assertIn("`9` promoted techniques are explicitly categorized", readiness)
@@ -139,6 +149,9 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn("no status flips before bundle-local", wave)
         self.assertIn("Recent Closure Precedents", ledger)
         self.assertIn("AOA-T-0107", ledger)
+        self.assertIn("canonical rows checked: `98`", retro)
+        self.assertIn("`0` rows were reopen candidates", retro)
+        self.assertIn("`98` confirmable", retro)
 
     def test_audit_legacy_and_decision_are_discoverable(self) -> None:
         legacy_index = (
@@ -153,11 +166,19 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             / "decisions"
             / "2026-05-01-audit-active-parts-split.md"
         ).read_text(encoding="utf-8")
+        retro_decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-14-canonical-retro-audit-part.md"
+        ).read_text(encoding="utf-8")
 
         self.assertIn("Flat `PROMOTION_READINESS_MATRIX.md`", legacy_index)
         self.assertIn("Flat files moved into active parts", legacy_log)
         self.assertIn("Audit Active Parts Split", decision)
         self.assertIn("No promotion posture", decision)
+        self.assertIn("Canonical Retro Audit Part", retro_decision)
+        self.assertIn("no status downgrades", retro_decision)
 
 
 if __name__ == "__main__":

@@ -148,3 +148,33 @@ Not changed:
 - no proof verdict moved into Audit
 - no sibling owner authority became technique authority
 - no generated promotion-readiness surface became source truth
+
+## 2026-05-14 - Canonical Retro Audit Part
+
+Changed:
+
+- added `canonical-retro-audit` as an active Audit part for corpus-wide checks
+  over already-canonical rows
+- checked `98` canonical rows against metadata, evidence declarations, and
+  bundle-local canonical-readiness verdicts
+- found `93` confirmable rows, `5` metadata-watch rows, and `0` reopen
+  candidates
+- corrected stale metadata for `AOA-T-0003`, `AOA-T-0007`, `AOA-T-0008`,
+  `AOA-T-0010`, and `AOA-T-0012`
+- rechecked the regenerated catalog with `98` confirmable canonical rows and
+  `0` watch or reopen rows
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_audit_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```
+
+Not changed:
+
+- no technique status changed
+- no canonical-readiness verdict changed
+- no live external-source freshness verdict was claimed
+- no generated status surface became source truth

@@ -49,6 +49,7 @@ Choose the path that matches your question:
   - [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
   - [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
   - [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
+  - [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md)
   - [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md)
   - [External Import Runbook](../mechanics/distillation/parts/external-import-runbook/README.md)
   - [Long-Gap Canon Design](../mechanics/distillation/parts/long-gap-reentry/README.md)
@@ -213,6 +214,7 @@ These are human-authored guides that define bounded review, metadata, and docume
 - [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
 - [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
 - [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
+- [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md)
 - [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md)
 - [Long-Gap Canon Design](../mechanics/distillation/parts/long-gap-reentry/README.md)
 - [Roadmap](../ROADMAP.md)
@@ -319,6 +321,7 @@ These review-only docs test whether nearby techniques still read as distinct, bo
 4. [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
 5. [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
 6. [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
+7. [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md)
 
 ### KAG / lift path
 
