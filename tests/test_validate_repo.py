@@ -780,8 +780,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             domain_values,
         )
         self.assertEqual(validate_repo.KIND_VALUES, kind_values)
-        self.assertEqual(97, status_counts["canonical"])
-        self.assertEqual(10, status_counts["promoted"])
+        self.assertEqual(98, status_counts["canonical"])
+        self.assertEqual(9, status_counts["promoted"])
 
     def test_kind_manifest_matches_builder_projection_and_order(self) -> None:
         catalog = validate_repo.read_json(REPO_ROOT / "generated" / "technique_catalog.json")
@@ -947,7 +947,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         canonical_records = [record for record in records if record.status == "canonical"]
         promoted_records = [record for record in records if record.status == "promoted"]
 
-        self.assertEqual(97, len(canonical_records))
+        self.assertEqual(98, len(canonical_records))
 
         for record in canonical_records:
             self.assertEqual("adverse_effects_review", record.frontmatter["evidence"][-1]["kind"])
@@ -2566,7 +2566,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             ],
             scope["section_scope"],
         )
-        self.assertEqual(97, adverse_note_count)
+        self.assertEqual(98, adverse_note_count)
 
     def test_full_capsule_entry_requires_all_capsule_sections(self) -> None:
         technique_dir = REPO_ROOT / "techniques" / "demo"

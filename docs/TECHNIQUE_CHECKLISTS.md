@@ -474,6 +474,12 @@ See also:
 |---|---|---|---|---|
 | Repo Doc Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/checks/repo-doc-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 
+### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`canonical`)
+
+| checklist | intro | items | check path | source |
+|---|---|---|---|---|
+| Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
+
 ### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
 
 | checklist | intro | items | check path | source |
@@ -521,12 +527,6 @@ See also:
 | checklist | intro | items | check path | source |
 |---|---|---|---|---|
 | GitHub Review Template Lift Checklist | `present` | `6` | `techniques/knowledge-lift/kag-source-lift/github-review-template-lift/checks/github-review-template-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) |
-
-### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
-
-| checklist | intro | items | check path | source |
-|---|---|---|---|---|
-| Semantic Review Surface Lift Checklist | `present` | `7` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/checks/semantic-review-surface-lift-checklist.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
 
 ## `evaluation`
 

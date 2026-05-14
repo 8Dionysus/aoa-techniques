@@ -598,8 +598,8 @@
       ],
       "counts": {
         "total": 8,
-        "canonical": 4,
-        "promoted": 4,
+        "canonical": 5,
+        "promoted": 3,
         "by_domain": {
           "agent-workflows": 0,
           "docs": 8,
@@ -628,10 +628,10 @@
         "AOA-T-0019",
         "AOA-T-0021",
         "AOA-T-0046",
+        "AOA-T-0048",
         "AOA-T-0020",
         "AOA-T-0022",
-        "AOA-T-0047",
-        "AOA-T-0048"
+        "AOA-T-0047"
       ],
       "techniques": [
         {
@@ -671,6 +671,15 @@
           "kind": "lift"
         },
         {
+          "id": "AOA-T-0048",
+          "name": "semantic-review-surface-lift",
+          "domain": "docs",
+          "status": "canonical",
+          "summary": "Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.",
+          "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
+          "kind": "lift"
+        },
+        {
           "id": "AOA-T-0020",
           "name": "evidence-note-provenance-lift",
           "domain": "docs",
@@ -695,15 +704,6 @@
           "status": "promoted",
           "summary": "Lift authored GitHub issue and pull-request review templates into derived intake knowledge without turning templates into workflow automation or policy scoring.",
           "technique_path": "techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md",
-          "kind": "lift"
-        },
-        {
-          "id": "AOA-T-0048",
-          "name": "semantic-review-surface-lift",
-          "domain": "docs",
-          "status": "promoted",
-          "summary": "Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.",
-          "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
           "kind": "lift"
         }
       ]

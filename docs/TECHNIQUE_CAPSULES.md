@@ -1005,6 +1005,19 @@ See also:
 - Validate by: the docs/status source set is bounded and explicit; the derived surface points back to the authored repo docs; local...
 - Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
 
+### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`canonical`)
+
+- Summary: Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.
+- Intent: Lift authored _SEMANTIC_REVIEW.md docs into one derived boundary-review surface so readers and tooling can...
+- Use when: repositories that already have authored semantic-review docs and review-backed working sets or review flows where the question is...
+- Avoid when: repos without authored semantic-review docs or workflows that want semantic scoring, automated verdicts, or status transitions.
+- Needs: one or more authored _SEMANTIC_REVIEW.md docs; a review-backed working set or cluster definition; a derived manifest that...
+- Produces: bounded cluster-level review lookup; review path and cluster map entries that remain traceable to authored review docs...
+- Core contract: authored semantic-review docs remain the source of review meaning; the derived surface stays cluster-bounded and review-shaped.
+- Main risk: clusters expand until the derived surface stops reflecting one real bounded seam.
+- Validate by: the authored semantic-review doc exists and stays readable as the source of review meaning; the derived surface can be...
+- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
+
 ### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
 
 - Summary: Keep registry-facing capability entries reviewable as named versioned records with explicit references and metadata so publication stays bounded without widening into discovery policy or registry product doctrine.
@@ -1108,19 +1121,6 @@ See also:
 - Main risk: template scopes drift from the authored .github files and the manifest stops matching the real intake shape.
 - Validate by: the derived surface matches the authored GitHub templates; the template scopes stay bounded to prompt shape and section inventory...
 - Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
-
-### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
-
-- Summary: Lift authored semantic-review docs into derived boundary-review knowledge without creating automatic semantic verdicts.
-- Intent: Lift authored _SEMANTIC_REVIEW.md docs into one derived boundary-review surface so readers and tooling can...
-- Use when: repositories that already have authored semantic-review docs and review-backed working sets or review flows where the question is...
-- Avoid when: repos without authored semantic-review docs or workflows that want semantic scoring, automated verdicts, or status transitions.
-- Needs: one or more authored _SEMANTIC_REVIEW.md docs; a review-backed working set or cluster definition; a derived manifest that...
-- Produces: bounded cluster-level review lookup; review path and cluster map entries that remain traceable to authored review docs...
-- Core contract: authored semantic-review docs remain the source of review meaning; the derived surface stays cluster-bounded and review-shaped.
-- Main risk: clusters expand until the derived surface stops reflecting one real bounded seam.
-- Validate by: the authored semantic-review doc exists and stays readable as the source of review meaning; the derived surface can be...
-- Source: [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
 
 ## `evaluation`
 

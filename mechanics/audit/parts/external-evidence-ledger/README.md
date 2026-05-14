@@ -1744,7 +1744,9 @@ Adjacent or unresolved lanes:
   public AI/code review and quality-report products were checked as likely
   overlap, but they widen into scoring, summarization, policy checks, or
   product review rather than preserving authored semantic-review markdown as
-  the source for a bounded derived cluster reader.
+  the source for a bounded derived cluster reader. This lane is now historical:
+  the 2026-05-14 follow-up closed the bundle through `aoa-playbooks`
+  review-status reader evidence instead.
 
 Next honest search shape:
 
@@ -1756,9 +1758,35 @@ Next honest search shape:
 - `AOA-T-0047`: a review-specific template manifest or intake reader that
   inventories authored templates without owning approval, triage, or review
   state.
-- `AOA-T-0048`: an authored semantic-review or boundary-review markdown corpus
-  with a derived cluster/finding/next-step reader, not an AI review score or
-  generic review summary.
+- `AOA-T-0048`: closed by the 2026-05-14 `aoa-playbooks` review-status reader
+  pass; reopen only if the derived-reader boundary drifts toward scoring,
+  status automation, graph behavior, playbook composition authority, or generated
+  review authority.
+
+## AOA-T-0048 2026-05-14 Review-Status Closure
+
+Exact-fit second-context support:
+
+- [AOA-T-0048](../../../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md):
+  `aoa-playbooks` keeps authored gate-review notes under `docs/gate-reviews/`
+  and reviewed run summaries under `docs/real-runs/`, then derives
+  `generated/playbook_review_status.min.json` through
+  `scripts/generate_playbook_review_status.py`. The generator requires the
+  gate-review sections, validates owning playbook ids, checks exact reviewed-run
+  references against committed summaries, and emits a compact reader with
+  `gate_review_ref`, `reviewed_run_refs`, `minimum_evidence_threshold`,
+  `gate_verdict`, `next_trigger`, and `composition_signal_summary`.
+
+Boundary kept:
+
+- This closes the non-origin review-reader gap for `AOA-T-0048` because the
+  generated review-status surface remains subordinate to authored markdown.
+- It does not import playbook scenario law, composition governance, real-run
+  ownership, release gates, eval verdicts, graph behavior, or technique
+  promotion authority into the bundle.
+- Generic AI review, code review summaries, quality dashboards, and scoring
+  products remain adjacent rather than accepted evidence unless they preserve
+  the same authored-review to derived-reader source boundary.
 
 ## Notes
 

@@ -490,6 +490,12 @@ See also:
 |---|---|---|---|
 | Minimal Repo Doc Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/examples/minimal-repo-doc-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) |
 
+### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`canonical`)
+
+| example | body | example path | source |
+|---|---|---|---|
+| Minimal Semantic Review Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
+
 ### [AOA-T-0063](../techniques/instruction/capability-registry/versioned-agent-registry-contract/TECHNIQUE.md) - versioned-agent-registry-contract (`canonical`)
 
 | example | body | example path | source |
@@ -537,12 +543,6 @@ See also:
 | example | body | example path | source |
 |---|---|---|---|
 | Minimal GitHub Review Template Lift | `present` | `techniques/knowledge-lift/kag-source-lift/github-review-template-lift/examples/minimal-github-review-template-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md) |
-
-### [AOA-T-0048](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) - semantic-review-surface-lift (`promoted`)
-
-| example | body | example path | source |
-|---|---|---|---|
-| Minimal Semantic Review Surface Lift | `present` | `techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/examples/minimal-semantic-review-surface-lift.md` | [TECHNIQUE.md](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md) |
 
 ## `evaluation`
 
