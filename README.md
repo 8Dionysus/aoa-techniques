@@ -3,99 +3,72 @@
 Public library of reusable techniques for coding agents and humans.
 
 `aoa-techniques` is the public practice canon of AoA. It is not a snippet dump
-and not an "awesome list". A technique here is an atomic executable move: one
-minimal reproducible unit of engineering practice that can be classified,
-templated, verified, and handed to a small agent after orchestration supplies the
-right context.
+and not an "awesome list". A technique here is one atomic executable move: a
+small, reproducible unit of engineering practice that can be classified,
+templated, verified, and handed to a small agent after orchestration supplies
+the right context.
 
-This repo has a dual posture:
+The repository has a dual posture:
 
-- standalone public library: a builder should be able to take one technique,
-  capsule, or bundle into their own agent system without deploying OS Abyss or
-  the whole AoA ecosystem
-- AoA organ: inside OS Abyss, the same authored techniques keep stable IDs,
-  topology, provenance, review posture, mechanics, and generated surfaces for
-  sibling repos to consume
+- standalone public library: a builder can reuse one technique, capsule, or
+  bundle without deploying OS Abyss or the whole AoA ecosystem
+- AoA organ: the same authored techniques keep stable IDs, topology,
+  provenance, review posture, mechanics, and generated companions for sibling
+  repos to consume
 
-AoA references are allowed to explain provenance, owner law, or neighboring
+AoA references may explain provenance, owner law, or neighboring
 responsibilities. They should not make the core technique unusable for an
 external reader who only wants the bounded practice.
 
 > Current release: `v0.4.2`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
-## What this repo does
-
-| Function | Surface |
-|---|---|
-| Names the practice-canon boundary | [CHARTER](CHARTER.md) |
-| Names the practice-canon system form | [DESIGN](DESIGN.md) |
-| Names the agent-facing route mesh form | [DESIGN.AGENTS](DESIGN.AGENTS.md) |
-| Opens the shortest public route | [Start Here](docs/START_HERE.md) |
-| Defines what counts as one technique | [Technique Atom Contract](docs/TECHNIQUE_ATOM_CONTRACT.md) |
-| Defines the classification topology | [Technique Topology Contract](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
-| Defines the scalable corpus tree shape | [Technique Tree Contract](docs/TECHNIQUE_TREE_CONTRACT.md) |
-| Maps the public corpus | [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
-| Keeps root and docs placement legible | [Root Surface Law](docs/ROOT_SURFACE_LAW.md) |
-| Preserves repo-wide provenance after active distillation | [Root Legacy](legacy/README.md) |
-| Holds repo-level direction without becoming an audit ledger | [ROADMAP](ROADMAP.md) |
-| Tracks durable canon obligations | [QUESTBOOK](QUESTBOOK.md) |
-
-This repository is strongest when it keeps reusable practice small, portable,
-and well-classified. It is weakest when it tries to become the skill, proof,
-routing, memory, playbook, or runtime layer.
-
-## Start here
+## Start Here
 
 Use the shortest route by need:
 
-- repo-owned entrypoint: `docs/START_HERE.md`
-- authority boundary: `CHARTER.md`
-- system-form design: `DESIGN.md`
-- agent-surface design and mesh posture: `DESIGN.AGENTS.md`
-- atomic technique contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
-- classification topology contract: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-- scalable corpus tree contract: `docs/TECHNIQUE_TREE_CONTRACT.md`
-- root and docs placement law: `docs/ROOT_SURFACE_LAW.md`
-- repo-wide provenance, archives, and migration receipts: `legacy/README.md`
-- one full bundle end to end: `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md`
-- current technique map: `TECHNIQUE_INDEX.md`
-- current direction: `ROADMAP.md`
-- durable obligations: `QUESTBOOK.md`
-- AoA cross-mechanics for technique movement: `mechanics/README.md`
-- verify current repo state: `python scripts/validate_repo.py` and `python scripts/run_tests.py`
-- release-prep parity path: `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
-- deeper docs map: `docs/README.md`
-- authoring template: `templates/TECHNIQUE.template.md`
-- contribution path: `CONTRIBUTING.md`
+| Need | Open |
+|---|---|
+| first public route | `docs/START_HERE.md` |
+| repo boundary | `CHARTER.md` |
+| ecosystem placement | `docs/ECOSYSTEM_CONTEXT.md` |
+| one concrete bundle | `techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md` |
+| current technique map | `TECHNIQUE_INDEX.md` |
+| authoring contract | `docs/TECHNIQUE_ATOM_CONTRACT.md` |
+| classification and kind guidance | `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md` |
+| corpus tree contract | `docs/TECHNIQUE_TREE_CONTRACT.md` |
+| compact runtime cards | `docs/TECHNIQUE_CAPSULES.md` |
+| root placement law | `docs/ROOT_SURFACE_LAW.md` |
+| full docs map | `docs/README.md`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md` |
+| current direction | `ROADMAP.md` |
+| durable obligations | `QUESTBOOK.md` |
+| contribution path | `CONTRIBUTING.md` |
 
-## Quick routes
+Deep mechanic runbooks, review packets, ledgers, scout reports, generated
+readers, and shadow or semantic review artifacts are intentionally not
+re-indexed here. Start from the docs map or the owning `mechanics/<slug>/`
+route when you need that detail.
 
-- repo authority, layer position, and neighboring repos: `CHARTER.md` and `docs/ECOSYSTEM_CONTEXT.md`
-- current technique map, docs map, and generated catalog: `TECHNIQUE_INDEX.md`, `docs/README.md`, and `generated/technique_catalog.min.json`
-- via negativa pruning checklist: `docs/VIA_NEGATIVA_CHECKLIST.md`
-- frontmatter routing axes, topology, tree architecture, and kind doctrine: `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/TECHNIQUE_TREE_CONTRACT.md`, `docs/DOMAIN_MAP.md`, `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.min.json`, `config/technique_kind_registry.yaml`, `mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml`, `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, `mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml`, `mechanics/distillation/parts/technique-reform-ingress/reports/technique_family_scout.md`, `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`, `mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md`, and `docs/TECHNIQUE_KIND_BASELINE.md`
-- atomicity and small-agent authoring contract: `docs/TECHNIQUE_ATOM_CONTRACT.md`
-- feat-reader and runtime-card surfaces: `mechanics/growth-cycle/parts/technique-feat-model/README.md`, `generated/technique_feat_cards.min.example.json`, `docs/TECHNIQUE_CAPSULES.md`, and `generated/technique_capsules.min.json`
-- status, review, and promotion posture: `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, `mechanics/audit/parts/promotion-readiness-matrix/README.md`, `mechanics/audit/parts/canonical-retro-audit/README.md`, `generated/technique_promotion_readiness.min.json`, and `docs/RELEASING.md`
-- Agon practice-candidate bridge: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/LANDING_LOG.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`, `python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check`, `python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py`, and `python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py`
-- one end-to-end example path: `WALKTHROUGH.md`
-- bounded execution and proof neighbors: [`aoa-skills`](https://github.com/8Dionysus/aoa-skills) and [`aoa-evals`](https://github.com/8Dionysus/aoa-evals)
-- navigation and ecosystem map: [`aoa-routing`](https://github.com/8Dionysus/aoa-routing) and [`Agents-of-Abyss`](https://github.com/8Dionysus/Agents-of-Abyss)
+## Root Surfaces
 
-## Deeper routes
+| Surface | Role |
+|---|---|
+| `README.md` | public front door and route chooser |
+| `CHARTER.md` | authority boundary for the practice canon |
+| `DESIGN.md` | system form of the practice canon |
+| `DESIGN.AGENTS.md` | agent-facing surface design |
+| `AGENTS.md` | local agent route card and validation posture |
+| `TECHNIQUE_INDEX.md` | public corpus map by ID, status, domain, kind, and path |
+| `ROADMAP.md` | repo-level direction and horizons |
+| `QUESTBOOK.md` | durable obligations and parked work |
+| `CHANGELOG.md` | release history |
+| `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md` | public contribution, security, and conduct surfaces |
+| `WALKTHROUGH.md` | one thin end-to-end example |
 
-- donor intake, refinement, promotion, and canonical retro-audit: `mechanics/distillation/parts/donor-refinery/README.md`, `mechanics/distillation/parts/external-import-runbook/README.md`, `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`, `mechanics/audit/parts/promotion-readiness-matrix/README.md`, `mechanics/audit/parts/promotion-evidence-runbook/README.md`, `mechanics/audit/parts/external-evidence-sprint-runbook/README.md`, `mechanics/audit/parts/external-evidence-ledger/README.md`, and `mechanics/audit/parts/canonical-retro-audit/README.md`
-- Agon owner-binding companion surfaces: `mechanics/agon/parts/move-technique-bridge/README.md`, `mechanics/agon/PARTS.md`, `mechanics/agon/PROVENANCE.md`, `mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json`, and `mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`
-- selection and chooser surfaces: `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/TECHNIQUE_SELECTION.md`, and `docs/SELECTION_PATTERNS.md`
-- runtime cards and capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULE_GUIDE.md`
-- root placement, root legacy, agent mesh, repo-doc routing, and authoritative doc/status manifests: `docs/ROOT_SURFACE_LAW.md`, `legacy/README.md`, `DESIGN.AGENTS.md`, `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, `generated/agents_mesh.min.json`, `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
-- source-lift, KAG, and section families: `docs/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json`, `docs/KAG_SOURCE_LIFT_GUIDE.md`, `docs/TECHNIQUE_SECTIONS.md`, `generated/technique_sections.full.json`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, `generated/technique_section_manifest.json`, `generated/technique_checklist_manifest.json`, `generated/technique_example_manifest.json`, `generated/technique_evidence_note_manifest.json`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
-- review and shadow surfaces: `docs/SHADOW_PATTERNS.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`
-- public readiness lens for the published corpus: `generated/technique_promotion_readiness.min.json`
-- owner-local live receipt publication for closeout/stats integration: `mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py` and `.aoa/live_receipts/technique-receipts.jsonl`
-- current verify and release-prep path: `python scripts/validate_repo.py`, `python scripts/run_tests.py`, `docs/RELEASING.md`, `python scripts/release_check.py`, and `git status -sb`
+Root surfaces route to stronger owners. They do not absorb mechanic-local
+operating detail, generated truth, sibling-repo implementation truth, or raw
+history.
 
-## What belongs here
+## What Belongs Here
 
 Good candidates:
 
@@ -115,68 +88,38 @@ Bad candidates:
 - raw logs
 - project-only dumps
 - undocumented scripts
-- objects that belong as skills, evals, routing logic, role contracts, or playbooks
+- objects that belong as skills, evals, routing logic, role contracts,
+  playbooks, memory objects, or runtime behavior
 
-## Core principles
-
-- standalone portability without requiring a full OS Abyss deployment
-- AoA organ fidelity without hiding local dependencies inside portable practice
-- public-safe reusable practice over project-local residue
-- atomic executable moves over chains disguised as techniques
-- deliberate tree architecture plus faceted topology over overloaded buckets
-- source-of-truth separation over root-file sprawl
-- bounded, reviewable contracts over vague lore
-- source-linked promotion over raw copying
-- linked docs and generated surfaces over oversized root inventories
-
-## Maturity model
-
-This repository primarily exposes public techniques in `promoted`,
-`canonical`, and `deprecated` states. Earlier incubation may happen elsewhere,
-but the root here should point to curated public canon rather than replaying the
-full intake history.
-
-## Repository structure
+## Repository Shape
 
 - `techniques/` for published technique bundles
 - `templates/` for technique authoring and promotion scaffolds
-- `generated/` for derived catalogs, capsules, source-lift, and review surfaces
-- `legacy/` for public-safe repo-wide provenance, archive, and migration receipts
+- `docs/` for orientation, contracts, review doctrine, release, selection, and
+  generated-reader interpretation
+- `generated/` for reproducible catalogs, capsules, source-lift, and review
+  companions
 - `mechanics/` for AoA cross-mechanic movement surfaces around technique canon
-- `docs/` for orientation, review doctrine, release, selection, generated-reader interpretation, and shadow surfaces
-- `.agents/` for agent-facing companion lanes and local agent route support
-- `scripts/` for repo-wide builders/runners, root `tests/` for repo-wide
-  validation, and `mechanics/**/tests/` for mechanic-owned checks
+- `legacy/` for public-safe repo-wide provenance, archive, and migration
+  receipts after active distillation
+- `.agents/` for agent-facing companion lanes and local route support
+- `scripts/` for repo-wide builders and validators
+- `tests/` for repo-wide validation; mechanic-owned checks live under
+  `mechanics/**/tests/` or the owning part
 
-## Intended users
+## Validation
 
-- coding agents
-- solo builders
-- infra and product engineers
-- teams building reusable operational knowledge
+Use the narrowest check that matches the change. The common repo checks are:
 
-## What a good technique includes
+```bash
+python scripts/validate_repo.py
+python scripts/run_tests.py
+python scripts/release_check.py
+git status -sb
+```
 
-A strong technique should include:
-
-- clear intent and usage boundaries
-- one atomic move that can be executed from a compact runtime card
-- topology fit across `domain`, `kind`, and any reviewed future axes
-- explicit inputs, outputs, and risks
-- validation method
-- adaptation notes when portability needs them
-- enough structure to be promoted, reviewed, and reused
-
-## Contribution model
-
-`aoa-techniques` owns practice meaning, while neighboring repos own execution,
-proof, routing, role, and scenario composition. If one atomic reusable contract
-can be extracted cleanly from a neighboring layer, it belongs here once it
-becomes public-safe, bounded, and portable.
-
-The current runtime path for public technique use remains:
-
-`pick -> inspect -> expand -> object use`
+When source docs feed generated companions, rebuild the matching generated
+surface before validating.
 
 ## License
 

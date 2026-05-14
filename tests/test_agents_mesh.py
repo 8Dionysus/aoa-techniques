@@ -41,6 +41,10 @@ class AgentsMeshTests(unittest.TestCase):
         self.assertEqual("canonical", cards_by_path["docs/AGENTS.md"]["shape_status"])
         self.assertEqual(
             "canonical",
+            cards_by_path["docs/decisions/AGENTS.md"]["shape_status"],
+        )
+        self.assertEqual(
+            "canonical",
             cards_by_path["docs/guardrails/AGENTS.md"]["shape_status"],
         )
         self.assertIn("mechanics/agon/AGENTS.md", cards_by_path)

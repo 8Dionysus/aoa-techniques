@@ -555,7 +555,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         contributing = (REPO_ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8")
-        root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         runbook = (
             REPO_ROOT
             / "mechanics"
@@ -568,7 +567,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("External Import Runbook", start_here)
         self.assertIn("External Import Runbook", docs_readme)
         self.assertIn("mechanics/distillation/parts/external-import-runbook/README.md", contributing)
-        self.assertIn("mechanics/distillation/parts/external-import-runbook/README.md", root_readme)
         for target in (
             "nearest existing technique or overlap watch",
             "what stays out of the donor",
@@ -1096,7 +1094,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
     def test_external_evidence_surfaces_are_discoverable_and_operator_complete(self) -> None:
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
-        root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         runbook = (
             REPO_ROOT
             / "mechanics"
@@ -1119,9 +1116,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
                 "parts/external-evidence-sprint-runbook/README.md", content
             )
             self.assertIn("parts/external-evidence-ledger/README.md", content)
-
-        self.assertIn("mechanics/audit/parts/external-evidence-sprint-runbook/README.md", root_readme)
-        self.assertIn("mechanics/audit/parts/external-evidence-ledger/README.md", root_readme)
 
         for target in (
             "AOA-T-0032",
@@ -1149,11 +1143,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             self.assertIn(target, ledger)
 
     def test_cross_layer_candidates_surface_is_discoverable_from_repo_entrypoints(self) -> None:
-        root_readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
 
-        for content in (root_readme, docs_readme, start_here):
+        for content in (docs_readme, start_here):
             self.assertIn(
                 "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
                 content,
@@ -1570,17 +1563,11 @@ class TechniqueContentSmokeTests(unittest.TestCase):
 
         self.assertEqual(
             (
-                "What this repo does",
-                "Start here",
-                "Quick routes",
-                "Deeper routes",
-                "What belongs here",
-                "Core principles",
-                "Maturity model",
-                "Repository structure",
-                "Intended users",
-                "What a good technique includes",
-                "Contribution model",
+                "Start Here",
+                "Root Surfaces",
+                "What Belongs Here",
+                "Repository Shape",
+                "Validation",
                 "License",
             ),
             surfaces_by_path["README.md"].top_level_sections,
@@ -1825,7 +1812,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("21 authoritative public route/canon/status files", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", docs_readme)
-        self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", readme)
         self.assertIn("KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md", kag_source_guide)
         self.assertIn("docs/REPO_DOC_SURFACES.md", readme)
         self.assertIn("generated/repo_doc_surface_manifest.json", readme)
@@ -1843,6 +1829,36 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("python scripts/build_repo_doc_surface_manifest.py", releasing)
         self.assertIn("python scripts/build_kag_export.py", releasing)
         self.assertIn("python scripts/build_shadow_review_manifest.py", releasing)
+
+    def test_decisions_district_has_local_route_and_template(self) -> None:
+        docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
+        decisions_readme = (
+            REPO_ROOT / "docs" / "decisions" / "README.md"
+        ).read_text(encoding="utf-8")
+        decisions_agents = (
+            REPO_ROOT / "docs" / "decisions" / "AGENTS.md"
+        ).read_text(encoding="utf-8")
+        decision_template = (
+            REPO_ROOT / "docs" / "decisions" / "TEMPLATE.md"
+        ).read_text(encoding="utf-8")
+        root_slimming_decision = (
+            REPO_ROOT
+            / "docs"
+            / "decisions"
+            / "2026-05-14-root-md-surface-slimming.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("decisions/README.md", docs_readme)
+        self.assertIn("Decision records explain why", decisions_readme)
+        self.assertIn("Current source surfaces define what", decisions_readme)
+        self.assertIn("TEMPLATE.md", decisions_agents)
+        for heading in (
+            "## Options considered",
+            "## Source surfaces",
+            "## Follow-up route",
+        ):
+            self.assertIn(heading, decision_template)
+            self.assertIn(heading, root_slimming_decision)
 
     def test_kind_guide_and_handoff_pack_are_discoverable_from_root_docs_and_release_entrypoints(
         self,
@@ -2339,11 +2355,10 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             rendered,
         )
 
-    def test_kag_source_readers_are_discoverable_from_docs_root_readme_changelog_kag_and_release_docs(
+    def test_kag_source_readers_are_discoverable_from_docs_root_changelog_kag_and_release_docs(
         self,
     ) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
-        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         kag_source_guide = (REPO_ROOT / "docs" / "KAG_SOURCE_LIFT_GUIDE.md").read_text(
             encoding="utf-8"
@@ -2367,24 +2382,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "technique_evidence_note_manifest.json",
         ):
             self.assertIn(target, docs_readme)
-
-        for target in (
-            "docs/KAG_EXPORT.md",
-            "docs/TECHNIQUE_SECTIONS.md",
-            "docs/TECHNIQUE_SECTION_LIFT_GUIDE.md",
-            "docs/TECHNIQUE_CHECKLISTS.md",
-            "docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md",
-            "docs/TECHNIQUE_EXAMPLES.md",
-            "docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md",
-            "docs/EVIDENCE_NOTE_SURFACES.md",
-            "generated/kag_export.json",
-            "generated/kag_export.min.json",
-            "generated/technique_section_manifest.json",
-            "generated/technique_checklist_manifest.json",
-            "generated/technique_example_manifest.json",
-            "generated/technique_evidence_note_manifest.json",
-        ):
-            self.assertIn(target, readme)
 
         for target in (
             "TECHNIQUE_SECTIONS.md",
@@ -2445,9 +2442,6 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         self.assertIn("technique_capsules.json", docs_readme)
         self.assertIn("technique_capsules.min.json", docs_readme)
         self.assertIn("docs/TECHNIQUE_CAPSULES.md", readme)
-        self.assertIn("docs/TECHNIQUE_CAPSULE_GUIDE.md", readme)
-        self.assertIn("generated/technique_capsules.json", readme)
-        self.assertIn("generated/technique_capsules.min.json", readme)
         self.assertIn("TECHNIQUE_CAPSULES.md", changelog)
         self.assertIn("TECHNIQUE_CAPSULE_GUIDE.md", changelog)
         self.assertIn("technique_capsules.min.json", changelog)
@@ -2543,19 +2537,14 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         for verdict in ("`keep current kind`", "`revisit later`", "`candidate remap`"):
             self.assertIn(verdict, audit_markdown)
 
-    def test_shadow_surface_is_discoverable_from_root_docs_and_changelog(self) -> None:
+    def test_shadow_surface_is_discoverable_from_docs_root_and_changelog(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
-        readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Shadow Patterns", docs_readme)
         self.assertIn("Published-Summary Shadow Review", docs_readme)
         self.assertIn("Evaluation-Chain Shadow Review", docs_readme)
         self.assertIn("shadow_review_manifest.json", docs_readme)
-        self.assertIn("docs/SHADOW_PATTERNS.md", readme)
-        self.assertIn("mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md", readme)
-        self.assertIn("generated/shadow_review_manifest.json", readme)
-        self.assertIn("mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md", readme)
         self.assertIn("docs/SHADOW_PATTERNS.md", changelog)
         self.assertIn("PUBLISHED_SUMMARY_SHADOW_REVIEW.md", changelog)
         self.assertIn("shadow_review_manifest.json", changelog)

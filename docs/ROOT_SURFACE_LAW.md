@@ -114,8 +114,8 @@ cannot stay compact, route it to the owner surface that can carry the detail.
 | `CHARTER.md` | add | the practice canon needs a root authority boundary distinct from README and AGENTS |
 | `DESIGN.md` | add | the practice canon needs a root system-form surface distinct from charter authority, roadmap direction, technique contracts, and agent instructions |
 | `DESIGN.AGENTS.md` | add | agent-facing surface design needs a root form guide so local cards can copy discipline without copying another repo's wording |
-| `README.md` | keep and slim toward public front door | it should introduce and route, not index every active detail |
-| `ROADMAP.md` | keep as live direction | historical closure audit detail belongs to Audit legacy, while root roadmap owns horizons and update rules |
+| `README.md` | keep as compact public front door | it should introduce and route to stronger docs, not index mechanic runbooks, generated readers, semantic reviews, shadow reviews, or every active detail |
+| `ROADMAP.md` | keep as live direction | historical closure audit and tree-migration breadcrumbs belong to owner ledgers and mechanic roadmaps, while root roadmap owns horizons and update rules |
 | previous closure-audit `ROADMAP.md` | move to `mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md` | preserves the evidence without making old audit detail the live direction surface |
 | `QUESTBOOK.md` | keep as root obligation index | it is useful only while it stays a compact index, not a second roadmap |
 | `TECHNIQUE_INDEX.md` | keep | public corpus map by ID, status, domain, and summary is root-worthy |

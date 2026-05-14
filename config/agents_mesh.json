@@ -22,6 +22,7 @@
     ".github/AGENTS.md",
     "config/AGENTS.md",
     "docs/AGENTS.md",
+    "docs/decisions/AGENTS.md",
     "docs/guardrails/AGENTS.md",
     "examples/AGENTS.md",
     "generated/AGENTS.md",

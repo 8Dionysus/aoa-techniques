@@ -34,7 +34,7 @@ Open these first when the question is where to start or which public repo map or
 
 | doc | bounded role | top-level sections |
 |---|---|---|
-| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `What this repo does`, `Start here`, `Quick routes`, `Deeper routes`, `What belongs here`, `Core principles`, `Maturity model`, `Repository structure`, `Intended users`, `What a good technique includes`, `Contribution model`, `License` |
+| [aoa-techniques](../README.md) (`README.md`) | root entrypoint for repository purpose, scope, and first-read routing | `Start Here`, `Root Surfaces`, `What Belongs Here`, `Repository Shape`, `Validation`, `License` |
 | [Start Here](START_HERE.md) (`docs/START_HERE.md`) | repo-owned self-serve entrypoint for route selection, corpus posture, and stay-here versus leave-here decisions | `What This Repo Is`, `If You Need One Technique Now`, `If You Need To Understand Maturity And Review`, `If You Need Derived Surfaces`, `Current Corpus Posture`, `Repo-Only Operating Contract`, `When To Leave This Repo`, `Release And Validation` |
 | [Documentation Map](README.md) (`docs/README.md`) | docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint | `Start Here`, `Surface Types`, `Recommended Reading Paths`, `Companion Repository Surfaces`, `Notes` |
 
