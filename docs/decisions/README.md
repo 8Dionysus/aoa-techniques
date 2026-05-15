@@ -22,7 +22,7 @@ local editing and validation route.
 | Technique contracts | atom, topology, tree, kind remaps, template modernization | why reusable practice is shaped, classified, or constrained a certain way |
 | Mechanics packages | active/legacy splits, package-card standards, mechanic-local artifacts | why mechanic packages own movement, provenance, parts, and local validation |
 | Reform and review homes | scout inputs, reports, review packets, contract packets, scripts, tests | why evidence or helper surfaces moved to owner-local part homes |
-| Agent and platform routes | GitHub landing, Spark lane, agent-surface mesh | why agent-facing, platform, and generated mesh surfaces are arranged as they are |
+| Agent and platform routes | GitHub landing, Spark lane home, Spark registry-backed scenarios, agent-surface mesh | why agent-facing, platform, and generated mesh surfaces are arranged as they are |
 
 ## Record Shape
 

@@ -1,0 +1,127 @@
+{
+  "schema_version": "aoa_techniques_spark_lane_registry_v1",
+  "authority_ref": ".agents/spark/README.md",
+  "agents_ref": ".agents/spark/AGENTS.md",
+  "notebook_ref": ".agents/spark/SPARK_EXTRAPOLATION_NOTEBOOK.md",
+  "swarm_ref": ".agents/spark/SWARM.md",
+  "storage_refs": {
+    "handoffs": ".agents/spark/handoffs/README.md",
+    "handoffs_open": ".agents/spark/handoffs/open/README.md",
+    "handoffs_closed": ".agents/spark/handoffs/closed/README.md",
+    "results": ".agents/spark/results/README.md"
+  },
+  "schema_refs": {
+    "registry": ".agents/spark/schemas/spark-registry.schema.json",
+    "result": ".agents/spark/schemas/spark-result.schema.json",
+    "handoff": ".agents/spark/schemas/spark-handoff.schema.json"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "technique-audit",
+      "role": "read-only audit of boundedness, duplicate meaning, stale paths, public hygiene, and owner route",
+      "path": ".agents/spark/scenarios/technique-audit",
+      "prompt_ref": ".agents/spark/scenarios/technique-audit/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/technique-audit/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/technique-audit/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/technique-audit/examples/result.example.md",
+      "default_validation": [
+        "targeted validator for the audited surface when one is named",
+        "manual consistency pass"
+      ],
+      "done_signal": "audit findings are scoped, evidenced, and routed to the correct owner or validator",
+      "stop_line": "do not rewrite the audited surface during audit-only work"
+    },
+    {
+      "scenario_id": "technique-refinement",
+      "role": "one small source-backed patch to an existing technique bundle",
+      "path": ".agents/spark/scenarios/technique-refinement",
+      "prompt_ref": ".agents/spark/scenarios/technique-refinement/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/technique-refinement/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/technique-refinement/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/technique-refinement/examples/result.example.md",
+      "default_validation": [
+        "git diff --check",
+        "targeted owner-surface validator when one is named"
+      ],
+      "done_signal": "one existing technique is more atomic, portable, sanitized, and reviewable",
+      "stop_line": "stop when the patch asks for a second owner, broader design, or non-technique object"
+    },
+    {
+      "scenario_id": "candidate-scout",
+      "role": "map donor, legacy, or mechanic-local material before deeper distillation",
+      "path": ".agents/spark/scenarios/candidate-scout",
+      "prompt_ref": ".agents/spark/scenarios/candidate-scout/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/candidate-scout/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/candidate-scout/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/candidate-scout/examples/result.example.md",
+      "default_validation": [
+        "manual provenance pass"
+      ],
+      "done_signal": "likely active homes, rejected material, portability concerns, and next owner route are named",
+      "stop_line": "do not perform deep semantic distillation or canon promotion inside scout mode"
+    },
+    {
+      "scenario_id": "diff-review",
+      "role": "review a concrete diff or PR for technique-canon risk and missed checks",
+      "path": ".agents/spark/scenarios/diff-review",
+      "prompt_ref": ".agents/spark/scenarios/diff-review/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/diff-review/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/diff-review/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/diff-review/examples/result.example.md",
+      "default_validation": [
+        "git diff --check"
+      ],
+      "done_signal": "findings are ordered by severity and tied to exact paths",
+      "stop_line": "do not rewrite the diff while acting as reviewer"
+    },
+    {
+      "scenario_id": "registry-sync",
+      "role": "align docs, registry, validator, release gate, and generated companions",
+      "path": ".agents/spark/scenarios/registry-sync",
+      "prompt_ref": ".agents/spark/scenarios/registry-sync/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/registry-sync/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/registry-sync/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/registry-sync/examples/result.example.md",
+      "default_validation": [
+        "python .agents/spark/scripts/validate_spark_lane.py",
+        "python scripts/build_agents_mesh_index.py --check"
+      ],
+      "done_signal": "source, registry, docs, validator, and generated mirror agree",
+      "stop_line": "do not create a new source of truth while syncing derived routes"
+    },
+    {
+      "scenario_id": "test-factory",
+      "role": "add bounded tests for an already clear source contract",
+      "path": ".agents/spark/scenarios/test-factory",
+      "prompt_ref": ".agents/spark/scenarios/test-factory/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/test-factory/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/test-factory/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/test-factory/examples/result.example.md",
+      "default_validation": [
+        "targeted unittest discovery for the changed test directory",
+        "owning source-surface validator when one is named"
+      ],
+      "done_signal": "tests prove a named existing contract and pass locally",
+      "stop_line": "do not invent new semantics to make tests interesting"
+    },
+    {
+      "scenario_id": "release-prep",
+      "role": "run a fast release-readiness pass without publishing",
+      "path": ".agents/spark/scenarios/release-prep",
+      "prompt_ref": ".agents/spark/scenarios/release-prep/PROMPT.md",
+      "result_template_ref": ".agents/spark/scenarios/release-prep/templates/result.md",
+      "handoff_template_ref": ".agents/spark/scenarios/release-prep/templates/handoff.md",
+      "result_example_ref": ".agents/spark/scenarios/release-prep/examples/result.example.md",
+      "default_validation": [
+        "python scripts/release_check.py"
+      ],
+      "done_signal": "changed surfaces, checks, public-claim risks, generated parity, and owner routes are named",
+      "stop_line": "do not publish, tag, push, or merge without an explicit user command"
+    }
+  ],
+  "validation_commands": [
+    "python .agents/spark/scripts/validate_spark_lane.py",
+    "python -m unittest discover -s .agents/spark/tests -p 'test*.py'",
+    "python scripts/release_check.py"
+  ]
+}

@@ -28,6 +28,8 @@ RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/validate_agents_mesh.py"),
     ("python", "scripts/build_agents_mesh_index.py", "--check"),
     ("python", "scripts/validate_agents_mesh_index.py"),
+    ("python", ".agents/spark/scripts/validate_spark_lane.py"),
+    ("python", "-m", "unittest", "discover", "-s", ".agents/spark/tests", "-p", "test*.py"),
     ("python", "scripts/run_tests.py"),
     ("python", "scripts/validate_nested_agents.py"),
     ("python", "scripts/validate_repo.py"),

@@ -8,6 +8,10 @@ The format is intentionally simple and human-first.
 
 ### Added
 
+- expanded `.agents/spark/` into a registry-backed Codex Spark lane for
+  technique-canon work, with technique-specific scenarios, result/handoff
+  templates, schemas, validator, tests, release-check wiring, and a decision
+  record for the lane contract
 - added repo-local `DESIGN.md`, `DESIGN.AGENTS.md`, AGENTS mesh guardrails,
   `config/agents_mesh.json`, generated `agents_mesh.min.json`, validators, and
   tests so the Agents-of-Abyss agent-surface principle is adapted into a

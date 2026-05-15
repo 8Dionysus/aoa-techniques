@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aoa_techniques_spark_handoff_v1",
+  "title": "aoa-techniques Spark handoff packet",
+  "type": "object",
+  "required": [
+    "scenario",
+    "status",
+    "reason_for_handoff",
+    "scope_read",
+    "findings",
+    "files_likely_affected",
+    "validation_already_run",
+    "validation_still_needed",
+    "stop_line",
+    "suggested_next_prompt"
+  ],
+  "properties": {
+    "scenario": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "status": {
+      "const": "handoff"
+    },
+    "reason_for_handoff": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_read": {
+      "type": "string",
+      "minLength": 1
+    },
+    "findings": {
+      "$ref": "#/$defs/string_array"
+    },
+    "files_likely_affected": {
+      "$ref": "#/$defs/string_array"
+    },
+    "validation_already_run": {
+      "$ref": "#/$defs/string_array"
+    },
+    "validation_still_needed": {
+      "$ref": "#/$defs/string_array"
+    },
+    "stop_line": {
+      "type": "string",
+      "minLength": 1
+    },
+    "suggested_next_prompt": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
