@@ -19,6 +19,10 @@ Read root `AGENTS.md`, `DESIGN.AGENTS.md`,
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, and the nearest lane card before
 changing files here.
 
+For Codex Spark work, also read `.agents/spark/README.md`,
+`.agents/spark/registry.json`, and the chosen scenario `README.md` plus
+`PROMPT.md`.
+
 For exported skill-like material, also read `techniques/AGENTS.md`,
 `TECHNIQUE_INDEX.md`, and the source `TECHNIQUE.md` bundle that produced the
 agent-facing companion.
@@ -39,6 +43,8 @@ Run the smallest covering checks:
 ```bash
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
+python .agents/spark/scripts/validate_spark_lane.py
+python -m unittest discover -s .agents/spark/tests -p 'test*.py'
 python scripts/validate_semantic_agents.py
 python scripts/validate_repo.py
 ```

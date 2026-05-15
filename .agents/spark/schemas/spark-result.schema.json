@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aoa_techniques_spark_result_v1",
+  "title": "aoa-techniques Spark result packet",
+  "type": "object",
+  "required": [
+    "scenario",
+    "status",
+    "scope",
+    "files_read",
+    "findings",
+    "changes_made",
+    "validation_run",
+    "skipped_checks",
+    "remaining_risk",
+    "next_owner_route"
+  ],
+  "properties": {
+    "scenario": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "status": {
+      "const": "done"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "files_read": {
+      "$ref": "#/$defs/string_array"
+    },
+    "findings": {
+      "$ref": "#/$defs/string_array"
+    },
+    "changes_made": {
+      "$ref": "#/$defs/string_array"
+    },
+    "validation_run": {
+      "$ref": "#/$defs/string_array"
+    },
+    "skipped_checks": {
+      "$ref": "#/$defs/string_array"
+    },
+    "remaining_risk": {
+      "type": "string"
+    },
+    "next_owner_route": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "string_array": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
