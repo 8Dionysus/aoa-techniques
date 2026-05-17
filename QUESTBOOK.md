@@ -7,8 +7,9 @@ It holds repo-level obligations for canon hardening, donor-refinery follow-up,
 and generated/source alignment. It is not a second roadmap, not a donor dump,
 and not a substitute for technique meaning.
 
-Program direction belongs in [ROADMAP](ROADMAP.md). Technique meaning belongs in
-`techniques/**/TECHNIQUE.md`. Candidate movement belongs in `mechanics/`.
+Program direction belongs in [ROADMAP](ROADMAP.md). Technique meaning belongs
+in [techniques](techniques/). Candidate movement belongs in
+[mechanics](mechanics/README.md).
 
 Use it for:
 - promotion-readiness follow-through
@@ -29,14 +30,14 @@ Update this root index when an obligation should remain visible across future
 work and belongs to the technique canon as a repo-level follow-through.
 
 Use the nearest owner route instead when the obligation is local to one bundle,
-mechanic, generated surface, or release. Use:
+mechanic, generated surface, or release:
 
-- `ROADMAP.md` for direction, horizon posture, and future trigger contours
-- `CHANGELOG.md` for released repository history
-- `mechanics/<slug>/LANDING_LOG.md` for checked mechanic landings
-- `mechanics/<slug>/ROADMAP.md` for mechanic-local future pressure
-- `docs/decisions/` for durable rationale
-- `techniques/**/notes/` for bundle-local evidence and review notes
+- [ROADMAP](ROADMAP.md) for direction, horizon posture, and future trigger contours
+- [CHANGELOG](CHANGELOG.md) for released repository history
+- mechanic landing logs for checked mechanic landings
+- mechanic roadmaps for mechanic-local future pressure
+- [decisions](docs/decisions/README.md) for durable rationale
+- bundle-local notes for technique evidence and review notes
 
 If a closeout leaves a durable obligation but this file stays unchanged, say why
 the obligation belongs to another owner route.
@@ -60,11 +61,11 @@ the obligation belongs to another owner route.
 
 ## Backing files
 
-- `quests/<lane>/<state>/`
-- `schemas/quest.schema.json`
-- `schemas/quest_dispatch.schema.json`
-- `generated/quest_catalog.min.example.json`
-- `generated/quest_dispatch.min.example.json`
+- [quests](quests/) with lane/state layout `quests/<lane>/<state>/`
+- [quest schema](schemas/quest.schema.json)
+- [quest dispatch schema](schemas/quest_dispatch.schema.json)
+- [quest catalog example](generated/quest_catalog.min.example.json)
+- [quest dispatch example](generated/quest_dispatch.min.example.json)
 
 ## Rule
 
