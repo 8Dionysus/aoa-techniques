@@ -1,19 +1,9 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/method-growth/`.
-
 ## Applies to
 
 This card applies to the Method-growth mechanics package and every nested path
 under it until a nearer `AGENTS.md` narrows the lane.
-
-## Read before editing
-
-1. Repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/REQUEST_RECEIPTS.md` when touching `ORQ-METHOD-TECHNIQUES-001`
-4. `mechanics/method-growth/README.md`
-5. The nearest part README, or `PROVENANCE.md` when touching lineage
 
 ## Role
 
@@ -34,7 +24,15 @@ owner acceptance outside this repository.
 - `LANDING_LOG.md` records structural landings.
 - `ROADMAP.md` names the next honest passes.
 
-## Editing posture
+## Read before editing
+
+1. Repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/REQUEST_RECEIPTS.md` when touching `ORQ-METHOD-TECHNIQUES-001`
+4. `mechanics/method-growth/README.md`
+5. The nearest part README, or `PROVENANCE.md` when touching lineage
+
+## Boundaries
 
 - Keep adoption and handoff mechanics distinct from promoted technique bundles.
 - If a part starts carrying a stable reusable practice with full bundle shape,
@@ -43,7 +41,7 @@ owner acceptance outside this repository.
 - Do not treat retention, obsolescence, or pruning notes as proof verdicts.
 - Keep local owner consent, rollback, and evidence posture visible.
 
-## Verify
+## Validation
 
 For Method-growth topology changes:
 

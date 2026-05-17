@@ -1,7 +1,5 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/distillation/legacy/`.
-
 ## Applies to
 
 This card applies to preserved Distillation lineage and future raw receipts.
@@ -11,15 +9,34 @@ This card applies to preserved Distillation lineage and future raw receipts.
 `legacy/` preserves accounting for raw-to-active Distillation movement. It is
 not the active operating contract.
 
-## Editing posture
+## Read before editing
 
+Read:
+
+1. repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/distillation/AGENTS.md`
+4. `mechanics/distillation/PROVENANCE.md`
+5. `mechanics/distillation/legacy/README.md` or the touched raw/receipt surface when present
+
+## Boundaries
+
+- Do not use raw legacy files as the normal first route for current edits.
+- Do not make raw legacy files the only place current active behavior lives.
+- Do not create placeholder source receipts; preserve only actual source packets.
 - Do not change a legacy receipt to alter current behavior.
 - If a legacy source changes current behavior, update the active part first.
 - Record any new raw preservation in `INDEX.md` and `DISTILLATION_LOG.md`.
 - Keep raw receipts public-safe before adding them here.
 
-## Verify
+## Validation
 
 ```bash
 python -m unittest discover -s mechanics/distillation/tests
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

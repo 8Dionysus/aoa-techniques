@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Route card for `mechanics/growth-cycle/`.
+## Applies to
 
-## Purpose
+This card applies to `mechanics/growth-cycle/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 This package owns the `aoa-techniques` side of Growth Cycle: technique-layer
 harvest posture, feat-reader reflection, questbook followthrough, and reviewed
@@ -12,7 +15,7 @@ It does not own AoA Growth Cycle stage law, hooks, executable cycle skills,
 proof verdicts, memory canon, role progression, runtime exports, or playbook
 choreography.
 
-## Start here
+## Read before editing
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
@@ -20,7 +23,7 @@ choreography.
 4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
 5. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
 
-## Local law
+## Boundaries
 
 - Keep Growth Cycle here technique-layered: harvest, feat reflection, quest
   routing, and promotion-readiness incubation.
@@ -32,7 +35,7 @@ choreography.
 - If a stable reusable practice emerges, route it into `techniques/` through
   the normal technique review path.
 
-## Verify
+## Validation
 
 Use the root validation path after changes:
 
@@ -40,3 +43,9 @@ Use the root validation path after changes:
 python scripts/validate_repo.py
 python scripts/run_tests.py
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

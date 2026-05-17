@@ -71,6 +71,9 @@ It does not own:
   names its technique-layer authority, then routes stronger law or acceptance
   to `Agents-of-Abyss`, `REQUEST_RECEIPTS.md`, `PROVENANCE.md`, or the sibling
   owner only when relevant.
+- Package README cards do not carry validation command lanes. Keep validation
+  in the nearest `AGENTS.md` so package cards stay source-oriented and local
+  checks stay operational.
 - When a mechanics surface answers an AoA center-side owner request, keep the
   local receipt in `mechanics/REQUEST_RECEIPTS.md` and do not treat the request
   packet as local acceptance or landing.

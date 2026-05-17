@@ -54,10 +54,6 @@ derived movement summaries.
 - owner acceptance
 - automatic technique promotion
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

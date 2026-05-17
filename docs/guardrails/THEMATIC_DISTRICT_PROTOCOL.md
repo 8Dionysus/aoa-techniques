@@ -118,8 +118,8 @@ explicit promotion path:
 4. update tests or validators that enforce the route
 5. record a decision when future maintainers need to know why
 
-## Validation
+## Check Route
 
 Use [AGENTS](AGENTS.md) for the command lane. At minimum, docs-topology changes
 should keep [Current Surface Index](CURRENT_SURFACE_INDEX.md) aligned with flat
-docs files and should pass `python scripts/validate_repo.py`.
+docs files.

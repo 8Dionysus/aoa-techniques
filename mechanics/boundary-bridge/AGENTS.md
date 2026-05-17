@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Route card for `mechanics/boundary-bridge/`.
+## Applies to
 
-## Purpose
+This card applies to `mechanics/boundary-bridge/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 This package owns the `aoa-techniques` side of Boundary-bridge: local practice
 pressure around owner-boundary placement, non-identity, derived projection,
@@ -14,7 +17,7 @@ interpretation, KAG projection truth, routing behavior, SDK compatibility
 authority, memory writeback, proof verdicts, runtime activation, public
 projection authority, owner acceptance, or technique status changes.
 
-## Start here
+## Read before editing
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
@@ -22,7 +25,7 @@ projection authority, owner acceptance, or technique status changes.
 4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
 5. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
 
-## Local law
+## Boundaries
 
 - Keep boundary-bridge here technique-layered: reusable practice pressure, not
   cross-owner authority.
@@ -39,7 +42,7 @@ projection authority, owner acceptance, or technique status changes.
 - If a stable reusable practice emerges, route it into `techniques/` through
   the normal technique review path.
 
-## Verify
+## Validation
 
 Use the root validation path after changes:
 
@@ -47,3 +50,9 @@ Use the root validation path after changes:
 python scripts/validate_repo.py
 python scripts/run_tests.py
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

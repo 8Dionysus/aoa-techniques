@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Guidance for coding agents and humans working under `techniques/tool-use/`.
+## Applies to
 
-## Purpose
+This card applies to `techniques/tool-use/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 `tool-use/` stores technique bundles whose primary placement question is how an
 agent, caller, or bounded workflow meets tools, gateways, APIs, connectors, or
@@ -19,7 +22,23 @@ Current shelves:
 - `tool-gateway/`: one bounded MCP gateway proxy seam in front of configured
   upstream tool surfaces, with visible metadata and mediation boundaries
 
+## Read before editing
+
+Read:
+
+1. repository root `AGENTS.md`
+2. `techniques/AGENTS.md`
+3. `docs/TECHNIQUE_TREE_CONTRACT.md`
+4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
+
 ## Trunk Rules
+
+Keep this card as tree route guidance for the trunk. Technique bundle meaning
+stays in each `TECHNIQUE.md`; path placement alone does not change frontmatter
+truth or owner authority.
+
+## Boundaries
 
 Keep the tool-use object small and inspectable:
 
@@ -30,8 +49,6 @@ Keep the tool-use object small and inspectable:
   truly subordinate to the one tool-use move
 - preserve the difference between a portable technique and an owning runtime,
   skill, connector, or product surface
-
-## Boundary
 
 Use `docs/TECHNIQUE_TREE_CONTRACT.md` before adding another shelf here.
 
@@ -54,3 +71,9 @@ After changing tool-use techniques, run:
 
 Run `python scripts/release_check.py` when generated catalogs or reader
 surfaces changed.
+
+## Closeout
+
+Report the trunk, shelf, and bundle paths changed; whether path,
+frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
+skipped; and any remaining owner-route risk.

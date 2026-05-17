@@ -42,7 +42,7 @@ For link, shape, or moved-path hygiene, also read:
 - Do not use guardrails to move technique, mechanic, proof, skill, routing,
   memory, playbook, runtime, or ToS truth into this repository.
 - Do not hide durable directory growth without either a local `AGENTS.md` card,
-  an explicit migration status, or a documented temporary route.
+  a registered exemption, or a documented temporary route.
 
 ## Validation
 
@@ -65,5 +65,5 @@ python scripts/release_check.py
 ## Closeout
 
 Report changed guardrail surfaces, generated mirrors rebuilt or checked,
-validators run, validators skipped, remaining migration-card risk, and whether
-the next pass should normalize more local `AGENTS.md` cards.
+validators run, validators skipped, remaining canonical-shape risk, and whether
+any future exception needs an explicit migration cleanup route.

@@ -32,10 +32,5 @@ corresponding `TECHNIQUE.md` bundle.
 
 ## Regeneration
 
-Use:
-
-```bash
-python -m pip install -r requirements-dev.txt
-python scripts/build_kag_export.py
-python scripts/validate_repo.py
-```
+Use [AGENTS](AGENTS.md#validation) for the current regeneration and validation
+lane.

@@ -22,8 +22,4 @@ inside active part docs.
   direction
 - you are auditing stop-lines, owner boundaries, or source provenance
 
-## Stop-lines
-
-- Do not use raw files as the normal first route for routine edits.
-- Do not delete raw provenance after distillation.
-- Do not make `legacy/raw/` the only place a current active rule lives.
+Agent stop-lines, validation, and closeout live in [AGENTS](AGENTS.md).

@@ -60,10 +60,6 @@ rollback, and each sibling owner accepts its own release evidence.
 - public projection as technique truth
 - automatic technique promotion
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

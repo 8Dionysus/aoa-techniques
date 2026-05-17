@@ -10,27 +10,14 @@ launch, result, and handoff material. It does not author technique meaning,
 mechanic law, generated truth, proof authority, skill workflow meaning, or
 runtime state.
 
-## Core Contract
+## Operating Route
 
-| Rule | Meaning |
-|---|---|
-| one scenario | choose exactly one registered scenario from [registry](registry.json) |
-| one scope | keep the technique, source surface, registry family, or validation path small |
-| done-or-handoff | finish the scenario or write a handoff; do not depend on an in-session model switch |
-| targeted edit | prefer minimal local edits, tight audits, or explicit handoffs over broad rewrites |
-| explicit validation | run narrow checks named by the user, scenario, or repo law; do not run broad tests just because they exist |
-| source respect | route to stronger source surfaces instead of absorbing their authority |
-| public safety | do not carry private residue, raw logs, secrets, host paths, or project folklore into public technique text |
-| evidence | name files read, files changed, validation run, skipped checks, remaining risk, and next owner route |
+Use [AGENTS](AGENTS.md) for the Spark read order, boundaries, validation lane,
+skipped-check reporting, and closeout shape.
 
-## Start Here
-
-1. Read root [AGENTS](../../AGENTS.md).
-2. Read [.agents AGENTS](../AGENTS.md).
-3. Read local [AGENTS](AGENTS.md).
-4. Choose one scenario from [registry](registry.json).
-5. Read that scenario `README.md` and `PROMPT.md`.
-6. Finish with a result packet or a handoff packet.
+Choose one registered scenario from [registry](registry.json), then read that
+scenario `README.md` and `PROMPT.md`. Finish with a result packet or a handoff
+packet.
 
 Use [SWARM](SWARM.md) only when a Spark swarm is explicitly requested.
 
@@ -61,23 +48,3 @@ lane.
 The registry's `default_validation` entries are validation routes, not an
 instruction to run every broad repository check by default. Ordinary Spark work
 should keep the loop narrow and report skipped checks honestly.
-
-## Validation
-
-Run the lane validator before broad gates:
-
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-```
-
-For broad agent-lane, generated, or release-facing changes, run:
-
-```bash
-python scripts/release_check.py
-```
-
-For ordinary Spark scenario work, prefer the scenario's narrow validation path.
-If validation is not requested or not safe to run inside the fast loop, report
-it under `Skipped checks` and leave a handoff when confidence would otherwise
-be overstated.

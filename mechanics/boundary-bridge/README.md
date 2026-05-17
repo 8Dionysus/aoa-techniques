@@ -59,10 +59,6 @@ runtime behavior.
 - routing, SDK, memory, runtime, public projection, or proof authority
 - automatic technique promotion
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

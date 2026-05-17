@@ -56,18 +56,10 @@ when a real recurring failure needs enforcement.
 The active local-link check covers root Markdown files and `docs/**/*.md`.
 It intentionally excludes external URL health and legacy-path interpretation.
 
-For broader generated freshness, use the source builders and
-`python scripts/release_check.py`.
+For broader generated freshness, use the source builders and release check named
+by [AGENTS](AGENTS.md#validation).
 
-## Validation
+## Check Route
 
 Use [Hygiene Guardrail Index](HYGIENE_GUARDRAIL_INDEX.md) for the current check
-lane. The minimum active checks are:
-
-```bash
-python -m unittest tests.test_docs_surface_guardrails
-python scripts/validate_repo.py
-```
-
-Run `python scripts/release_check.py` when link or shape changes also move
-generated readers, catalogs, AGENTS mesh mirrors, or release-visible docs.
+lane and [AGENTS](AGENTS.md#validation) for executable commands.

@@ -19,8 +19,9 @@ lane and state directory.
 Read root `AGENTS.md`, `QUESTBOOK.md`, `quests/README.md`, and
 `mechanics/questbook/README.md` before changing quest semantics.
 
-Use the nearest lane README for route defaults. Generated quest files summarize
-source quest files; they do not author quest meaning.
+Use the nearest lane `AGENTS.md` for local command posture and the lane README
+for human-facing lane meaning. Generated quest files summarize source quest
+files; they do not author quest meaning.
 
 ## Boundaries
 
@@ -37,7 +38,7 @@ Run the narrowest relevant checks first. Usual checks for this district:
 ```bash
 python scripts/build_catalog.py
 python scripts/validate_repo.py
-python -m unittest tests.test_validate_repo tests.test_questbook_mechanics_topology
+python -m unittest tests.test_validate_repo
 ```
 
 ## Closeout

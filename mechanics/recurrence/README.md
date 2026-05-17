@@ -60,10 +60,6 @@ and `abyss-stack` owns runtime return.
 - owner acceptance
 - automatic technique creation or promotion
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

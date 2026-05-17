@@ -77,11 +77,7 @@ If the manifest and authored review packet disagree, fix the authored review pac
 - They stay distinct from shadow reviews, which focus on caution seams rather than semantic distinctness.
 - They stay distinct from bundle-local notes, which own bundle-specific promotion or caution posture.
 
-## Regeneration
+## Check Route
 
-When semantic review packets change, regenerate and validate with:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_semantic_review_manifest.py`
-- `python scripts/build_catalog.py`
-- `python scripts/validate_repo.py`
+When semantic review packets change, use [AGENTS](AGENTS.md#validation) for
+regeneration and validation.

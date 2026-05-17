@@ -44,22 +44,25 @@ make the next safe action obvious to a low-context agent.
 When a durable directory appears, choose one of these actions in the same
 change:
 
-1. add a local `AGENTS.md`;
-2. register the path under the mesh migration or exemption posture with a
-   reason;
+1. add a local canonical `AGENTS.md`;
+2. register the path under the mesh exemption posture with a reason;
 3. prove it is temporary and should not be committed as a durable district.
+
+Reopening migration status is a temporary exception. It requires an explicit
+decision or review note and should name the cleanup route before landing.
 
 New root or docs-root surfaces should also pass through
 `docs/ROOT_SURFACE_LAW.md`.
 
 ## Migration Rule
 
-Existing noncanonical cards are allowed only because the migration is explicit.
-They remain visible in `generated/agents_mesh.min.json` with a migration status
-until normalized.
+The current mesh is fully canonical. `config/agents_mesh.json` keeps
+`migration_allowed` false so noncanonical cards fail the mesh lane instead of
+quietly becoming background debt.
 
 Migration status is not a permission to ignore owner truth. It only means the
-card shape has not yet been fully lifted into the canonical form.
+card shape has not yet been fully lifted into the canonical form, and it should
+exist only as a short-lived, reviewed exception.
 
 ## Must Not Claim
 
@@ -69,6 +72,6 @@ ToS canon authority, or owner-local acceptance.
 
 It gives agents safer roads. It does not become the technique canon.
 
-## Validation
+## Check Route
 
 Use `docs/guardrails/AGENTS.md` for the current command lane.

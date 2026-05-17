@@ -1,19 +1,9 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/experience/`.
-
 ## Applies to
 
 This card applies to the Experience mechanics package and every nested path
 under it until a nearer `AGENTS.md` narrows the lane.
-
-## Read before editing
-
-1. Repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/REQUEST_RECEIPTS.md` when touching `ORQ-EXPERIENCE-TECHNIQUES-001`
-4. `mechanics/experience/README.md`
-5. The nearest part README, or `PROVENANCE.md` when touching lineage
 
 ## Role
 
@@ -34,7 +24,15 @@ outside this repository.
 - `LANDING_LOG.md` records structural landings.
 - `ROADMAP.md` names the next honest passes.
 
-## Editing posture
+## Read before editing
+
+1. Repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/REQUEST_RECEIPTS.md` when touching `ORQ-EXPERIENCE-TECHNIQUES-001`
+4. `mechanics/experience/README.md`
+5. The nearest part README, or `PROVENANCE.md` when touching lineage
+
+## Boundaries
 
 - Keep reusable practice separate from live office, release, runtime, and ToS
   authority.
@@ -44,7 +42,7 @@ outside this repository.
   dependencies for portable practice.
 - Do not turn service clarity or handoff compression into workflow execution.
 
-## Verify
+## Validation
 
 For Experience topology changes:
 

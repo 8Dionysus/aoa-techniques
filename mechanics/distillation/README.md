@@ -59,11 +59,6 @@ owns ToS-authored meaning and compost, not AoA operational distillation.
 - generated registry authority over authored routes
 - schema migration from scout evidence alone
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane and part-local
-registry checks when candidate registries change.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

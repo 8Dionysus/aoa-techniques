@@ -16,5 +16,5 @@ Prefer narrower homes first:
   reproducible outputs
 - `incoming/` for unreviewed candidate quarantine
 
-Do not archive active source files without updating links, route docs, and
-`../INDEX.md`.
+Agent edits, archive stop-lines, route-link updates, validation, and closeout
+live in [archive/AGENTS](AGENTS.md).

@@ -87,11 +87,7 @@ an outer workflow even though the technique itself remains atomic.
 - Capsules do not become a selector engine, scoring layer, or policy-routing layer.
 - Capsules do not expand into a KAG/source-lift family in this wave.
 
-## Regeneration
+## Check Route
 
-When the source bundle changes, regenerate the capsule family:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_capsules.py`
-- `python scripts/release_check.py`
-- `python scripts/validate_repo.py`
+When the source bundle changes, use [AGENTS](AGENTS.md#validation) for capsule
+regeneration and validation.

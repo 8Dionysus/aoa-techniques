@@ -62,10 +62,6 @@ Distillation lane accounting for those candidates lives in
 - KAG or ToS promotion
 - owner acceptance beyond this repository's technique-side candidate lane
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the current Agon-specific validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md) and [PARTS](PARTS.md). Open

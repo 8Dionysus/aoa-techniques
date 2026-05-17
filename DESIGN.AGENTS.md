@@ -154,16 +154,16 @@ fog.
 ## Migration Posture
 
 This repository already had many useful local cards before adopting the full
-mesh design. The migration should be explicit:
+mesh design. That migration has now been closed into canonical shape:
 
 - canonical cards follow the full shape and are enforced by shape validation
-- migration cards remain registered and visible in the generated mesh while
-  they are normalized in later waves
+- `config/agents_mesh.json` keeps `migration_allowed` false while the mesh is
+  fully canonical
 - new durable districts should not enter as silent rooms
-- a migration card should not be treated as exempt from source truth or owner
-  boundaries
+- any future migration status must be an explicit temporary exception with a
+  decision or review note, not background drift
 
-The correct end state is canonical shape everywhere useful, not permanent
+The correct steady state is canonical shape everywhere useful, not permanent
 legacy-card drift.
 
 ## Design Principles

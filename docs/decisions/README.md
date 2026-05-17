@@ -86,6 +86,8 @@ local editing and validation route.
 | [2026-05-14-technique-reform-scout-input-homes](2026-05-14-technique-reform-scout-input-homes.md) | Technique Reform Scout Input Homes |
 | [2026-05-15-spark-registry-backed-technique-lane](2026-05-15-spark-registry-backed-technique-lane.md) | Spark Registry-Backed Technique Lane |
 | [2026-05-16-docs-surface-guardrails-and-tree-contract-slimming](2026-05-16-docs-surface-guardrails-and-tree-contract-slimming.md) | Docs Surface Guardrails And Tree Contract Slimming |
+| [2026-05-17-agent-neighbor-doc-command-ownership](2026-05-17-agent-neighbor-doc-command-ownership.md) | Agent Neighbor Doc Command Ownership |
+| [2026-05-17-agents-mesh-canonical-closure](2026-05-17-agents-mesh-canonical-closure.md) | AGENTS Mesh Canonical Closure |
 
 ## Record Shape
 
@@ -117,12 +119,3 @@ truth, generated meaning, or sibling-owner authority.
 A decision may influence current law only when a change names the surviving
 canonical source surface, updates links, rebuilds generated mirrors when
 needed, and runs the relevant validators.
-
-## Validation
-
-Use the nearest `AGENTS.md` for the current command lane. For broad decision
-district changes, the expected final gate is:
-
-```bash
-python scripts/release_check.py
-```

@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Route card for `mechanics/recurrence/`.
+## Applies to
 
-## Purpose
+This card applies to `mechanics/recurrence/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 This package owns the `aoa-techniques` side of recurrence: technique canon and
 candidate-intake observation, plus review-decision closure posture.
@@ -11,7 +14,7 @@ It does not own AoA recurrence law, runtime return, memory recall, routing
 dispatch, proof verdicts, playbook choreography, SDK control-plane carry,
 derived stats, KAG regrounding, or technique status changes.
 
-## Start here
+## Read before editing
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
@@ -19,7 +22,7 @@ derived stats, KAG regrounding, or technique status changes.
 4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
 5. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
 
-## Local law
+## Boundaries
 
 - Keep recurrence here technique-layered: observation producers and review
   closure, not operational continuity.
@@ -32,7 +35,7 @@ derived stats, KAG regrounding, or technique status changes.
 - If a stable reusable practice emerges, route it into `techniques/` through
   the normal technique review path.
 
-## Verify
+## Validation
 
 Use the root validation path after changes:
 
@@ -40,3 +43,9 @@ Use the root validation path after changes:
 python scripts/validate_repo.py
 python scripts/run_tests.py
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

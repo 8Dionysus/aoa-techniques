@@ -1,18 +1,9 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/audit/`.
-
 ## Applies to
 
 This card applies to the Audit mechanics package and every nested path under it
 until a nearer `AGENTS.md` narrows the lane.
-
-## Read before editing
-
-1. Repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/audit/README.md`
-4. The nearest part README, or `PROVENANCE.md` when touching lineage
 
 ## Role
 
@@ -32,7 +23,14 @@ semantics, or runtime behavior.
 - `legacy/` preserves audit accounting and is the place for future raw
   receipts.
 
-## Editing posture
+## Read before editing
+
+1. Repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/audit/README.md`
+4. The nearest part README, or `PROVENANCE.md` when touching lineage
+
+## Boundaries
 
 - Keep readiness queues distinct from bundle-local canonical evidence.
 - If audit evidence changes a bundle's status readiness, update the bundle-local
@@ -43,7 +41,7 @@ semantics, or runtime behavior.
   searched lanes, and readiness posture.
 - Generated artifacts remain evidence, not authority.
 
-## Verify
+## Validation
 
 For Audit topology changes:
 
