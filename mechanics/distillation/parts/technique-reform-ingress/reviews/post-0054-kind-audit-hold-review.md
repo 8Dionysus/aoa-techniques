@@ -15,7 +15,7 @@ change frontmatter and does not authorize any later bundle remap by itself.
 
 - current [Kind Ambiguity Audit](../reports/kind_ambiguity_audit.md)
 - [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
-- [Technique Kind Guide](../../../../../docs/TECHNIQUE_KIND_GUIDE.md)
+- [Technique Kind Guide](../../../../../docs/selection/TECHNIQUE_KIND_GUIDE.md)
 - [First Kind Ambiguity Review Pack](first-kind-ambiguity-review-pack.md)
 - [Second Kind Ambiguity Review Pack](second-kind-ambiguity-review-pack.md)
 - [AOA-T-0054 Kind Destination Check](0054-kind-destination-check.md)

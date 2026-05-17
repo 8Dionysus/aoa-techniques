@@ -32,8 +32,9 @@ Move authored semantic and shadow review packets to:
 - `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/`
 - `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/`
 
-Keep `docs/SEMANTIC_REVIEW_GUIDE.md`, `docs/TECHNIQUE_SHADOW_GUIDE.md`,
-`docs/SELECTION_PATTERNS.md`, and `docs/SHADOW_PATTERNS.md` as public reader
+Keep `docs/review/SEMANTIC_REVIEW_GUIDE.md`, `docs/review/TECHNIQUE_SHADOW_GUIDE.md`,
+`docs/readers/selection/SELECTION_PATTERNS.md`, and
+`docs/readers/review/SHADOW_PATTERNS.md` as public reader
 routes into those packets.
 
 Update validators and generated manifests so the packet paths are source paths,

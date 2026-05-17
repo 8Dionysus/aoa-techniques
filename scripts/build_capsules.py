@@ -21,12 +21,12 @@ def main() -> int:
 
     generated_dir = repo_root / "generated"
     generated_dir.mkdir(exist_ok=True)
-    docs_dir = repo_root / "docs"
-    docs_dir.mkdir(exist_ok=True)
+    reader_dir = repo_root / "docs" / "readers" / "runtime"
+    reader_dir.mkdir(parents=True, exist_ok=True)
 
     full_path = generated_dir / "technique_capsules.json"
     min_path = generated_dir / "technique_capsules.min.json"
-    reader_path = docs_dir / "TECHNIQUE_CAPSULES.md"
+    reader_path = reader_dir / "TECHNIQUE_CAPSULES.md"
     write_json_file(full_path, full_payload, compact=False)
     write_json_file(min_path, min_payload, compact=False)
     write_text_file(reader_path, reader_markdown)

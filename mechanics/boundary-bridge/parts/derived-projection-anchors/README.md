@@ -11,8 +11,8 @@ inside each `techniques/**/TECHNIQUE.md` file and repo guide.
 
 | Surface | Boundary-bridge relevance | Boundary |
 |---|---|---|
-| [KAG Source Lift Guide](../../../../docs/KAG_SOURCE_LIFT_GUIDE.md) | Keeps technique markdown strong enough for bounded KAG-friendly outputs without turning the repo into a graph platform. | Defers graph behavior, scoring, traversal, and new source authority. |
-| [KAG Export](../../../../docs/KAG_EXPORT.md) | Exposes a bounded source-owned export while keeping `TECHNIQUE.md` authoritative. | Does not replace authored technique meaning. |
+| [KAG Source Lift Guide](../../../../docs/source-lift/KAG_SOURCE_LIFT_GUIDE.md) | Keeps technique markdown strong enough for bounded KAG-friendly outputs without turning the repo into a graph platform. | Defers graph behavior, scoring, traversal, and new source authority. |
+| [KAG Export](../../../../docs/source-lift/KAG_EXPORT.md) | Exposes a bounded source-owned export while keeping `TECHNIQUE.md` authoritative. | Does not replace authored technique meaning. |
 | [AOA-T-0043 multi-source-primary-input-provenance](../../../../techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md) | Marks primary and supporting source inputs when a bridge combines multiple source surfaces. | Does not create graph semantics, ranking doctrine, or bridge architecture. |
 | [AOA-T-0021 bounded-relation-lift-for-kag](../../../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) | Lifts direct typed relations as one-step derived hints. | Does not create rationale, weighting, or multi-hop graph truth. |
 | [AOA-T-0046 repo-doc-surface-lift](../../../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md) | Lifts a bounded public docs/status set into derived routing knowledge. | Does not replace authored docs or become docs taxonomy. |

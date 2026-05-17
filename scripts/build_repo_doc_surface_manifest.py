@@ -16,12 +16,12 @@ def main() -> int:
 
     generated_dir = repo_root / "generated"
     generated_dir.mkdir(exist_ok=True)
-    docs_dir = repo_root / "docs"
-    docs_dir.mkdir(exist_ok=True)
+    reader_dir = repo_root / "docs" / "readers" / "repo"
+    reader_dir.mkdir(parents=True, exist_ok=True)
 
     full_path = generated_dir / "repo_doc_surface_manifest.json"
     min_path = generated_dir / "repo_doc_surface_manifest.min.json"
-    reader_path = docs_dir / "REPO_DOC_SURFACES.md"
+    reader_path = reader_dir / "REPO_DOC_SURFACES.md"
 
     write_json_file(full_path, full_manifest, compact=False)
     write_json_file(min_path, min_manifest, compact=True)

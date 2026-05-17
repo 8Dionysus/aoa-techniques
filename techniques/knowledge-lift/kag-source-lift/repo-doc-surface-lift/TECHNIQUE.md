@@ -6,7 +6,7 @@ kind: lift
 status: canonical
 origin:
   project: aoa-techniques
-  path: docs/REPO_DOC_SURFACE_LIFT_GUIDE.md
+  path: docs/source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md
   note: Extracted from the bounded repo-doc surface guide, manifest, and reader surface to keep public docs/status routing derived from authored markdown without turning the surface into a catch-all taxonomy.
 owners:
   - 8Dionysus

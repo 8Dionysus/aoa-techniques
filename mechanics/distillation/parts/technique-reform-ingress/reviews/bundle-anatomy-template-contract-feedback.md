@@ -16,7 +16,7 @@ needed after the first repair cohort.
 The only contract surface that actually moved was the capsule guide, and that
 change already landed with the wrapped-bullet repair:
 
-- [Technique Capsule Guide](../../../../../docs/TECHNIQUE_CAPSULE_GUIDE.md)
+- [Technique Capsule Guide](../../../../../docs/selection/TECHNIQUE_CAPSULE_GUIDE.md)
 
 The repair clarified that wrapped Markdown list items remain one source item
 when indented continuation lines belong to the same bullet. That is a capsule
@@ -30,7 +30,7 @@ builder contract detail, not a new technique authoring law.
 | `docs/TECHNIQUE_ATOM_CONTRACT.md` | no change | the atom contract already says capsules must preserve the executable center and techniques must stay compact enough for small-agent execution |
 | `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` | no change | the audit found watch pressure, not a new frontmatter or schema requirement |
 | `docs/TECHNIQUE_TREE_CONTRACT.md` | no change | the tree held 107/107 path parity and no route-away or path repair was found |
-| `docs/TECHNIQUE_CAPSULE_GUIDE.md` | already changed | wrapped list continuation behavior was clarified in the capsule repair cohort |
+| `docs/selection/TECHNIQUE_CAPSULE_GUIDE.md` | already changed | wrapped list continuation behavior was clarified in the capsule repair cohort |
 | `scripts/validate_repo.py` capsule builder | already changed | wrapped list item extraction now keeps continuation lines in the same capsule source item |
 
 ## Repeated Gaps

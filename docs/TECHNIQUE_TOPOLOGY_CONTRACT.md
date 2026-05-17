@@ -58,7 +58,7 @@ questions.
 |---|---|---|---|
 | `tree_path` | architecture contract | authored placement spine for trunks, shelves, and leaf bundles | `docs/TECHNIQUE_TREE_CONTRACT.md`, future projection |
 | `domain` | authoritative frontmatter | first owner and review route | `docs/DOMAIN_MAP.md`, schema, validators |
-| `kind` | authoritative frontmatter | atomic move shape | `docs/TECHNIQUE_KIND_GUIDE.md`, `config/technique_kind_registry.yaml`, schema, validators |
+| `kind` | authoritative frontmatter | atomic move shape | `docs/selection/TECHNIQUE_KIND_GUIDE.md`, `config/technique_kind_registry.yaml`, schema, validators |
 | `family` | scout-only | stable semantic shelf spanning domains or kinds | `mechanics/distillation/parts/technique-reform-ingress/config/technique_family_scout.yaml`, `mechanics/distillation/parts/technique-reform-ingress/reports/technique_family_scout.md` |
 | `capability_class` | design axis | what agent capability the move exercises | `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, future generated projection |
 | `substrate` | design axis | what object or medium the move operates on | `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`, future generated projection |

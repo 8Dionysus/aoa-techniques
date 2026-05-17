@@ -8,14 +8,14 @@
 - name: aoa-techniques
 - source files:
   - `generated/technique_catalog.json`
-  - `docs/TECHNIQUE_SELECTION.md`
-  - `docs/SELECTION_PATTERNS.md`
-  - `docs/BOUNDED_RELATION_LIFT_GUIDE.md`
+  - `docs/readers/selection/TECHNIQUE_SELECTION.md`
+  - `docs/readers/selection/SELECTION_PATTERNS.md`
+  - `docs/source-lift/BOUNDED_RELATION_LIFT_GUIDE.md`
 
 ## Evidence
 - `generated/technique_catalog.json` already carries the current direct typed relation layer as derived metadata
-- `docs/TECHNIQUE_SELECTION.md` and `docs/SELECTION_PATTERNS.md` already use those relations for bounded navigation rather than for graph inference
-- `docs/BOUNDED_RELATION_LIFT_GUIDE.md` explicitly keeps relation rationale, weighting, and multi-hop semantics out of the current edge layer
+- `docs/readers/selection/TECHNIQUE_SELECTION.md` and `docs/readers/selection/SELECTION_PATTERNS.md` already use those relations for bounded navigation rather than for graph inference
+- `docs/source-lift/BOUNDED_RELATION_LIFT_GUIDE.md` explicitly keeps relation rationale, weighting, and multi-hop semantics out of the current edge layer
 
 ## Interpretation
 - the repository already proves that a small direct-edge vocabulary can help navigation without turning into a graph platform

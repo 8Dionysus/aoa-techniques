@@ -51,12 +51,13 @@ for agents.
 11. [AGENTS_MESH_PROTOCOL](docs/guardrails/AGENTS_MESH_PROTOCOL.md) when agent-card coverage, shape, or generated mesh surfaces move
 12. [Root Legacy](legacy/README.md) when root-wide raw, archive, or receipt provenance changes
 13. [Mechanics](mechanics/README.md) when the change touches AoA mechanics or practice movement around canon
-14. [WALKTHROUGH](WALKTHROUGH.md)
-15. [TECHNIQUE_SELECTION](docs/TECHNIQUE_SELECTION.md)
-16. [TECHNIQUE_KIND_GUIDE](docs/TECHNIQUE_KIND_GUIDE.md)
+14. [Examples](examples/README.md) when a public worked example changes
+15. [TECHNIQUE_SELECTION](docs/readers/selection/TECHNIQUE_SELECTION.md)
+16. [TECHNIQUE_KIND_GUIDE](docs/selection/TECHNIQUE_KIND_GUIDE.md)
 17. the target `techniques/**/TECHNIQUE.md`
 18. affected generated catalogs, capsules, feat cards, agent-mesh mirrors, or source-lift outputs
-19. [AGENTS_ROOT_REFERENCE](docs/AGENTS_ROOT_REFERENCE.md) for preserved full root branches
+19. the nearest local `AGENTS.md` under the touched path when a branch needs
+    more detail than this root route card
 
 ## Route modes
 
@@ -154,7 +155,10 @@ python scripts/validate_repo.py
 python scripts/run_tests.py
 ```
 
-Use release checks or Agon-specific checks from [AGENTS_ROOT_REFERENCE](docs/AGENTS_ROOT_REFERENCE.md) when publication posture, broad generated outputs, or companion-candidate surfaces change.
+Use release checks when publication posture, broad generated outputs, or
+companion-candidate surfaces change. For mechanic-specific companions such as
+Agon, use the owning mechanic `AGENTS.md` and part README rather than preserved
+root-era guidance.
 
 For agent-surface changes, run the AGENTS mesh lane:
 
@@ -172,6 +176,9 @@ platform surface changed; whether IDs, kind, domain, state, adaptation notes,
 generated companions, or source-lift surfaces changed; and exactly what
 validation ran. If a PR was merged, name the GitHub merge method that landed.
 
-## Full reference
+## Historical Reference
 
-[AGENTS_ROOT_REFERENCE](docs/AGENTS_ROOT_REFERENCE.md) preserves the former detailed root guidance, including branch docs, promotion posture, review rules, and specialized validation paths.
+The former detailed root guidance is preserved only as legacy archive material
+at [AGENTS_ROOT_REFERENCE](legacy/archive/AGENTS_ROOT_REFERENCE.md). Do not use
+it as current route law; lift any surviving rule into this card or the nearest
+owner surface before relying on it.

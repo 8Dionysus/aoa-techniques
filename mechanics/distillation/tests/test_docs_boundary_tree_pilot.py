@@ -45,10 +45,10 @@ PILOT_BUNDLES = (
 )
 
 LIVE_LINK_SURFACES = (
-    "docs/REPO_DOC_SURFACE_LIFT_GUIDE.md",
+    "docs/source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md",
-    "docs/SELECTION_PATTERNS.md",
-    "docs/TECHNIQUE_SELECTION.md",
+    "docs/readers/selection/SELECTION_PATTERNS.md",
+    "docs/readers/selection/TECHNIQUE_SELECTION.md",
     "mechanics/audit/parts/external-evidence-ledger/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "mechanics/audit/parts/promotion-evidence-runbook/README.md",

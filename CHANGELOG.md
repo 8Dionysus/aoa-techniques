@@ -67,6 +67,30 @@ The format is intentionally simple and human-first.
 - retired the empty root `data/` district after all active data moved to owner
   homes; future root data now requires a concrete repo-wide data contract and a
   decision rather than a placeholder shelf
+- moved the KAG/source-lift authored guide family under `docs/source-lift/`
+  with local route guidance, keeping repeated section, checklist, example,
+  evidence-note, metadata, relation, caution, repo-doc, and export contracts
+  out of flat `docs/` while preserving generated readers under `docs/readers/`
+- moved review, maturity, semantic-review, and caution guide contracts under
+  `docs/review/` with local route guidance, keeping review-family contracts
+  out of flat `docs/` while preserving mechanic-owned review packets and
+  generated readers in their own districts
+- moved selection, kind, handoff, and capsule guide contracts under
+  `docs/selection/` with local route guidance, keeping chooser and compact-use
+  contracts out of flat `docs/` while preserving generated readers under
+  `docs/readers/`
+- archived the old `docs/AGENTS_ROOT_REFERENCE.md` under `legacy/archive/`
+  after lifting current route reliance into root and local `AGENTS.md`
+  surfaces
+- added link and shape hygiene guardrails under `docs/guardrails/`, with a
+  root/docs Markdown link check in `tests/test_docs_surface_guardrails.py`
+- moved the old root `WALKTHROUGH.md` into `examples/` with a local examples
+  index and required example shape, narrowing repo-doc routing back to
+  `20` public route/canon/status files instead of treating an example as a
+  root authority surface
+- tightened `docs/README.md` into a route map and expanded
+  `docs/decisions/README.md` into an active decision-record index, with tests
+  covering examples shape, docs links, and decision index coverage
 - added a Canonical Retro Audit part and rechecked all `98` canonical
   techniques for metadata, evidence-declaration, and bundle-local verdict
   coherence; no canonical downgrade was justified, and stale metadata was
@@ -991,7 +1015,7 @@ This changelog entry uses the release-prep merge date.
 - corpus coverage now spans `9` `agent-workflows` techniques, `24` `docs` techniques, `12` `evaluation` techniques, and the first `3` `history` techniques
 - the first public KAG/source-lift family inside the `docs` domain, including `AOA-T-0018` through `AOA-T-0022`
 - the first bounded `history` domain for session and history artifacts that stay local-first and reviewable without widening into memory ownership, including `AOA-T-0026`, `AOA-T-0044`, and `AOA-T-0045`
-- new repo-owned maintainer and navigation docs, including `docs/START_HERE.md`, `docs/TECHNIQUE_SELECTION_GUIDE.md`, `docs/SEMANTIC_REVIEW_GUIDE.md`, `docs/EXTERNAL_IMPORT_RUNBOOK.md`, `docs/DONOR_REFINERY_RUBRIC.md`, `docs/LONG_GAP_CANON_DESIGN.md`, the roadmap now kept at `ROADMAP.md`, `docs/EXTERNAL_TECHNIQUE_CANDIDATES.md`, and `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
+- new repo-owned maintainer and navigation docs, including `docs/START_HERE.md`, `docs/selection/TECHNIQUE_SELECTION_GUIDE.md`, `docs/review/SEMANTIC_REVIEW_GUIDE.md`, `docs/EXTERNAL_IMPORT_RUNBOOK.md`, `docs/DONOR_REFINERY_RUBRIC.md`, `docs/LONG_GAP_CANON_DESIGN.md`, the roadmap now kept at `ROADMAP.md`, `docs/EXTERNAL_TECHNIQUE_CANDIDATES.md`, and `docs/CROSS_LAYER_TECHNIQUE_CANDIDATES.md`
 - new derived surface families for technique capsules, repo-doc routing, technique sections, checklists, examples, evidence notes, GitHub review templates, semantic reviews, and shadow reviews
 
 ### Changed
@@ -1005,10 +1029,10 @@ This changelog entry uses the release-prep merge date.
 ### Included in this release
 
 - technique bundles under `techniques/` plus the expanded [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md)
-- capsule surfaces: `docs/TECHNIQUE_CAPSULES.md`, `docs/TECHNIQUE_CAPSULE_GUIDE.md`, `generated/technique_capsules.json`, and `generated/technique_capsules.min.json`
-- repo-doc routing surfaces: `docs/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACE_LIFT_GUIDE.md`
-- source-lift reader and guide surfaces: `docs/TECHNIQUE_SECTIONS.md`, `docs/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/TECHNIQUE_CHECKLISTS.md`, `docs/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/TECHNIQUE_EXAMPLES.md`, `docs/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `docs/EVIDENCE_NOTE_SURFACES.md`, and `docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
-- review routing surfaces: `docs/SHADOW_PATTERNS.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `generated/github_review_template_manifest.json`
+- capsule surfaces: `docs/readers/runtime/TECHNIQUE_CAPSULES.md`, `docs/selection/TECHNIQUE_CAPSULE_GUIDE.md`, `generated/technique_capsules.json`, and `generated/technique_capsules.min.json`
+- repo-doc routing surfaces: `docs/readers/repo/REPO_DOC_SURFACES.md`, `generated/repo_doc_surface_manifest.json`, and `docs/source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md`
+- source-lift reader and guide surfaces: `docs/readers/source-lift/TECHNIQUE_SECTIONS.md`, `docs/source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md`, `docs/source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/readers/source-lift/TECHNIQUE_EXAMPLES.md`, `docs/source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`, and `docs/source-lift/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`
+- review routing surfaces: `docs/readers/review/SHADOW_PATTERNS.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md`, `mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md`, `generated/shadow_review_manifest.json`, `generated/semantic_review_manifest.json`, and `generated/github_review_template_manifest.json`
 - governance and intake surfaces under `.github/` plus the release and validation helpers under `scripts/`
 
 ### Validation

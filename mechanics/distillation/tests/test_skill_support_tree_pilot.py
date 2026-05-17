@@ -41,8 +41,8 @@ PILOT_BUNDLES = (
 
 LIVE_LINK_SURFACES = (
     "mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md",
-    "docs/SELECTION_PATTERNS.md",
-    "docs/TECHNIQUE_SELECTION.md",
+    "docs/readers/selection/SELECTION_PATTERNS.md",
+    "docs/readers/selection/TECHNIQUE_SELECTION.md",
     "mechanics/boundary-bridge/PROVENANCE.md",
     "mechanics/boundary-bridge/parts/owner-boundary-anchors/README.md",
     "mechanics/boundary-bridge/parts/proof-claim-anchors/README.md",

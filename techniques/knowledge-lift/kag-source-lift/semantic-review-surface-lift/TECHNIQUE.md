@@ -6,7 +6,7 @@ kind: lift
 status: canonical
 origin:
   project: aoa-techniques
-  path: docs/SEMANTIC_REVIEW_GUIDE.md
+  path: docs/review/SEMANTIC_REVIEW_GUIDE.md
   note: Extracted from the authored semantic-review guide, the current semantic-review manifest, and review-backed selection surfaces to keep cluster lookup derived from human review docs without turning it into scoring or status automation.
 owners:
   - 8Dionysus

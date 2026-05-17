@@ -118,7 +118,7 @@ Current anchors:
 | Technique topology contract | [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
 | Technique tree contract | [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) |
 | Corpus map | [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md), [technique catalog](generated/technique_catalog.min.json) |
-| Small runtime cards | [TECHNIQUE_CAPSULES](docs/TECHNIQUE_CAPSULES.md), [technique capsules](generated/technique_capsules.min.json) |
+| Small runtime cards | [TECHNIQUE_CAPSULES](docs/readers/runtime/TECHNIQUE_CAPSULES.md), [technique capsules](generated/technique_capsules.min.json) |
 | Mechanics atlas | [mechanics README](mechanics/README.md), [mechanics AGENTS](mechanics/AGENTS.md), mechanic package `README.md` files |
 | Audit and evidence posture | [Audit parts](mechanics/audit/parts/) |
 | Donor and candidate extraction | [Distillation parts](mechanics/distillation/parts/) |
@@ -135,7 +135,7 @@ keeps durable obligations.
 | Field | Direction |
 |---|---|
 | Current posture | The root file set is small and allowed, but old root prose has repeatedly tried to become a route maze. |
-| Next honest move | Keep root Markdown short and role-bound: entry, authority, direction, obligation, release, contribution, agent route, and one example. Put detailed inventories in [Documentation Map](docs/README.md), [Repo Doc Surfaces](docs/REPO_DOC_SURFACES.md), generated manifests, or owner-local mechanics. |
+| Next honest move | Keep root Markdown short and role-bound: entry, authority, direction, obligation, release, contribution, agent route, and one example. Put detailed inventories in [Documentation Map](docs/README.md), [Repo Doc Surfaces](docs/readers/repo/REPO_DOC_SURFACES.md), generated manifests, or owner-local mechanics. |
 | Guardrail | Root files should not become warehouses for audit history, generated detail, donor ledgers, mechanic-local runbooks, or semantic/shadow review packets. |
 
 ## Horizon: Technique Atom
@@ -216,8 +216,9 @@ trigger is real.
   change so the first reform pass stays bounded and evidence-linked.
 - Add richer typed relation guidance only when direct relations are repeatedly
   useful for composition, conflict, sequence, or prerequisite routing.
-- Split [WALKTHROUGH](WALKTHROUGH.md) into a docs or examples district only if one root
-  example becomes too large or starts attracting multiple tutorials.
+- Keep [examples](examples/README.md) as the home for public worked examples;
+  move any technique-local tutorial back to the owning bundle before root grows
+  another example article.
 - Add a machine-facing root route capsule only after the human route stabilizes
   enough that a generated companion would reduce real reader load.
 

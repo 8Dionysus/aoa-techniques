@@ -58,9 +58,9 @@ Direct bundle reads:
 
 Supporting review and generated surfaces:
 
-- [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
-- [Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md)
-- [Technique Selection Guide](../../../../../docs/TECHNIQUE_SELECTION_GUIDE.md)
+- [Technique Selection](../../../../../docs/readers/selection/TECHNIQUE_SELECTION.md)
+- [Selection Patterns](../../../../../docs/readers/selection/SELECTION_PATTERNS.md)
+- [Technique Selection Guide](../../../../../docs/selection/TECHNIQUE_SELECTION_GUIDE.md)
 - [Technique Topology Scout](../reports/technique_topology_scout.md)
 - [Technique Tree Projection](../reports/technique_tree_projection.md)
 - [Automation-Governance Direct-Read Split Review](automation-governance-direct-read-split-review.md)

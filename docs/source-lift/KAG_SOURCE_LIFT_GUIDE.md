@@ -1,0 +1,185 @@
+# KAG Source Lift Guide
+
+This guide defines the first bounded repo-level contract for `canonical technique source -> generated KAG layer`.
+
+Use it when the repository already looks strong as structured markdown, but the next question is how to lift that source into later KAG-friendly outputs without pretending the repo is already a graph platform or section-level schema.
+
+This guide is source-first. It allows a small bounded set of generated lift surfaces while still avoiding new schema fields, graph behavior, or bundle-level section IDs.
+
+See also:
+- [Start Here](../START_HERE.md)
+- [Documentation Map](../README.md)
+- [`markdown-technique-section-lift`](../../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
+- [`frontmatter-metadata-spine`](../../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
+- [`evidence-note-provenance-lift`](../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
+- [`bounded-relation-lift-for-kag`](../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
+- [`risk-and-negative-effect-lift`](../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
+- [`repo-doc-surface-lift`](../../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
+- [`github-review-template-lift`](../../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
+- [`semantic-review-surface-lift`](../../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
+- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
+- [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
+
+## What Already Exists
+
+The current repository is already strong enough for `technique-as-node` KAG because it has:
+
+- bounded frontmatter that acts as a metadata spine
+- canonical section headings in `TECHNIQUE.md`
+- small typed `relations`
+- explicit evidence-note kinds and paths
+- recurring authored note bodies across origin, transfer, readiness, adverse-effects, external provenance, and external review notes
+- generated catalog outputs that stay derived from authoritative markdown
+- a companion family review surface that keeps the reusable source-lift techniques distinct
+
+That is enough to treat the repo as a strong upstream source. It is not yet a finished `section-level` KAG schema.
+
+Within the current reusable family, [`frontmatter-metadata-spine`](../../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) is now the canonical bundle-level metadata entrypoint and [`bounded-relation-lift-for-kag`](../../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) is now the canonical direct-relation hint companion. [`markdown-technique-section-lift`](../../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md), [`evidence-note-provenance-lift`](../../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md), and [`risk-and-negative-effect-lift`](../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) remain narrower promoted companions.
+
+The current note templates now reinforce that same family boundary at the authored-note layer: origin, adaptation, promotion, caution, external-origin provenance, and external review notes stay bounded, path-addressable, and reviewable without becoming a new note schema.
+
+## First Bounded Family Member
+
+The first KAG-oriented family member should be `markdown-technique-section-lift`.
+
+Its job is narrow:
+
+- treat one `TECHNIQUE.md` bundle as the canonical source
+- identify stable sections that later generated layers may lift into bounded section-level units
+- preserve the current markdown authority instead of replacing it
+
+This is a source-lift discipline, not a graph engine.
+It is also the clearest current family anchor because later checklist, example, and note lifts still depend on the same markdown-first section authority staying legible.
+
+The first implementation-oriented extraction pilot now stays equally narrow:
+
+- `generated/technique_section_manifest.json`
+- `generated/technique_section_manifest.min.json`
+- `docs/readers/source-lift/TECHNIQUE_SECTIONS.md`
+- `docs/source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md`
+
+Those files stay derived from authoritative markdown and expose only the first 10 KAG target sections. Their reader companion is heading-first and routing-only. They do not add graph, rationale, search, or scoring behavior.
+
+The next implementation-oriented source-class pilot now stays equally bounded:
+
+- `generated/technique_checklist_manifest.json`
+- `generated/technique_checklist_manifest.min.json`
+- `docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md`
+- `docs/source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`
+
+Those files lift authored validation checklists into derived validation knowledge only, and their reader companion stays inventory-first rather than policy-first. They are not executable policy, hard-gate semantics, or a new scoring layer.
+
+The next implementation-oriented source-class pilot after checklists now stays equally bounded:
+
+- `generated/technique_example_manifest.json`
+- `generated/technique_example_manifest.min.json`
+- `docs/readers/source-lift/TECHNIQUE_EXAMPLES.md`
+- `docs/source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`
+
+Those files lift authored example narratives into derived example knowledge only, and their reader companion stays inventory-first without inlining full example bodies. They are not scenario graphs, executable tests, or a richer step-extraction layer yet.
+
+The next implementation-oriented source-class pilot after examples now stays equally bounded:
+
+- `generated/technique_evidence_note_manifest.json`
+- `generated/technique_evidence_note_manifest.min.json`
+- `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`
+
+Those files lift authored evidence notes into derived provenance knowledge only, and their reader companion stays kind-first and routing-first. They do not add note IDs, note-graph behavior, relation rationale, or flattened note semantics.
+
+They now include the canonical-only `adverse_effects_review` note role as one more typed note scope, but that still does not make caution machine-readable policy or generated caution output.
+
+For current family maintenance, keep the authored note shapes stable before asking for richer provenance behavior. Fix note-body drift, guide drift, or bundle examples first; only add a new source class when those authored surfaces stop being enough.
+
+The first five reusable lift techniques now have a companion review surface in `mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md`, which keeps the section, metadata, provenance, relation, and caution seams separate without turning the family into a graph or policy program.
+
+Later repo-surface, intake-surface, and review-surface lifts can reuse the same source-first posture without automatically widening that family review. Refresh the family review only when those later lifts develop a real shared seam worth reviewing together.
+
+The next implementation-oriented source-class pilot after evidence notes now stays equally bounded:
+
+- `generated/github_review_template_manifest.json`
+- `generated/github_review_template_manifest.min.json`
+
+Those files lift authored GitHub issue and pull-request review templates into derived intake knowledge only. They do not replace the human-first templates or turn review prompts into a policy engine.
+
+The next implementation-oriented source-class pilot after GitHub review templates now stays equally bounded:
+
+- `generated/semantic_review_manifest.json`
+- `generated/semantic_review_manifest.min.json`
+
+Those files lift authored repo-level semantic review packets into derived review knowledge only. They do not replace the markdown review surfaces, infer verdict policy, or turn semantic review into a graph engine.
+
+The next implementation-oriented source-class pilot after semantic review packets now stays equally bounded:
+
+- `generated/shadow_review_manifest.json`
+- `generated/shadow_review_manifest.min.json`
+
+Those files lift authored repo-level shadow review packets into derived caution-review knowledge only. They do not replace the markdown review surfaces, infer caution policy, or turn shadow seams into generated metadata.
+
+The next implementation-oriented source-class pilot after shadow review packets now stays equally bounded:
+
+- `generated/repo_doc_surface_manifest.json`
+- `generated/repo_doc_surface_manifest.min.json`
+
+Those files lift the authoritative public route, canon-law, contribution,
+example, and status layer into derived routing knowledge only. They stay bounded
+to the source set named in `docs/source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md`.
+
+That keeps the repo-owned self-serve entrypoint inside the existing repo-doc family without turning repo-doc routing into a deeper-guide catch-all.
+
+Their human reader companion is `docs/readers/repo/REPO_DOC_SURFACES.md`, and the
+source-class contract lives in `docs/source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md`. This still
+does not create a status-policy engine, replace root authority, broaden the
+source set to local planning docs, or pull unrelated deeper guide/review docs
+into the same manifest.
+
+## Stable Source Surfaces
+
+For the first source-lift wave, treat these surfaces as stable:
+
+| source surface | bounded role |
+|---|---|
+| frontmatter | canonical metadata spine for bundle identity, status, bounded review posture, and direct relations |
+| `TECHNIQUE.md` section headings | stable human-authored content boundaries for later section-level extraction |
+| `relations` | direct typed edges only, without rationale expansion or multi-hop inference |
+| `evidence.kind` and `evidence.path` | provenance handles that point to supporting note surfaces without pulling them into one merged graph yet |
+
+## First Section-Level Targets
+
+The first bounded section-level target surface should stay conceptual and markdown-shaped.
+
+Treat sections like these as the current lift candidates:
+
+- `Intent`
+- `When to use`
+- `When not to use`
+- `Inputs`
+- `Outputs`
+- `Core procedure`
+- `Contracts`
+- `Risks`
+- `Validation`
+- `Adaptation notes`
+
+`Risks` is now a stronger caution source because the repo already has the shadow-language contract for:
+
+- `Failure modes`
+- `Negative effects`
+- `Misuse patterns`
+- `Detection signals`
+- `Mitigations`
+
+That makes shadow/caution lifting a bounded reusable companion surface now captured in [`risk-and-negative-effect-lift`](../../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md), and canonical bundles can now add one typed adverse-effects review note as a bounded review supplement. It is still not a reason to add machine-readable shadow fields or generated caution outputs.
+
+## Explicitly Deferred
+
+Not part of this first wave:
+
+- no new `kag` domain
+- no bundle-level section IDs
+- no schema or frontmatter expansion
+- no `build_kag` or similar script
+- no generated KAG artifacts beyond the bounded section, checklist, example, evidence note, GitHub review template, semantic review, shadow review, and repo doc surface manifests
+- no relation-rationale layer
+- no graph inference, scoring, or selector-engine behavior
+
+The first public move was to publish how the current markdown canon can act as upstream for later generated KAG layers. The current reusable family now keeps that order bounded: section lift first, metadata spine and provenance lift alongside the current manifests, bounded direct-relation lift without graph behavior, repo-doc/status routing, GitHub review-template intake lift, semantic-review lift, semantic and shadow review manifests as derived review knowledge only, markdown-first caution lift without metadata or generated caution outputs, and a companion family review surface that keeps the first five core techniques readable without forcing every later source class into the same review document.

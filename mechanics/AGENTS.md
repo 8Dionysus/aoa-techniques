@@ -55,7 +55,7 @@ It does not own:
 5. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
    or `parts/`, use those active route surfaces before opening raw legacy.
 6. For status, release, or promotion changes, also read
-   `docs/CANONICAL_RUBRIC.md`, `docs/CANONICAL_REVIEW_GUIDE.md`, and
+   `docs/review/CANONICAL_RUBRIC.md`, `docs/review/CANONICAL_REVIEW_GUIDE.md`, and
    `docs/RELEASING.md`.
 
 ## Boundaries

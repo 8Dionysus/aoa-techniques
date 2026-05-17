@@ -7,9 +7,9 @@
     "techniques/**/*.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
-    "docs/CANONICAL_RUBRIC.md",
+    "docs/review/CANONICAL_RUBRIC.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "docs/CANONICAL_REVIEW_GUIDE.md"
+    "docs/review/CANONICAL_REVIEW_GUIDE.md"
   ],
   "generated_surfaces": [
     "generated/technique_catalog.min.json",
@@ -19,9 +19,9 @@
   ],
   "contract_surfaces": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
-    "docs/CANONICAL_RUBRIC.md",
+    "docs/review/CANONICAL_RUBRIC.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "docs/CANONICAL_REVIEW_GUIDE.md"
+    "docs/review/CANONICAL_REVIEW_GUIDE.md"
   ],
   "documentation_surfaces": [
     "README.md",
@@ -84,7 +84,7 @@
   "rollback_anchors": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/generated/cross_layer_candidate_registry.min.json",
-    "docs/CANONICAL_REVIEW_GUIDE.md"
+    "docs/review/CANONICAL_REVIEW_GUIDE.md"
   ],
   "tags": [
     "techniques",
@@ -267,7 +267,7 @@
   "decision_surfaces": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
-    "docs/CANONICAL_REVIEW_GUIDE.md"
+    "docs/review/CANONICAL_REVIEW_GUIDE.md"
   ],
   "candidate_targets": [
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",

@@ -8,9 +8,9 @@ Prior shelf reviews:
 [Topology Selector Handoff-Continuation Pilot](topology-selector-handoff-continuation-mini-pilot.md)
 
 Relation contracts:
-[Bounded Relation Lift Guide](../../../../../docs/BOUNDED_RELATION_LIFT_GUIDE.md),
+[Bounded Relation Lift Guide](../../../../../docs/source-lift/BOUNDED_RELATION_LIFT_GUIDE.md),
 [Technique Topology Contract](../../../../../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md),
-[Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md),
+[Selection Patterns](../../../../../docs/readers/selection/SELECTION_PATTERNS.md),
 [`relation.schema.json`](../../../../../schemas/relation.schema.json)
 
 Status: targeted relations/composition pilot, not relation schema migration,

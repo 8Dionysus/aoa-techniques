@@ -21,11 +21,19 @@ class CurrentDirectionRoutesTestCase(unittest.TestCase):
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
+        mechanics_readme = (REPO_ROOT / "mechanics" / "README.md").read_text(
+            encoding="utf-8"
+        )
 
         self.assertIn("docs/README.md", readme)
         self.assertIn("mechanics/<slug>/", readme)
-        self.assertIn("Agon Move Technique Bridge", docs_readme)
-        self.assertIn("mechanics/agon/parts/move-technique-bridge/README.md", start_here)
+        self.assertIn("mechanics/README.md", docs_readme)
+        self.assertIn("mechanics/README.md", start_here)
+        self.assertIn("Agon Move Technique Bridge", mechanics_readme)
+        self.assertIn(
+            "mechanics/agon/parts/move-technique-bridge/README.md",
+            mechanics_readme,
+        )
 
 
 if __name__ == "__main__":

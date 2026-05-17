@@ -6,10 +6,12 @@ schema, template, validator, or frontmatter migration.
 Review packet families:
 
 - [semantic](semantic/README.md): authored semantic-review packets consumed by
-  `docs/SEMANTIC_REVIEW_GUIDE.md`, `docs/SELECTION_PATTERNS.md`, and the
+  `docs/review/SEMANTIC_REVIEW_GUIDE.md`,
+  `docs/readers/selection/SELECTION_PATTERNS.md`, and the
   semantic-review manifest.
 - [shadow](shadow/README.md): authored shadow-review packets consumed by
-  `docs/TECHNIQUE_SHADOW_GUIDE.md`, generated `docs/SHADOW_PATTERNS.md`, and
+  `docs/review/TECHNIQUE_SHADOW_GUIDE.md`,
+  generated `docs/readers/review/SHADOW_PATTERNS.md`, and
   the shadow-review manifest.
 
 Current reviews:

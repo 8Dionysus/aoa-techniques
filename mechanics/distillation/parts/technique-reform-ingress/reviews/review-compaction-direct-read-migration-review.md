@@ -97,7 +97,7 @@ A later migration wave should expect to update:
   `perceptual-media-dedupe-with-threshold-review`
 - historical mechanics review links that currently point at the old paths
 - generated reader docs such as `TECHNIQUE_INDEX.md`, `docs/TECHNIQUE_*`,
-  `docs/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
+  `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
 - generated reports for family, topology, and tree projection
 - validator expectations that derive paths from bundle discovery
 - any release-check output touched by regenerated catalogs, capsules,

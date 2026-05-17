@@ -7,7 +7,7 @@ Releases should stay small, explicit, and easy to verify.
 See also:
 - [Start Here](START_HERE.md)
 - [Documentation Map](README.md)
-- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
+- [Technique Capsule Guide](selection/TECHNIQUE_CAPSULE_GUIDE.md)
 - [CHANGELOG](../CHANGELOG.md)
 
 ## Release goals
@@ -50,26 +50,26 @@ A release should make it easy to answer:
    - after the bounded release-prep pass, `git status -sb` is the quickest human check that the tracked worktree stayed clean
 4. Confirm `TECHNIQUE_INDEX.md` matches the current published catalog.
 5. Confirm generated docs and manifests are up to date if the release includes generated artifacts.
-   - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/TECHNIQUE_CAPSULES.md`.
+   - This now includes the local runtime capsule family: `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, and `docs/readers/runtime/TECHNIQUE_CAPSULES.md`.
    - Use `TECHNIQUE_CAPSULE_GUIDE.md` as the authored contract reference when checking that the runtime card family stayed bounded.
-   - This also includes the kind doctrine and routing surfaces: `docs/TECHNIQUE_KIND_GUIDE.md`, `docs/TECHNIQUE_KIND_HANDOFF_PACK.md`, `docs/TECHNIQUE_KIND_BASELINE.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/TECHNIQUE_KINDS.md`, `config/technique_kind_registry.yaml`, `mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml`, and `mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md`.
+   - This also includes the kind doctrine and routing surfaces: `docs/selection/TECHNIQUE_KIND_GUIDE.md`, `docs/selection/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/readers/kind/TECHNIQUE_KINDS.md`, `config/technique_kind_registry.yaml`, `mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.yaml`, and `mechanics/distillation/parts/technique-reform-ingress/reports/technique_kind_counts.md`.
    - Use `TECHNIQUE_KIND_GUIDE.md` as the authored contract reference when checking that kind stayed narrow, singular, and scout-only for family.
    - This now also includes the KAG/source-lift reader companions for sections, checklists, examples, and evidence notes:
      - `generated/technique_sections.full.json`
-     - `generated/technique_section_manifest.json` and `docs/TECHNIQUE_SECTIONS.md`
-     - `generated/technique_checklist_manifest.json` and `docs/TECHNIQUE_CHECKLISTS.md`
-     - `generated/technique_example_manifest.json` and `docs/TECHNIQUE_EXAMPLES.md`
-     - `generated/technique_evidence_note_manifest.json` and `docs/EVIDENCE_NOTE_SURFACES.md`
-   - Use `TECHNIQUE_SECTION_LIFT_GUIDE.md`, `TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `EVIDENCE_NOTE_PROVENANCE_GUIDE.md` as the authored contract references when checking that those KAG/source-lift reader families stayed bounded.
-   - This also includes the bounded KAG export family: `generated/kag_export.json`, `generated/kag_export.min.json`, and `docs/KAG_EXPORT.md`.
+     - `generated/technique_section_manifest.json` and `docs/readers/source-lift/TECHNIQUE_SECTIONS.md`
+     - `generated/technique_checklist_manifest.json` and `docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md`
+     - `generated/technique_example_manifest.json` and `docs/readers/source-lift/TECHNIQUE_EXAMPLES.md`
+     - `generated/technique_evidence_note_manifest.json` and `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`
+   - Use `docs/source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `docs/source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `docs/source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, and `docs/source-lift/EVIDENCE_NOTE_PROVENANCE_GUIDE.md` as the authored contract references when checking that those KAG/source-lift reader families stayed bounded.
+   - This also includes the bounded KAG export family: `generated/kag_export.json`, `generated/kag_export.min.json`, and `docs/source-lift/KAG_EXPORT.md`.
    - Use `KAG_EXPORT.md` as the authored contract reference when checking that the KAG export stayed a source-guide surface rather than a replacement for technique meaning.
-   - This also includes the current repo-doc entrypoint family: `docs/START_HERE.md`, `generated/repo_doc_surface_manifest.json`, and `docs/REPO_DOC_SURFACES.md`.
+   - This also includes the current repo-doc entrypoint family: `docs/START_HERE.md`, `generated/repo_doc_surface_manifest.json`, and `docs/readers/repo/REPO_DOC_SURFACES.md`.
 6. Review public-safety hygiene:
    - no secrets
    - no internal-only URLs
    - no private infrastructure details
    - no raw sensitive logs
-   - no hand-maintained corpus posture counts in entrypoint docs; use `generated/technique_catalog.min.json` and `docs/TECHNIQUE_SELECTION.md` for live splits instead
+   - no hand-maintained corpus posture counts in entrypoint docs; use `generated/technique_catalog.min.json` and `docs/readers/selection/TECHNIQUE_SELECTION.md` for live splits instead
 7. Merge the release-prep PR to `main`.
 8. Create a Git tag such as `v0.1.0`.
 9. Publish GitHub release notes using the matching changelog section or a clearly equivalent human-first shape.

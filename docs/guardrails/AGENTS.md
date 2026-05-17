@@ -25,6 +25,16 @@ For AGENTS mesh work, also read:
 - `../../config/agents_mesh.json`
 - `../../scripts/agents_mesh_common.py`
 
+For docs-root topology or flat-surface cleanup, also read:
+
+- `THEMATIC_DISTRICT_PROTOCOL.md`
+- `CURRENT_SURFACE_INDEX.md`
+
+For link, shape, or moved-path hygiene, also read:
+
+- `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`
+- `HYGIENE_GUARDRAIL_INDEX.md`
+
 ## Boundaries
 
 - Do not add prose-only guardrails that release checks cannot observe.
@@ -48,6 +58,7 @@ python scripts/validate_agents_mesh_index.py
 For broader route, generated, or public-facing changes, run:
 
 ```bash
+python -m unittest tests.test_docs_surface_guardrails
 python scripts/release_check.py
 ```
 

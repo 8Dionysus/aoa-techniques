@@ -9,12 +9,12 @@
 - source files:
   - `scripts/build_section_manifest.py`
   - `generated/technique_section_manifest.json`
-  - `docs/KAG_SOURCE_LIFT_GUIDE.md`
+  - `docs/source-lift/KAG_SOURCE_LIFT_GUIDE.md`
 
 ## Evidence
 - `scripts/build_section_manifest.py` already derives a bounded section manifest from authoritative `TECHNIQUE.md` bundles instead of asking maintainers to author section metadata separately
 - `generated/technique_section_manifest.json` shows the current repo already consumes that lift as a stable derived surface
-- `docs/KAG_SOURCE_LIFT_GUIDE.md` explicitly frames section lift as a bounded family member rather than a graph or schema program
+- `docs/source-lift/KAG_SOURCE_LIFT_GUIDE.md` explicitly frames section lift as a bounded family member rather than a graph or schema program
 
 ## Interpretation
 - the reusable pattern already exists in a live public repository as markdown-first source lift with a generated section surface

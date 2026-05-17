@@ -220,6 +220,28 @@ def read_distillation_reform_context() -> ReformContext:
     return ReformContext("\n\n".join(path.read_text(encoding="utf-8") for path in source_paths))
 
 
+@lru_cache(maxsize=1)
+def read_tree_migration_context() -> ReformContext:
+    """Read current tree law plus historical migration evidence."""
+    reform_root = (
+        REPO_ROOT
+        / "mechanics"
+        / "distillation"
+        / "parts"
+        / "technique-reform-ingress"
+    )
+    receipt_root = REPO_ROOT / "legacy" / "receipts"
+    source_paths = [
+        REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md",
+        TREE_MIGRATION_BREADCRUMB_ROADMAP,
+        reform_root / "README.md",
+        reform_root / "reviews" / "README.md",
+        *sorted((reform_root / "reviews").glob("*.md")),
+        *sorted(receipt_root.glob("*-tree-pilot.md")),
+    ]
+    return ReformContext("\n\n".join(path.read_text(encoding="utf-8") for path in source_paths))
+
+
 class DistillationMechanicsTopologyTestCase(unittest.TestCase):
     def test_distillation_active_surfaces_are_discoverable(self) -> None:
         for relative_path in (
@@ -987,9 +1009,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
 
         self.assertIn("First Family Shelf Review Pack", review)
         self.assertIn("review-pack-landed", review)
@@ -1059,9 +1079,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
 
         self.assertIn("First Tree Projection Review Pack", review)
         self.assertIn("review-pack-landed", review)
@@ -1118,9 +1136,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
 
         self.assertIn("Review-Compaction Direct-Read Migration Review", review)
         self.assertIn("accepted-for-first-migration-pilot", review)
@@ -1182,9 +1198,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
 
         self.assertIn("Landed Review-Compaction Pilot Review", review)
         self.assertIn("pilot-validated", review)
@@ -1239,9 +1253,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Handoff-Continuation Direct-Read Migration Review", review)
@@ -1303,9 +1315,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("handoff-continuation migration: landed", ingress)
@@ -1353,9 +1363,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         incoming_wave2 = (
             REPO_ROOT
@@ -1445,9 +1453,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Media-Ingest Direct-Read Migration Review", review)
@@ -1531,9 +1537,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Media-Ingest Pilot Review", review)
@@ -1600,9 +1604,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Diagnosis-Repair Direct-Read Migration Review", review)
@@ -1689,9 +1691,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Diagnosis-Repair Pilot Review", review)
@@ -1767,9 +1767,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Instruction-Surface Direct-Read Migration Review", review)
@@ -1869,9 +1867,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Instruction-Surface Pilot Review", review)
@@ -1946,9 +1942,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Kag-Source-Lift Direct-Read Migration Review", review)
@@ -2011,9 +2005,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("kag-source-lift migration: landed", ingress)
@@ -2082,9 +2074,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Kag-Source-Lift Pilot Review", review)
@@ -2162,9 +2152,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Docs-Boundary Direct-Read Migration Review", review)
@@ -2240,9 +2228,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("docs-boundary migration: landed", ingress)
@@ -2313,9 +2299,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Docs-Boundary Pilot Review", review)
@@ -2403,9 +2387,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Capability-Registry Direct-Read Migration Review", review)
@@ -2504,9 +2486,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Capability-Registry Pilot Review", review)
@@ -2621,9 +2601,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Capability-Boundary Direct-Read Migration Review", review)
@@ -2717,9 +2695,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         receipt = (
             REPO_ROOT
@@ -2784,9 +2760,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Capability-Boundary Pilot Review", review)
@@ -2880,9 +2854,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         flat_distillation_roadmap = " ".join(distillation_roadmap.split())
 
@@ -2991,9 +2963,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Skill-Discovery Pilot Review", review)
@@ -3113,9 +3083,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Skill-Support Direct-Read Migration Review", review)
@@ -3204,9 +3172,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         receipt = (
             REPO_ROOT
@@ -3287,9 +3253,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Skill-Support Pilot Review", review)
@@ -3404,9 +3368,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Evaluation-Chain Direct-Read Migration Review", review)
@@ -3505,9 +3467,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         receipt = (
             REPO_ROOT
@@ -3585,9 +3545,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Evaluation-Chain Pilot Review", review)
@@ -3686,9 +3644,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Published-Summary Direct-Read Migration Review", review)
@@ -3795,9 +3751,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Published-Summary Pilot Review", review)
@@ -3910,9 +3864,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("History-Artifacts Direct-Read Migration Review", review)
@@ -4039,9 +3991,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         distillation_roadmap = read_distillation_reform_context()
         flat_history_distillation_roadmap = " ".join(distillation_roadmap.split())
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("history-artifacts/", history_agents)
@@ -4143,9 +4093,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed History-Artifacts Pilot Review", review)
@@ -4270,9 +4218,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md"
         ).read_text(encoding="utf-8")
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Antifragility-Recovery Direct-Read Migration Review", review)
@@ -4391,9 +4337,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("antifragility-recovery/", recovery_agents)
@@ -4484,9 +4428,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Antifragility-Recovery Pilot Review", review)
@@ -4595,9 +4537,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Ready-Work-Graphs Direct-Read Migration Review", review)
@@ -4680,9 +4620,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Ready-Work-Graphs Tree Pilot Receipt", receipt)
@@ -4753,9 +4691,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Ready-Work-Graphs Pilot Review", review)
@@ -4854,9 +4790,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Intent-Chain Direct-Read Migration Review", review)
@@ -4932,9 +4866,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Intent-Chain Tree Pilot Receipt", receipt)
@@ -5002,9 +4934,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Intent-Chain Pilot Review", review)
@@ -5099,9 +5029,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Agent-Workflows-Core Direct-Read Migration Review", review)
@@ -5181,9 +5109,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Agent-Workflows-Core Tree Pilot Receipt", receipt)
@@ -5268,9 +5194,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Agent-Workflows-Core Pilot Review", review)
@@ -5364,9 +5288,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Donor-Harvest Direct-Read Migration Review", review)
@@ -5439,9 +5361,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -5528,9 +5448,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Donor-Harvest Pilot Review", review)
@@ -5617,9 +5535,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Decision-Routing Direct-Read Migration Review", review)
@@ -5690,9 +5606,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -5788,9 +5702,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Decision-Routing Pilot Review", review)
@@ -5887,9 +5799,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Approval-Evidence Direct-Read Migration Review", review)
@@ -5959,9 +5869,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -6053,9 +5961,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Approval-Evidence Pilot Review", review)
@@ -6153,9 +6059,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Review-Evidence Direct-Read Migration Review", review)
@@ -6241,9 +6145,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -6340,9 +6242,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Review-Evidence Pilot Review", review)
@@ -6439,9 +6339,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Runtime-Truth-Lifecycle Direct-Read Migration Review", review)
@@ -6549,9 +6447,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -6659,9 +6555,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Runtime-Truth-Lifecycle Pilot Review", review)
@@ -6766,9 +6660,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Owner-Truth-Closeout Direct-Read Migration Review", review)
@@ -6874,9 +6766,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -6991,9 +6881,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Owner-Truth-Closeout Pilot Review", review)
@@ -7144,9 +7032,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Automation-Governance Direct-Read Split Review", review)
@@ -7296,9 +7182,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Automation-Governance Split Expansion Closeout", closeout)
@@ -7395,9 +7279,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Automation-Readiness Direct-Read Migration Review", review)
@@ -7496,9 +7378,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -7598,9 +7478,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Automation-Readiness Pilot Review", review)
@@ -7705,9 +7583,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Promotion-Boundary Direct-Read Migration Review", review)
@@ -7820,9 +7696,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -7924,9 +7798,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn("Landed Promotion-Boundary Pilot Review", review)
@@ -8038,9 +7910,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         self.assertIn(
@@ -8141,9 +8011,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         legacy_index = (REPO_ROOT / "legacy" / "INDEX.md").read_text(
             encoding="utf-8"
         )
@@ -8248,9 +8116,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
             REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
@@ -8385,9 +8251,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
             REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
@@ -8473,9 +8337,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
             REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
@@ -8562,9 +8424,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = (
             REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.md"
@@ -8632,9 +8492,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = json.loads(
             (REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.json").read_text(
@@ -8715,9 +8573,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
 
         current_trunks = (
@@ -8811,9 +8667,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
         distillation_roadmap = read_distillation_reform_context()
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
-        tree_contract = (
-            REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md"
-        ).read_text(encoding="utf-8")
+        tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         projection = json.loads(
             (REPO_ROOT / validate_repo.TECHNIQUE_REFORM_REPORTS_DIR / "technique_tree_projection.json").read_text(

@@ -183,7 +183,7 @@ A later migration wave should expect to update:
 
 - authored sibling links inside the eight moved bundles
 - generated reader docs such as `TECHNIQUE_INDEX.md`, `docs/TECHNIQUE_*`,
-  `docs/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
+  `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
 - generated KAG export paths while keeping the export derived and
   source-owned
 - generated reports for family, topology, and tree projection

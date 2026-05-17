@@ -81,8 +81,8 @@ Direct bundle reads:
 
 Supporting review and generated surfaces:
 
-- [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
-- [Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md)
+- [Technique Selection](../../../../../docs/readers/selection/TECHNIQUE_SELECTION.md)
+- [Selection Patterns](../../../../../docs/readers/selection/SELECTION_PATTERNS.md)
 - [Technique Topology Scout](../reports/technique_topology_scout.md)
 - [Evaluation-Chain Semantic Review](semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
 - [Published-Summary Semantic Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)

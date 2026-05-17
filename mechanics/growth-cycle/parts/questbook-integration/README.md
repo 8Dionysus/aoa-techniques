@@ -19,7 +19,7 @@ Use stable anchors such as:
 - `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md`
 - `mechanics/distillation/parts/donor-refinery/README.md`
 - `generated/technique_capsules.min.json`
-- `docs/KAG_EXPORT.md`
+- `docs/source-lift/KAG_EXPORT.md`
 - `generated/repo_doc_surface_manifest.json`
 
 ## Initial posture

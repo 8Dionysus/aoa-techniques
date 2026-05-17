@@ -6,7 +6,7 @@ kind: lift
 status: promoted
 origin:
   project: aoa-techniques
-  path: docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md
+  path: docs/source-lift/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md
   note: Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first while staying subordinate to authored Risks and canonical adverse-effects review.
 owners:
   - 8Dionysus

@@ -161,8 +161,8 @@ Use this loop for every bundle, including holds:
    - `notes/second-context-adaptation.md`
    - `notes/origin-evidence.md` or external-origin notes when present
 4. Read compact companions and prior evidence:
-   - `docs/TECHNIQUE_CAPSULES.md`
-   - `docs/TECHNIQUE_SECTIONS.md`
+   - `docs/readers/runtime/TECHNIQUE_CAPSULES.md`
+   - `docs/readers/source-lift/TECHNIQUE_SECTIONS.md`
    - `reports/technique_topology_scout.md`
    - relevant migration, selector, portability, owner-boundary, bundle-anatomy,
      execution-profile, or generated-capsule packets
@@ -572,7 +572,7 @@ Checks:
 6. Confirm no paths changed.
 7. Confirm no relation source changed unless a separate direct repair exists.
 8. Confirm generated surfaces were rebuilt from source.
-9. Confirm `docs/TECHNIQUE_SECTIONS.md` changes are only section-order parity.
+9. Confirm `docs/readers/source-lift/TECHNIQUE_SECTIONS.md` changes are only section-order parity.
 10. Confirm no generated capsule or catalog was hand-authored as truth.
 11. Confirm public-safety grep over all touched public-share files.
 12. Confirm no broad bridge block was introduced.

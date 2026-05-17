@@ -54,10 +54,11 @@ class RootLegacyTopologyTestCase(unittest.TestCase):
         self.assertIn("legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md", index)
         self.assertIn("legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md", index)
         self.assertIn("legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md", index)
+        self.assertIn("legacy/archive/AGENTS_ROOT_REFERENCE.md", index)
 
         expected_files = {
             "raw": ["README.md"],
-            "archive": ["README.md"],
+            "archive": ["AGENTS_ROOT_REFERENCE.md", "README.md"],
             "receipts": [
                 "2026-05-04-capability-boundary-tree-pilot.md",
                 "2026-05-04-capability-registry-tree-pilot.md",
