@@ -56,10 +56,10 @@ Do not use this skill when:
 
 ## Outputs
 - one summon decision with allowed or blocked posture
-- one chosen lane such as local leaf execution, local reviewed execution,
+- one chosen lane such as `codex_local_leaf`, `codex_local_reviewed`,
   `remote_reviewed`, `split_required`, or `human_gate`
 - `execution_surface`, `cohort_pattern`, `reason_codes`, and `blocked_actions`
-- optional local child target
+- optional `codex_local_target`
 - `return_plan`, `checkpoint_bridge_plan`, `memo_export_plan`, and
   `owner_publication_plan`
 - return receipt or acceptance expectation when the child crosses an actor,
@@ -68,14 +68,14 @@ Do not use this skill when:
 
 ## Procedure
 1. start from the parent anchor and quest passport, not from raw pressure to delegate
-2. default `transport_preference` to local execution when the request leaves it open
+2. default `transport_preference` to `codex_local` when the request leaves it open
 3. verify that expected outputs are named before picking a lane
 4. classify the lane with difficulty, risk, control mode, requested role, and
    `references/passport-lane-matrix.v3.md`
 5. keep low-risk `d0_probe`, `d1_patch`, and bounded `d2_slice` leaf work in
-   local leaf execution when anchor and outputs are clear
+   `codex_local_leaf` when anchor and outputs are clear
 6. keep local reviewer, evaluator, and architect-like narrowing work in
-   local reviewed execution
+   `codex_local_reviewed`
 7. allow `remote_reviewed` only when a separate endpoint or execution surface
    is actually required
 8. if difficulty is `d3+`, return `split_required` instead of launching child execution

@@ -48,8 +48,7 @@
     "lane": {
       "type": "string",
       "enum": [
-        "techniques",
-        "agon"
+        "techniques"
       ]
     },
     "owner_surface": {

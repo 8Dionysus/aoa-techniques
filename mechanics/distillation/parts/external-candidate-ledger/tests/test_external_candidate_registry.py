@@ -54,6 +54,17 @@ def test_builder_rejects_active_lane_without_named_atom() -> None:
         builder.validate_config(config)
 
 
+def test_builder_rejects_ledger_gate_pair_drift() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "external_candidate_registry.source.json").read_text(encoding="utf-8")
+    )
+    config["candidates"][0]["gate_status"] = "overlap_hold"
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "must pair with gate_status"):
+        builder.validate_config(config)
+
+
 def test_builder_rejects_portability_gap() -> None:
     builder = load_builder()
     config = json.loads(

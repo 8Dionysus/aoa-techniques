@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import builtins
+import importlib.util
 import json
 import re
 import shutil
+import sys
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -53,6 +56,29 @@ def build_required_section_body(
 
 
 class ValidateRepoRegressionTests(unittest.TestCase):
+    def test_validate_repo_module_imports_without_pyyaml(self) -> None:
+        spec = importlib.util.spec_from_file_location(
+            "validate_repo_no_yaml_test", REPO_ROOT / "scripts" / "validate_repo.py"
+        )
+        self.assertIsNotNone(spec)
+        self.assertIsNotNone(spec.loader)
+        module = importlib.util.module_from_spec(spec)
+        real_import = builtins.__import__
+
+        def block_yaml_import(name: str, *args: object, **kwargs: object) -> object:
+            if name == "yaml":
+                raise ModuleNotFoundError("No module named 'yaml'")
+            return real_import(name, *args, **kwargs)
+
+        sys.modules[spec.name] = module
+        try:
+            with patch.object(builtins, "__import__", side_effect=block_yaml_import):
+                spec.loader.exec_module(module)
+        finally:
+            sys.modules.pop(spec.name, None)
+
+        self.assertTrue(hasattr(module, "parse_frontmatter"))
+
     def test_repo_validation_workflow_uses_bounded_release_entrypoint(self) -> None:
         workflow = (REPO_ROOT / ".github" / "workflows" / "repo-validation.yml").read_text(
             encoding="utf-8"
@@ -147,6 +173,20 @@ relations:
 
         self.assertEqual(parsed["tags"], ["team:ml", "v1:beta", "https://example.com/x"])
         self.assertEqual(parsed["relations"], [{"type": "requires", "target": "AOA-T-0001"}])
+
+    def test_topology_ui_substrate_does_not_match_short_substrings(self) -> None:
+        self.assertNotIn("ui", validate_repo.TOPOLOGY_KEYWORD_RULES["substrate"]["ui"])
+        self.assertEqual(
+            [],
+            validate_repo.matched_keywords(
+                "build guide for bounded docs",
+                validate_repo.TOPOLOGY_KEYWORD_RULES["substrate"]["ui"],
+            ),
+        )
+
+    def test_work_quest_schema_lane_matches_yaml_source_route(self) -> None:
+        schema = validate_repo.read_json(REPO_ROOT / "schemas" / "quest.schema.json")
+        self.assertEqual(["techniques"], schema["properties"]["lane"]["enum"])
 
     def test_validate_support_references_accepts_local_bundle_paths(self) -> None:
         with TemporaryDirectory() as temp_dir:
@@ -1800,7 +1840,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
         )
         self.assertEqual(20, len(actual_full["docs"]))
         docs_by_id = {doc["doc_id"]: doc for doc in actual_full["docs"]}
-        self.assertEqual("canon/authority", docs_by_id["ecosystem_context"]["surface_group"])
+        self.assertEqual("entrypoint/map", docs_by_id["ecosystem_context"]["surface_group"])
         self.assertEqual("canon/authority", docs_by_id["charter"]["surface_group"])
         self.assertEqual("status/release", docs_by_id["roadmap"]["surface_group"])
 

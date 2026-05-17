@@ -5,7 +5,7 @@ import argparse
 import json
 import sys
 from collections import Counter
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 PART_ROOT = Path(__file__).resolve().parents[1]
@@ -141,6 +141,29 @@ def require_object(value: Any, field: str, candidate_ref: str) -> dict[str, Any]
     return value
 
 
+def require_relative_file(
+    value: Any,
+    field: str,
+    candidate_ref: str,
+    prefix: str,
+    invalid_message: str,
+    *,
+    suffix: str | None = None,
+) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise ValidationError(f"{candidate_ref}: {field} must be a non-empty string")
+    relative = PurePosixPath(value)
+    if relative.is_absolute() or ".." in relative.parts:
+        raise ValidationError(f"{candidate_ref}: {invalid_message}")
+    if not value.startswith(prefix):
+        raise ValidationError(f"{candidate_ref}: {invalid_message}")
+    if suffix is not None and not value.endswith(suffix):
+        raise ValidationError(f"{candidate_ref}: {invalid_message}")
+    if not (REPO_ROOT / value).is_file():
+        raise ValidationError(f"{candidate_ref}: {field} path does not exist")
+    return value
+
+
 def source_refs() -> dict[str, dict[str, str]]:
     move = read_json(MOVE_SOURCE)
     epistemic = read_json(EPISTEMIC_SOURCE)
@@ -206,104 +229,101 @@ def validate_entry(entry: dict[str, Any], source_map: dict[str, dict[str, str]])
         raise ValidationError(f"{ref}: bridge_stop_line must preserve an authority boundary")
 
     gate_card = entry.get("gate_card")
-    if gate_card is not None:
-        if not isinstance(gate_card, str) or not gate_card.startswith(GATE_CARD_PREFIX):
-            raise ValidationError(f"{ref}: gate_card must stay under the handoff gates directory")
+    if "gate_card" in entry:
+        gate_card = require_relative_file(
+            gate_card,
+            "gate_card",
+            ref,
+            GATE_CARD_PREFIX,
+            "gate_card must stay under the handoff gates directory",
+        )
         if gate_card.startswith(GATE_CARD_EXCLUDED_PREFIXES):
-            raise ValidationError(f"{ref}: gate_card must point to a gate card, not a child artifact")
-        gate_path = REPO_ROOT / gate_card
-        if not gate_path.is_file():
-            raise ValidationError(f"{ref}: gate_card path does not exist")
+            raise ValidationError(
+                f"{ref}: gate_card must point to a gate card, not a child artifact"
+            )
         if lane != "first_narrowing_watch":
             raise ValidationError(f"{ref}: only first_narrowing_watch entries may carry gate_card")
 
     gate_example = entry.get("gate_example")
-    if gate_example is not None:
+    if "gate_example" in entry:
         if gate_card is None:
             raise ValidationError(f"{ref}: gate_example requires gate_card")
-        if not isinstance(gate_example, str) or not gate_example.startswith(
-            GATE_EXAMPLE_PREFIX
-        ):
-            raise ValidationError(
-                f"{ref}: gate_example must stay under the handoff gate examples directory"
-            )
-        example_path = REPO_ROOT / gate_example
-        if not example_path.is_file():
-            raise ValidationError(f"{ref}: gate_example path does not exist")
+        gate_example = require_relative_file(
+            gate_example,
+            "gate_example",
+            ref,
+            GATE_EXAMPLE_PREFIX,
+            "gate_example must stay under the handoff gate examples directory",
+        )
         if lane != "first_narrowing_watch":
             raise ValidationError(
                 f"{ref}: only first_narrowing_watch entries may carry gate_example"
             )
 
     gate_checklist = entry.get("gate_checklist")
-    if gate_checklist is not None:
+    if "gate_checklist" in entry:
         if gate_example is None:
             raise ValidationError(f"{ref}: gate_checklist requires gate_example")
-        if not isinstance(gate_checklist, str) or not gate_checklist.startswith(
-            GATE_CHECKLIST_PREFIX
-        ):
-            raise ValidationError(
-                f"{ref}: gate_checklist must stay under the handoff gate checklists directory"
-            )
-        checklist_path = REPO_ROOT / gate_checklist
-        if not checklist_path.is_file():
-            raise ValidationError(f"{ref}: gate_checklist path does not exist")
+        gate_checklist = require_relative_file(
+            gate_checklist,
+            "gate_checklist",
+            ref,
+            GATE_CHECKLIST_PREFIX,
+            "gate_checklist must stay under the handoff gate checklists directory",
+        )
         if lane != "first_narrowing_watch":
             raise ValidationError(
                 f"{ref}: only first_narrowing_watch entries may carry gate_checklist"
             )
 
     gate_evidence_note = entry.get("gate_evidence_note")
-    if gate_evidence_note is not None:
+    if "gate_evidence_note" in entry:
         if gate_checklist is None:
             raise ValidationError(f"{ref}: gate_evidence_note requires gate_checklist")
-        if not isinstance(gate_evidence_note, str) or not gate_evidence_note.startswith(
-            GATE_EVIDENCE_NOTE_PREFIX
-        ):
-            raise ValidationError(
-                f"{ref}: gate_evidence_note must stay under the handoff gate evidence-notes directory"
-            )
-        note_path = REPO_ROOT / gate_evidence_note
-        if not note_path.is_file():
-            raise ValidationError(f"{ref}: gate_evidence_note path does not exist")
+        gate_evidence_note = require_relative_file(
+            gate_evidence_note,
+            "gate_evidence_note",
+            ref,
+            GATE_EVIDENCE_NOTE_PREFIX,
+            "gate_evidence_note must stay under the handoff gate evidence-notes directory",
+        )
         if lane != "first_narrowing_watch":
             raise ValidationError(
                 f"{ref}: only first_narrowing_watch entries may carry gate_evidence_note"
             )
 
     bundle_readiness_review = entry.get("bundle_readiness_review")
-    if bundle_readiness_review is not None:
+    if "bundle_readiness_review" in entry:
         if gate_evidence_note is None:
             raise ValidationError(
                 f"{ref}: bundle_readiness_review requires gate_evidence_note"
             )
-        if not isinstance(
-            bundle_readiness_review, str
-        ) or not bundle_readiness_review.startswith(BUNDLE_READINESS_REVIEW_PREFIX):
-            raise ValidationError(
-                f"{ref}: bundle_readiness_review must stay under the handoff bundle-reviews directory"
-            )
-        review_path = REPO_ROOT / bundle_readiness_review
-        if not review_path.is_file():
-            raise ValidationError(f"{ref}: bundle_readiness_review path does not exist")
+        bundle_readiness_review = require_relative_file(
+            bundle_readiness_review,
+            "bundle_readiness_review",
+            ref,
+            BUNDLE_READINESS_REVIEW_PREFIX,
+            "bundle_readiness_review must stay under the handoff bundle-reviews directory",
+        )
         if lane != "first_narrowing_watch":
             raise ValidationError(
                 f"{ref}: only first_narrowing_watch entries may carry bundle_readiness_review"
             )
 
     technique_bundle = entry.get("technique_bundle")
-    if technique_bundle is not None:
+    if "technique_bundle" in entry:
         if bundle_readiness_review is None:
-            raise ValidationError(f"{ref}: technique_bundle requires bundle_readiness_review")
-        if (
-            not isinstance(technique_bundle, str)
-            or not technique_bundle.startswith(TECHNIQUE_BUNDLE_PREFIX)
-            or not technique_bundle.endswith("/TECHNIQUE.md")
-        ):
-            raise ValidationError(f"{ref}: technique_bundle must point to a technique bundle")
-        bundle_path = REPO_ROOT / technique_bundle
-        if not bundle_path.is_file():
-            raise ValidationError(f"{ref}: technique_bundle path does not exist")
+            raise ValidationError(
+                f"{ref}: technique_bundle requires bundle_readiness_review"
+            )
+        technique_bundle = require_relative_file(
+            technique_bundle,
+            "technique_bundle",
+            ref,
+            TECHNIQUE_BUNDLE_PREFIX,
+            "technique_bundle must point to a technique bundle",
+            suffix="/TECHNIQUE.md",
+        )
         if lane != "first_narrowing_watch":
             raise ValidationError(
                 f"{ref}: only first_narrowing_watch entries may carry technique_bundle"

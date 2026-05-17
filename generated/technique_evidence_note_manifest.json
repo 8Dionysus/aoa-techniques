@@ -31523,11 +31523,11 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition"
+                  "text": "it remains narrower than [AOA-T-0012](../../../../instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../../instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) because it only owns post-compaction recovery, not source-layer authoring or composition"
                 },
                 {
                   "order": 3,
-                  "text": "it also remains narrower than [AOA-T-0027](../../../docs/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets"
+                  "text": "it also remains narrower than [AOA-T-0027](../../../../instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md) because it restores one session's ability to reload skills instead of propagating a canonical source to many managed targets"
                 }
               ]
             },
@@ -31949,7 +31949,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse back into [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) or [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md) if repositories cannot explain what recovery adds after context has already been authored"
+                  "text": "the pattern can collapse back into [AOA-T-0012](../../../../instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) or [AOA-T-0030](../../../../instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md) if repositories cannot explain what recovery adds after context has already been authored"
                 },
                 {
                   "order": 2,
@@ -32266,7 +32266,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report"
+                  "text": "it remains narrower than [AOA-T-0001](../../../agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report"
                 },
                 {
                   "order": 3,
@@ -32706,7 +32706,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse back into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts"
+                  "text": "the pattern can collapse back into [AOA-T-0001](../../../agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts"
                 },
                 {
                   "order": 2,
@@ -35743,7 +35743,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md), and [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the pre-mutation opening ritual"
+                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0059](../../git-verified-handoff-claims/TECHNIQUE.md), and [AOA-T-0001](../../../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the pre-mutation opening ritual"
                 },
                 {
                   "order": 3,
@@ -36168,7 +36168,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the session-opening seam from the full change workflow"
+                  "text": "the pattern can collapse into [AOA-T-0001](../../../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the session-opening seam from the full change workflow"
                 },
                 {
                   "order": 2,
@@ -37201,7 +37201,7 @@
                 },
                 {
                   "order": 2,
-                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md), and [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the longer-run segmentation seam"
+                  "text": "it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md), and [AOA-T-0001](../../../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the longer-run segmentation seam"
                 },
                 {
                   "order": 3,
@@ -37626,7 +37626,7 @@
               "items": [
                 {
                   "order": 1,
-                  "text": "the pattern can collapse into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the long-run segmentation seam from the internal workflow of each episode"
+                  "text": "the pattern can collapse into [AOA-T-0001](../../../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the long-run segmentation seam from the internal workflow of each episode"
                 },
                 {
                   "order": 2,

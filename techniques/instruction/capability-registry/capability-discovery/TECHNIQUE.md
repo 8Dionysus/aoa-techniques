@@ -25,7 +25,7 @@ validation_strength: cross_context
 public_safety_reviewed_at: 2026-05-12
 export_ready: true
 relations:
-  - type: requires
+  - type: complements
     target: AOA-T-0063
 evidence:
   - kind: external_origin

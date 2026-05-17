@@ -27,6 +27,12 @@ EXPECTED_GATE_STATUS_COUNTS = {
     "not_technique_shaped": 3,
     "overlap_hold": 4,
 }
+LEDGER_STATUS_TO_GATE_STATUS = {
+    "future_import_here": "active_narrowing",
+    "hold_because_overlap": "overlap_hold",
+    "needs_layer_incubation_before_distillation_here": "layer_incubation",
+    "substrate_or_architecture_pattern_not_yet_technique": "not_technique_shaped",
+}
 EXPECTED_ACTIVE_LANE = "phase_sync_for_agents"
 EXPECTED_SOURCE_LEDGER = "mechanics/distillation/parts/external-candidate-ledger/README.md"
 REQUIRED_GATE_FIELDS = (
@@ -88,6 +94,11 @@ def validate_candidate(candidate: dict[str, Any]) -> None:
         raise ValidationError(f"{seed}: unknown ledger_status {candidate['ledger_status']!r}")
     if candidate["gate_status"] not in EXPECTED_GATE_STATUS_COUNTS:
         raise ValidationError(f"{seed}: unknown gate_status {candidate['gate_status']!r}")
+    expected_gate_status = LEDGER_STATUS_TO_GATE_STATUS[candidate["ledger_status"]]
+    if candidate["gate_status"] != expected_gate_status:
+        raise ValidationError(
+            f"{seed}: ledger_status {candidate['ledger_status']!r} must pair with gate_status {expected_gate_status!r}"
+        )
     if not isinstance(candidate.get("nearest_overlap"), list):
         raise ValidationError(f"{seed}: nearest_overlap must be a list")
 

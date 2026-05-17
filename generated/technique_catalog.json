@@ -3643,7 +3643,7 @@
       "export_ready": true,
       "relations": [
         {
-          "type": "requires",
+          "type": "complements",
           "target": "AOA-T-0063"
         }
       ],
@@ -4055,7 +4055,7 @@
       "export_ready": true,
       "relations": [
         {
-          "type": "requires",
+          "type": "complements",
           "target": "AOA-T-0070"
         }
       ],
