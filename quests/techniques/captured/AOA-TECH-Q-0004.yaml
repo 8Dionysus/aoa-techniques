@@ -29,11 +29,11 @@ parent: null
 depends_on: []
 activation:
   mode: on_recurrence
-  ref: docs/SEMANTIC_REVIEW_GUIDE.md
+  ref: docs/review/SEMANTIC_REVIEW_GUIDE.md
   note: open after the route repeats enough to deserve canon
 anchor_ref:
   artifact: evidence-note-guide
-  ref: docs/EVIDENCE_NOTE_PROVENANCE_GUIDE.md
+  ref: docs/source-lift/EVIDENCE_NOTE_PROVENANCE_GUIDE.md
 handoff_role: technique-maintainer
 evidence:
   - a recurrence threshold is named

@@ -56,8 +56,8 @@ Direct bundle reads:
 
 Supporting review and generated surfaces:
 
-- [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
-- [Selection Patterns](../../../../../docs/SELECTION_PATTERNS.md)
+- [Technique Selection](../../../../../docs/readers/selection/TECHNIQUE_SELECTION.md)
+- [Selection Patterns](../../../../../docs/readers/selection/SELECTION_PATTERNS.md)
 - [Technique Topology Scout](../reports/technique_topology_scout.md)
 - [Agent-Workflows Core Semantic Review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - [Agent-Workflows-Core Direct-Read Migration Review](agent-workflows-core-direct-read-migration-review.md)

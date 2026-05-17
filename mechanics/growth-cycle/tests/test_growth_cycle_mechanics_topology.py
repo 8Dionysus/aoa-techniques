@@ -109,7 +109,7 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
         for relative_path in (
             "README.md",
             "docs/README.md",
-            "docs/AGENTS_ROOT_REFERENCE.md",
+            "legacy/archive/AGENTS_ROOT_REFERENCE.md",
             "quests/techniques/captured/AOA-TECH-Q-0005.yaml",
             "quests/techniques/captured/AOA-TECH-Q-0007.yaml",
             "scripts/validate_repo.py",
@@ -132,7 +132,7 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
             for relative_path in (
                 "README.md",
                 "docs/README.md",
-                "docs/AGENTS_ROOT_REFERENCE.md",
+                "legacy/archive/AGENTS_ROOT_REFERENCE.md",
                 "quests/techniques/captured/AOA-TECH-Q-0005.yaml",
                 "quests/techniques/captured/AOA-TECH-Q-0007.yaml",
                 "scripts/validate_repo.py",

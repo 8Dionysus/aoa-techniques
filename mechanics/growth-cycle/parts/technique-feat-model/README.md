@@ -18,10 +18,10 @@ The owner surfaces remain:
 - `TECHNIQUE_INDEX.md`
 - `generated/technique_capsules*.json`
 - `generated/technique_sections.full.json`
-- `docs/CANONICAL_RUBRIC.md`
+- `docs/review/CANONICAL_RUBRIC.md`
 - `mechanics/distillation/parts/donor-refinery/README.md`
 - `mechanics/audit/EXTERNAL_EVIDENCE_*`
-- `WALKTHROUGH.md`
+- `examples/plan-diff-apply-verify-report-walkthrough.md`
 
 Feat cards may help humans and agents read those sources faster. They must not replace them.
 

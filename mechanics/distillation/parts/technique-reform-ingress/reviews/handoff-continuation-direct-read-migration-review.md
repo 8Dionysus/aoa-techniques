@@ -136,7 +136,7 @@ A later migration wave should expect to update:
 - root `legacy/receipts/` and `legacy/INDEX.md` accounting for the authored
   path migration
 - generated reader docs such as `TECHNIQUE_INDEX.md`, `docs/TECHNIQUE_*`,
-  `docs/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
+  `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
 - generated reports for family, topology, and tree projection
 - release-check output touched by regenerated catalogs, capsules, sections,
   examples, checklists, evidence notes, and repo-doc surfaces

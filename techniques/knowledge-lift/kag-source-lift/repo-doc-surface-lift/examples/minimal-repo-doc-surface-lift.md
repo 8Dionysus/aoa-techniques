@@ -10,7 +10,6 @@ This example shows how a bounded public repo-doc set can become a derived routin
 - `AGENTS.md`
 - `CONTRIBUTING.md`
 - `SECURITY.md`
-- `WALKTHROUGH.md`
 - `CODE_OF_CONDUCT.md`
 - `CHANGELOG.md`
 - `docs/README.md`

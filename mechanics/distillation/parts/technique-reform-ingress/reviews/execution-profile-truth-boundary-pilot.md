@@ -32,7 +32,7 @@ Reviewed:
 - `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`
 - `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`
-- `docs/TECHNIQUE_CAPSULES.md`
+- `docs/readers/runtime/TECHNIQUE_CAPSULES.md`
 - `techniques/continuity/AGENTS.md`
 - all `TECHNIQUE.md`, `examples/`, `checks/`, and `notes/` files under
   `techniques/continuity/handoff-continuation/`

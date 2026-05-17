@@ -20,12 +20,12 @@ def main() -> int:
 
     generated_dir = repo_root / "generated"
     generated_dir.mkdir(exist_ok=True)
-    docs_dir = repo_root / "docs"
-    docs_dir.mkdir(exist_ok=True)
+    reader_dir = repo_root / "docs" / "readers" / "source-lift"
+    reader_dir.mkdir(parents=True, exist_ok=True)
 
     full_path = generated_dir / "technique_section_manifest.json"
     min_path = generated_dir / "technique_section_manifest.min.json"
-    reader_path = docs_dir / "TECHNIQUE_SECTIONS.md"
+    reader_path = reader_dir / "TECHNIQUE_SECTIONS.md"
 
     write_json_file(full_path, full_manifest, compact=False)
     write_json_file(min_path, min_manifest, compact=True)

@@ -98,7 +98,7 @@ class AntifragilityMechanicsTopologyTestCase(unittest.TestCase):
         combined = "\n".join(
             (REPO_ROOT / relative_path).read_text(encoding="utf-8")
             for relative_path in (
-                "docs/README.md",
+                "mechanics/README.md",
                 "mechanics/antifragility/README.md",
                 "mechanics/antifragility/DIRECTION.md",
                 "mechanics/antifragility/PARTS.md",

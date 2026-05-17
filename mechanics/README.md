@@ -58,6 +58,40 @@ store.
   derived-projection, and proof-claim practice pressure that keeps technique
   canon, generated surfaces, sibling owners, and public claims distinct.
 
+## Operating Route Index
+
+This is the active home for mechanic part routes. Root docs may point here, but
+they should not carry these part indexes as if mechanic operation belonged to
+the general docs map.
+
+### Audit And Promotion
+
+| Route | Path | Use |
+|---|---|---|
+| [Promotion Readiness Matrix](audit/parts/promotion-readiness-matrix/README.md) | `mechanics/audit/parts/promotion-readiness-matrix/README.md` | readiness queues and owner-local promotion posture |
+| [Promotion Evidence Runbook](audit/parts/promotion-evidence-runbook/README.md) | `mechanics/audit/parts/promotion-evidence-runbook/README.md` | bounded promotion wave mechanics |
+| [External Evidence Sprint Runbook](audit/parts/external-evidence-sprint-runbook/README.md) | `mechanics/audit/parts/external-evidence-sprint-runbook/README.md` | evidence-gated external proof work |
+| [External Evidence Ledger](audit/parts/external-evidence-ledger/README.md) | `mechanics/audit/parts/external-evidence-ledger/README.md` | searched-lane and evidence status accounting |
+| [Canonical Retro Audit](audit/parts/canonical-retro-audit/README.md) | `mechanics/audit/parts/canonical-retro-audit/README.md` | already-canonical metadata and evidence recheck |
+
+### Distillation And Candidates
+
+| Route | Path | Use |
+|---|---|---|
+| [External Import Runbook](distillation/parts/external-import-runbook/README.md) | `mechanics/distillation/parts/external-import-runbook/README.md` | one bounded donor from triage to review and merge |
+| [External Technique Candidates](distillation/parts/external-candidate-ledger/README.md) | `mechanics/distillation/parts/external-candidate-ledger/README.md` | remaining external donor-derived candidates |
+| [Cross-Layer Technique Candidates](distillation/parts/cross-layer-candidate-ledger/README.md) | `mechanics/distillation/parts/cross-layer-candidate-ledger/README.md` | sibling-layer donor-note candidates |
+| [Long-Gap Canon Design](distillation/parts/long-gap-reentry/README.md) | `mechanics/distillation/parts/long-gap-reentry/README.md` | promoted material that needs careful re-entry |
+| [Technique Reform Reviews](distillation/parts/technique-reform-ingress/reviews/README.md) | `mechanics/distillation/parts/technique-reform-ingress/reviews/README.md` | semantic, shadow, tree, and reform review packets |
+
+### Bridges And Stress Routes
+
+| Route | Path | Use |
+|---|---|---|
+| [Agon Move Technique Bridge](agon/parts/move-technique-bridge/README.md) | `mechanics/agon/parts/move-technique-bridge/README.md` | Agon move pressure that may become bounded technique candidates |
+| [Chaos Stress Program](antifragility/parts/chaos-stress-program/README.md) | `mechanics/antifragility/parts/chaos-stress-program/README.md` | bounded antifragility stress program practice |
+| [Recovery Practice Bridge](antifragility/parts/recovery-practice-bridge/README.md) | `mechanics/antifragility/parts/recovery-practice-bridge/README.md` | recovery pressure routed to current practice anchors |
+
 ## Boundary
 
 Use `mechanics/` when a file describes how a practice candidate moves, matures,

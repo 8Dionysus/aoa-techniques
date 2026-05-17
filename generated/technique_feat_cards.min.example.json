@@ -5,7 +5,7 @@
       "feat_id": "feat.AOA-T-0001",
       "technique_id": "AOA-T-0001",
       "technique_name": "plan-diff-apply-verify-report",
-      "source_technique_ref": "techniques/agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md",
+      "source_technique_ref": "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
       "summary": "Portable workflow feat that keeps change planning, scoping, verification, and reporting reviewable.",
       "feat_kind": "workflow",
       "source_status": "canonical",
@@ -31,7 +31,7 @@
         "verification"
       ],
       "evidence_refs": [
-        "WALKTHROUGH.md#AOA-T-0001",
+        "examples/plan-diff-apply-verify-report-walkthrough.md",
         "TECHNIQUE_INDEX.md#AOA-T-0001"
       ],
       "public_safe": true

@@ -12,8 +12,8 @@ Generated lens:
 Contracts:
 [Technique Atom Contract](../../../../../docs/TECHNIQUE_ATOM_CONTRACT.md),
 [Technique Topology Contract](../../../../../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md),
-[Technique Selection Guide](../../../../../docs/TECHNIQUE_SELECTION_GUIDE.md),
-[Technique Capsule Guide](../../../../../docs/TECHNIQUE_CAPSULE_GUIDE.md)
+[Technique Selection Guide](../../../../../docs/selection/TECHNIQUE_SELECTION_GUIDE.md),
+[Technique Capsule Guide](../../../../../docs/selection/TECHNIQUE_CAPSULE_GUIDE.md)
 
 Status: targeted selector mini-pilot, not schema migration, not frontmatter
 promotion, not empirical small-agent proof.

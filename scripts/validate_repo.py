@@ -74,7 +74,7 @@ REQUIRED_SUPPORT_DIRS = ("checks", "examples", "notes")
 REQUIRED_STAGE1_FILES = (
     "DESIGN.md",
     "DESIGN.AGENTS.md",
-    "docs/CANONICAL_RUBRIC.md",
+    "docs/review/CANONICAL_RUBRIC.md",
     "docs/DOMAIN_MAP.md",
     "schemas/technique.schema.json",
     "schemas/evidence-note.schema.json",
@@ -132,25 +132,24 @@ REQUIRED_STAGE1_FILES = (
     "generated/kag_export.min.json",
 )
 REQUIRED_SELECTION_FILES = (
-    "docs/TECHNIQUE_SELECTION_GUIDE.md",
-    "docs/TECHNIQUE_SELECTION.md",
-    "docs/SELECTION_PATTERNS.md",
-    "docs/SHADOW_PATTERNS.md",
+    "docs/selection/TECHNIQUE_SELECTION_GUIDE.md",
+    "docs/readers/selection/TECHNIQUE_SELECTION.md",
+    "docs/readers/selection/SELECTION_PATTERNS.md",
+    "docs/readers/review/SHADOW_PATTERNS.md",
 )
-REQUIRED_SEMANTIC_REVIEW_GUIDE_FILES = ("docs/SEMANTIC_REVIEW_GUIDE.md",)
+REQUIRED_SEMANTIC_REVIEW_GUIDE_FILES = ("docs/review/SEMANTIC_REVIEW_GUIDE.md",)
 REQUIRED_KAG_SOURCE_READER_FILES = (
-    "docs/TECHNIQUE_SECTIONS.md",
-    "docs/TECHNIQUE_CHECKLISTS.md",
-    "docs/TECHNIQUE_EXAMPLES.md",
-    "docs/EVIDENCE_NOTE_SURFACES.md",
+    "docs/readers/source-lift/TECHNIQUE_SECTIONS.md",
+    "docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md",
+    "docs/readers/source-lift/TECHNIQUE_EXAMPLES.md",
+    "docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md",
 )
-REQUIRED_CAPSULE_SURFACE_FILES = ("docs/TECHNIQUE_CAPSULES.md",)
-REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/REPO_DOC_SURFACES.md",)
-REQUIRED_KAG_EXPORT_FILES = ("docs/KAG_EXPORT.md",)
+REQUIRED_CAPSULE_SURFACE_FILES = ("docs/readers/runtime/TECHNIQUE_CAPSULES.md",)
+REQUIRED_REPO_DOC_SURFACE_FILES = ("docs/readers/repo/REPO_DOC_SURFACES.md",)
+REQUIRED_KAG_EXPORT_FILES = ("docs/source-lift/KAG_EXPORT.md",)
 REQUIRED_KIND_DOCTRINE_FILES = (
-    "docs/TECHNIQUE_KIND_GUIDE.md",
-    "docs/TECHNIQUE_KIND_BASELINE.md",
-    "docs/TECHNIQUE_KIND_HANDOFF_PACK.md",
+    "docs/selection/TECHNIQUE_KIND_GUIDE.md",
+    "docs/selection/TECHNIQUE_KIND_HANDOFF_PACK.md",
 )
 TECHNIQUE_REFORM_INGRESS_DIR = "mechanics/distillation/parts/technique-reform-ingress"
 TECHNIQUE_REFORM_REPORTS_DIR = (
@@ -177,7 +176,7 @@ SHADOW_REVIEW_PACKET_DIR = (
 REQUIRED_KIND_SURFACE_FILES = (
     "generated/technique_kind_manifest.json",
     "generated/technique_kind_manifest.min.json",
-    "docs/TECHNIQUE_KINDS.md",
+    "docs/readers/kind/TECHNIQUE_KINDS.md",
 )
 REQUIRED_KIND_REPORT_FILES = (
     f"{TECHNIQUE_REFORM_REPORTS_DIR}/technique_family_scout.md",
@@ -423,7 +422,6 @@ REPO_DOC_SURFACE_GROUP_ORDER = (
     "entrypoint/map",
     "canon/authority",
     "contribution/policy",
-    "walkthrough/context",
     "status/release",
 )
 REPO_DOC_SURFACE_GROUP_SPECS = (
@@ -441,11 +439,6 @@ REPO_DOC_SURFACE_GROUP_SPECS = (
         "group": "contribution/policy",
         "heading": "Contribution / Policy",
         "note": "Use these when the question is how to contribute safely, publicly, and within the repo's current review posture.",
-    },
-    {
-        "group": "walkthrough/context",
-        "heading": "Walkthrough / Context",
-        "note": "Use this when you need one concrete end-to-end example of how a real practice became a published technique here.",
     },
     {
         "group": "status/release",
@@ -601,12 +594,6 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_path": "CODE_OF_CONDUCT.md",
         "surface_group": "contribution/policy",
         "bounded_role": "public collaboration and enforcement expectations for contributors",
-    },
-    {
-        "doc_id": "walkthrough",
-        "doc_path": "WALKTHROUGH.md",
-        "surface_group": "walkthrough/context",
-        "bounded_role": "one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way",
     },
     {
         "doc_id": "roadmap",
@@ -1064,7 +1051,7 @@ QUESTBOOK_REQUIRED_INTEGRATION_TOKENS = (
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/donor-refinery/README.md",
     "generated/technique_capsules.min.json",
-    "docs/KAG_EXPORT.md",
+    "docs/source-lift/KAG_EXPORT.md",
     "generated/repo_doc_surface_manifest.json",
     "Do not mint a quest for every donor note.",
 )
@@ -3664,8 +3651,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 21:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 21 authoritative public route/canon/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 20:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 20 authoritative public route/canon/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
@@ -5469,7 +5456,7 @@ def build_kind_reader_markdown(full_manifest: dict[str, Any]) -> str:
     lines = [
         "# Technique Kinds",
         "",
-        "This file is generated from `../generated/technique_catalog.json` plus the repo-owned `kind` registry.",
+        "This file is generated from `../../../generated/technique_catalog.json` plus the repo-owned `kind` registry.",
         "Do not edit it by hand; run `python scripts/build_kind_manifest.py`.",
         "",
         "Use this surface when `domain` already narrowed the owner layer and you need the bounded second cut that answers what primary reusable practice a technique is.",
@@ -5477,13 +5464,12 @@ def build_kind_reader_markdown(full_manifest: dict[str, Any]) -> str:
         "This surface is kind-first, not promotion-first. It keeps `kind` singular, repo-owned, and subordinate to authored bundle meaning.",
         "",
         "See also:",
-        "- [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)",
-        "- [Technique Selection](TECHNIQUE_SELECTION.md)",
-        "- [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)",
-        "- [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)",
-        "- [Full kind manifest](../generated/technique_kind_manifest.json)",
-        "- [Min kind manifest](../generated/technique_kind_manifest.min.json)",
-        "- [Documentation Map](README.md)",
+        f"- [Technique Kind Guide]({SELECTION_GUIDE_PREFIX}TECHNIQUE_KIND_GUIDE.md)",
+        "- [Technique Selection](../selection/TECHNIQUE_SELECTION.md)",
+        f"- [Technique Kind Handoff Pack]({SELECTION_GUIDE_PREFIX}TECHNIQUE_KIND_HANDOFF_PACK.md)",
+        f"- [Full kind manifest]({KIND_READER_ROOT_PREFIX}generated/technique_kind_manifest.json)",
+        f"- [Min kind manifest]({KIND_READER_ROOT_PREFIX}generated/technique_kind_manifest.min.json)",
+        f"- [Documentation Map]({KIND_READER_DOCS_PREFIX}README.md)",
         "",
         "## Kind Scope",
         "",
@@ -5540,11 +5526,11 @@ def build_kind_reader_markdown(full_manifest: dict[str, Any]) -> str:
         for technique in entry["techniques"]:
             lines.append(
                 "| "
-                f"{selection_technique_link(technique)} | "
+                f"{selection_technique_link(technique, KIND_READER_ROOT_PREFIX)} | "
                 f"`{technique['domain']}` | "
                 f"`{technique['status']}` | "
                 f"{escape_markdown_table_cell(technique['summary'])} | "
-                f"[TECHNIQUE.md](../{technique['technique_path']}) |"
+                f"[TECHNIQUE.md]({KIND_READER_ROOT_PREFIX}{technique['technique_path']}) |"
             )
         if not entry["techniques"]:
             lines.append("| _No techniques currently mapped._ | - | - | - | - |")
@@ -6246,9 +6232,29 @@ def selection_technique_link(entry: dict[str, Any], relative_prefix: str = "../"
     return f"[{entry['id']}]({relative_prefix}{entry['technique_path']})"
 
 
-def record_technique_link(repo_root: Path, record: TechniqueRecord) -> str:
+NESTED_READER_DOCS_PREFIX = "../../"
+NESTED_READER_ROOT_PREFIX = "../../../"
+SOURCE_LIFT_READER_GUIDE_PREFIX = "../../source-lift/"
+SOURCE_LIFT_READER_ROOT_PREFIX = NESTED_READER_ROOT_PREFIX
+REVIEW_GUIDE_PREFIX = "../../review/"
+SELECTION_GUIDE_PREFIX = "../../selection/"
+KIND_READER_DOCS_PREFIX = NESTED_READER_DOCS_PREFIX
+KIND_READER_ROOT_PREFIX = NESTED_READER_ROOT_PREFIX
+RUNTIME_READER_DOCS_PREFIX = NESTED_READER_DOCS_PREFIX
+RUNTIME_READER_ROOT_PREFIX = NESTED_READER_ROOT_PREFIX
+SELECTION_READER_DOCS_PREFIX = NESTED_READER_DOCS_PREFIX
+SELECTION_READER_ROOT_PREFIX = NESTED_READER_ROOT_PREFIX
+REVIEW_READER_ROOT_PREFIX = NESTED_READER_ROOT_PREFIX
+REPO_DOC_READER_DOCS_PREFIX = NESTED_READER_DOCS_PREFIX
+REPO_DOC_READER_GUIDE_PREFIX = "../../source-lift/"
+REPO_DOC_READER_ROOT_PREFIX = NESTED_READER_ROOT_PREFIX
+
+
+def record_technique_link(
+    repo_root: Path, record: TechniqueRecord, relative_prefix: str = "../"
+) -> str:
     technique_path = record.technique_path.relative_to(repo_root).as_posix()
-    return f"[{record.id}](../{technique_path})"
+    return f"[{record.id}]({relative_prefix}{technique_path})"
 
 
 def strip_display_prefix(text: str, prefix: str) -> str:
@@ -6298,18 +6304,29 @@ def docs_relative_link(target_path: str) -> str:
     return PurePosixPath("..", *target.parts).as_posix()
 
 
+def nested_reader_relative_link(target_path: str) -> str:
+    target = PurePosixPath(target_path)
+    if target.parts[:1] == ("docs",):
+        return PurePosixPath("..", "..", *target.parts[1:]).as_posix()
+    return PurePosixPath("..", "..", "..", *target.parts).as_posix()
+
+
 def repo_doc_surface_link(surface: RepoDocSurface) -> str:
-    return f"[{surface.title}]({docs_relative_link(surface.doc_path)}) (`{surface.doc_path}`)"
+    return f"[{surface.title}]({nested_reader_relative_link(surface.doc_path)}) (`{surface.doc_path}`)"
 
 
-def relation_summary(entry: dict[str, Any], entries_by_id: dict[str, dict[str, Any]]) -> str:
+def relation_summary(
+    entry: dict[str, Any],
+    entries_by_id: dict[str, dict[str, Any]],
+    relative_prefix: str = "../",
+) -> str:
     grouped: dict[str, list[str]] = {}
     for relation_type in RELATION_TYPE_ORDER:
         grouped[relation_type] = []
 
     for relation in entry.get("relations", []):
         target = entries_by_id[relation["target"]]
-        grouped[relation["type"]].append(selection_technique_link(target))
+        grouped[relation["type"]].append(selection_technique_link(target, relative_prefix))
 
     parts: list[str] = []
     for relation_type in RELATION_TYPE_ORDER:
@@ -6354,8 +6371,11 @@ def shadow_note_summary(record: TechniqueRecord) -> dict[str, str]:
     }
 
 
-def technique_source_link(repo_root: Path, record: TechniqueRecord) -> str:
-    return f"[TECHNIQUE.md]({docs_relative_link(record.technique_path.relative_to(repo_root).as_posix())})"
+def technique_source_link(
+    repo_root: Path, record: TechniqueRecord, relative_prefix: str = "../"
+) -> str:
+    technique_path = record.technique_path.relative_to(repo_root).as_posix()
+    return f"[TECHNIQUE.md]({relative_prefix}{technique_path})"
 
 
 def note_kind_title(kind: str) -> str:
@@ -6391,11 +6411,11 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
         "This surface is heading-first. It stays bounded to exactly `SECTION_LIFT_HEADINGS`, preserves their fixed order, and only exposes technique, section order, and source routing. It does not dump section markdown, invent section IDs, or act like search or graph behavior.",
         "",
         "See also:",
-        "- [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)",
-        "- [Full section manifest](../generated/technique_section_manifest.json)",
-        "- [Min section manifest](../generated/technique_section_manifest.min.json)",
-        "- [Documentation Map](README.md)",
-        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        f"- [Technique Section Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}TECHNIQUE_SECTION_LIFT_GUIDE.md)",
+        f"- [Full section manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_section_manifest.json)",
+        f"- [Min section manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_section_manifest.min.json)",
+        f"- [Documentation Map]({NESTED_READER_DOCS_PREFIX}README.md)",
+        f"- [KAG Source Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}KAG_SOURCE_LIFT_GUIDE.md)",
         "",
         "## Section Scope",
         "",
@@ -6427,11 +6447,11 @@ def build_section_reader_markdown(repo_root: Path, records: list[TechniqueRecord
 
             lines.append(
                 "| "
-                f"{record_technique_link(repo_root, record)} - {escape_markdown_table_cell(record.name)} | "
+                f"{record_technique_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} - {escape_markdown_table_cell(record.name)} | "
                 f"`{record.domain}` | "
                 f"`{record.status}` | "
                 f"`{lifted_section_order}` | "
-                f"{technique_source_link(repo_root, record)} |"
+                f"{technique_source_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} |"
             )
 
         lines.append("")
@@ -6461,11 +6481,11 @@ def build_checklist_reader_markdown(repo_root: Path, records: list[TechniqueReco
         "This surface stays domain-first and technique-first. It preserves checklist title, intro-presence, item count, check path, and source routing, including techniques that publish more than one checklist.",
         "",
         "See also:",
-        "- [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)",
-        "- [Full checklist manifest](../generated/technique_checklist_manifest.json)",
-        "- [Min checklist manifest](../generated/technique_checklist_manifest.min.json)",
-        "- [Documentation Map](README.md)",
-        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        f"- [Technique Checklist Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)",
+        f"- [Full checklist manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_checklist_manifest.json)",
+        f"- [Min checklist manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_checklist_manifest.min.json)",
+        f"- [Documentation Map]({NESTED_READER_DOCS_PREFIX}README.md)",
+        f"- [KAG Source Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}KAG_SOURCE_LIFT_GUIDE.md)",
         "",
     ]
 
@@ -6481,7 +6501,7 @@ def build_checklist_reader_markdown(repo_root: Path, records: list[TechniqueReco
         for record in domain_records:
             lines.extend(
                 [
-                    f"### {record_technique_link(repo_root, record)} - {record.name} (`{record.status}`)",
+                    f"### {record_technique_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} - {record.name} (`{record.status}`)",
                     "",
                 ]
             )
@@ -6504,7 +6524,7 @@ def build_checklist_reader_markdown(repo_root: Path, records: list[TechniqueReco
                     f"`{intro_signal}` | "
                     f"`{len(checklist.items)}` | "
                     f"`{checklist.check_path}` | "
-                    f"{technique_source_link(repo_root, record)} |"
+                    f"{technique_source_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} |"
                 )
 
             lines.append("")
@@ -6534,11 +6554,11 @@ def build_example_reader_markdown(repo_root: Path, records: list[TechniqueRecord
         "This surface preserves example title, example path, body-presence, and source routing only. It does not inline full example bodies into the generated reader surface.",
         "",
         "See also:",
-        "- [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)",
-        "- [Full example manifest](../generated/technique_example_manifest.json)",
-        "- [Min example manifest](../generated/technique_example_manifest.min.json)",
-        "- [Documentation Map](README.md)",
-        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        f"- [Technique Example Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)",
+        f"- [Full example manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_example_manifest.json)",
+        f"- [Min example manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_example_manifest.min.json)",
+        f"- [Documentation Map]({NESTED_READER_DOCS_PREFIX}README.md)",
+        f"- [KAG Source Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}KAG_SOURCE_LIFT_GUIDE.md)",
         "",
     ]
 
@@ -6554,7 +6574,7 @@ def build_example_reader_markdown(repo_root: Path, records: list[TechniqueRecord
         for record in domain_records:
             lines.extend(
                 [
-                    f"### {record_technique_link(repo_root, record)} - {record.name} (`{record.status}`)",
+                    f"### {record_technique_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} - {record.name} (`{record.status}`)",
                     "",
                 ]
             )
@@ -6576,7 +6596,7 @@ def build_example_reader_markdown(repo_root: Path, records: list[TechniqueRecord
                     f"{escape_markdown_table_cell(example.title)} | "
                     f"`{body_signal}` | "
                     f"`{example.example_path}` | "
-                    f"{technique_source_link(repo_root, record)} |"
+                    f"{technique_source_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} |"
                 )
 
             lines.append("")
@@ -6615,11 +6635,11 @@ def build_evidence_note_reader_markdown(repo_root: Path, records: list[Technique
         "This surface is note-scope first. It only exposes note kind, title, note path, note shape, owning technique, and bounded routing signals such as fixed section scopes or opaque-body handling. It does not flatten note prose, review arguments, or caution language into the reader.",
         "",
         "See also:",
-        "- [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)",
-        "- [Full evidence note manifest](../generated/technique_evidence_note_manifest.json)",
-        "- [Min evidence note manifest](../generated/technique_evidence_note_manifest.min.json)",
-        "- [Documentation Map](README.md)",
-        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        f"- [Evidence Note Provenance Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}EVIDENCE_NOTE_PROVENANCE_GUIDE.md)",
+        f"- [Full evidence note manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_evidence_note_manifest.json)",
+        f"- [Min evidence note manifest]({SOURCE_LIFT_READER_ROOT_PREFIX}generated/technique_evidence_note_manifest.min.json)",
+        f"- [Documentation Map]({NESTED_READER_DOCS_PREFIX}README.md)",
+        f"- [KAG Source Lift Guide]({SOURCE_LIFT_READER_GUIDE_PREFIX}KAG_SOURCE_LIFT_GUIDE.md)",
         "",
         "## Note Scope",
         "",
@@ -6662,9 +6682,9 @@ def build_evidence_note_reader_markdown(repo_root: Path, records: list[Technique
                 f"{escape_markdown_table_cell(note.title)} | "
                 f"`{note.note_shape}` | "
                 f"{escape_markdown_table_cell(note_routing_signal(note))} | "
-                f"{record_technique_link(repo_root, record)} | "
+                f"{record_technique_link(repo_root, record, SOURCE_LIFT_READER_ROOT_PREFIX)} | "
                 f"`{note.note_path}` | "
-                f"[Note]({docs_relative_link(note.note_path)}) |"
+                f"[Note]({SOURCE_LIFT_READER_ROOT_PREFIX}{note.note_path}) |"
             )
 
         lines.append("")
@@ -6705,10 +6725,10 @@ def build_capsule_markdown(repo_root: Path, records: list[TechniqueRecord]) -> s
         "Capsules are derived local runtime cards for lookup only. They are not the source of truth and they do not replace the authored technique bundles.",
         "",
         "See also:",
-        "- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)",
-        "- [Full capsule JSON](../generated/technique_capsules.json)",
-        "- [Min capsule JSON](../generated/technique_capsules.min.json)",
-        "- [Documentation Map](README.md)",
+        f"- [Technique Capsule Guide]({SELECTION_GUIDE_PREFIX}TECHNIQUE_CAPSULE_GUIDE.md)",
+        f"- [Full capsule JSON]({RUNTIME_READER_ROOT_PREFIX}generated/technique_capsules.json)",
+        f"- [Min capsule JSON]({RUNTIME_READER_ROOT_PREFIX}generated/technique_capsules.min.json)",
+        f"- [Documentation Map]({RUNTIME_READER_DOCS_PREFIX}README.md)",
         "",
     ]
 
@@ -6722,7 +6742,7 @@ def build_capsule_markdown(repo_root: Path, records: list[TechniqueRecord]) -> s
         for record, entry in ordered_entries:
             lines.extend(
                 [
-                    f"### {record_technique_link(repo_root, record)} - {entry['name']} (`{record.status}`)",
+                    f"### {record_technique_link(repo_root, record, RUNTIME_READER_ROOT_PREFIX)} - {entry['name']} (`{record.status}`)",
                     "",
                     f"- Summary: {entry['summary']}",
                     f"- Intent: {entry['one_line_intent']}",
@@ -6733,7 +6753,7 @@ def build_capsule_markdown(repo_root: Path, records: list[TechniqueRecord]) -> s
                     f"- Core contract: {strip_display_prefix(entry['core_contract_short'], 'Core contract: ')}",
                     f"- Main risk: {strip_display_prefix(entry['main_risk_short'], 'Main risk: ')}",
                     f"- Validate by: {strip_display_prefix(entry['validation_short'], 'Validate by checking ')}",
-                    f"- Source: [TECHNIQUE.md](../{entry['technique_path']})",
+                    f"- Source: [TECHNIQUE.md]({RUNTIME_READER_ROOT_PREFIX}{entry['technique_path']})",
                     "",
                 ]
             )
@@ -6775,7 +6795,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
     lines = [
         "# Technique Selection",
         "",
-        "This file is generated from `../generated/technique_catalog.json` and the authoritative markdown frontmatter.",
+        "This file is generated from `../../../generated/technique_catalog.json` and the authoritative markdown frontmatter.",
         "Do not edit it by hand; run `python scripts/build_catalog.py`.",
         "",
         "Use this surface to make one bounded choice:",
@@ -6786,12 +6806,12 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         "5. use direct `relations` as adjacency hints, not graph traversal",
         "",
         "See also:",
-        "- [Start Here](START_HERE.md)",
-        "- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)",
-        "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
-        "- [CANONICAL_RUBRIC](CANONICAL_RUBRIC.md)",
-        "- [Full catalog JSON](../generated/technique_catalog.json)",
-        "- [Min catalog JSON](../generated/technique_catalog.min.json)",
+        f"- [Start Here]({SELECTION_READER_DOCS_PREFIX}START_HERE.md)",
+        f"- [Technique Selection Guide]({SELECTION_GUIDE_PREFIX}TECHNIQUE_SELECTION_GUIDE.md)",
+        f"- [TECHNIQUE_INDEX]({SELECTION_READER_ROOT_PREFIX}TECHNIQUE_INDEX.md)",
+        f"- [CANONICAL_RUBRIC]({REVIEW_GUIDE_PREFIX}CANONICAL_RUBRIC.md)",
+        f"- [Full catalog JSON]({SELECTION_READER_ROOT_PREFIX}generated/technique_catalog.json)",
+        f"- [Min catalog JSON]({SELECTION_READER_ROOT_PREFIX}generated/technique_catalog.min.json)",
         "",
         "If you still need repo-level orientation before choosing a technique, open `START_HERE.md` first.",
         "",
@@ -6806,7 +6826,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
     for entry in evaluation_starters:
         lines.append(
             "| "
-            f"{selection_technique_link(entry)} | "
+            f"{selection_technique_link(entry, SELECTION_READER_ROOT_PREFIX)} | "
             f"`{entry['kind']}` | "
             f"`{entry['validation_strength']}` | "
             f"{escape_markdown_table_cell(entry['summary'])} |"
@@ -6824,7 +6844,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
 
     for domain in DOMAIN_ORDER:
         defaults = ", ".join(
-            f"{selection_technique_link(entry)} (`{entry['kind']}`)"
+            f"{selection_technique_link(entry, SELECTION_READER_ROOT_PREFIX)} (`{entry['kind']}`)"
             for entry in canonical_by_domain[domain]
         )
         lines.append(f"| `{domain}` | {defaults or '-'} |")
@@ -6838,7 +6858,10 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
     )
 
     for entry in entries:
-        lines.append(f"- {selection_technique_link(entry)}: {relation_summary(entry, entries_by_id)}")
+        lines.append(
+            f"- {selection_technique_link(entry, SELECTION_READER_ROOT_PREFIX)}: "
+            f"{relation_summary(entry, entries_by_id, SELECTION_READER_ROOT_PREFIX)}"
+        )
 
     lines.extend(
         [
@@ -6862,7 +6885,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
         for entry in entries_by_domain[domain]:
             lines.append(
                 "| "
-                f"{selection_technique_link(entry)} | "
+                f"{selection_technique_link(entry, SELECTION_READER_ROOT_PREFIX)} | "
                 f"`{entry['kind']}` | "
                 f"`{entry['status']}` | "
                 f"`{entry['validation_strength']}` | "
@@ -6889,7 +6912,7 @@ def build_selection_surface_markdown(full_catalog: dict[str, Any]) -> str:
 def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecord]) -> str:
     records_by_id = {record.id: record for record in records}
     review_doc_links = [
-        (Path(spec["review_doc"]).name, docs_relative_link(spec["review_doc"]))
+        (Path(spec["review_doc"]).name, nested_reader_relative_link(spec["review_doc"]))
         for spec in SHADOW_WORKING_SET_SPECS
     ]
 
@@ -6904,8 +6927,8 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
         "This surface is canonical-only. It stays bounded to authored markdown, typed adverse-effects notes, review-backed working sets, and validator-backed prompts. It does not do scoring, policy routing, or generated caution metadata.",
         "",
         "See also:",
-        "- [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)",
-        "- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)",
+        f"- [Technique Shadow Guide]({REVIEW_GUIDE_PREFIX}TECHNIQUE_SHADOW_GUIDE.md)",
+        f"- [Risk And Negative-Effect Lift Guide](../../source-lift/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)",
         *[f"- [{name}]({link})" for name, link in review_doc_links],
         "",
         "## Working Sets",
@@ -6914,11 +6937,11 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
 
     for spec in SHADOW_WORKING_SET_SPECS:
         linked_techniques = ", ".join(
-            record_technique_link(repo_root, records_by_id[technique_id])
+            record_technique_link(repo_root, records_by_id[technique_id], REVIEW_READER_ROOT_PREFIX)
             for technique_id in spec["technique_ids"]
         )
         review_doc_name = Path(spec["review_doc"]).name
-        review_doc_link = docs_relative_link(spec["review_doc"])
+        review_doc_link = nested_reader_relative_link(spec["review_doc"])
         lines.extend(
             [
                 f"### {spec['title']}",
@@ -6937,11 +6960,11 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
             summary = shadow_note_summary(record)
             lines.append(
                 "| "
-                f"{record_technique_link(repo_root, record)} | "
+                f"{record_technique_link(repo_root, record, REVIEW_READER_ROOT_PREFIX)} | "
                 f"{escape_markdown_table_cell(summary['current_role'])} | "
                 f"{escape_markdown_table_cell(summary['watch_seam'])} | "
                 f"{escape_markdown_table_cell(summary['main_failure_mode'])} | "
-                f"[Adverse Effects Review](../{summary['note_path']}) |"
+                f"[Adverse Effects Review]({REVIEW_READER_ROOT_PREFIX}{summary['note_path']}) |"
             )
 
         lines.append("")
@@ -6960,7 +6983,7 @@ def build_shadow_patterns_markdown(repo_root: Path, records: list[TechniqueRecor
         lines.append(
             "| "
             f"{escape_markdown_table_cell(spec['prompt'])} | "
-            f"{record_technique_link(repo_root, record)} | "
+            f"{record_technique_link(repo_root, record, REVIEW_READER_ROOT_PREFIX)} | "
             f"{escape_markdown_table_cell(spec['note'])} |"
         )
 
@@ -7002,11 +7025,11 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
         "It stays bounded to the current authored public route/canon/status source set. It excludes local planning files such as `TODO.md` and `PLANS.md`, plus deeper guide/review docs outside the named bounded source set.",
         "",
         "See also:",
-        "- [Start Here](START_HERE.md)",
-        "- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)",
-        "- [Full repo doc surface manifest](../generated/repo_doc_surface_manifest.json)",
-        "- [Documentation Map](README.md)",
-        "- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)",
+        f"- [Start Here]({REPO_DOC_READER_DOCS_PREFIX}START_HERE.md)",
+        f"- [Repo Doc Surface Lift Guide]({REPO_DOC_READER_GUIDE_PREFIX}REPO_DOC_SURFACE_LIFT_GUIDE.md)",
+        f"- [Full repo doc surface manifest]({REPO_DOC_READER_ROOT_PREFIX}generated/repo_doc_surface_manifest.json)",
+        f"- [Documentation Map]({REPO_DOC_READER_DOCS_PREFIX}README.md)",
+        f"- [KAG Source Lift Guide]({REPO_DOC_READER_GUIDE_PREFIX}KAG_SOURCE_LIFT_GUIDE.md)",
         "",
         "## Quick Navigation",
         "",
@@ -7056,7 +7079,7 @@ def build_repo_doc_surfaces_markdown(repo_root: Path) -> str:
             "## Boundaries",
             "",
             "- The source of meaning stays in the authored docs themselves.",
-            "- The bounded source set is exactly the 21 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
+            "- The bounded source set is exactly the 20 authoritative public route/canon/status files named in `REPO_DOC_SURFACE_LIFT_GUIDE.md`.",
             "- This surface and its manifest are routing aids only. They do not become a new source of truth, root-authority replacement, or status-policy engine.",
             "",
         ]
@@ -7078,7 +7101,7 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
     lines = [
         "# Selection Patterns",
         "",
-        "This file is generated from `../generated/technique_catalog.json`, current direct `relations`, validator-backed navigation specs, and review-backed working sets.",
+        "This file is generated from `../../../generated/technique_catalog.json`, current direct `relations`, validator-backed navigation specs, and review-backed working sets.",
         "Do not edit it by hand; run `python scripts/build_catalog.py`.",
         "",
         "Use this surface when the flat adjacency list in `TECHNIQUE_SELECTION.md` is not enough and you want one bounded answer to:",
@@ -7087,12 +7110,12 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
         "This surface uses direct relation navigation, validator-backed starting points and common moves, and review-backed clusters only. It does not do graph search, scoring, or multi-hop reasoning.",
         "",
         "See also:",
-        "- [Start Here](START_HERE.md)",
-        "- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)",
-        "- [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)",
+        f"- [Start Here]({SELECTION_READER_DOCS_PREFIX}START_HERE.md)",
+        f"- [Technique Selection Guide]({SELECTION_GUIDE_PREFIX}TECHNIQUE_SELECTION_GUIDE.md)",
+        f"- [Semantic Review Guide]({REVIEW_GUIDE_PREFIX}SEMANTIC_REVIEW_GUIDE.md)",
         "- [Technique Selection](TECHNIQUE_SELECTION.md)",
-        "- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)",
-        "- [Full catalog JSON](../generated/technique_catalog.json)",
+        f"- [TECHNIQUE_INDEX]({SELECTION_READER_ROOT_PREFIX}TECHNIQUE_INDEX.md)",
+        f"- [Full catalog JSON]({SELECTION_READER_ROOT_PREFIX}generated/technique_catalog.json)",
         "",
         "If you still need repo-level orientation before following a working set or common move, open `START_HERE.md` first.",
         "",
@@ -7103,7 +7126,10 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
     ]
 
     for domain in DOMAIN_ORDER:
-        defaults = ", ".join(selection_technique_link(entry) for entry in canonical_by_domain[domain])
+        defaults = ", ".join(
+            selection_technique_link(entry, SELECTION_READER_ROOT_PREFIX)
+            for entry in canonical_by_domain[domain]
+        )
         spec = domain_specs[domain]
         lines.append(
             f"| `{domain}` | {defaults or '-'} | {escape_markdown_table_cell(spec['note'])} |"
@@ -7113,10 +7139,11 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
 
     for spec in WORKING_SET_SPECS:
         linked_techniques = ", ".join(
-            selection_technique_link(entries_by_id[technique_id]) for technique_id in spec["technique_ids"]
+            selection_technique_link(entries_by_id[technique_id], SELECTION_READER_ROOT_PREFIX)
+            for technique_id in spec["technique_ids"]
         )
         review_doc_name = Path(spec["review_doc"]).name
-        review_doc_link = docs_relative_link(spec["review_doc"])
+        review_doc_link = nested_reader_relative_link(spec["review_doc"])
         lines.extend(
             [
                 f"### {spec['title']}",
@@ -7141,7 +7168,7 @@ def build_selection_patterns_markdown(full_catalog: dict[str, Any]) -> str:
         lines.append(
             "| "
             f"{escape_markdown_table_cell(spec['prompt'])} | "
-            f"{selection_technique_link(entries_by_id[spec['target_id']])} | "
+            f"{selection_technique_link(entries_by_id[spec['target_id']], SELECTION_READER_ROOT_PREFIX)} | "
             f"{escape_markdown_table_cell(spec['note'])} |"
         )
 
@@ -7303,7 +7330,7 @@ def validate_promotion_readiness_surface(repo_root: Path, records: list[Techniqu
 def validate_capsules(repo_root: Path, records: list[TechniqueRecord]) -> None:
     path = repo_root / "generated" / "technique_capsules.json"
     min_path = repo_root / "generated" / "technique_capsules.min.json"
-    reader_path = repo_root / "docs" / "TECHNIQUE_CAPSULES.md"
+    reader_path = repo_root / "docs" / "readers" / "runtime" / "TECHNIQUE_CAPSULES.md"
     expected_full, expected_min = build_capsule_payloads(repo_root, records)
     expected_reader = build_capsule_markdown(repo_root, records)
     actual = read_json(path)
@@ -7340,7 +7367,7 @@ def validate_capsules(repo_root: Path, records: list[TechniqueRecord]) -> None:
 def validate_section_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_section_manifest.json"
     min_path = repo_root / "generated" / "technique_section_manifest.min.json"
-    reader_path = repo_root / "docs" / "TECHNIQUE_SECTIONS.md"
+    reader_path = repo_root / "docs" / "readers" / "source-lift" / "TECHNIQUE_SECTIONS.md"
 
     expected_full, expected_min = build_section_manifest_payloads(repo_root, records)
     expected_reader = build_section_reader_markdown(repo_root, records)
@@ -7424,7 +7451,7 @@ def validate_section_surfaces(repo_root: Path, records: list[TechniqueRecord]) -
 def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_checklist_manifest.json"
     min_path = repo_root / "generated" / "technique_checklist_manifest.min.json"
-    reader_path = repo_root / "docs" / "TECHNIQUE_CHECKLISTS.md"
+    reader_path = repo_root / "docs" / "readers" / "source-lift" / "TECHNIQUE_CHECKLISTS.md"
 
     expected_full, expected_min = build_checklist_manifest_payloads(repo_root, records)
     expected_reader = build_checklist_reader_markdown(repo_root, records)
@@ -7456,7 +7483,7 @@ def validate_checklist_manifests(repo_root: Path, records: list[TechniqueRecord]
 def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_example_manifest.json"
     min_path = repo_root / "generated" / "technique_example_manifest.min.json"
-    reader_path = repo_root / "docs" / "TECHNIQUE_EXAMPLES.md"
+    reader_path = repo_root / "docs" / "readers" / "source-lift" / "TECHNIQUE_EXAMPLES.md"
 
     expected_full, expected_min = build_example_manifest_payloads(repo_root, records)
     expected_reader = build_example_reader_markdown(repo_root, records)
@@ -7488,7 +7515,7 @@ def validate_example_manifests(repo_root: Path, records: list[TechniqueRecord]) 
 def validate_evidence_note_manifests(repo_root: Path, records: list[TechniqueRecord]) -> None:
     full_path = repo_root / "generated" / "technique_evidence_note_manifest.json"
     min_path = repo_root / "generated" / "technique_evidence_note_manifest.min.json"
-    reader_path = repo_root / "docs" / "EVIDENCE_NOTE_SURFACES.md"
+    reader_path = repo_root / "docs" / "readers" / "source-lift" / "EVIDENCE_NOTE_SURFACES.md"
 
     expected_full, expected_min = build_evidence_note_manifest_payloads(repo_root, records)
     expected_reader = build_evidence_note_reader_markdown(repo_root, records)
@@ -7618,7 +7645,7 @@ def validate_repo_doc_surface_manifests(repo_root: Path) -> None:
 def validate_kind_manifests(repo_root: Path) -> None:
     full_path = repo_root / "generated" / "technique_kind_manifest.json"
     min_path = repo_root / "generated" / "technique_kind_manifest.min.json"
-    reader_path = repo_root / "docs" / "TECHNIQUE_KINDS.md"
+    reader_path = repo_root / "docs" / "readers" / "kind" / "TECHNIQUE_KINDS.md"
     catalog_path = repo_root / "generated" / "technique_catalog.json"
 
     catalog = read_json(catalog_path)
@@ -7799,9 +7826,9 @@ def validate_tree_projection_reports(repo_root: Path) -> None:
 
 
 def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) -> None:
-    selection_path = repo_root / "docs" / "TECHNIQUE_SELECTION.md"
-    patterns_path = repo_root / "docs" / "SELECTION_PATTERNS.md"
-    shadow_path = repo_root / "docs" / "SHADOW_PATTERNS.md"
+    selection_path = repo_root / "docs" / "readers" / "selection" / "TECHNIQUE_SELECTION.md"
+    patterns_path = repo_root / "docs" / "readers" / "selection" / "SELECTION_PATTERNS.md"
+    shadow_path = repo_root / "docs" / "readers" / "review" / "SHADOW_PATTERNS.md"
     full_path = repo_root / "generated" / "technique_catalog.json"
 
     validate_selection_working_set_specs(repo_root)
@@ -7831,7 +7858,7 @@ def validate_selection_surface(repo_root: Path, records: list[TechniqueRecord]) 
 
 
 def validate_repo_doc_surface_reader(repo_root: Path) -> None:
-    reader_path = repo_root / "docs" / "REPO_DOC_SURFACES.md"
+    reader_path = repo_root / "docs" / "readers" / "repo" / "REPO_DOC_SURFACES.md"
     expected = build_repo_doc_surfaces_markdown(repo_root)
     actual = read_text(reader_path)
 

@@ -16,12 +16,10 @@ A root surface is allowed only when it serves at least one durable role:
 2. **Canon authority**: it names the repository boundary, corpus map, direction,
    or public obligation posture.
 3. **Public governance**: GitHub or contributors expect it at root.
-4. **Thin public example or index**: it routes to deeper source-owned material
-   without duplicating that material.
-5. **Agent lane**: it gives agents a stable route card.
-6. **Tooling or machine district**: it is a top-level directory expected by
+4. **Agent lane**: it gives agents a stable route card.
+5. **Tooling or machine district**: it is a top-level directory expected by
    tooling, builders, validators, or source layout.
-7. **Public-safe provenance district**: it preserves repo-wide raw, archive, or
+6. **Public-safe provenance district**: it preserves repo-wide raw, archive, or
    receipt material after active distillation without making that history the
    current route.
 
@@ -47,6 +45,17 @@ traces, and durable rationale need named homes:
 - `mechanics/<slug>/legacy/raw/` for raw receipts and pre-prune evidence
 - `mechanics/<slug>/parts/` for current mechanic-owned operating surfaces
 - [generated](../generated/) for reproducible derived outputs
+- [review](review/) for active review, maturity, semantic-review, and caution contracts
+- [selection](selection/) for active selection, kind, handoff, and capsule guide contracts
+- [source-lift](source-lift/) for authored KAG/source-lift guide contracts
+
+Generated JSON outputs belong in [generated](../generated/). Generated
+Markdown reader companions may remain flat in [docs](./) only while they are
+builder-backed, source-derived, indexed by
+[Current Surface Index](guardrails/CURRENT_SURFACE_INDEX.md), and explicitly
+weaker than their source surfaces. Once a generated-reader family has a named
+district, keep the bulky reader Markdown under [readers](readers/) and leave
+the authored guide or contract in its owning docs district.
 
 Flat docs files should be current enough to guide a future change. If a file is
 only evidence of how a past change happened, it belongs in a decision, trace, or
@@ -60,7 +69,6 @@ legacy route.
 | Corpus map and direction | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md), [ROADMAP](../ROADMAP.md), [QUESTBOOK](../QUESTBOOK.md) | they expose current corpus shape, direction, and durable obligations | do not become generated manifests, audit ledgers, or changelog copies |
 | Public governance and legal | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [SECURITY](../SECURITY.md), [LICENSE](../LICENSE) | contributors and platforms expect them at root | do not become technique doctrine catalogs |
 | Release history | [CHANGELOG](../CHANGELOG.md) | release history belongs at root for public readers | do not store future direction or audit baselines here |
-| Thin example | [WALKTHROUGH](../WALKTHROUGH.md) | one first example helps readers understand the canon path | stay one example; move broader tutorials into docs or examples |
 | Agent lane | [AGENTS](../AGENTS.md), [.agents](../.agents/), [agents_mesh config](../config/agents_mesh.json), [agents_mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | agent-facing route cards need stable local entry and checkable coverage | do not replace civic docs, source docs, generated-source builders, or owner contracts |
 | Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [examples](../examples/), [generated](../generated/), [incoming](../incoming/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | source layout, provenance accounting, and tooling expect stable directories | each active district should keep local route guidance when needed; [legacy](../legacy/) must stay indexed and subordinate to active routes |
 | Development requirements | [.gitignore](../.gitignore), [requirements-dev.txt](../requirements-dev.txt) | development hygiene | stay technical and small |
@@ -120,9 +128,14 @@ cannot stay compact, route it to the owner surface that can carry the detail.
 | previous closure-audit [ROADMAP](../ROADMAP.md) | move to [root closure audit receipt](../mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md) | preserves the evidence without making old audit detail the live direction surface |
 | [QUESTBOOK](../QUESTBOOK.md) | keep as root obligation index | it is useful only while it stays a compact index, not a second roadmap |
 | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) | keep | public corpus map by ID, status, domain, and summary is root-worthy |
-| [WALKTHROUGH](../WALKTHROUGH.md) | keep for now as one thin example | broader examples should move into [docs](./) or [examples](../examples/) if this grows |
+| previous root `WALKTHROUGH.md` | move to [examples/plan-diff-apply-verify-report-walkthrough.md](../examples/plan-diff-apply-verify-report-walkthrough.md) | the walkthrough is useful public teaching material, but its object class is an example, not a root authority surface |
 | [AGENTS](../AGENTS.md) | keep as agent route card | agent route law complements, but does not replace, public canon docs |
 | [guardrails](guardrails/) AGENTS mesh protocol and index | add | agent-card coverage, canonical-card shape, generated freshness, and migration posture are guardrail law rather than technique meaning |
+| [guardrails](guardrails/) docs topology, link hygiene, and current surface index | add | docs-root needs a checkable owner map and local-link guardrail before generated-reader families or historical ledgers accumulate as flat maze surfaces |
+| [review](review/) active review guide district | add | maturity, promotion, semantic-review, and caution contracts are one guide family and should not remain repeated flat docs-root siblings |
+| [selection](selection/) active selection guide district | add | selection, kind, handoff, and capsule contracts are one chooser/compact-use guide family and should not remain repeated flat docs-root siblings |
+| [source-lift](source-lift/) authored source-lift guide district | add | KAG/source-lift contracts form a reusable guide family and should not remain as repeated flat docs-root siblings once generated readers have their own district |
+| [readers](readers/) generated Markdown reader district | add | bulky builder-backed Markdown companions need a docs-local district without moving generated JSON out of [generated](../generated/) |
 | [legacy](../legacy/) | add as root provenance district | preserves public-safe repo-wide raw, archive, and migration receipts while keeping [incoming](../incoming/), active bundles, generated surfaces, and mechanic-local legacy distinct |
 | previous root `reports/` scout package | move to [Distillation technique-reform reports](../mechanics/distillation/parts/technique-reform-ingress/reports/) | the family, topology, kind ambiguity, and tree projection readouts are generated evidence for that Distillation part, not root entry surfaces |
 | previous root Distillation scout inputs in [config](../config/) and `data/` | move scout-only family/topology registries and kind-overlay data to [Distillation technique-reform config/data](../mechanics/distillation/parts/technique-reform-ingress/) | the current `kind` registry remains root repo-wide config, while scout-only reform inputs belong beside the Distillation part and reports that interpret them |

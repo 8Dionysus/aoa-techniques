@@ -24,8 +24,10 @@ def main() -> int:
 
     generated_dir = repo_root / "generated"
     generated_dir.mkdir(exist_ok=True)
-    docs_dir = repo_root / "docs"
-    docs_dir.mkdir(exist_ok=True)
+    selection_reader_dir = repo_root / "docs" / "readers" / "selection"
+    review_reader_dir = repo_root / "docs" / "readers" / "review"
+    selection_reader_dir.mkdir(parents=True, exist_ok=True)
+    review_reader_dir.mkdir(parents=True, exist_ok=True)
 
     full_path = generated_dir / "technique_catalog.json"
     min_path = generated_dir / "technique_catalog.min.json"
@@ -33,9 +35,9 @@ def main() -> int:
     quest_dispatch_path = generated_dir / "quest_dispatch.min.json"
     quest_catalog_example_path = generated_dir / "quest_catalog.min.example.json"
     quest_dispatch_example_path = generated_dir / "quest_dispatch.min.example.json"
-    selection_path = docs_dir / "TECHNIQUE_SELECTION.md"
-    selection_patterns_path = docs_dir / "SELECTION_PATTERNS.md"
-    shadow_patterns_path = docs_dir / "SHADOW_PATTERNS.md"
+    selection_path = selection_reader_dir / "TECHNIQUE_SELECTION.md"
+    selection_patterns_path = selection_reader_dir / "SELECTION_PATTERNS.md"
+    shadow_patterns_path = review_reader_dir / "SHADOW_PATTERNS.md"
     quest_catalog_payload = build_quest_catalog_projection(repo_root)
     quest_dispatch_payload = build_quest_dispatch_projection(repo_root)
 

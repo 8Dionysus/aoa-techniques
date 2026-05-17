@@ -48,13 +48,13 @@ Read only what matches the entry need.
 | Shortest bounded overview | this README, then [CHARTER](CHARTER.md), [START_HERE](docs/START_HERE.md), and [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
 | One concrete example bundle | [plan-diff-apply-verify-report](techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) |
 | Decide whether a candidate belongs here | [CHARTER](CHARTER.md), then [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md) |
-| Classify or place a technique | [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](docs/TECHNIQUE_KIND_GUIDE.md), [TECHNIQUE_KIND_HANDOFF_PACK](docs/TECHNIQUE_KIND_HANDOFF_PACK.md), and [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) |
-| Pick a compact runtime card | [TECHNIQUE_CAPSULES](docs/TECHNIQUE_CAPSULES.md) or [technique_capsules.min.json](generated/technique_capsules.min.json) |
-| Understand maturity, review, or promotion posture | [Canonical Review Guide](docs/CANONICAL_REVIEW_GUIDE.md), [Canonical Rubric](docs/CANONICAL_RUBRIC.md), and [mechanics/audit](mechanics/audit/README.md) |
+| Classify or place a technique | [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](docs/selection/TECHNIQUE_KIND_GUIDE.md), [TECHNIQUE_KIND_HANDOFF_PACK](docs/selection/TECHNIQUE_KIND_HANDOFF_PACK.md), and [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) |
+| Pick a compact runtime card | [TECHNIQUE_CAPSULES](docs/readers/runtime/TECHNIQUE_CAPSULES.md) or [technique_capsules.min.json](generated/technique_capsules.min.json) |
+| Understand maturity, review, or promotion posture | [Canonical Review Guide](docs/review/CANONICAL_REVIEW_GUIDE.md), [Canonical Rubric](docs/review/CANONICAL_RUBRIC.md), and [mechanics/audit](mechanics/audit/README.md) |
 | Understand current direction or parked work | [ROADMAP](ROADMAP.md) and [QUESTBOOK](QUESTBOOK.md) |
 | Work on root or docs-root placement | [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) |
 | Work as an agent in this repo | [AGENTS](AGENTS.md), then the nearest nested `AGENTS.md` |
-| Need the deeper docs tree | [Documentation Map](docs/README.md) and [Repo Doc Surfaces](docs/REPO_DOC_SURFACES.md) |
+| Need the deeper docs tree | [Documentation Map](docs/README.md) and [Repo Doc Surfaces](docs/readers/repo/REPO_DOC_SURFACES.md) |
 
 Deep mechanic runbooks, review packets, ledgers, scout reports, generated
 readers, and shadow or semantic review artifacts are intentionally not
@@ -69,7 +69,7 @@ route when you need that detail.
 | `technique-authoring` | you will add, split, promote, or revise one technique | [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md) |
 | `classification` | domain, kind, topology, relation, or path placement matters | [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
 | `tree-structure` | corpus path architecture or bundle moves matter | [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) |
-| `review-posture` | maturity, canonical readiness, or evidence posture matters | [Canonical Review Guide](docs/CANONICAL_REVIEW_GUIDE.md) |
+| `review-posture` | maturity, canonical readiness, or evidence posture matters | [Canonical Review Guide](docs/review/CANONICAL_REVIEW_GUIDE.md) |
 | `mechanic-change` | donor intake, audit, recurrence, checkpoint, release-support, or practice movement changes | [mechanics](mechanics/README.md) |
 | `root-editing` | root or docs-root surfaces move | [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) |
 | `agent-surface-design` | local `AGENTS.md` cards or generated mesh surfaces move | [DESIGN.AGENTS](DESIGN.AGENTS.md) |
@@ -84,11 +84,11 @@ smallest source that can answer it.
 |---|---|
 | Is this one atomic executable move? | [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md) |
 | Can it stand alone outside the private AoA workspace? | [CHARTER](CHARTER.md) and [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md) |
-| Is the classification honest? | [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](docs/TECHNIQUE_KIND_GUIDE.md), and [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
+| Is the classification honest? | [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](docs/selection/TECHNIQUE_KIND_GUIDE.md), and [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md) |
 | Does the path match the current corpus tree? | [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) |
 | Is the text technique meaning rather than a skill, eval, route, playbook, memory object, role, or runtime behavior? | [CHARTER](CHARTER.md) and [AGENTS](AGENTS.md) |
 | Is this current direction rather than released history, durable obligation, or mechanic-local planning? | [ROADMAP](ROADMAP.md), [CHANGELOG](CHANGELOG.md), [QUESTBOOK](QUESTBOOK.md), and `mechanics/<slug>/ROADMAP.md` |
-| Does a generated companion still match its authored source? | the owning source surface and generated mirror listed in [Repo Doc Surfaces](docs/REPO_DOC_SURFACES.md) |
+| Does a generated companion still match its authored source? | the owning source surface and generated mirror listed in [Repo Doc Surfaces](docs/readers/repo/REPO_DOC_SURFACES.md) |
 
 ## Current Contour
 
@@ -136,6 +136,7 @@ Root-adjacent technical districts have local gates:
 | [docs](docs/README.md) | contracts, route maps, review guides, release docs, and generated-reader interpretation |
 | [mechanics](mechanics/README.md) | practice movement, evidence, provenance, and mechanic-local routes |
 | [generated](generated/) | reproducible catalogs, capsules, source-lift, review, and mesh companions |
+| [examples](examples/README.md) | public-safe repo-wide worked examples |
 | [templates](templates/) | technique authoring and promotion scaffolds |
 | [legacy](legacy/README.md) | public-safe repo-wide raw, archive, and migration receipts after active distillation |
 | [.agents](.agents/AGENTS.md) | agent-facing companion lanes and local route support |

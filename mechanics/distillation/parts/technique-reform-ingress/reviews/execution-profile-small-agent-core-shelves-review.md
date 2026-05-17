@@ -47,7 +47,7 @@ Reviewed before this packet:
 - `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`
 - `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.json`
 - `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`
-- `docs/TECHNIQUE_CAPSULES.md`
+- `docs/readers/runtime/TECHNIQUE_CAPSULES.md`
 - `techniques/continuity/AGENTS.md`
 - `techniques/execution/AGENTS.md`
 - `techniques/governance/AGENTS.md`

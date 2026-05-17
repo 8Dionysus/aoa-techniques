@@ -114,9 +114,10 @@ Changed:
   [semantic review packets](parts/technique-reform-ingress/reviews/semantic/)
 - moved authored shadow-review packets from flat `docs/` into
   [shadow review packets](parts/technique-reform-ingress/reviews/shadow/)
-- kept public reader routes in `docs/SEMANTIC_REVIEW_GUIDE.md`,
-  `docs/SELECTION_PATTERNS.md`, `docs/TECHNIQUE_SHADOW_GUIDE.md`, and
-  `docs/SHADOW_PATTERNS.md`
+- kept public reader routes in `docs/review/SEMANTIC_REVIEW_GUIDE.md`,
+  `docs/readers/selection/SELECTION_PATTERNS.md`,
+  `docs/review/TECHNIQUE_SHADOW_GUIDE.md`, and
+  `docs/readers/review/SHADOW_PATTERNS.md`
 - updated the semantic and shadow manifests so the mechanics packet paths are
   the source paths, not aliases back to `docs/`
 - recorded the placement rationale in

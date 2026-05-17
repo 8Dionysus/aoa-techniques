@@ -6,7 +6,7 @@ kind: lift
 status: canonical
 origin:
   project: aoa-techniques
-  path: docs/SELECTION_PATTERNS.md
+  path: docs/readers/selection/SELECTION_PATTERNS.md
   note: Extracted from the current direct-relation consumers and relation-lift guidance to keep typed edges useful for navigation without widening them into graph semantics.
 owners:
   - 8Dionysus

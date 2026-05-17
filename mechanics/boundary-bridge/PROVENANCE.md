@@ -52,9 +52,9 @@ Relevant local docs and technique surfaces:
 
 - [Technique Atom Contract](../../docs/TECHNIQUE_ATOM_CONTRACT.md)
 - [Technique Topology Contract](../../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md)
-- [KAG Source Lift Guide](../../docs/KAG_SOURCE_LIFT_GUIDE.md)
-- [KAG Export](../../docs/KAG_EXPORT.md)
-- [Technique Sections](../../docs/TECHNIQUE_SECTIONS.md)
+- [KAG Source Lift Guide](../../docs/source-lift/KAG_SOURCE_LIFT_GUIDE.md)
+- [KAG Export](../../docs/source-lift/KAG_EXPORT.md)
+- [Technique Sections](../../docs/readers/source-lift/TECHNIQUE_SECTIONS.md)
 - [owner-layer-triage](../../techniques/governance/decision-routing/owner-layer-triage/TECHNIQUE.md)
 - [nearest-wrong-target-rejection](../../techniques/governance/promotion-boundary/nearest-wrong-target-rejection/TECHNIQUE.md)
 - [bounded-context-map](../../techniques/proof/skill-support/bounded-context-map/TECHNIQUE.md)

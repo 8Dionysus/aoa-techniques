@@ -44,7 +44,7 @@ claims.
 - [Selector Relation Wave F Capability Media History Review](selector-relation-wave-f-capability-media-history-review.md)
 - [Capability Media Direct Relation Repair](capability-media-direct-relation-repair.md)
 - [Selector Relation Residual Cross-Wave Scan](selector-relation-residual-cross-wave-scan.md)
-- [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
+- [Technique Selection](../../../../../docs/readers/selection/TECHNIQUE_SELECTION.md)
 - [Technique Catalog](../../../../../generated/technique_catalog.json)
 - current technique tree under `techniques/`
 

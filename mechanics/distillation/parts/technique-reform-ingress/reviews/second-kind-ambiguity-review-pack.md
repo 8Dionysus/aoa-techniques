@@ -13,7 +13,7 @@ It does not change frontmatter and does not authorize a broad remap wave.
 
 - updated `mechanics/distillation/parts/technique-reform-ingress/reports/kind_ambiguity_audit.md`
 - [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
-- [Technique Kind Guide](../../../../../docs/TECHNIQUE_KIND_GUIDE.md)
+- [Technique Kind Guide](../../../../../docs/selection/TECHNIQUE_KIND_GUIDE.md)
 - [Technique Topology Scout](../reports/technique_topology_scout.md)
 - [First Kind Ambiguity Review Pack](first-kind-ambiguity-review-pack.md)
 

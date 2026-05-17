@@ -21,10 +21,10 @@ from validate_repo import (
 def main() -> int:
     repo_root = Path(__file__).resolve().parents[1]
     generated_dir = repo_root / "generated"
-    docs_dir = repo_root / "docs"
+    reader_dir = repo_root / "docs" / "readers" / "kind"
     reports_dir = repo_root / TECHNIQUE_REFORM_REPORTS_DIR
     generated_dir.mkdir(exist_ok=True)
-    docs_dir.mkdir(exist_ok=True)
+    reader_dir.mkdir(parents=True, exist_ok=True)
     reports_dir.mkdir(exist_ok=True)
 
     catalog = read_json(generated_dir / "technique_catalog.json")
@@ -42,7 +42,7 @@ def main() -> int:
 
     full_path = generated_dir / "technique_kind_manifest.json"
     min_path = generated_dir / "technique_kind_manifest.min.json"
-    reader_path = docs_dir / "TECHNIQUE_KINDS.md"
+    reader_path = reader_dir / "TECHNIQUE_KINDS.md"
     family_markdown_path = reports_dir / "technique_family_scout.md"
     family_json_path = reports_dir / "technique_family_scout.json"
     ambiguity_path = reports_dir / "kind_ambiguity_audit.md"

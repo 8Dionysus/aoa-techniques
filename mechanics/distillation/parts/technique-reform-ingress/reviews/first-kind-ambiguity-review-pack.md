@@ -9,7 +9,7 @@ Generated lens:
 Kind source:
 [Technique Kind Registry](../../../../../config/technique_kind_registry.yaml)
 and
-[Technique Kind Guide](../../../../../docs/TECHNIQUE_KIND_GUIDE.md)
+[Technique Kind Guide](../../../../../docs/selection/TECHNIQUE_KIND_GUIDE.md)
 
 Preceding review:
 [First Topology Scout Review Pack](first-topology-scout-review-pack.md)

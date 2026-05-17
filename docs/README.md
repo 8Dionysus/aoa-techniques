@@ -1,378 +1,187 @@
 # Documentation Map
 
-This file serves as the human-first entrypoint for the repository's `docs/` surface.
+This is the human-first map for the `docs/` district of `aoa-techniques`.
 
-Use it to identify **which doc to open next** without guessing from filenames alone.
+Use the root [README](../README.md) for the public front door. Use
+[START_HERE](START_HERE.md) for the shortest repo-owned route. Use this file
+when you are already inside `docs/` and need the owning surface, district, or
+generated reader without browsing every filename.
 
-If you prefer a single repo-owned entrypoint before navigating this deeper docs map, open [Start Here](START_HERE.md).
+If you are editing under `docs/`, read [AGENTS](AGENTS.md) first. For placement
+rules, use [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md),
+[THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md), and
+[CURRENT_SURFACE_INDEX](guardrails/CURRENT_SURFACE_INDEX.md).
 
 ## Start Here
 
-Choose the path that matches your question:
+For the shortest repo overview, read:
 
-- I need one repo-only entrypoint first:
-  - [Start Here](START_HERE.md)
-  - [Charter](../CHARTER.md)
-  - [System Design](../DESIGN.md)
-  - [Agent Surface Design](../DESIGN.AGENTS.md)
-  - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
-  - [Root Surface Law](ROOT_SURFACE_LAW.md)
-- I need to pick a technique now:
-  - [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
-  - [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
-  - [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
-  - [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
-  - [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
-  - [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
-  - [`../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`](../mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml)
-    - scout value registry for capability, substrate, execution profile, and risk posture; not frontmatter truth
-  - [`../mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`](../mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md)
-    - generated scout projection over those axes; use for review pressure, not migration authority
-  - [Technique Selection](TECHNIQUE_SELECTION.md)
-  - [Selection Patterns](SELECTION_PATTERNS.md)
-  - [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)
-    - historical baseline note; use it only as a pointer to the living kind guide and source files
-- I need a small local runtime card for one technique:
-  - [Technique Capsules](TECHNIQUE_CAPSULES.md)
-  - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
-  - [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
-  - [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
-- I need one bounded feat-reader layer that stays subordinate to technique canon:
-  - [Technique Feat Model](../mechanics/growth-cycle/parts/technique-feat-model/README.md)
-  - [Mastery Harvest](../mechanics/growth-cycle/parts/mastery-harvest/README.md)
-  - [`../generated/technique_feat_cards.min.example.json`](../generated/technique_feat_cards.min.example.json)
-- I need to understand status, review posture, or canonical promotion:
-  - [Start Here](START_HERE.md)
-  - [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
-  - [Canonical Rubric](CANONICAL_RUBRIC.md)
-  - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-  - [Mechanics](../mechanics/README.md)
-  - [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-  - [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
-  - [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
-  - [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
-  - [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md)
-  - [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md)
-  - [External Import Runbook](../mechanics/distillation/parts/external-import-runbook/README.md)
-  - [Long-Gap Canon Design](../mechanics/distillation/parts/long-gap-reentry/README.md)
-  - [Roadmap](../ROADMAP.md)
-  - [External Technique Candidates](../mechanics/distillation/parts/external-candidate-ledger/README.md)
-  - [Cross-Layer Technique Candidates](../mechanics/distillation/parts/cross-layer-candidate-ledger/README.md)
-- I need the Agon companion bridge for future practice candidates:
-  - [Agon](../mechanics/agon/README.md)
-  - [Agon Parts](../mechanics/agon/PARTS.md)
-  - [Agon Move Technique Bridge](../mechanics/agon/parts/move-technique-bridge/README.md)
-  - [Agon Provenance](../mechanics/agon/PROVENANCE.md)
-  - [`../mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json`](../mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json)
-  - `../mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json`
-- I need to understand the repo's markdown-first caution discipline:
-  - [Shadow Patterns](SHADOW_PATTERNS.md)
-  - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
-  - [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-  - [Published-Summary Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-  - [Evaluation-Chain Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md)
-  - [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
-  - one canonical bundle plus its `notes/adverse-effects-review.md`
-- I need to navigate the authoritative repo docs/status layer:
-  - [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
-  - [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
-  - [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-  - [Root Surface Law](ROOT_SURFACE_LAW.md)
-- I need repo-wide legacy provenance, archive, or migration receipts:
-  - [Root Legacy](../legacy/README.md)
-  - [Root Legacy Index](../legacy/INDEX.md)
-  - [Root Surface Law](ROOT_SURFACE_LAW.md)
-- I need durable rationale for a structural or route choice:
-  - [Decisions District](decisions/README.md)
-  - [Decisions AGENTS](decisions/AGENTS.md)
-  - [Decision Template](decisions/TEMPLATE.md)
-- I need to understand KAG-oriented lift boundaries:
-  - [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-  - [KAG Export](KAG_EXPORT.md)
-  - [Technique Sections](TECHNIQUE_SECTIONS.md)
-  - [`../generated/technique_sections.full.json`](../generated/technique_sections.full.json)
-  - [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
-  - [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
-  - [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
-  - [Technique Examples](TECHNIQUE_EXAMPLES.md)
-  - [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
-  - [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
-  - [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
-  - [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
-  - [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-- I need the current reusable KAG/source-lift techniques:
-  - [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
-  - [`frontmatter-metadata-spine`](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
-  - [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
-  - [`bounded-relation-lift-for-kag`](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
-  - [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
-  - [`repo-doc-surface-lift`](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
-  - [`github-review-template-lift`](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
-  - [`semantic-review-surface-lift`](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
-- I need to inspect the semantic-review pilots:
-  - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
-  - [Agent-Workflows Core Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-  - [Published-Summary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-  - [Evaluation-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
-  - [Docs Boundary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
-  - [Intent-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
-  - [Instruction-Surface Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-  - [Skill-Support Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
-  - [KAG Source Lift Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
-- I need release process guidance:
-  - [Start Here](START_HERE.md)
-  - [Releasing `aoa-techniques`](RELEASING.md)
-- I need the bounded cross-layer stress program shape before opening owner repos:
-  - [Chaos Stress Program](../mechanics/antifragility/parts/chaos-stress-program/README.md)
-  - [`stress-receipt-reground-closeout`](../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
+1. [README](../README.md)
+2. [Charter](../CHARTER.md)
+3. [System Design](../DESIGN.md)
+4. [Agent Surface Design](../DESIGN.AGENTS.md)
+5. [Start Here](START_HERE.md)
+6. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
+7. [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md)
 
-## Surface Types
+For the compact current repo-doc reader, open
+[REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md). Its
+[repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json)
+lifts the 20 authoritative public route/canon/status files into routing
+knowledge only.
 
-### Generated reader surfaces
+## Root Docs
 
-These are reader-facing navigation artifacts derived from authoritative markdown and generated data.
+| Surface | Owns |
+|---|---|
+| [AGENTS](AGENTS.md) | docs-local route card |
+| [README](README.md) | this district map |
+| [START_HERE](START_HERE.md) | shortest repo-owned self-serve entry |
+| [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md) | root and docs-root placement law |
+| [ECOSYSTEM_CONTEXT](ECOSYSTEM_CONTEXT.md) | AoA layer-position note for the technique organ |
+| [DOMAIN_MAP](DOMAIN_MAP.md) | current domain meaning map |
+| [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) | one atomic executable technique |
+| [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md) | faceted classification and relation topology |
+| [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md) | corpus path architecture |
+| [RELEASING](RELEASING.md) | bounded public release route |
 
-- [Technique Selection](TECHNIQUE_SELECTION.md)
-  - use when you need one bounded choice by domain, kind, status, validation strength, or nearby relations
-- [Selection Patterns](SELECTION_PATTERNS.md)
-  - use when direct adjacency is not enough and you want validator-backed starting points, common next moves, or review-backed working sets
-- [Shadow Patterns](SHADOW_PATTERNS.md)
-  - use when you need one bounded answer to where a canonical technique can quietly make the system worse and which watch seam to inspect first
-- [Repo Doc Surfaces](REPO_DOC_SURFACES.md)
-  - use when you need one bounded answer to which authoritative repo doc/status surface to open next
+## Districts
 
-### Generated KAG/source-lift readers
+| District | Use |
+|---|---|
+| [guardrails](guardrails/README.md) | docs topology, link hygiene, current surface index, and AGENTS mesh guardrails |
+| [decisions](decisions/README.md) | decision records explaining why durable placement or workflow choices were made |
+| [review](review/README.md) | active review, maturity, semantic-review, and caution contracts |
+| [selection](selection/README.md) | active selection, kind, handoff, and capsule guide contracts |
+| [source-lift](source-lift/README.md) | authored KAG/source-lift guide contracts |
+| [readers](readers/README.md) | generated Markdown reader companions, weaker than authored source surfaces |
 
-These are reader-facing navigation artifacts derived from the current KAG/source-lift manifest families. They stay subordinate to authored markdown and do not become scoring, execution, or graph layers.
+Guardrail source maps:
 
-- [Technique Sections](TECHNIQUE_SECTIONS.md)
-  - use when you need one heading-first router over the first 10 lifted `TECHNIQUE.md` sections
-- [`../generated/technique_sections.full.json`](../generated/technique_sections.full.json)
-  - use when a local runtime needs exact source-owned section payloads for bounded expand-time reads
-- [Technique Checklists](TECHNIQUE_CHECKLISTS.md)
-  - use when you need one bounded checklist inventory by domain and technique
-- [Technique Examples](TECHNIQUE_EXAMPLES.md)
-  - use when you need one bounded example inventory without opening each example body first
-- [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md)
-  - use when you need note-kind routing, note-shape awareness, or a bounded inventory of evidence-note surfaces
+- [THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md)
+- [CURRENT_SURFACE_INDEX](guardrails/CURRENT_SURFACE_INDEX.md)
+- [LINK_AND_SHAPE_HYGIENE_PROTOCOL](guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md)
+- [HYGIENE_GUARDRAIL_INDEX](guardrails/HYGIENE_GUARDRAIL_INDEX.md)
+- [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md)
+- [AGENTS_MESH_INDEX](guardrails/AGENTS_MESH_INDEX.md)
 
-### Generated KAG/source-lift manifests
+## Reader Routes
 
-These are the current bounded JSON lift surfaces behind the reader companions above.
+| Reader family | Contract | Reader or manifest |
+|---|---|---|
+| Repo docs | [REPO_DOC_SURFACE_LIFT_GUIDE](source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md) | [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md), [repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json) |
+| Selection | [TECHNIQUE_SELECTION_GUIDE](selection/TECHNIQUE_SELECTION_GUIDE.md) | [TECHNIQUE_SELECTION](readers/selection/TECHNIQUE_SELECTION.md), [SELECTION_PATTERNS](readers/selection/SELECTION_PATTERNS.md) |
+| Kind | [TECHNIQUE_KIND_GUIDE](selection/TECHNIQUE_KIND_GUIDE.md) | [TECHNIQUE_KINDS](readers/kind/TECHNIQUE_KINDS.md) |
+| Capsule | [TECHNIQUE_CAPSULE_GUIDE](selection/TECHNIQUE_CAPSULE_GUIDE.md) | [TECHNIQUE_CAPSULES](readers/runtime/TECHNIQUE_CAPSULES.md), [technique_capsules.json](../generated/technique_capsules.json), [technique_capsules.min.json](../generated/technique_capsules.min.json) |
+| Section, checklist, example, evidence note | [KAG_SOURCE_LIFT_GUIDE](source-lift/KAG_SOURCE_LIFT_GUIDE.md) | [TECHNIQUE_SECTIONS](readers/source-lift/TECHNIQUE_SECTIONS.md), [TECHNIQUE_SECTION_LIFT_GUIDE](source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md), [technique_section_manifest.json](../generated/technique_section_manifest.json), [TECHNIQUE_CHECKLISTS](readers/source-lift/TECHNIQUE_CHECKLISTS.md), [TECHNIQUE_CHECKLIST_LIFT_GUIDE](source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md), [technique_checklist_manifest.json](../generated/technique_checklist_manifest.json), [TECHNIQUE_EXAMPLES](readers/source-lift/TECHNIQUE_EXAMPLES.md), [TECHNIQUE_EXAMPLE_LIFT_GUIDE](source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md), [technique_example_manifest.json](../generated/technique_example_manifest.json), [EVIDENCE_NOTE_SURFACES](readers/source-lift/EVIDENCE_NOTE_SURFACES.md), [technique_evidence_note_manifest.json](../generated/technique_evidence_note_manifest.json) |
+| Semantic and shadow review | [SEMANTIC_REVIEW_GUIDE](review/SEMANTIC_REVIEW_GUIDE.md), [TECHNIQUE_SHADOW_GUIDE](review/TECHNIQUE_SHADOW_GUIDE.md) | [Shadow Patterns](readers/review/SHADOW_PATTERNS.md), [SHADOW_PATTERNS.md](readers/review/SHADOW_PATTERNS.md), [shadow_review_manifest.json](../generated/shadow_review_manifest.json), and the [review packet route](review/README.md) for mechanic-owned authored packets |
 
-- [`../generated/technique_section_manifest.json`](../generated/technique_section_manifest.json)
-  - use when the first 10 lifted `TECHNIQUE.md` sections should stay machine-readable and order-stable
-- [`../generated/technique_checklist_manifest.json`](../generated/technique_checklist_manifest.json)
-  - use when checklist inventories should stay derived validation knowledge only
-- [`../generated/technique_example_manifest.json`](../generated/technique_example_manifest.json)
-  - use when example inventories should stay derived example knowledge only
-- [`../generated/technique_evidence_note_manifest.json`](../generated/technique_evidence_note_manifest.json)
-  - use when typed and opaque note surfaces should stay derived provenance knowledge only
+Generated JSON belongs in [generated](../generated/). Generated Markdown
+readers belong under [readers](readers/README.md). Authored contracts stay in
+their owning docs district.
 
-### Local runtime cards
+## Lift Anchors
 
-These are small local derived cards for runtime lookup. They stay subordinate to the authored bundles, stay outside the KAG/source-lift family, and do not replace section-level manifests.
+Reusable KAG/source-lift technique bundles live under
+`../techniques/knowledge-lift/kag-source-lift/`:
 
-- [Technique Capsules](TECHNIQUE_CAPSULES.md)
-  - use when you want one reader-facing local runtime card surface grouped by domain and bounded runtime fields
-- [`../generated/technique_capsules.json`](../generated/technique_capsules.json)
-  - use when one bounded technique card is enough for local lookup, dispatch, or runtime orientation
-- [`../generated/technique_capsules.min.json`](../generated/technique_capsules.min.json)
-  - use when a strict min projection is enough for lightweight local runtime lookup
-- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
-  - use when you need the capsule source contract, field boundaries, or runtime-only scope explained before consuming the generated surfaces
+| Bundle | Use |
+|---|---|
+| [markdown-technique-section-lift](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md) | lift authored technique sections into bounded readers and manifests |
+| [frontmatter-metadata-spine](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md) | keep metadata lift bounded to authored frontmatter |
+| [evidence-note-provenance-lift](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md) | lift evidence-note shapes without replacing notes |
+| [bounded-relation-lift-for-kag](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md) | lift direct relations without graph inference |
+| [risk-and-negative-effect-lift](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md) | lift caution material without policy scoring |
 
-### Generated docs/status manifests
+## Claim Routes
 
-These are derived public route/canon/status source-lift surfaces. They stay
-subordinate to the 21 authoritative public route/canon/status files and do not
-replace those docs as the source of truth.
+| Question | Route |
+|---|---|
+| Does a candidate belong in this repo? | [Charter](../CHARTER.md), then [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) |
+| Is this one atomic technique? | [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) |
+| Which domain, kind, or relation applies? | [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](selection/TECHNIQUE_KIND_GUIDE.md), [TECHNIQUE_KIND_HANDOFF_PACK](selection/TECHNIQUE_KIND_HANDOFF_PACK.md) |
+| Where should a bundle live? | [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md), then [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) |
+| Is a technique ready for canonical status? | [CANONICAL_REVIEW_GUIDE](review/CANONICAL_REVIEW_GUIDE.md), [CANONICAL_RUBRIC](review/CANONICAL_RUBRIC.md), then [mechanics/audit](../mechanics/audit/README.md) |
+| Which generated reader can I trust for lookup? | [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md), [TECHNIQUE_SELECTION](readers/selection/TECHNIQUE_SELECTION.md), or [TECHNIQUE_CAPSULES](readers/runtime/TECHNIQUE_CAPSULES.md), then the source bundle |
+| Why was a route chosen? | [decisions](decisions/README.md) |
 
-- [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-  - use when the authoritative public route, canon-law, contribution, example, and status files should be lifted into bounded routing knowledge only
+## Change Routes
 
-### Generated review manifests
+| Change | First route |
+|---|---|
+| Root or docs placement | [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md), [THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md), [CURRENT_SURFACE_INDEX](guardrails/CURRENT_SURFACE_INDEX.md) |
+| Technique authoring or promotion | [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md), [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md), [CANONICAL_REVIEW_GUIDE](review/CANONICAL_REVIEW_GUIDE.md) |
+| Generated reader parity | source doc, builder, generated output, validator, and test together |
+| KAG/source-lift contract | [source-lift](source-lift/README.md), then the matching guide |
+| Review contract | [review](review/README.md), then the matching review guide |
+| Selection or kind behavior | [selection](selection/README.md), then the matching selection guide |
+| Decision rationale | [decisions/AGENTS](decisions/AGENTS.md), [decisions/README](decisions/README.md) |
+| Public release path | [RELEASING](RELEASING.md), then [CHANGELOG](../CHANGELOG.md) |
+| Mechanic-owned evidence or movement | [mechanics](../mechanics/README.md), then the owning mechanic `AGENTS.md` |
 
-These are derived review-knowledge surfaces for KAG/source-lift lookup. They stay subordinate to the authored docs and do not replace the human review surfaces.
-
-- [`../generated/shadow_review_manifest.json`](../generated/shadow_review_manifest.json)
-  - use when canonical shadow-review pilots should be lifted as derived review knowledge without turning caution into policy metadata
-- [`../generated/semantic_review_manifest.json`](../generated/semantic_review_manifest.json)
-  - use when authored semantic-review pilots should be lifted as derived boundary-review knowledge only
-- [`../generated/github_review_template_manifest.json`](../generated/github_review_template_manifest.json)
-  - use when GitHub issue or PR review templates should be lifted as derived intake knowledge only
-
-### Authored review and governance guides
-
-These are human-authored guides that define bounded review, metadata, and documentation discipline.
-
-- [Start Here](START_HERE.md)
-- [Charter](../CHARTER.md)
-- [Root Surface Law](ROOT_SURFACE_LAW.md)
-- [Ecosystem Context](ECOSYSTEM_CONTEXT.md)
-- [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
-- [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
-- [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
-- [Canonical Rubric](CANONICAL_RUBRIC.md)
-- [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-- [Mechanics](../mechanics/README.md)
-- [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-- [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
-- [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
-- [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
-- [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md)
-- [Donor Refinery Rubric](../mechanics/distillation/parts/donor-refinery/README.md)
-- [Long-Gap Canon Design](../mechanics/distillation/parts/long-gap-reentry/README.md)
-- [Roadmap](../ROADMAP.md)
-- [External Technique Candidates](../mechanics/distillation/parts/external-candidate-ledger/README.md)
-- [Cross-Layer Technique Candidates](../mechanics/distillation/parts/cross-layer-candidate-ledger/README.md)
-- [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md)
-- [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md)
-- [External Import Runbook](../mechanics/distillation/parts/external-import-runbook/README.md)
-- [Technique Selection Guide](TECHNIQUE_SELECTION_GUIDE.md)
-- [Technique Kind Baseline](TECHNIQUE_KIND_BASELINE.md)
-- [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
-- [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
-- [Repo Doc Surface Lift Guide](REPO_DOC_SURFACE_LIFT_GUIDE.md)
-- [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
-- [Releasing `aoa-techniques`](RELEASING.md)
-
-### Shadow-review pilots
-
-These review-only docs inspect where caution language is most likely to blur neighboring canonical techniques or create false confidence.
-
-- [Published-Summary Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/PUBLISHED_SUMMARY_SHADOW_REVIEW.md)
-- [Evaluation-Chain Shadow Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/shadow/EVALUATION_CHAIN_SHADOW_REVIEW.md)
-
-### KAG-oriented boundary guides
-
-These guides explain what the repo can already support as a future lift surface and what remains intentionally deferred.
-
-- [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-- [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md)
-- [Technique Checklist Lift Guide](TECHNIQUE_CHECKLIST_LIFT_GUIDE.md)
-- [Technique Example Lift Guide](TECHNIQUE_EXAMPLE_LIFT_GUIDE.md)
-- [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md)
-- [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md)
-- [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md)
-- [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-
-### Reusable lift techniques
-
-These are reusable technique bundles extracted from the repo's current generated and caution layers without widening into a graph platform or policy engine.
-
-- [`markdown-technique-section-lift`](../techniques/knowledge-lift/kag-source-lift/markdown-technique-section-lift/TECHNIQUE.md)
-  - use when stable markdown sections should become one bounded derived lookup surface
-- [`frontmatter-metadata-spine`](../techniques/knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md)
-  - use when bundle routing needs the canonical shallow metadata spine plus a derived catalog, not richer schema
-- [`evidence-note-provenance-lift`](../techniques/knowledge-lift/kag-source-lift/evidence-note-provenance-lift/TECHNIQUE.md)
-  - use when typed supporting notes should act as provenance handles without becoming a note graph
-- [`bounded-relation-lift-for-kag`](../techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md)
-  - use when direct relations should power bounded adjacency hints without graph semantics
-- [`risk-and-negative-effect-lift`](../techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md)
-  - use when richer `Risks` language should act as bounded caution lookup without becoming metadata or scoring
-- [`repo-doc-surface-lift`](../techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md)
-  - use when the authoritative public repo docs/status layer should become one bounded derived routing surface
-- [`github-review-template-lift`](../techniques/knowledge-lift/kag-source-lift/github-review-template-lift/TECHNIQUE.md)
-  - use when authored GitHub issue and pull-request templates should become one bounded intake lookup surface
-- [`semantic-review-surface-lift`](../techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md)
-  - use when authored semantic-review docs should become one bounded review-knowledge lookup surface without automation
-
-### KAG/source-lift family review
-
-This review-only doc currently keeps the first five core KAG/source-lift techniques distinct while staying subordinate to authored markdown, with two canonical anchors plus three promoted companions.
-
-- [KAG Source Lift Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/KAG_SOURCE_LIFT_SEMANTIC_REVIEW.md)
-  - use when the family seams between section lift, metadata spine, provenance lift, relation lift, and markdown-first caution lift need one bounded review surface
-
-Later repo-surface, intake-surface, and review-surface lifts stay outside that family review until a wider family seam justifies refreshing it.
-
-### Semantic-review pilots
-
-These review-only docs test whether nearby techniques still read as distinct, bounded patterns rather than one blurred package.
-
-- [Agent-Workflows Core Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-- [Published-Summary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md)
-- [Evaluation-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/EVALUATION_CHAIN_SEMANTIC_REVIEW.md)
-- [Docs Boundary Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/DOCS_BOUNDARY_SEMANTIC_REVIEW.md)
-- [Intent-Chain Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
-- [Instruction-Surface Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INSTRUCTION_SURFACE_SEMANTIC_REVIEW.md)
-- [Skill-Support Semantic Review](../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
+Mechanic part indexes, runbooks, evidence ledgers, candidate ledgers, Agon
+bridges, and antifragility practice bridges are mechanic-owned operating
+surfaces. Keep their active route list in [Mechanics](../mechanics/README.md);
+this docs map only points to the atlas.
 
 ## Recommended Reading Paths
 
-### New reader path
+New reader path:
 
 1. [README](../README.md)
 2. [Charter](../CHARTER.md)
 3. [Start Here](START_HERE.md)
 4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
-5. [Technique Selection](TECHNIQUE_SELECTION.md)
-6. one concrete `TECHNIQUE.md` bundle
+5. [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md)
 
-### Reviewer path
+Technique-authoring path:
 
-1. [Start Here](START_HERE.md)
-2. [Canonical Rubric](CANONICAL_RUBRIC.md)
-3. [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-4. [Shadow Patterns](SHADOW_PATTERNS.md) when the question is about caution seams rather than technique choice
-5. one technique bundle plus its `notes/`; for `canonical` bundles include `canonical-readiness.md` and `adverse-effects-review.md`
-6. a relevant semantic-review or shadow-review pilot if the technique sits inside a reviewed cluster
+1. [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
+2. [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
+3. [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
+4. [Technique Kind Guide](selection/TECHNIQUE_KIND_GUIDE.md)
+5. one current bundle, then its `checks/`, `examples/`, and `notes/`
 
-### Promotion operations path
+Generated-reader path:
 
-1. [Start Here](START_HERE.md)
-2. [Roadmap](../ROADMAP.md) for repo-level direction
-3. [Promotion Readiness Matrix](../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-4. [Promotion Evidence Runbook](../mechanics/audit/parts/promotion-evidence-runbook/README.md)
-5. [External Evidence Sprint Runbook](../mechanics/audit/parts/external-evidence-sprint-runbook/README.md)
-6. [External Evidence Ledger](../mechanics/audit/parts/external-evidence-ledger/README.md)
-7. [Canonical Retro Audit](../mechanics/audit/parts/canonical-retro-audit/README.md)
+1. [Repo Doc Surface Lift Guide](source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md)
+2. [Repo Doc Surfaces](readers/repo/REPO_DOC_SURFACES.md)
+3. [repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json)
+4. one family guide such as [Technique Section Lift Guide](source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md)
+5. one reader or manifest such as [Technique Sections](readers/source-lift/TECHNIQUE_SECTIONS.md)
+6. one reusable lift bundle in `../techniques/knowledge-lift/kag-source-lift/`
 
-### KAG / lift path
+Review path:
 
-1. [Start Here](START_HERE.md)
-2. [KAG Source Lift Guide](KAG_SOURCE_LIFT_GUIDE.md)
-3. one family guide such as [Technique Section Lift Guide](TECHNIQUE_SECTION_LIFT_GUIDE.md), [Frontmatter Metadata Spine Guide](FRONTMATTER_METADATA_SPINE_GUIDE.md), [Evidence Note Provenance Guide](EVIDENCE_NOTE_PROVENANCE_GUIDE.md), [Bounded Relation Lift Guide](BOUNDED_RELATION_LIFT_GUIDE.md), or [Risk And Negative-Effect Lift Guide](RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md)
-4. one reader or manifest such as [Technique Sections](TECHNIQUE_SECTIONS.md), [Technique Checklists](TECHNIQUE_CHECKLISTS.md), [Technique Examples](TECHNIQUE_EXAMPLES.md), [Evidence Note Surfaces](EVIDENCE_NOTE_SURFACES.md), or [`../generated/repo_doc_surface_manifest.json`](../generated/repo_doc_surface_manifest.json)
-5. one reusable lift bundle in `../techniques/docs/` if the concrete question still needs it
+1. [Review Guides](review/README.md)
+2. [Canonical Review Guide](review/CANONICAL_REVIEW_GUIDE.md)
+3. [Semantic Review Guide](review/SEMANTIC_REVIEW_GUIDE.md)
+4. [Technique Shadow Guide](review/TECHNIQUE_SHADOW_GUIDE.md)
+5. [Review Guides](review/README.md) when a guide needs to route onward to mechanic-owned authored packets
 
-## Companion Repository Surfaces
+## Adjacent Routes
 
-These are outside `docs/` but matter when navigating the repo:
+| Route | Use |
+|---|---|
+| [mechanics](../mechanics/README.md) | practice movement around the technique canon |
+| [examples](../examples/README.md) | root-owned public worked examples |
+| [generated](../generated/) | compact machine companions |
+| [scripts](../scripts/) | builders, validators, and release checks |
+| [tests](../tests/AGENTS.md) | repo-wide validation |
+| [templates](../templates/) | technique authoring and promotion scaffolds |
+| [legacy](../legacy/README.md) | repo-wide public-safe raw, archive, and migration receipts |
 
-- [README](../README.md)
-- [CHARTER](../CHARTER.md)
-- [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
-- [ROADMAP](../ROADMAP.md)
-- [QUESTBOOK](../QUESTBOOK.md)
-- [Mechanics](../mechanics/README.md)
-- [CONTRIBUTING](../CONTRIBUTING.md)
-- [AGENTS](../AGENTS.md)
-- [WALKTHROUGH](../WALKTHROUGH.md)
-- [CHANGELOG](../CHANGELOG.md)
-- [Decisions](decisions/README.md)
+Neighboring AoA repositories own adjacent object classes:
+[aoa-skills](https://github.com/8Dionysus/aoa-skills),
+[aoa-evals](https://github.com/8Dionysus/aoa-evals),
+[aoa-routing](https://github.com/8Dionysus/aoa-routing),
+[aoa-playbooks](https://github.com/8Dionysus/aoa-playbooks), and
+[Agents-of-Abyss](https://github.com/8Dionysus/Agents-of-Abyss).
 
 ## Notes
 
-- Prefer [Start Here](START_HERE.md) when the question is "where should I begin inside this repo before choosing a deeper surface?"
-- Prefer [Charter](../CHARTER.md) when the question is "what may this repository claim or own?"
-- Prefer [Root Surface Law](ROOT_SURFACE_LAW.md) when the question is "does this file belong in root, docs root, mechanics, generated, decisions, or a bundle?"
-- Prefer [Decisions](decisions/README.md) when the question is "why was this route, owner split, validator, or placement chosen?"
-- Prefer [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md) when the question is "what counts as one technique instead of a skill, playbook, or chain?"
-- Prefer [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) when the question is "which classes, families, categories, or axes should organize a large technique corpus?"
-- Prefer [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when the question is "where should technique bundles live in a scalable root tree?"
-- Prefer generated reader surfaces when the question is "what should I inspect next?"
-- Prefer `TECHNIQUE_SECTIONS.md` when the question is "which published techniques expose this lifted section heading?"
-- Prefer `../generated/technique_sections.full.json` when the question is "which exact technique section should I expand next?"
-- Prefer `TECHNIQUE_CHECKLISTS.md` when the question is "which technique already publishes a reusable checklist?"
-- Prefer `TECHNIQUE_EXAMPLES.md` when the question is "which technique already has a reusable example surface?"
-- Prefer `EVIDENCE_NOTE_SURFACES.md` when the question is "which note kind or note shape should I inspect next?"
-- Prefer `REPO_DOC_SURFACES.md` when the question is "which authoritative repo doc should I open next?"
-- Prefer `SHADOW_PATTERNS.md` when the question is "where can this canonical technique fail quietly or create false confidence?"
-- Prefer authored guides when the question is "what does this repo mean by this rule or boundary?"
-- Prefer semantic-review pilots when the question is "are these nearby techniques still meaningfully distinct?"
-
-The current runtime path is:
-
-`pick -> inspect -> expand -> object use`
+- Prefer [Start Here](START_HERE.md) when the question is where to begin.
+- Prefer [Current Surface Index](guardrails/CURRENT_SURFACE_INDEX.md) when the question is why a flat `docs/*.md` file still exists.
+- Prefer [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or deleting root or docs-root surfaces.
+- Prefer [Decisions District](decisions/README.md) when the question is why a structural route was chosen.
+- Prefer [Root Legacy](../legacy/README.md) and [Root Legacy Index](../legacy/INDEX.md) for public-safe receipts, archives, and migration history.

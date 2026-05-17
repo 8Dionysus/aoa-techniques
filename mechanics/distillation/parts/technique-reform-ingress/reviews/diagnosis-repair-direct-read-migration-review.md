@@ -125,7 +125,7 @@ A later migration wave should expect to update:
 
 - authored sibling links inside the four moved bundles
 - generated reader docs such as `TECHNIQUE_INDEX.md`, `docs/TECHNIQUE_*`,
-  `docs/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
+  `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`, and generated manifests
 - generated reports for family, topology, and tree projection
 - a new `techniques/recovery/AGENTS.md` route card, because `recovery/` would
   become the next migrated trunk

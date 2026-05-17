@@ -29,13 +29,13 @@ Touched source surfaces:
 
 - `scripts/validate_repo.py`
 - `tests/test_validate_repo.py`
-- `docs/TECHNIQUE_CAPSULE_GUIDE.md`
+- `docs/selection/TECHNIQUE_CAPSULE_GUIDE.md`
 
 Regenerated derived surfaces:
 
 - `generated/technique_capsules.json`
 - `generated/technique_capsules.min.json`
-- `docs/TECHNIQUE_CAPSULES.md`
+- `docs/readers/runtime/TECHNIQUE_CAPSULES.md`
 
 No technique bundle source was edited. The generated capsule changes are
 derived from the existing authored bundles plus the corrected wrapped-bullet

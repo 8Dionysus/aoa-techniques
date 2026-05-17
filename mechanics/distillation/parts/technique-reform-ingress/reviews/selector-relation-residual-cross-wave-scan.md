@@ -81,7 +81,7 @@ Selector/relation wave packets and repair packets:
 
 Generated relation surface:
 
-- [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
+- [Technique Selection](../../../../../docs/readers/selection/TECHNIQUE_SELECTION.md)
 - [Technique Catalog](../../../../../generated/technique_catalog.json)
 
 ## Singleton Read

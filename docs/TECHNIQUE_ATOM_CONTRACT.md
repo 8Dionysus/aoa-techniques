@@ -120,6 +120,25 @@ Before drafting or accepting a technique, answer these checks:
 
 If the answer is no, narrow the candidate before promotion.
 
+### Via negativa checks
+
+Keep a candidate intact only when it is truly reusable across repositories,
+names clear trigger boundaries, risks, and verification guidance, and represents
+one materially distinct pattern family.
+
+Merge, move, suppress, quarantine, deprecate, or remove a candidate when it is a
+near duplicate under a different name, mostly a repo-local runbook fragment, or
+a large repeated philosophy preamble.
+
+Before adding a new technique, ask whether the distinction will still matter
+after months of use, whether one canonical technique plus repo-local examples
+would be cleaner, and whether the object is actually a skill or owner-local
+procedure. Substrate or safety-posture differences can justify separate
+techniques; tiny helper notes should usually stay local instead of becoming
+full bundles.
+
+The corpus is healthy when technique count rises slower than meaning density.
+
 ## Distillation Rule
 
 Donor material should be reduced to one reusable move before it becomes a

@@ -18,11 +18,6 @@
       "note": "Use these when the question is how to contribute safely, publicly, and within the repo's current review posture."
     },
     {
-      "group": "walkthrough/context",
-      "heading": "Walkthrough / Context",
-      "note": "Use this when you need one concrete end-to-end example of how a real practice became a published technique here."
-    },
-    {
       "group": "status/release",
       "heading": "Status / Release",
       "note": "Use these when the question is what changed, what is currently unreleased, and how the public release path is validated."
@@ -230,9 +225,14 @@
       "bounded_role": "docs-layer map for deeper guides, generated surfaces, and recommended reading paths after the main entrypoint",
       "top_level_sections": [
         "Start Here",
-        "Surface Types",
+        "Root Docs",
+        "Districts",
+        "Reader Routes",
+        "Lift Anchors",
+        "Claim Routes",
+        "Change Routes",
         "Recommended Reading Paths",
-        "Companion Repository Surfaces",
+        "Adjacent Routes",
         "Notes"
       ]
     },
@@ -255,7 +255,7 @@
         "Route away when",
         "Validation",
         "Closeout",
-        "Full reference"
+        "Historical Reference"
       ]
     },
     {
@@ -299,20 +299,6 @@
       "top_level_sections": [
         "Our standard",
         "Enforcement"
-      ]
-    },
-    {
-      "doc_id": "walkthrough",
-      "doc_path": "WALKTHROUGH.md",
-      "title": "Walkthrough: AOA-T-0001",
-      "surface_group": "walkthrough/context",
-      "bounded_role": "one end-to-end example of origin practice, publication, reuse, and why the repo stores techniques this way",
-      "top_level_sections": [
-        "1. Origin practice",
-        "2. Published technique",
-        "3. Reuse evidence",
-        "4. Second-context adaptation",
-        "5. Why this matters here"
       ]
     },
     {

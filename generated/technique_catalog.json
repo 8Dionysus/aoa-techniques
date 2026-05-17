@@ -1164,7 +1164,7 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/bounded-relation-lift-for-kag/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
-        "path": "docs/SELECTION_PATTERNS.md",
+        "path": "docs/readers/selection/SELECTION_PATTERNS.md",
         "note": "Extracted from the current direct-relation consumers and relation-lift guidance to keep typed edges useful for navigation without widening them into graph semantics."
       },
       "owners": [
@@ -1219,7 +1219,7 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/risk-and-negative-effect-lift/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
-        "path": "docs/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md",
+        "path": "docs/source-lift/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md",
         "note": "Extracted from the current shadow guides, validator-enforced Risks contract, and live corpus to keep caution lookup bounded and markdown-first while staying subordinate to authored Risks and canonical adverse-effects review."
       },
       "owners": [
@@ -2576,7 +2576,7 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/repo-doc-surface-lift/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
-        "path": "docs/REPO_DOC_SURFACE_LIFT_GUIDE.md",
+        "path": "docs/source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md",
         "note": "Extracted from the bounded repo-doc surface guide, manifest, and reader surface to keep public docs/status routing derived from authored markdown without turning the surface into a catch-all taxonomy."
       },
       "owners": [
@@ -2686,7 +2686,7 @@
       "technique_path": "techniques/knowledge-lift/kag-source-lift/semantic-review-surface-lift/TECHNIQUE.md",
       "origin": {
         "project": "aoa-techniques",
-        "path": "docs/SEMANTIC_REVIEW_GUIDE.md",
+        "path": "docs/review/SEMANTIC_REVIEW_GUIDE.md",
         "note": "Extracted from the authored semantic-review guide, the current semantic-review manifest, and review-backed selection surfaces to keep cluster lookup derived from human review docs without turning it into scoring or status automation."
       },
       "owners": [

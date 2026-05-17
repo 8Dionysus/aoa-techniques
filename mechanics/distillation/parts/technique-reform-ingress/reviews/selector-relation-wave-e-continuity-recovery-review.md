@@ -61,7 +61,7 @@ Direct bundle reads:
 
 Supporting review and generated surfaces:
 
-- [Technique Selection](../../../../../docs/TECHNIQUE_SELECTION.md)
+- [Technique Selection](../../../../../docs/readers/selection/TECHNIQUE_SELECTION.md)
 - [Technique Topology Scout](../reports/technique_topology_scout.md)
 - [Technique Tree Projection](../reports/technique_tree_projection.md)
 - [Review-Compaction Direct-Read Migration Review](review-compaction-direct-read-migration-review.md)
