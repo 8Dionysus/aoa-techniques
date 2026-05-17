@@ -1,16 +1,14 @@
 # Documentation Map
 
-This is the human-first map for the `docs/` district of `aoa-techniques`.
+This is the map for the `docs/` district of `aoa-techniques`.
 
-Use the root [README](../README.md) for the public front door. Use
-[START_HERE](START_HERE.md) for the shortest repo-owned route. Use this file
-when you are already inside `docs/` and need the owning surface, district, or
-generated reader without browsing every filename.
+Use the root [README](../README.md) as the public front door, [START_HERE](START_HERE.md)
+as the shortest repo-owned route, and this file when you already know you are
+inside `docs/` and need the right owner surface.
 
-If you are editing under `docs/`, read [AGENTS](AGENTS.md) first. For placement
-rules, use [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md),
-[THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md), and
-[CURRENT_SURFACE_INDEX](guardrails/CURRENT_SURFACE_INDEX.md).
+Editing under `docs/` starts with [AGENTS](AGENTS.md), then the placement rules
+in [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md), [THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md),
+and [CURRENT_SURFACE_INDEX](guardrails/CURRENT_SURFACE_INDEX.md).
 
 ## Start Here
 
@@ -18,17 +16,14 @@ For the shortest repo overview, read:
 
 1. [README](../README.md)
 2. [Charter](../CHARTER.md)
-3. [System Design](../DESIGN.md)
-4. [Agent Surface Design](../DESIGN.AGENTS.md)
-5. [Start Here](START_HERE.md)
-6. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
-7. [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md)
+3. [Start Here](START_HERE.md)
+4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
+5. [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md)
 
-For the compact current repo-doc reader, open
-[REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md). Its
-[repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json)
-lifts the 20 authoritative public route/canon/status files into routing
-knowledge only.
+For design shape, add [DESIGN](../DESIGN.md) and [DESIGN.AGENTS](../DESIGN.AGENTS.md).
+For the compact repo-doc reader, open [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md):
+its [repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json)
+lifts the 20 authoritative public route/canon/status files into routing knowledge only.
 
 ## Root Docs
 
@@ -36,44 +31,40 @@ knowledge only.
 |---|---|
 | [AGENTS](AGENTS.md) | docs-local route card |
 | [README](README.md) | this district map |
-| [START_HERE](START_HERE.md) | shortest repo-owned self-serve entry |
+| [START_HERE](START_HERE.md) | shortest self-serve route |
 | [ROOT_SURFACE_LAW](ROOT_SURFACE_LAW.md) | root and docs-root placement law |
-| [ECOSYSTEM_CONTEXT](ECOSYSTEM_CONTEXT.md) | AoA layer-position note for the technique organ |
-| [DOMAIN_MAP](DOMAIN_MAP.md) | current domain meaning map |
+| [ECOSYSTEM_CONTEXT](ECOSYSTEM_CONTEXT.md) | technique layer position in AoA |
+| [DOMAIN_MAP](DOMAIN_MAP.md) | current domain meanings |
 | [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) | one atomic executable technique |
-| [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md) | faceted classification and relation topology |
-| [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md) | corpus path architecture |
-| [RELEASING](RELEASING.md) | bounded public release route |
+| [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md) | faceted classification |
+| [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md) | authored corpus path architecture |
+| [RELEASING](RELEASING.md) | release-prep route |
 
 ## Districts
 
-| District | Use |
+| District | Use first when |
 |---|---|
-| [guardrails](guardrails/README.md) | docs topology, link hygiene, current surface index, and AGENTS mesh guardrails |
-| [decisions](decisions/README.md) | decision records explaining why durable placement or workflow choices were made |
-| [review](review/README.md) | active review, maturity, semantic-review, and caution contracts |
-| [selection](selection/README.md) | active selection, kind, handoff, and capsule guide contracts |
-| [source-lift](source-lift/README.md) | authored KAG/source-lift guide contracts |
-| [readers](readers/README.md) | generated Markdown reader companions, weaker than authored source surfaces |
+| [guardrails](guardrails/README.md) | placement, link hygiene, generated-reader limits, or AGENTS mesh shape is in question |
+| [decisions](decisions/README.md) | the reader needs why a durable route, owner split, or validator exists |
+| [review](review/README.md) | maturity, promotion, semantic-review, shadow, or caution interpretation is in scope |
+| [selection](selection/README.md) | choosing, kind routing, handoff, or runtime capsule use is in scope |
+| [source-lift](source-lift/README.md) | KAG/source-lift contracts are in scope |
+| [readers](readers/README.md) | generated Markdown reader companions are needed |
 
-Guardrail source maps:
-
-- [THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md)
-- [CURRENT_SURFACE_INDEX](guardrails/CURRENT_SURFACE_INDEX.md)
-- [LINK_AND_SHAPE_HYGIENE_PROTOCOL](guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md)
-- [HYGIENE_GUARDRAIL_INDEX](guardrails/HYGIENE_GUARDRAIL_INDEX.md)
-- [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md)
-- [AGENTS_MESH_INDEX](guardrails/AGENTS_MESH_INDEX.md)
+Guardrails are concentrated in [THEMATIC_DISTRICT_PROTOCOL](guardrails/THEMATIC_DISTRICT_PROTOCOL.md),
+[LINK_AND_SHAPE_HYGIENE_PROTOCOL](guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md),
+[HYGIENE_GUARDRAIL_INDEX](guardrails/HYGIENE_GUARDRAIL_INDEX.md),
+[AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md), and
+[AGENTS_MESH_INDEX](guardrails/AGENTS_MESH_INDEX.md).
 
 ## Reader Routes
 
 | Reader family | Contract | Reader or manifest |
 |---|---|---|
 | Repo docs | [REPO_DOC_SURFACE_LIFT_GUIDE](source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md) | [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md), [repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json) |
-| Selection | [TECHNIQUE_SELECTION_GUIDE](selection/TECHNIQUE_SELECTION_GUIDE.md) | [TECHNIQUE_SELECTION](readers/selection/TECHNIQUE_SELECTION.md), [SELECTION_PATTERNS](readers/selection/SELECTION_PATTERNS.md) |
-| Kind | [TECHNIQUE_KIND_GUIDE](selection/TECHNIQUE_KIND_GUIDE.md) | [TECHNIQUE_KINDS](readers/kind/TECHNIQUE_KINDS.md) |
+| Selection and kind | [TECHNIQUE_SELECTION_GUIDE](selection/TECHNIQUE_SELECTION_GUIDE.md), [TECHNIQUE_KIND_GUIDE](selection/TECHNIQUE_KIND_GUIDE.md), [TECHNIQUE_KIND_HANDOFF_PACK](selection/TECHNIQUE_KIND_HANDOFF_PACK.md) | [TECHNIQUE_SELECTION](readers/selection/TECHNIQUE_SELECTION.md), [SELECTION_PATTERNS](readers/selection/SELECTION_PATTERNS.md), [TECHNIQUE_KINDS](readers/kind/TECHNIQUE_KINDS.md) |
 | Capsule | [TECHNIQUE_CAPSULE_GUIDE](selection/TECHNIQUE_CAPSULE_GUIDE.md) | [TECHNIQUE_CAPSULES](readers/runtime/TECHNIQUE_CAPSULES.md), [technique_capsules.json](../generated/technique_capsules.json), [technique_capsules.min.json](../generated/technique_capsules.min.json) |
-| Section, checklist, example, evidence note | [KAG_SOURCE_LIFT_GUIDE](source-lift/KAG_SOURCE_LIFT_GUIDE.md) | [TECHNIQUE_SECTIONS](readers/source-lift/TECHNIQUE_SECTIONS.md), [TECHNIQUE_SECTION_LIFT_GUIDE](source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md), [technique_section_manifest.json](../generated/technique_section_manifest.json), [TECHNIQUE_CHECKLISTS](readers/source-lift/TECHNIQUE_CHECKLISTS.md), [TECHNIQUE_CHECKLIST_LIFT_GUIDE](source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md), [technique_checklist_manifest.json](../generated/technique_checklist_manifest.json), [TECHNIQUE_EXAMPLES](readers/source-lift/TECHNIQUE_EXAMPLES.md), [TECHNIQUE_EXAMPLE_LIFT_GUIDE](source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md), [technique_example_manifest.json](../generated/technique_example_manifest.json), [EVIDENCE_NOTE_SURFACES](readers/source-lift/EVIDENCE_NOTE_SURFACES.md), [technique_evidence_note_manifest.json](../generated/technique_evidence_note_manifest.json) |
+| KAG/source lift | [KAG_SOURCE_LIFT_GUIDE](source-lift/KAG_SOURCE_LIFT_GUIDE.md) | [TECHNIQUE_SECTIONS](readers/source-lift/TECHNIQUE_SECTIONS.md), [TECHNIQUE_SECTION_LIFT_GUIDE](source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md), [technique_section_manifest.json](../generated/technique_section_manifest.json), [TECHNIQUE_CHECKLISTS](readers/source-lift/TECHNIQUE_CHECKLISTS.md), [TECHNIQUE_CHECKLIST_LIFT_GUIDE](source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md), [technique_checklist_manifest.json](../generated/technique_checklist_manifest.json), [TECHNIQUE_EXAMPLES](readers/source-lift/TECHNIQUE_EXAMPLES.md), [TECHNIQUE_EXAMPLE_LIFT_GUIDE](source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md), [technique_example_manifest.json](../generated/technique_example_manifest.json), [EVIDENCE_NOTE_SURFACES](readers/source-lift/EVIDENCE_NOTE_SURFACES.md), [technique_evidence_note_manifest.json](../generated/technique_evidence_note_manifest.json) |
 | Semantic and shadow review | [SEMANTIC_REVIEW_GUIDE](review/SEMANTIC_REVIEW_GUIDE.md), [TECHNIQUE_SHADOW_GUIDE](review/TECHNIQUE_SHADOW_GUIDE.md) | [Shadow Patterns](readers/review/SHADOW_PATTERNS.md), [SHADOW_PATTERNS.md](readers/review/SHADOW_PATTERNS.md), [shadow_review_manifest.json](../generated/shadow_review_manifest.json), and the [review packet route](review/README.md) for mechanic-owned authored packets |
 
 Generated JSON belongs in [generated](../generated/). Generated Markdown
@@ -97,12 +88,12 @@ Reusable KAG/source-lift technique bundles live under
 
 | Question | Route |
 |---|---|
-| Does a candidate belong in this repo? | [Charter](../CHARTER.md), then [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) |
-| Is this one atomic technique? | [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) |
-| Which domain, kind, or relation applies? | [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](selection/TECHNIQUE_KIND_GUIDE.md), [TECHNIQUE_KIND_HANDOFF_PACK](selection/TECHNIQUE_KIND_HANDOFF_PACK.md) |
-| Where should a bundle live? | [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md), then [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) |
-| Is a technique ready for canonical status? | [CANONICAL_REVIEW_GUIDE](review/CANONICAL_REVIEW_GUIDE.md), [CANONICAL_RUBRIC](review/CANONICAL_RUBRIC.md), then [mechanics/audit](../mechanics/audit/README.md) |
-| Which generated reader can I trust for lookup? | [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md), [TECHNIQUE_SELECTION](readers/selection/TECHNIQUE_SELECTION.md), or [TECHNIQUE_CAPSULES](readers/runtime/TECHNIQUE_CAPSULES.md), then the source bundle |
+| Does the candidate belong here? | [Charter](../CHARTER.md), then [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) |
+| Is it one atomic technique? | [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md) |
+| Which domain, kind, family, or relation applies? | [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md), [TECHNIQUE_KIND_GUIDE](selection/TECHNIQUE_KIND_GUIDE.md), [TECHNIQUE_KIND_HANDOFF_PACK](selection/TECHNIQUE_KIND_HANDOFF_PACK.md) |
+| Where should the bundle live? | [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md), then [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) |
+| Is canonical status justified? | [CANONICAL_REVIEW_GUIDE](review/CANONICAL_REVIEW_GUIDE.md), [CANONICAL_RUBRIC](review/CANONICAL_RUBRIC.md), then [Mechanics](../mechanics/README.md) or [Audit](../mechanics/audit/README.md) |
+| Which generated reader is safe to use? | [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md), [TECHNIQUE_SELECTION](readers/selection/TECHNIQUE_SELECTION.md), or [TECHNIQUE_CAPSULES](readers/runtime/TECHNIQUE_CAPSULES.md), then the source bundle |
 | Why was a route chosen? | [decisions](decisions/README.md) |
 
 ## Change Routes
@@ -113,20 +104,16 @@ Reusable KAG/source-lift technique bundles live under
 | Technique authoring or promotion | [TECHNIQUE_ATOM_CONTRACT](TECHNIQUE_ATOM_CONTRACT.md), [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md), [CANONICAL_REVIEW_GUIDE](review/CANONICAL_REVIEW_GUIDE.md) |
 | Generated reader parity | source doc, builder, generated output, validator, and test together |
 | KAG/source-lift contract | [source-lift](source-lift/README.md), then the matching guide |
-| Review contract | [review](review/README.md), then the matching review guide |
-| Selection or kind behavior | [selection](selection/README.md), then the matching selection guide |
+| Review contract | [review](review/README.md), then the matching guide |
+| Selection or kind behavior | [selection](selection/README.md), then the matching guide |
 | Decision rationale | [decisions/AGENTS](decisions/AGENTS.md), [decisions/README](decisions/README.md) |
 | Public release path | [RELEASING](RELEASING.md), then [CHANGELOG](../CHANGELOG.md) |
-| Mechanic-owned evidence or movement | [mechanics](../mechanics/README.md), then the owning mechanic `AGENTS.md` |
+| Mechanic-owned evidence or movement | [mechanics/README.md](../mechanics/README.md), then the owning mechanic `AGENTS.md` |
 
-Mechanic part indexes, runbooks, evidence ledgers, candidate ledgers, Agon
-bridges, and antifragility practice bridges are mechanic-owned operating
-surfaces. Keep their active route list in [Mechanics](../mechanics/README.md);
-this docs map only points to the atlas.
+Mechanic runbooks, candidate ledgers, review packets, Agon bridges, and
+antifragility practice bridges stay in [Mechanics](../mechanics/README.md).
 
 ## Recommended Reading Paths
-
-New reader path:
 
 1. [README](../README.md)
 2. [Charter](../CHARTER.md)
@@ -134,30 +121,18 @@ New reader path:
 4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)
 5. [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md)
 
-Technique-authoring path:
+For authoring, read [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md),
+[Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md),
+[Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md), then one current bundle
+with its `checks/`, `examples/`, and `notes/`.
 
-1. [Technique Atom Contract](TECHNIQUE_ATOM_CONTRACT.md)
-2. [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md)
-3. [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
-4. [Technique Kind Guide](selection/TECHNIQUE_KIND_GUIDE.md)
-5. one current bundle, then its `checks/`, `examples/`, and `notes/`
+For generated-reader work, read the matching source-lift guide first. Then open
+one family guide such as [Technique Section Lift Guide](source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md),
+one reader or manifest such as [Technique Sections](readers/source-lift/TECHNIQUE_SECTIONS.md),
+and one reusable lift bundle in `../techniques/knowledge-lift/kag-source-lift/`.
 
-Generated-reader path:
-
-1. [Repo Doc Surface Lift Guide](source-lift/REPO_DOC_SURFACE_LIFT_GUIDE.md)
-2. [Repo Doc Surfaces](readers/repo/REPO_DOC_SURFACES.md)
-3. [repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json)
-4. one family guide such as [Technique Section Lift Guide](source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md)
-5. one reader or manifest such as [Technique Sections](readers/source-lift/TECHNIQUE_SECTIONS.md)
-6. one reusable lift bundle in `../techniques/knowledge-lift/kag-source-lift/`
-
-Review path:
-
-1. [Review Guides](review/README.md)
-2. [Canonical Review Guide](review/CANONICAL_REVIEW_GUIDE.md)
-3. [Semantic Review Guide](review/SEMANTIC_REVIEW_GUIDE.md)
-4. [Technique Shadow Guide](review/TECHNIQUE_SHADOW_GUIDE.md)
-5. [Review Guides](review/README.md) when a guide needs to route onward to mechanic-owned authored packets
+For review work, read [Review Guides](review/README.md), then the specific
+canonical, semantic, or shadow guide before opening mechanic-owned packets.
 
 ## Adjacent Routes
 

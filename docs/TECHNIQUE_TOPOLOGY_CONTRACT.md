@@ -3,54 +3,43 @@
 This guide defines the classification topology for `aoa-techniques`.
 
 Use it when the question is not only whether a candidate is one atomic
-technique, but where that technique should live in a corpus that must scale
-beyond hundreds or thousands of entries.
-
-Use [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md) when "where it should
-live" means the authored `techniques/` directory path rather than selector
-classification.
+technique, but where it belongs in a corpus that must scale beyond hundreds or
+thousands of entries. Use [Technique Tree Contract](TECHNIQUE_TREE_CONTRACT.md)
+when the question is the authored `techniques/` path.
 
 ## Purpose
 
 The technique corpus should become a large, navigable library of small agentic
 moves, not a flat list and not five overloaded buckets.
 
-The topology must support:
-
-- coding, documentation, validation, recovery, history, media, tool use,
-  dialogue, planning, observation, and other agent-capability surfaces
-- `1000+` techniques as an early scale target, not a ceiling
-- a root tree that stays browsable without forcing every selector axis into the
-  directory path
-- small-agent execution after orchestration has selected and packed context
-- future cross-repo consumers in skills, evals, routing, playbooks, memory, KAG,
-  agents, runtime, and stats without moving technique meaning out of this repo
+The topology must support coding, documentation, validation, recovery, history, media, tool use,
+dialogue, planning, observation, and other agent-capability surfaces. It must
+also support `1000+` techniques, small-agent execution after orchestration
+supplies context, and future consumers in skills, evals, routing, playbooks,
+memory, KAG, agents, runtime, and stats without moving technique meaning out of
+this repo.
 
 ## Topology Law
 
 Classification is faceted, not a single tree. The authored directory tree is a
-separate placement spine, not the whole classification model.
+placement spine; it is not the whole classification model.
 
-No one axis should carry all meaning. A technique is routed through several
-orthogonal questions:
+A technique is routed through distinct questions:
 
-- What owner/review lane should read it first?
-- What atomic move shape does it perform?
-- Which stable semantic family does it belong to?
-- What agent capability does it exercise?
-- What substrate or object does it operate on?
-- What execution profile can use it?
-- What risk posture does it carry?
-- What relations make it compose, conflict, or sequence with other techniques?
+| Question | Axis |
+|---|---|
+| Which owner/review lane reads it first? | `domain` |
+| What atomic move shape does it perform? | `kind` |
+| Which stable semantic neighborhood does it join? | `family` |
+| What agent capability does it exercise? | `capability_class` |
+| What object or medium does it act on? | `substrate` |
+| What agent or orchestration envelope can execute it? | `execution_profile` |
+| What operational caution should route around it? | `risk_posture` |
+| How does it compose, conflict, or sequence? | `relations` |
 
 The first two axes are current frontmatter truth. Other axes are design
-contracts and scout surfaces until they are intentionally promoted into schema,
+contracts and scout surfaces until intentionally promoted into schema,
 generated catalogs, and validators.
-
-The directory tree should use these axes as evidence, especially family, but it
-must not replace them. A path can make the corpus easier to browse while
-`domain`, `kind`, scout axes, and relations still answer their own routing
-questions.
 
 ## Axis Stack
 
@@ -68,72 +57,24 @@ questions.
 
 ## Current Axes
 
-### Domain
+`domain` is the first owner and review route, not the whole category system.
+Current domains are `agent-workflows`, `docs`, `evaluation`,
+`system-recovery`, `validation-patterns`, and `history`.
 
-`domain` is not the whole category system. It is the first owner and review
-route for a technique.
+`kind` names the atomic move shape. Current kinds are `workflow`, `guardrail`,
+`validation`, `composition`, `distribution`, `artifact`, `lift`, `discovery`,
+`handoff`, `ingest`, `assessment`, and `recovery`. The `kind` axis stays
+singular; if several kinds feel necessary, narrow or split the candidate.
 
-The current domains are intentionally narrow:
+`family` is the future shelf layer. It groups nearby techniques that may cross
+domains or kinds but belong to one durable semantic neighborhood. Current scout
+examples include `instruction-surface`, `kag-source-lift`, `history-artifacts`,
+`runtime-truth-lifecycle`, `handoff-continuation`, `media-ingest`,
+`decision-routing`, `diagnosis-repair`, `automation-governance`, and
+`antifragility-recovery`.
 
-- `agent-workflows`
-- `docs`
-- `evaluation`
-- `system-recovery`
-- `validation-patterns`
-- `history`
-
-Do not treat these six domains as a complete map of everything agents can do.
-They are the current public corpus lanes. Future growth may need new domains or
-subdomains, but adding one must happen through schema, template, validator, and
-docs updates in the same wave.
-
-### Kind
-
-`kind` names the atomic move shape.
-
-The current kinds are:
-
-- `workflow`
-- `guardrail`
-- `validation`
-- `composition`
-- `distribution`
-- `artifact`
-- `lift`
-- `discovery`
-- `handoff`
-- `ingest`
-- `assessment`
-- `recovery`
-
-The `kind` axis should stay singular. If one technique seems to need several
-kinds, narrow the atomic move or split the candidate.
-
-### Family
-
-`family` is the future shelf layer.
-
-A family groups nearby techniques that may cross domains or kinds but belong to
-one durable semantic neighborhood. The current family scout is scout-only because
-the corpus is still small and forcing frontmatter migration too early would
-create false precision.
-
-The existing seed already points toward real shelves such as:
-
-- `instruction-surface`
-- `kag-source-lift`
-- `history-artifacts`
-- `runtime-truth-lifecycle`
-- `handoff-continuation`
-- `media-ingest`
-- `decision-routing`
-- `diagnosis-repair`
-- `automation-governance`
-- `antifragility-recovery`
-
-Future promotion of `family` should make it a stable optional frontmatter field
-only after the family registry has clear ownership, examples, and tie-break
-rules.
+Family remains scout-only until the registry has clear ownership, examples, and
+tie-break rules.
 
 ## Future Axes
 
@@ -142,159 +83,63 @@ The scout value registry for `capability_class`, `substrate`,
 `mechanics/distillation/parts/technique-reform-ingress/config/technique_topology_axes.yaml`.
 
 That registry names allowed scout values only. It does not add required
-frontmatter fields, does not replace `domain` or `kind`, and does not authorize
-generated reports to remap bundle meaning automatically.
+frontmatter fields, replace `domain` or `kind`, or authorize generated reports
+to remap bundle meaning automatically.
 
-The current generated readout is `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`, built
-by `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`. Use it for review pressure before
-schema or frontmatter migration, not as a source of technique meaning.
+The current generated readout is
+`mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`,
+built by
+`python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`.
+Use it for review pressure before schema or frontmatter migration, not as a
+source of technique meaning.
 
-### Capability Class
+`capability_class` answers what the agent is doing: observe, read, interpret,
+plan, choose, transform, write, mutate, validate, compare, summarize, compress,
+handoff, recover, coordinate, communicate, or learn from artifact.
 
-`capability_class` should answer what the agent is doing at the capability
-level.
+`substrate` answers what the move acts on: code, tests, docs, instructions,
+config, shell, APIs, data, media, UI, conversation, history, memory-adjacent
+artifacts, graph-adjacent artifacts, tool surfaces, runtime state, or human
+approval surfaces.
 
-Likely classes include:
+`execution_profile` answers the execution envelope: `tiny-card`, `small-agent`,
+`medium-agent`, or `orchestration-required`. This is not a quality score; it is
+an estimate of what kind of context and outer workflow the technique needs.
 
-- observe
-- read
-- interpret
-- plan
-- choose
-- transform
-- write
-- mutate
-- validate
-- compare
-- summarize
-- compress
-- handoff
-- recover
-- coordinate
-- communicate
-- learn-from-artifact
-
-This axis is broader than `kind`. For example, a technique can be a `guardrail`
-kind while exercising the `choose` capability, or a `lift` kind while exercising
-the `compress` capability.
-
-### Substrate
-
-`substrate` should answer what the technique acts on.
-
-Likely substrates include:
-
-- code
-- tests
-- docs
-- instructions
-- config
-- shell
-- APIs
-- data
-- media
-- UI
-- conversation
-- history
-- memory-adjacent artifacts
-- graph-adjacent artifacts
-- tool surfaces
-- runtime state
-- human approval surfaces
-
-This axis prevents `docs` and `agent-workflows` from becoming overloaded
-catch-all domains.
-
-### Execution Profile
-
-`execution_profile` should answer what kind of agent can execute the technique
-after selection.
-
-Until a local model harness records empirical results, execution-profile values
-are scout suitability estimates from authored bundle shape. They are not proof
-that a given small model has already executed the technique successfully.
-
-Likely profiles include:
-
-- `tiny-card`: executable from a capsule or one short section with obvious
-  inputs
-- `small-agent`: suitable for 2-4B models when the orchestrator supplies the
-  local frame, facts, stop line, and output shape
-- `medium-agent`: requires more local reasoning, comparison, or multi-file
-  awareness but still stays one technique
-- `orchestration-required`: the technique is atomic, but safe use requires an
-  outer workflow, approval gate, or tool choreography
-
-This is not a quality score. It describes the execution envelope.
-
-### Risk Posture
-
-`risk_posture` should answer what can go wrong operationally.
-
-Likely values include:
-
-- read-only
-- mutating
-- public-share
-- security-sensitive
-- irreversible
-- approval-required
-- degraded-mode
-- external-evidence
-
-This axis should route safety expectations without moving proof doctrine into
-this repo.
+`risk_posture` answers what can go wrong operationally: read-only, mutating,
+public-share, security-sensitive, irreversible, approval-required,
+degraded-mode, or external-evidence.
 
 ## Relation Topology
 
 Direct `relations` already exist in frontmatter. They should remain bounded
 links, not graph inference.
 
-Future relation guidance should distinguish at least:
-
-- prerequisite
-- follows
-- alternative
-- conflicts-with
-- strengthens
-- narrows
-- generalizes
-- consumes-output-of
-- produces-input-for
-
-Relations should help an orchestrator compose techniques while preserving the
-fact that each technique remains one atomic move.
+Future relation guidance should distinguish prerequisite, follows,
+alternative, conflicts-with, strengthens, narrows, generalizes,
+consumes-output-of, and produces-input-for. Relations should help orchestrators
+compose techniques while preserving each technique as one atomic move.
 
 ## Growth Rules
 
-- Keep the tree deliberate and shallow enough to browse; use trunks and shelves
-  for path architecture, then use facets for selector detail.
-- Add new topology axes as config and generated projections before requiring
-  them in every technique bundle.
+- Keep the tree deliberate and browsable; use facets for selector detail.
+- Promote axes through config, generated projections, tests, and review before
+  requiring them in every bundle.
 - Keep authored bundle meaning stronger than generated classifications.
-- Use scout reports for exploration, then promote axes only after repeated
-  review shows stable value.
 - Do not let one domain become a junk drawer for many substrates.
-- Do not use tags as a substitute for missing topology forever.
+- Do not use tags as a permanent substitute for missing topology.
 - Do not let family become a hidden status or quality score.
 - Treat topology changes as public contract changes that need tests and
   decision notes.
 
 ## Mechanics Interface
 
-Mechanics should use this topology while distilling candidates.
+Mechanics should use this topology before promoting candidates.
 
-Before a candidate becomes a technique bundle, mechanics should be able to name:
-
-- the atomic move
-- the likely domain
-- the likely kind
-- the likely family or reason no family is stable yet
-- the capability class being exercised
-- the substrate being acted on
-- the execution profile target
-- the risk posture
-- nearest related techniques or conflict seams
+Before a candidate becomes a technique bundle, mechanics should be able to name
+the atomic move, likely domain, likely kind, likely family or no-family reason,
+capability class, substrate, execution profile, risk posture, and nearest
+related techniques or conflict seams.
 
 If those cannot be named, keep the candidate in mechanics instead of promoting
 it into canon.
