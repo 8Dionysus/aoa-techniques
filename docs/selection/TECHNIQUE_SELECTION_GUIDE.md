@@ -78,11 +78,7 @@ The current selection family exposes four bounded surfaces:
 - Working sets stay review-backed and bounded to authored review docs.
 - The generated catalog and readers do not become a policy engine, a scoring layer, or a replacement for reading the bundle itself.
 
-## Regeneration
+## Check Route
 
-When selection-family sources change, regenerate and validate with:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_catalog.py`
-- `python scripts/validate_repo.py`
-- `python scripts/release_check.py`
+When selection-family sources change, use [AGENTS](AGENTS.md#validation) for
+regeneration and validation.

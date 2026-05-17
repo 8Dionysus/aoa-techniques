@@ -60,12 +60,4 @@ Example lift does not become:
 
 If a reader needs the actual narrative, commands, or sample payloads, the answer still lives in the example markdown.
 
-## Validation
-
-Regenerate and verify this source class with:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_example_manifest.py`
-- `python scripts/release_check.py`
-- `python scripts/run_tests.py`
-- `python scripts/validate_repo.py`
+Agent validation and regeneration routes live in [AGENTS](AGENTS.md).

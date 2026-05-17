@@ -62,12 +62,4 @@ Checklist lift does not become:
 
 If a reviewer needs the actual checklist wording, the answer still lives in the authored `checks/*.md` file.
 
-## Validation
-
-Regenerate and verify this source class with:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_checklist_manifest.py`
-- `python scripts/release_check.py`
-- `python scripts/run_tests.py`
-- `python scripts/validate_repo.py`
+Agent validation and regeneration routes live in [AGENTS](AGENTS.md).

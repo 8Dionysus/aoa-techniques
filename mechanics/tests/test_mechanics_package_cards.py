@@ -13,7 +13,6 @@ PACKAGE_CARD_HEADINGS = [
     "### Inputs",
     "### Outputs",
     "### Must not claim",
-    "### Validation",
     "### Next route",
 ]
 
@@ -50,12 +49,14 @@ class MechanicsPackageCardTests(unittest.TestCase):
         self.assertIn("This mirrors the AoA center mechanic-card shape", readme)
         self.assertIn("`REQUEST_RECEIPTS.md`", readme)
         self.assertIn("package `PROVENANCE.md`", readme)
+        self.assertIn("Validation commands belong in the nearest `AGENTS.md`", readme)
 
     def test_mechanics_agents_routes_through_local_cards(self) -> None:
         agents = (MECHANICS_ROOT / "AGENTS.md").read_text(encoding="utf-8")
 
         self.assertIn("local `Mechanic card`", agents)
         self.assertIn("Package README cards use `Local owns`, not `Center owns`", agents)
+        self.assertIn("Package README cards do not carry validation command lanes", agents)
         self.assertIn("`REQUEST_RECEIPTS.md`", agents)
         self.assertIn("`PROVENANCE.md`", agents)
 

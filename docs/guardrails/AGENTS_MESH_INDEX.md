@@ -27,9 +27,12 @@ safer by making local authority and local limits visible.
 
 ## Migration Posture
 
-The generated mirror reports both canonical and migration cards. The intended
-direction is to reduce migration cards over time, starting with high-risk
-mechanic packages, generated surfaces, scripts, tests, and technique trunks.
+The generated mirror currently reports zero migration cards. All discovered
+cards are canonical, and `config/agents_mesh.json` keeps migration disabled.
+
+If a future change needs temporary migration status, make the exception
+explicit, name the cleanup route, and restore the zero-migration posture before
+it becomes background debt.
 
 ## Release Posture
 

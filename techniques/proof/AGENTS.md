@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Guidance for coding agents and humans working under `techniques/proof/`.
+## Applies to
 
-## Purpose
+This card applies to `techniques/proof/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 This trunk stores technique bundles that support validation, review evidence,
 summary integrity, owner-truth checks, and related proof-facing practice.
@@ -44,12 +47,26 @@ Current shelves:
   release governance, cross-repo mirror co-ownership, skill activation,
   checkpoint automation, or closeout automation.
 
+## Read before editing
+
+Read:
+
+1. repository root `AGENTS.md`
+2. `techniques/AGENTS.md`
+3. `docs/TECHNIQUE_TREE_CONTRACT.md`
+4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
+
 ## Trunk Rules
+
+Keep this card as tree route guidance for the trunk. Technique bundle meaning
+stays in each `TECHNIQUE.md`; path placement alone does not change frontmatter
+truth or owner authority.
+
+## Boundaries
 
 Keep proof-facing techniques narrow, portable, and explicit about what their
 evidence does and does not prove.
-
-## Boundary
 
 Do not widen a proof technique into an eval suite, release gate, runtime
 doctor, owner-truth law, security policy, or generic testing doctrine.
@@ -58,8 +75,6 @@ If the object becomes a concrete reusable eval bundle, route it to `aoa-evals`.
 If it becomes an execution workflow or operational runbook, route it to the
 owning repo or `aoa-skills`. If it becomes AoA constitutional direction, route
 it to `Agents-of-Abyss`.
-
-## Hard NO
 
 Do not:
 
@@ -91,3 +106,9 @@ After changing proof-trunk technique bundles, run:
 
 Run `python scripts/release_check.py` when paths, generated reader surfaces, or
 catalog outputs change.
+
+## Closeout
+
+Report the trunk, shelf, and bundle paths changed; whether path,
+frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
+skipped; and any remaining owner-route risk.

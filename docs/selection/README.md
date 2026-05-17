@@ -49,11 +49,4 @@ Capsule route:
 2. [Technique Capsules](../readers/runtime/TECHNIQUE_CAPSULES.md)
 3. [technique capsules min JSON](../../generated/technique_capsules.min.json)
 
-## Validation
-
-Use the narrow builder for the changed family, then run:
-
-```bash
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Agent read order, validation, and closeout live in [AGENTS](AGENTS.md).

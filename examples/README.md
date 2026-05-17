@@ -32,9 +32,5 @@ Each root example names:
 - the boundary that keeps the example illustrative
 - the local checks or AGENTS validation path to use after related edits
 
-## Before Editing
-
-1. Identify the source surface that the example illustrates.
-2. Check whether the example belongs in a technique bundle, mechanic, or sibling repository instead.
-3. If the example belongs to a mechanic or technique bundle, edit the owning source path.
-4. Use [AGENTS.md#validation](AGENTS.md#validation) for local checks.
+Agent read order, placement checks, validation, and closeout live in
+[AGENTS](AGENTS.md).

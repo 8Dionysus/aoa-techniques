@@ -21,8 +21,4 @@ The active package reaches this district through
 - adding a real source receipt after active provenance names its route
 - auditing why raw inventory is empty for this package
 
-## Stop-Lines
-
-- Do not use raw legacy files as the normal first route for current edits.
-- Do not make a raw file the only place current active behavior lives.
-- Do not create placeholder source receipts.
+Agent stop-lines, validation, and closeout live in [AGENTS](AGENTS.md).

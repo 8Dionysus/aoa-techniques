@@ -1,18 +1,9 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/distillation/`.
-
 ## Applies to
 
 This card applies to the Distillation mechanics package and every nested path
 under it until a nearer `AGENTS.md` narrows the lane.
-
-## Read before editing
-
-1. Repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/distillation/README.md`
-4. The nearest part README, or `PROVENANCE.md` when touching lineage
 
 ## Role
 
@@ -34,7 +25,14 @@ technique promotion.
 - `incoming/` wave packets and sibling-repo donor notes are evidence surfaces;
   they do not become active law by appearing here.
 
-## Editing posture
+## Read before editing
+
+1. Repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/distillation/README.md`
+4. The nearest part README, or `PROVENANCE.md` when touching lineage
+
+## Boundaries
 
 - Keep candidate ledgers distinct from promoted technique bundles.
 - If a candidate becomes a stable reusable practice with inputs, outputs, risks,
@@ -45,7 +43,12 @@ technique promotion.
   worldview.
 - Keep sibling-repo routes as provenance, not owner transfer.
 
-## Verify
+- Do not let this local card override authored source surfaces, schemas,
+  builders, validators, or sibling owner truth.
+- Do not claim skill execution, proof verdict, runtime, routing, memory,
+  playbook, or owner-acceptance authority from this package.
+
+## Validation
 
 For Distillation topology changes:
 

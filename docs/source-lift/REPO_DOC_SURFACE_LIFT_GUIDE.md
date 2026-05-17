@@ -93,12 +93,4 @@ Not part of this current public route/canon/status wave:
 
 The meaning remains in the authored docs themselves.
 
-## Validation
-
-Regenerate and verify this source class with:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_repo_doc_surface_manifest.py`
-- `python scripts/release_check.py`
-- `python scripts/run_tests.py`
-- `python scripts/validate_repo.py`
+Agent validation and regeneration routes live in [AGENTS](AGENTS.md).

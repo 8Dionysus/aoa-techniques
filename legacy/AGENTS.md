@@ -32,12 +32,15 @@ For technique-tree migration receipts, also read
 
 - Keep this district public-safe. Do not add secrets, private transcripts,
   unreduced project dumps, host details, or raw logs.
+- Do not start routine technique edits in root legacy when the current route
+  answers the task.
 - Do not move active technique bundles through `legacy/`. Move published
   bundles directly from their old authored path to their new authored path, and
   preserve the accounting here as a receipt.
 - Do not store current generated outputs here as if they were authority.
 - Do not duplicate mechanic-local legacy; use `mechanics/<slug>/legacy/` when
   the lineage belongs to one mechanic.
+- Do not add placeholder receipts just to make the directory look full.
 - Do not add raw, archive, or receipt material without indexing it in
   `INDEX.md` and naming the active route, owner route, or explicit hold status
   it pressures.

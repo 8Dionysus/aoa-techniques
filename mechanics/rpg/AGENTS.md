@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Route card for the `aoa-techniques/mechanics/rpg/` package.
+## Applies to
 
-## Purpose
+This card applies to `mechanics/rpg/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 `mechanics/rpg/` owns the `aoa-techniques` side of RPG-shaped practice
 pressure: feat reflection, progression language, quest overlays, and owner
@@ -36,7 +39,7 @@ It does not own:
   `abyss-stack`
 - technique bundle meaning, which belongs in `techniques/**/TECHNIQUE.md`
 
-## Start Here
+## Read before editing
 
 1. Read the repository root `AGENTS.md`, then `mechanics/AGENTS.md`.
 2. Read `README.md`, `DIRECTION.md`, `PARTS.md`, and `PROVENANCE.md`.
@@ -45,7 +48,7 @@ It does not own:
 5. When promoting a reusable practice, route it through
    `techniques/**/TECHNIQUE.md` and the normal canonical review path.
 
-## Local Law
+## Boundaries
 
 - RPG language here is a reader and reflection aid. It must not become hidden
   ontology, rank, permission, routing authority, proof authority, or runtime
@@ -58,7 +61,12 @@ It does not own:
 - Stable local practice must become a bounded technique bundle before it can
   claim reusable canon.
 
-## Verify
+- Do not let this local card override authored source surfaces, schemas,
+  builders, validators, or sibling owner truth.
+- Do not claim skill execution, proof verdict, runtime, routing, memory,
+  playbook, or owner-acceptance authority from this package.
+
+## Validation
 
 After changing this package, run:
 
@@ -73,3 +81,9 @@ If nested AGENTS coverage changes, also run:
 ```bash
 python scripts/validate_nested_agents.py
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

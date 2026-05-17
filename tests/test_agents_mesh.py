@@ -30,11 +30,11 @@ class AgentsMeshTests(unittest.TestCase):
             args = (script, "--check") if script.endswith("build_agents_mesh_index.py") else (script,)
             self.run_repo_script(*args)
 
-    def test_generated_mesh_records_canonical_and_migration_cards(self) -> None:
+    def test_generated_mesh_records_only_canonical_cards(self) -> None:
         payload = json.loads((REPO_ROOT / "generated" / "agents_mesh.min.json").read_text())
         self.assertEqual("aoa_techniques_agents_mesh_index_v1", payload["schema_version"])
-        self.assertGreaterEqual(payload["counts"]["canonical"], 20)
-        self.assertGreater(payload["counts"]["migration"], 0)
+        self.assertEqual(payload["counts"]["cards"], payload["counts"]["canonical"])
+        self.assertEqual(0, payload["counts"]["migration"])
 
         cards_by_path = {card["path"]: card for card in payload["cards"]}
         self.assertEqual("canonical", cards_by_path["AGENTS.md"]["shape_status"])
@@ -48,7 +48,7 @@ class AgentsMeshTests(unittest.TestCase):
             cards_by_path["docs/guardrails/AGENTS.md"]["shape_status"],
         )
         self.assertIn("mechanics/agon/AGENTS.md", cards_by_path)
-        self.assertEqual("migration", cards_by_path["mechanics/agon/AGENTS.md"]["shape_status"])
+        self.assertEqual("canonical", cards_by_path["mechanics/agon/AGENTS.md"]["shape_status"])
 
     def test_agents_mesh_config_names_design_sources(self) -> None:
         config = json.loads((REPO_ROOT / "config" / "agents_mesh.json").read_text())
@@ -58,6 +58,7 @@ class AgentsMeshTests(unittest.TestCase):
             "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
             config["authority_ref"],
         )
+        self.assertFalse(config["migration_allowed"])
 
 
 if __name__ == "__main__":

@@ -1,7 +1,5 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/distillation/parts/`.
-
 ## Applies to
 
 This card applies to Distillation active parts until a nearer `AGENTS.md`
@@ -12,7 +10,17 @@ narrows the lane.
 Each child directory owns one active Distillation part. Part READMEs are current
 operating surfaces, not raw donor archives.
 
-## Editing posture
+## Read before editing
+
+Read:
+
+1. repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/distillation/AGENTS.md`
+4. `mechanics/distillation/PARTS.md`
+5. the touched part README, schema, example, script, report, or test
+
+## Boundaries
 
 - Keep part changes bounded to that part's role.
 - Update `../PARTS.md` when a part is added, renamed, or retired.
@@ -22,9 +30,15 @@ operating surfaces, not raw donor archives.
 - Do not promote a candidate into `techniques/` from inside a part without the
   normal bundle evidence and validation path.
 
-## Verify
+## Validation
 
 ```bash
 python -m unittest discover -s mechanics/distillation/tests
 python scripts/validate_repo.py
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

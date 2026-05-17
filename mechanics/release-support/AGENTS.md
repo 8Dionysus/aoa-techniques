@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Route card for `mechanics/release-support/`.
+## Applies to
 
-## Purpose
+This card applies to `mechanics/release-support/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 This package owns the `aoa-techniques` side of Release-support: installation
 practice and release ritual practice that may feed future technique canon.
@@ -12,7 +15,7 @@ approval, operator consent, sibling acceptance, proof verdicts, runtime
 deployment, rollback execution, profile projection, route ABI, SDK
 compatibility, stats summaries, or technique status changes.
 
-## Start here
+## Read before editing
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
@@ -20,7 +23,7 @@ compatibility, stats summaries, or technique status changes.
 4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
 5. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
 
-## Local law
+## Boundaries
 
 - Keep release-support here technique-layered: reusable practice notes, not
   release authority.
@@ -32,7 +35,7 @@ compatibility, stats summaries, or technique status changes.
 - If a stable reusable practice emerges, route it into `techniques/` through
   the normal technique review path.
 
-## Verify
+## Validation
 
 Use the root validation path after changes:
 
@@ -40,3 +43,9 @@ Use the root validation path after changes:
 python scripts/validate_repo.py
 python scripts/run_tests.py
 ```
+
+## Closeout
+
+Report the mechanic package, part, legacy surface, or helper changed;
+whether source, generated, schema, example, or test surfaces moved; checks run;
+checks skipped; and the next owner route.

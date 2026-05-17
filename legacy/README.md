@@ -25,11 +25,13 @@ the active route.
 
 ## Layout
 
-- `raw/`: preserved public-safe source packets or pre-prune snapshots.
+- `raw/`: preserved public-safe source packets or pre-prune snapshots; agent
+  edits use [raw/AGENTS](raw/AGENTS.md).
 - `archive/`: retired historical surfaces whose current route now lives
-  elsewhere.
+  elsewhere; agent edits use [archive/AGENTS](archive/AGENTS.md).
 - `receipts/`: short dated accounting for path migrations, compactions, and
-  root-wide preservation moves.
+  root-wide preservation moves; agent edits use
+  [receipts/AGENTS](receipts/AGENTS.md).
 - `INDEX.md`: inventory and route map for every preserved item.
 - `AGENTS.md`: local agent guidance and validation lane.
 
@@ -43,15 +45,4 @@ Material belongs here only when all of this is true:
 - it names an active route, owner route, or explicit hold status
 - it is indexed in `INDEX.md`
 
-## Stop-lines
-
-- Do not use root legacy as the first route for routine technique edits.
-- Do not move active technique bundles into root legacy during tree migration.
-- Do not put secrets, private transcripts, raw logs, or unreduced project dumps
-  here.
-- Do not let archived generated output outrank the generator or authored source.
-- Do not add placeholder receipts just to make the directory look full.
-
-## Validation
-
-Use the validation lane in [legacy/AGENTS.md](AGENTS.md#validation).
+Agent stop-lines, validation, and closeout live in [AGENTS](AGENTS.md).

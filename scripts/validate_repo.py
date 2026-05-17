@@ -1222,8 +1222,12 @@ def validate_questbook_source_topology(repo_root: Path) -> None:
 
     for lane in QUEST_SOURCE_LANES:
         lane_dir = quests_dir / lane
-        if lane_dir.exists() and not (lane_dir / "README.md").is_file():
-            fail(f"{questbook_relative(QUESTS_PATH / lane / 'README.md')}: missing required file")
+        if lane_dir.exists():
+            for filename in ("README.md", "AGENTS.md"):
+                if not (lane_dir / filename).is_file():
+                    fail(
+                        f"{questbook_relative(QUESTS_PATH / lane / filename)}: missing required file"
+                    )
 
     for path in sorted(quests_dir.rglob("*.yaml")):
         if not path.is_file():

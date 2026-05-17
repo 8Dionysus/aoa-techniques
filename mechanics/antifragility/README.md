@@ -56,10 +56,6 @@ movement summaries, and `abyss-stack` owns runtime recovery behavior.
 - memory, stats, playbook, or routing truth
 - automatic technique promotion
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

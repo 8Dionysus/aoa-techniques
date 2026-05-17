@@ -15,16 +15,5 @@ Current source split:
 - `captured`: still-open technique-layer obligations whose owner route and
   acceptance evidence are visible enough to preserve.
 
-## Promotion Rule
-
-Promote a quest only when the next action, owner route, and acceptance evidence
-can be read without raw session history. Moving state requires moving the file
-to the matching lifecycle directory and updating the YAML `state` field in the
-same diff.
-
-## Stop-lines
-
-- Do not turn this lane into a generic backlog.
-- Do not treat source quest existence as technique promotion.
-- Do not let generated quest views become source truth.
-
+Agent edits, promotion limits, lifecycle move rules, validation, and closeout
+live in [techniques/AGENTS](AGENTS.md).

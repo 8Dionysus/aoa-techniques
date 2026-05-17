@@ -18,14 +18,11 @@ A swarm still follows the Spark lane contract:
 - no broad validation unless explicitly assigned
 - every lane ends as `done` or `handoff`
 
-## Read Before Launch
+## Launch Context
 
-- root `AGENTS.md`
-- `.agents/AGENTS.md`
-- `.agents/spark/README.md`
-- `.agents/spark/AGENTS.md`
-- `.agents/spark/registry.json`
-- scenario `README.md` and `PROMPT.md` for every assigned lane
+Use [AGENTS](AGENTS.md#read-before-editing) for the Spark read order before
+launching a swarm. Then read `registry.json` and the scenario `README.md` plus
+`PROMPT.md` for every assigned lane.
 
 ## Roles
 
@@ -72,9 +69,5 @@ Do not widen into another scenario.
 Report files read, files changed, validation run, skipped checks, and risk.
 ```
 
-## Verify
-
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-```
+Use [AGENTS](AGENTS.md#validation) for the Spark validation lane and report any
+checks that the swarm intentionally skips.

@@ -51,10 +51,6 @@ evidence before it can be treated as accepted use.
 - generated or ledger authority over authored bundle meaning
 - donor import ownership, which routes to Distillation
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

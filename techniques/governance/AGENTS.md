@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Guidance for coding agents and humans working under `techniques/governance/`.
+## Applies to
 
-## Purpose
+This card applies to `techniques/governance/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 `governance/` stores technique bundles whose primary placement question is how
 choices, approvals, control posture, or automation boundaries stay explicit
@@ -31,7 +34,23 @@ Current shelves:
   obsolescence posture visible before a practice becomes durable, stays active,
   or routes toward owner review
 
+## Read before editing
+
+Read:
+
+1. repository root `AGENTS.md`
+2. `techniques/AGENTS.md`
+3. `docs/TECHNIQUE_TREE_CONTRACT.md`
+4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
+
 ## Trunk Rules
+
+Keep this card as tree route guidance for the trunk. Technique bundle meaning
+stays in each `TECHNIQUE.md`; path placement alone does not change frontmatter
+truth or owner authority.
+
+## Boundaries
 
 Keep the governance object explicit:
 
@@ -46,8 +65,6 @@ playbook design, security framework authority, scheduler doctrine, queue
 ownership, broad orchestration governance, hidden automation governance, skill
 acceptance, skill activation, proof verdict authority, memory truth, or
 Method-growth law.
-
-## Boundary
 
 Use `docs/TECHNIQUE_TREE_CONTRACT.md` before adding another shelf here.
 
@@ -64,3 +81,9 @@ After changing governance techniques, run:
 
 Run `python scripts/release_check.py` when generated catalogs or reader
 surfaces changed.
+
+## Closeout
+
+Report the trunk, shelf, and bundle paths changed; whether path,
+frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
+skipped; and any remaining owner-route risk.

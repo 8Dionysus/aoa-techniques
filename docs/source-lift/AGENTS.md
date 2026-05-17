@@ -38,7 +38,18 @@ or `docs/readers/review/README.md`.
 
 ## Validation
 
-Use the narrow builder for the changed family, then:
+Choose the matching narrow builder for the changed family first:
+
+```bash
+python scripts/build_section_manifest.py
+python scripts/build_checklist_manifest.py
+python scripts/build_example_manifest.py
+python scripts/build_evidence_note_manifest.py
+python scripts/build_repo_doc_surface_manifest.py
+python scripts/build_kag_export.py
+```
+
+Then run:
 
 ```bash
 python scripts/validate_repo.py

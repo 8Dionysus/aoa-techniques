@@ -77,12 +77,4 @@ Not part of this wave:
 
 The meaning remains in the source markdown.
 
-## Validation
-
-Regenerate and verify this source class with:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/build_section_manifest.py`
-- `python scripts/release_check.py`
-- `python scripts/run_tests.py`
-- `python scripts/validate_repo.py`
+Agent validation and regeneration routes live in [AGENTS](AGENTS.md).

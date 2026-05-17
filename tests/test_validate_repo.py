@@ -3113,7 +3113,9 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             "quests/README.md",
             "quests/AGENTS.md",
             "quests/techniques/README.md",
+            "quests/techniques/AGENTS.md",
             "quests/agon/README.md",
+            "quests/agon/AGENTS.md",
         ):
             write_text(
                 repo_root / relative_path,
@@ -3158,6 +3160,18 @@ class ValidateQuestbookSurfaceTests(unittest.TestCase):
             self.write_valid_surface(repo_root)
 
             validate_repo.validate_questbook_surface(repo_root)
+
+    def test_missing_lane_agents_fails(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir) / "aoa-techniques"
+            self.write_valid_surface(repo_root)
+            (repo_root / "quests" / "agon" / "AGENTS.md").unlink()
+
+            with self.assertRaisesRegex(
+                validate_repo.ValidationError,
+                "quests/agon/AGENTS.md: missing required file",
+            ):
+                validate_repo.validate_questbook_surface(repo_root)
 
     def test_additive_second_wave_quest_is_projected(self) -> None:
         with TemporaryDirectory() as temp_dir:

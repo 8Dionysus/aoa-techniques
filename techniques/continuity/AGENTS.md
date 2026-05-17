@@ -1,8 +1,11 @@
 # AGENTS.md
 
-Guidance for coding agents and humans working under `techniques/continuity/`.
+## Applies to
 
-## Purpose
+This card applies to `techniques/continuity/` and every descendant unless a nearer
+`AGENTS.md` narrows the path.
+
+## Role
 
 `continuity/` stores technique bundles whose primary placement question is how
 working context, review truth, handoff state, donor material, or capability
@@ -25,7 +28,23 @@ Current shelves:
   contracts, progression evidence deltas, and adjunct quest overlays across
   session closeout without granting memory, playbook, or progression authority
 
+## Read before editing
+
+Read:
+
+1. repository root `AGENTS.md`
+2. `techniques/AGENTS.md`
+3. `docs/TECHNIQUE_TREE_CONTRACT.md`
+4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
+5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
+
 ## Trunk Rules
+
+Keep this card as tree route guidance for the trunk. Technique bundle meaning
+stays in each `TECHNIQUE.md`; path placement alone does not change frontmatter
+truth or owner authority.
+
+## Boundaries
 
 Keep the continuity object explicit:
 
@@ -36,8 +55,6 @@ Keep the continuity object explicit:
 
 Do not turn a continuity technique into a live skill, phase system, memory
 policy, or review verdict contract.
-
-## Boundary
 
 Use `docs/TECHNIQUE_TREE_CONTRACT.md` before adding another shelf here.
 
@@ -54,3 +71,9 @@ After changing continuity techniques, run:
 
 Run `python scripts/release_check.py` when generated catalogs or reader
 surfaces changed.
+
+## Closeout
+
+Report the trunk, shelf, and bundle paths changed; whether path,
+frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
+skipped; and any remaining owner-route risk.

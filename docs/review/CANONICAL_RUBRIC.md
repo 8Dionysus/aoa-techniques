@@ -82,4 +82,5 @@ Concrete reasons a future technique might be `export_ready: false`:
 - Do not treat `relations` as a graph design surface yet.
 - Do not treat `export_ready` as permission for AoA, graph, or vector export work.
 - Do not treat `export_ready` as a default-use selector while the field remains uniformly true across the current corpus.
-- If catalog output drifts from markdown, fix markdown or rerun `python scripts/build_catalog.py`; do not hand-edit generated files.
+- If catalog output drifts from markdown, fix markdown or use the validation
+  route in [AGENTS](AGENTS.md); do not hand-edit generated files.

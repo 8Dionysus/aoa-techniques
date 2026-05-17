@@ -8,6 +8,11 @@ The format is intentionally simple and human-first.
 
 ### Added
 
+- added canonical `AGENTS.md` cards for root legacy subdistricts
+  (`legacy/raw`, `legacy/archive`, `legacy/receipts`) and quest lanes
+  (`quests/techniques`, `quests/agon`), with mesh config and validation
+  coverage so nearby README files stay descriptive instead of carrying agent
+  command law
 - expanded `.agents/spark/` into a registry-backed Codex Spark lane for
   technique-canon work, with technique-specific scenarios, result/handoff
   templates, schemas, validator, tests, release-check wiring, and a decision
@@ -34,6 +39,14 @@ The format is intentionally simple and human-first.
   [DESIGN](DESIGN.md), [DESIGN.AGENTS](DESIGN.AGENTS.md), [ROADMAP](ROADMAP.md),
   [CONTRIBUTING](CONTRIBUTING.md), and [QUESTBOOK](QUESTBOOK.md) so root stays
   link-driven, owner-routed, and free of avoidable duplicated doctrine
+- normalized every discovered local `AGENTS.md` card to the canonical mesh
+  shape, registered all `87` cards as canonical, disabled migration drift in
+  `config/agents_mesh.json`, and recorded the closure decision
+- moved agent-only read order, validation command lanes, closeout expectations,
+  and editing stop-lines from neighboring README/guide surfaces into the
+  nearest `AGENTS.md`, including the mechanic package-card standard, Spark
+  lane, examples, root legacy, source-lift, review, selection, decisions, and
+  guardrail districts
 - slimmed old root Markdown entry surfaces by turning `README.md` back into a
   compact public front door and reducing `ROADMAP.md` to live repo direction;
   detailed mechanic runbooks, generated readers, semantic/shadow reviews, tree

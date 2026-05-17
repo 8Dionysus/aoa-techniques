@@ -53,10 +53,6 @@ and each sibling owner keeps acceptance of its own operational truth.
 - automatic technique promotion
 - deprecation without source-linked evidence
 
-### Validation
-
-Use [AGENTS](AGENTS.md#verify) for the package validation lane.
-
 ### Next route
 
 Start from [DIRECTION](DIRECTION.md), [PARTS](PARTS.md), and the relevant part

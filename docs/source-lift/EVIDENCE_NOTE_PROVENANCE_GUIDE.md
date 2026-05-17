@@ -127,12 +127,4 @@ Not part of this wave:
 This guide remains the authoritative contract doc for both the evidence-note
 manifest family and `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md`.
 
-Regenerate and verify this source class with:
-
-```bash
-python -m pip install -r requirements-dev.txt
-python scripts/build_evidence_note_manifest.py
-python scripts/release_check.py
-python scripts/run_tests.py
-python scripts/validate_repo.py
-```
+Agent validation and regeneration routes live in [AGENTS](AGENTS.md).

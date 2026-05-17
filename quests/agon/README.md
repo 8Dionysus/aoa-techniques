@@ -20,10 +20,5 @@ point to this README for defaults, but each source still needs non-empty
 `Quest`, `Owner Route`, `Next Action`, `Acceptance Evidence`, and `Stop-lines`
 sections.
 
-## Stop-lines
-
-- Do not use Agon quests to define live move law, arena authority, verdicts, or
-  owner acceptance.
-- Do not promote requested-only candidates through this lane.
-- Do not collapse Agon candidate follow-through into root roadmap history.
-
+Agent edits, Agon stop-lines, validation, and closeout live in
+[agon/AGENTS](AGENTS.md).

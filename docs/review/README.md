@@ -43,13 +43,4 @@ Semantic and caution route:
 3. [Review Readers](../readers/review/README.md)
 4. [Distillation Review Packet Atlas](../../mechanics/distillation/parts/technique-reform-ingress/reviews/README.md)
 
-## Validation
-
-Use the narrow affected builder when a generated review companion changes, then
-run:
-
-```bash
-python -m unittest tests.test_validate_repo
-python -m unittest tests.test_docs_surface_guardrails
-python scripts/validate_repo.py
-```
+Agent read order, validation, and closeout live in [AGENTS](AGENTS.md).

@@ -113,7 +113,7 @@ Use `mechanics/<slug>/ROADMAP.md` for package-local future pressure.
 Each `mechanics/<slug>/README.md` is an agent-operable local card. It should let
 a reader answer when to use the mechanic, what this repository owns, which
 stronger owners keep final truth, what may enter, what may leave, what must not
-be claimed, how to validate the local route, and where to go next.
+be claimed, and where to go next.
 
 Use these headings in package READMEs:
 
@@ -126,7 +126,6 @@ Use these headings in package READMEs:
 | `### Inputs` | material that may enter this mechanic |
 | `### Outputs` | material that may leave without becoming canon by itself |
 | `### Must not claim` | stop-lines that keep the package below stronger owners |
-| `### Validation` | where to find exact checks for this package |
 | `### Next route` | the next active surface, provenance bridge, or owner route |
 
 This mirrors the AoA center mechanic-card shape, but adapts the authority. The
@@ -134,6 +133,8 @@ center can say what the center owns. This repository says what the local
 technique-canon organ owns, then routes center law through
 `REQUEST_RECEIPTS.md`, package `PROVENANCE.md`, or a sibling owner only when
 that bridge is relevant.
+
+Validation commands belong in the nearest `AGENTS.md`, not in the package card.
 
 ## Package Roadmap Standard
 

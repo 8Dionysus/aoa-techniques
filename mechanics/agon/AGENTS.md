@@ -1,18 +1,9 @@
 # AGENTS.md
 
-Route card for `aoa-techniques/mechanics/agon/`.
-
 ## Applies to
 
 This card applies to the Agon mechanics package and every nested path under it
 until a nearer `AGENTS.md` narrows the lane.
-
-## Read before editing
-
-1. Repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/agon/README.md`
-4. The nearest part README, or `PROVENANCE.md` when touching legacy lineage
 
 ## Role
 
@@ -29,7 +20,14 @@ ToS canon.
 - Part-local `config/`, `generated/`, `schemas/`, `examples/`, `scripts/`,
   `tests/`, and recurrence manifests own current Agon technical artifacts.
 
-## Editing posture
+## Read before editing
+
+1. Repository root `AGENTS.md`
+2. `mechanics/AGENTS.md`
+3. `mechanics/agon/README.md`
+4. The nearest part README, or `PROVENANCE.md` when touching legacy lineage
+
+## Boundaries
 
 - Do not edit raw wave receipts to change current behavior.
 - If a raw source changes current behavior, update the relevant active part
@@ -37,7 +35,7 @@ ToS canon.
 - Keep requested candidates distinct from promoted technique bundles.
 - Keep cross-repo boundaries explicit in every new route.
 
-## Verify
+## Validation
 
 For Agon technique binding candidates:
 

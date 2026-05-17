@@ -10,8 +10,11 @@ ROOT_LEGACY_FILES = (
     "legacy/AGENTS.md",
     "legacy/README.md",
     "legacy/INDEX.md",
+    "legacy/raw/AGENTS.md",
     "legacy/raw/README.md",
+    "legacy/archive/AGENTS.md",
     "legacy/archive/README.md",
+    "legacy/receipts/AGENTS.md",
     "legacy/receipts/README.md",
 )
 
@@ -57,8 +60,8 @@ class RootLegacyTopologyTestCase(unittest.TestCase):
         self.assertIn("legacy/archive/AGENTS_ROOT_REFERENCE.md", index)
 
         expected_files = {
-            "raw": ["README.md"],
-            "archive": ["AGENTS_ROOT_REFERENCE.md", "README.md"],
+            "raw": ["AGENTS.md", "README.md"],
+            "archive": ["AGENTS.md", "AGENTS_ROOT_REFERENCE.md", "README.md"],
             "receipts": [
                 "2026-05-04-capability-boundary-tree-pilot.md",
                 "2026-05-04-capability-registry-tree-pilot.md",
@@ -88,6 +91,7 @@ class RootLegacyTopologyTestCase(unittest.TestCase):
                 "2026-05-05-skill-discovery-tree-pilot.md",
                 "2026-05-05-skill-support-tree-pilot.md",
                 "2026-05-05-tool-gateway-tree-pilot.md",
+                "AGENTS.md",
                 "README.md",
             ],
         }
