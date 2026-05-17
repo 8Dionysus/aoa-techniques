@@ -95,7 +95,7 @@ Restore a bounded skill-availability surface after context compaction so the ses
 - post-compaction capability state remains more reviewable than silent prompt stuffing
 - the technique stays smaller than full context reconstruction, memory recall, or product-width skill management
 
-Relationship to adjacent techniques: unlike [AOA-T-0012](../../../docs/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../docs/fragmented-agent-context/TECHNIQUE.md), this technique does not own how context or skill files are authored and composed before runtime. Unlike [AOA-T-0027](../../../docs/cross-agent-skill-propagation/TECHNIQUE.md), it does not fan one canonical skill source out to many managed targets. Unlike [AOA-T-0040](../../../docs/skill-vs-command-boundary/TECHNIQUE.md), it does not define what a skill is; it assumes bounded skill artifacts already exist and keeps them reloadable after compaction.
+Relationship to adjacent techniques: unlike [AOA-T-0012](../../../instruction/instruction-surface/deterministic-context-composition/TECHNIQUE.md) and [AOA-T-0030](../../../instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md), this technique does not own how context or skill files are authored and composed before runtime. Unlike [AOA-T-0027](../../../instruction/instruction-surface/cross-agent-skill-propagation/TECHNIQUE.md), it does not fan one canonical skill source out to many managed targets. Unlike [AOA-T-0040](../../../instruction/capability-boundary/skill-vs-command-boundary/TECHNIQUE.md), it does not define what a skill is; it assumes bounded skill artifacts already exist and keeps them reloadable after compaction.
 
 ## Risks
 

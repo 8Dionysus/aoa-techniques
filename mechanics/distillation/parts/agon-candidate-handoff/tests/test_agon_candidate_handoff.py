@@ -269,6 +269,44 @@ def test_builder_rejects_missing_gate_card() -> None:
         builder.validate_config(config)
 
 
+def test_builder_rejects_null_gate_card() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_card = next(
+        entry
+        for entry in config["entries"]
+        if "gate_card" in entry and "bundle_readiness_review" in entry
+    )
+    with_card["gate_card"] = None
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "gate_card must be a non-empty string"):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_gate_card_directory_escape() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_card = next(
+        entry
+        for entry in config["entries"]
+        if "gate_card" in entry and "bundle_readiness_review" in entry
+    )
+    with_card["gate_card"] = (
+        "mechanics/distillation/parts/agon-candidate-handoff/gates/../README.md"
+    )
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(builder.ValidationError, "handoff gates directory"):
+        builder.validate_config(config)
+
+
 def test_builder_rejects_gate_card_on_hold_lane() -> None:
     builder = load_builder()
     config = json.loads(
@@ -335,6 +373,22 @@ def test_builder_rejects_missing_gate_example() -> None:
     )
     case = unittest.TestCase()
     with case.assertRaisesRegex(builder.ValidationError, "gate_example path does not exist"):
+        builder.validate_config(config)
+
+
+def test_builder_rejects_null_gate_example() -> None:
+    builder = load_builder()
+    config = json.loads(
+        (PART_ROOT / "config" / "agon_candidate_handoff.source.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    with_example = next(entry for entry in config["entries"] if "gate_example" in entry)
+    with_example["gate_example"] = None
+    case = unittest.TestCase()
+    with case.assertRaisesRegex(
+        builder.ValidationError, "gate_example must be a non-empty string"
+    ):
         builder.validate_config(config)
 
 

@@ -21,7 +21,7 @@
 ## Default-use rationale
 
 - this is the right canonical default when the main problem is preserving a visible planning ladder before implementation starts
-- it remains narrower than [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report
+- it remains narrower than [AOA-T-0001](../../../agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) because it stops before apply, verify, and report
 - it remains narrower than [AOA-T-0049](../../dependency-aware-task-graph/TECHNIQUE.md) and [AOA-T-0050](../ready-work-from-blocker-graph/TECHNIQUE.md) because it does not author blocker graphs, compute ready frontiers, rank work, or coordinate execution
 - it is now the natural default when a bounded workflow needs requirements, design, and tasks to remain distinct and traceable without adopting a full SDD, agent-platform, approval, or implementation framework
 

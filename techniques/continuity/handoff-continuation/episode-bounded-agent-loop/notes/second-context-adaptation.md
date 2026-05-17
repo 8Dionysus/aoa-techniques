@@ -24,7 +24,7 @@
 
 ## Risks introduced by adaptation
 
-- the pattern can collapse into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the long-run segmentation seam from the internal workflow of each episode
+- the pattern can collapse into [AOA-T-0001](../../../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories stop separating the long-run segmentation seam from the internal workflow of each episode
 - teams may over-associate the pattern with a total autonomous harness because the donor also bundles mission files, task integrity rules, budgets, and supervision
 - the public bundle could drift into [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md) or [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md) if checkpoint-artifact shape or episode startup ritual becomes the real center of gravity
 

@@ -441,8 +441,9 @@ The format is intentionally simple and human-first.
 - ran the `AOA-T-0032 context-report-for-ci` exemplar promotion-evidence
   sprint, keeping the bundle `promoted`, recording adjacent public
   context-report/token-budget/repo-packing/LLM-ready-docs lanes as searched
-  but insufficient, and narrowing the next honest search shape without
-  changing status, frontmatter, generated surfaces, or technique meaning
+  but insufficient, narrowing the next honest search shape without changing
+  status, frontmatter, or technique meaning, and refreshing the generated
+  evidence-note manifest surfaces
 - closed the template modernization long pass across all `107` current bundles,
   preserving the `proof/skill-support` pilot as the only source-shape repair
   cohort, recording `104` held-no-repair rows, accepting no new

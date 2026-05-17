@@ -28,7 +28,7 @@
 - external reinforcement: SpecForge-Agent keeps `requirements.md`, `design.md`, and `tasks.md` as explicit workflow artifacts, generates design from approved requirements, generates tasks from design plus requirements, and tests the sequence before implementation
 
 ## Risks introduced by adaptation
-- the pattern can collapse back into [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts
+- the pattern can collapse back into [AOA-T-0001](../../../agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) if repositories cannot explain what this ladder adds before apply/verify/report starts
 - teams may over-associate the ladder with a whole methodology because the donor also bundles steering, validation, templates, and multi-agent support
 - the public bundle could drift into command or template doctrine if layer boundaries stop being the real center of gravity
 

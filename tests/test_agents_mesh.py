@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -59,6 +60,18 @@ class AgentsMeshTests(unittest.TestCase):
             config["authority_ref"],
         )
         self.assertFalse(config["migration_allowed"])
+
+    def test_agents_mesh_validator_ignores_untracked_top_level_dirs(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="tmp-agents-mesh-", dir=REPO_ROOT):
+            result = subprocess.run(
+                (sys.executable, "scripts/validate_agents_mesh.py"),
+                cwd=REPO_ROOT,
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+
+        self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
 
 
 if __name__ == "__main__":

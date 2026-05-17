@@ -44,17 +44,17 @@
       "conversation": 59,
       "data": 18,
       "docs": 37,
-      "graph-adjacent-artifacts": 5,
+      "graph-adjacent-artifacts": 6,
       "history": 26,
-      "human-approval-surfaces": 31,
+      "human-approval-surfaces": 33,
       "instructions": 18,
       "media": 6,
-      "memory-adjacent-artifacts": 13,
+      "memory-adjacent-artifacts": 14,
       "runtime-state": 12,
       "shell": 6,
       "tests": 19,
       "tool-surfaces": 63,
-      "ui": 13
+      "ui": 4
     },
     "execution_profile": {
       "medium-agent": 21,
@@ -194,7 +194,7 @@
           "conversation",
           "tool-surfaces",
           "shell",
-          "ui"
+          "human-approval-surfaces"
         ],
         "execution_profile": "small-agent",
         "risk_posture": [
@@ -437,7 +437,7 @@
           "conversation",
           "tool-surfaces",
           "code",
-          "ui"
+          "graph-adjacent-artifacts"
         ],
         "execution_profile": "medium-agent",
         "risk_posture": [
@@ -1168,7 +1168,6 @@
         "substrate": [
           "conversation",
           "tool-surfaces",
-          "ui",
           "human-approval-surfaces"
         ],
         "execution_profile": "orchestration-required",
@@ -1351,8 +1350,7 @@
         "substrate": [
           "conversation",
           "tool-surfaces",
-          "tests",
-          "ui"
+          "tests"
         ],
         "execution_profile": "orchestration-required",
         "risk_posture": [
@@ -1380,7 +1378,7 @@
           "conversation",
           "tool-surfaces",
           "data",
-          "ui"
+          "human-approval-surfaces"
         ],
         "execution_profile": "orchestration-required",
         "risk_posture": [
@@ -1563,7 +1561,6 @@
         "substrate": [
           "conversation",
           "tool-surfaces",
-          "ui",
           "human-approval-surfaces"
         ],
         "execution_profile": "small-agent",
@@ -2471,8 +2468,7 @@
           "read"
         ],
         "substrate": [
-          "tests",
-          "ui"
+          "tests"
         ],
         "execution_profile": "orchestration-required",
         "risk_posture": [
@@ -2673,8 +2669,7 @@
         ],
         "substrate": [
           "runtime-state",
-          "api",
-          "ui"
+          "api"
         ],
         "execution_profile": "orchestration-required",
         "risk_posture": [
@@ -2833,7 +2828,7 @@
           "history",
           "docs",
           "data",
-          "ui"
+          "memory-adjacent-artifacts"
         ],
         "execution_profile": "small-agent",
         "risk_posture": [

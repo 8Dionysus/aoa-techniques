@@ -35,6 +35,9 @@ class RoadmapParityTestCase(unittest.TestCase):
         techniques = catalog["techniques"]
         status_counts = Counter(technique["status"] for technique in techniques)
         promoted_count = status_counts["promoted"]
+        promoted_ids = sorted(
+            technique["id"] for technique in techniques if technique["status"] == "promoted"
+        )
 
         readiness_matrix = (REPO_ROOT / "mechanics/audit/parts/promotion-readiness-matrix/README.md").read_text(encoding="utf-8")
 
@@ -44,7 +47,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("Wave 0 matrix expansion is closed", readiness_matrix)
         self.assertIn("`v0.4 matrix-expansion lane` | `0`", readiness_matrix)
         self.assertIn("`AOA-T-0075` through `AOA-T-0107`", readiness_matrix)
-        for technique_id in ("AOA-T-0084", "AOA-T-0107", "AOA-T-0005", "AOA-T-0059"):
+        for technique_id in promoted_ids:
             self.assertIn(technique_id, readiness_matrix)
 
     def test_roadmap_matches_current_direction_contour(self) -> None:

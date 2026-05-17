@@ -18,7 +18,7 @@
 ## Default-use rationale
 
 - this is the right canonical default when the main problem is how to segment longer work into checkpointed episodes or equivalent durable steps with explicit continue, stop, or escalate decisions
-- it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md), and [AOA-T-0001](../../../../agent-workflows/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the longer-run segmentation seam
+- it remains narrower than [AOA-T-0057](../../structured-handoff-before-compaction/TECHNIQUE.md), [AOA-T-0060](../../session-opening-ritual-before-work/TECHNIQUE.md), and [AOA-T-0001](../../../../execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md) because it owns only the longer-run segmentation seam
 - it also remains smaller than total autonomous-agent doctrine because it does not define supervision, budgets, immutable task governance, or one orchestrator runtime
 - it is now strong enough as a canonical default because the external reinforcement repeats the same "bounded slice, checkpoint state, explicit next decision, later slice starts from durable state" shape without requiring the bundle to absorb the Cloudflare platform, sub-agent model, workflow engine, schedule API, or Durable Objects lifecycle
 

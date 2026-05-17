@@ -7,8 +7,6 @@ from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
 
-import yaml
-
 REQUIRED_SECTIONS = (
     "Intent",
     "When to use",
@@ -532,7 +530,7 @@ REPO_DOC_SURFACE_SPECS = (
     {
         "doc_id": "ecosystem_context",
         "doc_path": "docs/ECOSYSTEM_CONTEXT.md",
-        "surface_group": "canon/authority",
+        "surface_group": "entrypoint/map",
         "bounded_role": "repo-owned positioning note for the AoA ontology spine, neighboring layer boundaries, and why scenario-level method stays in aoa-playbooks",
     },
     {
@@ -887,7 +885,7 @@ TOPOLOGY_KEYWORD_RULES = {
         "api": ("api", "endpoint", "service", "connector"),
         "data": ("data", "dataset", "row", "store", "ledger", "registry"),
         "media": ("media", "ocr", "image", "screenshot", "vision", "telegram"),
-        "ui": ("ui", "interface", "layout", "screen"),
+        "ui": ("interface", "layout", "screen"),
         "conversation": ("conversation", "chat", "message", "comment", "request"),
         "history": ("history", "transcript", "session", "commit", "lineage"),
         "memory-adjacent-artifacts": ("memory", "recall", "memo"),
@@ -1670,6 +1668,10 @@ def read_json(path: Path) -> Any:
 
 
 def read_yaml(path: Path) -> Any:
+    try:
+        import yaml
+    except ModuleNotFoundError:
+        fail(f"{path}: PyYAML is required to read YAML config; install requirements-dev.txt")
     try:
         return yaml.safe_load(read_text(path))
     except yaml.YAMLError as exc:

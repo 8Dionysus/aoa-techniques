@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import subprocess
 import sys
 from pathlib import Path
 
@@ -23,6 +24,29 @@ REQUIRED_CONFIG_REFS = (
     "route_contract_ref",
     "generated_ref",
 )
+
+
+def tracked_top_level_dirs(repo_root: Path) -> set[str]:
+    result = subprocess.run(
+        ("git", "-C", str(repo_root), "ls-files", "-z"),
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return {
+            child.name
+            for child in repo_root.iterdir()
+            if child.is_dir() and not child.is_symlink()
+        }
+    tracked_dirs: set[str] = set()
+    for raw_path in result.stdout.split("\0"):
+        if "/" not in raw_path:
+            continue
+        top_level = raw_path.split("/", 1)[0]
+        if top_level:
+            tracked_dirs.add(top_level)
+    return tracked_dirs
 
 
 def validate(repo_root: Path) -> list[str]:
@@ -53,10 +77,13 @@ def validate(repo_root: Path) -> list[str]:
         )
 
     exemptions = top_level_exemptions(config)
+    repo_owned_top_level_dirs = tracked_top_level_dirs(repo_root)
     for child in sorted(repo_root.iterdir(), key=lambda path: path.name):
         if not child.is_dir() or child.name in exemptions:
             continue
         if child.is_symlink():
+            continue
+        if child.name not in repo_owned_top_level_dirs:
             continue
         local_card = child / "AGENTS.md"
         if not local_card.is_file():
