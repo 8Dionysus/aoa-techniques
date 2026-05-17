@@ -366,6 +366,7 @@
       "top_level_sections": [
         "Release goals",
         "Recommended release flow",
+        "Generated surface checklist",
         "Release note shape",
         "Versioning guidance",
         "What not to optimize yet",
