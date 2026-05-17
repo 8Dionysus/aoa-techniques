@@ -30,6 +30,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- tightened root-document roles across [README](README.md), [CHARTER](CHARTER.md),
+  [DESIGN](DESIGN.md), [DESIGN.AGENTS](DESIGN.AGENTS.md), [ROADMAP](ROADMAP.md),
+  [CONTRIBUTING](CONTRIBUTING.md), and [QUESTBOOK](QUESTBOOK.md) so root stays
+  link-driven, owner-routed, and free of avoidable duplicated doctrine
 - slimmed old root Markdown entry surfaces by turning `README.md` back into a
   compact public front door and reducing `ROADMAP.md` to live repo direction;
   detailed mechanic runbooks, generated readers, semantic/shadow reviews, tree

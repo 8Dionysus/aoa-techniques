@@ -4,8 +4,8 @@
 
 `DESIGN.md` describes the system form of `aoa-techniques`.
 
-It is not the charter, roadmap, technique index, authoring contract, or agent
-instruction file.
+It is not the charter, roadmap, technique index, authoring contract, or
+agent-instruction file.
 
 It answers one question:
 
@@ -16,27 +16,26 @@ library and an AoA organ?
 
 `aoa-techniques` is a public canon of reusable engineering practice.
 
-It should preserve small, source-authored technique meaning while giving humans,
-agents, and sibling AoA repositories enough route structure to select, verify,
-adapt, and lift a technique without confusing it with a skill, proof surface,
-playbook, memory object, routing policy, or runtime body.
+It preserves small, source-authored technique meaning while giving humans,
+agents, and sibling AoA repositories enough structure to select, verify, adapt,
+and lift a technique without confusing it with a skill, proof surface, playbook,
+memory object, routing policy, or runtime body.
 
-The technique bundle owns the move.
-The mechanics explain how practice moves.
-The generated surfaces help readers orient.
-The neighboring repositories own their own stronger layers.
+The bundle owns the move. Mechanics explain how practice moves. Generated
+surfaces help readers orient. Neighboring repositories own their stronger
+layers.
 
 ## Design as Appearance
 
 The repository should appear as a practice library with a clear public front
 door:
 
-- one compact repository entry route
-- a small set of durable authority and contract docs
-- a readable technique tree
-- mechanic districts for practice movement around canon
-- generated companions that make selection easier without authoring meaning
-- local agent cards that name the nearest safe route
+- compact entry route
+- durable authority and contract docs
+- readable technique tree
+- mechanic districts for practice movement
+- generated companions for selection
+- local agent cards for nearest-route safety
 
 A reader should be able to ask: what does this repo own, what is one technique,
 where does this bundle live, how mature is it, what validates it, and when
@@ -47,9 +46,9 @@ should I leave for another AoA owner?
 `aoa-techniques` is composed of different source classes:
 
 - root public entry and authority surfaces
-- source-authored technique bundles under `techniques/`
-- technique contracts and reader guides under `docs/`
-- practice-motion mechanics under `mechanics/`
+- source-authored technique bundles under [techniques](techniques/)
+- technique contracts and reader guides under [docs](docs/README.md)
+- practice-motion mechanics under [mechanics](mechanics/README.md)
 - repo-wide schemas, templates, configs, and examples
 - generated reader and machine companions
 - public-safe legacy and provenance surfaces
@@ -94,8 +93,8 @@ validation, or return clearer than before.
 
 ### 1. Atomic practice before orchestration
 
-One technique should describe one reusable move. Chains, workflows, scenarios,
-and live execution belong in stronger neighboring owners.
+One technique describes one reusable move. Chains, workflows, scenarios, and
+live execution belong in stronger neighboring owners.
 
 ### 2. Source before generated
 
@@ -137,13 +136,13 @@ technique canon.
 
 ## Good Design Feels Like
 
-A public reader can find one useful technique.
-An agent can find the nearest rule.
-A maintainer can find the owner surface.
-A generated file can find its source.
-A candidate can find its review path.
-A sibling repository can receive a bounded handoff.
-A future contributor can find why the route exists.
+- a public reader can find one useful technique
+- an agent can find the nearest rule
+- a maintainer can find the owner surface
+- a generated file can find its source
+- a candidate can find its review path
+- a sibling repository can receive a bounded handoff
+- a future contributor can find why the route exists
 
 ## Bad Design Smells Like
 
@@ -158,15 +157,12 @@ A future contributor can find why the route exists.
 
 ## Relationship to Other Root Surfaces
 
-[`README.md`](README.md) introduces.
-[`CHARTER.md`](CHARTER.md) authorizes.
-[`docs/START_HERE.md`](docs/START_HERE.md) routes.
-[`TECHNIQUE_INDEX.md`](TECHNIQUE_INDEX.md) maps the corpus.
-[`docs/ROOT_SURFACE_LAW.md`](docs/ROOT_SURFACE_LAW.md) governs placement.
-[`AGENTS.md`](AGENTS.md) routes agents.
-[`DESIGN.AGENTS.md`](DESIGN.AGENTS.md) holds the design form of the
-agent-facing layer.
-`DESIGN.md` holds the system form of the practice canon.
+[README](README.md) introduces. [CHARTER](CHARTER.md) authorizes.
+[START_HERE](docs/START_HERE.md) routes. [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md)
+maps the corpus. [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) governs
+placement. [AGENTS](AGENTS.md) routes agents. [DESIGN.AGENTS](DESIGN.AGENTS.md)
+holds the design form of the agent-facing layer. `DESIGN.md` holds the system
+form of the practice canon.
 
 ## Use by Agents
 

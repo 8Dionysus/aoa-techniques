@@ -20,24 +20,19 @@ validation, public safety, or return routes?
 
 It should give them a navigable mesh:
 
-- a root card that names repository identity, owner boundaries, and route
-  modes
-- top-level district cards that narrow source class and validation posture
-- mechanic package cards that keep practice-motion work owner-routed
-- technique trunk cards that protect published bundle meaning
-- deep cards for high-risk generated, legacy, part-local, or agent-lane
-  surfaces
-- validation surfaces that make the route checkable
-- generated companions that summarize the mesh without becoming the mesh
+- root card for repository identity, owner boundaries, and route modes
+- district cards for source class and validation posture
+- mechanic cards for practice-motion work
+- technique trunk cards for published bundle meaning
+- deep cards for generated, legacy, part-local, or agent-lane risk
+- validators and generated companions that check and summarize the mesh
 
 Agent guidance is not authority by volume. It is authority by placement,
 proximity, owner fit, validation, and explicit return.
 
-The root names the road system.
-The nearest card narrows the lane.
-The technique bundle keeps the move.
-The validator checks the claim.
-The closeout returns the work to the next reader.
+Root names the road system. The nearest card narrows the lane. The technique
+bundle keeps the move. The validator checks the claim. Closeout returns the
+work to the next reader.
 
 ## Design as Appearance
 
@@ -63,75 +58,30 @@ safety, or owner review.
 
 ## Design as Anatomy
 
-### Root card
+| Surface class | Role |
+|---|---|
+| Root card | repository identity, owner boundaries, route modes, broad validation, and closeout |
+| District cards | local source class, local risks, source surfaces, and local validation |
+| Technique cards | protection for bundle meaning and the split between tree placement and frontmatter truth |
+| Mechanic cards | practice-motion routes, provenance, generated mirrors, and sibling-owner stop lines |
+| Deep cards | high-friction generated, legacy, part-local, schema, manifest, or agent-lane surfaces |
+| Generated companions | reproducible mesh summaries that point back to source cards |
 
-The root `AGENTS.md` owns repository identity, owner boundaries, route modes,
-GitHub landing workflow, broad validation posture, and closeout expectations.
-
-It should not contain every local rule. Root law routes; local cards narrow.
-
-### District cards
-
-Top-level district cards own local source class, local risks, local source
-surfaces, and local validation.
-
-Examples include `docs/`, `techniques/`, `mechanics/`, `generated/`, `schemas/`,
-`templates/`, `tests/`, `.agents/`, and `.github/`.
-
-### Technique cards
-
-Technique trunk cards protect published bundle meaning. They should distinguish
-tree placement from frontmatter truth, and they should route agents back to
-`TECHNIQUE.md` instead of making the card a second technique.
-
-Bundle-local cards should be rare. Use them only when a surface has a genuine
-local rule that cannot live cleanly in the bundle.
-
-### Mechanic cards
-
-Mechanic cards protect practice-motion surfaces around canon. They should name
-active package surfaces, owner request or provenance routes, generated mirrors,
-local validation, and stop-lines to sibling AoA owners.
-
-They may shape candidate movement. They must not promote a candidate into canon
-by proximity.
-
-### Deep cards
-
-Deep cards protect high-friction surfaces such as legacy, generated reports,
-part-local scripts, manifests, schemas, or agent-lane exports.
-
-They exist because proximity matters. The safest rule is often nearest to the
-file that can be harmed.
-
-### Source surfaces
-
-Technique bundles, docs contracts, schemas, builders, validators, mechanics
-packages, generated-source configs, and neighboring owner repos keep meaning.
-
-`AGENTS.md` cards route agents to source truth. They do not become source truth
-by repetition.
-
-### Generated companions
-
-Generated AGENTS mesh indexes and other compact read models help low-context
-agents navigate.
-
-They are mirrors and companions. They must point back to source surfaces,
-remain reproducible, and avoid authoring new meaning.
+The source surfaces still keep meaning: technique bundles, docs contracts,
+schemas, builders, validators, mechanics packages, generated-source configs,
+and neighboring owner repositories. Agent cards route to them; they do not
+become source truth by repetition.
 
 ## Design as Operation
 
 A safe agent move follows a route before it touches content.
 
-1. Read the root card.
-2. Read the nearest local card for every touched path.
-3. Read the owner source surfaces named by those cards.
-4. Make the smallest change that preserves the owner boundary.
-5. Run the narrowest relevant validation first.
-6. Run broader gates when the change is release-facing, route-facing,
-   generated, structural, or cross-owner.
-7. Close out with changed surfaces, checks run, checks skipped, remaining risk,
+1. Read the root card and nearest local card for every touched path.
+2. Read the owner source surfaces named by those cards.
+3. Make the smallest change that preserves the owner boundary.
+4. Run narrow validation first, then broader gates for release-facing,
+   route-facing, generated, structural, or cross-owner changes.
+5. Close out with changed surfaces, checks run, checks skipped, remaining risk,
    and next owner route.
 
 Agency becomes stronger when it can stop, explain itself, and hand off cleanly.
@@ -218,48 +168,17 @@ legacy-card drift.
 
 ## Design Principles
 
-### 1. Locality before abstraction
-
-The nearest relevant card should carry the local rule. Root guidance should
-stay readable.
-
-### 2. Routes before commands
-
-A good card says which surface owns the claim, which route to follow, which
-check to run, and where to hand off.
-
-### 3. Source before instruction
-
-Instructions guide. Source surfaces own meaning. When they conflict, stop and
-route to the owner.
-
-### 4. Negative boundaries are design
-
-A clear "do not" prevents silent authority transfer.
-
-### 5. Validation is the handshake with reality
-
-Every substantial card should name the smallest useful validation path. Broad
-gates matter, but local checks keep work from becoming theatrical.
-
-### 6. Closeout is memory
-
-A closeout is the next agent's doorway: what changed, what was checked, what
-was skipped, what remains risky, and where work resumes.
-
-### 7. Generated companions are companions
-
-Machine-readable summaries are useful when they compress and route. They become
-dangerous when they author meaning or hide their source.
-
-### 8. Portability comes from repeated shape
-
-A portable agent layer is not copied text. It is copied discipline: same card
-shape, same owner logic, same validation posture, same closeout memory, adapted
-to local truth.
-
-### 9. Agency must remain returnable
-
-An agent may act, propose, validate, route, summarize, and hand off. Durable
-action should preserve review, rollback, evidence, and a way back to the owner
-surface.
+1. Locality before abstraction: the nearest relevant card carries the local rule.
+2. Routes before commands: a good card names owner, route, check, and handoff.
+3. Source before instruction: when instruction and source conflict, stop and
+   route to the owner.
+4. Negative boundaries are design: a clear "do not" prevents silent authority
+   transfer.
+5. Validation is the handshake with reality: local checks keep broad gates honest.
+6. Closeout is memory: say what changed, what was checked, what was skipped,
+   what remains risky, and where work resumes.
+7. Generated companions are companions: they compress and route, never author
+   meaning.
+8. Portability comes from repeated discipline, not copied text.
+9. Agency must remain returnable: durable action preserves review, rollback,
+   evidence, and a way back to the owner surface.

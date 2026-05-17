@@ -2,26 +2,26 @@
 
 ## Purpose
 
-`aoa-techniques` is the public practice canon for reusable agentic techniques.
-It publishes compact, sanitized, reviewable moves that can be reused by humans,
-coding agents, small models, and downstream AoA layers without requiring a full
-OS Abyss deployment.
+`aoa-techniques` is the public practice canon for reusable agentic technique
+moves. It publishes compact, sanitized, reviewable practice that humans, coding
+agents, small models, and downstream AoA layers can reuse without requiring a
+full OS Abyss deployment.
 
 The repository is strongest when it keeps one technique small enough to select,
 template, execute, and verify. It is weakest when it absorbs skills, playbooks,
-proof doctrine, routing policy, memory semantics, or private project operation
-because those objects are nearby.
+proof doctrine, routing policy, memory semantics, private project operation, or
+other nearby objects that already have stronger owners.
 
 ## Authority Boundary
 
 This charter answers what `aoa-techniques` may claim about the practice canon.
 
-Operational editing routes live in `AGENTS.md`, contribution rules live in
-`CONTRIBUTING.md`, and detailed authoring contracts live in
-`docs/TECHNIQUE_ATOM_CONTRACT.md`, `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and
-`docs/TECHNIQUE_TREE_CONTRACT.md`.
-This charter gives those routes their repository boundary. It does not replace
-them.
+Operational editing routes live in [AGENTS](AGENTS.md). Public contribution
+rules live in [CONTRIBUTING](CONTRIBUTING.md). Detailed authoring contracts live
+in [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md),
+[TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md), and
+[TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md). This charter gives
+those routes their repository boundary; it does not replace them.
 
 ## Mission
 
@@ -42,18 +42,16 @@ It should:
 
 ## What This Repository Owns
 
-| Owned object | Meaning |
-|---|---|
-| Technique meaning | authored `techniques/**/TECHNIQUE.md` bundles and their bounded contracts |
-| Technique IDs | stable public identifiers and source paths for reusable practice |
-| Technique atom law | the rule that one technique is one compact executable move |
-| Technique topology | current `domain` and `kind` truth plus reviewed future axes such as family, capability, substrate, execution profile, risk posture, and relations |
-| Technique tree | scalable root path architecture for corpus trunks, shelves, and leaf bundles, kept distinct from frontmatter truth |
-| Public-safe wording | sanitized technique text, examples, checks, notes, and route docs |
-| Adaptation evidence | origin, reuse, adverse-effect, promotion, and external-origin notes at the technique layer |
-| Mechanics participation | owner-local movement around donor intake, audit, promotion, recurrence, checkpoint, release support, RPG reflection, and other AoA mechanics before a practice becomes canon |
-| Generated technique surfaces | catalogs, capsules, source-lift readers, and other derived outputs that stay subordinate to authored sources |
-| Technique contribution path | public proposal, review, promotion, deprecation, release, and validation posture for this repo |
+- Technique meaning: authored [techniques](techniques/) bundles and their bounded contracts
+- Technique IDs: stable public identifiers and source paths for reusable practice
+- Technique atom law: one technique is one compact executable move
+- Technique topology: current `domain` and `kind` truth plus reviewed future axes
+- Technique tree: scalable root path architecture, distinct from frontmatter truth
+- Public-safe wording: sanitized technique text, examples, checks, notes, and route docs
+- Adaptation evidence: origin, reuse, adverse-effect, promotion, and external-origin notes
+- Mechanics participation: owner-local movement before a practice becomes canon
+- Generated technique surfaces: catalogs, capsules, source-lift readers, and derived outputs
+- Technique contribution path: proposal, review, promotion, deprecation, release, and validation
 
 ## Routed To Stronger Owners
 
@@ -95,13 +93,13 @@ Before changing the repository's root posture, technique-canon boundary, or
 public route map, check:
 
 1. this charter for repository authority
-2. `docs/ROOT_SURFACE_LAW.md` for root and docs-root placement
-3. `docs/START_HERE.md` for the shortest current route
-4. `docs/TECHNIQUE_ATOM_CONTRACT.md` for atomicity
-5. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md` for classification topology
-6. `docs/TECHNIQUE_TREE_CONTRACT.md` for corpus path architecture
-7. `docs/ECOSYSTEM_CONTEXT.md` for AoA layer boundaries
-8. `mechanics/README.md` when the change concerns practice movement before or
+2. [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) for root and docs-root placement
+3. [START_HERE](docs/START_HERE.md) for the shortest current route
+4. [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md) for atomicity
+5. [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) for classification topology
+6. [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) for corpus path architecture
+7. [ECOSYSTEM_CONTEXT](docs/ECOSYSTEM_CONTEXT.md) for AoA layer boundaries
+8. [mechanics README](mechanics/README.md) when the change concerns practice movement before or
    around canon
 9. generated surfaces, builders, validators, and tests before claiming parity
 

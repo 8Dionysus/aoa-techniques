@@ -4,29 +4,30 @@ Thank you for contributing.
 
 ## What belongs here
 
-Good contributions:
-- reusable agent workflows
-- validation patterns
-- safe operational techniques
-- documentation patterns
-- evaluation and monitoring loops
-- cross-repo transfer patterns
-- infra safety patterns
+Good contributions are public-safe, reusable practice objects:
 
-Bad contributions:
-- random snippets
-- private hacks without generalization
-- internal-only assumptions
-- undocumented scripts
-- techniques with no clear validation path
+- one atomic technique bundle
+- focused improvement to an existing technique
+- promotion, deprecation, or review evidence for a technique
+- authoring, review, selection, capsule, or provenance template improvement
+- validation or generated-parity improvement owned by this repository
+- external-source adaptation with clear provenance and public-safe boundaries
+
+Route away or hold in mechanics when the object is a broad workflow, raw donor
+dump, internal-only hack, private operational note, undocumented script, or
+technique-shaped text with no validation path.
 
 ## Before opening a PR
 
 Please make sure:
 - the technique is sanitized
 - the technique has a clear purpose
-- the technique chooses exactly one primary `kind` using [Technique Kind Guide](docs/selection/TECHNIQUE_KIND_GUIDE.md) and the registry tie-break rules
-- `tags` carry extra nuance, while `family` stays scout-only and non-authoritative in this wave
+- the candidate passes [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md)
+- the technique chooses exactly one primary `kind` using
+  [Technique Kind Guide](docs/selection/TECHNIQUE_KIND_GUIDE.md) and registry
+  tie-break rules
+- `tags` carry extra nuance, while `family` stays scout-only and
+  non-authoritative in this wave
 - the technique includes a canonical `TECHNIQUE.md`
 - examples are public-safe
 - risks are documented as failure modes, negative effects, misuse patterns, detection signals, and mitigations
@@ -34,26 +35,33 @@ Please make sure:
 - maturity status is set correctly
 - origin is stated clearly
 
-Before opening a PR, run `python -m pip install -r requirements-dev.txt`, then run `python scripts/release_check.py` as the bounded repo-wide validation path.
+Before opening a PR, run `python -m pip install -r requirements-dev.txt`, then
+run `python scripts/release_check.py` as the bounded repo-wide validation path.
+The transparent lower-level breakdown lives in [RELEASING](docs/RELEASING.md).
 
-That command is the public release-check entrypoint for this repository.
-If you need the transparent lower-level breakdown, it runs the current build path and ends with `python -m unittest discover -s tests` plus `python scripts/validate_repo.py`, after the same `requirements-dev.txt` install step.
+When the `kind` choice feels ambiguous, start from
+[Technique Kind Guide](docs/selection/TECHNIQUE_KIND_GUIDE.md) and keep the
+review narrow instead of widening the axis.
 
-When the `kind` choice feels ambiguous, start from [Technique Kind Guide](docs/selection/TECHNIQUE_KIND_GUIDE.md) and keep the review narrow instead of widening the axis.
-
-See `docs/review/TECHNIQUE_SHADOW_GUIDE.md` for the repo-level shadow-discipline guidance behind the `## Risks` section.
+See [TECHNIQUE_SHADOW_GUIDE](docs/review/TECHNIQUE_SHADOW_GUIDE.md) for the
+repo-level shadow-discipline guidance behind the `## Risks` section.
 
 ## External provenance
 
-If a contribution is adapted from an external open-source source, include a normal `TECHNIQUE.md` and add `templates/EXTERNAL_ORIGIN.template.md` as the provenance note.
+If a contribution is adapted from an external open-source source, include a
+normal `TECHNIQUE.md` and add [EXTERNAL_ORIGIN.template](templates/EXTERNAL_ORIGIN.template.md)
+as the provenance note.
 
 Use the external-origin note only for external-source contributions.
 It should record `source_repo`, `source_license`, `inspired_by` or `adapted_from`, and `what_changed`.
 
 External imports must still be sanitized, reusable, and bounded.
 The provenance note complements the technique document; it does not replace the canonical `TECHNIQUE.md`.
-Use `mechanics/distillation/parts/external-import-runbook/README.md` for the maintainer-facing donor triage -> draft -> review -> merge path.
-Starter note templates for origin evidence, adaptation, promotion, adverse-effects review, external-origin provenance, and external review now live under `templates/`.
+Use [external-import-runbook](mechanics/distillation/parts/external-import-runbook/README.md)
+for the maintainer-facing donor triage -> draft -> review -> merge path.
+Starter note templates for origin evidence, adaptation, promotion,
+adverse-effects review, external-origin provenance, and external review live
+under [templates](templates/).
 
 ## GitHub intake surfaces
 
@@ -62,10 +70,12 @@ Use the GitHub templates for the first public intake layer:
 - `canonical` promotion review
 - external import review
 
-Use the pull request template when opening a PR so the summary, validation, and public-safety checks stay explicit and reviewable.
+Use the pull request template when opening a PR so the summary, validation, and
+public-safety checks stay explicit and reviewable.
+
 The agent-facing commit, push, pull request, validation, merge, and clean-main
-route lives in `AGENTS.md`. The GitHub templates keep the human-first intake
-shape aligned with that route; they do not replace the authored source docs.
+route lives in [AGENTS](AGENTS.md). The GitHub templates keep the human-first
+intake shape aligned with that route; they do not replace authored source docs.
 
 For new techniques or external imports, explicitly name:
 - the nearest existing technique or overlap watch
@@ -77,7 +87,8 @@ For new techniques or external imports, explicitly name:
 These issue and PR templates remain the authoritative human-first intake surfaces.
 Any later generated manifest over them is derived only and must not replace the authored templates themselves.
 
-Do not use public issues for leaks, secrets, credentials, or infrastructure-sensitive details; follow `SECURITY.md` instead.
+Do not use public issues for leaks, secrets, credentials, or
+infrastructure-sensitive details; follow [SECURITY](SECURITY.md) instead.
 
 The repo carries one narrow `CODEOWNERS` map for governance-critical root
 files, public docs, GitHub platform surfaces, mechanics, generated companions,
@@ -110,7 +121,7 @@ PRs are reviewed for:
 - validation quality
 - adaptation quality
 - maturity correctness
-- coherence with repository philosophy
+- fit with [CHARTER](CHARTER.md), [DESIGN](DESIGN.md), and the technique contracts
 
 ## Status transitions
 
@@ -133,4 +144,4 @@ Requires:
 ## Security
 
 If your contribution reveals a leak, secret, or security-sensitive detail,
-do not open a public issue. Use the process in `SECURITY.md`.
+do not open a public issue. Use the process in [SECURITY](SECURITY.md).
