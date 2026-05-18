@@ -911,15 +911,16 @@ def build_reader_markdown(registry_payload: dict[str, Any], dag_payload: dict[st
         "- Core lens: attention over atomic moves",
         "- Scout axes: family, capability, substrate, execution profile, and risk posture stay non-authoritative",
         "",
-        "## Commands",
+        "## Operational Route",
         "",
-        "```bash",
-        "python scripts/build_technique_intelligence.py",
-        "python scripts/technique_intelligence.py status",
-        "python scripts/technique_intelligence.py query \"source truth conflict\" --limit 5",
-        "python scripts/technique_intelligence.py explain AOA-T-0002 --intent \"conflicting docs\"",
-        "python scripts/technique_intelligence.py pack AOA-T-0002 --profile small-agent",
-        "```",
+        "Use [Technique Intelligence Guide](../../selection/TECHNIQUE_INTELLIGENCE_GUIDE.md) "
+        "for the authored contract. Use [selection AGENTS](../../selection/AGENTS.md#validation) "
+        "and root [AGENTS](../../../AGENTS.md#validation) for build, query, "
+        "and validation command lanes.",
+        "",
+        "The local CLI exposes `status`, `query`, `explain`, and `pack` actions. "
+        "Treat their output as a route back to authored bundles, not as execution "
+        "authority or technique meaning.",
         "",
         "## Counts",
         "",

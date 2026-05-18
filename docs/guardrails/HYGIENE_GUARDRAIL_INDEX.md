@@ -8,13 +8,16 @@ The human law lives in
 
 ## Guardrail Table
 
-| Guardrail | Primary check | Source input | Status |
+| Guardrail | Primary check surface | Source input | Status |
 |---|---|---|---|
-| Local root/docs Markdown links | `python -m unittest tests.test_docs_surface_guardrails` | root Markdown plus `docs/**/*.md` | active |
-| Flat docs surface coverage | `python -m unittest tests.test_docs_surface_guardrails` | `docs/*.md` plus [Current Surface Index](CURRENT_SURFACE_INDEX.md) | active |
-| Thematic district placement | `python -m unittest tests.test_docs_surface_guardrails` | [Thematic District Protocol](THEMATIC_DISTRICT_PROTOCOL.md) | active |
-| Generated reader parity | `python scripts/validate_repo.py` | builders, docs readers, generated JSON | active |
-| Release-wide freshness | `python scripts/release_check.py` | all registered builders and validators | active |
+| Local root/docs Markdown links | [test_docs_surface_guardrails.py](../../tests/test_docs_surface_guardrails.py) | root Markdown plus `docs/**/*.md` | active |
+| Flat docs surface coverage | [test_docs_surface_guardrails.py](../../tests/test_docs_surface_guardrails.py) | `docs/*.md` plus [Current Surface Index](CURRENT_SURFACE_INDEX.md) | active |
+| Thematic district placement | [test_docs_surface_guardrails.py](../../tests/test_docs_surface_guardrails.py) | [Thematic District Protocol](THEMATIC_DISTRICT_PROTOCOL.md) | active |
+| Generated reader parity | [validate_repo.py](../../scripts/validate_repo.py) | builders, docs readers, generated JSON | active |
+| Release-wide freshness | [release_check.py](../../scripts/release_check.py) | all registered builders and validators | active |
+
+Exact command lanes live in [docs/guardrails AGENTS](AGENTS.md#validation)
+and root [AGENTS](../../AGENTS.md#validation).
 
 ## Success Conditions
 

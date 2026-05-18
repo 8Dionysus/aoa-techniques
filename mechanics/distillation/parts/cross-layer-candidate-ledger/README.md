@@ -72,13 +72,8 @@ The registry must preserve this README's verdicts and stop lines. It does not
 create technique bundles, change candidate status, authorize import, or give
 recurrence promotion authority.
 
-Validation:
-
-```bash
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
-```
+Validation lane: use [Distillation AGENTS](../../AGENTS.md#validation) for the
+exact builder, validator, and test commands.
 
 ## Already Staged Elsewhere
 

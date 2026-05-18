@@ -14,10 +14,10 @@ root law at the root and source truth in its owner surface.
 | `docs/guardrails/AGENTS_MESH_PROTOCOL.md` | mesh law and growth contract |
 | `config/agents_mesh.json` | source configuration for canonical cards, migration posture, and validation commands |
 | `generated/agents_mesh.min.json` | compact machine-facing mirror |
-| `scripts/validate_agents_md_shape.py` | card shape validator |
-| `scripts/validate_agents_mesh.py` | coverage and mesh config validator |
-| `scripts/build_agents_mesh_index.py` | generated mesh builder |
-| `scripts/validate_agents_mesh_index.py` | generated mesh validator |
+| [validate_agents_md_shape.py](../../scripts/validate_agents_md_shape.py) | card shape validator |
+| [validate_agents_mesh.py](../../scripts/validate_agents_mesh.py) | coverage and mesh config validator |
+| [build_agents_mesh_index.py](../../scripts/build_agents_mesh_index.py) | generated mesh builder |
+| [validate_agents_mesh_index.py](../../scripts/validate_agents_mesh_index.py) | generated mesh validator |
 
 ## Growth Posture
 
@@ -36,7 +36,8 @@ it becomes background debt.
 
 ## Release Posture
 
-The mesh checks are part of `scripts/release_check.py`.
+The mesh checks are part of the release lane. Use
+[docs/guardrails AGENTS](AGENTS.md#validation) for exact commands.
 
 If a durable directory is added, removed, or re-scoped, update
 `config/agents_mesh.json`, the nearest local `AGENTS.md`, and

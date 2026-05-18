@@ -24,7 +24,7 @@ surfaces relate without moving source truth into this package.
 
 If the task changes quest source data or generated projections, use the
 existing quest validators and generated-surface checks through
-`scripts/validate_repo.py`.
+[AGENTS](../../../../AGENTS.md#validation).
 
 ## Stop-lines
 

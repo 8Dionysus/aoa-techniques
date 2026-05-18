@@ -27,7 +27,7 @@ the selector/relation lane, not hidden owner-boundary edits.
 
 ## Sources Read
 
-- [Temporary Owner-Boundary Bridge Long-Pass Plan](../TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md)
+- [Owner-Boundary Bridge Long-Pass Working Plan](owner-boundary-bridge-long-pass-working-plan.md)
 - [Owner-Boundary Bridge Promotion-Boundary Pilot](owner-boundary-bridge-promotion-boundary-pilot.md)
 - [Owner-Boundary Bridge Practice-Adoption-Lifecycle Pilot](owner-boundary-bridge-practice-adoption-lifecycle-pilot.md)
 - [Owner-Boundary Bridge Wave A Governance Owner Proof Review](owner-boundary-bridge-wave-a-governance-owner-proof-review.md)

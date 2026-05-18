@@ -1,7 +1,7 @@
 # Technique Kinds
 
 This file is generated from `../../../generated/technique_catalog.json` plus the repo-owned `kind` registry.
-Do not edit it by hand; run `python scripts/build_kind_manifest.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when `domain` already narrowed the owner layer and you need the bounded second cut that answers what primary reusable practice a technique is.
 

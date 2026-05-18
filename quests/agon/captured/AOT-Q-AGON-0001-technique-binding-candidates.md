@@ -33,8 +33,5 @@ review instead of changing this quest into promotion authority.
 
 ## Verify
 
-```bash
-python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check
-python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py
-```
+Use the owner route in [Agon AGENTS](../../../mechanics/agon/AGENTS.md#validation)
+for exact builder, validator, and test commands.

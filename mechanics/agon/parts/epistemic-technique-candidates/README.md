@@ -14,11 +14,8 @@ normal `aoa-techniques` review.
 
 ## Validation
 
-```bash
-python mechanics/agon/parts/epistemic-technique-candidates/scripts/build_agon_epistemic_technique_candidates.py --check
-python mechanics/agon/parts/epistemic-technique-candidates/scripts/validate_agon_epistemic_technique_candidates.py
-python -m pytest -q mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py
-```
+Use [Agon AGENTS](../../AGENTS.md#validation) for the exact candidate-builder,
+validator, and test lane.
 
 ## Provenance
 

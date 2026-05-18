@@ -88,8 +88,10 @@ to remap bundle meaning automatically.
 
 The current generated readout is
 `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md`,
-built by
-`python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`.
+backed by
+[build_topology_scout.py](../mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py).
+Use the local [script AGENTS](../mechanics/distillation/parts/technique-reform-ingress/scripts/AGENTS.md#validation)
+for the exact command lane.
 Use it for review pressure before schema or frontmatter migration, not as a
 source of technique meaning.
 

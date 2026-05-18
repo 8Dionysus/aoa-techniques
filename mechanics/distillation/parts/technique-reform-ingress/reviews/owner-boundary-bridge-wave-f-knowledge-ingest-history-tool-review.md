@@ -3,7 +3,7 @@
 Source packet: [Technique Reform Ingress](../README.md)
 
 Temporary plan:
-[Temporary Owner-Boundary Bridge Long-Pass Plan](../TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md)
+[Owner-Boundary Bridge Long-Pass Working Plan](owner-boundary-bridge-long-pass-working-plan.md)
 
 Prior wave:
 [Owner-Boundary Bridge Wave E Continuity Recovery Review](owner-boundary-bridge-wave-e-continuity-recovery-review.md)
@@ -48,7 +48,7 @@ Route and plan surfaces:
 - `mechanics/distillation/AGENTS.md`
 - `mechanics/distillation/parts/AGENTS.md`
 - [Technique Reform Ingress](../README.md)
-- [Temporary Owner-Boundary Bridge Long-Pass Plan](../TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md)
+- [Owner-Boundary Bridge Long-Pass Working Plan](owner-boundary-bridge-long-pass-working-plan.md)
 - `techniques/AGENTS.md`
 - `techniques/knowledge-lift/AGENTS.md`
 - `techniques/ingest/AGENTS.md`

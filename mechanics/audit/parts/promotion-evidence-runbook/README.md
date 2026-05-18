@@ -33,8 +33,8 @@ Close the smallest honest blocker for the remaining strongest current `promoted`
   - any updates to [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
   - any later `TECHNIQUE_INDEX.md` changes
   - generated-surface sync
-  - `python -m pip install -r requirements-dev.txt`
-  - final `python scripts/release_check.py`
+  - final validation through [AGENTS](../../../../AGENTS.md#validation)
+    and [RELEASING](../../../../docs/RELEASING.md)
 - each worker owns:
   - one technique bundle only
   - one bounded search lane for a live second consumer or reinforcement surface
@@ -144,7 +144,7 @@ Current implication:
 - keep bundle edits narrow and local while evidence work is in flight
 - merge one technique or one coherent evidence pack per PR when every touched
   bundle has local readiness and adverse-effect review support
-- after a merge-ready bundle exists, run `python scripts/release_check.py`
+- after a merge-ready bundle exists, follow [RELEASING](../../../../docs/RELEASING.md)
 - only update shared docs such as [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md) when the bundle's blocker or lane meaning actually changed
 
 ## Notes

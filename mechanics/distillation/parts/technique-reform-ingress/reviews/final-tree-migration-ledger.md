@@ -84,10 +84,8 @@ review packets.
 
 ## Temporary Plan Disposition
 
-The temporary plan
-`mechanics/distillation/parts/technique-reform-ingress/TEMP_TREE_MIGRATION_PLAN.md`
-was a working scratch file, not a canonical contract, generated output, or
-migration receipt.
+The tree-migration temporary plan was a working scratch file, not a canonical
+contract, generated output, or migration receipt.
 
 Its durable content is now distilled into:
 

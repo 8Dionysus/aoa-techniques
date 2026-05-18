@@ -18,7 +18,7 @@ atomic move, input packet, output shape, or stop-line?
 - root, mechanics, distillation, parts, and techniques route cards
 - `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-- `TEMP_TEMPLATE_MODERNIZATION_LONG_PASS_PLAN.md`
+- `template-modernization-long-pass-working-plan.md`
 - all `107` current `TECHNIQUE.md` source headings and frontmatter summaries
 - checklist, example, and note skeletons for all `107` bundles
 - prior migration, bundle-anatomy, execution-profile, selector/relation,

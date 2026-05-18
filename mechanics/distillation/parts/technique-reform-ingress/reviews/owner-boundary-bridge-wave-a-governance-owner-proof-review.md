@@ -3,7 +3,7 @@
 Source packet: [Technique Reform Ingress](../README.md)
 
 Temporary plan:
-[Temporary Owner-Boundary Bridge Long-Pass Plan](../TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md)
+[Owner-Boundary Bridge Long-Pass Working Plan](owner-boundary-bridge-long-pass-working-plan.md)
 
 Calibration pilots:
 [Owner-Boundary Bridge Promotion-Boundary Pilot](owner-boundary-bridge-promotion-boundary-pilot.md),
@@ -40,7 +40,7 @@ Route and plan surfaces:
 - `mechanics/distillation/AGENTS.md`
 - `mechanics/distillation/parts/AGENTS.md`
 - [Technique Reform Ingress](../README.md)
-- [Temporary Owner-Boundary Bridge Long-Pass Plan](../TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md)
+- [Owner-Boundary Bridge Long-Pass Working Plan](owner-boundary-bridge-long-pass-working-plan.md)
 - `techniques/AGENTS.md`
 - `techniques/governance/AGENTS.md`
 - `techniques/proof/AGENTS.md`

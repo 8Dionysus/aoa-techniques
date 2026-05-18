@@ -210,6 +210,70 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             with self.subTest(expected=expected):
                 self.assertIn(expected, mechanics_readme)
 
+    def test_route_and_reader_docs_do_not_own_agent_command_lanes(self) -> None:
+        route_only_surfaces = (
+            "CONTRIBUTING.md",
+            "docs/START_HERE.md",
+            "docs/guardrails/AGENTS_MESH_INDEX.md",
+            "docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md",
+            "docs/readers/intelligence/README.md",
+            "docs/readers/intelligence/TECHNIQUE_INTELLIGENCE.md",
+            "docs/readers/kind/README.md",
+            "docs/readers/kind/TECHNIQUE_KINDS.md",
+            "docs/readers/repo/README.md",
+            "docs/readers/repo/REPO_DOC_SURFACES.md",
+            "docs/readers/review/README.md",
+            "docs/readers/review/SHADOW_PATTERNS.md",
+            "docs/readers/runtime/README.md",
+            "docs/readers/runtime/TECHNIQUE_CAPSULES.md",
+            "docs/readers/selection/README.md",
+            "docs/readers/selection/SELECTION_PATTERNS.md",
+            "docs/readers/selection/TECHNIQUE_SELECTION.md",
+            "docs/readers/source-lift/README.md",
+            "docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md",
+            "docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md",
+            "docs/readers/source-lift/TECHNIQUE_EXAMPLES.md",
+            "docs/readers/source-lift/TECHNIQUE_SECTIONS.md",
+            "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
+            "mechanics/agon/parts/epistemic-technique-candidates/README.md",
+            "mechanics/agon/parts/move-technique-bridge/README.md",
+            "mechanics/distillation/parts/agon-candidate-handoff/README.md",
+            "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
+            "mechanics/distillation/parts/external-candidate-ledger/README.md",
+            "mechanics/distillation/parts/external-import-runbook/README.md",
+            "mechanics/distillation/parts/technique-reform-ingress/README.md",
+            "mechanics/distillation/parts/technique-reform-ingress/reports/kind_ambiguity_audit.md",
+            "mechanics/distillation/parts/technique-reform-ingress/reports/technique_family_scout.md",
+            "mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md",
+            "mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md",
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/README.md",
+            "mechanics/audit/parts/external-evidence-sprint-runbook/README.md",
+            "mechanics/audit/parts/external-evidence-sprint-runbook/promotion-evidence-long-pass-closeout.md",
+            "mechanics/audit/parts/promotion-evidence-runbook/README.md",
+            "mechanics/audit/parts/promotion-readiness-matrix/README.md",
+            "mechanics/questbook/parts/source-index-anchors/README.md",
+            "quests/agon/captured/AOT-Q-AGON-0001-technique-binding-candidates.md",
+        )
+        forbidden_commands = (
+            "python -m pip install -r requirements-dev.txt",
+            "python -m unittest tests.test_docs_surface_guardrails",
+            "python -m pytest -q mechanics/",
+            "python scripts/build_",
+            "python scripts/validate_repo.py",
+            "python scripts/run_tests.py",
+            "python scripts/release_check.py",
+            "python mechanics/",
+            "git status -sb",
+        )
+
+        for relative_path in route_only_surfaces:
+            text = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
+            with self.subTest(surface=relative_path, route="agent_links"):
+                self.assertRegex(text, r"(AGENTS|RELEASING)[^\n]*\)")
+            for command in forbidden_commands:
+                with self.subTest(surface=relative_path, command=command):
+                    self.assertNotIn(command, text)
+
 
 if __name__ == "__main__":
     unittest.main()

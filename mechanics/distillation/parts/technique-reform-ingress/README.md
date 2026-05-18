@@ -635,7 +635,8 @@ It should continue one bounded slice at a time:
 - [ ] Choose one bounded reform slice and state what remains scout-only.
 - [ ] Add or update the decision note before schema, template, or validator
       changes.
-- [ ] Run the narrow builders touched by the slice plus `python scripts/release_check.py`.
+- [ ] Run the narrow builders touched by the slice, then follow
+      [RELEASING](../../../../docs/RELEASING.md) for the release-visible gate.
 
 ## Next Honest Move
 

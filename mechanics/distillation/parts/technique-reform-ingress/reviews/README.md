@@ -3,6 +3,12 @@
 These reviews turn scout evidence into human-readable next moves before any
 schema, template, validator, or frontmatter migration.
 
+Current validation and rebuild command authority lives in
+[reviews AGENTS](AGENTS.md) and the parent
+[Technique Reform Ingress AGENTS](../AGENTS.md). Review packets may preserve
+old commands only as historical receipt evidence or superseded working-plan
+provenance.
+
 Review packet families:
 
 - [semantic](semantic/README.md): authored semantic-review packets consumed by
@@ -125,6 +131,7 @@ Current reviews:
 - [portability-bridge-wave-c-owner-governance-knowledge-review](portability-bridge-wave-c-owner-governance-knowledge-review.md)
 - [portability-bridge-residual-cross-wave-scan](portability-bridge-residual-cross-wave-scan.md)
 - [portability-bridge-long-pass-closeout-ledger](portability-bridge-long-pass-closeout-ledger.md)
+- [owner-boundary-bridge-long-pass-working-plan](owner-boundary-bridge-long-pass-working-plan.md)
 - [owner-boundary-bridge-promotion-boundary-pilot](owner-boundary-bridge-promotion-boundary-pilot.md)
 - [owner-boundary-bridge-practice-adoption-lifecycle-pilot](owner-boundary-bridge-practice-adoption-lifecycle-pilot.md)
 - [owner-boundary-bridge-wave-a-governance-owner-proof-review](owner-boundary-bridge-wave-a-governance-owner-proof-review.md)
@@ -135,6 +142,7 @@ Current reviews:
 - [owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review](owner-boundary-bridge-wave-f-knowledge-ingest-history-tool-review.md)
 - [owner-boundary-bridge-residual-cross-wave-scan](owner-boundary-bridge-residual-cross-wave-scan.md)
 - [owner-boundary-bridge-long-pass-closeout-ledger](owner-boundary-bridge-long-pass-closeout-ledger.md)
+- [template-modernization-long-pass-working-plan](template-modernization-long-pass-working-plan.md)
 - [template-modernization-skill-support-pilot](template-modernization-skill-support-pilot.md)
 - [template-modernization-long-pass-corpus-triage](template-modernization-long-pass-corpus-triage.md)
 - [template-modernization-long-pass-proof-review](template-modernization-long-pass-proof-review.md)

@@ -1,7 +1,7 @@
 # Technique Sections
 
 This file is generated from authoritative `TECHNIQUE.md` bundles plus the current section manifest payload.
-Do not edit it by hand; run `python scripts/build_section_manifest.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when you need one bounded answer to which techniques expose a given lifted section heading without opening every bundle first.
 

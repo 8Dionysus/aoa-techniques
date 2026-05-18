@@ -75,8 +75,8 @@ Why this order:
   - updates to [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md)
   - updates to [External Evidence Ledger](../external-evidence-ledger/README.md)
   - any later sync to [Roadmap](../../../../ROADMAP.md)
-  - `python -m pip install -r requirements-dev.txt`
-  - final `python scripts/release_check.py`
+  - final validation through [AGENTS](../../../../AGENTS.md#validation)
+    and [RELEASING](../../../../docs/RELEASING.md)
 - each worker owns:
   - one technique bundle at a time
   - one bounded search lane
@@ -155,7 +155,7 @@ The sprint does not need to increase the canonical count to count as progress.
 
 - keep bundle edits local until evidence is real
 - merge one bundle or one coherent evidence pack per PR when every touched bundle has local readiness and adverse-effect review support
-- run `python scripts/release_check.py` after a merge-ready bundle exists
+- follow [RELEASING](../../../../docs/RELEASING.md) after a merge-ready bundle exists
 - update [Promotion Readiness Matrix](../promotion-readiness-matrix/README.md), [External Evidence Ledger](../external-evidence-ledger/README.md), and [Roadmap](../../../../ROADMAP.md) only when the blocker or queue meaning actually changed
 
 ## Notes

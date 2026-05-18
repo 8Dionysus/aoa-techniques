@@ -3,8 +3,8 @@
 Source packet: [Technique Reform Ingress](../README.md)
 
 Retired temporary plan:
-`../TEMP_SELECTOR_RELATION_LONG_PASS_PLAN.md` was removed in Phase 16 after
-this ledger landed as durable review memory.
+the selector-relation temporary plan was removed in Phase 16 after this ledger
+landed as durable review memory.
 
 Residual scan:
 [Selector Relation Residual Cross-Wave Scan](selector-relation-residual-cross-wave-scan.md)

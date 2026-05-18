@@ -1,7 +1,7 @@
 # Technique Capsules
 
 This file is generated from authoritative `TECHNIQUE.md` bundles plus the current local capsule payload.
-Do not edit it by hand; run `python scripts/build_capsules.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when one bounded local runtime card is enough to orient on a technique without opening selection, review, or manifest layers first.
 

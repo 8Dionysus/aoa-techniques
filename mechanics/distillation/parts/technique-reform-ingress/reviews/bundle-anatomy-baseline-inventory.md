@@ -2,7 +2,7 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan: [Temporary Bundle Reform Rhythm Plan](../TEMP_BUNDLE_REFORM_RHYTHM_PLAN.md)
+Durable closeout: [Bundle Anatomy Final Closeout Ledger](bundle-anatomy-final-closeout-ledger.md)
 
 Final tree ledger: [Final Tree Migration Ledger](final-tree-migration-ledger.md)
 

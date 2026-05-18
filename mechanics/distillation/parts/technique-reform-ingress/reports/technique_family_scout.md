@@ -1,7 +1,7 @@
 # Technique Family Scout
 
 This file is generated from the current kind registry, family scout, kind overlay, and generated catalog.
-Do not edit it by hand; run `python scripts/build_kind_manifest.py`.
+Do not edit it by hand; rebuild through [reports AGENTS](AGENTS.md#validation).
 
 This report is scout-only, non-authoritative, and weaker than bundle frontmatter. It must not be treated as schema truth, frontmatter truth, or automatic remap authority.
 

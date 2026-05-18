@@ -1,7 +1,7 @@
 # Repo Doc Surfaces
 
 This file is generated from the authoritative public route, canon-law, contribution, example, and status layer only.
-Do not edit it by hand; run `python scripts/build_repo_doc_surface_manifest.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when the main question is which public repo doc to open next for orientation, canon boundaries, contribution rules, public-safety expectations, direction, obligations, or release/status context.
 
