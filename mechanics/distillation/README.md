@@ -19,8 +19,8 @@ summary.
 ### Local owns
 
 This package owns donor refinery rules, external import runbooks, candidate
-ledgers, topology-reform ingress, long-gap re-entry posture, active extraction
-routes, and provenance bridges for technique-shaped intake.
+intake, candidate ledgers, topology-reform ingress, long-gap re-entry posture,
+active extraction routes, and provenance bridges for technique-shaped intake.
 
 ### Stronger owner split
 
@@ -78,6 +78,9 @@ only after the atom and topology questions can be named.
 
 - [Donor Refinery](parts/donor-refinery/README.md): compact extraction law for
   turning donor material into reusable practice without copying residue.
+- [Candidate Intake](parts/candidate-intake/README.md): active quarantine for
+  public-safe candidate packets before ledger, hold, import, bundle, or archive
+  routing.
 - [External Import Runbook](parts/external-import-runbook/README.md):
   maintainer-facing path from donor triage to draft, review, and merge.
 - [External Candidate Ledger](parts/external-candidate-ledger/README.md):

@@ -39,7 +39,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/dependency-aware-task-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`
+- source paths: `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md` and `techniques/execution/ready-work-graphs/dependency-aware-task-graph/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 - Taskwarrior's public man page exposes `blocked`, `blocking`, and `unblocked` reports over tasks affected by dependencies.
 - Taskwarrior's dependency tests reject self-dependencies and cycles, show acyclic graph support, expose `BLOCKED` / `BLOCKING` tags, and verify that completing a dependency unblocks the downstream task.

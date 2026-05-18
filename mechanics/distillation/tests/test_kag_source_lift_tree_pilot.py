@@ -87,7 +87,7 @@ LIVE_LINK_SURFACES = (
     "mechanics/audit/parts/promotion-evidence-runbook/README.md",
     "mechanics/distillation/parts/cross-layer-candidate-ledger/README.md",
     "mechanics/distillation/parts/long-gap-reentry/README.md",
-    "incoming/chat-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_CLOSEOUT_MEMO.md",
+    "mechanics/distillation/legacy/archive/closed-incoming-packets/chat-registry-discovery/docs/SEMANTIC_LINKAGE_RECORDS_CLOSEOUT_MEMO.md",
 )
 
 UNMOVED_DOCS_SHELVES = (

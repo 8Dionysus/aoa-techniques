@@ -31,8 +31,8 @@ PILOT_BUNDLES = (
 )
 
 LIVE_LINK_SURFACES = (
-    "incoming/chat-registry-discovery/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_REGISTRY_DISCOVERY.md",
-    "incoming/chat-tool-proxy-runtime/docs/PREFLIGHT_REPUTATION_CHECK_CLOSEOUT_MEMO.md",
+    "mechanics/distillation/legacy/archive/closed-incoming-packets/chat-registry-discovery/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_REGISTRY_DISCOVERY.md",
+    "mechanics/distillation/legacy/archive/closed-incoming-packets/chat-tool-proxy-runtime/docs/PREFLIGHT_REPUTATION_CHECK_CLOSEOUT_MEMO.md",
     "mechanics/audit/parts/promotion-readiness-matrix/README.md",
     "mechanics/distillation/parts/external-candidate-ledger/README.md",
     "mechanics/distillation/parts/technique-reform-ingress/reviews/capability-boundary-direct-read-migration-review.md",

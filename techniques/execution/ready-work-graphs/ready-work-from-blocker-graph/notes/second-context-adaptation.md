@@ -39,7 +39,7 @@
 
 ## Evidence
 
-- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/ready-work-from-blocker-graph/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`
+- source paths: `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md` and `techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 - Taskwarrior's public man page exposes `blocked`, `blocking`, and `unblocked` reports, giving a visible distinction between blocked work and blocker-free work.
 - Taskwarrior's dependency tests verify that completing a dependency removes the `BLOCKED` state from the waiting task.

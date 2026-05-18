@@ -42,10 +42,10 @@ The format is intentionally simple and human-first.
 - normalized every discovered local `AGENTS.md` card to the canonical mesh
   shape, registered all `87` cards as canonical, disabled migration drift in
   `config/agents_mesh.json`, and recorded the closure decision
-- closed current `incoming/` packets into evidence-only posture after their
-  first-pass landing queues were exhausted, removed duplicate packet-local
-  seed bundles for already landed techniques, and kept only landed-bundle
-  provenance, explicit exclusions, and closed non-import closeout memos
+- moved closed root `incoming/` packets into the Distillation legacy archive
+  after their first-pass landing queues were exhausted, removed duplicate
+  packet-local seed bundles for already landed techniques, and moved active
+  packet intake into the Distillation `candidate-intake` part
 - moved agent-only read order, validation command lanes, closeout expectations,
   and editing stop-lines from neighboring README/guide surfaces into the
   nearest `AGENTS.md`, including the mechanic package-card standard, Spark

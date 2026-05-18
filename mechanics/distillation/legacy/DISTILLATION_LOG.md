@@ -1,5 +1,21 @@
 # Distillation Legacy Log
 
+## 2026-05-18 - Closed incoming packet archive
+
+Moved the six closed root incoming packet roots into the Distillation legacy
+archive after their first-pass landing queues were exhausted:
+
+- `incoming/chat-graph-review-mailbox/` -> `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/`
+- `incoming/chat-handoff-bounded-continuation/` -> `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-handoff-bounded-continuation/`
+- `incoming/chat-history-lineage-governed-actions/` -> `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-history-lineage-governed-actions/`
+- `incoming/chat-registry-discovery/` -> `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-registry-discovery/`
+- `incoming/chat-tool-proxy-runtime/` -> `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-tool-proxy-runtime/`
+- `incoming/personal-media-ingest/` -> `mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/`
+
+Active intake now lives in `mechanics/distillation/parts/candidate-intake/`.
+Candidate verdicts, explicit exclusions, packet support registries, technique
+IDs, frontmatter, and canonical bundle meanings did not change.
+
 ## 2026-05-01 - Flat files moved into active parts
 
 The five pre-split distillation files were moved into active part homes:

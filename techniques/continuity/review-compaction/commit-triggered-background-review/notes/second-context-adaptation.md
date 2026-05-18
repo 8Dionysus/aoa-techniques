@@ -52,7 +52,7 @@ review surface. The boundary remains strict: Qodo / PR-Agent also has adjacent
 auto-improve, auto-approval, chat, and broader platform behavior, but those are
 not part of this technique's canonical default.
 
-- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/commit-triggered-background-review/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`
+- source paths: `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md` and `techniques/continuity/review-compaction/commit-triggered-background-review/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

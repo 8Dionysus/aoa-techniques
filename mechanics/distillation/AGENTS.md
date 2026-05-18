@@ -22,8 +22,10 @@ technique promotion.
 - `PROVENANCE.md` is the active-first bridge back to donor and legacy evidence.
 - `legacy/` preserves distillation accounting and is the place for future
   pre-prune receipts.
-- `incoming/` wave packets and sibling-repo donor notes are evidence surfaces;
-  they do not become active law by appearing here.
+- `parts/candidate-intake/` owns active public-safe incoming packet quarantine;
+  closed packet roots move to `legacy/archive/closed-incoming-packets/`.
+- Archived incoming wave packets and sibling-repo donor notes are evidence
+  surfaces; they do not become active law by appearing here.
 
 ## Read before editing
 

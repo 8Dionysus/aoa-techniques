@@ -1,6 +1,6 @@
 # Incoming Evidence-Only Closeout
 
-Status: accepted
+Status: accepted for closeout; placement superseded by `2026-05-18-closed-incoming-packets-distillation-legacy.md`
 Date: 2026-05-18
 
 ## Context
@@ -23,8 +23,8 @@ That made the quarantine look like a live drafting lane and duplicated
 
 ## Decision
 
-Keep current packet roots under `incoming/` as evidence-only provenance and
-closed-verdict surfaces.
+Close the current packet roots as evidence-only provenance and closed-verdict
+surfaces.
 
 Remove packet-local `candidate_bundles/**` seed drafts once their corresponding
 techniques have landed. Former narrowing and incubation tails become
@@ -32,11 +32,11 @@ techniques have landed. Former narrowing and incubation tails become
 a new Distillation intake with fresh evidence instead of reusing old seed
 drafts or packet-local queues.
 
-## Rationale
+This record originally kept the closed packet roots under `incoming/`; the
+follow-up placement decisions move closed packets to the Distillation legacy
+archive and move active intake to the Candidate Intake part.
 
-`incoming/` is still the right place for quarantine packet evidence: it keeps
-donor-wave accounting close to the original packet and avoids turning
-Distillation legacy into a second active intake tree.
+## Rationale
 
 The duplicate seed bundles were the wrong surviving surface. Landed technique
 meaning belongs in `techniques/**/TECHNIQUE.md`; a remaining packet should
@@ -45,7 +45,7 @@ pretending a seed bundle or live backlog is still present.
 
 ## Consequences
 
-- `incoming/` becomes lighter and no longer visually competes with canon.
+- root `incoming/` no longer visually competes with canon.
 - Non-landed tails are closed: six former narrowing/incubation items now use
   `closed-no-import`, and explicit exclusions remain closed.
 - Future work requires a new Distillation intake with fresh evidence and
@@ -56,11 +56,11 @@ pretending a seed bundle or live backlog is still present.
 
 ## Source surfaces
 
-- `incoming/AGENTS.md`
-- `incoming/README.md`
-- `incoming/*/README.md`
-- `incoming/*/docs/*CLOSEOUT_MEMO.md`
-- `incoming/*/support/registry.json`
+- `mechanics/distillation/parts/candidate-intake/AGENTS.md`
+- `mechanics/distillation/parts/candidate-intake/README.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/*/README.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/*/docs/*CLOSEOUT_MEMO.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/*/support/registry.json`
 - `mechanics/distillation/PROVENANCE.md`
 
 ## Follow-up route
@@ -75,7 +75,7 @@ old packet-local queues.
 Validate the resulting route with:
 
 ```bash
-python -m unittest tests.test_incoming_topology
+python -m unittest mechanics.distillation.tests.test_distillation_incoming_topology
 python scripts/validate_repo.py
 python scripts/validate_semantic_agents.py
 git diff --check

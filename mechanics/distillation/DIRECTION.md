@@ -19,19 +19,22 @@ parts.
 
 1. Use [Donor Refinery](parts/donor-refinery/README.md) to decide what can be
    extracted without importing foreign doctrine.
-2. Use [External Import Runbook](parts/external-import-runbook/README.md) only
+2. Use [Candidate Intake](parts/candidate-intake/README.md) for active
+   public-safe candidate packets before ledger, import, hold, bundle, or
+   archive routing.
+3. Use [External Import Runbook](parts/external-import-runbook/README.md) only
    after the donor already looks like a bounded technique candidate.
-3. Use [External Candidate Ledger](parts/external-candidate-ledger/README.md)
+4. Use [External Candidate Ledger](parts/external-candidate-ledger/README.md)
    for public-safe external candidate accounting.
-4. Use [Cross-Layer Candidate Ledger](parts/cross-layer-candidate-ledger/README.md)
+5. Use [Cross-Layer Candidate Ledger](parts/cross-layer-candidate-ledger/README.md)
    for sibling-repo donor-note accounting.
-5. Use [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md) when
+6. Use [Agon Candidate Handoff](parts/agon-candidate-handoff/README.md) when
    Agon requested-only candidates need Distillation lanes and gate cards before
    any bundle draft.
-6. Use [Technique Reform Ingress](parts/technique-reform-ingress/README.md)
+7. Use [Technique Reform Ingress](parts/technique-reform-ingress/README.md)
    when accumulated topology evidence needs a bounded entry route before future
    classification reform.
-7. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
+8. Use [Long-Gap Reentry](parts/long-gap-reentry/README.md) when old promoted
    material needs a new external contract before another honest canonical pass.
 
 ## Boundaries

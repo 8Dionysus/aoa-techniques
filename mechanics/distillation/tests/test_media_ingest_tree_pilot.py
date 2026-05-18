@@ -98,9 +98,16 @@ class MediaIngestTreePilotTestCase(unittest.TestCase):
         self.assertIn("They did not pass through root `legacy/`.", receipt)
         self.assertIn("telegram-account-auth-and-session-bridge", receipt)
 
-    def test_incoming_personal_ingest_links_point_to_current_paths(self) -> None:
+    def test_archived_personal_ingest_links_point_to_current_paths(self) -> None:
         docs_dir = (
-            REPO_ROOT / "incoming" / "personal-media-ingest" / "docs"
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "archive"
+            / "closed-incoming-packets"
+            / "personal-media-ingest"
+            / "docs"
         )
         text = "\n".join(
             [

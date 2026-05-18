@@ -54,7 +54,7 @@ find commits since the previous review. The boundary remains strict:
 auto-fix, auto-approval, chat, issue triage, and merge policy are adjacent
 provider features, not part of this technique's canonical default.
 
-- source paths: `incoming/chat-graph-review-mailbox/candidate_bundles/agent-workflows/review-findings-compaction/TECHNIQUE.candidate.md`, `incoming/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md`, and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`
+- source paths: `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/CHAT_GRAPH_REVIEW_MAILBOX_PLANTING_ORDER.md` and `techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md`
 - review surface or generated output touched: `TECHNIQUE_INDEX.md`, generated catalog and capsule surfaces, and the Wave 2 staging registry after landing
 
 ## Result

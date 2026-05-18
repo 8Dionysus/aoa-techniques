@@ -3,6 +3,9 @@
 This directory preserves pre-prune receipts and raw Distillation source
 captures.
 
+Closed packet archives that were already processed live in
+[../archive](../archive/), not here.
+
 Current receipts:
 
 - [EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md):
