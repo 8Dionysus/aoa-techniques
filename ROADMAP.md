@@ -100,8 +100,10 @@ Current anchors:
   [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md), and
   [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md)
 - Generated views: [technique catalog](generated/technique_catalog.min.json),
-  [technique capsules](generated/technique_capsules.min.json), and
-  [repo doc surface manifest](generated/repo_doc_surface_manifest.min.json)
+  [technique capsules](generated/technique_capsules.min.json),
+  [technique intelligence registry](generated/technique_intelligence_registry.min.json),
+  [technique intelligence DAG](generated/technique_intelligence_dag.min.json),
+  and [repo doc surface manifest](generated/repo_doc_surface_manifest.min.json)
 - Movement and evidence: [mechanics README](mechanics/README.md),
   [Audit parts](mechanics/audit/parts/), and
   [Distillation parts](mechanics/distillation/parts/)
@@ -196,13 +198,15 @@ fidelity become a hidden dependency for public reuse.
 
 ## Horizon: Generated Companions
 
-Generated catalogs, capsules, source-lift readers, repo-doc surfaces, and
-agent-mesh mirrors give machines compact routes over authored sources.
+Generated catalogs, capsules, technique intelligence packets, source-lift
+readers, repo-doc surfaces, and agent-mesh mirrors give machines compact
+routes over authored sources.
 
 Next: keep generated parity validator-backed whenever source docs, templates,
-route maps, mesh config, or surface specs change. Stop: generated outputs
-route and compress; they do not author technique meaning, root law, agent law,
-or status.
+route maps, mesh config, or surface specs change. Keep Technique Intelligence
+focused on query, explanation, packing, and navigation over atomic moves. Stop:
+generated outputs route and compress; they do not author technique meaning,
+root law, agent law, execution workflow, proof verdict, graph truth, or status.
 
 ## When The Time Comes
 

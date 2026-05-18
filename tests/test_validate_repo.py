@@ -111,6 +111,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
                 ("python", "scripts/build_shadow_review_manifest.py"),
                 ("python", "scripts/build_promotion_readiness.py"),
                 ("python", "scripts/build_kag_export.py"),
+                ("python", "scripts/build_technique_intelligence.py"),
                 ("python", "scripts/validate_agents_md_shape.py"),
                 ("python", "scripts/validate_agents_mesh.py"),
                 ("python", "scripts/build_agents_mesh_index.py", "--check"),

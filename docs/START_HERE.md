@@ -35,6 +35,7 @@ authority.
 | The second selector axis | [Technique Kind Guide](selection/TECHNIQUE_KIND_GUIDE.md) |
 | Neighboring-repo `domain + kind` handoff | [Technique Kind Handoff Pack](selection/TECHNIQUE_KIND_HANDOFF_PACK.md) |
 | A small runtime card | [Technique Capsules](readers/runtime/TECHNIQUE_CAPSULES.md) or [technique capsules min JSON](../generated/technique_capsules.min.json) |
+| A source-linked move query or packet | [Technique Intelligence](readers/intelligence/TECHNIQUE_INTELLIGENCE.md) after [Technique Intelligence Guide](selection/TECHNIQUE_INTELLIGENCE_GUIDE.md) |
 | Root or docs placement | [Root Surface Law](ROOT_SURFACE_LAW.md), [Thematic District Protocol](guardrails/THEMATIC_DISTRICT_PROTOCOL.md), [Current Surface Index](guardrails/CURRENT_SURFACE_INDEX.md) |
 
 Use [Technique Topology Contract](TECHNIQUE_TOPOLOGY_CONTRACT.md) for `domain`,
@@ -68,6 +69,7 @@ Generated readers help orientation; authored sources still win.
 | Semantic review interpretation | [Semantic Review Guide](review/SEMANTIC_REVIEW_GUIDE.md) |
 | Caution seams or boundary drift | [SHADOW_PATTERNS.md](readers/review/SHADOW_PATTERNS.md), [Technique Shadow Guide](review/TECHNIQUE_SHADOW_GUIDE.md), [Risk And Negative-Effect Lift Guide](source-lift/RISK_AND_NEGATIVE_EFFECT_LIFT_GUIDE.md) |
 | Local agent-card coverage | [AGENTS Mesh Protocol](guardrails/AGENTS_MESH_PROTOCOL.md), [AGENTS Mesh Index](guardrails/AGENTS_MESH_INDEX.md), [agents mesh min JSON](../generated/agents_mesh.min.json) |
+| Query, explain, pack, or navigation-DAG lookup for one move | [Technique Intelligence](readers/intelligence/TECHNIQUE_INTELLIGENCE.md), [Technique Intelligence Guide](selection/TECHNIQUE_INTELLIGENCE_GUIDE.md), [technique intelligence min JSON](../generated/technique_intelligence_registry.min.json) |
 
 ## Current Corpus Posture
 

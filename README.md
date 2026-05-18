@@ -52,6 +52,10 @@ Read only the surface that matches the job.
 - Pick compact runtime cards:
   [TECHNIQUE_CAPSULES](docs/readers/runtime/TECHNIQUE_CAPSULES.md) or
   [technique_capsules.min.json](generated/technique_capsules.min.json)
+- Query, explain, or pack one source-linked move:
+  [TECHNIQUE_INTELLIGENCE](docs/readers/intelligence/TECHNIQUE_INTELLIGENCE.md),
+  [TECHNIQUE_INTELLIGENCE_GUIDE](docs/selection/TECHNIQUE_INTELLIGENCE_GUIDE.md),
+  or [technique_intelligence_registry.min.json](generated/technique_intelligence_registry.min.json)
 - Inspect docs and route surfaces: [Documentation Map](docs/README.md),
   [Repo Doc Surfaces](docs/readers/repo/REPO_DOC_SURFACES.md), and
   [repo_doc_surface_manifest.min.json](generated/repo_doc_surface_manifest.min.json)
@@ -133,6 +137,10 @@ Machine-facing companions summarize the route:
 
 - [technique_catalog.min.json](generated/technique_catalog.min.json): compact corpus catalog
 - [technique_capsules.min.json](generated/technique_capsules.min.json): small runtime technique cards
+- [technique_intelligence_registry.min.json](generated/technique_intelligence_registry.min.json):
+  source-linked query, explanation, and packing packets for atomic moves
+- [technique_intelligence_dag.min.json](generated/technique_intelligence_dag.min.json):
+  navigation DAG over domains, kinds, family hints, and load refs
 - [repo_doc_surface_manifest.min.json](generated/repo_doc_surface_manifest.min.json):
   compact map of bounded public route/canon/status docs
 - [agents_mesh.min.json](generated/agents_mesh.min.json): compact AGENTS mesh coverage companion

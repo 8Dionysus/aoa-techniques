@@ -8,6 +8,11 @@ The format is intentionally simple and human-first.
 
 ### Added
 
+- added a source-derived Technique Intelligence layer with registry and DAG
+  schemas, builder, CLI `query`/`explain`/`pack`/`status` commands, generated
+  full/min JSON companions, a generated reader, validation/release wiring, and
+  a decision record that keeps the layer focused on atomic moves rather than
+  execution workflow or graph authority
 - added canonical `AGENTS.md` cards for root legacy subdistricts
   (`legacy/raw`, `legacy/archive`, `legacy/receipts`) and quest lanes
   (`quests/techniques`, `quests/agon`), with mesh config and validation

@@ -726,7 +726,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         ).read_text(encoding="utf-8")
 
         self.assertIn("not a schema migration", ingress)
-        self.assertIn("public corpus: `107` bundles, `27` canonical, `80` promoted", ingress)
+        self.assertIn("public corpus: `107` bundles, `98` canonical, `9` promoted", ingress)
         self.assertIn("authoritative frontmatter axes: `domain`, `kind`", ingress)
         self.assertIn("first_narrowing_frontier", ingress)
         for axis in (

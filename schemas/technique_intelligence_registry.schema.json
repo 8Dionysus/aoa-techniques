@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa-techniques.dev/schemas/technique_intelligence_registry.schema.json",
+  "title": "Technique Intelligence Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "registry_version",
+    "authority",
+    "source_of_truth",
+    "technique_count",
+    "generated_from",
+    "techniques"
+  ],
+  "properties": {
+    "registry_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "authority": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source_of_truth": {
+      "type": "object"
+    },
+    "technique_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "generated_from": {
+      "type": "object"
+    },
+    "techniques": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "status",
+          "domain",
+          "kind",
+          "summary",
+          "technique_path",
+          "source",
+          "move",
+          "capsule",
+          "topology",
+          "relations",
+          "support_refs",
+          "review_refs",
+          "fixture_refs",
+          "owner_boundaries",
+          "next_load_refs",
+          "search_documents"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^AOA-T-[0-9]{4}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 3
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "canonical",
+              "promoted",
+              "deprecated"
+            ]
+          },
+          "domain": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 10
+          },
+          "technique_path": {
+            "type": "string",
+            "pattern": "^techniques/[A-Za-z0-9._/-]+/TECHNIQUE\\.md$"
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "primary_source_ref",
+              "source_hash",
+              "catalog_ref",
+              "capsule_ref",
+              "section_ref"
+            ],
+            "properties": {
+              "primary_source_ref": {
+                "type": "string"
+              },
+              "source_hash": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "catalog_ref": {
+                "type": "string"
+              },
+              "capsule_ref": {
+                "type": "string"
+              },
+              "section_ref": {
+                "type": "string"
+              }
+            }
+          },
+          "move": {
+            "type": "object",
+            "required": [
+              "unit",
+              "summary",
+              "intent",
+              "applies_when",
+              "does_not_apply_when",
+              "inputs",
+              "outputs",
+              "procedure",
+              "contracts",
+              "risks",
+              "validation",
+              "stop_line",
+              "source_refs"
+            ],
+            "properties": {
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "attention_bounded_atomic_move"
+                ]
+              },
+              "summary": {
+                "type": "string"
+              },
+              "intent": {
+                "type": "string",
+                "minLength": 1
+              },
+              "applies_when": {
+                "type": "string",
+                "minLength": 1
+              },
+              "does_not_apply_when": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inputs": {
+                "type": "string",
+                "minLength": 1
+              },
+              "outputs": {
+                "type": "string",
+                "minLength": 1
+              },
+              "procedure": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contracts": {
+                "type": "string",
+                "minLength": 1
+              },
+              "risks": {
+                "type": "string",
+                "minLength": 1
+              },
+              "validation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "stop_line": {
+                "type": "string",
+                "minLength": 20
+              },
+              "source_refs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "capsule": {
+            "type": "object"
+          },
+          "topology": {
+            "type": "object",
+            "required": [
+              "truth",
+              "tree_projection",
+              "hints"
+            ],
+            "properties": {
+              "truth": {
+                "type": "object"
+              },
+              "tree_projection": {
+                "type": "object"
+              },
+              "hints": {
+                "type": "object",
+                "required": [
+                  "authority",
+                  "source_refs"
+                ],
+                "properties": {
+                  "authority": {
+                    "type": "string",
+                    "enum": [
+                      "scout_only_non_authoritative"
+                    ]
+                  },
+                  "source_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "relations": {
+            "type": "object"
+          },
+          "support_refs": {
+            "type": "object"
+          },
+          "review_refs": {
+            "type": "object"
+          },
+          "fixture_refs": {
+            "type": "array"
+          },
+          "owner_boundaries": {
+            "type": "object",
+            "required": [
+              "this_repo_owns",
+              "route_away",
+              "stop_line"
+            ]
+          },
+          "next_load_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object"
+            }
+          },
+          "search_documents": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "document_id",
+                "technique_id",
+                "document_type",
+                "source_ref",
+                "text",
+                "content_hash"
+              ],
+              "properties": {
+                "document_id": {
+                  "type": "string"
+                },
+                "technique_id": {
+                  "type": "string",
+                  "pattern": "^AOA-T-[0-9]{4}$"
+                },
+                "document_type": {
+                  "type": "string"
+                },
+                "section_key": {
+                  "type": "string"
+                },
+                "section_name": {
+                  "type": "string"
+                },
+                "source_ref": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "content_hash": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

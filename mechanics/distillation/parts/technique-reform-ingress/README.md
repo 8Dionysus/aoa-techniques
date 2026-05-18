@@ -12,7 +12,7 @@ permission slip to remap techniques automatically.
 
 ## Current Contour
 
-- public corpus: `107` bundles, `27` canonical, `80` promoted
+- public corpus: `107` bundles, `98` canonical, `9` promoted
 - authoritative frontmatter axes: `domain`, `kind`
 - corpus tree: current authored path architecture across `10` trunks, `28`
   shelves, and `107` leaf bundles
@@ -430,6 +430,10 @@ permission slip to remap techniques automatically.
   support-file, or template-contract changes; the validator now allows these
   template-modernization sections as optional fixed-slot headings instead of
   forcing a full-corpus rewrite
+- technique intelligence strategy: landed as a strategic audit for RAG,
+  Agentic RAG, DAG, and agentic graph-ready technique selection; it recommends
+  a deterministic source-derived registry before semantic retrieval, graph
+  export, or sibling-owner integration
 
 ## Evidence Stack
 
@@ -579,6 +583,7 @@ permission slip to remap techniques automatically.
 | [Owner-Boundary Bridge Long-Pass Closeout Ledger](reviews/owner-boundary-bridge-long-pass-closeout-ledger.md) | closes the owner-boundary bridge long pass as durable review memory with full current-corpus coverage, empty repair queue, temporary-plan disposition, and next-lane guidance toward a small template modernization pilot | bundle authority, source rewrite, direct relation repair, schema/frontmatter migration, generated-surface change, sibling-owner acceptance, or empirical small-agent proof |
 | [Template Modernization Skill-Support Pilot](reviews/template-modernization-skill-support-pilot.md) | starts source-shape modernization with `proof/skill-support`, adding explicit atom, topology-fit, small-agent execution sections, and bounded optional-section validator alignment | mass old-template rewrite, required-section migration across all bundles, template-contract change, schema/frontmatter migration, relation repair, sibling-skill acceptance, generated hand edit, or empirical small-agent proof |
 | [Template Modernization Optional Sections Decision](../../../../docs/decisions/2026-05-06-template-modernization-optional-sections.md) | records why the validator allows the three template-modernization sections as optional fixed-slot headings | full-corpus required-section migration, frontmatter promotion, generated hand edit, or proof that every old-template bundle needs repair |
+| [Technique Intelligence Layer Strategy](reviews/technique-intelligence-layer-strategy.md) | audits the technique-side shape for RAG, Agentic RAG, DAG, and agentic graph-ready selection, recommending a source-derived registry/query/explain slice | implementation authority, schema/frontmatter migration, semantic backend, graph inference, skill activation, eval proof, or sibling-owner policy |
 | [Agon First-Narrowing Frontier](../agon-candidate-handoff/gates/frontier/first-narrowing-frontier-review.md) | why capability, substrate, execution, and risk axes matter before new kinds | readiness to add new required fields or promote Agon source status |
 | [Agon Handoff Generated Index](../agon-candidate-handoff/generated/agon_candidate_handoff.min.json) | current machine-readable frontier, pipeline counts, and topology cues | technique canon or Agon acceptance |
 
