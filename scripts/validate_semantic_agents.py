@@ -47,7 +47,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         ),
     ),
     AgentsDocSpec(
-        Path('incoming/AGENTS.md'),
+        Path('mechanics/distillation/parts/candidate-intake/AGENTS.md'),
         (
             'quarantine',
             'candidate',

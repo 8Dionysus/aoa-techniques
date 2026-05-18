@@ -6,5 +6,7 @@ This directory preserves Distillation lineage accounting.
 - [DISTILLATION_LOG](DISTILLATION_LOG.md): dated accounting for raw-to-active
   movement.
 - [raw](raw/): reserved for preserved pre-prune receipts.
+- [archive](archive/): closed evidence packets that no longer belong in active
+  intake.
 
 Current behavior lives in [../parts](../parts/), not here.

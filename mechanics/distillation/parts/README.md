@@ -3,6 +3,8 @@
 Active Distillation parts:
 
 - [donor-refinery](donor-refinery/README.md)
+- [candidate-intake](candidate-intake/README.md) for active public-safe
+  candidate packets before ledger, import, hold, bundle, or archive routing
 - [external-import-runbook](external-import-runbook/README.md)
 - [external-candidate-ledger](external-candidate-ledger/README.md) with a
   part-local structured registry for current candidate accounting

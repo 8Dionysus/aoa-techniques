@@ -88,6 +88,8 @@ local editing and validation route.
 | [2026-05-16-docs-surface-guardrails-and-tree-contract-slimming](2026-05-16-docs-surface-guardrails-and-tree-contract-slimming.md) | Docs Surface Guardrails And Tree Contract Slimming |
 | [2026-05-17-agent-neighbor-doc-command-ownership](2026-05-17-agent-neighbor-doc-command-ownership.md) | Agent Neighbor Doc Command Ownership |
 | [2026-05-17-agents-mesh-canonical-closure](2026-05-17-agents-mesh-canonical-closure.md) | AGENTS Mesh Canonical Closure |
+| [2026-05-18-candidate-intake-active-part-home](2026-05-18-candidate-intake-active-part-home.md) | Candidate Intake Active Part Home |
+| [2026-05-18-closed-incoming-packets-distillation-legacy](2026-05-18-closed-incoming-packets-distillation-legacy.md) | Closed Incoming Packets Distillation Legacy |
 | [2026-05-18-incoming-evidence-only-closeout](2026-05-18-incoming-evidence-only-closeout.md) | Incoming Evidence-Only Closeout |
 
 ## Record Shape

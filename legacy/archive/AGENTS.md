@@ -33,7 +33,8 @@ before moving or summarizing it.
   `../../mechanics/<slug>/legacy/` when one mechanic owns the history.
 - Do not treat archived generated output as stronger than the generator or
   authored source.
-- Do not store unreviewed candidate intake here; use `../../incoming/`.
+- Do not store unreviewed candidate intake here; use
+  `../../mechanics/distillation/parts/candidate-intake/`.
 - Do not add archive material without naming the active replacement route or
   explicit hold status.
 

@@ -1365,16 +1365,24 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
         root_roadmap = TREE_MIGRATION_BREADCRUMB_ROADMAP.read_text(encoding="utf-8")
         tree_contract = read_tree_migration_context()
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
-        incoming_wave2 = (
+        archived_wave2 = (
             REPO_ROOT
-            / "incoming"
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "archive"
+            / "closed-incoming-packets"
             / "chat-graph-review-mailbox"
             / "docs"
             / "EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md"
         ).read_text(encoding="utf-8")
-        incoming_wave3 = (
+        archived_wave3 = (
             REPO_ROOT
-            / "incoming"
+            / "mechanics"
+            / "distillation"
+            / "legacy"
+            / "archive"
+            / "closed-incoming-packets"
             / "chat-handoff-bounded-continuation"
             / "docs"
             / "EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md"
@@ -1410,15 +1418,15 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             root_roadmap,
         )
         self.assertIn("Landed Handoff-Continuation Pilot Review", tree_contract)
-        self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", incoming_wave2)
-        self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", incoming_wave3)
+        self.assertIn("techniques/continuity/handoff-continuation/channelized-agent-mailbox/TECHNIQUE.md", archived_wave2)
+        self.assertIn("techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md", archived_wave3)
         self.assertNotIn(
             "techniques/agent-workflows/channelized-agent-mailbox/TECHNIQUE.md",
-            incoming_wave2,
+            archived_wave2,
         )
         self.assertNotIn(
             "techniques/agent-workflows/episode-bounded-agent-loop/TECHNIQUE.md",
-            incoming_wave3,
+            archived_wave3,
         )
 
     def test_media_ingest_direct_read_review_accepts_third_pilot(self) -> None:

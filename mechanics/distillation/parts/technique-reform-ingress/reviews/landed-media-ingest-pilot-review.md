@@ -48,8 +48,8 @@ instruction or knowledge-lift shelves move.
 - [Media-ingest tree pilot receipt](../../../../../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
 - [Technique tree projection rows for `media-ingest` and
   `diagnosis-repair`](../reports/technique_tree_projection.md)
-- `incoming/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`
-- `incoming/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read

@@ -54,7 +54,7 @@ evidence trail.
 | Public governance and legal | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [SECURITY](../SECURITY.md), [LICENSE](../LICENSE) | do not become technique doctrine catalogs |
 | Release history | [CHANGELOG](../CHANGELOG.md) | record release history, not future direction |
 | Agent lane | [AGENTS](../AGENTS.md), [.agents](../.agents/), [agents mesh config](../config/agents_mesh.json), [agents mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | route agents without replacing public docs or owner contracts |
-| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [examples](../examples/), [generated](../generated/), [incoming](../incoming/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
+| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [examples](../examples/), [generated](../generated/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
 | Development requirements | [.gitignore](../.gitignore), [requirements-dev.txt](../requirements-dev.txt) | stay technical and small |
 
 ## Surfaces That Should Not Live In Root
@@ -66,7 +66,7 @@ evidence trail.
 | Mechanic runbooks, reports, configs, scripts, schemas, examples, manifests, or tests | owning `mechanics/<slug>/parts/<part>/` district | one-owner operating surfaces belong beside their mechanic |
 | Root catch-all data district without active repo-wide payload | strongest owner home, or a decision-backed new root district | an empty `data/` shelf attracts misplaced mechanic-local or generated material |
 | Agent-lane packet or swarm recipe | `.agents/<lane>/`, including `.agents/spark/` | agent-lane packet guidance belongs under the agent district |
-| Donor intake notes, raw external records, or candidate lists | owning Distillation route or root [legacy/raw](../legacy/raw/) only for repo-wide preservation | donor evidence should not become canon or a second incoming queue |
+| Donor intake notes, raw external records, or candidate lists | [Distillation candidate intake](../mechanics/distillation/parts/candidate-intake/README.md), another owning Distillation part, or root [legacy/raw](../legacy/raw/) only for repo-wide preservation | donor evidence should not become canon or a second incoming queue |
 | Generated catalogs, capsules, projections, or readers | [generated](../generated/) or [readers](readers/) as appropriate | generated surfaces are reproducible companions, not authored truth |
 | Technique meaning | [techniques](../techniques/) | root routes to meaning; it does not re-author it |
 | Local scratchpads or private operation notes | untracked local notes or the owning private repo | public root must stay sanitized and reusable |

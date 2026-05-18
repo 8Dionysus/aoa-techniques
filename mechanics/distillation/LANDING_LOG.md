@@ -7,10 +7,14 @@ mechanic.
 
 Changed:
 
-- marked all current `incoming/` packet roots as evidence-only after their
-  first-pass landing queues were exhausted
+- moved all closed root `incoming/` packet roots into
+  [closed incoming packets](legacy/archive/closed-incoming-packets/README.md)
+  after their first-pass landing queues were exhausted
+- moved active intake ownership to
+  [Candidate Intake](parts/candidate-intake/README.md)
 - removed packet-local `candidate_bundles/**` seed drafts for already landed
-  techniques so `incoming/` no longer duplicates canonical bundle meaning
+  techniques so archived packet evidence no longer duplicates canonical bundle
+  meaning
 - closed all non-landed packet tails as `closed-no-import` in packet docs and
   support registries:
   `markdown-definition-of-done-defaults`, `agent-readiness-telemetry`,
@@ -21,6 +25,8 @@ Changed:
   handoff packet
 - recorded the source-of-truth decision in
   [incoming evidence-only closeout](../../docs/decisions/2026-05-18-incoming-evidence-only-closeout.md)
+- recorded the archive placement decision in
+  [closed incoming packets Distillation legacy](../../docs/decisions/2026-05-18-closed-incoming-packets-distillation-legacy.md)
 
 Verification lane:
 

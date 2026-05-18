@@ -49,8 +49,8 @@ machinery and the next pressure should test a different root district.
 - [Handoff-continuation tree pilot receipt](../../../../../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
 - [Technique tree projection rows for `handoff-continuation` and
   `media-ingest`](../reports/technique_tree_projection.md)
-- `incoming/chat-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md`
-- `incoming/chat-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md`
+- `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md`
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read
@@ -62,7 +62,7 @@ machinery and the next pressure should test a different root district.
 | route card | updated | `techniques/continuity/AGENTS.md` names both accepted continuity shelves without turning the trunk into a domain |
 | root legacy | receipt only | active bundles moved directly between authored homes; `legacy/` preserves accounting |
 | generated surfaces | rebuilt | catalogs, capsules, sections, examples, checklists, evidence notes, and projection surfaces point at current paths |
-| staging links | repaired | `incoming/` candidate docs that point to landed bundles now use current authored paths |
+| staging links | repaired | archived incoming packet docs that point to landed bundles now use current authored paths |
 | validation | green | release check covered unit tests, nested AGENTS coverage, and repository parity |
 
 ## What The Second Pilot Proved
@@ -75,7 +75,7 @@ machinery and the next pressure should test a different root district.
   `domain: agent-workflows` and `kind: handoff`.
 - Root `legacy/receipts/` remains the right accounting surface for path
   migrations, while active bundles stay in `techniques/`.
-- Quarantined `incoming/` docs are not canon, but staging links to landed
+- Archived incoming packet docs are not canon, but staging links to landed
   bundles should still route to current authored homes once a path migration
   lands.
 
@@ -86,8 +86,8 @@ machinery and the next pressure should test a different root district.
 - The projection still labels landed shelves as `pilot-candidate`; that is
   tolerable while the projection remains non-authoritative, but later generated
   status language may need a separate review.
-- `incoming/` candidate bundle paths still preserve their source staging shape. This
-  review only repairs candidate-doc links to current canonical bundles.
+- Closed packet evidence still preserves source staging accounting. This review
+  only repairs candidate-doc links to current canonical bundles.
 - No `boundary-watch`, `split-review-needed`, or singleton shelf has moved.
 
 ## Third Shelf Choice
@@ -132,7 +132,7 @@ normalization should split away from image/document intake.
 
 Run a direct-read migration review for `media-ingest`.
 
-Read `AOA-T-0070` through `AOA-T-0074`, inspect adjacent links, `incoming/`
-staging provenance, generated-surface blast radius, and route-card needs, then
-decide whether those exact bundles should move into
+Read `AOA-T-0070` through `AOA-T-0074`, inspect adjacent links, archived packet
+provenance, generated-surface blast radius, and route-card needs, then decide
+whether those exact bundles should move into
 `techniques/ingest/media-ingest/`.

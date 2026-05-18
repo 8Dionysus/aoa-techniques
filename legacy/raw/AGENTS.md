@@ -31,7 +31,8 @@ If the packet came from a technique-tree move, also read
 - Do not add secrets, private transcripts, unreduced project dumps, host
   details, or raw logs.
 - Do not use this directory as quarantine for unreviewed candidate material;
-  use `../../incoming/` when the material is still candidate intake.
+  use `../../mechanics/distillation/parts/candidate-intake/` when the material
+  is still candidate intake.
 - Do not add active technique bundles here.
 - Do not add a raw packet without naming the active route, owner route, or
   explicit hold status it pressures.

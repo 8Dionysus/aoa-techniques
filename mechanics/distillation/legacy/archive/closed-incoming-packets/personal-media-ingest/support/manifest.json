@@ -1,0 +1,23 @@
+{
+  "packet_id": "personal-media-ingest",
+  "title": "Personal Media Ingest",
+  "source_pack": "personal-media-ingest drop-in::wave-2-personal-ingest",
+  "activation_state": "evidence-only",
+  "candidate_count": 6,
+  "candidate_slugs": [
+    "two-stage-document-ocr-pipeline",
+    "template-backed-field-extraction-after-ocr",
+    "perceptual-media-dedupe-with-threshold-review",
+    "semantic-media-bucketing-with-vision-plus-ocr",
+    "telegram-export-normalization-to-local-store",
+    "telegram-account-auth-and-session-bridge"
+  ],
+  "notes": [
+    "Repo-native evidence packet for the personal-ingest donor family staged under mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest.",
+    "Launch verdict is go: AOA-T-0070 two-stage-document-ocr-pipeline, AOA-T-0071 template-backed-field-extraction-after-ocr, AOA-T-0072 perceptual-media-dedupe-with-threshold-review, AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr, and AOA-T-0074 telegram-export-normalization-to-local-store are now landed; no first-pass seed candidates remain.",
+    "The immediate landing lane is exhausted while telegram-account-auth-and-session-bridge is closed-no-import for this packet.",
+    "Packet-local candidate_bundles were removed after landing; canonical technique bundles now own current meaning.",
+    "docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md is the closeout memo for the closed auth/session candidate.",
+    "support/registry.json is the machine-readable evidence inventory for this packet."
+  ]
+}
