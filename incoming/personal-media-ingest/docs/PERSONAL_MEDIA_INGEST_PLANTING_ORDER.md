@@ -4,11 +4,11 @@ This note is for operator-guided planting inside `aoa-techniques`.
 
 ## Current launch state
 
-- activation state: `active`
+- activation state: `evidence-only`
 - launch verdict: `go`
 - current landed bundle count: `5`
 - next separate landing PR should start with none; the first-pass landing queue is exhausted
-- current incubation-hold reopen gate: `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
+- current closed tail: `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`
 
 ## Hard rules
 
@@ -29,7 +29,7 @@ Why first:
 - smallest boundary
 - cleanest donor seam
 - easiest to keep public-safe
-- opens the OCR family without forcing receipt-specific heuristics yet
+- opens the OCR family without forcing receipt-specific heuristics in the first stage
 
 ### Stage 2
 - `template-backed-field-extraction-after-ocr`
@@ -85,11 +85,12 @@ Stop and restage instead of landing if:
 Require explicit operator approval before:
 
 - assigning a real `AOA-T-XXXX` id
-- moving a candidate bundle from `incoming/.../candidate_bundles/` into `techniques/`
+- creating a fresh packet-local candidate bundle or moving it into `techniques/`
 - changing `TECHNIQUE_INDEX.md`
 - regenerating shared surfaces through the repo release path
 
-## Remaining hold
+## Closed Tail
 
-- keep `telegram-account-auth-and-session-bridge` outside the landing lane
-- use `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md` as the active reopen gate
+- keep `telegram-account-auth-and-session-bridge` outside the landing lane as `closed-no-import`
+- use `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md` as the final packet rationale
+- do not recreate packet-local seed bundles for `AOA-T-0070` through `AOA-T-0074`

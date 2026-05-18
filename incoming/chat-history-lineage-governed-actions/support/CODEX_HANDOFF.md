@@ -4,7 +4,9 @@ You are operating inside `aoa-techniques` under explicit human control.
 
 ## Your job
 
-Use the staging surfaces in `incoming/chat-history-lineage-governed-actions/` to triage history, lineage, telemetry, and governed-action candidates without landing canonical bundles yet.
+Use the evidence surfaces in `incoming/chat-history-lineage-governed-actions/`
+to inspect landed history/governance provenance and the two closed non-import
+memos. The first-pass landing queue is closed.
 
 ## Read first
 
@@ -17,9 +19,8 @@ Use the staging surfaces in `incoming/chat-history-lineage-governed-actions/` to
 
 ## Operating posture
 
-- treat this shard as staging soil, not merge authority
-- keep work registry-only on the first pass
-- do not create canonical bundles or candidate bundles yet
+- treat this packet as evidence, not merge authority
+- do not create canonical bundles or candidate bundles from this packet
 - keep history packaging, retrieval, telemetry, and governed-action doctrine out unless a smaller reusable seam survives
 
 ## Desired worker output
@@ -31,4 +32,4 @@ Always answer in this shape:
 - boundary statement
 - what stays out
 - files touched or proposed
-- whether operator approval is needed
+- whether a new intake is justified

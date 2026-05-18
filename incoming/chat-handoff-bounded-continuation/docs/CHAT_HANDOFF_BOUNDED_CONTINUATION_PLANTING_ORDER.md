@@ -4,8 +4,8 @@ This note is for operator-guided staging inside `aoa-techniques`.
 
 ## Hard rules
 
-- keep all Chat Handoff Bounded Continuation candidate bundles under `candidate_bundles/agent-workflows/` on the first pass
-- do not assign `AOA-T-XXXX` ids from worker-owned wave tasks yet
+- do not recreate Chat Handoff Bounded Continuation candidate bundles after the first-pass landings
+- do not assign `AOA-T-XXXX` ids from this closed packet
 - do not absorb governed actions into the handoff lane
 - do not edit `TECHNIQUE_INDEX.md`, `generated/**`, or repo-wide queue docs from worker-owned tasks
 
@@ -21,6 +21,7 @@ This note is for operator-guided staging inside `aoa-techniques`.
 ## Preferred sequence
 
 No remaining `draft-now` candidates.
+No packet-local seed bundles remain.
 
 ## Explicit exclusion to leave closed
 

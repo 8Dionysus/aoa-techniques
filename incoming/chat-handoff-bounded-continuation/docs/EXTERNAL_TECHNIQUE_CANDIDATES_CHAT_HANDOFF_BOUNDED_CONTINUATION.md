@@ -1,6 +1,7 @@
 # External Technique Candidates - Chat Handoff Bounded Continuation
 
-This doc records the active handoff and bounded continuation wave staged from the external chat wave pack.
+This doc records the handoff and bounded continuation wave staged from the
+external chat wave pack.
 
 Use it when the question is not "which landed technique should I open?", but "which Wave 3 candidate already landed cleanly, and which related candidate stayed explicitly out of the handoff lane?"
 
@@ -34,7 +35,7 @@ No active draft-now seed candidates remain in Wave 3.
 
 | candidate | why excluded now | next honest move |
 |---|---|---|
-| `governed-action-surfaces` | belongs to a later governed-action family, not the handoff lane | reopen only in a separate future governed-action wave |
+| `governed-action-surfaces` | belongs to a later governed-action family, not the handoff lane | keep closed in this packet; any future governed-action work needs a separate intake |
 
 ## Notes
 
@@ -42,3 +43,4 @@ No active draft-now seed candidates remain in Wave 3.
 - `structured-handoff-before-compaction`, `receipt-confirmed-handoff-packet`, `git-verified-handoff-claims`, `session-opening-ritual-before-work`, `cross-repo-resource-map-bootstrap`, and `episode-bounded-agent-loop` now exit the seed lane as landed `AOA-T-0057`, `AOA-T-0058`, `AOA-T-0059`, `AOA-T-0060`, `AOA-T-0061`, and `AOA-T-0062`
 - keep mailbox transport and handoff receipt distinct so Wave 2 and Wave 3 stay separable
 - keep every seed smaller than an orchestration or governance stack
+- use this packet as evidence and closed-verdict accounting, not as a duplicate seed-bundle source

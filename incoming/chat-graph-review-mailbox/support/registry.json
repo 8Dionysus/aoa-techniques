@@ -9,7 +9,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "no landed exact match; watch bounded working-surface scope",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -23,7 +23,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "dependency-aware-task-graph",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -37,7 +37,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "bounded review-loop artifact surface",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -51,7 +51,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "commit-triggered-background-review",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -65,7 +65,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0026 session-capture-as-repo-artifact + AOA-T-0044 versionable-session-transcripts",
     "tentative_domain": "history",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -79,7 +79,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0030 fragmented-agent-context + AOA-T-0012 deterministic-context-composition",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -93,7 +93,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0004 intent-plan-dry-run-contract-chain + AOA-T-0049 dependency-aware-task-graph",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -107,7 +107,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "phase-synchronized-agent-handoff narrowing lane + history artifact siblings",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -117,13 +117,13 @@
     "donor_repos": [
       "MrLesk/Backlog.md"
     ],
-    "status_lane": "narrow-first",
-    "recommended_action": "keep-narrowing-memo-open",
+    "status_lane": "closed-no-import",
+    "recommended_action": "preserve-closeout-memo",
     "nearest_overlap_watch": "requirements-design-tasks-ladder",
     "tentative_domain": "agent-workflows",
     "candidate_bundle_present": false,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "closed-no-import"
   },
   {
     "candidate_slug": "shadow-epic-federation",

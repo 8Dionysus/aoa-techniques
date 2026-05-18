@@ -49,7 +49,7 @@ instruction or knowledge-lift shelves move.
 - [Technique tree projection rows for `media-ingest` and
   `diagnosis-repair`](../reports/technique_tree_projection.md)
 - `incoming/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`
-- `incoming/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
+- `incoming/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`
 - `python scripts/release_check.py` result recorded in the migration receipt
 
 ## Landed Shape Read

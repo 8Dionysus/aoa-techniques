@@ -10,7 +10,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0044 versionable-session-transcripts + AOA-T-0056 channelized-agent-mailbox",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -25,7 +25,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0057 structured-handoff-before-compaction + AOA-T-0056 channelized-agent-mailbox",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -39,7 +39,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0001 plan-diff-apply-verify-report + AOA-T-0059 git-verified-handoff-claims",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -53,7 +53,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0057 structured-handoff-before-compaction + AOA-T-0045 witness-trace-as-reviewable-artifact",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -67,7 +67,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0016 bounded-context-map + AOA-T-0060 session-opening-ritual-before-work",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -81,7 +81,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0001 plan-diff-apply-verify-report + AOA-T-0057 structured-handoff-before-compaction",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },

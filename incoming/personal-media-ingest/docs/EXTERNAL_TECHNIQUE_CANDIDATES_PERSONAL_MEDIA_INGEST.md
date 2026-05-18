@@ -8,7 +8,7 @@ Use it when the question is not:
 
 but:
 
-> "which bounded personal-ingest candidate should we distill next, and which ones still need narrowing or layer incubation first?"
+> "which bounded personal-ingest candidate already landed, and which one closed without import?"
 
 This is an intake and decision surface.
 It does **not** change technique status, create a canonical bundle, or authorize import by itself.
@@ -27,32 +27,27 @@ It does **not** change technique status, create a canonical bundle, or authorize
 - these verdicts therefore do **not** mean "another repo should own the technique instead"
 - they mean one of four narrower things:
   - the technique looks like a good next-wave import here
-  - the candidate still needs one more narrowing pass before extraction here
-  - the candidate still overlaps a broader workflow and should stay separated
-  - the source pattern is still auth, substrate, or scenario behavior and is not yet technique-shaped
+  - the candidate was closed because it still overlaps a broader workflow
+  - the source pattern was closed because it is still auth, substrate, or scenario behavior instead of a bounded technique
 
 ## How To Read The Verdicts
 
-- `future import here`
-  - the pattern already looks like a plausible bounded `aoa-techniques` bundle, but still needs one more narrowing pass before drafting under `techniques/`
 - `landed from this wave`
   - the candidate already completed one bounded import pass from this wave and now has a real `TECHNIQUE.md` bundle in the live corpus
-- `hold because overlap`
-  - the pattern is real, but the current boundary with a sibling candidate is not sharp enough yet
-- `needs layer incubation before distillation here`
-  - the pattern still mixes auth, runtime, role, or secret posture and needs one more clean contract pass before becoming a technique bundle
-- `substrate or architecture pattern, not yet a technique`
+- `closed-no-import`
+  - the pattern remains useful evidence, but this packet no longer owns an active import lane for it
+- `substrate or architecture pattern, not technique-shaped`
   - the idea is still too runtime-shaped or control-plane-shaped to behave like one bounded technique bundle
 
 ## Current Summary
 
 - launch verdict: `go`
-- activation state: `active`
+- activation state: `evidence-only`
 - `0` staged candidates with candidate bundles
 - `5` landed candidates
-- `1` incubation hold outside the immediate landing lane
-- registry mapping: `AOA-T-0070 two-stage-document-ocr-pipeline`, `AOA-T-0071 template-backed-field-extraction-after-ocr`, `AOA-T-0072 perceptual-media-dedupe-with-threshold-review`, `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr`, and `AOA-T-0074 telegram-export-normalization-to-local-store` are tracked as `landed`, and `telegram-account-auth-and-session-bridge` remains an incubation hold
-- incubation-hold reopen gate: [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md)
+- `1` closed-no-import candidate outside the landing lane
+- registry mapping: `AOA-T-0070 two-stage-document-ocr-pipeline`, `AOA-T-0071 template-backed-field-extraction-after-ocr`, `AOA-T-0072 perceptual-media-dedupe-with-threshold-review`, `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr`, and `AOA-T-0074 telegram-export-normalization-to-local-store` are tracked as `landed`, and `telegram-account-auth-and-session-bridge` is tracked as `closed-no-import`
+- closeout memo: [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md)
 
 ## Current Wave Placement
 
@@ -154,20 +149,20 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - next move:
      - keep Pack 31 proof work separate until a second live adopter exists beyond the donor Telegram family plus this repo-local adaptation
 
-### Incubation Hold
+### Closed Non-Import
 
 6. `telegram-account-auth-and-session-bridge`
    - tentative domain: `agent-workflows` only after heavy narrowing
-   - verdict: `needs layer incubation before distillation here`
-   - active narrowing memo:
-     - [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md)
+   - verdict: `closed-no-import`
+   - closeout memo:
+     - [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md)
    - donor spine:
      - `Telethon`
      - `opentele`
      - `telegram-mcp`
    - reason:
      - the current pattern still mixes account access, secret handling, session conversion, operator approval, and runtime control-plane behavior
-   - what may later survive extraction:
+   - what would need fresh evidence before a new intake:
      - one bounded session-bridge contract
      - one approval-gated auth handoff pattern
    - what must stay out:
@@ -190,11 +185,11 @@ It does **not** change technique status, create a canonical bundle, or authorize
    - landed as `AOA-T-0074`
 
 Keep `telegram-account-auth-and-session-bridge` out of the immediate wave.
-Use [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md) as the active reopen gate.
+Use [TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md](TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md) as the final packet rationale.
 
-## Bundle Seed Coverage In This Pack
+## Retired Bundle Seed Coverage
 
-Seed bundles are provided for:
+Seed bundles were provided for:
 
 - `two-stage-document-ocr-pipeline`
 - `template-backed-field-extraction-after-ocr`
@@ -202,4 +197,7 @@ Seed bundles are provided for:
 - `semantic-media-bucketing-with-vision-plus-ocr`
 - `telegram-export-normalization-to-local-store`
 
-The auth/session bridge is documented only as an incubation hold.
+Those packet-local seed bundles were removed after the corresponding canonical
+bundles landed as `AOA-T-0070` through `AOA-T-0074`.
+
+The auth/session bridge is documented only as a closed non-import verdict.

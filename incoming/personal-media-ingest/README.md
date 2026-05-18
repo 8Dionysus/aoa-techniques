@@ -1,15 +1,16 @@
 # Personal Media Ingest
 
-This root is the repo-native staging wave for the personal-ingest donor family inside `incoming/`.
+This root is the repo-native evidence packet for the personal-ingest donor
+family inside `incoming/`.
 
 ## Current State
 
-- activation state: `active`
+- activation state: `evidence-only`
 - launch verdict: `go`
-- current wave split: `5 landed / 0 staged / 1 incubation hold`
+- current wave split: `5 landed / 0 staged / 1 closed-no-import`
 - next separate landing candidate: none; the first-pass landing queue is exhausted
-- immediate exclusion from the landing lane: `telegram-account-auth-and-session-bridge`
-- one incubation-hold candidate with a current memo
+- final non-import verdict: `telegram-account-auth-and-session-bridge`
+- no active non-landed tail remains in this packet
 
 This wave does **not** assume merge authority.
 It does **not** claim these candidates are already canonical.
@@ -34,10 +35,10 @@ This wave follows that posture instead of pretending the candidates are already 
   - `AOA-T-0072 perceptual-media-dedupe-with-threshold-review`
   - `AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr`
   - `AOA-T-0074 telegram-export-normalization-to-local-store`
-- still staged in this wave:
+- staged in this packet:
   - none; all first-pass landing candidates are now landed
-- incubation hold outside the landing lane:
-  - `telegram-account-auth-and-session-bridge` with a current memo in `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md`
+- closed non-import outside the landing lane:
+  - `telegram-account-auth-and-session-bridge` with final rationale in `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`
 
 ## Main surfaces
 
@@ -51,15 +52,17 @@ This wave follows that posture instead of pretending the candidates are already 
   - authoritative machine-readable candidate queue for this wave
 - `support/CODEX_HANDOFF.md`
   - Codex-facing operator path
-- `candidate_bundles/agent-workflows/*`
-  - seed technique bundles, not yet canonical bundles
+The old packet-local seed bundles were removed after their landed counterparts
+became real `techniques/**/TECHNIQUE.md` bundles. Current technique meaning now
+lives only in the canonical bundles.
 
 ## Operator intent
 
 Use this wave when the question is:
 
-> "Which bounded personal-ingest technique candidate should we distill next, and how do we let Codex plant it without losing control?"
+> "Which bounded personal-ingest candidate already landed, and why was the
+> auth/session bridge closed out?"
 
 Do **not** use this wave as if it authorizes direct merge.
-The staging surfaces are soil and scaffolding.
-Canonical status still belongs to the repo's normal review path.
+The staging surfaces are evidence and final packet verdicts. Canonical status
+still belongs to the repo's normal review path.

@@ -4,7 +4,9 @@ You are operating inside `aoa-techniques` under explicit human control.
 
 ## Your job
 
-Use the staging surfaces in `incoming/chat-tool-proxy-runtime/` to triage tool-proxy and bounded runtime candidates without landing canonical bundles yet.
+Use the evidence surfaces in `incoming/chat-tool-proxy-runtime/` to inspect
+landed tool-gateway provenance and the reputation-check closeout memo. The
+first-pass landing queue is closed.
 
 ## Read first
 
@@ -17,9 +19,8 @@ Use the staging surfaces in `incoming/chat-tool-proxy-runtime/` to triage tool-p
 
 ## Operating posture
 
-- treat this shard as staging soil, not merge authority
-- keep work registry-only on the first pass
-- do not create canonical bundles or candidate bundles yet
+- treat this packet as evidence, not merge authority
+- do not create canonical bundles or candidate bundles from this packet
 - keep sandbox platform, orchestration, and generic security doctrine out
 
 ## Desired worker output
@@ -31,4 +32,4 @@ Always answer in this shape:
 - boundary statement
 - what stays out
 - files touched or proposed
-- whether operator approval is needed
+- whether a new intake is justified

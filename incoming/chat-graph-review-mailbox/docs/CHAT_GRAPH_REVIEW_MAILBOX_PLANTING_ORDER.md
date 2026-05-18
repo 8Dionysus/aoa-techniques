@@ -4,8 +4,8 @@ This note is for operator-guided staging inside `aoa-techniques`.
 
 ## Hard rules
 
-- keep all Chat Graph Review Mailbox candidate bundles under `candidate_bundles/agent-workflows/` on the first pass
-- do not assign `AOA-T-XXXX` ids from worker-owned wave tasks yet
+- do not recreate Chat Graph Review Mailbox candidate bundles after the first-pass landings
+- do not assign `AOA-T-XXXX` ids from this closed packet
 - do not absorb `phase-synchronized-agent-handoff`; leave it in the live queue docs
 - do not edit `TECHNIQUE_INDEX.md`, `generated/**`, or repo-wide queue docs from worker-owned tasks
 
@@ -22,9 +22,11 @@ This note is for operator-guided staging inside `aoa-techniques`.
 
 ## Preferred sequence
 
-### Worker 3
+### Closed Tail
 
-9. `markdown-definition-of-done-defaults` remains narrowing-only; see `docs/MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_NARROWING_MEMO.md`
+9. `markdown-definition-of-done-defaults` is closed without import; see `docs/MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_CLOSEOUT_MEMO.md`
+
+No packet-local seed bundle is currently present for this tail.
 
 ## Explicit exclusions to leave closed
 

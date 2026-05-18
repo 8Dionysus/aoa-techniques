@@ -5,9 +5,9 @@ This note is for operator-guided staging inside `aoa-techniques`.
 ## Hard rules
 
 - keep Wave 1A registry-first on the first pass
-- do not create candidate bundles here yet
+- do not create candidate bundles from this closed packet
 - do not assign `AOA-T-XXXX` ids from worker-owned wave tasks
-- do not reopen marketplace curation, spec versioning, or graph semantics as if they were unresolved
+- do not revisit marketplace curation, spec versioning, or graph semantics from this packet
 
 ## Landed first
 
@@ -16,7 +16,7 @@ This note is for operator-guided staging inside `aoa-techniques`.
 
 ## Preferred sequence
 
-3. `semantic-linkage-records` remains narrowing-only for now
+3. `semantic-linkage-records` is closed without import
 
 Why this order:
 
@@ -24,11 +24,11 @@ Why this order:
 - capability discovery could be landed only after the registry contract was named clearly and kept separate from curation or product semantics
 - semantic linkage stayed last because it has the strongest graph-creep risk and the current donor still does not expose one live semantic-link contract cleanly enough to land
 
-Current narrowing verdict:
+Current closeout verdict:
 
 - keep `semantic-linkage-records` out of `techniques/` for now
-- use `docs/SEMANTIC_LINKAGE_RECORDS_NARROWING_MEMO.md` as the active reopen gate
-- do not assign `AOA-T-XXXX` until the donor or a second public context exposes a real semantic-link object smaller than graph doctrine and smaller than trust-referrer substrate
+- use `docs/SEMANTIC_LINKAGE_RECORDS_CLOSEOUT_MEMO.md` as the final packet rationale
+- do not assign `AOA-T-XXXX` from this packet; a future attempt needs a new intake with a real semantic-link object smaller than graph doctrine and smaller than trust-referrer substrate
 
 ## Explicit exclusions to leave closed
 
