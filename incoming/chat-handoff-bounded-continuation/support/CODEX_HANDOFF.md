@@ -4,7 +4,9 @@ You are operating inside `aoa-techniques` under explicit human control.
 
 ## Your job
 
-Use the staging surfaces in `incoming/chat-handoff-bounded-continuation/` to prepare candidate bundles for handoff and bounded continuation candidates.
+Use the evidence surfaces in `incoming/chat-handoff-bounded-continuation/` to
+inspect landed Wave 3 provenance and the explicit exclusion. The first-pass
+landing queue is closed.
 
 ## Read first
 
@@ -17,10 +19,11 @@ Use the staging surfaces in `incoming/chat-handoff-bounded-continuation/` to pre
 
 ## Operating posture
 
-- treat this wave as staging soil, not merge authority
-- keep bundle work inside `candidate_bundles/**`
+- treat this packet as evidence, not merge authority
+- do not recreate packet-local `candidate_bundles/**` for already landed techniques
 - do not edit `TECHNIQUE_INDEX.md`, `generated/**`, or repo-wide queue docs
 - keep governed actions and generic phase-sync out of this wave
+- treat `governed-action-surfaces` as closed for this packet; future governed-action work needs a separate intake
 
 ## Desired worker output
 
@@ -31,4 +34,4 @@ Always answer in this shape:
 - boundary statement
 - what stays out
 - files touched or proposed
-- whether operator approval is needed
+- whether a new intake is justified

@@ -62,13 +62,13 @@
     "donor_repos": [
       "git-ai-project/git-ai"
     ],
-    "status_lane": "narrow-first",
-    "recommended_action": "keep-narrowing-memo-open",
+    "status_lane": "closed-no-import",
+    "recommended_action": "preserve-closeout-memo",
     "nearest_overlap_watch": "AOA-T-0032 context-report-for-ci",
     "tentative_domain": "evaluation",
     "candidate_bundle_present": false,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "closed-no-import"
   },
   {
     "candidate_slug": "fail-closed-evidence-gate",
@@ -104,12 +104,12 @@
     "donor_repos": [
       "Clyra-AI/gait"
     ],
-    "status_lane": "narrow-first",
-    "recommended_action": "keep-narrowing-memo-open",
+    "status_lane": "closed-no-import",
+    "recommended_action": "preserve-closeout-memo",
     "nearest_overlap_watch": "AOA-T-0045 witness-trace-as-reviewable-artifact",
     "tentative_domain": "history",
     "candidate_bundle_present": false,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "closed-no-import"
   }
 ]

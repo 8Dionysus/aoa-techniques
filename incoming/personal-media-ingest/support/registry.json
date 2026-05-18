@@ -10,7 +10,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "template-backed-field-extraction-after-ocr",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -26,7 +26,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "two-stage-document-ocr-pipeline",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -41,7 +41,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "semantic-media-bucketing-with-vision-plus-ocr",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -56,7 +56,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "perceptual-media-dedupe-with-threshold-review",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -75,7 +75,7 @@
     "recommended_action": "track-landed-bundle",
     "nearest_overlap_watch": "AOA-T-0026 session-capture-as-repo-artifact + telegram-account-auth-and-session-bridge",
     "tentative_domain": "agent-workflows",
-    "candidate_bundle_present": true,
+    "candidate_bundle_present": false,
     "owner_worker": "main-agent",
     "activation_state": "landed"
   },
@@ -87,12 +87,12 @@
       "thedemons/opentele",
       "chaindead/telegram-mcp"
     ],
-    "status_lane": "incubation-hold",
-    "recommended_action": "keep-narrowing-memo-open",
+    "status_lane": "closed-no-import",
+    "recommended_action": "preserve-closeout-memo",
     "nearest_overlap_watch": "telegram-export-normalization-to-local-store + auth/runtime control-plane doctrine",
     "tentative_domain": "agent-workflows",
     "candidate_bundle_present": false,
     "owner_worker": "main-agent",
-    "activation_state": "hold"
+    "activation_state": "closed-no-import"
   }
 ]

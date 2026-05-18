@@ -33,13 +33,13 @@
     "donor_repos": [
       "lasso-security/mcp-gateway"
     ],
-    "status_lane": "narrow-first",
-    "recommended_action": "keep-narrowing-memo-open",
+    "status_lane": "closed-no-import",
+    "recommended_action": "preserve-closeout-memo",
     "nearest_overlap_watch": "AOA-T-0042 upstream-skill-health-checking",
     "tentative_domain": "evaluation",
     "candidate_bundle_present": false,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "closed-no-import"
   },
   {
     "candidate_slug": "isolated-stateful-agent-runtime",

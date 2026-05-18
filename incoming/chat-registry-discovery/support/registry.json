@@ -33,13 +33,13 @@
     "donor_repos": [
       "agntcy/dir"
     ],
-    "status_lane": "narrow-first",
-    "recommended_action": "keep-narrowing-memo-open",
+    "status_lane": "closed-no-import",
+    "recommended_action": "preserve-closeout-memo",
     "nearest_overlap_watch": "AOA-T-0021 bounded-relation-lift-for-kag + AOA-T-0063 versioned-agent-registry-contract",
     "tentative_domain": "docs",
     "candidate_bundle_present": false,
     "owner_worker": "main-agent",
-    "activation_state": "active"
+    "activation_state": "closed-no-import"
   },
   {
     "candidate_slug": "well-known-skill-discovery",

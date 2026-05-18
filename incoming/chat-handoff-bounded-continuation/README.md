@@ -1,14 +1,17 @@
 # chat-handoff-bounded-continuation
 
-This is a repo-native active staging wave for handoff and bounded continuation candidates from the external chat wave pack.
+This is a repo-native evidence packet for handoff and bounded continuation
+candidates from the external chat wave pack.
 
-It is active on the first pass because its candidates are already narrower than generic orchestration and can be staged as candidate bundles without reopening the broader `phase-synchronized-agent-handoff` lane.
+It preserves the first-pass landing trail and the explicit exclusion that did
+not belong in the handoff lane. It is not an active landing lane.
 
 ## Activation state
 
-- `active`
-- staging-first on the first pass
-- first-pass landing queue is now exhausted; landed candidates stay tracked here while the explicit exclusion remains closed
+- `evidence-only`
+- first-pass landing queue exhausted
+- landed candidates stay tracked here while the explicit exclusion remains closed
+- no active non-landed tail remains in this packet
 
 ## What this wave tracks
 
@@ -19,7 +22,7 @@ It is active on the first pass because its candidates are already narrower than 
   - `AOA-T-0060` / `session-opening-ritual-before-work`
   - `AOA-T-0061` / `cross-repo-resource-map-bootstrap`
   - `AOA-T-0062` / `episode-bounded-agent-loop`
-- active seed lane:
+- seed lane:
   - none; all draft-now Wave 3 candidates are landed on the first pass
 - explicit exclusion:
   - `governed-action-surfaces`
@@ -28,4 +31,6 @@ It is active on the first pass because its candidates are already narrower than 
 
 - keep generic phase synchronization outside this wave
 - keep governed-action surfaces out of the handoff lane
-- use tentative `agent-workflows` placement for all remaining candidate bundles on the first pass
+- use the landed `techniques/**/TECHNIQUE.md` bundles for current technique meaning
+- do not recreate packet-local `candidate_bundles/**` for already landed techniques
+- treat `governed-action-surfaces` as closed for this packet; any future governed-action work must start as a separate intake

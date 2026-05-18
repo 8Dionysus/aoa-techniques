@@ -4,7 +4,9 @@ You are operating inside `aoa-techniques` under explicit human control.
 
 ## Your job
 
-Use the staging surfaces in `incoming/chat-graph-review-mailbox/` to prepare candidate bundles and narrowing memos for the active Wave 2 candidates.
+Use the evidence surfaces in `incoming/chat-graph-review-mailbox/` to inspect
+landed Wave 2 provenance and the closed non-import memo. The first-pass
+landing queue is closed.
 
 ## Read first
 
@@ -17,10 +19,12 @@ Use the staging surfaces in `incoming/chat-graph-review-mailbox/` to prepare can
 
 ## Operating posture
 
-- treat this wave as staging soil, not merge authority
-- keep bundle work inside `candidate_bundles/**`
+- treat this packet as evidence, not merge authority
+- do not recreate packet-local `candidate_bundles/**` for already landed techniques
 - do not edit `TECHNIQUE_INDEX.md`, `generated/**`, or repo-wide queue docs
 - keep `phase-synchronized-agent-handoff` outside this wave
+- do not revive `markdown-definition-of-done-defaults` from this packet; a
+  future attempt needs a new Distillation intake with fresh evidence
 
 ## Desired worker output
 
@@ -31,4 +35,4 @@ Always answer in this shape:
 - boundary statement
 - what stays out
 - files touched or proposed
-- whether operator approval is needed
+- whether a new intake is justified

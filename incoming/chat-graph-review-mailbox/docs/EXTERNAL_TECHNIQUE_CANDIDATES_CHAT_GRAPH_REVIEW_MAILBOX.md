@@ -1,8 +1,11 @@
 # External Technique Candidates - Chat Graph Review Mailbox
 
-This doc records the active graph, review, and mailbox wave staged from the external chat wave pack.
+This doc records the graph, review, and mailbox wave staged from the external
+chat wave pack.
 
-Use it when the question is not "which landed technique should I open?", but "which Wave 2 candidate should receive a staging-first candidate bundle now, which one stays narrowing-only, and which ones stay explicitly excluded?"
+Use it when the question is not "which landed technique should I open?", but
+"which Wave 2 candidate landed, which one closed without import, and which
+ones stay explicitly excluded?"
 
 This is a staging and decision surface.
 It does not create a canonical bundle or authorize import by itself.
@@ -12,7 +15,7 @@ It does not create a canonical bundle or authorize import by itself.
 - this wave tracks `11` candidates from the source pack
 - `8` are already landed
 - `0` are active draft-now seed lanes
-- `1` is narrowing-only
+- `1` is closed without import
 - `2` are explicit exclusions
 - `phase-synchronized-agent-handoff` is intentionally not tracked here and remains in the live external narrowing lane
 
@@ -33,21 +36,21 @@ It does not create a canonical bundle or authorize import by itself.
 
 No remaining `draft-now` seed candidates in Wave 2.
 
-## Narrowing-Only Lane
+## Closed Non-Import Verdict
 
-| candidate | why not seeded yet | next honest move |
+| candidate | why closed | next honest move |
 |---|---|---|
-| `markdown-definition-of-done-defaults` | current donor evidence still reads as config UX plus task-manager integration rather than one standalone markdown technique contract | keep it narrowing-only and reopen only if [MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_NARROWING_MEMO.md](MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_NARROWING_MEMO.md) can be satisfied by a smaller default-checklist contract |
+| `markdown-definition-of-done-defaults` | current donor evidence still reads as config UX plus task-manager integration rather than one standalone markdown technique contract | keep it closed in this packet; a future attempt needs a new Distillation intake and the smaller default-checklist contract described in [MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_CLOSEOUT_MEMO.md](MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_CLOSEOUT_MEMO.md) |
 
 ## Explicit Exclusions
 
 | candidate | why excluded now | next honest move |
 |---|---|---|
-| `shadow-epic-federation` | still system-shaped and too wide for a bounded first-pass technique | reopen only if one smaller federation seam survives independently |
-| `typed-governance-obligation-ledger` | still governance-architecture heavy rather than one reviewable artifact contract | reopen only if a smaller obligation or violation artifact is isolated |
+| `shadow-epic-federation` | still system-shaped and too wide for a bounded first-pass technique | keep closed unless a new intake proves one smaller federation seam |
+| `typed-governance-obligation-ledger` | still governance-architecture heavy rather than one reviewable artifact contract | keep closed unless a new intake isolates one smaller obligation or violation artifact |
 
 ## Notes
 
 - keep `phase-synchronized-agent-handoff` in the live queue docs only
-- use this wave to prepare candidate bundles and track landed candidates, not to batch-merge canonical bundles
+- use this packet to track landed boundaries and closed verdicts, not to prepare duplicate seed bundles
 - keep mailbox and handoff semantics separate so Wave 3 can own handoff contracts later

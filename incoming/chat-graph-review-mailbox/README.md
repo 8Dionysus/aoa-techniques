@@ -1,14 +1,17 @@
 # chat-graph-review-mailbox
 
-This is a repo-native active staging wave for graph, review-loop, session-index, skill-loading, and mailbox candidates from the external chat wave pack.
+This is a repo-native evidence packet for graph, review-loop, session-index,
+skill-loading, and mailbox candidates from the external chat wave pack.
 
-It is the first active landing lane in the new chat candidate program because its candidates are cleaner and less entangled with already-landed repo families than the earlier chat shards.
+It preserves the first-pass landing trail and the closed non-import verdicts. It is
+not an active landing lane.
 
 ## Activation state
 
-- `active`
-- staging-first on the first pass
+- `evidence-only`
+- first-pass landing queue exhausted
 - no `draft-now` seed candidates remain after the first landing pass
+- no active non-landed tail remains in this packet
 
 ## What this wave tracks
 
@@ -21,16 +24,17 @@ It is the first active landing lane in the new chat candidate program because it
   - `AOA-T-0054` / `compaction-resilient-skill-loading`
   - `AOA-T-0055` / `requirements-design-tasks-ladder`
   - `AOA-T-0056` / `channelized-agent-mailbox`
-- active seed lane:
+- seed lane:
   - none
-- narrowing-only lane:
-  - `markdown-definition-of-done-defaults` with a current memo in `docs/MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_NARROWING_MEMO.md`
+- closed non-import:
+  - `markdown-definition-of-done-defaults` with final rationale in `docs/MARKDOWN_DEFINITION_OF_DONE_DEFAULTS_CLOSEOUT_MEMO.md`
 - explicit exclusions:
   - `shadow-epic-federation`
   - `typed-governance-obligation-ledger`
 
 ## Operating posture
 
-- do not absorb `phase-synchronized-agent-handoff`; it remains in the live queue docs as a separate narrowing lane
-- use tentative `agent-workflows` placement for all candidate bundles on the first pass
-- keep remaining narrowing work local to `candidate_bundles/**` until a later operator-approved landing move
+- do not absorb `phase-synchronized-agent-handoff`; it is outside this closed packet
+- use the landed `techniques/**/TECHNIQUE.md` bundles for current technique meaning
+- do not recreate packet-local `candidate_bundles/**` for already landed techniques
+- any future attempt for `markdown-definition-of-done-defaults` must start as a new Distillation intake with fresh evidence

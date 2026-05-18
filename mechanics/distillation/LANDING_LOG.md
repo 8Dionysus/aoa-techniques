@@ -3,6 +3,42 @@
 This log records structural landings for the `aoa-techniques` Distillation
 mechanic.
 
+## 2026-05-18 - Incoming packet evidence-only closeout
+
+Changed:
+
+- marked all current `incoming/` packet roots as evidence-only after their
+  first-pass landing queues were exhausted
+- removed packet-local `candidate_bundles/**` seed drafts for already landed
+  techniques so `incoming/` no longer duplicates canonical bundle meaning
+- closed all non-landed packet tails as `closed-no-import` in packet docs and
+  support registries:
+  `markdown-definition-of-done-defaults`, `agent-readiness-telemetry`,
+  `signed-trace-artifacts`, `semantic-linkage-records`,
+  `preflight-reputation-check`, and
+  `telegram-account-auth-and-session-bridge`
+- kept `governed-action-surfaces` as a closed explicit exclusion from the
+  handoff packet
+- recorded the source-of-truth decision in
+  [incoming evidence-only closeout](../../docs/decisions/2026-05-18-incoming-evidence-only-closeout.md)
+
+Verification lane:
+
+```bash
+python -m unittest tests.test_incoming_topology
+python scripts/validate_repo.py
+python scripts/validate_semantic_agents.py
+git diff --check
+```
+
+Not moved:
+
+- no closed non-import candidate became a technique bundle
+- no technique ID, frontmatter field, generated reader, schema, or kind/domain
+  contract changed
+- no donor auth, runtime, graph, analytics, scanner, or governance-platform
+  doctrine was imported into canon
+
 ## 2026-05-14 - Technique reform scout script homes
 
 Changed:

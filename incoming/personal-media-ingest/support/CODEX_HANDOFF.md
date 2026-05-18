@@ -4,7 +4,9 @@ You are operating inside `aoa-techniques` under explicit human control.
 
 ## Your job
 
-Use the staging surfaces in `incoming/personal-media-ingest/` to help the operator land **one** bounded technique candidate at a time.
+Use the evidence surfaces in `incoming/personal-media-ingest/` to inspect the
+landed media-ingest wave and the closed auth/session non-import verdict. The
+first-pass landing queue is closed.
 
 ## Read first
 
@@ -17,36 +19,25 @@ Use the staging surfaces in `incoming/personal-media-ingest/` to help the operat
 
 ## Operating posture
 
-- treat this pack as staging soil, not merge authority
-- do not land more than one candidate per pass
+- treat this packet as evidence, not merge authority
+- do not land candidates from this closed packet
 - prefer source markdown edits over generated-surface churn
 - keep technique wording public-safe, bounded, and donor-narrow
 - keep auth, runtime, memory, and scenario doctrine out unless the operator explicitly asks for cross-layer routing notes
+- do not recreate packet-local seed bundles for already landed `AOA-T-0070` through `AOA-T-0074`
 
-## Per-candidate route
+## New Intake Route
 
-For one candidate chosen by the operator:
+For the closed auth/session bridge:
 
-1. Compare the candidate against `TECHNIQUE_INDEX.md`.
-   - name the nearest overlap watch
-   - state the sharpest boundary
-2. Read the matching candidate bundle under `incoming/personal-media-ingest/candidate_bundles/...`.
-3. Draft the canonical bundle only if the candidate still passes all of these:
-   - one bounded reusable pattern
-   - plausible public-safe extraction path
-   - no unresolved overlap that would widen the contract
-   - no new schema or domain required
-4. If the candidate still passes:
-   - move or rewrite the seed into `techniques/agent-workflows/<slug>/TECHNIQUE.md`
-   - create `notes/external-origin.md`
-   - keep the smallest honest example and check surface
-5. If the candidate does **not** pass:
-   - do not force a bundle draft
-   - write a blocker note or restaging note instead
-6. Before any release-path changes:
-   - ask for operator approval
-7. After source markdown is accepted:
-   - run `python scripts/release_check.py` only if the operator wants validation now
+1. Read `docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`.
+2. Compare the proposed smaller seam against `TECHNIQUE_INDEX.md`,
+   `docs/TECHNIQUE_ATOM_CONTRACT.md`, and `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`.
+3. Do not create a candidate bundle unless a new Distillation pass is
+   explicitly approved and the bridge can name one bounded public-safe artifact
+   contract from fresh evidence.
+4. Keep auth, session-secret, runtime control, and memory-writeback doctrine
+   out unless a stronger owner supplies a clean public contract.
 
 ## What to keep out
 
@@ -62,9 +53,9 @@ For one candidate chosen by the operator:
 
 Always answer in this shape:
 
-- candidate chosen
+- candidate or closed verdict chosen
 - overlap watch
 - boundary statement
 - what stays out
 - files you propose to touch
-- whether operator approval is needed now
+- whether a new intake is justified now

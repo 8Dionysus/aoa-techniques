@@ -110,7 +110,7 @@ class MediaIngestTreePilotTestCase(unittest.TestCase):
                 ).read_text(encoding="utf-8"),
                 (
                     docs_dir
-                    / "TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_NARROWING_MEMO.md"
+                    / "TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md"
                 ).read_text(encoding="utf-8"),
             ]
         )

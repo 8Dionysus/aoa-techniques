@@ -5,8 +5,8 @@ This note is for operator-guided staging inside `aoa-techniques`.
 ## Hard rules
 
 - keep Wave 1B registry-only on the first pass
-- do not create candidate bundles here yet
-- do not reopen landed single-shot, confirmation-gated, or lifecycle techniques
+- do not create candidate bundles from this closed packet
+- do not revisit landed single-shot, confirmation-gated, or lifecycle techniques from this packet
 - keep orchestration-heavy exclusions closed
 
 ## Landed first
@@ -15,12 +15,12 @@ This note is for operator-guided staging inside `aoa-techniques`.
 
 ## Preferred sequence
 
-2. `preflight-reputation-check` remains narrowing-only; see `docs/PREFLIGHT_REPUTATION_CHECK_NARROWING_MEMO.md`
+2. `preflight-reputation-check` is closed without import; see `docs/PREFLIGHT_REPUTATION_CHECK_CLOSEOUT_MEMO.md`
 
 Why this order:
 
 - the gateway proxy was the cleanest anchor
-- the reputation-check seam still needs tighter scoping than the proxy itself
+- the reputation-check seam stayed too entangled with scanner/product posture
 - lifecycle-managed proxy collapses into the already-landed lifecycle family on the first pass
 - isolated runtime still has the highest risk of widening into platform doctrine
 
@@ -28,7 +28,7 @@ Current exclusion verdicts:
 
 - keep `lifecycle-managed-tool-proxy` out of `techniques/` for now
 - keep `isolated-stateful-agent-runtime` out of `techniques/` for now
-- keep `docs/PREFLIGHT_REPUTATION_CHECK_NARROWING_MEMO.md` as the active reopen gate for the only remaining non-excluded candidate
+- keep `docs/PREFLIGHT_REPUTATION_CHECK_CLOSEOUT_MEMO.md` as the final packet rationale for the only non-excluded closed candidate
 
 ## Explicit exclusions to leave closed
 

@@ -1,25 +1,29 @@
 # chat-tool-proxy-runtime
 
-This is a repo-native active staging shard for tool-proxy and bounded runtime candidates from the external chat wave pack.
+This is a repo-native evidence packet for tool-proxy and bounded runtime
+candidates from the external chat wave pack.
 
-It keeps the donor queue reviewable under `incoming/` while avoiding collisions with the already-landed lifecycle and readiness families in the live corpus.
+It keeps the donor verdicts reviewable under `incoming/` while avoiding
+collisions with the already-landed lifecycle and readiness families in the live
+corpus. It is not an active landing lane.
 
 ## Activation state
 
-- `active`
+- `evidence-only`
 - registry-first on the first pass
 - one landed candidate, no remaining staged landing candidates
-- one narrowing-only candidate with a current memo
-- no candidate bundles yet
+- one closed non-import candidate with a closeout memo
+- no active non-landed tail remains in this packet
+- no candidate bundles in this packet
 
 ## What this shard tracks
 
 - landed from this shard:
   - `AOA-T-0065` / `mcp-gateway-proxy`
-- active seed lane:
+- seed lane:
   - none
-- narrowing-only lane:
-  - `preflight-reputation-check` with a current memo in `docs/PREFLIGHT_REPUTATION_CHECK_NARROWING_MEMO.md`
+- closed non-import:
+  - `preflight-reputation-check` with final rationale in `docs/PREFLIGHT_REPUTATION_CHECK_CLOSEOUT_MEMO.md`
 - explicit exclusions routed out of first-pass landing:
   - `lifecycle-managed-tool-proxy`
   - `isolated-stateful-agent-runtime`
@@ -30,7 +34,8 @@ It keeps the donor queue reviewable under `incoming/` while avoiding collisions 
 
 ## Operating posture
 
-- keep the shard as staging soil, not merge authority
-- keep `preflight-reputation-check` narrowing-only until its contract is smaller than scanner and security-platform doctrine
-- do not reopen `AOA-T-0023`, `AOA-T-0028`, or `AOA-T-0038`
+- keep the packet as evidence, not merge authority
+- keep `preflight-reputation-check` closed unless fresh evidence proves a smaller atom than scanner and security-platform doctrine
+- do not revisit `AOA-T-0023`, `AOA-T-0028`, or `AOA-T-0038` from this packet
 - keep cluster-runtime and orchestration-heavy candidates out rather than widening this shard
+- any future attempt for a closed candidate must start as a new Distillation intake with fresh evidence
