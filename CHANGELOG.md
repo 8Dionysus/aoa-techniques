@@ -6,6 +6,23 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.4.5] - 2026-05-18
+
+### Summary
+
+- this release carries the post-`v0.4.2` repo-shaping pass from a
+  mostly-flat public technique corpus into a canonical technique tree with
+  `107` authored bundles across `10` trunks and `28` shelves
+- the corpus now publishes `98` canonical techniques and `9` promoted
+  techniques, with promotion evidence, audit posture, generated readers, and
+  route surfaces aligned to that current state
+- root, docs, mechanics, generated, agent-facing, Spark, and release surfaces
+  were reorganized so source truth, generated companions, historical
+  provenance, and executable command lanes each have a clear owner
+- this remains a curated public technique corpus and validated documentation
+  surface, not a package registry artifact, runtime owner, skill workflow, eval
+  verdict layer, routing policy, memory substrate, playbook, or agent identity
+
 ### Added
 
 - added a source-derived Technique Intelligence layer with registry and DAG
@@ -846,11 +863,54 @@ The format is intentionally simple and human-first.
   `28/28` shelf receipt coverage, temporary-plan distillation, and the next
   direction toward technique-bundle reform
 
+### Included in this release
+
+- the current `107`-bundle technique corpus under `techniques/`, the refreshed
+  [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md), generated catalog, capsules,
+  source-lift manifests, KAG export, selection readers, shadow/semantic review
+  manifests, and Technique Intelligence registry/DAG surfaces
+- the canonical `10`-trunk / `28`-shelf tree topology, tree migration ledgers,
+  reform review packets, owner-boundary, portability, selector/relation,
+  execution-profile, bundle-anatomy, template-modernization, and
+  technique-reform generated reports under the owning Distillation part
+- the repo-local agent surface system: `DESIGN.md`, `DESIGN.AGENTS.md`,
+  canonical `AGENTS.md` mesh, generated AGENTS mesh index, `.agents/spark/`
+  registry-backed Codex Spark lane, and installed portable AoA skill surfaces
+- the reshaped public route and docs system: compact root README, CHARTER,
+  START_HERE, ROOT_SURFACE_LAW, docs districts for source-lift, review,
+  selection, readers, decisions, and guardrails, plus root legacy/archive
+  provenance homes
+- mechanics topology updates across Distillation, Audit, Agon, Recurrence,
+  Experience, Method-growth, Growth-cycle, Release-support, Checkpoint,
+  Boundary-bridge, Antifragility, Questbook, and RPG package routes, including
+  active/legacy splits, candidate intake, moved scripts/tests/schemas/examples,
+  and closed incoming packet handling
+- release-visible validation support: `scripts/run_tests.py`, release-check
+  generated-parity behavior, AGENTS mesh validators, docs/shape/link guardrails,
+  Technique Intelligence validation, Spark lane validation, and tests that
+  prevent route/reader docs from re-owning executable command lanes
+
 ### Validation
 
 - `python scripts/validate_repo.py`
-- `python -m unittest discover -s tests`
+- `python scripts/run_tests.py`
 - `python scripts/release_check.py`
+- `git diff --check`
+
+### Notes
+
+- `v0.4.5` intentionally skips public tags `v0.4.3` and `v0.4.4` because the
+  previous published GitHub release and fetched tag set ended at `v0.4.2`; this
+  tag records the full accumulated release surface from `v0.4.2` to current
+  `main`
+- generated outputs remain derived companions; authored technique bundles,
+  route cards, contracts, decisions, and mechanic-owned review packets remain
+  the authority surfaces
+- exact executable command lanes now live in the owning `AGENTS.md` or
+  [RELEASING](docs/RELEASING.md) surfaces rather than public route or reader
+  docs
+- package publishing to PyPI, npm, or other registries remains out of scope for
+  this release
 
 ## [0.4.2] - 2026-04-23
 
