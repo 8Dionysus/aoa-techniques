@@ -15,6 +15,7 @@ contracts, or capsule lookup surfaces should behave without replacing authored
 | [Technique Kind Guide](TECHNIQUE_KIND_GUIDE.md) | defines the current bounded second selector axis |
 | [Technique Kind Handoff Pack](TECHNIQUE_KIND_HANDOFF_PACK.md) | explains how neighboring AoA repos may consume `domain + kind` |
 | [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md) | bounds derived runtime lookup cards |
+| [Technique Intelligence Guide](TECHNIQUE_INTELLIGENCE_GUIDE.md) | bounds source-linked query, explanation, packing, and navigation DAG use |
 
 ## Owner Split
 
@@ -48,5 +49,11 @@ Capsule route:
 1. [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 2. [Technique Capsules](../readers/runtime/TECHNIQUE_CAPSULES.md)
 3. [technique capsules min JSON](../../generated/technique_capsules.min.json)
+
+Intelligence route:
+
+1. [Technique Intelligence Guide](TECHNIQUE_INTELLIGENCE_GUIDE.md)
+2. [Technique Intelligence](../readers/intelligence/TECHNIQUE_INTELLIGENCE.md)
+3. [technique intelligence min JSON](../../generated/technique_intelligence_registry.min.json)
 
 Agent read order, validation, and closeout live in [AGENTS](AGENTS.md).

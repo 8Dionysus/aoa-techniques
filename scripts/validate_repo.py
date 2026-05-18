@@ -78,6 +78,8 @@ REQUIRED_STAGE1_FILES = (
     "schemas/evidence-note.schema.json",
     "schemas/relation.schema.json",
     "schemas/index-entry.schema.json",
+    "schemas/technique_intelligence_registry.schema.json",
+    "schemas/technique_intelligence_dag.schema.json",
     "scripts/build_catalog.py",
     "scripts/build_kind_manifest.py",
     "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py",
@@ -93,6 +95,9 @@ REQUIRED_STAGE1_FILES = (
     "scripts/build_shadow_review_manifest.py",
     "scripts/build_promotion_readiness.py",
     "scripts/build_repo_doc_surface_manifest.py",
+    "scripts/technique_intelligence_surface.py",
+    "scripts/technique_intelligence.py",
+    "scripts/build_technique_intelligence.py",
     "scripts/agents_mesh_common.py",
     "scripts/build_agents_mesh_index.py",
     "scripts/validate_agents_md_shape.py",
@@ -128,9 +133,16 @@ REQUIRED_STAGE1_FILES = (
     "generated/agents_mesh.min.json",
     "generated/kag_export.json",
     "generated/kag_export.min.json",
+    "generated/technique_intelligence_registry.json",
+    "generated/technique_intelligence_registry.min.json",
+    "generated/technique_intelligence_dag.json",
+    "generated/technique_intelligence_dag.min.json",
+    "docs/readers/intelligence/README.md",
+    "docs/readers/intelligence/TECHNIQUE_INTELLIGENCE.md",
 )
 REQUIRED_SELECTION_FILES = (
     "docs/selection/TECHNIQUE_SELECTION_GUIDE.md",
+    "docs/selection/TECHNIQUE_INTELLIGENCE_GUIDE.md",
     "docs/readers/selection/TECHNIQUE_SELECTION.md",
     "docs/readers/selection/SELECTION_PATTERNS.md",
     "docs/readers/review/SHADOW_PATTERNS.md",
@@ -7897,6 +7909,123 @@ def validate_kag_export(repo_root: Path, records: list[TechniqueRecord]) -> None
         fail(f"{min_path}: compact KAG export must stay identical to the bounded full export")
 
 
+INTELLIGENCE_BANNED_KEYS = {
+    "activate",
+    "activation",
+    "invocation",
+    "invoke",
+    "invoked",
+}
+
+
+def validate_no_banned_intelligence_keys(value: Any, location: str) -> None:
+    if isinstance(value, dict):
+        for key, child in value.items():
+            if key in INTELLIGENCE_BANNED_KEYS:
+                fail(f"{location}: Technique Intelligence registry must not expose '{key}' keys")
+            validate_no_banned_intelligence_keys(child, f"{location}.{key}")
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            validate_no_banned_intelligence_keys(child, f"{location}[{index}]")
+
+
+def validate_technique_intelligence(
+    repo_root: Path, records: list[TechniqueRecord], schema_store: dict[str, Any]
+) -> None:
+    try:
+        from technique_intelligence_surface import (
+            DAG_MIN_PATH,
+            DAG_PATH,
+            READER_PATH,
+            REGISTRY_MIN_PATH,
+            REGISTRY_PATH,
+            build_all_outputs,
+            project_min_dag_payload,
+            project_min_registry_payload,
+        )
+    except ModuleNotFoundError:
+        from scripts.technique_intelligence_surface import (
+            DAG_MIN_PATH,
+            DAG_PATH,
+            READER_PATH,
+            REGISTRY_MIN_PATH,
+            REGISTRY_PATH,
+            build_all_outputs,
+            project_min_dag_payload,
+            project_min_registry_payload,
+        )
+
+    expected = build_all_outputs(repo_root)
+    actual_registry = read_json(repo_root / REGISTRY_PATH)
+    actual_registry_min = read_json(repo_root / REGISTRY_MIN_PATH)
+    actual_dag = read_json(repo_root / DAG_PATH)
+    actual_dag_min = read_json(repo_root / DAG_MIN_PATH)
+    actual_reader = read_text(repo_root / READER_PATH)
+
+    if actual_registry != expected["registry"]:
+        fail(
+            f"{repo_root / REGISTRY_PATH}: generated Technique Intelligence registry is out of date; "
+            "run 'python scripts/build_technique_intelligence.py'"
+        )
+    if actual_registry_min != expected["registry_min"]:
+        fail(
+            f"{repo_root / REGISTRY_MIN_PATH}: generated Technique Intelligence min registry is out of date; "
+            "run 'python scripts/build_technique_intelligence.py'"
+        )
+    if actual_dag != expected["dag"]:
+        fail(
+            f"{repo_root / DAG_PATH}: generated Technique Intelligence DAG is out of date; "
+            "run 'python scripts/build_technique_intelligence.py'"
+        )
+    if actual_dag_min != expected["dag_min"]:
+        fail(
+            f"{repo_root / DAG_MIN_PATH}: generated Technique Intelligence min DAG is out of date; "
+            "run 'python scripts/build_technique_intelligence.py'"
+        )
+    if actual_reader != expected["reader"]:
+        fail(
+            f"{repo_root / READER_PATH}: generated Technique Intelligence reader is out of date; "
+            "run 'python scripts/build_technique_intelligence.py'"
+        )
+
+    registry_schema = resolve_schema_ref("technique_intelligence_registry.schema.json", schema_store)
+    dag_schema = resolve_schema_ref("technique_intelligence_dag.schema.json", schema_store)
+    validate_schema_instance(actual_registry, registry_schema, str(repo_root / REGISTRY_PATH), schema_store)
+    validate_schema_instance(actual_dag, dag_schema, str(repo_root / DAG_PATH), schema_store)
+
+    if project_min_registry_payload(actual_registry) != actual_registry_min:
+        fail(f"{repo_root / REGISTRY_MIN_PATH}: min registry must stay a projection of full registry")
+    if project_min_dag_payload(actual_dag) != actual_dag_min:
+        fail(f"{repo_root / DAG_MIN_PATH}: min DAG must stay a projection of full DAG")
+
+    record_ids = [record.id for record in sorted(records, key=lambda record: record.id)]
+    registry_ids = [entry["id"] for entry in actual_registry["techniques"]]
+    if registry_ids != record_ids:
+        fail(f"{repo_root / REGISTRY_PATH}: registry IDs must stay aligned with collected techniques")
+    if actual_registry["technique_count"] != len(records):
+        fail(f"{repo_root / REGISTRY_PATH}: technique_count must match collected techniques")
+
+    validate_no_banned_intelligence_keys(actual_registry, str(repo_root / REGISTRY_PATH))
+    for entry in actual_registry["techniques"]:
+        hints = entry["topology"]["hints"]
+        if hints.get("authority") != "scout_only_non_authoritative":
+            fail(f"{entry['id']}: topology hints must stay scout-only")
+        if entry["move"].get("unit") != "attention_bounded_atomic_move":
+            fail(f"{entry['id']}: registry move unit must stay attention-bounded")
+        for document in entry["search_documents"]:
+            if document["technique_id"] != entry["id"]:
+                fail(f"{entry['id']}: search document technique_id mismatch")
+            if not document["text"].strip():
+                fail(f"{entry['id']}: search document text must not be empty")
+            if not document["source_ref"].strip():
+                fail(f"{entry['id']}: search document source_ref must not be empty")
+
+    if actual_dag["node_count"] != len(actual_dag["nodes"]):
+        fail(f"{repo_root / DAG_PATH}: node_count must match nodes length")
+    if actual_dag["edge_count"] != len(actual_dag["edges"]):
+        fail(f"{repo_root / DAG_PATH}: edge_count must match edges length")
+
+
 def questbook_relative(path: Path) -> str:
     return path.as_posix()
 
@@ -8351,6 +8480,7 @@ def validate_repo(repo_root: Path) -> None:
     validate_selection_surface(repo_root, records)
     validate_repo_doc_surface_reader(repo_root)
     validate_kag_export(repo_root, records)
+    validate_technique_intelligence(repo_root, records, schema_store)
     validate_questbook_surface(repo_root)
     validate_public_hygiene(repo_root)
 
@@ -8384,6 +8514,7 @@ def validate_repo(repo_root: Path) -> None:
     print("[ok] validated generated selection and shadow surface parity")
     print("[ok] validated generated repo doc surface parity")
     print("[ok] validated generated source-owned KAG export parity")
+    print("[ok] validated generated Technique Intelligence registry, DAG, and reader parity")
     print("[ok] validated questbook source-proof surface")
     print("[ok] validated selection navigation specs, repo doc routing specs, review-backed working sets, shadow specs, and bounded public hygiene")
 

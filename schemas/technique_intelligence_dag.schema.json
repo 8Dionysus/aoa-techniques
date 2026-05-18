@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aoa-techniques.dev/schemas/technique_intelligence_dag.schema.json",
+  "title": "Technique Intelligence Navigation DAG",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dag_version",
+    "source_registry",
+    "authority",
+    "node_count",
+    "edge_count",
+    "nodes",
+    "edges",
+    "relation_hints"
+  ],
+  "properties": {
+    "dag_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source_registry": {
+      "type": "string",
+      "pattern": "^generated/technique_intelligence_registry\\.json$"
+    },
+    "authority": {
+      "type": "string",
+      "minLength": 20
+    },
+    "node_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "edge_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "node_type",
+          "label"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "node_type": {
+            "type": "string",
+            "enum": [
+              "repo",
+              "domain",
+              "kind",
+              "family_hint",
+              "technique",
+              "source_bundle",
+              "capsule",
+              "support_refs"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string"
+          },
+          "technique_id": {
+            "type": "string",
+            "pattern": "^AOA-T-[0-9]{4}$"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "move_unit": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "target",
+          "edge_type",
+          "authority"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "edge_type": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "relation_hints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "target",
+          "relation_type",
+          "authority",
+          "source_ref"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "relation_type": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string",
+            "enum": [
+              "frontmatter_direct_relation_not_dag_order"
+            ]
+          },
+          "source_ref": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

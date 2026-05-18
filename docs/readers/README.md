@@ -7,6 +7,7 @@ stays in [generated](../../generated/).
 
 | District | Role |
 |---|---|
+| [intelligence](intelligence/README.md) | query, explanation, packing, and navigation-DAG reader companion |
 | [kind](kind/README.md) | `kind` axis reader companion |
 | [repo](repo/README.md) | repository docs route reader companion |
 | [review](review/README.md) | shadow/caution reader companion |

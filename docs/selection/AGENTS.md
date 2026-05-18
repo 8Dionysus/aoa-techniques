@@ -34,6 +34,11 @@ For capsule changes, also read:
 - [Technique Capsule Guide](TECHNIQUE_CAPSULE_GUIDE.md)
 - [Technique Capsules](../readers/runtime/TECHNIQUE_CAPSULES.md)
 
+For Technique Intelligence changes, also read:
+
+- [Technique Intelligence Guide](TECHNIQUE_INTELLIGENCE_GUIDE.md)
+- [Technique Intelligence](../readers/intelligence/TECHNIQUE_INTELLIGENCE.md)
+
 ## Boundaries
 
 - Keep selection one-step and bundle-level; do not turn direct relations into
@@ -43,16 +48,20 @@ For capsule changes, also read:
 - Keep handoff guidance weaker than neighboring owner truth.
 - Keep capsules as derived lookup cards, not as authored technique meaning,
   scoring, policy routing, or KAG/source-lift exports.
+- Keep Technique Intelligence as source-linked query, explanation, packing,
+  and navigation over atomic moves; do not turn it into execution workflow,
+  proof verdict, graph truth, or activation shape.
 
 ## Validation
 
-For selection, kind, or capsule guide changes, run the affected builder first
-when source-backed readers move:
+For selection, kind, capsule, or intelligence guide changes, run the affected
+builder first when source-backed readers move:
 
 ```bash
 python scripts/build_catalog.py
 python scripts/build_kind_manifest.py
 python scripts/build_capsules.py
+python scripts/build_technique_intelligence.py
 python scripts/validate_repo.py
 ```
 
@@ -60,6 +69,6 @@ For broad route or release-visible changes, run `python scripts/release_check.py
 
 ## Closeout
 
-Report which selector, kind, handoff, or capsule contract moved; which
-generated readers were rebuilt; which checks ran; and whether any neighboring
-repo owner needs a handoff update.
+Report which selector, kind, handoff, capsule, or intelligence contract moved;
+which generated readers were rebuilt; which checks ran; and whether any
+neighboring repo owner needs a handoff update.
