@@ -1,7 +1,7 @@
 # Technique Selection
 
 This file is generated from `../../../generated/technique_catalog.json` and the authoritative markdown frontmatter.
-Do not edit it by hand; run `python scripts/build_catalog.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface to make one bounded choice:
 1. narrow by `domain` first

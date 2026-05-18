@@ -4,7 +4,7 @@ Source packet: [Technique Reform Ingress](../README.md)
 
 Baseline packet: [Bundle Anatomy Baseline Inventory](bundle-anatomy-baseline-inventory.md)
 
-Temporary plan: [Temporary Bundle Reform Rhythm Plan](../TEMP_BUNDLE_REFORM_RHYTHM_PLAN.md)
+Durable closeout: [Bundle Anatomy Final Closeout Ledger](bundle-anatomy-final-closeout-ledger.md)
 
 Status: direct-read-rubric-hardening, not leaf repair, not path movement, not
 frontmatter migration, not status promotion.

@@ -1,7 +1,7 @@
 # Kind Ambiguity Audit
 
 This file is generated from the current kind registry, family scout, kind overlay, and generated catalog.
-Do not edit it by hand; run `python scripts/build_kind_manifest.py`.
+Do not edit it by hand; rebuild through [reports AGENTS](AGENTS.md#validation).
 
 This audit is scout-only, non-authoritative, and weaker than bundle frontmatter. Use it to review tie-break seams, not to remap techniques automatically.
 

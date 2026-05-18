@@ -83,8 +83,8 @@ dependency, return the candidate to the ledger or incubation lane.
    - use the `external-import-review` issue template
    - record overlap check, donor exclusions, expected evidence notes, expected generated surfaces, and downstream repo impact
 6. Validate the repo package.
-   - run `python -m pip install -r requirements-dev.txt`
-   - run `python scripts/release_check.py`
+   - follow [AGENTS](../../../../AGENTS.md#validation) and
+     [RELEASING](../../../../docs/RELEASING.md)
    - fix source markdown first, then regenerate derived surfaces through the release path
 7. Merge and restage.
    - if the import lands, update any affected candidate or audit docs
@@ -138,7 +138,8 @@ These settings are external to the repo and may require admin access. Prepare th
 
 - protect `main`
 - require pull requests before merge
-- require the single status check emitted by the `Repo Validation` workflow after it is aligned to `python scripts/release_check.py`
+- require the single status check emitted by the `Repo Validation` workflow
+  after it is aligned to the root release lane
 - disable force-push to `main`
 - disable branch deletion for the protected branch
 

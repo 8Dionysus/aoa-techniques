@@ -59,13 +59,8 @@ Current frontier read:
 - [scripts/validate_agon_candidate_handoff.py](scripts/validate_agon_candidate_handoff.py)
   runs the source-coverage validator.
 
-Validation:
-
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-```
+Validation lane: use [Distillation AGENTS](../../AGENTS.md#validation) for the
+exact builder, validator, and test commands.
 
 ## Handoff Rule
 

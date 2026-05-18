@@ -52,7 +52,10 @@ This closeout does not import sibling owner authority into the bundles. The tech
 - `mechanics/audit/parts/external-evidence-ledger/README.md`
 - `mechanics/audit/parts/external-evidence-sprint-runbook/README.md`
 
-Generated catalogs, manifests, indexes, and docs must be rebuilt through `python scripts/release_check.py` after this authored closeout lands.
+Generated catalogs, manifests, indexes, and docs must be rebuilt through the
+nearest [Audit parts AGENTS](../AGENTS.md) validation lane or the root
+[release route](../../../../docs/RELEASING.md) after this authored closeout
+lands.
 
 ## Retired Working Surface
 

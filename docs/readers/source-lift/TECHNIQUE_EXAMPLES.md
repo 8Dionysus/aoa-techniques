@@ -1,7 +1,7 @@
 # Technique Examples
 
 This file is generated from authoritative `TECHNIQUE.md` bundles plus the current example manifest payload.
-Do not edit it by hand; run `python scripts/build_example_manifest.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when you want a bounded example inventory by domain and technique without opening every example body first.
 

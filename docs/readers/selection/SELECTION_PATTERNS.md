@@ -1,7 +1,7 @@
 # Selection Patterns
 
 This file is generated from `../../../generated/technique_catalog.json`, current direct `relations`, validator-backed navigation specs, and review-backed working sets.
-Do not edit it by hand; run `python scripts/build_catalog.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when the flat adjacency list in `TECHNIQUE_SELECTION.md` is not enough and you want one bounded answer to:
 - "What nearby technique should I inspect next, and why?"

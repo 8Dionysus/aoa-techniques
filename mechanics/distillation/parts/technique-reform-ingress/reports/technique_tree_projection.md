@@ -1,7 +1,7 @@
 # Technique Tree Projection
 
 This file is generated from the technique tree contract, family shelf review, kind overlay, and generated catalog.
-Do not edit it by hand; run `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py`.
+Do not edit it by hand; rebuild through [reports AGENTS](AGENTS.md#validation).
 
 This projection is non-authoritative and weaker than authored bundle meaning. It is a placement review surface only; it must not be treated as frontmatter truth, schema truth, or automatic path migration authority.
 

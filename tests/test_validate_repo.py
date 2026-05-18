@@ -619,7 +619,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "expected evidence notes",
             "expected generated surfaces",
             "downstream repo impact",
-            "python scripts/release_check.py",
+            "[AGENTS](../../../../AGENTS.md#validation)",
+            "[RELEASING](../../../../docs/RELEASING.md)",
             "protect `main`",
             "templates/ORIGIN_EVIDENCE.template.md",
             "templates/ADAPTATION_NOTE.template.md",
@@ -1114,14 +1115,13 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "../generated/technique_catalog.min.json",
             "domain/kind/status split",
             "machine-readable corpus view",
-            "python scripts/validate_repo.py",
-            "python scripts/run_tests.py",
-            "python scripts/release_check.py",
-            "git status -sb",
+            "../AGENTS.md#validation",
+            "RELEASING.md",
+            "owning command surface",
         ):
             self.assertIn(target, start_here)
 
-    def test_root_readme_surfaces_concrete_bundle_and_current_verify_routes(self) -> None:
+    def test_root_readme_surfaces_concrete_bundle_and_routes_validation_to_agents(self) -> None:
         readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
         start_here = (REPO_ROOT / "docs" / "START_HERE.md").read_text(encoding="utf-8")
 
@@ -1129,10 +1129,16 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md",
             readme,
         )
-        self.assertIn("python scripts/validate_repo.py", start_here)
-        self.assertIn("python scripts/run_tests.py", start_here)
-        self.assertIn("python scripts/release_check.py", start_here)
-        self.assertIn("git status -sb", start_here)
+        self.assertIn("../AGENTS.md#validation", start_here)
+        self.assertIn("RELEASING.md", start_here)
+        for command in (
+            "python scripts/validate_repo.py",
+            "python scripts/run_tests.py",
+            "python scripts/release_check.py",
+            "git status -sb",
+        ):
+            with self.subTest(command=command):
+                self.assertNotIn(command, start_here)
         self.assertLess(
             readme.index("techniques/execution/agent-workflows-core/plan-diff-apply-verify-report/TECHNIQUE.md"),
             readme.index("docs/README.md"),
@@ -1170,7 +1176,8 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "AOA-T-0036",
             "one technique bundle at a time",
             "do not rerun a false-positive lane unless a new public signal exists",
-            "python scripts/release_check.py",
+            "[AGENTS](../../../../AGENTS.md#validation)",
+            "[RELEASING](../../../../docs/RELEASING.md)",
             "External Evidence Ledger",
         ):
             self.assertIn(target, runbook)

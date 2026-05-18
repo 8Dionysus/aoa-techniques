@@ -1,7 +1,7 @@
 # Evidence Note Surfaces
 
 This file is generated from authoritative evidence-note markdown plus the current evidence note manifest payload.
-Do not edit it by hand; run `python scripts/build_evidence_note_manifest.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when you need note-kind routing, note-shape awareness, or a bounded inventory of supporting note surfaces without flattening note prose into one reader layer.
 

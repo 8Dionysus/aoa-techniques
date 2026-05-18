@@ -6,7 +6,7 @@ Residual scan:
 [Owner-Boundary Bridge Residual Cross-Wave Scan](owner-boundary-bridge-residual-cross-wave-scan.md)
 
 Superseded temporary plan:
-[Temporary Owner-Boundary Bridge Long-Pass Plan](../TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md)
+[Owner-Boundary Bridge Long-Pass Working Plan](owner-boundary-bridge-long-pass-working-plan.md)
 
 Status: long-pass closeout ledger, not bundle authority, not generated output,
 not schema migration, not frontmatter promotion, not relation repair, not
@@ -115,7 +115,7 @@ until a future relation-contract decision and validator wave say otherwise.
 
 ## Temporary Plan Disposition
 
-`TEMP_OWNER_BOUNDARY_BRIDGE_LONG_PASS_PLAN.md` is now superseded by this
+`owner-boundary-bridge-long-pass-working-plan.md` is now superseded by this
 closeout ledger and the residual scan. It remains in the tree as traceable
 rhythm provenance because the wave packets and residual scan link to it during
 the pass.

@@ -35,9 +35,9 @@ Please make sure:
 - maturity status is set correctly
 - origin is stated clearly
 
-Before opening a PR, run `python -m pip install -r requirements-dev.txt`, then
-run `python scripts/release_check.py` as the bounded repo-wide validation path.
-The transparent lower-level breakdown lives in [RELEASING](docs/RELEASING.md).
+Before opening a PR, follow the validation route in
+[AGENTS](AGENTS.md#validation). Release-prep details and the lower-level
+breakdown live in [RELEASING](docs/RELEASING.md).
 
 When the `kind` choice feels ambiguous, start from
 [Technique Kind Guide](docs/selection/TECHNIQUE_KIND_GUIDE.md) and keep the

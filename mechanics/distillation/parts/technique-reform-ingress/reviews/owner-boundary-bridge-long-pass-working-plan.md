@@ -1,9 +1,9 @@
 # Temporary Owner-Boundary Bridge Long-Pass Plan
 
-Source packet: [Technique Reform Ingress](README.md)
+Source packet: [Technique Reform Ingress](../README.md)
 
 Status: superseded temporary rhythm plan. The durable closeout is
-[Owner-Boundary Bridge Long-Pass Closeout Ledger](reviews/owner-boundary-bridge-long-pass-closeout-ledger.md).
+[Owner-Boundary Bridge Long-Pass Closeout Ledger](owner-boundary-bridge-long-pass-closeout-ledger.md).
 
 This file was the working control surface for the long pass. It is now
 preserved as traceable rhythm provenance because the wave packets link to it.
@@ -109,7 +109,7 @@ Use this exact loop for every wave:
    - `mechanics/AGENTS.md`;
    - `mechanics/distillation/AGENTS.md`;
    - `mechanics/distillation/parts/AGENTS.md`;
-   - [Technique Reform Ingress](README.md);
+   - [Technique Reform Ingress](../README.md);
    - `techniques/AGENTS.md`;
    - nearest trunk `AGENTS.md`.
 3. Read each selected bundle:
@@ -133,7 +133,7 @@ Use this exact loop for every wave:
 6. Apply the repair gate.
 7. Write one review packet for the wave.
 8. Update `reviews/README.md` and this plan.
-9. Update [Technique Reform Ingress](README.md) only when the contour actually
+9. Update [Technique Reform Ingress](../README.md) only when the contour actually
    changes.
 10. Validate the smallest honest surface:
     - `git diff --check`;
@@ -465,7 +465,7 @@ Closeout outputs:
 
 - `reviews/owner-boundary-bridge-long-pass-closeout-ledger.md`;
 - `reviews/README.md` updated;
-- [Technique Reform Ingress](README.md) current contour updated;
+- [Technique Reform Ingress](../README.md) current contour updated;
 - this temporary plan disposition recorded;
 - temporary plan removed or explicitly marked superseded;
 - validation reported.

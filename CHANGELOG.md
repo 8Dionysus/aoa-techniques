@@ -13,6 +13,10 @@ The format is intentionally simple and human-first.
   full/min JSON companions, a generated reader, validation/release wiring, and
   a decision record that keeps the layer focused on atomic moves rather than
   execution workflow or graph authority
+- added canonical `AGENTS.md` cards for the Distillation
+  `technique-reform-ingress` part root and its `reviews/` district so reform
+  review packets preserve historical validation evidence without becoming
+  current command-law surfaces
 - added canonical `AGENTS.md` cards for root legacy subdistricts
   (`legacy/raw`, `legacy/archive`, `legacy/receipts`) and quest lanes
   (`quests/techniques`, `quests/agon`), with mesh config and validation
@@ -56,6 +60,10 @@ The format is intentionally simple and human-first.
   nearest `AGENTS.md`, including the mechanic package-card standard, Spark
   lane, examples, root legacy, source-lift, review, selection, decisions, and
   guardrail districts
+- extended command-lane ownership across reader, generated-reader, guardrail,
+  topology, runbook, quest, and Technique Intelligence surfaces: route docs now
+  link to the owning `AGENTS.md` or release surface instead of embedding
+  executable install, build, validation, or closeout lanes
 - slimmed old root Markdown entry surfaces by turning `README.md` back into a
   compact public front door and reducing `ROADMAP.md` to live repo direction;
   detailed mechanic runbooks, generated readers, semantic/shadow reviews, tree

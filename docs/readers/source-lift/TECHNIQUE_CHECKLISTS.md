@@ -1,7 +1,7 @@
 # Technique Checklists
 
 This file is generated from authoritative `TECHNIQUE.md` bundles plus the current checklist manifest payload.
-Do not edit it by hand; run `python scripts/build_checklist_manifest.py`.
+Do not edit it by hand; rebuild through [readers AGENTS](../AGENTS.md#validation).
 
 Use this surface when you want a bounded checklist inventory by domain and technique without opening each bundle first.
 

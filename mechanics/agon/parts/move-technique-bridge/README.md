@@ -40,11 +40,8 @@ Promotion into a real technique requires the normal `aoa-techniques` authoring a
 
 ## Validation
 
-```bash
-python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check
-python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py
-```
+Use [Agon AGENTS](../../AGENTS.md#validation) for the exact candidate-builder,
+validator, and test lane.
 
 ## Provenance
 

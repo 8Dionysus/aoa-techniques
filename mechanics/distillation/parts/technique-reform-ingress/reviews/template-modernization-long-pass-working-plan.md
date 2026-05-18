@@ -1,9 +1,9 @@
 # Temporary Template Modernization Long-Pass Plan
 
-Source packet: [Technique Reform Ingress](README.md)
+Source packet: [Technique Reform Ingress](../README.md)
 
 Status: superseded temporary rhythm plan. The durable closeout is
-[Template Modernization Long-Pass Closeout Ledger](reviews/template-modernization-long-pass-closeout-ledger.md).
+[Template Modernization Long-Pass Closeout Ledger](template-modernization-long-pass-closeout-ledger.md).
 
 This file replaces the too-small first expansion framing. The long pass is one
 continuous corpus pass with internal shelves and phases for reviewability. The

@@ -6,8 +6,10 @@ Intelligence layer.
 The authored contract remains in [Technique Intelligence Guide](../../selection/TECHNIQUE_INTELLIGENCE_GUIDE.md).
 Generated JSON remains in [generated](../../../generated/).
 
-| Reader | Builder | Source contract |
+| Reader | Builder surface | Source contract |
 |---|---|---|
-| [Technique Intelligence](TECHNIQUE_INTELLIGENCE.md) | `python scripts/build_technique_intelligence.py` | [Technique Intelligence Guide](../../selection/TECHNIQUE_INTELLIGENCE_GUIDE.md) |
+| [Technique Intelligence](TECHNIQUE_INTELLIGENCE.md) | [build_technique_intelligence.py](../../../scripts/build_technique_intelligence.py) | [Technique Intelligence Guide](../../selection/TECHNIQUE_INTELLIGENCE_GUIDE.md) |
 
 Authored technique meaning remains in [techniques](../../../techniques/).
+Use [readers AGENTS](../AGENTS.md#validation) for the exact build and
+validation lane.

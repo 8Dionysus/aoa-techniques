@@ -56,13 +56,8 @@ The registry must preserve this README's candidate statuses and stop line. It
 does not create technique bundles, change candidate status, or authorize import
 without bundle-local review.
 
-Validation:
-
-```bash
-python mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py --check
-python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
-```
+Validation lane: use [Distillation AGENTS](../../AGENTS.md#validation) for the
+exact builder, validator, and test commands.
 
 ## Current Active Lane
 

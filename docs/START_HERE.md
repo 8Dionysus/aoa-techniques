@@ -110,21 +110,8 @@ owns smallest-next-surface routing and dispatch hints.
 
 ## Release And Validation
 
-Install dev dependencies once when needed:
+Agent command lanes live in [root AGENTS](../AGENTS.md#validation) and the
+nearest nested `AGENTS.md`.
 
-```bash
-python -m pip install -r requirements-dev.txt
-```
-
-Use the narrowest check that matches the change:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-python scripts/release_check.py
-git status -sb
-```
-
-Open [Releasing `aoa-techniques`](RELEASING.md) for release-prep doctrine. Use
-individual `build_*` commands only when intentionally regenerating one surface
-family during authored edits.
+Release-prep doctrine lives in [Releasing `aoa-techniques`](RELEASING.md).
+Use this page to choose the route, then follow the owning command surface.

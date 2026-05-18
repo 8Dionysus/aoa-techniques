@@ -1,7 +1,7 @@
 # Technique Topology Scout
 
 This file is generated from the topology axis registry, kind overlay, and generated catalog.
-Do not edit it by hand; run `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`.
+Do not edit it by hand; rebuild through [reports AGENTS](AGENTS.md#validation).
 
 This projection is scout-only, non-authoritative, and weaker than bundle frontmatter. It must not be treated as schema truth, frontmatter truth, or automatic remap authority.
 

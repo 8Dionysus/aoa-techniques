@@ -3,7 +3,7 @@
 Status: closed durable review memory for the template-modernization long pass.
 
 This ledger supersedes
-[`TEMP_TEMPLATE_MODERNIZATION_LONG_PASS_PLAN.md`](../TEMP_TEMPLATE_MODERNIZATION_LONG_PASS_PLAN.md).
+[`template-modernization-long-pass-working-plan.md`](template-modernization-long-pass-working-plan.md).
 
 ## Summary
 

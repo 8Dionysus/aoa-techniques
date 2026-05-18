@@ -2,8 +2,8 @@
 
 Source packet: [Technique Reform Ingress](../README.md)
 
-Temporary plan:
-[Temporary Execution Profile Long-Pass Plan](../TEMP_EXECUTION_PROFILE_LONG_PASS_PLAN.md)
+Durable closeout:
+[Execution Profile Long-Pass Closeout Ledger](execution-profile-long-pass-closeout-ledger.md)
 
 Status: direct-read review packet for the first post-pilot small-agent cohort.
 No local small-agent harness was run. No frontmatter, schema, generated scout
