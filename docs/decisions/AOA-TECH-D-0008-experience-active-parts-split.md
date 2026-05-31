@@ -1,0 +1,68 @@
+# Experience Active Parts Split
+
+Status: accepted
+
+Date: 2026-05-01
+
+## Index Metadata
+
+- Decision ID: AOA-TECH-D-0008
+- Original date: 2026-05-01
+- Surface classes: mechanic package, mechanic part
+- Technique axes: mechanic bridge
+- Mechanic parents: experience
+- Guard families: mechanic topology, part-local artifact
+- Posture: accepted
+
+## Context
+
+`mechanics/experience/` kept seven active seed surfaces as flat package-root
+files. The files mixed governance, authority, appeal, sealed decision,
+office/service scope, handoff compression, and service clarity notes.
+
+The current project direction asks mechanics packages to follow the AoA-style
+active/parts/provenance split when they carry more than a simple README. The
+Experience files were active owner-local practice notes, not large raw receipts.
+
+## Decision
+
+Move the seven flat Experience surfaces into `parts/*/README.md` and add the
+active package route files:
+
+- `AGENTS.md`
+- `DIRECTION.md`
+- `PARTS.md`
+- `PROVENANCE.md`
+- `LANDING_LOG.md`
+- `ROADMAP.md`
+- `parts/AGENTS.md`
+- `parts/README.md`
+
+Treat the previous flat files as active part-local homes, not raw receipts.
+The `2026-05-03` legacy scaffold decision adds a provenance district with empty
+raw inventory for this package.
+
+## Consequences
+
+- Experience now has the same active route shape as the other grown mechanics
+  packages.
+- `ORQ-EXPERIENCE-TECHNIQUES-001` can point at concrete local response surfaces
+  without treating them as technique canon.
+- Governance, office/service, handoff, and sealed decision practice stay
+  portable only as practice notes; they do not become live office, release,
+  runtime, proof, or ToS authority.
+- Work can decide one part at a time whether a real technique bundle is
+  warranted.
+- Legacy preservation now has a package-local scaffold and must keep
+  `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
+  aligned.
+
+## Verification
+
+Verify with:
+
+```bash
+python -m unittest tests.test_experience_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+```

@@ -36,7 +36,7 @@ owner-route design. It should not be patched by a broad generated keyword rule.
 - `mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`
 - `scripts/validate_repo.py`
 - `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.json`
-- `docs/decisions/2026-05-04-topology-scout-axis-registry.md`
+- `docs/decisions/AOA-TECH-D-0042-topology-scout-axis-registry.md`
 
 ## Current Source Shape
 

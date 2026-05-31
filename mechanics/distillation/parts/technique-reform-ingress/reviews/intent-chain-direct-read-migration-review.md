@@ -67,7 +67,7 @@ and checking an intent-shaped execution chain before live action.
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
 - [Intent-chain semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
-- [AOA-T-0005 kind remap decision](../../../../../docs/decisions/2026-05-04-0005-kind-remap.md)
+- [AOA-T-0005 kind remap decision](../../../../../docs/decisions/AOA-TECH-D-0036-0005-kind-remap.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [Technique family scout rows for `intent-chain`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `intent-chain`](../reports/technique_topology_scout.md)

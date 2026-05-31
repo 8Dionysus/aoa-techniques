@@ -9,7 +9,7 @@ Primary evidence:
 - [Owner-Boundary Bridge Long-Pass Closeout Ledger](owner-boundary-bridge-long-pass-closeout-ledger.md)
 - [Selector Relation Wave B Instruction Knowledge Review](selector-relation-wave-b-instruction-knowledge-review.md)
 - [Landed Skill-Support Pilot Review](landed-skill-support-pilot-review.md)
-- [Template Modernization Optional Sections Decision](../../../../../docs/decisions/2026-05-06-template-modernization-optional-sections.md)
+- [Template Modernization Optional Sections Decision](../../../../../docs/decisions/AOA-TECH-D-0044-template-modernization-optional-sections.md)
 
 Status: bounded template-modernization pilot plus validator alignment,
 source-shape repair over one shelf, not schema migration, not frontmatter

@@ -1,0 +1,71 @@
+# AOA-T-0052 Kind Remap
+
+Date: 2026-05-04
+
+## Index Metadata
+
+- Decision ID: AOA-TECH-D-0037
+- Original date: 2026-05-04
+- Surface classes: technique topology
+- Technique axes: kind
+- Mechanic parents: none
+- Guard families: kind remap
+- Posture: accepted
+
+## Status
+
+Accepted.
+
+## Context
+
+`AOA-T-0052 review-findings-compaction` was originally classified as `handoff`,
+but the first kind ambiguity direct-read review found that transfer is not the
+center of the bundle. The direct destination check compared `workflow`,
+`validation`, and `lift` before changing frontmatter.
+
+The bundle turns a noisy findings set into one smaller current review surface by
+collecting findings, grouping duplicates, revalidating each group against
+current code, keeping one live representative, dropping or marking stale
+findings, and preserving source references.
+
+## Decision
+
+Remap `AOA-T-0052` from `handoff` to `workflow`.
+
+Keep its `domain`, `status`, ID, evidence, relations, and promoted posture
+unchanged. The change is a classification correction only.
+
+## Alternatives
+
+- Keep `handoff`.
+  Rejected because the cleaner handoff surface is a downstream use of the
+  compacted review artifact, not the primary reusable seam.
+- Move to `validation`.
+  Rejected because revalidation is required inside the pass, but the technique
+  primarily teaches an ordered consolidation workflow rather than an independent
+  proof pattern.
+- Move to `lift`.
+  Rejected because the compacted review surface is not a weaker derived lookup
+  over one authoritative source; it is the result of a dedupe, revalidation, and
+  consolidation pass over noisy findings and live code.
+
+## Consequences
+
+- Generated kind surfaces will list `AOA-T-0052` under `workflow`.
+- The first kind ambiguity shortlist is closed; future remaps should start from
+  a fresh direct-read candidate, not from the already-landed shortlist.
+- `AOA-T-0052` remains `promoted`; no canonical claim or status change is made.
+- The sibling boundary with `AOA-T-0051` remains intact: `AOA-T-0051` owns the
+  trigger and review artifact production, while `AOA-T-0052` owns the later
+  compaction pass.
+
+## Verification
+
+Expected checks:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```

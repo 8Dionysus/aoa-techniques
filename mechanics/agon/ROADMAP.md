@@ -21,7 +21,7 @@ The first Agon mechanics passes established the active/legacy split:
 The artifact-topology pass moved mechanic-owned technical artifacts into their
 nearest parts, including the move-technique bridge, epistemic candidates, and
 recurrence adapter manifests. See
-`docs/decisions/2026-05-01-agon-part-local-artifacts.md`.
+`docs/decisions/AOA-TECH-D-0002-agon-part-local-artifacts.md`.
 
 ## Next Work
 

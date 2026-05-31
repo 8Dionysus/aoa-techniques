@@ -85,7 +85,7 @@ class AgonMechanicsTopologyTestCase(unittest.TestCase):
 
     def test_part_local_artifact_decision_is_discoverable(self) -> None:
         decision = (
-            REPO_ROOT / "docs" / "decisions" / "2026-05-01-agon-part-local-artifacts.md"
+            REPO_ROOT / "docs" / "decisions" / "AOA-TECH-D-0002-agon-part-local-artifacts.md"
         ).read_text(encoding="utf-8")
         self.assertIn("Move Agon-owned technical artifacts into part-local homes", decision)
         self.assertIn("mechanics/agon/parts/move-technique-bridge/", decision)

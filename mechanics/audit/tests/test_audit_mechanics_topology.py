@@ -164,13 +164,13 @@ class AuditMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-audit-active-parts-split.md"
+            / "AOA-TECH-D-0003-audit-active-parts-split.md"
         ).read_text(encoding="utf-8")
         retro_decision = (
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-14-canonical-retro-audit-part.md"
+            / "AOA-TECH-D-0046-canonical-retro-audit-part.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Flat `PROMOTION_READINESS_MATRIX.md`", legacy_index)

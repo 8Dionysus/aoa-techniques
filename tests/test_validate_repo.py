@@ -95,6 +95,7 @@ class ValidateRepoRegressionTests(unittest.TestCase):
         self.assertEqual(
             (
                 ("python", "scripts/build_repo_doc_surface_manifest.py"),
+                ("python", "scripts/generate_decision_indexes.py", "--check"),
                 ("python", "scripts/build_agents_mesh_index.py"),
                 ("python", "scripts/build_catalog.py"),
                 ("python", "scripts/build_kind_manifest.py"),
@@ -1810,7 +1811,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT / ".agents" / "spark" / "registry.json"
         ).read_text(encoding="utf-8")
         decision = (
-            REPO_ROOT / "docs" / "decisions" / "2026-05-14-spark-agent-lane-home.md"
+            REPO_ROOT / "docs" / "decisions" / "AOA-TECH-D-0054-spark-agent-lane-home.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn(".agents/spark/", root_law)
@@ -1988,7 +1989,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             "CHANGELOG.md",
             "docs/ROOT_SURFACE_LAW.md",
             "docs/readers/repo/REPO_DOC_SURFACES.md",
-            "docs/decisions/2026-05-14-root-md-surface-slimming.md",
+            "docs/decisions/AOA-TECH-D-0053-root-md-surface-slimming.md",
         )
 
         for relative_path in surfaces:
@@ -2022,7 +2023,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-14-root-md-surface-slimming.md"
+            / "AOA-TECH-D-0053-root-md-surface-slimming.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("decisions/README.md", docs_readme)
@@ -2063,7 +2064,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-technique-atom-contract.md"
+            / "AOA-TECH-D-0017-technique-atom-contract.md"
         ).read_text(encoding="utf-8")
         template = (REPO_ROOT / "templates" / "TECHNIQUE.template.md").read_text(
             encoding="utf-8"
@@ -2107,7 +2108,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-technique-topology-contract.md"
+            / "AOA-TECH-D-0018-technique-topology-contract.md"
         ).read_text(encoding="utf-8")
         atom_contract = (REPO_ROOT / "docs" / "TECHNIQUE_ATOM_CONTRACT.md").read_text(
             encoding="utf-8"
@@ -2199,7 +2200,7 @@ class TechniqueContentSmokeTests(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-04-topology-scout-axis-registry.md"
+            / "AOA-TECH-D-0042-topology-scout-axis-registry.md"
         ).read_text(encoding="utf-8")
 
         validate_repo.validate_topology_axes_registry(REPO_ROOT)

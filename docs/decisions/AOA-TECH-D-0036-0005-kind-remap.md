@@ -1,0 +1,66 @@
+# AOA-T-0005 Kind Remap
+
+Date: 2026-05-04
+
+## Index Metadata
+
+- Decision ID: AOA-TECH-D-0036
+- Original date: 2026-05-04
+- Surface classes: technique topology
+- Technique axes: kind
+- Mechanic parents: none
+- Guard families: kind remap
+- Posture: accepted
+
+## Status
+
+Accepted.
+
+## Context
+
+`AOA-T-0005 new-intent-rollout-checklist` was originally classified as
+`guardrail`, but the first kind ambiguity direct-read review found that its
+center of gravity is the ordered rollout path for adding one new intent type to
+an existing chain.
+
+The bundle preserves dry-run safety, strict contract checks, and stop behavior,
+but those are constraints inside the rollout. The reusable object is the
+sequence through fixture, smoke, contract check, published review surface, and
+regression proof.
+
+## Decision
+
+Remap `AOA-T-0005` from `guardrail` to `workflow`.
+
+Keep its `domain`, `status`, ID, evidence, relations, and promoted posture
+unchanged. The change is a classification correction only.
+
+## Alternatives
+
+- Keep `guardrail`.
+  Rejected because it overstates the safety boundary as the primary object when
+  the bundle repeatedly teaches how to perform one bounded rollout.
+- Move toward `validation`.
+  Rejected because contract checks and regression proof are required steps, but
+  the technique does not primarily emit an independent proof surface.
+- Add a new kind such as `rollout`.
+  Rejected because the current registry already covers the tie-break: ordered
+  procedures for bounded work belong in `workflow`.
+
+## Consequences
+
+- Generated kind surfaces will list `AOA-T-0005` under `workflow`.
+- The Distillation reform shortlist moves to `AOA-T-0052` next.
+- `AOA-T-0005` remains `promoted`; no canonical claim or status change is made.
+- Future remaps should keep distinguishing risk posture from primary kind.
+
+## Verification
+
+Expected checks:
+
+```bash
+python -m unittest tests.test_distillation_mechanics_topology
+python scripts/validate_repo.py
+python -m unittest discover -s tests
+python scripts/release_check.py
+```
