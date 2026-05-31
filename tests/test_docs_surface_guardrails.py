@@ -155,16 +155,16 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
                 for section in required_sections:
                     self.assertIn(section, body)
 
-    def test_decisions_readme_indexes_all_decision_records(self) -> None:
-        decisions_readme = (REPO_ROOT / "docs" / "decisions" / "README.md").read_text(
-            encoding="utf-8"
-        )
+    def test_decision_number_index_indexes_all_decision_records(self) -> None:
+        by_number = (
+            REPO_ROOT / "docs" / "decisions" / "indexes" / "by-number.md"
+        ).read_text(encoding="utf-8")
 
         for path in sorted((REPO_ROOT / "docs" / "decisions").glob("*.md")):
             if path.name in {"AGENTS.md", "README.md", "TEMPLATE.md"}:
                 continue
             with self.subTest(decision=path.name):
-                self.assertIn(f"]({path.name})", decisions_readme)
+                self.assertIn(f"](../{path.name})", by_number)
 
     def test_docs_entrypoints_route_to_mechanics_without_part_runbook_index(self) -> None:
         docs_readme = (REPO_ROOT / "docs" / "README.md").read_text(encoding="utf-8")

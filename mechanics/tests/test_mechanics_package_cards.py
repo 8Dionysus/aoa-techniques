@@ -65,7 +65,7 @@ class MechanicsPackageCardTests(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-03-mechanics-package-card-standard.md"
+            / "AOA-TECH-D-0026-mechanics-package-card-standard.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Status: accepted", decision)

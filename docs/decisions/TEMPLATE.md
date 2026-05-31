@@ -3,6 +3,16 @@
 Status: proposed
 Date: YYYY-MM-DD
 
+## Index Metadata
+
+- Decision ID: AOA-TECH-D-####
+- Original date: YYYY-MM-DD
+- Surface classes: docs route
+- Technique axes: topology
+- Mechanic parents: none
+- Guard families: docs route
+- Posture: proposed
+
 ## Context
 
 Name the problem or repeated fork this decision resolves.

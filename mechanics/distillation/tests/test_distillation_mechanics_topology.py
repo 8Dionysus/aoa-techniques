@@ -722,7 +722,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-03-technique-reform-ingress-packet.md"
+            / "AOA-TECH-D-0035-technique-reform-ingress-packet.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("not a schema migration", ingress)
@@ -849,7 +849,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-04-0085-kind-remap.md"
+            / "AOA-TECH-D-0039-0085-kind-remap.md"
         ).read_text(encoding="utf-8")
 
         self.assertEqual("agent-workflows", technique["domain"])
@@ -871,7 +871,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-04-0005-kind-remap.md"
+            / "AOA-TECH-D-0036-0005-kind-remap.md"
         ).read_text(encoding="utf-8")
 
         self.assertEqual("agent-workflows", technique["domain"])
@@ -893,7 +893,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-04-0052-kind-remap.md"
+            / "AOA-TECH-D-0037-0052-kind-remap.md"
         ).read_text(encoding="utf-8")
 
         self.assertEqual("agent-workflows", technique["domain"])
@@ -917,7 +917,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-04-0054-kind-remap.md"
+            / "AOA-TECH-D-0038-0054-kind-remap.md"
         ).read_text(encoding="utf-8")
         destination_check = (
             REPO_ROOT
@@ -8761,7 +8761,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-distillation-active-parts-split.md"
+            / "AOA-TECH-D-0004-distillation-active-parts-split.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Distillation Active Parts Split", decision)
@@ -8773,7 +8773,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-distillation-external-candidate-registry.md"
+            / "AOA-TECH-D-0006-distillation-external-candidate-registry.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Distillation External Candidate Registry", decision)
@@ -8785,7 +8785,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-distillation-cross-layer-candidate-registry.md"
+            / "AOA-TECH-D-0005-distillation-cross-layer-candidate-registry.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Distillation Cross-Layer Candidate Registry", decision)
@@ -8871,7 +8871,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-distillation-gate-alignment.md"
+            / "AOA-TECH-D-0007-distillation-gate-alignment.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Distillation Gate Alignment", decision)
@@ -8886,7 +8886,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-03-distillation-agon-candidate-handoff.md"
+            / "AOA-TECH-D-0024-distillation-agon-candidate-handoff.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn("Distillation Agon Candidate Handoff", decision)
@@ -8900,7 +8900,7 @@ class DistillationMechanicsTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-mechanics-boundary-language-correction.md"
+            / "AOA-TECH-D-0010-mechanics-boundary-language-correction.md"
         ).read_text(encoding="utf-8")
 
         mechanics_readme = (REPO_ROOT / "mechanics" / "README.md").read_text(

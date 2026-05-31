@@ -22,8 +22,8 @@ Primary source in `Agents-of-Abyss`:
 - `.agents/spark/schemas/**`
 - `.agents/spark/scripts/validate_spark_lane.py`
 - `.agents/spark/tests/test_spark_lane.py`
-- `docs/decisions/2026-04-30-spark-session-lane-contract.md`
-- `docs/decisions/2026-05-13-codex-spark-agent-lane-home.md`
+- `docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md`
+- `docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md`
 
 Local `aoa-techniques` surfaces that constrain the adaptation:
 
@@ -34,7 +34,7 @@ Local `aoa-techniques` surfaces that constrain the adaptation:
 - `.agents/spark/AGENTS.md`
 - `.agents/spark/SWARM.md`
 - `docs/ROOT_SURFACE_LAW.md`
-- `docs/decisions/2026-05-14-spark-agent-lane-home.md`
+- `docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md`
 - `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - `docs/TECHNIQUE_TREE_CONTRACT.md`
@@ -144,7 +144,7 @@ Spark should be good at:
 - `.agents/spark/results/`
 - `.agents/spark/handoffs/open/`
 - `.agents/spark/handoffs/closed/`
-- `docs/decisions/2026-05-14-spark-agent-lane-home.md`
+- `docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md`
 - AGENTS mesh registration for `.agents/spark/AGENTS.md`
 
 Spark lane validation is wired into `scripts/release_check.py`.

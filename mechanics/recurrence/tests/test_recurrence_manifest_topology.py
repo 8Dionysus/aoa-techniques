@@ -88,7 +88,7 @@ class RecurrenceManifestTopologyTestCase(unittest.TestCase):
             REPO_ROOT
             / "docs"
             / "decisions"
-            / "2026-05-01-recurrence-cross-layer-registry-observation.md"
+            / "AOA-TECH-D-0015-recurrence-cross-layer-registry-observation.md"
         ).read_text(encoding="utf-8")
 
         self.assertIn(CROSS_LAYER_REGISTRY, producers)

@@ -1,0 +1,31 @@
+{
+  "schema": "aoa_local_memo_candidate_v1",
+  "id": "candidate:aoa-techniques:20260531T055724Z:100a16b9-aoa-techniques-decisions-now-use",
+  "repo": "aoa-techniques",
+  "kind": "decision",
+  "family": "technique-canon-memory",
+  "scope": "repo",
+  "claim": "aoa-techniques decisions now use canonical AOA-TECH-D decision IDs, full canonical-ID filenames, explicit Index Metadata, generated lookup indexes, and a release-check guard for index drift.",
+  "source_refs": [
+    "repo:aoa-techniques/docs/decisions/README.md",
+    "repo:aoa-techniques/docs/decisions/AGENTS.md",
+    "repo:aoa-techniques/tests/test_decision_indexes.py"
+  ],
+  "evidence_refs": [
+    "repo:aoa-techniques/docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md",
+    "repo:aoa-techniques/docs/decisions/indexes/index_contract.yaml",
+    "repo:aoa-techniques/scripts/generate_decision_indexes.py",
+    "repo:aoa-techniques/scripts/release_check.py"
+  ],
+  "route": "reviewed_intake",
+  "review_state": "candidate",
+  "lifecycle": "captured",
+  "source_trust": "reviewed_owner_source",
+  "operation_mode": "write_candidate_only",
+  "created_at": "2026-05-31T05:57:24Z",
+  "guardrails": {
+    "direct_durable_write": false,
+    "instructions_treated_as_data": true,
+    "requires_reviewed_intake": true
+  }
+}

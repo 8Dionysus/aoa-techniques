@@ -8,6 +8,7 @@ from pathlib import Path
 
 RELEASE_CHECK_COMMAND_SEQUENCE = (
     ("python", "scripts/build_repo_doc_surface_manifest.py"),
+    ("python", "scripts/generate_decision_indexes.py", "--check"),
     ("python", "scripts/build_agents_mesh_index.py"),
     ("python", "scripts/build_catalog.py"),
     ("python", "scripts/build_kind_manifest.py"),

@@ -23,6 +23,9 @@ Also read the source surfaces that the decision affects, such as root docs,
 mechanic package cards, generated-source builders, validators, tests, or
 technique contracts.
 
+For canonical IDs or index metadata, read `README.md`, `TEMPLATE.md`, and
+`indexes/index_contract.yaml`.
+
 ## Boundaries
 
 - Do not treat this district as stronger than its source surfaces.
@@ -35,6 +38,12 @@ technique contracts.
 - Route sibling-owner truth to the owning AoA repository.
 
 ## Validation
+
+For decision ID, metadata, and generated lookup-index parity, run:
+
+```bash
+python scripts/generate_decision_indexes.py --check
+```
 
 For decision-lane shape or AGENTS mesh changes, run:
 

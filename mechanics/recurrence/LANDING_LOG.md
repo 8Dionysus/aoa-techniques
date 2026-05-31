@@ -14,7 +14,7 @@ technique review.
 - Updated README, part map, provenance, root surface law, changelog, tests, and
   roadmap parity references to use the part-local script home.
 - Recorded the placement rationale in
-  [mechanic-script-homes](../../docs/decisions/2026-05-14-mechanic-script-homes.md).
+  [mechanic-script-homes](../../docs/decisions/AOA-TECH-D-0048-mechanic-script-homes.md).
 
 Verification lane:
 

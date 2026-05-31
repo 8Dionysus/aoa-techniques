@@ -24,9 +24,9 @@ Changed:
 - kept `governed-action-surfaces` as a closed explicit exclusion from the
   handoff packet
 - recorded the source-of-truth decision in
-  [incoming evidence-only closeout](../../docs/decisions/2026-05-18-incoming-evidence-only-closeout.md)
+  [incoming evidence-only closeout](../../docs/decisions/AOA-TECH-D-0063-incoming-evidence-only-closeout.md)
 - recorded the archive placement decision in
-  [closed incoming packets Distillation legacy](../../docs/decisions/2026-05-18-closed-incoming-packets-distillation-legacy.md)
+  [closed incoming packets Distillation legacy](../../docs/decisions/AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md)
 
 Verification lane:
 
@@ -58,7 +58,7 @@ Changed:
 - updated release-check, validators, docs, tests, and generated report command
   hints to use the part-local command paths
 - recorded the placement rationale in
-  [mechanic-script-homes](../../docs/decisions/2026-05-14-mechanic-script-homes.md)
+  [mechanic-script-homes](../../docs/decisions/AOA-TECH-D-0048-mechanic-script-homes.md)
 
 Verification lane:
 
@@ -124,7 +124,7 @@ Changed:
 - regenerated kind, family, topology, and tree scout reports with relative links
   from the deeper mechanic-local route
 - recorded the placement rationale in
-  [technique-reform-report-home](../../docs/decisions/2026-05-14-technique-reform-report-home.md)
+  [technique-reform-report-home](../../docs/decisions/AOA-TECH-D-0055-technique-reform-report-home.md)
 
 Verification lane:
 
@@ -163,7 +163,7 @@ Changed:
 - updated the semantic and shadow manifests so the mechanics packet paths are
   the source paths, not aliases back to `docs/`
 - recorded the placement rationale in
-  [review-packet-mechanics-home](../../docs/decisions/2026-05-14-review-packet-mechanics-home.md)
+  [review-packet-mechanics-home](../../docs/decisions/AOA-TECH-D-0051-review-packet-mechanics-home.md)
 
 Verification lane:
 
@@ -3847,7 +3847,7 @@ Changed:
 - updated Distillation direction, part map, provenance, roadmap, root roadmap,
   and Start Here so broad reform starts from evidence instead of a schema jump
 - recorded the structural decision in
-  [Technique Reform Ingress Packet](../../docs/decisions/2026-05-03-technique-reform-ingress-packet.md)
+  [Technique Reform Ingress Packet](../../docs/decisions/AOA-TECH-D-0035-technique-reform-ingress-packet.md)
 
 Verification lane:
 

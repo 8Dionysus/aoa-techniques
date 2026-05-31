@@ -41,4 +41,4 @@ Relevant local evidence already present:
 - `mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/component.techniques.canon-and-intake-beacons.json`
 - `mechanics/recurrence/parts/live-observation-producers/manifests/recurrence/hooks/component.techniques.canon-and-intake-beacons.hooks.json`
 - `mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py`
-- `docs/decisions/2026-05-01-recurrence-cross-layer-registry-observation.md`
+- `docs/decisions/AOA-TECH-D-0015-recurrence-cross-layer-registry-observation.md`
