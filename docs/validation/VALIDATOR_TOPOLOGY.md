@@ -11,7 +11,7 @@ standalone gate.
 
 | Lane | Posture | Owns | Does not own |
 |---|---|---|---|
-| `source-fast` | blocking growth gate | AGENTS mesh, nested route-card shape, semantic route snippets | generated freshness, release freeze, runtime/export policy |
+| `source-fast` | blocking growth gate | AGENTS mesh, nested route-card shape, semantic route snippets, fast authored technique source contracts | generated freshness, release freeze, runtime/export policy |
 | `generated` | blocking projection gate | generated/read-model rebuild parity and drift snapshots | technique meaning, skill export/runtime contracts |
 | `mechanics/part-local` | blocking mechanic-owned gate | part-local candidate registries, handoff packets, builder `--check` parity, pytest homes | root release packaging, sibling runtime behavior |
 | `release` | blocking release gate | frozen release-prep sequence, Spark lane, mechanics/part-local lane, tests, validators, worktree stabilization | ordinary PR growth gating |
@@ -21,13 +21,17 @@ standalone gate.
 ## GitHub CI Route
 
 `Repo Validation` runs `source-fast` for pull requests and pushes to `main`.
-Generated checks run only on pushes to `main`, where the moving growth surface
-can absorb projection drift checks without turning every PR into a release
-freeze.
+That gate checks route/topology plus source-owned technique contracts through
+`scripts/validate_source_contracts.py`; it does not rebuild or compare
+generated freshness. Generated checks run only on pushes to `main`, where the
+moving growth surface can absorb projection drift checks without turning every
+PR into a release freeze.
 
 `Release Audit` and `Nightly Sentinel` are separate workflows. Release uses the
-`release` mode; nightly uses the `nightly` mode. Both keep pinned GitHub
-actions and call lane entrypoints rather than copying command sequences.
+`release` mode; nightly runs the moving-main `nightly` mode and separately
+reproduces the latest `v*` release tag through `scripts/release_check.py`. Both
+keep pinned GitHub actions and call lane entrypoints rather than copying command
+sequences.
 
 The generated lane is grouped in
 [`validation_lanes.json`](../../config/validation_lanes.json) so each

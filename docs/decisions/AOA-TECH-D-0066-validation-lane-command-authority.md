@@ -40,7 +40,8 @@ release stabilization, and documentation guidance.
 Use `config/validation_lanes.json` as the canonical command storage surface for
 blocking validation lanes:
 
-- `source-fast` protects the current growth gate.
+- `source-fast` protects the current growth gate: route/topology plus fast
+  authored technique source contracts.
 - `generated` protects generated projection parity on moving `main`.
 - `release` protects the full release-prep path.
 
@@ -67,12 +68,15 @@ history.
 
 - PR validation no longer treats the full release-prep gate as the default
   growth gate.
+- The growth gate now includes `scripts/validate_source_contracts.py`, which
+  checks authored technique contracts without generated freshness.
 - Active docs and route cards should name lane IDs, local focused checks, or
   entrypoints rather than copying full command sequences.
 - Tests must guard that workflows call lane entrypoints and that
   `release_check.py` reads the lane manifest.
-- The current `source_fast` lane is intentionally narrow until the monolithic
-  source/generation validator split lands.
+- The current `source_fast` lane is intentionally bounded to source/topology:
+  it checks AGENTS route law and authored technique source contracts, but not
+  generated projections.
 
 ## Source surfaces
 
@@ -82,6 +86,7 @@ history.
 - `config/validation_lanes.json`
 - `scripts/validation_lanes.py`
 - `scripts/ci_gate.py`
+- `scripts/validate_source_contracts.py`
 - `scripts/release_check.py`
 - `docs/RELEASING.md`
 - `docs/validation/VALIDATOR_TOPOLOGY.md`
@@ -94,15 +99,16 @@ history.
 
 ## Follow-up route
 
-The next validator-topology refactor should split source/topology checks and
-generated projection checks so `source_fast` can cover the technique-canon
-source contract without pulling generated freshness into every PR.
+Do not widen `source_fast` by adding generated builders. Future source-only
+checks may join the lane when they validate authored source, schemas, or route
+topology without projection freshness.
 
 ## Verification
 
 Current verification route:
 
-- `source-fast` lane for growth-safe source/route-card checks.
+- `source-fast` lane for growth-safe source/route-card and authored technique
+  source-contract checks.
 - `generated` lane for projection parity.
 - `release` lane for release-prep stabilization.
 - `tests/AGENTS.md` focused checks for test-topology and command-authority

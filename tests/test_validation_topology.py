@@ -44,6 +44,13 @@ class ValidationTopologyTests(unittest.TestCase):
                 self.assertEqual("blocking", lane["posture"])
                 self.assertIn(lane["command_sequence"], manifest["command_sequences"])
 
+        source_commands = {
+            tuple(command) for command in manifest["command_sequences"]["source_fast"]
+        }
+        self.assertIn(("python", "scripts/validate_source_contracts.py"), source_commands)
+        self.assertNotIn(("python", "scripts/validate_repo.py"), source_commands)
+        self.assertNotIn(("python", "scripts/build_catalog.py"), source_commands)
+
         advisory = lanes["advisory"]
         self.assertEqual("non_blocking", advisory["posture"])
         self.assertNotIn("command_sequence", advisory)
@@ -103,6 +110,7 @@ class ValidationTopologyTests(unittest.TestCase):
         self.assertIn("does not own skill portable export", topology)
         self.assertIn("eval verdict layer", topology)
         self.assertIn("runtime policy engine", topology)
+        self.assertIn("fast authored technique source contracts", topology)
 
     def test_mechanics_part_local_lane_covers_discovered_part_tests(self) -> None:
         manifest = load_json(LANES_PATH)

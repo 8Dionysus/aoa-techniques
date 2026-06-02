@@ -29,3 +29,37 @@ jobs:
 
       - name: Run nightly lane
         run: python scripts/ci_gate.py --mode nightly
+
+  latest_release_repro:
+    name: Latest Release Repro
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository history
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
+
+      - name: Resolve latest release tag
+        id: latest
+        run: |
+          latest_tag="$(git tag --list 'v*' --sort=-version:refname | head -n 1)"
+          if [ -z "$latest_tag" ]; then
+            echo "No v* release tag found" >&2
+            exit 1
+          fi
+          echo "tag=$latest_tag" >> "$GITHUB_OUTPUT"
+          echo "Latest release tag: $latest_tag" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Checkout latest release tag
+        run: git checkout --detach "${{ steps.latest.outputs.tag }}"
+
+      - name: Setup Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.12"
+
+      - name: Install release dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Reproduce latest release gate
+        run: python scripts/release_check.py

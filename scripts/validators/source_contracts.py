@@ -2,6 +2,40 @@ from __future__ import annotations
 
 from .common import *
 
+
+SOURCE_FAST_REQUIRED_SOURCE_FILES = (
+    "DESIGN.md",
+    "DESIGN.AGENTS.md",
+    "TECHNIQUE_INDEX.md",
+    "docs/DOMAIN_MAP.md",
+    "docs/TECHNIQUE_ATOM_CONTRACT.md",
+    "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
+    "docs/TECHNIQUE_TREE_CONTRACT.md",
+    "docs/review/CANONICAL_RUBRIC.md",
+    "docs/review/CANONICAL_REVIEW_GUIDE.md",
+    "docs/review/SEMANTIC_REVIEW_GUIDE.md",
+    "docs/review/TECHNIQUE_SHADOW_GUIDE.md",
+    "docs/selection/TECHNIQUE_SELECTION_GUIDE.md",
+    "docs/selection/TECHNIQUE_INTELLIGENCE_GUIDE.md",
+    "docs/selection/TECHNIQUE_KIND_GUIDE.md",
+    "docs/selection/TECHNIQUE_KIND_HANDOFF_PACK.md",
+    "schemas/technique.schema.json",
+    "schemas/evidence-note.schema.json",
+    "schemas/relation.schema.json",
+    "schemas/index-entry.schema.json",
+    TECHNIQUE_KIND_REGISTRY_PATH,
+    TECHNIQUE_FAMILY_SCOUT_PATH,
+    TECHNIQUE_TOPOLOGY_AXES_PATH,
+    TECHNIQUE_KIND_OVERLAY_PATH,
+)
+
+
+def validate_source_fast_required_files(repo_root: Path) -> None:
+    for relative_path in SOURCE_FAST_REQUIRED_SOURCE_FILES:
+        if not (repo_root / relative_path).is_file():
+            fail(f"{repo_root}: missing source-fast source file '{relative_path}'")
+
+
 def validate_frontmatter_schema(
     frontmatter: dict[str, Any], technique_path: Path, schema_store: dict[str, Any]
 ) -> None:
@@ -2275,3 +2309,21 @@ def validate_relations(records: list[TechniqueRecord]) -> None:
             seen_pairs.add(pair)
 
 
+def validate_technique_source_contracts(repo_root: Path) -> list[TechniqueRecord]:
+    validate_source_fast_required_files(repo_root)
+    schema_store = load_schema_store(repo_root)
+    validate_kind_axis_alignment(repo_root, schema_store)
+    records = collect_techniques(repo_root, schema_store)
+    validate_family_scout_alignment(repo_root)
+    validate_topology_axes_registry(repo_root)
+    validate_kind_overlay(repo_root, records)
+    validate_repo_doc_surface_specs(repo_root)
+    validate_selection_working_set_specs(repo_root)
+    validate_shadow_working_set_specs(records, repo_root)
+    validate_shadow_question_specs(records)
+    validate_selection_navigation_specs(records, repo_root)
+    validate_repo_doc_navigation_specs(repo_root)
+    validate_index(repo_root, records)
+    validate_evidence(records)
+    validate_relations(records)
+    return records

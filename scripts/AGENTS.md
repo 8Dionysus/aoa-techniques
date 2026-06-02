@@ -47,6 +47,7 @@ CI lane executor. Keep root entrypoints thin and verify with:
 ```bash
 python -m unittest tests.test_validator_module_topology
 python scripts/ci_gate.py --mode source-fast
+python scripts/validate_source_contracts.py
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/build_agents_mesh_index.py --check

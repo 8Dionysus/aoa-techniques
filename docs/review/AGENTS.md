@@ -53,7 +53,8 @@ For review-guide changes, run the narrow affected test first when possible:
 python scripts/build_catalog.py
 python scripts/build_semantic_review_manifest.py
 python scripts/build_shadow_review_manifest.py
-python -m unittest tests.test_validate_repo
+python -m unittest tests.test_validate_repo_source_contracts
+python -m unittest tests.test_validate_repo_generated_drift
 python -m unittest tests.test_docs_surface_guardrails
 python scripts/validate_repo.py
 ```

@@ -10,6 +10,8 @@
 - `scripts/run_part_local_tests.py` discovers mechanic part-local pytest homes
   and their related builder `--check` / validator scripts for the
   `mechanics/part-local` lane.
+- `scripts/validate_source_contracts.py` is the source-only technique contract
+  entrypoint for `source-fast`; it must not check generated freshness.
 - `scripts/release_check.py` remains the release entrypoint and worktree
   stabilizer, but it asks the loader for the `release` lane from the manifest.
 - `scripts/validate_repo.py` remains the compatibility CLI and import adapter;
@@ -23,7 +25,8 @@
 - `.github/workflows/release-audit.yml` owns tag/manual release checks through
   `python scripts/ci_gate.py --mode release`.
 - `.github/workflows/nightly-sentinel.yml` owns scheduled/manual moving-main
-  drift checks through `python scripts/ci_gate.py --mode nightly`.
+  drift checks through `python scripts/ci_gate.py --mode nightly` and latest
+  release reproduction on the latest `v*` tag.
 - `AGENTS.md` cards may name focused local checks, lane ids, and nearby owner
   routes. They should not copy the full release or generated command sequence.
 - Active docs and decision guidance should name lane ids and nearest owner

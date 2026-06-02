@@ -45,6 +45,10 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
             command_sequence_from_manifest("source_fast"),
             validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE,
         )
+        self.assertIn(
+            ("python", "scripts/validate_source_contracts.py"),
+            validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE,
+        )
         self.assertEqual(
             command_sequence_from_manifest("generated_check"),
             validation_lanes.GENERATED_CHECK_COMMAND_SEQUENCE,
@@ -212,6 +216,7 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         self.assertNotIn("python scripts/release_check.py", workflow)
         self.assertNotIn("python scripts/run_tests.py", workflow)
         self.assertNotIn("python scripts/validate_repo.py", workflow)
+        self.assertNotIn("python scripts/validate_source_contracts.py", workflow)
 
     def test_active_docs_route_to_lane_ids_instead_of_full_sequences(self) -> None:
         active_docs = (

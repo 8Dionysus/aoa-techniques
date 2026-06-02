@@ -44,6 +44,9 @@ Move implementation ownership under `scripts/validators/`:
 
 Record these modules in `docs/validation/validator_inventory.json` and test
 the topology with `tests/test_validator_module_topology.py`.
+`scripts/validate_source_contracts.py` is the source-fast CLI entrypoint into
+`source_contracts.py`; it must stay source-only and must not grow projection
+freshness checks.
 
 ## Rationale
 
@@ -71,6 +74,7 @@ module and the validator inventory.
 ## Source surfaces
 
 - `scripts/validate_repo.py`
+- `scripts/validate_source_contracts.py`
 - `scripts/validators/`
 - `scripts/validators/AGENTS.md`
 - `docs/validation/VALIDATOR_TOPOLOGY.md`

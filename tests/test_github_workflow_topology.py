@@ -43,6 +43,9 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         self.assertIn("schedule:", nightly)
         self.assertIn("workflow_dispatch:", nightly)
         self.assertIn("python scripts/ci_gate.py --mode nightly", nightly)
+        self.assertIn("Latest Release Repro", nightly)
+        self.assertIn("git tag --list 'v*' --sort=-version:refname", nightly)
+        self.assertIn("python scripts/release_check.py", nightly)
 
         self.assertNotIn("pull_request:", release)
         self.assertNotIn("pull_request:", nightly)

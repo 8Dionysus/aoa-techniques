@@ -47,7 +47,7 @@ card may name focused checks and lane entrypoints only. Common checks:
 python scripts/ci_gate.py --mode source-fast
 python scripts/validate_agents_mesh.py
 python scripts/build_agents_mesh_index.py --check
-python scripts/validate_repo.py
+python scripts/validate_source_contracts.py
 ```
 
 ## Closeout

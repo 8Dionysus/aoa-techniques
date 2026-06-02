@@ -12,7 +12,7 @@
       "posture": "blocking",
       "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
       "command_sequence": "source_fast",
-      "purpose": "Growth-safe source/topology gate for AGENTS mesh and route-card shape.",
+      "purpose": "Growth-safe source/topology gate for AGENTS mesh, route-card shape, and fast authored technique source contracts.",
       "does_not_own": [
         "generated freshness",
         "release stabilization",
@@ -121,6 +121,10 @@
       [
         "python",
         "scripts/validate_semantic_agents.py"
+      ],
+      [
+        "python",
+        "scripts/validate_source_contracts.py"
       ]
     ],
     "generated_check": [

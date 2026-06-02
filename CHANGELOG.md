@@ -36,6 +36,15 @@ The format is intentionally simple and human-first.
   and surface-owned suites with separate inventory failure routes
 - changed active docs and decision command guidance to name validation lane ids
   and nearest owner `AGENTS.md` checks instead of copied release snippets
+- expanded `source-fast` with a source-only
+  `scripts/validate_source_contracts.py` entrypoint so PR validation covers
+  authored technique contracts without pulling generated freshness into the
+  growth gate
+- added guardrail coverage for active `AGENTS.md` cards so deleted test targets
+  such as the former validate-repo and Distillation topology monoliths cannot
+  remain as focused local checks
+- expanded the nightly workflow with a latest `v*` release reproduction job
+  while keeping moving-main drift checks separate from release-freeze behavior
 
 ## [0.4.5] - 2026-05-18
 

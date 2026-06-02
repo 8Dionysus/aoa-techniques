@@ -42,9 +42,9 @@ Markdown quest sources in this lane use `quest_markdown_contract_v1`.
 Run the narrowest relevant checks first. Usual checks for this lane:
 
 ```bash
-python scripts/build_catalog.py
-python scripts/validate_repo.py
-python -m unittest tests.test_validate_repo
+python scripts/build_questbook_projection.py --check
+python -m unittest tests.test_validate_repo_questbook_intelligence
+python scripts/ci_gate.py --mode source-fast
 ```
 
 ## Closeout

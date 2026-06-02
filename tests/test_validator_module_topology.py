@@ -28,6 +28,7 @@ OWNER_MODULES = {
 }
 ADAPTER_MODULES = {
     "scripts/validate_repo.py",
+    "scripts/validate_source_contracts.py",
     "scripts/validators/__init__.py",
 }
 SOURCE_RULE_FUNCTIONS = {
@@ -35,6 +36,7 @@ SOURCE_RULE_FUNCTIONS = {
     "validate_frontmatter_schema",
     "validate_kind_axis_alignment",
     "validate_technique_bundle",
+    "validate_technique_source_contracts",
     "validate_index",
     "validate_evidence",
     "validate_relations",
@@ -107,6 +109,16 @@ class ValidatorModuleTopologyTests(unittest.TestCase):
         self.assertNotIn("def validate_", text)
         self.assertIn("from .orchestrator import *", text)
 
+    def test_source_contract_cli_is_source_fast_entrypoint_only(self) -> None:
+        text = (REPO_ROOT / "scripts" / "validate_source_contracts.py").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("validate_technique_source_contracts", text)
+        self.assertNotIn("validate_catalogs", text)
+        self.assertNotIn("build_catalog", text)
+        self.assertNotIn("generated", text)
+
     def test_inventory_covers_every_validator_module_and_no_orphans(self) -> None:
         inventory = load_inventory()
         module_entries = inventory["validator_modules"]
@@ -119,7 +131,12 @@ class ValidatorModuleTopologyTests(unittest.TestCase):
 
         self.assertEqual(OWNER_MODULES, discovered_paths)
         self.assertEqual(
-            OWNER_MODULES | {"scripts/validate_repo.py", "scripts/validators/__init__.py"},
+            OWNER_MODULES
+            | {
+                "scripts/validate_repo.py",
+                "scripts/validate_source_contracts.py",
+                "scripts/validators/__init__.py",
+            },
             inventory_paths,
         )
         for relative_path in inventory_paths | ADAPTER_MODULES:

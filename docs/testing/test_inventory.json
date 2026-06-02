@@ -61,7 +61,7 @@
         {
           "path": "tests/test_docs_surface_guardrails.py",
           "family": "docs/root-surface",
-          "protects": "Docs district routing, active markdown links, generated reader bounds, and command-lane separation.",
+          "protects": "Docs district routing, active markdown links, generated reader bounds, command-lane separation, and active AGENTS test-target freshness.",
           "owner_surface": "docs/guardrails/",
           "runtime_cost": "medium",
           "focused_target": "tests/test_docs_surface_guardrails.py",

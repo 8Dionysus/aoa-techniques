@@ -56,7 +56,7 @@ surface consumed by the validator you are changing.
 Run the focused topology and validator tests first:
 
 ```bash
-python -m unittest tests.test_validator_module_topology tests.test_validate_repo
+python -m unittest tests.test_validator_module_topology tests.test_validate_repo_source_contracts tests.test_validate_repo_generated_drift
 python scripts/ci_gate.py --mode generated
 python scripts/validate_repo.py
 ```

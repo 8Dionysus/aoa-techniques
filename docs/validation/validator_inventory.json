@@ -18,6 +18,19 @@
       ]
     },
     {
+      "path": "scripts/validate_source_contracts.py",
+      "module_type": "source_entrypoint",
+      "owner": "source-fast technique contract CLI",
+      "owns": [
+        "source-fast authored technique contract entrypoint"
+      ],
+      "does_not_own": [
+        "generated artifact freshness",
+        "projection parity semantics",
+        "release lane stabilization"
+      ]
+    },
+    {
       "path": "scripts/validators/__init__.py",
       "module_type": "adapter",
       "owner": "validator package re-export surface",
@@ -203,16 +216,19 @@
       "mode": "blocking",
       "command_sequence": "source_fast",
       "entrypoint": "python scripts/ci_gate.py --mode source-fast",
-      "owner": "AGENTS mesh and route-card source topology",
+      "owner": "AGENTS mesh, route-card source topology, and authored technique source contracts",
       "inputs": [
         "AGENTS.md",
         "config/agents_mesh.json",
-        "nested AGENTS.md cards"
+        "nested AGENTS.md cards",
+        "authored technique bundles",
+        "source-owned technique contract docs",
+        "schemas/*.json"
       ],
       "outputs": [
         "source/topology validation result"
       ],
-      "failure_route": "Fix the nearest AGENTS card, mesh config, or semantic route snippet."
+      "failure_route": "Fix the nearest AGENTS card, mesh config, semantic route snippet, authored technique bundle, schema, or source-owned contract doc."
     },
     {
       "id": "generated",
@@ -278,10 +294,11 @@
       "inputs": [
         "source-fast lane",
         "generated lane",
-        "mechanics/part-local lane"
+        "mechanics/part-local lane",
+        "latest v* release tag reproduction in GitHub workflow"
       ],
       "outputs": [
-        "nightly drift result"
+        "nightly drift result and latest release reproduction result"
       ],
       "failure_route": "Treat as growth-surface drift; do not assume a frozen release artifact failure."
     },

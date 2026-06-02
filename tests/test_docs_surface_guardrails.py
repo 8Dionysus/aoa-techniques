@@ -8,6 +8,13 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 LOCAL_LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
+UNITTEST_COMMAND_PATTERN = re.compile(r"^\s*python\s+-m\s+unittest\s+(.+)$")
+DELETED_TEST_TARGET_PATTERNS = (
+    re.compile(r"(?<![\w.])tests\.test_validate_repo(?![\w.])"),
+    re.compile(r"(?<![\w.])tests\.test_distillation_mechanics_topology(?![\w.])"),
+    re.compile(r"(?<![\w/-])test_validate_repo\.py(?![\w.-])"),
+    re.compile(r"(?<![\w/-])test_distillation_mechanics_topology\.py(?![\w.-])"),
+)
 
 
 def command_text(*parts: str) -> str:
@@ -307,6 +314,61 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             for snippet in forbidden_active_snippets:
                 with self.subTest(surface=relative_path, snippet=snippet):
                     self.assertNotIn(snippet, text)
+
+    def test_active_agents_do_not_reference_deleted_or_missing_test_targets(self) -> None:
+        active_agent_cards = [
+            path
+            for path in sorted(REPO_ROOT.rglob("AGENTS.md"))
+            if "legacy" not in path.relative_to(REPO_ROOT).parts
+        ]
+        self.assertGreater(len(active_agent_cards), 0)
+
+        for path in active_agent_cards:
+            relative_path = path.relative_to(REPO_ROOT).as_posix()
+            text = path.read_text(encoding="utf-8")
+            for deleted_target in DELETED_TEST_TARGET_PATTERNS:
+                with self.subTest(
+                    surface=relative_path,
+                    deleted_target=deleted_target.pattern,
+                ):
+                    self.assertIsNone(deleted_target.search(text))
+
+            for line_number, line in enumerate(text.splitlines(), 1):
+                match = UNITTEST_COMMAND_PATTERN.match(line)
+                if match is None:
+                    continue
+                targets = match.group(1).split()
+                if targets and targets[0] == "discover":
+                    continue
+                for target in targets:
+                    target = target.strip("'\"")
+                    if (
+                        target.startswith("-")
+                        or target == "discover"
+                        or target.endswith("/")
+                        or "*" in target
+                    ):
+                        continue
+                    if "." not in target:
+                        continue
+                    if "/" in target:
+                        target_path = REPO_ROOT / target
+                        with self.subTest(
+                            surface=relative_path,
+                            line=line_number,
+                            target=target,
+                        ):
+                            self.assertTrue(target_path.exists())
+                        continue
+                    target_path = REPO_ROOT / (
+                        target.split(":", 1)[0].replace(".", "/") + ".py"
+                    )
+                    with self.subTest(
+                        surface=relative_path,
+                        line=line_number,
+                        target=target,
+                    ):
+                        self.assertTrue(target_path.is_file())
 
 
 if __name__ == "__main__":
