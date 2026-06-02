@@ -20,6 +20,9 @@ Mechanic-owned tests belong beside the owning mechanic under
 
 Read root `AGENTS.md`, `scripts/AGENTS.md`, the source surface under test, and
 the builder or validator being exercised.
+For adding, deleting, moving, or changing a test home, also read
+`docs/testing/TEST_TOPOLOGY.md` and update
+`docs/testing/test_inventory.json`.
 
 ## Boundaries
 
@@ -33,9 +36,14 @@ the builder or validator being exercised.
 
 ## Validation
 
-Verify with:
+Full lane command sequences live in `config/validation_lanes.json`; tests may
+guard lane authority, but they should not become a second command store. Verify
+with the focused test first, then the relevant lane:
 
 ```bash
+python -m unittest tests.test_test_topology
+python -m unittest tests.test_validator_module_topology
+python scripts/ci_gate.py --mode source-fast
 python scripts/run_tests.py
 python scripts/validate_semantic_agents.py
 ```

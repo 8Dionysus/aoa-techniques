@@ -13,6 +13,10 @@ promotion helpers, and report tools for repo-wide technique canon surfaces.
 Scripts that only serve one mechanic part belong beside that part under
 `mechanics/<slug>/parts/<part>/scripts/`.
 
+Repo-wide `validate_repo` rule implementation belongs under
+`scripts/validators/`. Keep `scripts/validate_repo.py` as a compatibility
+CLI/re-export adapter.
+
 ## Read before editing
 
 Read root `AGENTS.md`, `docs/START_HERE.md`, the source surfaces consumed by
@@ -36,15 +40,19 @@ For agent mesh scripts, also read `DESIGN.AGENTS.md`,
 
 ## Validation
 
-Verify with:
+Full lane command sequences live in `config/validation_lanes.json`;
+`scripts/validation_lanes.py` is the loader/API, and `scripts/ci_gate.py` is the
+CI lane executor. Keep root entrypoints thin and verify with:
 
 ```bash
+python -m unittest tests.test_validator_module_topology
+python scripts/ci_gate.py --mode source-fast
+python scripts/validate_source_contracts.py
 python scripts/validate_agents_md_shape.py
 python scripts/validate_agents_mesh.py
 python scripts/build_agents_mesh_index.py --check
 python scripts/validate_agents_mesh_index.py
 python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
 ```
 
 ## Closeout

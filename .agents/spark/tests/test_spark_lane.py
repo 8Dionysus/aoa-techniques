@@ -14,6 +14,24 @@ SPARK_ROOT = REPO_ROOT / ".agents" / "spark"
 REGISTRY = SPARK_ROOT / "registry.json"
 
 
+def write_validation_lanes_stub(repo_root: Path) -> None:
+    config_dir = repo_root / "config"
+    config_dir.mkdir(parents=True, exist_ok=True)
+    (config_dir / "validation_lanes.json").write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "command_sequences": {
+                    "release_check": [
+                        ["python", ".agents/spark/scripts/validate_spark_lane.py"]
+                    ]
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -70,6 +88,7 @@ class SparkLaneTestCase(unittest.TestCase):
                 ".agents/spark/scripts/validate_spark_lane.py\n",
                 encoding="utf-8",
             )
+            write_validation_lanes_stub(temp_root)
             extra = temp_root / ".agents/spark/scenarios/unregistered"
             (extra / "templates").mkdir(parents=True)
             (extra / "examples").mkdir(parents=True)
@@ -95,6 +114,7 @@ class SparkLaneTestCase(unittest.TestCase):
                 ".agents/spark/scripts/validate_spark_lane.py\n",
                 encoding="utf-8",
             )
+            write_validation_lanes_stub(temp_root)
             prompt = temp_root / ".agents/spark/scenarios/technique-audit/PROMPT.md"
             prompt.write_text(
                 prompt.read_text(encoding="utf-8").replace("done-or-handoff", "done or handoff"),

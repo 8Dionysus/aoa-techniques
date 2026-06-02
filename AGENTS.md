@@ -156,26 +156,27 @@ Update only the ones that moved; otherwise say no update was needed.
 
 ## Validation
 
-Default validation:
+Default growth validation uses the `source-fast` lane. Full lane command
+sequences live in [validation_lanes](config/validation_lanes.json), and the
+lane map lives in [Validator Topology](docs/validation/VALIDATOR_TOPOLOGY.md).
+Use the `source-fast` lane for default growth checks and the nearest nested
+`AGENTS.md` for focused owner checks.
 
 ```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
+python scripts/ci_gate.py --mode source-fast
 ```
 
 Use release checks when publication posture, broad generated outputs, or
-companion-candidate surfaces change. For mechanic-specific companions such as
-Agon, use the owning mechanic `AGENTS.md` and part README rather than preserved
-root-era guidance.
+companion-candidate surfaces change. Route that through the `release` lane in
+[Command Authority](docs/validation/COMMAND_AUTHORITY.md), not by copying the
+release command sequence into route docs.
 
-For agent-surface changes, run the AGENTS mesh lane:
+For mechanic-specific companions such as Agon, use the owning mechanic
+`AGENTS.md` and part README rather than preserved root-era guidance.
 
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
+For agent-surface changes, use the focused AGENTS mesh checks named by the
+nearest AGENTS owner card and the `source-fast` / `generated` lane ids as
+needed.
 
 ## Closeout
 

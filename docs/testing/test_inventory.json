@@ -1,0 +1,874 @@
+{
+  "schema_version": 1,
+  "owner": "docs/testing/TEST_TOPOLOGY.md",
+  "command_authority": "config/validation_lanes.json",
+  "runner_authority": "scripts/run_tests.py",
+  "required_normalized_fields": [
+    "path",
+    "home",
+    "home_scope",
+    "family",
+    "protects",
+    "owner_surface",
+    "coverage_authority",
+    "lane",
+    "mode",
+    "runtime_cost",
+    "focused_target",
+    "failure_route"
+  ],
+  "home_scopes": {
+    "root": "Repo-wide tests under tests/.",
+    "mechanic-level": "Mechanics-wide or one-mechanic package tests under mechanics/**/tests without a parts segment.",
+    "part-local": "One mechanic part's tests under mechanics/<slug>/parts/<part>/tests.",
+    "agent-lane": "Agent-lane tests under .agents/<lane>/tests."
+  },
+  "homes": [
+    {
+      "home": "tests",
+      "home_scope": "root",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "root-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "tests/test_agents_mesh.py",
+          "family": "AGENTS/mesh",
+          "protects": "AGENTS mesh validator behavior, generated mesh shape, and config source references.",
+          "owner_surface": "config/agents_mesh.json",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_agents_mesh.py",
+          "failure_route": "Fix AGENTS mesh config, AGENTS cards, or mesh validators before changing generated mesh output."
+        },
+        {
+          "path": "tests/test_current_direction_routes.py",
+          "family": "docs/root-surface",
+          "protects": "Root entrypoint routing and current direction visibility.",
+          "owner_surface": "ROADMAP.md",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_current_direction_routes.py",
+          "failure_route": "Fix root route docs or current direction surfaces before changing downstream readers."
+        },
+        {
+          "path": "tests/test_decision_indexes.py",
+          "family": "generated/read-model",
+          "protects": "Decision index freshness, canonical filename contract, and index parser fields.",
+          "owner_surface": "docs/decisions/",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_decision_indexes.py",
+          "failure_route": "Fix decision metadata or regenerate decision indexes before editing generated indexes."
+        },
+        {
+          "path": "tests/test_docs_surface_guardrails.py",
+          "family": "docs/root-surface",
+          "protects": "Docs district routing, active markdown links, generated reader bounds, command-lane separation, and active AGENTS test-target freshness.",
+          "owner_surface": "docs/guardrails/",
+          "runtime_cost": "medium",
+          "focused_target": "tests/test_docs_surface_guardrails.py",
+          "failure_route": "Fix docs guardrails, route docs, or generated reader boundaries before changing public docs shape."
+        },
+        {
+          "path": "tests/test_downstream_feed_contracts.py",
+          "family": "generated/read-model",
+          "protects": "Downstream feed IDs, router-safe doc paths, generated catalogs, and example schemas.",
+          "owner_surface": "generated/",
+          "runtime_cost": "medium",
+          "focused_target": "tests/test_downstream_feed_contracts.py",
+          "failure_route": "Fix generated projection builders or source bundle metadata before changing downstream feed contracts."
+        },
+        {
+          "path": "tests/test_github_workflow_topology.py",
+          "family": "release/ci-lane",
+          "protects": "GitHub workflow lane posture, pinned actions, and PR template lane wording.",
+          "owner_surface": ".github/workflows/",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_github_workflow_topology.py",
+          "failure_route": "Fix workflow lane entrypoints or PR template wording before changing CI topology."
+        },
+        {
+          "path": "tests/test_nested_agents_docs.py",
+          "family": "AGENTS/mesh",
+          "protects": "Required nested AGENTS docs and validator failure reporting.",
+          "owner_surface": "scripts/validate_nested_agents.py",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_nested_agents_docs.py",
+          "failure_route": "Fix nearest AGENTS route card or nested AGENTS validator expectations."
+        },
+        {
+          "path": "tests/test_release_check.py",
+          "family": "release/ci-lane",
+          "protects": "Release lane stabilization and worktree drift detection.",
+          "owner_surface": "scripts/release_check.py",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_release_check.py",
+          "failure_route": "Fix release checker state handling or lane loader contract before changing release behavior."
+        },
+        {
+          "path": "tests/test_roadmap_parity.py",
+          "family": "docs/root-surface",
+          "protects": "Roadmap parity with current direction and generated promotion readiness.",
+          "owner_surface": "ROADMAP.md",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_roadmap_parity.py",
+          "failure_route": "Fix roadmap/current direction source or generated promotion readiness before changing route claims."
+        },
+        {
+          "path": "tests/test_root_legacy_topology.py",
+          "family": "docs/root-surface",
+          "protects": "Root legacy scaffold boundaries and active/generated surface exclusion.",
+          "owner_surface": "legacy/",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_root_legacy_topology.py",
+          "failure_route": "Fix legacy route evidence or root topology before moving active surfaces."
+        },
+        {
+          "path": "tests/test_technique_intelligence.py",
+          "family": "generated/read-model",
+          "protects": "Technique Intelligence registry, DAG projection, schema, and query behavior.",
+          "owner_surface": "scripts/build_technique_intelligence.py",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_technique_intelligence.py",
+          "failure_route": "Fix technique intelligence builder, schema, or source move metadata before changing generated intelligence."
+        },
+        {
+          "path": "tests/test_test_topology.py",
+          "family": "test-topology/authority",
+          "protects": "Test topology docs, machine inventory, home classification, and runner/lane coverage.",
+          "owner_surface": "docs/testing/",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_test_topology.py",
+          "failure_route": "Fix docs/testing inventory, support helper, or runner/lane coverage before adding new tests."
+        },
+        {
+          "path": "tests/test_validate_repo_compatibility_imports.py",
+          "family": "compatibility/imports",
+          "protects": "validate_repo compatibility imports and import behavior without optional PyYAML.",
+          "owner_surface": "scripts/validate_repo.py",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validate_repo_compatibility_imports.py",
+          "failure_route": "Fix validate_repo adapter imports or compatibility re-export behavior before changing validator packaging."
+        },
+        {
+          "path": "tests/test_validate_repo_ci_release_authority.py",
+          "family": "release/ci-lane",
+          "protects": "Repo validation workflow, release lane authority, release snapshot drift handling, CODEOWNERS, and GitHub template surfaces.",
+          "owner_surface": "config/validation_lanes.json",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validate_repo_ci_release_authority.py",
+          "failure_route": "Fix CI/release command authority or GitHub template surfaces before changing release routing."
+        },
+        {
+          "path": "tests/test_validate_repo_source_contracts.py",
+          "family": "source/contract",
+          "protects": "Technique source contracts, parser edge cases, support-reference bounds, section/risk contracts, and source-owned docs routes.",
+          "owner_surface": "scripts/validators/source_contracts.py",
+          "runtime_cost": "medium",
+          "focused_target": "tests/test_validate_repo_source_contracts.py",
+          "failure_route": "Fix authored source contracts or source validator helpers before changing generated projections."
+        },
+        {
+          "path": "tests/test_validate_repo_generated_drift.py",
+          "family": "generated/read-model",
+          "protects": "Generated projection parity for selection, shadow, kind, repo-doc, scout, source-lift, capsule, and reader surfaces.",
+          "owner_surface": "scripts/validators/projection_catalog.py",
+          "runtime_cost": "slow",
+          "focused_target": "tests/test_validate_repo_generated_drift.py",
+          "failure_route": "Fix generated projection builders or projection validators before changing generated/read-model outputs."
+        },
+        {
+          "path": "tests/test_validate_repo_agents_mesh.py",
+          "family": "AGENTS/mesh",
+          "protects": "Agent-lane placement under the AGENTS district and Spark lane route boundaries.",
+          "owner_surface": ".agents/spark/",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validate_repo_agents_mesh.py",
+          "failure_route": "Fix Spark AGENTS district routing before changing agent-lane tests or generated mesh expectations."
+        },
+        {
+          "path": "tests/test_validate_repo_public_hygiene.py",
+          "family": "public-hygiene",
+          "protects": "Public hygiene URL/path rejection and public route-surface link behavior.",
+          "owner_surface": "scripts/validators/public_hygiene.py",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validate_repo_public_hygiene.py",
+          "failure_route": "Fix public hygiene validator rules or public route surfaces before changing public-safety posture."
+        },
+        {
+          "path": "tests/test_validate_repo_questbook_intelligence.py",
+          "family": "questbook/intelligence",
+          "protects": "Questbook source/projection contracts, quest dispatch schema parity, and technique feat schema example coverage.",
+          "owner_surface": "scripts/validators/questbook.py",
+          "runtime_cost": "medium",
+          "focused_target": "tests/test_validate_repo_questbook_intelligence.py",
+          "failure_route": "Fix questbook source/projection validator or related schemas before changing quest/intelligence coverage."
+        },
+        {
+          "path": "tests/test_validate_semantic_agents.py",
+          "family": "AGENTS/mesh",
+          "protects": "Semantic AGENTS route-card snippets and missing-doc failure behavior.",
+          "owner_surface": "scripts/validate_semantic_agents.py",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validate_semantic_agents.py",
+          "failure_route": "Fix semantic AGENTS docs or validator snippets before changing semantic AGENTS coverage."
+        },
+        {
+          "path": "tests/test_validation_command_authority.py",
+          "family": "release/ci-lane",
+          "protects": "Validation lane manifest authority, CI gate delegation, and release entrypoint thinness.",
+          "owner_surface": "config/validation_lanes.json",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validation_command_authority.py",
+          "failure_route": "Fix lane manifest or loader authority before editing workflow or release command paths."
+        },
+        {
+          "path": "tests/test_validation_topology.py",
+          "family": "release/ci-lane",
+          "protects": "Validation lane topology, validator inventory alignment, and mechanics part-local lane coverage.",
+          "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validation_topology.py",
+          "failure_route": "Fix validation topology docs, manifest, or part-local lane coverage before widening validation lanes."
+        },
+        {
+          "path": "tests/test_validator_module_topology.py",
+          "family": "generated/read-model",
+          "protects": "Validator module ownership, projection-only generated modules, and validator inventory parity.",
+          "owner_surface": "docs/validation/validator_inventory.json",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_validator_module_topology.py",
+          "failure_route": "Fix validator module split or inventory before changing repo validator ownership."
+        }
+      ]
+    },
+    {
+      "home": ".agents/spark/tests",
+      "home_scope": "agent-lane",
+      "coverage_authority": "validation_lanes.release_check",
+      "lane": "spark-agent",
+      "mode": "release-only",
+      "files": [
+        {
+          "path": ".agents/spark/tests/test_spark_lane.py",
+          "family": "agent-lane/spark",
+          "protects": "Spark lane registry, scenario coverage, prompt done/handoff shape, and release wiring.",
+          "owner_surface": ".agents/spark/",
+          "runtime_cost": "fast",
+          "focused_target": ".agents/spark/tests",
+          "failure_route": "Fix .agents/spark registry, scenarios, templates, or lane validator before changing release posture."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/tests/test_experience_release_contracts.py",
+          "family": "mechanics/shared",
+          "protects": "Experience release contract schemas, examples, and escape-hatch rejection.",
+          "owner_surface": "mechanics/experience/parts/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/tests/test_experience_release_contracts.py",
+          "failure_route": "Fix shared mechanics release contract schemas or examples before changing mechanics-wide tests."
+        },
+        {
+          "path": "mechanics/tests/test_mechanics_legacy_scaffolds.py",
+          "family": "mechanics/shared",
+          "protects": "Mechanics legacy scaffold presence, empty raw inventories, and provenance language.",
+          "owner_surface": "mechanics/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/tests/test_mechanics_legacy_scaffolds.py",
+          "failure_route": "Fix mechanics legacy scaffolds or package provenance before changing mechanic package routes."
+        },
+        {
+          "path": "mechanics/tests/test_mechanics_package_cards.py",
+          "family": "mechanics/shared",
+          "protects": "Mechanic package card headings, local cards, and request receipt posture.",
+          "owner_surface": "mechanics/README.md",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/tests/test_mechanics_package_cards.py",
+          "failure_route": "Fix mechanic package cards, README, or request receipts before adding package-local claims."
+        },
+        {
+          "path": "mechanics/tests/test_mechanics_request_receipts.py",
+          "family": "mechanics/shared",
+          "protects": "Mechanics request receipts and direct AoA request routing.",
+          "owner_surface": "mechanics/REQUEST_RECEIPTS.md",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/tests/test_mechanics_request_receipts.py",
+          "failure_route": "Fix mechanics request receipts or route docs before changing shared mechanic topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/agon/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/agon/tests/test_agon_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Agon active surfaces, README route, part-local artifacts, and candidate narrowing route.",
+          "owner_surface": "mechanics/agon/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/agon/tests",
+          "failure_route": "Fix Agon package route, part map, or candidate handoff before changing Agon topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/antifragility/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/antifragility/tests/test_antifragility_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Antifragility active surfaces, part map, ORQ boundary, references, and stop-lines.",
+          "owner_surface": "mechanics/antifragility/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/antifragility/tests",
+          "failure_route": "Fix Antifragility package routes, active parts, or stop-lines before changing package topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/audit/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/audit/tests/test_audit_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Audit active surfaces, part-local links, current posture, legacy, and decision routes.",
+          "owner_surface": "mechanics/audit/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/audit/tests",
+          "failure_route": "Fix Audit package surfaces, part links, or current posture before changing audit topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/boundary-bridge/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/boundary-bridge/tests/test_boundary_bridge_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Boundary-bridge active surfaces, part map, owner anchors, projections, proof boundaries, and stop-lines.",
+          "owner_surface": "mechanics/boundary-bridge/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/boundary-bridge/tests",
+          "failure_route": "Fix Boundary Bridge package homes, anchors, or projection/proof stop-lines before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/checkpoint/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/checkpoint/tests/test_checkpoint_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Checkpoint active surfaces, part map, phase handoff, technique anchors, legacy scaffold, and stop-lines.",
+          "owner_surface": "mechanics/checkpoint/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/checkpoint/tests",
+          "failure_route": "Fix Checkpoint package routes, handoff candidate, or anchors before changing checkpoint topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/distillation/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/distillation/tests/test_capability_boundary_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Capability-boundary tree pilot bundles, route card, receipts, and review links.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_capability_boundary_tree_pilot.py",
+          "failure_route": "Fix Distillation pilot receipts, moved bundle links, or instruction route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_capability_registry_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Capability-registry tree pilot bundles, route card, receipts, and neighbor shelves.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_capability_registry_tree_pilot.py",
+          "failure_route": "Fix Distillation pilot receipts, links, or instruction route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_diagnosis_repair_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Diagnosis-repair tree pilot bundles, recovery route card, receipts, and moved bundle links.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_diagnosis_repair_tree_pilot.py",
+          "failure_route": "Fix recovery pilot receipts, links, or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_incoming_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Distillation incoming root, closed packet archive, candidate bundle absence, and stop-line wording.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_distillation_incoming_topology.py",
+          "failure_route": "Fix Distillation incoming topology or closed archive evidence before changing intake routes."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_package_surfaces.py",
+          "family": "mechanics/package-topology",
+          "protects": "Distillation active surfaces, flat-file retirement, part map, and technique-reform ingress source homes.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/tests/test_distillation_package_surfaces.py",
+          "failure_route": "Fix Distillation package route cards, PARTS map, or technique-reform ingress homes before changing package topology."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_part_ledgers_handoff.py",
+          "family": "mechanics/part-local",
+          "protects": "Distillation part-local ledgers, external/cross-layer registries, Agon handoff coverage, and gate card boundaries.",
+          "owner_surface": "mechanics/distillation/parts/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/tests/test_distillation_part_ledgers_handoff.py",
+          "failure_route": "Fix the owning Distillation part registry, handoff packet, or gate evidence before changing ledger topology."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_reform_ingress_reviews.py",
+          "family": "mechanics/package-topology",
+          "protects": "Technique-reform ingress bounded review packs, kind remap decisions, and scout-to-tree projection routing.",
+          "owner_surface": "mechanics/distillation/parts/technique-reform-ingress/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/tests/test_distillation_reform_ingress_reviews.py",
+          "failure_route": "Fix technique-reform ingress README, review packs, kind remap evidence, or scout reports before changing reform routing."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_tree_pilot_ingress_wave.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Early tree-pilot review-compaction through docs-boundary direct-read, migration, and next-shelf routing evidence.",
+          "owner_surface": "mechanics/distillation/parts/technique-reform-ingress/reviews/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/tests/test_distillation_tree_pilot_ingress_wave.py",
+          "failure_route": "Fix early tree-pilot review packets, migration receipts, or routed shelf evidence before changing this wave."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_tree_pilot_capability_wave.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Capability, skill, and evaluation-chain tree-pilot direct-read, migration, and next-shelf routing evidence.",
+          "owner_surface": "mechanics/distillation/parts/technique-reform-ingress/reviews/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/tests/test_distillation_tree_pilot_capability_wave.py",
+          "failure_route": "Fix capability/skill/evaluation tree-pilot review packets, receipts, or routed shelf evidence before changing this wave."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_tree_pilot_history_wave.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Published-summary through intent-chain tree-pilot direct-read, migration, and next-shelf routing evidence.",
+          "owner_surface": "mechanics/distillation/parts/technique-reform-ingress/reviews/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/tests/test_distillation_tree_pilot_history_wave.py",
+          "failure_route": "Fix history/antifragility/ready-work/intent tree-pilot review packets, receipts, or routed shelf evidence before changing this wave."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_tree_pilot_runtime_wave.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Agent-workflow through owner-truth tree-pilot direct-read, migration, and next-shelf routing evidence.",
+          "owner_surface": "mechanics/distillation/parts/technique-reform-ingress/reviews/",
+          "runtime_cost": "slow",
+          "focused_target": "mechanics/distillation/tests/test_distillation_tree_pilot_runtime_wave.py",
+          "failure_route": "Fix runtime/approval/review/owner-truth tree-pilot review packets, receipts, or routed shelf evidence before changing this wave."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_tree_pilot_automation_closeout.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Automation, promotion, practice adoption, tool gateway, and whole-tree closeout review/migration evidence.",
+          "owner_surface": "mechanics/distillation/parts/technique-reform-ingress/reviews/",
+          "runtime_cost": "slow",
+          "focused_target": "mechanics/distillation/tests/test_distillation_tree_pilot_automation_closeout.py",
+          "failure_route": "Fix automation/promotion/adoption/tool-gateway closeout packets, route-card consolidation, or final ledger evidence before changing tree closeout."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_distillation_gate_decisions.py",
+          "family": "mechanics/package-topology",
+          "protects": "Distillation pre-prune receipts, active decisions, gate packet naming, reopen boundaries, and mechanics boundary correction evidence.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_distillation_gate_decisions.py",
+          "failure_route": "Fix Distillation decisions, gate packets, preserved receipts, or mechanics boundary wording before changing gate topology."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_docs_boundary_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Docs-boundary tree pilot bundles, route card, receipts, and neighbor bundle boundaries.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_docs_boundary_tree_pilot.py",
+          "failure_route": "Fix docs-boundary pilot receipts, links, or instruction route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_evaluation_chain_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Evaluation-chain tree pilot bundles, proof route card, receipts, and review sources.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_evaluation_chain_tree_pilot.py",
+          "failure_route": "Fix evaluation-chain pilot receipts, proof route card, or review links before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_handoff_continuation_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Handoff-continuation tree pilot bundles, continuity route card, and receipts.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_handoff_continuation_tree_pilot.py",
+          "failure_route": "Fix continuity pilot receipts or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_history_artifacts_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "History-artifacts tree pilot bundles, route card, receipts, live links, and review sources.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_history_artifacts_tree_pilot.py",
+          "failure_route": "Fix history pilot receipts, links, or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_instruction_surface_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Instruction-surface tree pilot bundles, instruction route card, receipts, and review links.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_instruction_surface_tree_pilot.py",
+          "failure_route": "Fix instruction pilot receipts, links, or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_kag_source_lift_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "KAG source-lift tree pilot bundles, knowledge-lift route card, receipts, and neighbor shelves.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_kag_source_lift_tree_pilot.py",
+          "failure_route": "Fix knowledge-lift pilot receipts, links, or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_media_ingest_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Media-ingest tree pilot bundles, ingest route card, receipts, and archived personal-ingest links.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_media_ingest_tree_pilot.py",
+          "failure_route": "Fix media-ingest pilot receipts, links, or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_published_summary_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Published-summary tree pilot bundles, proof route card, receipts, live links, and review sources.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_published_summary_tree_pilot.py",
+          "failure_route": "Fix published-summary pilot receipts, links, or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_review_compaction_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Review-compaction tree pilot bundles, continuity route card, and receipts.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_review_compaction_tree_pilot.py",
+          "failure_route": "Fix review-compaction pilot receipts or route card before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_skill_discovery_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Skill-discovery tree pilot bundles, instruction route card, docs/eval route cleanup, receipts, and legacy raw evidence.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_skill_discovery_tree_pilot.py",
+          "failure_route": "Fix skill-discovery pilot receipts, links, or route cards before changing this pilot."
+        },
+        {
+          "path": "mechanics/distillation/tests/test_skill_support_tree_pilot.py",
+          "family": "mechanics/tree-pilot",
+          "protects": "Skill-support tree pilot bundles, proof route card, docs/eval route cleanup, receipts, and review sources.",
+          "owner_surface": "mechanics/distillation/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/tests/test_skill_support_tree_pilot.py",
+          "failure_route": "Fix skill-support pilot receipts, links, or route cards before changing this pilot."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/experience/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/experience/tests/test_experience_adoption_contracts.py",
+          "family": "mechanics/package-topology",
+          "protects": "Experience adoption schemas, examples, numeric ranges, enums, and guardrail escape rejection.",
+          "owner_surface": "mechanics/experience/parts/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/experience/tests/test_experience_adoption_contracts.py",
+          "failure_route": "Fix Experience adoption schemas or examples before changing adoption contracts."
+        },
+        {
+          "path": "mechanics/experience/tests/test_experience_governance_contracts.py",
+          "family": "mechanics/package-topology",
+          "protects": "Experience governance schemas, examples, field types, arrays, consts, enums, and numeric ranges.",
+          "owner_surface": "mechanics/experience/parts/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/experience/tests/test_experience_governance_contracts.py",
+          "failure_route": "Fix Experience governance schemas or examples before changing governance contracts."
+        },
+        {
+          "path": "mechanics/experience/tests/test_experience_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Experience active surfaces, contract packets, route docs, part map, candidate bridge, and request receipt.",
+          "owner_surface": "mechanics/experience/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/experience/tests/test_experience_mechanics_topology.py",
+          "failure_route": "Fix Experience package routes, part map, or contract packets before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/growth-cycle/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/growth-cycle/tests/test_growth_cycle_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Growth-cycle active surfaces, part map, stage anchors, ORQ boundary, references, and roadmap visibility.",
+          "owner_surface": "mechanics/growth-cycle/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/growth-cycle/tests",
+          "failure_route": "Fix Growth-cycle package routes, stage anchors, references, or roadmap posture before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/method-growth/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/method-growth/tests/test_method_growth_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Method-growth active surfaces, contract packets, part map, request receipt, pattern adoption, skill handoff, retention, and obsolescence routes.",
+          "owner_surface": "mechanics/method-growth/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/method-growth/tests",
+          "failure_route": "Fix Method-growth package routes, contract packets, or handoff/retention packets before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/questbook/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/questbook/tests/test_questbook_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Questbook active surfaces, part map, mechanics map visibility, ORQ boundary, source/projection split, anchors, legacy scaffold, and stop-lines.",
+          "owner_surface": "mechanics/questbook/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/questbook/tests",
+          "failure_route": "Fix Questbook package routes, source/projection split, anchors, or stop-lines before changing questbook topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/recurrence/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/recurrence/tests/test_publish_live_receipts.py",
+          "family": "mechanics/package-topology",
+          "protects": "Recurrence live receipt publishing idempotency and event-kind rejection.",
+          "owner_surface": "mechanics/recurrence/parts/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/recurrence/tests/test_publish_live_receipts.py",
+          "failure_route": "Fix Recurrence live receipt publisher or event-kind contract before changing receipt behavior."
+        },
+        {
+          "path": "mechanics/recurrence/tests/test_recurrence_manifest_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Recurrence manifest homes, cross-layer registry evidence, beacon rules, and stop-line docs.",
+          "owner_surface": "mechanics/recurrence/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/recurrence/tests/test_recurrence_manifest_topology.py",
+          "failure_route": "Fix Recurrence manifest homes, registry evidence, or beacon stop-lines before changing topology."
+        },
+        {
+          "path": "mechanics/recurrence/tests/test_recurrence_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Recurrence active surfaces, part map, ORQ boundary, and part-local references.",
+          "owner_surface": "mechanics/recurrence/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/recurrence/tests/test_recurrence_mechanics_topology.py",
+          "failure_route": "Fix Recurrence package routes, active parts, or references before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/release-support/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/release-support/tests/test_release_support_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "Release-support active surfaces, contract packets, part map, ORQ boundary, references, and stop-lines.",
+          "owner_surface": "mechanics/release-support/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/release-support/tests",
+          "failure_route": "Fix Release-support package routes, contract packets, references, or stop-lines before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/rpg/tests",
+      "home_scope": "mechanic-level",
+      "coverage_authority": "scripts/run_tests.py",
+      "lane": "mechanic-tests",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/rpg/tests/test_rpg_mechanics_topology.py",
+          "family": "mechanics/package-topology",
+          "protects": "RPG active surfaces, mechanics map visibility, ORQ boundary, source anchors, reader-only feat progression, quest overlay bounds, owner handoff, legacy scaffold, and stop-lines.",
+          "owner_surface": "mechanics/rpg/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/rpg/tests",
+          "failure_route": "Fix RPG package routes, anchors, overlay boundaries, handoff routes, or stop-lines before changing topology."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/agon/parts/epistemic-technique-candidates/tests",
+      "home_scope": "part-local",
+      "coverage_authority": "validation_lanes.mechanics_part_local",
+      "lane": "mechanics-part-local",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py",
+          "family": "mechanics/part-local",
+          "protects": "Agon epistemic technique candidate generated registry, builder check, and validator pair.",
+          "owner_surface": "mechanics/agon/parts/epistemic-technique-candidates/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py",
+          "failure_route": "Fix Agon epistemic candidate source registry, builder, or validator before changing part-local lane coverage."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/agon/parts/move-technique-bridge/tests",
+      "home_scope": "part-local",
+      "coverage_authority": "validation_lanes.mechanics_part_local",
+      "lane": "mechanics-part-local",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",
+          "family": "mechanics/part-local",
+          "protects": "Agon move-technique bridge candidate freshness, candidate shape, and skill workflow stop-line rejection.",
+          "owner_surface": "mechanics/agon/parts/move-technique-bridge/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",
+          "failure_route": "Fix Agon move-technique bridge source candidates, builder, or validator before changing part-local lane coverage."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/distillation/parts/agon-candidate-handoff/tests",
+      "home_scope": "part-local",
+      "coverage_authority": "validation_lanes.mechanics_part_local",
+      "lane": "mechanics-part-local",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py",
+          "family": "mechanics/part-local",
+          "protects": "Agon candidate handoff current registry, source coverage, gate cards, examples, checklists, evidence notes, and readiness reviews.",
+          "owner_surface": "mechanics/distillation/parts/agon-candidate-handoff/",
+          "runtime_cost": "medium",
+          "focused_target": "mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py",
+          "failure_route": "Fix Agon candidate handoff source registry, gate artifacts, builder, or validator before changing part-local lane coverage."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/distillation/parts/cross-layer-candidate-ledger/tests",
+      "home_scope": "part-local",
+      "coverage_authority": "validation_lanes.mechanics_part_local",
+      "lane": "mechanics-part-local",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py",
+          "family": "mechanics/part-local",
+          "protects": "Cross-layer candidate registry freshness, row shape, inherited status, landed technique links, and portability gaps.",
+          "owner_surface": "mechanics/distillation/parts/cross-layer-candidate-ledger/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py",
+          "failure_route": "Fix cross-layer candidate ledger source, builder, or validator before changing part-local lane coverage."
+        }
+      ]
+    },
+    {
+      "home": "mechanics/distillation/parts/external-candidate-ledger/tests",
+      "home_scope": "part-local",
+      "coverage_authority": "validation_lanes.mechanics_part_local",
+      "lane": "mechanics-part-local",
+      "mode": "blocking",
+      "files": [
+        {
+          "path": "mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py",
+          "family": "mechanics/part-local",
+          "protects": "External candidate registry freshness, row shape, active-lane atom naming, ledger gate pairs, and portability gaps.",
+          "owner_surface": "mechanics/distillation/parts/external-candidate-ledger/",
+          "runtime_cost": "fast",
+          "focused_target": "mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py",
+          "failure_route": "Fix external candidate ledger source, builder, or validator before changing part-local lane coverage."
+        }
+      ]
+    }
+  ]
+}

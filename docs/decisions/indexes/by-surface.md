@@ -15,6 +15,8 @@
 - [AOA-TECH-D-0035 Technique Reform Ingress Packet](../AOA-TECH-D-0035-technique-reform-ingress-packet.md) (`docs/decisions/AOA-TECH-D-0035-technique-reform-ingress-packet.md`)
 - [AOA-TECH-D-0058 Docs Surface Guardrails And Tree Contract Slimming](../AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md) (`docs/decisions/AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md`)
 - [AOA-TECH-D-0065 Canonical Decision IDs And Indexes](../AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md`)
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 
 ## decision record
 
@@ -149,8 +151,19 @@
 ## validation guard
 
 - [AOA-TECH-D-0065 Canonical Decision IDs And Indexes](../AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md`)
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 
 ## quest/lane
 
 - [AOA-TECH-D-0031 Questbook Candidate Mechanic](../AOA-TECH-D-0031-questbook-candidate-mechanic.md) (`docs/decisions/AOA-TECH-D-0031-questbook-candidate-mechanic.md`)
 - [AOA-TECH-D-0032 Questbook Lane-first Source Store](../AOA-TECH-D-0032-questbook-lane-first-source-store.md) (`docs/decisions/AOA-TECH-D-0032-questbook-lane-first-source-store.md`)
+
+## GitHub workflow
+
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+
+## release/tooling
+
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)

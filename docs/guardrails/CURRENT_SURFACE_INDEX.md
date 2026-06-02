@@ -35,6 +35,7 @@ legacy receipt, mechanic route, or technique bundle named by the relevant file.
 | `docs/review/` | active review, maturity, semantic-review, and caution contracts |
 | `docs/selection/` | active selection, kind, handoff, and capsule guide contracts |
 | `docs/source-lift/` | authored KAG/source-lift guide contracts, including section, checklist, example, evidence-note, metadata, relation, caution, repo-doc, and export boundaries |
+| `docs/validation/` | active validation lane topology, command authority, and validator inventory |
 | `docs/readers/` | generated Markdown reader companions that are builder-backed and weaker than authored source surfaces |
 | `docs/readers/source-lift/` | source-lift reader companions: `TECHNIQUE_SECTIONS.md`, `TECHNIQUE_CHECKLISTS.md`, `TECHNIQUE_EXAMPLES.md`, and `EVIDENCE_NOTE_SURFACES.md` |
 | `docs/readers/kind/` | generated kind reader companion: `TECHNIQUE_KINDS.md` |
@@ -72,6 +73,14 @@ legacy receipt, mechanic route, or technique bundle named by the relevant file.
 | `docs/guardrails/HYGIENE_GUARDRAIL_INDEX.md` | current check lane for link and docs-shape hygiene |
 | `docs/guardrails/AGENTS_MESH_PROTOCOL.md` | local AGENTS-card coverage and shape law |
 | `docs/guardrails/AGENTS_MESH_INDEX.md` | generated AGENTS mesh index surface |
+
+## Validation District
+
+| Surface | Role |
+|---|---|
+| `docs/validation/VALIDATOR_TOPOLOGY.md` | active validator lane and owner-boundary map |
+| `docs/validation/COMMAND_AUTHORITY.md` | command authority rule for lane storage, CI entrypoints, and release entrypoint |
+| `docs/validation/validator_inventory.json` | machine-readable lane owner, input, output, mode, and failure-route inventory |
 
 ## Review Guide District
 

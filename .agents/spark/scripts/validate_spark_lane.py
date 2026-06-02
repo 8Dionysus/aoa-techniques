@@ -82,6 +82,26 @@ def read_text(root: Path, rel: str) -> str:
     return (root / rel).read_text(encoding="utf-8")
 
 
+def release_lane_runs_spark_validator(root: Path) -> bool:
+    lanes_path = root / "config" / "validation_lanes.json"
+    if not lanes_path.is_file():
+        return False
+    try:
+        lanes = load_json(lanes_path)
+    except json.JSONDecodeError:
+        return False
+    sequences = lanes.get("command_sequences")
+    if not isinstance(sequences, dict):
+        return False
+    release_sequence = sequences.get("release_check")
+    if not isinstance(release_sequence, list):
+        return False
+    return [
+        "python",
+        ".agents/spark/scripts/validate_spark_lane.py",
+    ] in release_sequence
+
+
 def require_markers(
     problems: list[str],
     root: Path,
@@ -304,11 +324,11 @@ def validate(root: Path) -> list[str]:
     if swarm.exists() and ".agents/spark/registry.json" not in swarm.read_text(encoding="utf-8"):
         problems.append(".agents/spark/SWARM.md does not mention .agents/spark/registry.json")
 
-    release_check = root / "scripts/release_check.py"
-    if release_check.exists():
-        release_text = release_check.read_text(encoding="utf-8")
-        if ".agents/spark/scripts/validate_spark_lane.py" not in release_text:
-            problems.append("release_check.py does not run .agents/spark/scripts/validate_spark_lane.py")
+    if not release_lane_runs_spark_validator(root):
+        problems.append(
+            "config/validation_lanes.json release_check lane does not run "
+            ".agents/spark/scripts/validate_spark_lane.py"
+        )
 
     problems.extend(
         validate_packet_dir(root, root / ".agents/spark/results", REQUIRED_RESULT_MARKERS, seen_ids)

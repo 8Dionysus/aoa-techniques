@@ -8,6 +8,17 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 LOCAL_LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
+UNITTEST_COMMAND_PATTERN = re.compile(r"^\s*python\s+-m\s+unittest\s+(.+)$")
+DELETED_TEST_TARGET_PATTERNS = (
+    re.compile(r"(?<![\w.])tests\.test_validate_repo(?![\w.])"),
+    re.compile(r"(?<![\w.])tests\.test_distillation_mechanics_topology(?![\w.])"),
+    re.compile(r"(?<![\w/-])test_validate_repo\.py(?![\w.-])"),
+    re.compile(r"(?<![\w/-])test_distillation_mechanics_topology\.py(?![\w.-])"),
+)
+
+
+def command_text(*parts: str) -> str:
+    return " ".join(parts)
 
 
 class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
@@ -259,9 +270,9 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             "python -m unittest tests.test_docs_surface_guardrails",
             "python -m pytest -q mechanics/",
             "python scripts/build_",
-            "python scripts/validate_repo.py",
-            "python scripts/run_tests.py",
-            "python scripts/release_check.py",
+            command_text("python", "scripts/validate_repo.py"),
+            command_text("python", "scripts/run_tests.py"),
+            command_text("python", "scripts/release_check.py"),
             "python mechanics/",
             "git status -sb",
         )
@@ -273,6 +284,91 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             for command in forbidden_commands:
                 with self.subTest(surface=relative_path, command=command):
                     self.assertNotIn(command, text)
+
+    def test_active_command_guidance_routes_to_lanes_and_owner_cards(self) -> None:
+        active_guidance_surfaces = (
+            "AGENTS.md",
+            ".github/AGENTS.md",
+            "docs/AGENTS.md",
+            "docs/RELEASING.md",
+            "docs/decisions/README.md",
+            "docs/decisions/TEMPLATE.md",
+        )
+        forbidden_active_snippets = (
+            command_text("python", "scripts/release_check.py"),
+            command_text("python", "scripts/run_tests.py"),
+            command_text("python", "scripts/validate_repo.py"),
+            command_text("python", "scripts/build_catalog.py"),
+            command_text("python", "scripts/build_repo_doc_surface_manifest.py"),
+        )
+
+        for relative_path in active_guidance_surfaces:
+            text = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
+            with self.subTest(surface=relative_path, route="lane_ids"):
+                self.assertRegex(text, r"(source-fast|generated|release|AGENTS\.md)")
+            with self.subTest(surface=relative_path, route="authority"):
+                self.assertRegex(
+                    text,
+                    r"(COMMAND_AUTHORITY\.md|config/validation_lanes\.json|AGENTS\.md)",
+                )
+            for snippet in forbidden_active_snippets:
+                with self.subTest(surface=relative_path, snippet=snippet):
+                    self.assertNotIn(snippet, text)
+
+    def test_active_agents_do_not_reference_deleted_or_missing_test_targets(self) -> None:
+        active_agent_cards = [
+            path
+            for path in sorted(REPO_ROOT.rglob("AGENTS.md"))
+            if "legacy" not in path.relative_to(REPO_ROOT).parts
+        ]
+        self.assertGreater(len(active_agent_cards), 0)
+
+        for path in active_agent_cards:
+            relative_path = path.relative_to(REPO_ROOT).as_posix()
+            text = path.read_text(encoding="utf-8")
+            for deleted_target in DELETED_TEST_TARGET_PATTERNS:
+                with self.subTest(
+                    surface=relative_path,
+                    deleted_target=deleted_target.pattern,
+                ):
+                    self.assertIsNone(deleted_target.search(text))
+
+            for line_number, line in enumerate(text.splitlines(), 1):
+                match = UNITTEST_COMMAND_PATTERN.match(line)
+                if match is None:
+                    continue
+                targets = match.group(1).split()
+                if targets and targets[0] == "discover":
+                    continue
+                for target in targets:
+                    target = target.strip("'\"")
+                    if (
+                        target.startswith("-")
+                        or target == "discover"
+                        or target.endswith("/")
+                        or "*" in target
+                    ):
+                        continue
+                    if "." not in target:
+                        continue
+                    if "/" in target:
+                        target_path = REPO_ROOT / target
+                        with self.subTest(
+                            surface=relative_path,
+                            line=line_number,
+                            target=target,
+                        ):
+                            self.assertTrue(target_path.exists())
+                        continue
+                    target_path = REPO_ROOT / (
+                        target.split(":", 1)[0].replace(".", "/") + ".py"
+                    )
+                    with self.subTest(
+                        surface=relative_path,
+                        line=line_number,
+                        target=target,
+                    ):
+                        self.assertTrue(target_path.is_file())
 
 
 if __name__ == "__main__":

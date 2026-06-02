@@ -12,6 +12,7 @@
 - [AOA-TECH-D-0035 Technique Reform Ingress Packet](../AOA-TECH-D-0035-technique-reform-ingress-packet.md) (`docs/decisions/AOA-TECH-D-0035-technique-reform-ingress-packet.md`)
 - [AOA-TECH-D-0058 Docs Surface Guardrails And Tree Contract Slimming](../AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md) (`docs/decisions/AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md`)
 - [AOA-TECH-D-0065 Canonical Decision IDs And Indexes](../AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md`)
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 
 ## root surface
 
@@ -113,6 +114,8 @@
 - [AOA-TECH-D-0050 Recurrence Manifest Part Home](../AOA-TECH-D-0050-recurrence-manifest-part-home.md) (`docs/decisions/AOA-TECH-D-0050-recurrence-manifest-part-home.md`)
 - [AOA-TECH-D-0057 Spark Registry-Backed Technique Lane](../AOA-TECH-D-0057-spark-registry-backed-technique-lane.md) (`docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md`)
 - [AOA-TECH-D-0064 Technique Intelligence Move Registry](../AOA-TECH-D-0064-technique-intelligence-move-registry.md) (`docs/decisions/AOA-TECH-D-0064-technique-intelligence-move-registry.md`)
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 
 ## AGENTS/mesh
 
@@ -126,6 +129,7 @@
 
 - [AOA-TECH-D-0021 Release Support Active Parts Split](../AOA-TECH-D-0021-release-support-active-parts-split.md) (`docs/decisions/AOA-TECH-D-0021-release-support-active-parts-split.md`)
 - [AOA-TECH-D-0043 GitHub Landing And Mechanics Direction Split Correction](../AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md) (`docs/decisions/AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md`)
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 
 ## public-safety
 
@@ -157,3 +161,15 @@
 
 - [AOA-TECH-D-0031 Questbook Candidate Mechanic](../AOA-TECH-D-0031-questbook-candidate-mechanic.md) (`docs/decisions/AOA-TECH-D-0031-questbook-candidate-mechanic.md`)
 - [AOA-TECH-D-0032 Questbook Lane-first Source Store](../AOA-TECH-D-0032-questbook-lane-first-source-store.md) (`docs/decisions/AOA-TECH-D-0032-questbook-lane-first-source-store.md`)
+
+## CI lane
+
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+
+## source contract
+
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
+
+## validator topology
+
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)

@@ -51,17 +51,9 @@ Use them in both directions:
 - bottom up: changed source surface -> local route card or generated read model
   -> validator guard -> decision rationale -> stronger owner surface.
 
-Regenerate the read models after decision metadata changes:
-
-```bash
-python scripts/generate_decision_indexes.py
-```
-
-Check generated parity before closeout:
-
-```bash
-python scripts/generate_decision_indexes.py --check
-```
+After decision metadata changes, use the `generated` lane's `decisions` group
+or the local checks named by [AGENTS](AGENTS.md). This README is route
+inventory, not command authority.
 
 ## Addressing
 
@@ -91,6 +83,9 @@ Decision records should use this standard shape:
 
 Older records may use `Options` or `Validation`; keep new records closer to
 the template unless a local reason requires a narrower shape.
+For new records, active verification guidance should name lane ids and nearest
+owner `AGENTS.md` checks. Exact old command transcripts may remain only as
+historical evidence when they are clearly labeled that way.
 
 ## Must Not Claim
 

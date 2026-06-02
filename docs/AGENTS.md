@@ -23,6 +23,12 @@ For root or docs-root placement, read `docs/ROOT_SURFACE_LAW.md`,
 `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`, and
 `docs/guardrails/CURRENT_SURFACE_INDEX.md`. For agent mesh work, read
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md` and `docs/guardrails/AGENTS_MESH_INDEX.md`.
+For validation lane topology or command authority, read
+`docs/validation/VALIDATOR_TOPOLOGY.md`,
+`docs/validation/COMMAND_AUTHORITY.md`, and
+`docs/validation/validator_inventory.json`.
+For test home topology, read `docs/testing/TEST_TOPOLOGY.md` and
+`docs/testing/test_inventory.json`.
 
 ## Boundaries
 
@@ -39,19 +45,19 @@ For root or docs-root placement, read `docs/ROOT_SURFACE_LAW.md`,
 
 ## Validation
 
-Run the narrowest relevant checks. Common docs paths include:
+Run the narrowest relevant checks. Full lane command sequences live in
+`config/validation_lanes.json`; docs should point to lane IDs or focused owner
+checks instead of carrying copied release sequences. Common docs routes are the
+`source-fast` lane, the `generated` lane's relevant command group, and the
+focused checks named by the nearest docs or generated-surface `AGENTS.md`.
+
+For broad route, release, generated, or public-facing changes, use the
+`generated` or `release` lane named in
+[`COMMAND_AUTHORITY.md`](validation/COMMAND_AUTHORITY.md), plus the nearest
+owner `AGENTS.md` checks for the changed surface.
 
 ```bash
-python scripts/build_repo_doc_surface_manifest.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_repo.py
-```
-
-For broad route, release, generated, or public-facing changes, run:
-
-```bash
-python scripts/release_check.py
+python scripts/ci_gate.py --mode source-fast
 ```
 
 ## Closeout
