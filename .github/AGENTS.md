@@ -46,6 +46,10 @@ The branch, PR, CI, and merge route is owned by the root `AGENTS.md` GitHub
 landing workflow. This district keeps the GitHub-native files aligned with that
 route.
 
+`Repo Validation` is the growth-safe PR and moving-main gate. Release and
+nightly checks live in separate workflow files and lane modes; do not make the
+full release gate the default pull-request workflow.
+
 GitHub issue and pull request templates are human-first intake surfaces.
 `generated/github_review_template_manifest*.json` is derived review-template
 evidence only and must be rebuilt from the authored templates, not edited as
@@ -53,18 +57,18 @@ source truth.
 
 ## Validation
 
-Run the narrowest relevant checks first. Usual checks for this district:
+Run the narrowest relevant checks first. Full lane command sequences live in
+`config/validation_lanes.json`; GitHub workflow YAML should call
+`scripts/ci_gate.py --mode ...`, not duplicate lane meaning inline.
+
+Use the `source-fast` lane for ordinary workflow/template changes. For broad
+platform, contribution, generated, or release-facing changes, use the
+`generated` or `release` lane named in
+[`COMMAND_AUTHORITY.md`](../docs/validation/COMMAND_AUTHORITY.md), plus the
+nearest root or GitHub owner checks for the changed surface.
 
 ```bash
-python scripts/build_github_review_template_manifest.py
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-```
-
-For broad platform, contribution, generated, or release-facing changes, run:
-
-```bash
-python scripts/release_check.py
+python scripts/ci_gate.py --mode source-fast
 ```
 
 If a listed validator is not present in the checkout yet, report that

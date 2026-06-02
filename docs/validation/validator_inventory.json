@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "owner": "docs/validation/VALIDATOR_TOPOLOGY.md",
+  "command_authority": "config/validation_lanes.json",
+  "validator_modules": [
+    {
+      "path": "scripts/validate_repo.py",
+      "module_type": "adapter",
+      "owner": "compatibility CLI and import re-export surface",
+      "owns": [
+        "legacy validate_repo import compatibility",
+        "direct python scripts/validate_repo.py entrypoint"
+      ],
+      "does_not_own": [
+        "source rule semantics",
+        "generated projection parity semantics",
+        "lane command authority"
+      ]
+    },
+    {
+      "path": "scripts/validators/__init__.py",
+      "module_type": "adapter",
+      "owner": "validator package re-export surface",
+      "owns": [
+        "package-level compatibility imports"
+      ],
+      "does_not_own": [
+        "individual rule semantics",
+        "lane command authority"
+      ]
+    },
+    {
+      "path": "scripts/validators/common.py",
+      "module_type": "shared",
+      "owner": "shared validator models constants schemas and parsing helpers",
+      "owns": [
+        "validator dataclasses and shared parser helpers",
+        "repo-wide constants used by owner modules"
+      ],
+      "does_not_own": [
+        "source rule verdict orchestration",
+        "generated projection parity verdicts"
+      ]
+    },
+    {
+      "path": "scripts/validators/source_contracts.py",
+      "module_type": "source",
+      "owner": "authored technique and repo-source contract validators",
+      "owns": [
+        "technique bundle source contracts",
+        "frontmatter schema and kind-axis source alignment",
+        "TECHNIQUE_INDEX evidence and relation source parity",
+        "selection repo-doc route specs"
+      ],
+      "does_not_own": [
+        "generated artifact freshness",
+        "release lane stabilization",
+        "public hygiene scan ownership"
+      ]
+    },
+    {
+      "path": "scripts/validators/projection_parity.py",
+      "module_type": "adapter",
+      "owner": "projection compatibility re-export facade",
+      "owns": [
+        "legacy projection_parity import compatibility"
+      ],
+      "does_not_own": [
+        "projection rule implementation",
+        "source rule semantics"
+      ]
+    },
+    {
+      "path": "scripts/validators/projection_catalog.py",
+      "module_type": "projection",
+      "group_id": "catalog",
+      "owner": "catalog and reader projection parity validators",
+      "owns": [
+        "catalog capsule section checklist example evidence review repo-doc and kind reader parity"
+      ],
+      "does_not_own": [
+        "technique bundle meaning",
+        "frontmatter truth axes"
+      ],
+      "projection_only": true
+    },
+    {
+      "path": "scripts/validators/projection_decisions.py",
+      "module_type": "projection",
+      "group_id": "decisions",
+      "owner": "decision index projection parity validators",
+      "owns": [
+        "decision index rebuild parity"
+      ],
+      "does_not_own": [
+        "decision record meaning",
+        "decision id policy"
+      ],
+      "projection_only": true
+    },
+    {
+      "path": "scripts/validators/projection_agents_mesh.py",
+      "module_type": "projection",
+      "group_id": "agents_mesh",
+      "owner": "AGENTS mesh generated index parity validators",
+      "owns": [
+        "generated AGENTS mesh index rebuild parity"
+      ],
+      "does_not_own": [
+        "AGENTS card meaning",
+        "route-card doctrine"
+      ],
+      "projection_only": true
+    },
+    {
+      "path": "scripts/validators/projection_mechanics.py",
+      "module_type": "projection",
+      "group_id": "mechanics_projections",
+      "owner": "mechanic report projection parity validators",
+      "owns": [
+        "kind scout topology scout and tree projection report parity"
+      ],
+      "does_not_own": [
+        "mechanic source meaning",
+        "technique frontmatter truth axes"
+      ],
+      "projection_only": true
+    },
+    {
+      "path": "scripts/validators/projection_kag.py",
+      "module_type": "projection",
+      "group_id": "kag_export",
+      "owner": "KAG export projection parity validators",
+      "owns": [
+        "KAG export rebuild parity"
+      ],
+      "does_not_own": [
+        "KAG substrate meaning",
+        "runtime retrieval policy"
+      ],
+      "projection_only": true
+    },
+    {
+      "path": "scripts/validators/projection_intelligence.py",
+      "module_type": "projection",
+      "group_id": "technique_intelligence",
+      "owner": "Technique Intelligence projection parity validators",
+      "owns": [
+        "Technique Intelligence registry DAG and reader rebuild parity"
+      ],
+      "does_not_own": [
+        "agent execution workflow",
+        "technique activation semantics"
+      ],
+      "projection_only": true
+    },
+    {
+      "path": "scripts/validators/questbook.py",
+      "module_type": "source_projection",
+      "group_id": "questbook",
+      "owner": "questbook source topology and quest projection parity",
+      "owns": [
+        "quest markdown source contract",
+        "quest yaml source topology",
+        "quest catalog and dispatch projection parity"
+      ],
+      "does_not_own": [
+        "technique bundle meaning",
+        "agent runtime policy"
+      ]
+    },
+    {
+      "path": "scripts/validators/public_hygiene.py",
+      "module_type": "public_hygiene",
+      "group_id": "public_hygiene",
+      "owner": "public surface hygiene validators",
+      "owns": [
+        "public-safe surface scan"
+      ],
+      "does_not_own": [
+        "generated projection meaning",
+        "security policy enforcement"
+      ]
+    },
+    {
+      "path": "scripts/validators/orchestrator.py",
+      "module_type": "orchestrator",
+      "owner": "repo-wide validate_repo call order and status reporting",
+      "owns": [
+        "validate_repo command orchestration",
+        "validate_repo status output"
+      ],
+      "does_not_own": [
+        "individual rule semantics",
+        "generated projection meaning"
+      ]
+    }
+  ],
+  "lanes": [
+    {
+      "id": "source_fast",
+      "label": "source-fast",
+      "mode": "blocking",
+      "command_sequence": "source_fast",
+      "entrypoint": "python scripts/ci_gate.py --mode source-fast",
+      "owner": "AGENTS mesh and route-card source topology",
+      "inputs": [
+        "AGENTS.md",
+        "config/agents_mesh.json",
+        "nested AGENTS.md cards"
+      ],
+      "outputs": [
+        "source/topology validation result"
+      ],
+      "failure_route": "Fix the nearest AGENTS card, mesh config, or semantic route snippet."
+    },
+    {
+      "id": "generated",
+      "label": "generated",
+      "mode": "blocking",
+      "command_sequence": "generated_check",
+      "entrypoint": "python scripts/ci_gate.py --mode generated",
+      "owner": "generated/read-model projection parity",
+      "inputs": [
+        "authored technique bundles",
+        "docs contracts",
+        "mechanic source configs",
+        "GitHub templates"
+      ],
+      "outputs": [
+        "generated/*.json",
+        "docs/readers/**",
+        "mechanics/distillation/parts/technique-reform-ingress/reports/**"
+      ],
+      "failure_route": "Rebuild from the source builder or fix the authored source that caused drift."
+    },
+    {
+      "id": "mechanics_part_local",
+      "label": "mechanics/part-local",
+      "mode": "blocking",
+      "command_sequence": "mechanics_part_local",
+      "entrypoint": "python scripts/ci_gate.py --mode mechanics-part-local",
+      "owner": "mechanic-owned part-local candidate artifacts",
+      "inputs": [
+        "scripts/run_part_local_tests.py",
+        "mechanics/*/parts/*/config/*.json",
+        "mechanics/*/parts/*/tests/test*.py",
+        "mechanics/*/parts/*/scripts/*.py"
+      ],
+      "outputs": [
+        "part-local generated min indexes",
+        "pytest and validator results"
+      ],
+      "failure_route": "Fix the owning mechanic part, not root tests or release scripts."
+    },
+    {
+      "id": "release",
+      "label": "release",
+      "mode": "blocking",
+      "command_sequence": "release_check",
+      "entrypoint": "python scripts/release_check.py",
+      "owner": "release-prep stabilization",
+      "inputs": [
+        "all source, generated, Spark, mechanics part-local, and unittest release surfaces"
+      ],
+      "outputs": [
+        "stable release check result"
+      ],
+      "failure_route": "Fix the failing lane owner and rerun release_check until the worktree snapshot stabilizes."
+    },
+    {
+      "id": "nightly",
+      "label": "nightly",
+      "mode": "blocking",
+      "command_sequence": "nightly",
+      "entrypoint": "python scripts/ci_gate.py --mode nightly",
+      "owner": "moving-main drift sentinel",
+      "inputs": [
+        "source-fast lane",
+        "generated lane",
+        "mechanics/part-local lane"
+      ],
+      "outputs": [
+        "nightly drift result"
+      ],
+      "failure_route": "Treat as growth-surface drift; do not assume a frozen release artifact failure."
+    },
+    {
+      "id": "advisory",
+      "label": "advisory",
+      "mode": "non_blocking",
+      "entrypoint": "python scripts/ci_gate.py --mode advisory",
+      "owner": "route-only boundary inventory",
+      "inputs": [
+        "export/runtime boundary notes",
+        "trace/eval boundary notes",
+        "security/adversarial boundary notes"
+      ],
+      "outputs": [
+        "non-blocking boundary report"
+      ],
+      "failure_route": "Promote only through a decision that proves aoa-techniques owns the concrete check."
+    }
+  ]
+}

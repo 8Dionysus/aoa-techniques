@@ -633,7 +633,7 @@
             },
             {
               "order": 8,
-              "text": "`Repo Validation` remains aligned with `python scripts/release_check.py`.",
+              "text": "`Repo Validation` remains aligned with the `source-fast` CI lane; generated, release, and nightly checks are named separately when relevant.",
               "checked": false
             },
             {

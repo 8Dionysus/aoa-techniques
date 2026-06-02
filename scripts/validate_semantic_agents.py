@@ -33,7 +33,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'export',
             'TECHNIQUE.md',
             'generated surfaces',
-            'validate_repo.py',
+            'validation_lanes.json',
         ),
     ),
     AgentsDocSpec(
@@ -83,7 +83,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'repo-relative',
             'generated summaries',
             'validators',
-            'validate_repo.py',
+            'ci_gate.py',
         ),
     ),
     AgentsDocSpec(

@@ -33,6 +33,16 @@ OLD_FLAT_GROWTH_CYCLE_FILES = (
     "mechanics/growth-cycle/REVIEWED_CLOSEOUT_PROMOTION_READINESS_INCUBATION.md",
 )
 
+VALIDATE_REPO_OWNER_TESTS = (
+    "tests/test_validate_repo_compatibility_imports.py",
+    "tests/test_validate_repo_ci_release_authority.py",
+    "tests/test_validate_repo_source_contracts.py",
+    "tests/test_validate_repo_generated_drift.py",
+    "tests/test_validate_repo_agents_mesh.py",
+    "tests/test_validate_repo_public_hygiene.py",
+    "tests/test_validate_repo_questbook_intelligence.py",
+)
+
 
 class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
     def test_growth_cycle_active_surfaces_are_discoverable(self) -> None:
@@ -113,7 +123,7 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
             "quests/techniques/captured/AOA-TECH-Q-0005.yaml",
             "quests/techniques/captured/AOA-TECH-Q-0007.yaml",
             "scripts/validate_repo.py",
-            "tests/test_validate_repo.py",
+            *VALIDATE_REPO_OWNER_TESTS,
         ):
             content = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
             with self.subTest(relative_path=relative_path):
@@ -142,7 +152,7 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
             with self.subTest(expected_path=expected_path):
                 self.assertIn(expected_path, combined)
 
-        validator = (REPO_ROOT / "scripts" / "validate_repo.py").read_text(
+        validator = (REPO_ROOT / "scripts" / "validators" / "common.py").read_text(
             encoding="utf-8"
         )
         self.assertIn('"parts"', validator)

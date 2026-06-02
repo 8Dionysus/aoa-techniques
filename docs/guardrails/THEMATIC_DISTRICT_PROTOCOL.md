@@ -16,6 +16,7 @@ mechanic-local operating note.
 | `docs/review/` | active review, maturity, semantic-review, and caution contracts for technique canon interpretation |
 | `docs/selection/` | active selection, kind, handoff, and capsule guide contracts |
 | `docs/source-lift/` | authored KAG/source-lift contracts whose generated readers and JSON outputs live elsewhere |
+| `docs/validation/` | active validation lane topology, command authority, and validator inventory |
 | `docs/readers/` | generated Markdown reader companions whose authored contracts stay in a current docs district |
 | `legacy/` | repo-wide public-safe raw, archive, and migration receipt material after active distillation |
 | `mechanics/<slug>/` | mechanic-owned runbooks, reviews, parts, landing logs, provenance, and mechanic-local legacy |
@@ -120,6 +121,7 @@ explicit promotion path:
 
 ## Check Route
 
-Use [AGENTS](AGENTS.md) for the command lane. At minimum, docs-topology changes
-should keep [Current Surface Index](CURRENT_SURFACE_INDEX.md) aligned with flat
-docs files.
+Use [AGENTS](AGENTS.md) for local owner checks and
+[`config/validation_lanes.json`](../../config/validation_lanes.json) for full
+lane command authority. At minimum, docs-topology changes should keep
+[Current Surface Index](CURRENT_SURFACE_INDEX.md) aligned with flat docs files.

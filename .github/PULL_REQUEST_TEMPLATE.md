@@ -52,7 +52,7 @@
   adds or imports a technique.
 - [ ] Generated files were rebuilt from authored sources, or no rebuild was
   needed.
-- [ ] `Repo Validation` remains aligned with `python scripts/release_check.py`.
+- [ ] `Repo Validation` remains aligned with the `source-fast` CI lane; generated, release, and nightly checks are named separately when relevant.
 - [ ] No security-sensitive material is being disclosed publicly.
 - [ ] Remaining risk, skipped checks, generated parity, and owner-boundary
   follow-up are named.

@@ -39,6 +39,7 @@ Use named homes for everything else:
 | active review contracts | [review](review/) |
 | active selection, kind, handoff, and capsule contracts | [selection](selection/) |
 | active KAG/source-lift contracts | [source-lift](source-lift/) |
+| active validation lane topology and command authority | [validation](validation/) |
 | generated Markdown readers | [readers](readers/) |
 
 Flat docs files should guide a future change. If a file only explains how a
@@ -98,7 +99,7 @@ compact, route it to the owner surface that can carry the detail.
 | Public front door | [README](../README.md) stays compact and hands off to stronger docs; it does not duplicate validation commands, GitHub-native legal/governance tabs, generated readers, or mechanic runbooks. |
 | Authority and design | [CHARTER](../CHARTER.md), [DESIGN](../DESIGN.md), and [DESIGN.AGENTS](../DESIGN.AGENTS.md) stay root because they define boundary, system form, and agent-surface form. |
 | Corpus direction | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md), [ROADMAP](../ROADMAP.md), and [QUESTBOOK](../QUESTBOOK.md) stay root only while they remain compact route/status surfaces. |
-| Docs districts | [guardrails](guardrails/), [review](review/), [selection](selection/), [source-lift](source-lift/), and [readers](readers/) keep flat docs from turning into a maze. |
+| Docs districts | [guardrails](guardrails/), [review](review/), [selection](selection/), [source-lift](source-lift/), [validation](validation/), and [readers](readers/) keep flat docs from turning into a maze. |
 | Provenance | [legacy](../legacy/) is the repo-wide public-safe provenance district; active mechanic lineage stays mechanic-local. |
 | Mechanics artifacts | Reports, scout inputs, overlays, scripts, manifests, schemas, examples, and tests that serve one mechanic part live with that part. |
 | Root data | Empty root `data/` is retired until a concrete repo-wide data contract justifies it. |

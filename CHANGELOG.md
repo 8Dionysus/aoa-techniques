@@ -6,6 +6,37 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Changed
+
+- moved validation command authority into `config/validation_lanes.json`, added
+  `scripts/validation_lanes.py` and `scripts/ci_gate.py`, and changed GitHub
+  `Repo Validation` to run the `source-fast` lane instead of the full
+  `scripts/release_check.py` release gate on every PR
+- added a validation topology district with source-fast, generated,
+  mechanics/part-local, release, nightly, and advisory lane definitions scoped
+  to the technique-canon owner boundary
+- split GitHub release and nightly validation into separate pinned-action
+  workflows so pull requests do not run the full release-freeze gate
+- split `scripts/validate_repo.py` into `scripts/validators/` owner modules
+  while keeping the old CLI/import surface as a thin compatibility adapter
+- isolated generated/read-model checks into explicit projection validator
+  modules and generated lane groups for catalog, decisions, AGENTS mesh,
+  mechanics projections, KAG export, Technique Intelligence, questbook, and
+  public hygiene
+- added `docs/testing/TEST_TOPOLOGY.md`, `docs/testing/test_inventory.json`,
+  and topology tests so root, mechanic-level, part-local, and Spark agent-lane
+  test homes stay inventoried without becoming release command authority
+- changed the `mechanics/part-local` lane to enter through
+  `scripts/run_part_local_tests.py`, which discovers part-local pytest files
+  and their related builder `--check` / validator scripts from source homes
+- split the former `tests/test_validate_repo.py` monolith into owner-surface
+  tests for compatibility imports, CI/release authority, source contracts,
+  generated drift, AGENTS mesh, public hygiene, and questbook/intelligence
+- split the former Distillation mechanics topology monolith into phase, part,
+  and surface-owned suites with separate inventory failure routes
+- changed active docs and decision command guidance to name validation lane ids
+  and nearest owner `AGENTS.md` checks instead of copied release snippets
+
 ## [0.4.5] - 2026-05-18
 
 ### Summary

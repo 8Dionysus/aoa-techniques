@@ -16,25 +16,19 @@ how it was validated, and what is intentionally not included.
 
 1. Confirm the target release scope.
 2. Update [CHANGELOG](../CHANGELOG.md).
-3. Run the bounded release-prep gate:
+3. Run the bounded `release` lane. The authoritative lane definition lives in
+   [validation_lanes](../config/validation_lanes.json); the active entrypoint
+   and lane ids are recorded in
+   [Command Authority](validation/COMMAND_AUTHORITY.md). `release_check.py`
+   remains the worktree stabilizer, not a second command store.
 
-```bash
-python -m pip install -r requirements-dev.txt
-python scripts/release_check.py
-git status -sb
-```
+The `release` lane runs the repo builders, tests, nested-AGENTS validation, and
+repo validators through the lane manifest. If generated files materialize on
+the first pass, the release entrypoint reruns once and requires the second pass
+to leave the git-backed snapshot unchanged.
 
-`python scripts/release_check.py` runs the repo builders, tests, nested-AGENTS
-validation, and `python scripts/validate_repo.py`. If generated files materialize
-on the first pass, it reruns once and requires the second pass to leave the
-git-backed snapshot unchanged.
-
-For a read-only current-state pass before release prep, run:
-
-```bash
-python scripts/run_tests.py
-python scripts/validate_repo.py
-```
+For a read-only current-state pass before release prep, use the `source-fast`
+lane and the nearest `AGENTS.md` owner checks for the surface being changed.
 
 4. Confirm [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md) matches the current
    published catalog.
@@ -47,24 +41,24 @@ python scripts/validate_repo.py
 
 ## Generated surface checklist
 
-Use the family row that matches the change; the release gate runs these through
-the full sequence.
+Use the family row that matches the change; the `generated` and `release` lanes
+run the actual command sequences from `config/validation_lanes.json`.
 
-| Family | Builder or source | Surfaces to notice |
+| Family | Lane group or owner route | Surfaces to notice |
 |---|---|---|
-| Repo docs | `python scripts/build_repo_doc_surface_manifest.py` | `docs/START_HERE.md`, `generated/repo_doc_surface_manifest.json`, `generated/repo_doc_surface_manifest.min.json`, `docs/readers/repo/REPO_DOC_SURFACES.md` |
-| Catalog | `python scripts/build_catalog.py` | `TECHNIQUE_INDEX.md`, `generated/technique_catalog.min.json` |
-| Kind | `python scripts/build_kind_manifest.py` | `docs/selection/TECHNIQUE_KIND_GUIDE.md`, `docs/selection/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/readers/kind/TECHNIQUE_KINDS.md` |
-| Capsule | `python scripts/build_capsules.py` | `docs/selection/TECHNIQUE_CAPSULE_GUIDE.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, `docs/readers/runtime/TECHNIQUE_CAPSULES.md` |
-| Sections | `python scripts/build_section_manifest.py` | `docs/source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `generated/technique_section_manifest.json`, `docs/readers/source-lift/TECHNIQUE_SECTIONS.md` |
-| Checklists | `python scripts/build_checklist_manifest.py` | `docs/source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `generated/technique_checklist_manifest.json`, `docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md` |
-| Examples | `python scripts/build_example_manifest.py` | `docs/source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `generated/technique_example_manifest.json`, `docs/readers/source-lift/TECHNIQUE_EXAMPLES.md` |
-| Evidence notes | `python scripts/build_evidence_note_manifest.py` | `docs/source-lift/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`, `generated/technique_evidence_note_manifest.json`, `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md` |
-| KAG export | `python scripts/build_kag_export.py` | `docs/source-lift/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json` |
-| GitHub review templates | `python scripts/build_github_review_template_manifest.py` | template manifest surfaces under `generated/` |
-| Semantic review | `python scripts/build_semantic_review_manifest.py` | semantic review manifest surfaces under `generated/` |
-| Shadow review | `python scripts/build_shadow_review_manifest.py` | `generated/shadow_review_manifest.json`, `generated/shadow_review_manifest.min.json`, `docs/readers/review/SHADOW_PATTERNS.md` |
-| Promotion readiness | `python scripts/build_promotion_readiness.py` | promotion readiness generated outputs |
+| Repo docs | `generated` lane, `catalog` group | `docs/START_HERE.md`, `generated/repo_doc_surface_manifest.json`, `generated/repo_doc_surface_manifest.min.json`, `docs/readers/repo/REPO_DOC_SURFACES.md` |
+| Catalog | `generated` lane, `catalog` group | `TECHNIQUE_INDEX.md`, `generated/technique_catalog.min.json` |
+| Kind | `generated` lane, `catalog` group | `docs/selection/TECHNIQUE_KIND_GUIDE.md`, `docs/selection/TECHNIQUE_KIND_HANDOFF_PACK.md`, `generated/technique_kind_manifest.json`, `generated/technique_kind_manifest.min.json`, `docs/readers/kind/TECHNIQUE_KINDS.md` |
+| Capsule | `generated` lane, `catalog` group | `docs/selection/TECHNIQUE_CAPSULE_GUIDE.md`, `generated/technique_capsules.json`, `generated/technique_capsules.min.json`, `docs/readers/runtime/TECHNIQUE_CAPSULES.md` |
+| Sections | `generated` lane, `catalog` group | `docs/source-lift/TECHNIQUE_SECTION_LIFT_GUIDE.md`, `generated/technique_section_manifest.json`, `docs/readers/source-lift/TECHNIQUE_SECTIONS.md` |
+| Checklists | `generated` lane, `catalog` group | `docs/source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `generated/technique_checklist_manifest.json`, `docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md` |
+| Examples | `generated` lane, `catalog` group | `docs/source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `generated/technique_example_manifest.json`, `docs/readers/source-lift/TECHNIQUE_EXAMPLES.md` |
+| Evidence notes | `generated` lane, `catalog` group | `docs/source-lift/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`, `generated/technique_evidence_note_manifest.json`, `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md` |
+| KAG export | `generated` lane, `kag_export` group | `docs/source-lift/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json` |
+| GitHub review templates | `generated` lane, `catalog` group | template manifest surfaces under `generated/` |
+| Semantic review | `generated` lane, `catalog` group | semantic review manifest surfaces under `generated/` |
+| Shadow review | `generated` lane, `catalog` group | `generated/shadow_review_manifest.json`, `generated/shadow_review_manifest.min.json`, `docs/readers/review/SHADOW_PATTERNS.md` |
+| Promotion readiness | `generated` lane, `catalog` group | promotion readiness generated outputs |
 
 ## Release note shape
 

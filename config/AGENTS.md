@@ -14,7 +14,8 @@ meaning. Technique meaning belongs in `TECHNIQUE.md`, checks, examples, notes,
 and source-owned docs.
 
 Root config is for repo-wide contract inputs such as the current kind registry
-and the AGENTS mesh config. Scout-only Distillation inputs for
+the AGENTS mesh config, and validation lane command authority in
+`config/validation_lanes.json`. Scout-only Distillation inputs for
 technique-reform review live under
 `mechanics/distillation/parts/technique-reform-ingress/config/`.
 
@@ -39,13 +40,14 @@ For `config/agents_mesh.json`, also read
 When config changes generated surfaces, rebuild the affected catalogs and
 inspect the diff for meaning drift.
 
-Common checks:
+Full lane command sequences live in `config/validation_lanes.json`; this local
+card may name focused checks and lane entrypoints only. Common checks:
 
 ```bash
+python scripts/ci_gate.py --mode source-fast
 python scripts/validate_agents_mesh.py
 python scripts/build_agents_mesh_index.py --check
 python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
 ```
 
 ## Closeout

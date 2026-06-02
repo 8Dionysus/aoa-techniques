@@ -64,6 +64,8 @@
 ## release-support
 
 - [AOA-TECH-D-0021 Release Support Active Parts Split](../AOA-TECH-D-0021-release-support-active-parts-split.md) (`docs/decisions/AOA-TECH-D-0021-release-support-active-parts-split.md`)
+- [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+- [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 
 ## rpg
 

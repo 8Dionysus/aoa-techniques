@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "owner": "docs/RELEASING.md",
+  "command_authority": "config/validation_lanes.json",
+  "notes": [
+    "This manifest is the canonical storage surface for blocking validation lane command sequences.",
+    "scripts/validation_lanes.py is a loader/API for Python callers; workflow YAML and release_check.py must not duplicate full lane sequences."
+  ],
+  "lanes": {
+    "source_fast": {
+      "label": "source-fast",
+      "posture": "blocking",
+      "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
+      "command_sequence": "source_fast",
+      "purpose": "Growth-safe source/topology gate for AGENTS mesh and route-card shape.",
+      "does_not_own": [
+        "generated freshness",
+        "release stabilization",
+        "portable export/runtime behavior"
+      ]
+    },
+    "generated": {
+      "label": "generated",
+      "posture": "blocking",
+      "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
+      "command_sequence": "generated_check",
+      "drift_paths": "generated",
+      "purpose": "Projection parity groups for generated/read-model companions derived from authored source.",
+      "does_not_own": [
+        "technique source meaning",
+        "skill export/runtime contracts"
+      ],
+      "command_groups": "generated_check"
+    },
+    "mechanics_part_local": {
+      "label": "mechanics/part-local",
+      "posture": "blocking",
+      "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
+      "command_sequence": "mechanics_part_local",
+      "purpose": "Mechanic-owned part-local candidate registries, handoff packets, and pytest homes.",
+      "does_not_own": [
+        "root release packaging",
+        "sibling-repo runtime behavior"
+      ]
+    },
+    "release": {
+      "label": "release",
+      "posture": "blocking",
+      "owner_surface": "docs/RELEASING.md",
+      "command_sequence": "release_check",
+      "entrypoint": "scripts/release_check.py",
+      "purpose": "Frozen release-prep gate with worktree stabilization through the release entrypoint.",
+      "does_not_own": [
+        "ordinary PR growth gating",
+        "nightly latest-release comparison"
+      ]
+    },
+    "nightly": {
+      "label": "nightly",
+      "posture": "blocking",
+      "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
+      "command_sequence": "nightly",
+      "purpose": "Moving-main drift sentinel over source, generated, and mechanic part-local surfaces.",
+      "does_not_own": [
+        "release artifact freeze",
+        "sibling release identity"
+      ]
+    },
+    "advisory": {
+      "label": "advisory",
+      "posture": "non_blocking",
+      "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
+      "purpose": "Boundary inventory for export/runtime/eval/security surfaces that aoa-techniques routes but does not own as hard lanes.",
+      "boundaries": [
+        {
+          "surface": "export/runtime",
+          "posture": "route_only",
+          "owner_route": "aoa-skills or runtime-owning repositories",
+          "local_check": "Technique capsules and KAG export stay generated companions, not runtime policy."
+        },
+        {
+          "surface": "trace/eval",
+          "posture": "route_only",
+          "owner_route": "aoa-evals",
+          "local_check": "Technique examples and review guides can seed eval thinking but do not grade agent behavior here."
+        },
+        {
+          "surface": "security/adversarial",
+          "posture": "route_only",
+          "owner_route": "security-owning guardrails and sibling runtime layers",
+          "local_check": "Public hygiene and boundedness are checked locally; runtime security policy is not owned here."
+        }
+      ]
+    }
+  },
+  "drift_paths": {
+    "generated": [
+      "TECHNIQUE_INDEX.md",
+      "docs/decisions/indexes",
+      "docs/readers",
+      "docs/selection",
+      "docs/source-lift",
+      "generated",
+      "mechanics/distillation/parts/technique-reform-ingress/reports"
+    ]
+  },
+  "command_sequences": {
+    "source_fast": [
+      [
+        "python",
+        "scripts/validate_agents_md_shape.py"
+      ],
+      [
+        "python",
+        "scripts/validate_agents_mesh.py"
+      ],
+      [
+        "python",
+        "scripts/validate_nested_agents.py"
+      ],
+      [
+        "python",
+        "scripts/validate_semantic_agents.py"
+      ]
+    ],
+    "generated_check": [
+      [
+        "python",
+        "scripts/generate_decision_indexes.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/build_agents_mesh_index.py"
+      ],
+      [
+        "python",
+        "scripts/build_agents_mesh_index.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/validate_agents_mesh_index.py"
+      ],
+      [
+        "python",
+        "scripts/build_repo_doc_surface_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_catalog.py"
+      ],
+      [
+        "python",
+        "scripts/build_kind_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_capsules.py"
+      ],
+      [
+        "python",
+        "scripts/build_sections.py"
+      ],
+      [
+        "python",
+        "scripts/build_section_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_checklist_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_example_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_evidence_note_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_github_review_template_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_semantic_review_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_shadow_review_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_promotion_readiness.py"
+      ],
+      [
+        "python",
+        "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py"
+      ],
+      [
+        "python",
+        "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py"
+      ],
+      [
+        "python",
+        "scripts/build_kag_export.py"
+      ],
+      [
+        "python",
+        "scripts/build_technique_intelligence.py"
+      ],
+      [
+        "python",
+        "scripts/build_questbook_projection.py"
+      ],
+      [
+        "python",
+        "scripts/build_questbook_projection.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/validate_public_hygiene.py"
+      ]
+    ],
+    "mechanics_part_local": [
+      [
+        "python",
+        "scripts/run_part_local_tests.py"
+      ]
+    ],
+    "release_check": [
+      [
+        "python",
+        "scripts/build_repo_doc_surface_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/generate_decision_indexes.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/build_agents_mesh_index.py"
+      ],
+      [
+        "python",
+        "scripts/build_catalog.py"
+      ],
+      [
+        "python",
+        "scripts/build_kind_manifest.py"
+      ],
+      [
+        "python",
+        "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py"
+      ],
+      [
+        "python",
+        "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py"
+      ],
+      [
+        "python",
+        "scripts/build_capsules.py"
+      ],
+      [
+        "python",
+        "scripts/build_sections.py"
+      ],
+      [
+        "python",
+        "scripts/build_section_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_checklist_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_example_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_evidence_note_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_github_review_template_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_semantic_review_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_shadow_review_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_promotion_readiness.py"
+      ],
+      [
+        "python",
+        "scripts/build_kag_export.py"
+      ],
+      [
+        "python",
+        "scripts/build_technique_intelligence.py"
+      ],
+      [
+        "python",
+        "scripts/build_questbook_projection.py"
+      ],
+      [
+        "python",
+        "scripts/build_questbook_projection.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/validate_public_hygiene.py"
+      ],
+      [
+        "python",
+        "scripts/validate_agents_md_shape.py"
+      ],
+      [
+        "python",
+        "scripts/validate_agents_mesh.py"
+      ],
+      [
+        "python",
+        "scripts/build_agents_mesh_index.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/validate_agents_mesh_index.py"
+      ],
+      [
+        "python",
+        ".agents/spark/scripts/validate_spark_lane.py"
+      ],
+      [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".agents/spark/tests",
+        "-p",
+        "test*.py"
+      ],
+      [
+        "python",
+        "scripts/ci_gate.py",
+        "--mode",
+        "mechanics-part-local"
+      ],
+      [
+        "python",
+        "scripts/run_tests.py"
+      ],
+      [
+        "python",
+        "scripts/validate_nested_agents.py"
+      ],
+      [
+        "python",
+        "scripts/validate_repo.py"
+      ]
+    ],
+    "nightly": [
+      [
+        "python",
+        "scripts/ci_gate.py",
+        "--mode",
+        "source-fast"
+      ],
+      [
+        "python",
+        "scripts/ci_gate.py",
+        "--mode",
+        "generated"
+      ],
+      [
+        "python",
+        "scripts/ci_gate.py",
+        "--mode",
+        "mechanics-part-local"
+      ]
+    ],
+    "generated_decisions": [
+      [
+        "python",
+        "scripts/generate_decision_indexes.py",
+        "--check"
+      ]
+    ],
+    "generated_agents_mesh": [
+      [
+        "python",
+        "scripts/build_agents_mesh_index.py"
+      ],
+      [
+        "python",
+        "scripts/build_agents_mesh_index.py",
+        "--check"
+      ],
+      [
+        "python",
+        "scripts/validate_agents_mesh_index.py"
+      ]
+    ],
+    "generated_catalog": [
+      [
+        "python",
+        "scripts/build_repo_doc_surface_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_catalog.py"
+      ],
+      [
+        "python",
+        "scripts/build_kind_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_capsules.py"
+      ],
+      [
+        "python",
+        "scripts/build_sections.py"
+      ],
+      [
+        "python",
+        "scripts/build_section_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_checklist_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_example_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_evidence_note_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_github_review_template_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_semantic_review_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_shadow_review_manifest.py"
+      ],
+      [
+        "python",
+        "scripts/build_promotion_readiness.py"
+      ]
+    ],
+    "generated_mechanics_projections": [
+      [
+        "python",
+        "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py"
+      ],
+      [
+        "python",
+        "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py"
+      ]
+    ],
+    "generated_kag_export": [
+      [
+        "python",
+        "scripts/build_kag_export.py"
+      ]
+    ],
+    "generated_technique_intelligence": [
+      [
+        "python",
+        "scripts/build_technique_intelligence.py"
+      ]
+    ],
+    "generated_questbook": [
+      [
+        "python",
+        "scripts/build_questbook_projection.py"
+      ],
+      [
+        "python",
+        "scripts/build_questbook_projection.py",
+        "--check"
+      ]
+    ],
+    "generated_public_hygiene": [
+      [
+        "python",
+        "scripts/validate_public_hygiene.py"
+      ]
+    ]
+  },
+  "command_groups": {
+    "generated_check": [
+      {
+        "id": "decisions",
+        "label": "decisions",
+        "command_sequence": "generated_decisions",
+        "owner_module": "scripts/validators/projection_decisions.py"
+      },
+      {
+        "id": "agents_mesh",
+        "label": "AGENTS mesh",
+        "command_sequence": "generated_agents_mesh",
+        "owner_module": "scripts/validators/projection_agents_mesh.py"
+      },
+      {
+        "id": "catalog",
+        "label": "catalog/readers",
+        "command_sequence": "generated_catalog",
+        "owner_module": "scripts/validators/projection_catalog.py"
+      },
+      {
+        "id": "mechanics_projections",
+        "label": "mechanics projections",
+        "command_sequence": "generated_mechanics_projections",
+        "owner_module": "scripts/validators/projection_mechanics.py"
+      },
+      {
+        "id": "kag_export",
+        "label": "KAG export",
+        "command_sequence": "generated_kag_export",
+        "owner_module": "scripts/validators/projection_kag.py"
+      },
+      {
+        "id": "technique_intelligence",
+        "label": "Technique Intelligence",
+        "command_sequence": "generated_technique_intelligence",
+        "owner_module": "scripts/validators/projection_intelligence.py"
+      },
+      {
+        "id": "questbook",
+        "label": "questbook",
+        "command_sequence": "generated_questbook",
+        "owner_module": "scripts/validators/questbook.py"
+      },
+      {
+        "id": "public_hygiene",
+        "label": "public hygiene",
+        "command_sequence": "generated_public_hygiene",
+        "owner_module": "scripts/validators/public_hygiene.py"
+      }
+    ]
+  }
+}

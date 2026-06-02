@@ -39,6 +39,14 @@ For canonical IDs or index metadata, read `README.md`, `TEMPLATE.md`, and
 
 ## Validation
 
+Full lane command sequences live in `config/validation_lanes.json`; decision
+records may preserve command evidence, but active command authority stays in
+the lane manifest and entrypoints.
+New or revised decision records should name lane ids and the nearest owner
+`AGENTS.md` checks in active verification guidance. If an old command transcript
+must be preserved, label it as historical verification evidence rather than
+current command law.
+
 For decision ID, metadata, and generated lookup-index parity, run:
 
 ```bash
@@ -54,12 +62,10 @@ python scripts/build_agents_mesh_index.py --check
 python scripts/validate_agents_mesh_index.py
 ```
 
-For broad route, generated, or public-facing changes, run:
-
-```bash
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+For broad route, generated, release-facing, or public-facing changes, route
+through the `generated` or `release` lane named in
+[`COMMAND_AUTHORITY.md`](../validation/COMMAND_AUTHORITY.md), plus the nearest
+owner `AGENTS.md` focused checks for the changed surface.
 
 ## Closeout
 

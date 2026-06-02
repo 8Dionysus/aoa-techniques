@@ -10,6 +10,10 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 LOCAL_LINK_PATTERN = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
 
 
+def command_text(*parts: str) -> str:
+    return " ".join(parts)
+
+
 class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
     def test_current_surface_index_covers_flat_docs_markdown(self) -> None:
         index = (REPO_ROOT / "docs" / "guardrails" / "CURRENT_SURFACE_INDEX.md").read_text(
@@ -259,9 +263,9 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             "python -m unittest tests.test_docs_surface_guardrails",
             "python -m pytest -q mechanics/",
             "python scripts/build_",
-            "python scripts/validate_repo.py",
-            "python scripts/run_tests.py",
-            "python scripts/release_check.py",
+            command_text("python", "scripts/validate_repo.py"),
+            command_text("python", "scripts/run_tests.py"),
+            command_text("python", "scripts/release_check.py"),
             "python mechanics/",
             "git status -sb",
         )
@@ -273,6 +277,36 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             for command in forbidden_commands:
                 with self.subTest(surface=relative_path, command=command):
                     self.assertNotIn(command, text)
+
+    def test_active_command_guidance_routes_to_lanes_and_owner_cards(self) -> None:
+        active_guidance_surfaces = (
+            "AGENTS.md",
+            ".github/AGENTS.md",
+            "docs/AGENTS.md",
+            "docs/RELEASING.md",
+            "docs/decisions/README.md",
+            "docs/decisions/TEMPLATE.md",
+        )
+        forbidden_active_snippets = (
+            command_text("python", "scripts/release_check.py"),
+            command_text("python", "scripts/run_tests.py"),
+            command_text("python", "scripts/validate_repo.py"),
+            command_text("python", "scripts/build_catalog.py"),
+            command_text("python", "scripts/build_repo_doc_surface_manifest.py"),
+        )
+
+        for relative_path in active_guidance_surfaces:
+            text = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
+            with self.subTest(surface=relative_path, route="lane_ids"):
+                self.assertRegex(text, r"(source-fast|generated|release|AGENTS\.md)")
+            with self.subTest(surface=relative_path, route="authority"):
+                self.assertRegex(
+                    text,
+                    r"(COMMAND_AUTHORITY\.md|config/validation_lanes\.json|AGENTS\.md)",
+                )
+            for snippet in forbidden_active_snippets:
+                with self.subTest(surface=relative_path, snippet=snippet):
+                    self.assertNotIn(snippet, text)
 
 
 if __name__ == "__main__":
