@@ -116,6 +116,7 @@
 - [AOA-TECH-D-0064 Technique Intelligence Move Registry](../AOA-TECH-D-0064-technique-intelligence-move-registry.md) (`docs/decisions/AOA-TECH-D-0064-technique-intelligence-move-registry.md`)
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
+- [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
 
 ## AGENTS/mesh
 
@@ -166,9 +167,18 @@
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 
+## command authority
+
+- [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+
+## script topology
+
+- [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+
 ## source contract
 
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
+- [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
 
 ## validator topology
 

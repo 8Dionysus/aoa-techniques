@@ -45,6 +45,10 @@ The format is intentionally simple and human-first.
   remain as focused local checks
 - expanded the nightly workflow with a latest `v*` release reproduction job
   while keeping moving-main drift checks separate from release-freeze behavior
+- added script topology coverage with `docs/validation/SCRIPT_TOPOLOGY.md`,
+  `docs/validation/script_inventory.json`, and `tests/test_script_topology.py`
+  so every active `*/scripts/*` surface has an explicit owner, lane,
+  side-effect boundary, CI inclusion, and focused test route
 
 ## [0.4.5] - 2026-05-18
 

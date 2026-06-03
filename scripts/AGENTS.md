@@ -21,7 +21,9 @@ CLI/re-export adapter.
 
 Read root `AGENTS.md`, `docs/START_HERE.md`, the source surfaces consumed by
 the script, the generated surfaces it writes, and the tests or validators that
-cover it.
+cover it. Also read `docs/validation/SCRIPT_TOPOLOGY.md` and
+`docs/validation/script_inventory.json` before adding, moving, deleting, or
+changing the owner/lane/side-effect posture of a script.
 
 For agent mesh scripts, also read `DESIGN.AGENTS.md`,
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, and `config/agents_mesh.json`.
@@ -37,6 +39,8 @@ For agent mesh scripts, also read `DESIGN.AGENTS.md`,
 - When editing validators, prefer precise failures that name the file, field,
   and owner surface.
 - Do not weaken validators to make a bad corpus pass.
+- Do not leave a script without an inventory entry naming owner source, lane,
+  side effects, CI inclusion, and focused test target.
 
 ## Validation
 
@@ -45,7 +49,7 @@ Full lane command sequences live in `config/validation_lanes.json`;
 CI lane executor. Keep root entrypoints thin and verify with:
 
 ```bash
-python -m unittest tests.test_validator_module_topology
+python -m unittest tests.test_validator_module_topology tests.test_script_topology
 python scripts/ci_gate.py --mode source-fast
 python scripts/validate_source_contracts.py
 python scripts/validate_agents_md_shape.py

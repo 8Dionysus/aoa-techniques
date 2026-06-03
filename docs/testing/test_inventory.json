@@ -140,6 +140,15 @@
           "failure_route": "Fix docs/testing inventory, support helper, or runner/lane coverage before adding new tests."
         },
         {
+          "path": "tests/test_script_topology.py",
+          "family": "script-topology/authority",
+          "protects": "Script inventory completeness, lane inclusion, side-effect boundaries, safe import/CLI smoke, stale script references, part-local discovery, and tracked pycache hygiene.",
+          "owner_surface": "docs/validation/script_inventory.json",
+          "runtime_cost": "medium",
+          "focused_target": "tests/test_script_topology.py",
+          "failure_route": "Fix docs/validation/script_inventory.json, SCRIPT_TOPOLOGY.md, or the owning script route before adding or moving scripts."
+        },
+        {
           "path": "tests/test_validate_repo_compatibility_imports.py",
           "family": "compatibility/imports",
           "protects": "validate_repo compatibility imports and import behavior without optional PyYAML.",
