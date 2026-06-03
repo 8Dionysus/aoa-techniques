@@ -47,6 +47,7 @@ builder/validator coverage for mechanic part-local homes.
 | `public-hygiene` | Public-safe URL/path checks and public route-surface behavior. | `scripts/validators/public_hygiene.py`. |
 | `questbook/intelligence` | Questbook source/projection contracts and related schema examples. | `scripts/validators/questbook.py`. |
 | `test-topology/authority` | Test inventory, home classification, and runner/lane coverage. | `docs/testing/*`, `tests/support/topology_inventory.py`. |
+| `script-topology/authority` | Script inventory completeness, lane inclusion, side-effect boundaries, safe smoke checks, and stale script references. | `docs/validation/script_inventory.json`, `docs/validation/SCRIPT_TOPOLOGY.md`. |
 | `mechanics/package-topology` | One mechanic package's active homes, local cards, part map, and legacy stop-lines. | `mechanics/<slug>/`. |
 | `mechanics/shared` | Mechanics-wide package standards, request receipts, and cross-mechanic contracts. | `mechanics/`. |
 | `mechanics/tree-pilot` | Distillation tree-pilot migration evidence and current-path receipts. | `mechanics/distillation/` and moved technique bundles. |

@@ -18,6 +18,9 @@
   rule implementation lives in `scripts/validators/` owner modules.
 - Generated/read-model command groups live under `command_groups.generated_check`
   in the lane manifest and map to explicit projection validator modules.
+- `docs/validation/script_inventory.json` describes every active script's
+  owner, lane, side effects, and test target. It is inventory only, not a
+  place to store executable lane sequences.
 - GitHub workflow YAML calls lane entrypoints. It must not rebuild lane meaning
   inline.
 - `.github/workflows/repo-validation.yml` owns the PR and moving-main
@@ -70,3 +73,6 @@ When a lane fails:
    route itself moved.
 4. Update `docs/validation/validator_inventory.json` when owner, lane, mode, or
    failure route changes.
+5. Update `docs/validation/script_inventory.json` when a script is added,
+   moved, removed, or changes owner, lane, side-effect posture, CI inclusion,
+   or focused test target.

@@ -98,3 +98,10 @@ Machine-readable lane inventory lives in
 [`validator_inventory.json`](validator_inventory.json). It records lane owners,
 inputs, outputs, command sequence ids, modes, and failure routes. Update it
 with `config/validation_lanes.json` when command routing changes.
+
+The broader script-surface map lives in
+[`SCRIPT_TOPOLOGY.md`](SCRIPT_TOPOLOGY.md) and
+[`script_inventory.json`](script_inventory.json). That inventory covers every
+active file under `*/scripts/*`, including mechanic-local scripts, Spark lane
+scripts, exported skill companion helpers, and script-local `AGENTS.md` route
+cards. It is descriptive coverage, not command authority.
