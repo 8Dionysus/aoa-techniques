@@ -10,7 +10,7 @@ generated_indexes:
   - docs/decisions/indexes/by-technique-axis.md
   - docs/decisions/indexes/by-mechanic.md
   - docs/decisions/indexes/by-guard.md
-modeled_surfaces:
+modeled_surfaces: []
 fields:
   decision_id:
     required: true

@@ -428,8 +428,9 @@ def modeled_decision_lane_surfaces(
     contract: dict[str, object],
     issues: list[tuple[str, str]],
 ) -> set[str]:
-    modeled = contract.get("modeled_surfaces", [])
+    modeled = contract.get("modeled_surfaces")
     if modeled is None:
+        issues.append((INDEX_CONTRACT_PATH.as_posix(), "modeled_surfaces must be a list of repo-relative docs/decisions paths"))
         return set()
     if not isinstance(modeled, list) or not all(isinstance(item, str) for item in modeled):
         issues.append((INDEX_CONTRACT_PATH.as_posix(), "modeled_surfaces must be a list of repo-relative docs/decisions paths"))
