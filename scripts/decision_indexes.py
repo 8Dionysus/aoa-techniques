@@ -482,8 +482,41 @@ def validate_index_contract_payload(contract: dict[str, object]) -> list[tuple[s
     return issues
 
 
+def validate_decision_lane_surfaces(repo_root: Path) -> list[tuple[str, str]]:
+    decisions_root = repo_root / DECISIONS_DIR
+    if not decisions_root.is_dir():
+        return [(DECISIONS_DIR.as_posix(), "decision directory is missing")]
+
+    allowed_paths = {
+        (DECISIONS_DIR / "AGENTS.md").as_posix(),
+        (DECISIONS_DIR / "README.md").as_posix(),
+        (DECISIONS_DIR / "TEMPLATE.md").as_posix(),
+        INDEX_CONTRACT_PATH.as_posix(),
+        *(path.as_posix() for path in GENERATED_INDEX_PATHS),
+    }
+    issues: list[tuple[str, str]] = []
+    for path in sorted(decisions_root.rglob("*")):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(repo_root)
+        relative_text = relative.as_posix()
+        if relative_text in allowed_paths:
+            continue
+        decision_relative = path.relative_to(decisions_root)
+        if len(decision_relative.parts) == 1 and FULL_ID_FILENAME_RE.match(path.name):
+            continue
+        issues.append(
+            (
+                relative_text,
+                "unmodeled decision-lane surface; add it to the local decision surface contract or move it outside docs/decisions",
+            )
+        )
+    return issues
+
+
 def validate_decision_index_surfaces(repo_root: Path) -> list[tuple[str, str]]:
     records, issues = collect_decision_records(repo_root)
+    issues.extend(validate_decision_lane_surfaces(repo_root))
     contract, contract_issues = load_index_contract(repo_root)
     issues.extend(contract_issues)
     if contract is not None:
