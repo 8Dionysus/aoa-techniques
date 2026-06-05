@@ -36,6 +36,9 @@ For canonical IDs or index metadata, read `README.md`, `TEMPLATE.md`, and
 - Route mechanic-local truth to `mechanics/<slug>/`.
 - Route technique meaning to `techniques/**/TECHNIQUE.md`.
 - Route sibling-owner truth to the owning AoA repository.
+- Keep `modeled_surfaces` in `indexes/index_contract.yaml` as a top-level list
+  of normalized repo-relative paths under `docs/decisions/`; do not use it for
+  root non-record Markdown.
 
 ## Validation
 
