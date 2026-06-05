@@ -30,6 +30,7 @@ def main() -> int:
         return 0
 
     records, issues = decision_indexes.collect_decision_records(repo_root)
+    issues.extend(decision_indexes.validate_decision_lane_surfaces(repo_root))
     contract, contract_issues = decision_indexes.load_index_contract(repo_root)
     issues.extend(contract_issues)
     if contract is not None:
