@@ -434,13 +434,17 @@ def modeled_decision_lane_surfaces(
     if not isinstance(modeled, list) or not all(isinstance(item, str) for item in modeled):
         issues.append((INDEX_CONTRACT_PATH.as_posix(), "modeled_surfaces must be a list of repo-relative docs/decisions paths"))
         return set()
-    prefix = f"{DECISIONS_DIR.as_posix()}/"
     allowed: set[str] = set()
     for item in modeled:
-        if not item.startswith(prefix):
+        relative = Path(item)
+        if relative.is_absolute() or ".." in relative.parts:
+            issues.append((INDEX_CONTRACT_PATH.as_posix(), f"modeled_surfaces entry must be a normalized repo-relative path under {DECISIONS_DIR.as_posix()}: {item}"))
+            continue
+        try:
+            relative.relative_to(DECISIONS_DIR)
+        except ValueError:
             issues.append((INDEX_CONTRACT_PATH.as_posix(), f"modeled_surfaces entry must live under {DECISIONS_DIR.as_posix()}: {item}"))
             continue
-        relative = Path(item)
         if relative.parent == DECISIONS_DIR and relative.suffix == ".md" and not FULL_ID_FILENAME_RE.match(relative.name):
             issues.append((INDEX_CONTRACT_PATH.as_posix(), f"modeled_surfaces must not include root non-record Markdown: {item}"))
             continue
