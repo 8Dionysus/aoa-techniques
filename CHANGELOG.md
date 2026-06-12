@@ -49,6 +49,9 @@ The format is intentionally simple and human-first.
   `docs/validation/script_inventory.json`, and `tests/test_script_topology.py`
   so every active `*/scripts/*` surface has an explicit owner, lane,
   side-effect boundary, CI inclusion, and focused test route
+- added a root-level `evals/` skeleton port for technique-local eval pressure
+  while central verdict, scoring, regression, and proof doctrine stay owned by
+  `aoa-evals`
 
 ## [0.4.5] - 2026-05-18
 

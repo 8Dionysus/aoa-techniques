@@ -45,6 +45,7 @@ legacy receipt, mechanic route, or technique bundle named by the relevant file.
 | `docs/readers/runtime/` | generated runtime reader companion: `TECHNIQUE_CAPSULES.md` |
 | `legacy/` | repo-wide public-safe raw, archive, and migration receipts, including retired root guidance |
 | `mechanics/<slug>/` | mechanic-owned operating surfaces, reviews, provenance, and mechanic-local legacy |
+| `evals/` | technique-local eval pressure, intake, suites, and reports; central proof authority remains in `aoa-evals` |
 | `generated/` | reproducible generated JSON and compact machine-facing companions |
 | `techniques/**/` | authored technique bundle truth |
 

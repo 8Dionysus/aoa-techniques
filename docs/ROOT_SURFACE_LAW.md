@@ -55,7 +55,7 @@ evidence trail.
 | Public governance and legal | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [SECURITY](../SECURITY.md), [LICENSE](../LICENSE) | do not become technique doctrine catalogs |
 | Release history | [CHANGELOG](../CHANGELOG.md) | record release history, not future direction |
 | Agent lane | [AGENTS](../AGENTS.md), [.agents](../.agents/), [agents mesh config](../config/agents_mesh.json), [agents mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | route agents without replacing public docs or owner contracts |
-| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [examples](../examples/), [generated](../generated/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
+| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [evals](../evals/), [examples](../examples/), [generated](../generated/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
 | Development requirements | [.gitignore](../.gitignore), [requirements-dev.txt](../requirements-dev.txt) | stay technical and small |
 
 ## Surfaces That Should Not Live In Root
