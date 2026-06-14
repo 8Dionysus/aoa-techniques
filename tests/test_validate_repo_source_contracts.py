@@ -11,6 +11,30 @@ from validate_repo_fixtures import *
 
 
 class ValidateRepoSourceContractTests(unittest.TestCase):
+    def test_current_memo_agents_validation_route_is_portable(self) -> None:
+        validate_repo.validate_memo_agents_portable_validation_route(REPO_ROOT)
+
+    def test_memo_agents_validation_route_rejects_host_specific_default(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            repo_root = Path(temp_dir)
+            memo_dir = repo_root / "memo"
+            memo_dir.mkdir(parents=True)
+            (memo_dir / "AGENTS.md").write_text(
+                """# AGENTS.md
+
+## Validation
+
+```bash
+AOA_MEMO_ROOT="${AOA_MEMO_ROOT:-/srv/AbyssOS/aoa-memo}"
+python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo
+```
+""",
+                encoding="utf-8",
+            )
+
+            with self.assertRaises(validate_repo.ValidationError):
+                validate_repo.validate_memo_agents_portable_validation_route(repo_root)
+
     def test_expected_evidence_kind_maps_adverse_effects_review_filename(self) -> None:
         self.assertEqual(
             "adverse_effects_review",

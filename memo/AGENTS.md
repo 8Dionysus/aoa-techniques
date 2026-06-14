@@ -67,7 +67,7 @@ review.
 ## Validation
 
 ```bash
-AOA_MEMO_ROOT="${AOA_MEMO_ROOT:-/srv/AbyssOS/aoa-memo}"
+: "${AOA_MEMO_ROOT:?Set AOA_MEMO_ROOT to your local aoa-memo checkout}"
 python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo
 python "$AOA_MEMO_ROOT/scripts/memory/build_local_memo_port_index.py" --path memo --check
 ```
