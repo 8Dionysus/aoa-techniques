@@ -47,6 +47,33 @@ class ValidateRepoAgentsMeshTests(unittest.TestCase):
         self.assertIn("done-or-handoff", notebook_text)
         self.assertIn("registry-backed", notebook_text)
         self.assertIn("technique-refinement", notebook_text)
+
+        source_section = notebook_text.split(
+            "Local `aoa-techniques` surfaces that constrain the adaptation:",
+            maxsplit=1,
+        )[0]
+        local_section = notebook_text.split(
+            "Local `aoa-techniques` surfaces that constrain the adaptation:",
+            maxsplit=1,
+        )[1].split("## Center Pattern To Preserve", maxsplit=1)[0]
+        self.assertIn(
+            "docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md",
+            source_section,
+        )
+        self.assertIn(
+            "docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md",
+            source_section,
+        )
+        self.assertNotIn("AOA-TECH-D-0054", source_section)
+        self.assertNotIn("AOA-TECH-D-0057", source_section)
+        self.assertIn(
+            "docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md",
+            local_section,
+        )
+        self.assertIn(
+            "docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md",
+            local_section,
+        )
         self.assertIn("aoa_techniques_spark_lane_registry_v1", registry)
         self.assertIn("technique-audit", registry)
         self.assertIn("release-prep", registry)

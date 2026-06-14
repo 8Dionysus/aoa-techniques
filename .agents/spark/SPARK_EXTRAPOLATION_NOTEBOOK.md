@@ -22,8 +22,8 @@ Primary source in `Agents-of-Abyss`:
 - `.agents/spark/schemas/**`
 - `.agents/spark/scripts/validate_spark_lane.py`
 - `.agents/spark/tests/test_spark_lane.py`
-- `docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md`
-- `docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md`
+- `docs/decisions/AOA-CENTER-D-0024-spark-session-lane-contract.md`
+- `docs/decisions/AOA-CENTER-D-0027-codex-spark-agent-lane-home.md`
 
 Local `aoa-techniques` surfaces that constrain the adaptation:
 
@@ -35,6 +35,7 @@ Local `aoa-techniques` surfaces that constrain the adaptation:
 - `.agents/spark/SWARM.md`
 - `docs/ROOT_SURFACE_LAW.md`
 - `docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md`
+- `docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md`
 - `docs/TECHNIQUE_ATOM_CONTRACT.md`
 - `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 - `docs/TECHNIQUE_TREE_CONTRACT.md`
