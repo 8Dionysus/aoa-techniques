@@ -7,6 +7,7 @@ SOURCE_FAST_REQUIRED_SOURCE_FILES = (
     "DESIGN.md",
     "DESIGN.AGENTS.md",
     "TECHNIQUE_INDEX.md",
+    "memo/AGENTS.md",
     "docs/DOMAIN_MAP.md",
     "docs/TECHNIQUE_ATOM_CONTRACT.md",
     "docs/TECHNIQUE_TOPOLOGY_CONTRACT.md",
@@ -28,12 +29,38 @@ SOURCE_FAST_REQUIRED_SOURCE_FILES = (
     TECHNIQUE_TOPOLOGY_AXES_PATH,
     TECHNIQUE_KIND_OVERLAY_PATH,
 )
+MEMO_AGENTS_NAME = "memo/AGENTS.md"
+HOST_SPECIFIC_MEMO_ROOT = "/srv/AbyssOS/aoa-memo"
+MEMO_AGENTS_VALIDATION_COMMANDS = (
+    'python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo',
+    'python "$AOA_MEMO_ROOT/scripts/memory/build_local_memo_port_index.py" --path memo --check',
+)
 
 
 def validate_source_fast_required_files(repo_root: Path) -> None:
     for relative_path in SOURCE_FAST_REQUIRED_SOURCE_FILES:
         if not (repo_root / relative_path).is_file():
             fail(f"{repo_root}: missing source-fast source file '{relative_path}'")
+
+
+def validate_memo_agents_portable_validation_route(repo_root: Path) -> None:
+    memo_agents_path = repo_root / MEMO_AGENTS_NAME
+    if not memo_agents_path.is_file():
+        fail(f"{repo_root}: missing source-fast source file '{MEMO_AGENTS_NAME}'")
+    text = memo_agents_path.read_text(encoding="utf-8")
+    if HOST_SPECIFIC_MEMO_ROOT in text:
+        fail(
+            f"{MEMO_AGENTS_NAME}: memo validation route must not default AOA_MEMO_ROOT "
+            f"to host-specific {HOST_SPECIFIC_MEMO_ROOT}"
+        )
+    if "AOA_MEMO_ROOT:?" not in text:
+        fail(
+            f"{MEMO_AGENTS_NAME}: memo validation route must require an explicit "
+            "AOA_MEMO_ROOT instead of guessing a sibling checkout path"
+        )
+    for command in MEMO_AGENTS_VALIDATION_COMMANDS:
+        if command not in text:
+            fail(f"{MEMO_AGENTS_NAME}: memo validation route must include `{command}`")
 
 
 def validate_frontmatter_schema(
@@ -2311,6 +2338,7 @@ def validate_relations(records: list[TechniqueRecord]) -> None:
 
 def validate_technique_source_contracts(repo_root: Path) -> list[TechniqueRecord]:
     validate_source_fast_required_files(repo_root)
+    validate_memo_agents_portable_validation_route(repo_root)
     schema_store = load_schema_store(repo_root)
     validate_kind_axis_alignment(repo_root, schema_store)
     records = collect_techniques(repo_root, schema_store)
