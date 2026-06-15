@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 
@@ -72,13 +73,14 @@ class RecurrenceMechanicsTopologyTestCase(unittest.TestCase):
         )
         direct_section = receipts.split("## Non-ORQ Center Pressure", 1)[0]
         non_orq_section = receipts.split("## Non-ORQ Center Pressure", 1)[1]
+        normalized_non_orq_section = re.sub(r"\s+", " ", non_orq_section)
 
         self.assertNotIn("ORQ-RECURRENCE-TECHNIQUES", direct_section)
         self.assertIn("### [recurrence](recurrence/README.md)", non_orq_section)
         self.assertIn("Current status: `candidate-only`", non_orq_section)
         self.assertIn(
-            "no direct\n  `ORQ-RECURRENCE-TECHNIQUES-*` request",
-            non_orq_section,
+            "no direct `ORQ-RECURRENCE-TECHNIQUES-*` request",
+            normalized_non_orq_section,
         )
         self.assertIn("automatic technique promotion", non_orq_section)
 
