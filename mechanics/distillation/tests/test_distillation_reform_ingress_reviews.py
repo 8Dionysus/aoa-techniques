@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import Counter
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -65,6 +66,32 @@ class DistillationReformIngressReviewsTests(unittest.TestCase):
             expected[cells[0].strip("`")] = int(cells[1])
 
         self.assertEqual(expected, dict(observed))
+
+    def test_bundle_anatomy_rubric_defines_finding_tokens(self) -> None:
+        rubric = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "bundle-anatomy-rubric-hardening.md"
+        )
+        text = rubric.read_text(encoding="utf-8")
+        layer_tables = text.split("## Direct-Read Findings", maxsplit=1)[0]
+        defined_tokens = {
+            match.group(1)
+            for match in re.finditer(r"^\| `([^`]+)` \|", layer_tables, re.MULTILINE)
+        }
+        finding_tokens = {
+            token
+            for line in text.splitlines()
+            if line.startswith("Finding:")
+            for token in re.findall(r"`([^`]+)`", line)
+        }
+
+        self.assertTrue(finding_tokens)
+        self.assertEqual(set(), finding_tokens - defined_tokens)
 
     def test_technique_reform_ingress_is_bounded_before_schema_change(self) -> None:
             ingress = (
