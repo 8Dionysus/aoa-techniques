@@ -83,14 +83,31 @@ class DistillationReformIngressReviewsTests(unittest.TestCase):
             match.group(1)
             for match in re.finditer(r"^\| `([^`]+)` \|", layer_tables, re.MULTILINE)
         }
+        finding_blocks: list[str] = []
+        active_block: list[str] = []
+        for line in text.splitlines():
+            if line.startswith("Finding:"):
+                if active_block:
+                    finding_blocks.append("\n".join(active_block))
+                active_block = [line]
+                continue
+            if not active_block:
+                continue
+            if not line.strip() or line.startswith("#"):
+                finding_blocks.append("\n".join(active_block))
+                active_block = []
+                continue
+            active_block.append(line)
+        if active_block:
+            finding_blocks.append("\n".join(active_block))
         finding_tokens = {
             token
-            for line in text.splitlines()
-            if line.startswith("Finding:")
-            for token in re.findall(r"`([^`]+)`", line)
+            for block in finding_blocks
+            for token in re.findall(r"`([^`]+)`", block)
         }
 
         self.assertTrue(finding_tokens)
+        self.assertIn("promotion-evidence-hold", finding_tokens)
         self.assertEqual(set(), finding_tokens - defined_tokens)
 
     def test_technique_reform_ingress_is_bounded_before_schema_change(self) -> None:
