@@ -98,7 +98,7 @@ Keep one canonical owner for a cross-repo contract while still permitting nearby
 - local wrappers stay separate from the mirrored contract payload
 - this technique stays smaller than rollout sequencing, playbook composition, or runtime publication policy
 
-Relationship to adjacent techniques: unlike [AOA-T-0013](../single-source-rule-distribution/TECHNIQUE.md), this technique governs a cross-repo contract that still permits local mirrors rather than pure fan-out from one source inside one rule-distribution system. Unlike [AOA-T-0024](../upstream-mirroring-with-provenance/TECHNIQUE.md), the mirror here stays inside one federated ecosystem and must prove exact parity rather than mainly preserving external provenance. Unlike [AOA-T-0019](../frontmatter-metadata-spine/TECHNIQUE.md), the goal is not metadata routing in one corpus; it is split-brain prevention for one shared cross-repo contract.
+Relationship to adjacent techniques: unlike [AOA-T-0013](../../../instruction/instruction-surface/single-source-rule-distribution/TECHNIQUE.md), this technique governs a cross-repo contract that still permits local mirrors rather than pure fan-out from one source inside one rule-distribution system. Unlike [AOA-T-0024](../../../instruction/instruction-surface/upstream-mirroring-with-provenance/TECHNIQUE.md), the mirror here stays inside one federated ecosystem and must prove exact parity rather than mainly preserving external provenance. Unlike [AOA-T-0019](../../../knowledge-lift/kag-source-lift/frontmatter-metadata-spine/TECHNIQUE.md), the goal is not metadata routing in one corpus; it is split-brain prevention for one shared cross-repo contract.
 
 ## Risks
 
