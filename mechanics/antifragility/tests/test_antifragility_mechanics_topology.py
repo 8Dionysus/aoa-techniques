@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 
@@ -79,6 +80,7 @@ class AntifragilityMechanicsTopologyTestCase(unittest.TestCase):
         )
         direct_section = receipts.split("## Non-ORQ Center Pressure", 1)[0]
         non_orq_section = receipts.split("## Non-ORQ Center Pressure", 1)[1]
+        normalized_non_orq_section = re.sub(r"\s+", " ", non_orq_section)
 
         self.assertNotIn("ORQ-ANTIFRAGILITY-TECHNIQUES", direct_section)
         self.assertIn(
@@ -87,11 +89,14 @@ class AntifragilityMechanicsTopologyTestCase(unittest.TestCase):
         )
         self.assertIn("Current status: `candidate-only`", non_orq_section)
         self.assertIn(
-            "no\n  direct `ORQ-ANTIFRAGILITY-TECHNIQUES-*` request",
-            non_orq_section,
+            "no direct `ORQ-ANTIFRAGILITY-TECHNIQUES-*` request",
+            normalized_non_orq_section,
         )
         self.assertIn("one-score health", non_orq_section)
-        self.assertIn("automatic\n  technique promotion", non_orq_section)
+        self.assertIn(
+            "automatic technique promotion",
+            normalized_non_orq_section,
+        )
 
     def test_antifragility_reference_paths_point_to_active_part_home(self) -> None:
         old_path = "mechanics/antifragility/CHAOS_WAVE1_PROGRAM.md"
