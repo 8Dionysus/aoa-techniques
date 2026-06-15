@@ -159,7 +159,7 @@ class DiagnosisRepairTreePilotTestCase(unittest.TestCase):
             session_taxonomy,
         )
         self.assertIn(
-            "../../../agent-workflows/confirmation-gated-mutating-action/TECHNIQUE.md",
+            "../../../execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md",
             checkpoint_repair,
         )
 
