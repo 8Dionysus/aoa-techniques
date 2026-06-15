@@ -41,6 +41,37 @@ python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo
             validate_repo.expected_evidence_kind("notes/adverse-effects-review.md"),
         )
 
+    def test_kind_overlay_csv_status_must_match_yaml_overlay(self) -> None:
+        overlay_entries = {
+            "AOA-T-0046": {
+                "name": "repo-doc-surface-lift",
+                "domain": "docs",
+                "status": "canonical",
+                "kind": "lift",
+                "family": "kag-source-lift",
+            }
+        }
+        csv_entries = {
+            "AOA-T-0046": {
+                "id": "AOA-T-0046",
+                "name": "repo-doc-surface-lift",
+                "domain": "docs",
+                "status": "promoted",
+                "kind": "lift",
+                "family": "kag-source-lift",
+            }
+        }
+
+        with self.assertRaisesRegex(
+            validate_repo.ValidationError,
+            "AOA-T-0046 status must match YAML overlay",
+        ):
+            validate_repo.validate_kind_overlay_csv_parity(
+                overlay_entries,
+                csv_entries,
+                csv_path=Path("mechanics/distillation/parts/technique-reform-ingress/data/technique_kind_overlay.csv"),
+            )
+
     def test_parse_frontmatter_keeps_colon_scalars_as_strings(self) -> None:
         frontmatter = """owners:
   - 8Dionysus
