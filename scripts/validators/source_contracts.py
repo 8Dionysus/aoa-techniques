@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+
 from .common import *
 
 
@@ -28,6 +30,7 @@ SOURCE_FAST_REQUIRED_SOURCE_FILES = (
     TECHNIQUE_FAMILY_SCOUT_PATH,
     TECHNIQUE_TOPOLOGY_AXES_PATH,
     TECHNIQUE_KIND_OVERLAY_PATH,
+    TECHNIQUE_KIND_OVERLAY_CSV_PATH,
 )
 MEMO_AGENTS_NAME = "memo/AGENTS.md"
 HOST_SPECIFIC_MEMO_ROOT = "/srv/AbyssOS/aoa-memo"
@@ -174,6 +177,65 @@ def kind_overlay_entries_by_id(overlay: dict[str, Any], overlay_path: Path | str
     return entries_by_id
 
 
+def kind_overlay_csv_entries_by_id(csv_path: Path) -> dict[str, dict[str, str]]:
+    expected_fields = ["id", "name", "domain", "status", "kind", "family"]
+    try:
+        with csv_path.open(encoding="utf-8", newline="") as handle:
+            reader = csv.DictReader(handle)
+            if reader.fieldnames != expected_fields:
+                fail(f"{csv_path}: header must be {','.join(expected_fields)}")
+            entries_by_id: dict[str, dict[str, str]] = {}
+            for row_number, row in enumerate(reader, start=2):
+                if None in row:
+                    fail(f"{csv_path}:{row_number}: row has extra columns")
+                entry_id = str(row.get("id") or "")
+                if not entry_id:
+                    fail(f"{csv_path}:{row_number}: id must be a non-empty string")
+                if entry_id in entries_by_id:
+                    fail(f"{csv_path}:{row_number}: duplicate overlay id '{entry_id}'")
+                for field_name in ("name", "domain", "status", "kind"):
+                    if not str(row.get(field_name) or ""):
+                        fail(f"{csv_path}:{row_number}: {field_name} must be a non-empty string")
+                entries_by_id[entry_id] = {field: str(row.get(field) or "") for field in expected_fields}
+    except FileNotFoundError as exc:
+        raise ValidationError(f"{csv_path}: missing kind overlay CSV") from exc
+    return entries_by_id
+
+
+def validate_kind_overlay_csv_parity(
+    overlay_entries: dict[str, dict[str, Any]],
+    csv_entries: dict[str, dict[str, str]],
+    *,
+    csv_path: Path,
+) -> None:
+    if set(csv_entries) != set(overlay_entries):
+        missing = sorted(set(overlay_entries) - set(csv_entries))
+        extra = sorted(set(csv_entries) - set(overlay_entries))
+        detail_parts: list[str] = []
+        if missing:
+            detail_parts.append(f"missing {missing}")
+        if extra:
+            detail_parts.append(f"extra {extra}")
+        fail(f"{csv_path}: rows must cover the YAML overlay exactly once ({'; '.join(detail_parts)})")
+
+    for technique_id, overlay_entry in overlay_entries.items():
+        csv_entry = csv_entries[technique_id]
+        for field_name in ("name", "domain", "status", "kind"):
+            expected = str(overlay_entry.get(field_name) or "")
+            actual = csv_entry[field_name]
+            if actual != expected:
+                fail(
+                    f"{csv_path}: {technique_id} {field_name} must match YAML overlay "
+                    f"({expected}), got {actual}"
+                )
+        expected_family = str(overlay_entry.get("family") or "")
+        if csv_entry["family"] != expected_family:
+            fail(
+                f"{csv_path}: {technique_id} family must match YAML overlay "
+                f"({expected_family}), got {csv_entry['family']}"
+            )
+
+
 def validate_family_scout_alignment(repo_root: Path) -> None:
     scout_path = repo_root / TECHNIQUE_FAMILY_SCOUT_PATH
     scout = load_family_scout(repo_root)
@@ -259,6 +321,7 @@ def validate_topology_axes_registry(repo_root: Path) -> None:
 
 def validate_kind_overlay(repo_root: Path, records: list[TechniqueRecord]) -> None:
     overlay_path = repo_root / TECHNIQUE_KIND_OVERLAY_PATH
+    overlay_csv_path = repo_root / TECHNIQUE_KIND_OVERLAY_CSV_PATH
     overlay = load_kind_overlay(repo_root)
     if overlay.get("schema_version") != 1:
         fail(f"{overlay_path}: schema_version must be 1")
@@ -270,6 +333,11 @@ def validate_kind_overlay(repo_root: Path, records: list[TechniqueRecord]) -> No
     family_scout_path = repo_root / TECHNIQUE_FAMILY_SCOUT_PATH
     family_entries = family_scout_entries_by_id(load_family_scout(repo_root), family_scout_path)
     overlay_entries = kind_overlay_entries_by_id(overlay, overlay_path)
+    validate_kind_overlay_csv_parity(
+        overlay_entries,
+        kind_overlay_csv_entries_by_id(overlay_csv_path),
+        csv_path=overlay_csv_path,
+    )
     records_by_id = {record.id: record for record in records}
 
     if set(overlay_entries) != set(records_by_id):
