@@ -13,6 +13,22 @@ from distillation_topology_fixtures import *  # noqa: F403
 
 
 class DistillationReformIngressReviewsTests(unittest.TestCase):
+    def test_reform_context_excludes_individual_review_packets(self) -> None:
+        review_root = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+        )
+        source_paths = set(distillation_reform_context_paths())
+        individual_review_packets = set(review_root.glob("*.md")) - {review_root / "README.md"}
+
+        self.assertIn(review_root / "README.md", source_paths)
+        self.assertTrue(individual_review_packets)
+        self.assertTrue(individual_review_packets.isdisjoint(source_paths))
+
     def test_technique_reform_ingress_is_bounded_before_schema_change(self) -> None:
             ingress = (
                 REPO_ROOT

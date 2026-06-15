@@ -139,7 +139,7 @@ class TestTopologyAuthorityTests(unittest.TestCase):
                 self.assertIn("mechanics/distillation", entry["owner_surface"])
                 self.assertIn("Fix ", entry["failure_route"])
                 test_count += text.count("    def test_")
-        self.assertEqual(115, test_count)
+        self.assertEqual(116, test_count)
 
     def test_run_tests_covers_root_and_mechanic_level_homes(self) -> None:
         entries = topology_inventory.normalized_inventory_entries()

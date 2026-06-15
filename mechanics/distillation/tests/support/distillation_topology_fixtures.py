@@ -200,9 +200,11 @@ class ReformContext(str):
         )
 
 
-@lru_cache(maxsize=1)
-def read_distillation_reform_context() -> ReformContext:
-    """Read the active Distillation contour plus its owning reform evidence."""
+def _read_reform_context(paths: tuple[Path, ...]) -> ReformContext:
+    return ReformContext("\n\n".join(path.read_text(encoding="utf-8") for path in paths))
+
+
+def distillation_reform_context_paths() -> tuple[Path, ...]:
     reform_root = (
         REPO_ROOT
         / "mechanics"
@@ -210,19 +212,21 @@ def read_distillation_reform_context() -> ReformContext:
         / "parts"
         / "technique-reform-ingress"
     )
-    source_paths = [
+    return (
         REPO_ROOT / "mechanics" / "distillation" / "ROADMAP.md",
         REPO_ROOT / "mechanics" / "distillation" / "LANDING_LOG.md",
         reform_root / "README.md",
         reform_root / "reviews" / "README.md",
-        *sorted((reform_root / "reviews").glob("*.md")),
-    ]
-    return ReformContext("\n\n".join(path.read_text(encoding="utf-8") for path in source_paths))
+    )
 
 
 @lru_cache(maxsize=1)
-def read_tree_migration_context() -> ReformContext:
-    """Read current tree law plus historical migration evidence."""
+def read_distillation_reform_context() -> ReformContext:
+    """Read the active Distillation contour without individual review packets."""
+    return _read_reform_context(distillation_reform_context_paths())
+
+
+def tree_migration_context_paths() -> tuple[Path, ...]:
     reform_root = (
         REPO_ROOT
         / "mechanics"
@@ -231,12 +235,17 @@ def read_tree_migration_context() -> ReformContext:
         / "technique-reform-ingress"
     )
     receipt_root = REPO_ROOT / "legacy" / "receipts"
-    source_paths = [
+    return (
         REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md",
         TREE_MIGRATION_BREADCRUMB_ROADMAP,
         reform_root / "README.md",
         reform_root / "reviews" / "README.md",
         *sorted((reform_root / "reviews").glob("*.md")),
         *sorted(receipt_root.glob("*-tree-pilot.md")),
-    ]
-    return ReformContext("\n\n".join(path.read_text(encoding="utf-8") for path in source_paths))
+    )
+
+
+@lru_cache(maxsize=1)
+def read_tree_migration_context() -> ReformContext:
+    """Read current tree law plus historical migration evidence."""
+    return _read_reform_context(tree_migration_context_paths())
