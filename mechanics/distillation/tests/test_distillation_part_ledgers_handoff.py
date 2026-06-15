@@ -299,6 +299,7 @@ class DistillationPartLedgersHandoffTests(unittest.TestCase):
                     if "bundle-reviews" in gate_path.parts:
                         self.assertIn("Verdict", text)
                         self.assertIn("ready for one-bundle draft", text)
+                        self.assertRegex(text, r"draft kind: `[^`]+`")
                         if gate_path.name == "request-evidence-bundle-readiness-review.md":
                             self.assertIn("draft kind: `guardrail`", text)
                         if gate_path.name == "offer-evidence-reference-bundle-readiness-review.md":
