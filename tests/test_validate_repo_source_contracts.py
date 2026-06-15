@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
@@ -126,6 +127,23 @@ relations:
                     technique_dir,
                     technique_dir / "TECHNIQUE.md",
                 )
+
+    def test_owner_truth_closeout_relative_technique_links_resolve(self) -> None:
+        closeout_root = REPO_ROOT / "techniques" / "proof" / "owner-truth-closeout"
+        broken_links: list[tuple[str, str]] = []
+
+        for technique_path in sorted(closeout_root.glob("*/TECHNIQUE.md")):
+            text = technique_path.read_text(encoding="utf-8")
+            for target in re.findall(r"\]\((\.\./[^)#]+)\)", text):
+                if not (technique_path.parent / target).resolve().exists():
+                    broken_links.append(
+                        (
+                            str(technique_path.relative_to(REPO_ROOT)),
+                            target,
+                        )
+                    )
+
+        self.assertEqual([], broken_links)
 
     def test_expected_parent_domain_accepts_legacy_domain_layout(self) -> None:
         with TemporaryDirectory() as temp_dir:
