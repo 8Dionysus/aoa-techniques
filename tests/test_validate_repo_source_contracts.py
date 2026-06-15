@@ -128,11 +128,10 @@ relations:
                     technique_dir / "TECHNIQUE.md",
                 )
 
-    def test_owner_truth_closeout_relative_technique_links_resolve(self) -> None:
-        closeout_root = REPO_ROOT / "techniques" / "proof" / "owner-truth-closeout"
+    def test_technique_relative_links_resolve(self) -> None:
         broken_links: list[tuple[str, str]] = []
 
-        for technique_path in sorted(closeout_root.glob("*/TECHNIQUE.md")):
+        for technique_path in sorted((REPO_ROOT / "techniques").glob("*/*/*/TECHNIQUE.md")):
             text = technique_path.read_text(encoding="utf-8")
             for target in re.findall(r"\]\((\.\./[^)#]+)\)", text):
                 if not (technique_path.parent / target).resolve().exists():
