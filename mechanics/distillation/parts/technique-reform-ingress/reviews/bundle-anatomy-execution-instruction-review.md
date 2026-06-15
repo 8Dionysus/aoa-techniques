@@ -99,8 +99,8 @@ owners.
 | `anatomy-pass` | 33 |
 | `old-template-watch` | 33 |
 | `owner-boundary-watch` | 21 |
-| `promotion-evidence-hold` | 24 |
-| `portability-watch` | 4 |
+| `promotion-evidence-hold` | 22 |
+| `portability-watch` | 3 |
 | `no-repair` | 33 |
 
 ## Findings

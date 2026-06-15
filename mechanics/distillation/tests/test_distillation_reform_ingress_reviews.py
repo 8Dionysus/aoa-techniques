@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 import sys
 import unittest
 from pathlib import Path
@@ -28,6 +29,42 @@ class DistillationReformIngressReviewsTests(unittest.TestCase):
         self.assertIn(review_root / "README.md", source_paths)
         self.assertTrue(individual_review_packets)
         self.assertTrue(individual_review_packets.isdisjoint(source_paths))
+
+    def test_bundle_anatomy_execution_instruction_label_counts_match_rows(self) -> None:
+        review = (
+            REPO_ROOT
+            / "mechanics"
+            / "distillation"
+            / "parts"
+            / "technique-reform-ingress"
+            / "reviews"
+            / "bundle-anatomy-execution-instruction-review.md"
+        )
+        text = review.read_text(encoding="utf-8")
+        rows_section = text.split("## Bundle Rows", maxsplit=1)[1].split(
+            "## Wave A Label Counts", maxsplit=1
+        )[0]
+        counts_section = text.split("## Wave A Label Counts", maxsplit=1)[1].split(
+            "## Findings", maxsplit=1
+        )[0]
+
+        observed: Counter[str] = Counter()
+        for line in rows_section.splitlines():
+            if not line.startswith("| `AOA-T-"):
+                continue
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            for label in cells[2].split(","):
+                observed[label.strip().strip("`")] += 1
+            observed[cells[3].strip("`")] += 1
+
+        expected: dict[str, int] = {}
+        for line in counts_section.splitlines():
+            if not line.startswith("| `"):
+                continue
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            expected[cells[0].strip("`")] = int(cells[1])
+
+        self.assertEqual(expected, dict(observed))
 
     def test_technique_reform_ingress_is_bounded_before_schema_change(self) -> None:
             ingress = (
