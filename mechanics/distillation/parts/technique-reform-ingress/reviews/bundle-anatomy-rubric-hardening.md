@@ -60,6 +60,7 @@ Use these after direct reading authored bundle meaning and support surfaces.
 | `small-agent-gap` | selected technique would leave a small model unsure about action, stop line, or output | repair only after bundle-specific evidence |
 | `portability-watch` | technique is portable, but one origin-specific boundary must stay visible | caution label, not failure |
 | `owner-boundary-watch` | sibling-owner pressure is real but currently held outside the atom | do not route away unless the atom collapses |
+| `promotion-evidence-hold` | bundle anatomy is healthy, but canonical/promotion readiness still needs stronger adoption, owner, or proof evidence | not an anatomy failure or repair action |
 | `capsule-gap` | generated capsule or source summary fails to carry the executable center | inspect source vs builder before repair |
 | `atomicity-risk` | more than one independent move competes for the center | split or narrow only after direct review |
 | `route-away-risk` | object is likely a skill, eval, routing object, playbook, role, memory/KAG object, or runtime object | owner route note before moving content |
