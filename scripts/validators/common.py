@@ -228,6 +228,46 @@ KAG_EXPORT_NON_IDENTITY_BOUNDARY = (
     "Derived export capsule for KAG consumers; authored technique meaning "
     "remains in aoa-techniques markdown."
 )
+KAG_EXPORT_ARTIFACT_IDENTITY: dict[str, Any] = {
+    "artifact_class": "source_owned_kag_export_capsule",
+    "surface_state": "public_generated_source_lift_export",
+    "owner_repo": "aoa-techniques",
+    "authority_ref": (
+        "techniques/instruction/capability-boundary/"
+        "multi-source-primary-input-provenance/TECHNIQUE.md"
+    ),
+    "producer": (
+        "scripts/build_kag_export.py via scripts/validators/projection_kag.py "
+        "from source-authored technique bundles"
+    ),
+    "consumer_expectation": (
+        "Verify owner_repo, kind, object_id, entry_surface, source_inputs, "
+        "direct_relations, non_identity_boundary, artifact_identity, "
+        "build_kag_export parity, and generated/source-fast validation before "
+        "treating this as a KAG donor orientation."
+    ),
+    "privacy_boundary": (
+        "Public technique metadata and source refs only; no private project "
+        "residue, hidden transcripts, source payload bodies, secrets, or "
+        "machine-local runtime state."
+    ),
+    "content_identity": (
+        "generated/kag_export.json and generated/kag_export.min.json rebuilt "
+        "from source-owned technique surfaces and compared by validate_repo."
+    ),
+    "abi_epoch": "aoa_techniques_kag_export_v1",
+    "contract_version": (
+        "scripts/validators/projection_kag.py@"
+        "aoa_techniques_kag_export_v1#artifact_identity"
+    ),
+    "trust_layer": ["abi_contract_signature", "w3c_prov_lineage"],
+    "verification": [
+        "python scripts/build_kag_export.py",
+        "python scripts/validate_repo.py",
+        "python scripts/ci_gate.py --mode generated",
+    ],
+    "action": "ADD_CONSUMER_EXPECTATION",
+}
 SELECTION_REVIEW_DOCS = {
     "agent_workflows_core": f"{SEMANTIC_REVIEW_PACKET_DIR}/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md",
     "published_summary": f"{SEMANTIC_REVIEW_PACKET_DIR}/PUBLISHED_SUMMARY_SEMANTIC_REVIEW.md",

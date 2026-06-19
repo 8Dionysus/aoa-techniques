@@ -73,6 +73,7 @@ def build_kag_export_payloads(
         "direct_relations": direct_relations,
         "provenance_note": KAG_EXPORT_PROVENANCE_NOTE,
         "non_identity_boundary": KAG_EXPORT_NON_IDENTITY_BOUNDARY,
+        "artifact_identity": KAG_EXPORT_ARTIFACT_IDENTITY,
     }
     return payload, payload
 
