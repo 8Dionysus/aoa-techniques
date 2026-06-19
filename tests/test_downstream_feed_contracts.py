@@ -6,6 +6,8 @@ from pathlib import Path, PurePosixPath
 
 from jsonschema import Draft202012Validator
 
+from scripts import validate_repo
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GENERATED_DIR = REPO_ROOT / "generated"
@@ -32,6 +34,8 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             "generated/technique_sections.full.json",
             "generated/repo_doc_surface_manifest.min.json",
             "generated/technique_feat_cards.min.example.json",
+            "generated/kag_export.json",
+            "generated/kag_export.min.json",
             "schemas/technique_feat_catalog.schema.json",
         ):
             with self.subTest(path=relative_path):
@@ -105,6 +109,25 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         self.assertTrue(
             all(entry["readiness_passed"] == (len(entry["blockers"]) == 0) for entry in readiness["techniques"])
         )
+
+    def test_kag_export_carries_artifact_identity_contract(self) -> None:
+        full = load_json("generated/kag_export.json")
+        compact = load_json("generated/kag_export.min.json")
+
+        self.assertEqual(full, compact)
+        self.assertEqual(full["artifact_identity"], validate_repo.KAG_EXPORT_ARTIFACT_IDENTITY)
+
+        identity = full["artifact_identity"]
+        self.assertEqual(identity["artifact_class"], "source_owned_kag_export_capsule")
+        self.assertEqual(identity["owner_repo"], "aoa-techniques")
+        self.assertEqual(
+            identity["authority_ref"],
+            "techniques/instruction/capability-boundary/"
+            "multi-source-primary-input-provenance/TECHNIQUE.md",
+        )
+        self.assertEqual(identity["trust_layer"], ["abi_contract_signature", "w3c_prov_lineage"])
+        self.assertIn("machine-local runtime state", identity["privacy_boundary"])
+        self.assertIn("generated/kag_export.min.json", identity["content_identity"])
 
     def test_repo_doc_surface_manifest_is_router_safe(self) -> None:
         manifest = load_json("generated/repo_doc_surface_manifest.min.json")
