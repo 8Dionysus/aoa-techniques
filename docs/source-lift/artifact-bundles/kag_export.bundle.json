@@ -68,8 +68,11 @@
   },
   "consumer_contract": {
     "stable_interface": "python scripts/validate_abyss_machine_kag_export_bundle.py --json and abyss-machine artifacts trust-gate --artifact-class source_owned_kag_export_capsule --consumer-intent agent --json",
-    "consumer_expectation": "KAG-adjacent consumers select a source_owned_kag_export_capsule bundle from the registry latest read-model only after ABI verification, SLSA/in-toto generation provenance, materialized subject-store verification, build_kag_export parity, validate_repo, and source-lift boundary checks pass; the capsule remains source-owned handoff material and does not define KAG substrate behavior.",
-    "registry_required": true
+    "consumer_expectation": "KAG-adjacent consumers select a source_owned_kag_export_capsule bundle from the registry latest read-model only after ABI verification, SLSA/in-toto generation provenance, durable evidence promotion, materialized subject-store verification, source/trust-root matching, build_kag_export parity, validate_repo, and source-lift boundary checks pass; the capsule remains source-owned handoff material and does not define KAG substrate behavior.",
+    "registry_required": true,
+    "subject_store_required": true,
+    "admission_gate": "fail_closed_consumer_admission",
+    "consumer_verdict": "allow_or_deny_required_before_use"
   },
   "consumer_command": [
     "abyss-machine artifacts build-sidecars --manifest docs/source-lift/artifact-bundles/kag_export.bundle.json --bundle-dir BUNDLE_DIR",
@@ -77,7 +80,7 @@
     "abyss-machine artifacts verify BUNDLE_DIR",
     "abyss-machine artifacts release-check BUNDLE_DIR",
     "abyss-machine artifacts evidence-promote BUNDLE_DIR --registry-dir REGISTRY_DIR --lifecycle-state release-ready --consumer-ref aoa-techniques:kag-export-capsule --evidence-ref BUNDLE_DIR/artifact.verify.json --source-repo aoa-techniques --source-ref docs/source-lift/artifact-bundles/kag_export.bundle.json --producer aoa-techniques-kag-export-generator --trust-root-mode host_managed --json",
-    "abyss-machine artifacts materialize-subjects BUNDLE_DIR --registry-dir REGISTRY_DIR --manifest docs/source-lift/artifact-bundles/kag_export.bundle.json --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
+    "abyss-machine artifacts materialize-subjects BUNDLE_DIR --registry-dir REGISTRY_DIR --store-root SUBJECT_STORE_ROOT --manifest docs/source-lift/artifact-bundles/kag_export.bundle.json --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
     "abyss-machine artifacts trust-gate --registry-dir REGISTRY_DIR --artifact-class source_owned_kag_export_capsule --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
     "abyss-machine artifacts registry-latest --registry-dir REGISTRY_DIR --artifact-class source_owned_kag_export_capsule --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
     "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
