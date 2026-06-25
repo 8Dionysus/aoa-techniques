@@ -8,6 +8,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- tightened the OS Abyss KAG export artifact envelope so the manifest, validator,
+  and downstream contract test require durable evidence promotion,
+  materialized subject-store admission, source/trust-root matching, and
+  fail-closed allow/deny consumer verdicts before agent consumption
 - moved validation command authority into `config/validation_lanes.json`, added
   `scripts/validation_lanes.py` and `scripts/ci_gate.py`, and changed GitHub
   `Repo Validation` to run the `source-fast` lane instead of the full

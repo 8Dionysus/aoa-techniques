@@ -166,15 +166,24 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         self.assertIn("revoked", manifest["lifecycle"]["promotion_path"])
         self.assertTrue(manifest["consumer_contract"]["registry_required"])
         self.assertIn("SLSA/in-toto generation provenance", manifest["consumer_contract"]["consumer_expectation"])
+        self.assertIn("durable evidence promotion", manifest["consumer_contract"]["consumer_expectation"])
         self.assertIn("materialized subject-store verification", manifest["consumer_contract"]["consumer_expectation"])
+        self.assertIn("source/trust-root matching", manifest["consumer_contract"]["consumer_expectation"])
         self.assertIn("does not define KAG substrate behavior", manifest["consumer_contract"]["consumer_expectation"])
         self.assertIn("trust-gate", manifest["consumer_contract"]["stable_interface"])
+        self.assertTrue(manifest["consumer_contract"]["subject_store_required"])
+        self.assertEqual(manifest["consumer_contract"]["admission_gate"], "fail_closed_consumer_admission")
+        self.assertEqual(manifest["consumer_contract"]["consumer_verdict"], "allow_or_deny_required_before_use")
         self.assertTrue(
             any("evidence-promote" in command for command in manifest["consumer_command"]),
             manifest["consumer_command"],
         )
         self.assertTrue(
             any("materialize-subjects" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
+            any("--store-root SUBJECT_STORE_ROOT" in command for command in manifest["consumer_command"]),
             manifest["consumer_command"],
         )
         self.assertTrue(

@@ -100,8 +100,18 @@ def _sanitize_public_payload(payload: Any) -> Any:
         return {key: _sanitize_public_payload(value) for key, value in payload.items()}
     if isinstance(payload, list):
         return [_sanitize_public_payload(item) for item in payload]
-    if isinstance(payload, str) and (payload == local_root or payload.startswith(local_root + os.sep)):
-        return _portable_ref(Path(payload))
+    if isinstance(payload, str):
+        if payload == local_root or payload.startswith(local_root + os.sep):
+            return _portable_ref(Path(payload))
+        tmp_root = "/srv/abyss-machine/tmp"
+        if payload == tmp_root:
+            return "host-tmp:abyss-machine"
+        if payload.startswith(tmp_root + os.sep):
+            suffix = Path(payload).resolve().relative_to(Path(tmp_root)).as_posix()
+            return f"host-tmp:abyss-machine/{suffix}"
+        home = Path.home().resolve()
+        if payload == str(home) or payload.startswith(str(home) + os.sep):
+            return "host-home-redacted"
     return payload
 
 
@@ -155,6 +165,25 @@ def _assert_manifest_matches_subject(manifest: Path, subject: Path) -> None:
         raise ValueError(f"manifest artifact_class must be {ARTIFACT_CLASS}")
     if payload.get("owner_repo") != "aoa-techniques":
         raise ValueError("manifest owner_repo must be aoa-techniques")
+    contract = payload.get("consumer_contract")
+    if not isinstance(contract, dict):
+        raise ValueError("manifest consumer_contract must be an object")
+    if contract.get("subject_store_required") is not True:
+        raise ValueError("manifest consumer_contract.subject_store_required must be true")
+    if contract.get("admission_gate") != "fail_closed_consumer_admission":
+        raise ValueError("manifest consumer_contract.admission_gate must be fail_closed_consumer_admission")
+    commands = "\n".join(str(item) for item in payload.get("consumer_command") or [])
+    for token in (
+        "artifacts evidence-promote",
+        "artifacts materialize-subjects",
+        "artifacts trust-gate",
+        "artifacts registry-latest",
+        "--store-root SUBJECT_STORE_ROOT",
+        "--source-repo aoa-techniques",
+        "--trust-root-mode host_managed",
+    ):
+        if token not in commands:
+            raise ValueError(f"manifest consumer_command must include {token}")
     payload["_manifest_path"] = str(manifest)
     paths = _manifest_subject_paths(payload)
     if subject.resolve() not in {path.resolve() for path in paths}:
@@ -654,7 +683,7 @@ def _validate_in_bundle_dir(
     registry = artifact_bundles.read_bundle_registry(registry_dir, artifact_class=ARTIFACT_CLASS)
     adversarial = _run_adversarial_checks(artifact_bundles, abyss_repo_root, manifest, subject, bundle_dir)
 
-    return {
+    payload = {
         "ok": bool(
             build.get("ok")
             and sign.get("ok")
@@ -697,6 +726,7 @@ def _validate_in_bundle_dir(
             "release_check": release_check,
         },
     }
+    return _sanitize_public_payload(payload)
 
 
 def validate_bundle(
