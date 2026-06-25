@@ -1,0 +1,86 @@
+{
+  "schema": "abyss_machine_artifact_bundle_manifest_v1",
+  "id": "aoa-techniques-kag-export-capsule",
+  "artifact_class": "source_owned_kag_export_capsule",
+  "owner_repo": "aoa-techniques",
+  "policy_ref": "repo:abyss-machine/manifests/artifact_signature_policy.manifest.json",
+  "mode": "os_abyss_local",
+  "public_safe": true,
+  "purpose": "Repo-local OS Abyss artifact bundle input for generated/kag_export.min.json.",
+  "subject_repo_root": "../../..",
+  "artifact_source": {
+    "kind": "generated_source_owned_kag_export_capsule",
+    "content_identity_ref": "generated/kag_export.min.json",
+    "artifact_identity_ref": "generated/kag_export.min.json#/artifact_identity"
+  },
+  "artifact_identity": {
+    "artifact_class": "source_owned_kag_export_capsule",
+    "abi_epoch": "aoa_techniques_kag_export_v1"
+  },
+  "abi_subject": {
+    "path": "generated/kag_export.min.json",
+    "artifact_identity_pointer": "/artifact_identity"
+  },
+  "artifact_subjects": [
+    {
+      "path": "generated/kag_export.min.json",
+      "role": "kag_export_capsule"
+    },
+    {
+      "path": "generated/kag_export.json",
+      "role": "kag_export_capsule_full"
+    },
+    {
+      "path": "docs/source-lift/KAG_EXPORT.md",
+      "role": "authority_doc"
+    },
+    {
+      "path": "scripts/build_kag_export.py",
+      "role": "builder"
+    },
+    {
+      "path": "scripts/validators/projection_kag.py",
+      "role": "validator"
+    }
+  ],
+  "build_type": "urn:abyssos:buildtype:aoa-techniques-kag-export:v1",
+  "package": {
+    "ecosystem": "generated-readmodel",
+    "name": "aoa-techniques-kag-export-capsule",
+    "purl": "pkg:generic/aoa-techniques-kag-export-capsule@0"
+  },
+  "lifecycle": {
+    "initial_state": "candidate",
+    "promotion_path": [
+      "candidate",
+      "built-local",
+      "manually-verified",
+      "release-ready",
+      "published",
+      "superseded",
+      "revoked"
+    ],
+    "latest_eligible_states": [
+      "manually-verified",
+      "release-ready",
+      "published"
+    ]
+  },
+  "consumer_contract": {
+    "stable_interface": "python scripts/validate_abyss_machine_kag_export_bundle.py --json and abyss-machine artifacts trust-gate --artifact-class source_owned_kag_export_capsule --consumer-intent agent --json",
+    "consumer_expectation": "KAG-adjacent consumers select a source_owned_kag_export_capsule bundle from the registry latest read-model only after ABI verification, SLSA/in-toto generation provenance, materialized subject-store verification, build_kag_export parity, validate_repo, and source-lift boundary checks pass; the capsule remains source-owned handoff material and does not define KAG substrate behavior.",
+    "registry_required": true
+  },
+  "consumer_command": [
+    "abyss-machine artifacts build-sidecars --manifest docs/source-lift/artifact-bundles/kag_export.bundle.json --bundle-dir BUNDLE_DIR",
+    "abyss-machine artifacts sign BUNDLE_DIR",
+    "abyss-machine artifacts verify BUNDLE_DIR",
+    "abyss-machine artifacts release-check BUNDLE_DIR",
+    "abyss-machine artifacts evidence-promote BUNDLE_DIR --registry-dir REGISTRY_DIR --lifecycle-state release-ready --consumer-ref aoa-techniques:kag-export-capsule --evidence-ref BUNDLE_DIR/artifact.verify.json --source-repo aoa-techniques --source-ref docs/source-lift/artifact-bundles/kag_export.bundle.json --producer aoa-techniques-kag-export-generator --trust-root-mode host_managed --json",
+    "abyss-machine artifacts materialize-subjects BUNDLE_DIR --registry-dir REGISTRY_DIR --manifest docs/source-lift/artifact-bundles/kag_export.bundle.json --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
+    "abyss-machine artifacts trust-gate --registry-dir REGISTRY_DIR --artifact-class source_owned_kag_export_capsule --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
+    "abyss-machine artifacts registry-latest --registry-dir REGISTRY_DIR --artifact-class source_owned_kag_export_capsule --consumer-intent agent --source-repo aoa-techniques --trust-root-mode host_managed --json",
+    "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
+    "abyss-machine artifacts bundle-registry --registry-dir dist/abyss-artifact-registry/aoa-techniques-kag-export-capsule --artifact-class source_owned_kag_export_capsule --json"
+  ]
+}

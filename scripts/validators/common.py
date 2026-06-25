@@ -243,13 +243,15 @@ KAG_EXPORT_ARTIFACT_IDENTITY: dict[str, Any] = {
     "consumer_expectation": (
         "Verify owner_repo, kind, object_id, entry_surface, source_inputs, "
         "direct_relations, non_identity_boundary, artifact_identity, "
-        "build_kag_export parity, and generated/source-fast validation before "
-        "treating this as a KAG donor orientation."
+        "build_kag_export parity, generated/source-fast validation, OS Abyss "
+        "artifact ABI/SLSA evidence, materialized subject-store state, and "
+        "consumer trust-gate allow/latest before treating this as a KAG donor "
+        "orientation."
     ),
     "privacy_boundary": (
         "Public technique metadata and source refs only; no private project "
-        "residue, hidden transcripts, source payload bodies, secrets, or "
-        "machine-local runtime state."
+        "residue, hidden transcripts, source payload bodies, secrets, "
+        "machine-local runtime state, or KAG substrate authority."
     ),
     "content_identity": (
         "generated/kag_export.json and generated/kag_export.min.json rebuilt "
@@ -260,9 +262,16 @@ KAG_EXPORT_ARTIFACT_IDENTITY: dict[str, Any] = {
         "scripts/validators/projection_kag.py@"
         "aoa_techniques_kag_export_v1#artifact_identity"
     ),
-    "trust_layer": ["abi_contract_signature", "w3c_prov_lineage"],
+    "trust_layer": [
+        "abi_contract_signature",
+        "w3c_prov_lineage",
+        "slsa_in_toto_provenance",
+        "materialized_subject_store",
+        "fail_closed_consumer_trust_gate",
+    ],
     "verification": [
         "python scripts/build_kag_export.py",
+        "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
         "python scripts/validate_repo.py",
         "python scripts/ci_gate.py --mode generated",
     ],
@@ -1905,5 +1914,4 @@ def validate_schema_instance(
                 validate_schema_instance(
                     value, properties[key], f"{instance_path}.{key}", schema_store
                 )
-
 

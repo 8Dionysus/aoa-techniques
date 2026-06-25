@@ -16,6 +16,9 @@ Representative surfaces include `generated/technique_catalog.json`,
 `generated/kag_export.json`, `generated/agents_mesh.min.json`, the section and
 checklist manifests, the example and evidence-note manifests, and the
 semantic/shadow review manifests.
+The OS Abyss artifact envelope for `generated/kag_export.min.json` lives under
+`docs/source-lift/artifact-bundles/`; it validates transport provenance without
+making the generated capsule stronger than authored technique bundles.
 
 ## Read before editing
 

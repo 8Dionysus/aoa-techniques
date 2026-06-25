@@ -15,6 +15,11 @@ from scripts import run_part_local_tests, validation_lanes
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INVENTORY_PATH = REPO_ROOT / "docs" / "validation" / "script_inventory.json"
+IGNORED_SCRIPT_SURFACE_PREFIXES = (
+    ".deps/",
+    "dist/",
+    "seeds/",
+)
 
 ALLOWED_ORGAN_LANES = {
     "source/topology",
@@ -80,10 +85,12 @@ def inventory_paths() -> set[str]:
 
 def discovered_script_surfaces() -> set[str]:
     return {
-        path.relative_to(REPO_ROOT).as_posix()
+        relative
         for path in REPO_ROOT.rglob("*")
+        for relative in [path.relative_to(REPO_ROOT).as_posix()]
         if path.is_file()
-        and "/scripts/" in f"/{path.relative_to(REPO_ROOT).as_posix()}"
+        and not relative.startswith(IGNORED_SCRIPT_SURFACE_PREFIXES)
+        and "/scripts/" in f"/{relative}"
         and "__pycache__" not in path.parts
         and path.suffix != ".pyc"
     }

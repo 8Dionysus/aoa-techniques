@@ -35,6 +35,19 @@ does not replace KAG owner review.
 - `generated/kag_export.json`
 - `generated/kag_export.min.json`
 - `scripts/build_kag_export.py`
+- `docs/source-lift/artifact-bundles/kag_export.bundle.json`
+
+## OS Abyss artifact envelope
+
+`docs/source-lift/artifact-bundles/kag_export.bundle.json` wraps the compact
+export as `source_owned_kag_export_capsule` for OS Abyss consumers. It requires
+ABI verification, SLSA/in-toto generation provenance, durable evidence
+promotion, materialized subject-store verification, and fail-closed
+trust-gate/latest selection before a consumer treats the capsule as a
+release/export handoff.
+
+The envelope is still subordinate to the authored technique bundle and does not
+define KAG substrate behavior.
 
 ## Regeneration
 

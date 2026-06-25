@@ -125,9 +125,74 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             "techniques/instruction/capability-boundary/"
             "multi-source-primary-input-provenance/TECHNIQUE.md",
         )
-        self.assertEqual(identity["trust_layer"], ["abi_contract_signature", "w3c_prov_lineage"])
+        self.assertEqual(
+            identity["trust_layer"],
+            [
+                "abi_contract_signature",
+                "w3c_prov_lineage",
+                "slsa_in_toto_provenance",
+                "materialized_subject_store",
+                "fail_closed_consumer_trust_gate",
+            ],
+        )
         self.assertIn("machine-local runtime state", identity["privacy_boundary"])
+        self.assertIn("KAG substrate authority", identity["privacy_boundary"])
         self.assertIn("generated/kag_export.min.json", identity["content_identity"])
+        self.assertIn("consumer trust-gate allow/latest", identity["consumer_expectation"])
+        self.assertIn(
+            "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
+            identity["verification"],
+        )
+
+    def test_kag_export_artifact_bundle_requires_trust_gate_subject_store_and_slsa(self) -> None:
+        manifest = load_json("docs/source-lift/artifact-bundles/kag_export.bundle.json")
+
+        self.assertEqual(manifest["schema"], "abyss_machine_artifact_bundle_manifest_v1")
+        self.assertEqual(manifest["artifact_class"], "source_owned_kag_export_capsule")
+        self.assertEqual(manifest["owner_repo"], "aoa-techniques")
+        self.assertTrue(manifest["public_safe"])
+        self.assertEqual(manifest["artifact_identity"]["abi_epoch"], "aoa_techniques_kag_export_v1")
+        self.assertEqual(manifest["abi_subject"]["path"], "generated/kag_export.min.json")
+        self.assertIn(
+            {"path": "generated/kag_export.min.json", "role": "kag_export_capsule"},
+            manifest["artifact_subjects"],
+        )
+        self.assertIn(
+            {"path": "scripts/validators/projection_kag.py", "role": "validator"},
+            manifest["artifact_subjects"],
+        )
+        self.assertEqual(manifest["lifecycle"]["initial_state"], "candidate")
+        self.assertIn("release-ready", manifest["lifecycle"]["promotion_path"])
+        self.assertIn("revoked", manifest["lifecycle"]["promotion_path"])
+        self.assertTrue(manifest["consumer_contract"]["registry_required"])
+        self.assertIn("SLSA/in-toto generation provenance", manifest["consumer_contract"]["consumer_expectation"])
+        self.assertIn("materialized subject-store verification", manifest["consumer_contract"]["consumer_expectation"])
+        self.assertIn("does not define KAG substrate behavior", manifest["consumer_contract"]["consumer_expectation"])
+        self.assertIn("trust-gate", manifest["consumer_contract"]["stable_interface"])
+        self.assertTrue(
+            any("evidence-promote" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
+            any("materialize-subjects" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
+            any("trust-gate" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
+            any("registry-latest" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
+            any("--source-repo aoa-techniques" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
+            any("--trust-root-mode host_managed" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
 
     def test_repo_doc_surface_manifest_is_router_safe(self) -> None:
         manifest = load_json("generated/repo_doc_surface_manifest.min.json")

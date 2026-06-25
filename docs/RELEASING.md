@@ -54,7 +54,7 @@ run the actual command sequences from `config/validation_lanes.json`.
 | Checklists | `generated` lane, `catalog` group | `docs/source-lift/TECHNIQUE_CHECKLIST_LIFT_GUIDE.md`, `generated/technique_checklist_manifest.json`, `docs/readers/source-lift/TECHNIQUE_CHECKLISTS.md` |
 | Examples | `generated` lane, `catalog` group | `docs/source-lift/TECHNIQUE_EXAMPLE_LIFT_GUIDE.md`, `generated/technique_example_manifest.json`, `docs/readers/source-lift/TECHNIQUE_EXAMPLES.md` |
 | Evidence notes | `generated` lane, `catalog` group | `docs/source-lift/EVIDENCE_NOTE_PROVENANCE_GUIDE.md`, `generated/technique_evidence_note_manifest.json`, `docs/readers/source-lift/EVIDENCE_NOTE_SURFACES.md` |
-| KAG export | `generated` lane, `kag_export` group | `docs/source-lift/KAG_EXPORT.md`, `generated/kag_export.json`, `generated/kag_export.min.json` |
+| KAG export | `generated` lane, `kag_export` group; OS Abyss bundle validator in `release` | `docs/source-lift/KAG_EXPORT.md`, `docs/source-lift/artifact-bundles/kag_export.bundle.json`, `generated/kag_export.json`, `generated/kag_export.min.json` |
 | GitHub review templates | `generated` lane, `catalog` group | template manifest surfaces under `generated/` |
 | Semantic review | `generated` lane, `catalog` group | semantic review manifest surfaces under `generated/` |
 | Shadow review | `generated` lane, `catalog` group | `generated/shadow_review_manifest.json`, `generated/shadow_review_manifest.min.json`, `docs/readers/review/SHADOW_PATTERNS.md` |
