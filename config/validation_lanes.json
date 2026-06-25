@@ -310,6 +310,10 @@
       ],
       [
         "python",
+        "scripts/validate_abyss_machine_kag_export_bundle.py"
+      ],
+      [
+        "python",
         "scripts/build_technique_intelligence.py"
       ],
       [

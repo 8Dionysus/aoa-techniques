@@ -12,3 +12,8 @@ ROADMAP.md
 
 # Owner-local live receipt logs stay out of git.
 .aoa/live_receipts/
+
+# OS Abyss artifact bundles, registries, and materialized subject stores are
+# local verification outputs.
+dist/
+.deps/

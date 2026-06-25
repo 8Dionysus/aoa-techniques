@@ -779,6 +779,20 @@
       "disposition": "keep"
     },
     {
+      "path": "scripts/validate_abyss_machine_kag_export_bundle.py",
+      "family": "artifact_bundle_validator",
+      "organ_lane": "release/nightly",
+      "owner_surface": "docs/source-lift/KAG_EXPORT.md",
+      "source_truth": ["docs/source-lift/artifact-bundles/kag_export.bundle.json", "generated/kag_export.min.json"],
+      "reads": ["aoa-techniques KAG export bundle manifest and generated KAG export capsule"],
+      "writes": ["dist/abyss-artifact-bundle/aoa-techniques-kag-export-capsule", "dist/abyss-artifact-registry/aoa-techniques-kag-export-capsule", "dist/abyss-artifact-subjects/aoa-techniques-kag-export-capsule"],
+      "side_effects": "writes ignored local OS Abyss artifact sidecars, durable registry records, and materialized subject-store outputs under dist/; negative checks use temporary storage",
+      "validation_lane": "release",
+      "ci_inclusion": "release_check command sequence after build_kag_export",
+      "test_target": "tests/test_downstream_feed_contracts.py",
+      "disposition": "keep"
+    },
+    {
       "path": "scripts/validate_repo.py",
       "family": "compatibility_adapter",
       "organ_lane": "compatibility adapter",

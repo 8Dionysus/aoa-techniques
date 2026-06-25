@@ -14,11 +14,20 @@ jobs:
   release_audit:
     name: Release Audit
     runs-on: ubuntu-latest
+    env:
+      ABYSS_MACHINE_REPO_ROOT: ${{ github.workspace }}/.deps/abyss-machine
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           fetch-depth: 0
+
+      - name: Checkout abyss-machine artifact tools
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 8Dionysus/abyss-machine
+          ref: 5724ce73cae69a0cd2b43996f006dc2bba2ab711
+          path: .deps/abyss-machine
 
       - name: Setup Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
