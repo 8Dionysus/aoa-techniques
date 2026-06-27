@@ -8,6 +8,8 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- added the root `kag/` local provider district and wired it into root surface
+  law, the AGENTS mesh, and generated mesh index for downstream KAG consumers
 - tightened the OS Abyss KAG export artifact envelope so the manifest, validator,
   and downstream contract test require durable evidence promotion,
   materialized subject-store admission, source/trust-root matching, and

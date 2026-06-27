@@ -1,0 +1,54 @@
+{
+  "schema_version": "aoa-local-kag-record-v1",
+  "repo": "aoa-techniques",
+  "local_id": "receipt:validation:technique-kag-provider",
+  "record_class": "receipt",
+  "source_refs": [
+    {
+      "repo": "aoa-techniques",
+      "path": "scripts/validate_repo.py",
+      "source_class": "technique_source",
+      "role": "primary",
+      "authority": "authored_source"
+    },
+    {
+      "repo": "aoa-techniques",
+      "path": "scripts/validators/projection_kag.py",
+      "source_class": "technique_source",
+      "role": "supporting",
+      "authority": "authored_source"
+    }
+  ],
+  "source_owner": "aoa-techniques",
+  "provenance_mode": "strict_source_linked",
+  "derived_method": "technique KAG export validation receipt",
+  "generated_or_authored": "generated_from_source",
+  "status": "active",
+  "owner_return_route": {
+    "repo": "aoa-techniques",
+    "surface": "scripts/validators/projection_kag.py",
+    "route_kind": "validation"
+  },
+  "freshness": {
+    "mode": "validator_receipt",
+    "state": "current",
+    "checked_ref": "scripts/validators/projection_kag.py"
+  },
+  "builder": {
+    "route": "python scripts/validate_repo.py",
+    "surface": "scripts/validate_repo.py"
+  },
+  "validator": {
+    "route": "scripts/validate_repo.py",
+    "lane": "owner-local"
+  },
+  "storage_posture": {
+    "git_surface": "receipt",
+    "payload_class": "receipt",
+    "runtime_route": "source-repo"
+  },
+  "consumer_route": "aoa-kag registry",
+  "receipt_kind": "validation",
+  "result": "valid",
+  "fallback_route": "docs/source-lift/KAG_EXPORT.md"
+}
