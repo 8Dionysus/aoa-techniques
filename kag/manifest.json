@@ -37,6 +37,10 @@
       "lane": "owner-local"
     },
     {
+      "route": "aoa-kag:scripts/validate_kag.py",
+      "lane": "local-kag"
+    },
+    {
       "route": "scripts/ci_gate.py --mode source-fast",
       "lane": "source-fast"
     }
