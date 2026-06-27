@@ -1,0 +1,57 @@
+{
+  "schema_version": "aoa-local-kag-manifest-v1",
+  "repo": "aoa-techniques",
+  "owner_surface": "kag/AGENTS.md",
+  "source_surfaces": [
+    {
+      "repo": "aoa-techniques",
+      "path": "generated/kag_export.min.json",
+      "source_class": "technique_source",
+      "role": "primary",
+      "authority": "source_owned_export"
+    },
+    {
+      "repo": "aoa-techniques",
+      "path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "source_class": "technique_source",
+      "role": "primary",
+      "authority": "authored_source"
+    },
+    {
+      "repo": "aoa-techniques",
+      "path": "docs/source-lift/KAG_EXPORT.md",
+      "source_class": "technique_source",
+      "role": "owner_route",
+      "authority": "authored_source"
+    }
+  ],
+  "record_classes": ["node", "edge", "index", "projection", "receipt"],
+  "storage_posture": {
+    "git_surface": "portable_records",
+    "payload_class": "manifest",
+    "runtime_route": "source-repo"
+  },
+  "validation_routes": [
+    {
+      "route": "scripts/validate_repo.py",
+      "lane": "owner-local"
+    },
+    {
+      "route": "scripts/ci_gate.py --mode source-fast",
+      "lane": "source-fast"
+    }
+  ],
+  "consumer_routes": ["aoa-kag registry", "abyss-stack federation mirror", "aoa-kag-mcp resource"],
+  "owner_return_routes": [
+    {
+      "repo": "aoa-techniques",
+      "surface": "docs/source-lift/KAG_EXPORT.md",
+      "route_kind": "source_export"
+    },
+    {
+      "repo": "aoa-techniques",
+      "surface": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "route_kind": "authored_meaning"
+    }
+  ]
+}

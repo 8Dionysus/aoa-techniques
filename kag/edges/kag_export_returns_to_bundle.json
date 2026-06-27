@@ -1,0 +1,48 @@
+{
+  "schema_version": "aoa-local-kag-record-v1",
+  "repo": "aoa-techniques",
+  "local_id": "edge:technique-kag-export:returns-to-bundle",
+  "record_class": "edge",
+  "source_refs": [
+    {
+      "repo": "aoa-techniques",
+      "path": "docs/source-lift/KAG_EXPORT.md",
+      "source_class": "technique_source",
+      "role": "primary",
+      "authority": "authored_source"
+    }
+  ],
+  "source_owner": "aoa-techniques",
+  "provenance_mode": "strict_source_linked",
+  "derived_method": "documented source-return relation",
+  "generated_or_authored": "generated_from_source",
+  "status": "active",
+  "owner_return_route": {
+    "repo": "aoa-techniques",
+    "surface": "docs/source-lift/KAG_EXPORT.md",
+    "route_kind": "source_export"
+  },
+  "freshness": {
+    "mode": "source_snapshot",
+    "state": "current",
+    "checked_ref": "docs/source-lift/KAG_EXPORT.md"
+  },
+  "builder": {
+    "route": "local KAG provider record",
+    "surface": "kag/manifest.json"
+  },
+  "validator": {
+    "route": "scripts/validate_repo.py",
+    "lane": "owner-local"
+  },
+  "storage_posture": {
+    "git_surface": "portable_records",
+    "payload_class": "edge",
+    "runtime_route": "source-repo"
+  },
+  "consumer_route": "aoa-kag registry",
+  "from_id": "node:technique:kag-export",
+  "to_id": "node:technique:aoa-t-0043",
+  "edge_kind": "returns_to",
+  "edge_trace": "docs/source-lift/KAG_EXPORT.md and generated/kag_export.min.json route the capsule back to AOA-T-0043"
+}

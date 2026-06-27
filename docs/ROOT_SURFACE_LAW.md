@@ -55,7 +55,7 @@ evidence trail.
 | Public governance and legal | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [SECURITY](../SECURITY.md), [LICENSE](../LICENSE) | do not become technique doctrine catalogs |
 | Release history | [CHANGELOG](../CHANGELOG.md) | record release history, not future direction |
 | Agent lane | [AGENTS](../AGENTS.md), [.agents](../.agents/), [agents mesh config](../config/agents_mesh.json), [agents mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | route agents without replacing public docs or owner contracts |
-| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [evals](../evals/), [examples](../examples/), [generated](../generated/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
+| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [evals](../evals/), [examples](../examples/), [generated](../generated/), [kag](../kag/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
 | Development requirements | [.gitignore](../.gitignore), [requirements-dev.txt](../requirements-dev.txt) | stay technical and small |
 
 ## Surfaces That Should Not Live In Root
@@ -102,6 +102,7 @@ compact, route it to the owner surface that can carry the detail.
 | Docs districts | [guardrails](guardrails/), [review](review/), [selection](selection/), [source-lift](source-lift/), [validation](validation/), and [readers](readers/) keep flat docs from turning into a maze. |
 | Provenance | [legacy](../legacy/) is the repo-wide public-safe provenance district; active mechanic lineage stays mechanic-local. |
 | Mechanics artifacts | Reports, scout inputs, overlays, scripts, manifests, schemas, examples, and tests that serve one mechanic part live with that part. |
+| Local KAG provider | [kag](../kag/) carries the repo-local provider packet, source-return handles, and validation receipts for downstream KAG consumers. |
 | Root data | Empty root `data/` is retired until a concrete repo-wide data contract justifies it. |
 | Spark lane | The previous root Spark surface lives under [.agents/spark](../.agents/spark/) as an agent-lane packet, not a standalone public root district. |
 

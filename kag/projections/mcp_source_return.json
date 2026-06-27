@@ -1,0 +1,58 @@
+{
+  "schema_version": "aoa-local-kag-record-v1",
+  "repo": "aoa-techniques",
+  "local_id": "projection:mcp:technique-source-return",
+  "record_class": "projection",
+  "source_refs": [
+    {
+      "repo": "aoa-techniques",
+      "path": "generated/kag_export.min.json",
+      "source_class": "technique_source",
+      "role": "primary",
+      "authority": "source_owned_export"
+    },
+    {
+      "repo": "aoa-techniques",
+      "path": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
+      "source_class": "technique_source",
+      "role": "supporting",
+      "authority": "authored_source"
+    }
+  ],
+  "source_owner": "aoa-techniques",
+  "provenance_mode": "strict_source_linked",
+  "derived_method": "MCP-readable source-return packet",
+  "generated_or_authored": "generated_from_source",
+  "status": "active",
+  "owner_return_route": {
+    "repo": "aoa-techniques",
+    "surface": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
+    "route_kind": "authored_meaning"
+  },
+  "freshness": {
+    "mode": "source_snapshot",
+    "state": "current",
+    "checked_ref": "generated/kag_export.min.json"
+  },
+  "builder": {
+    "route": "local KAG provider record",
+    "surface": "kag/manifest.json"
+  },
+  "validator": {
+    "route": "scripts/validate_repo.py",
+    "lane": "owner-local"
+  },
+  "storage_posture": {
+    "git_surface": "compact_readmodel",
+    "payload_class": "projection",
+    "runtime_route": "source-repo"
+  },
+  "consumer_route": "aoa-kag-mcp resource",
+  "projection_kind": "mcp_packet",
+  "source_record_ids": [
+    "node:technique:kag-export",
+    "node:technique:aoa-t-0043",
+    "index:technique:kag-source-surfaces"
+  ],
+  "consumer_shape": "resource exposes technique export handles and source bundle return refs"
+}
