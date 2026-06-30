@@ -158,6 +158,33 @@ class GrowthCycleMechanicsTopologyTestCase(unittest.TestCase):
         self.assertIn('"parts"', validator)
         self.assertIn('"questbook-integration"', validator)
 
+    def test_promotion_readiness_incubation_stays_public_safe(self) -> None:
+        readme = (
+            REPO_ROOT
+            / "mechanics"
+            / "growth-cycle"
+            / "parts"
+            / "promotion-readiness-incubation"
+            / "README.md"
+        ).read_text(encoding="utf-8")
+
+        for forbidden in (
+            "repo:aoa-sdk/.aoa/",
+            ".aoa/session-growth/",
+            ".aoa/closeout/",
+            "closeout-context.json",
+            "owner-handoff.json",
+            "reviewed-closeout-live.md",
+        ):
+            with self.subTest(forbidden=forbidden):
+                self.assertNotIn(forbidden, readme)
+
+        self.assertIn(
+            "session:2026-04-13T17-04-26-415462Z-aoa-memo-checkpoint-growth-97a0427d-db7",
+            readme,
+        )
+        self.assertIn("source closeout artifacts remain owner-local", readme)
+
     def test_mechanics_roadmaps_are_not_silently_ignored(self) -> None:
         gitignore = (REPO_ROOT / ".gitignore").read_text(encoding="utf-8")
 
