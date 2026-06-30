@@ -37,10 +37,14 @@ session.
   `reanchor_owner`
 - nearest wrong target:
   `aoa-skills`
-- reviewed evidence refs:
-  - `repo:aoa-sdk/.aoa/session-growth/current/97a0427d-db7f-48ec-944c-ebe962709e89/aoa-memo/reviewed-closeout-live.md`
-  - `repo:aoa-sdk/.aoa/session-growth/current/97a0427d-db7f-48ec-944c-ebe962709e89/aoa-memo/closeout-context.json`
-  - `repo:aoa-sdk/.aoa/closeout/handoffs/session-2026-04-13T17-04-26-415462Z-aoa-memo-checkpoint-growth-97a0427d-db7.owner-handoff.json`
+- reviewed evidence handles:
+  - `session:2026-04-13T17-04-26-415462Z-aoa-memo-checkpoint-growth-97a0427d-db7`
+  - `candidate:pattern:aoa-techniques-technique-promotion-readiness-min`
+  - `cluster:pattern:candidate-pattern-aoa-techniques-technique-promotion-readiness-min`
+- evidence note:
+  the source closeout artifacts remain owner-local in `aoa-sdk`; this public
+  incubation note keeps only stable reviewed handles and does not publish
+  machine-local storage paths
 
 ## Survivor split
 
