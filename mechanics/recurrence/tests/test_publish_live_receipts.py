@@ -17,6 +17,17 @@ MODULE_PATH = (
     / "scripts"
     / "publish_live_receipts.py"
 )
+HOOK_BINDING_PATH = (
+    REPO_ROOT
+    / "mechanics"
+    / "recurrence"
+    / "parts"
+    / "live-observation-producers"
+    / "manifests"
+    / "recurrence"
+    / "hooks"
+    / "component.techniques.canon-and-intake-beacons.hooks.json"
+)
 
 
 def load_module():
@@ -55,6 +66,13 @@ def build_receipt(event_kind: str = "technique_promotion_receipt") -> dict:
 
 
 class TechniquePublishLiveReceiptsTests(unittest.TestCase):
+    def test_live_receipt_hook_keys_records_by_event_id(self) -> None:
+        payload = json.loads(HOOK_BINDING_PATH.read_text(encoding="utf-8"))
+        binding = payload["bindings"][0]
+
+        self.assertEqual(binding["binding_ref"], "techniques.live_receipts.session_stop")
+        self.assertEqual(binding["config"]["record_id_field"], "event_id")
+
     def test_publish_live_receipts_appends_once_and_skips_duplicates(self) -> None:
         module = load_module()
         with tempfile.TemporaryDirectory() as temp_dir:

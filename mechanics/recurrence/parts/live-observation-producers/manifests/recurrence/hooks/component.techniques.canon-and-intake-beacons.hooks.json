@@ -15,7 +15,7 @@
         ".aoa/live_receipts/technique-receipts.jsonl"
       ],
       "config": {
-        "record_id_field": "receipt_ref"
+        "record_id_field": "event_id"
       },
       "signal_rules": [
         {
