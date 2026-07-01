@@ -512,6 +512,30 @@ relations:
         self.assertIn("delegated external planning surface", checklist)
         self.assertIn("delegated elsewhere", technique)
 
+    def test_remediation_snapshot_candidate_cap_policy_is_consistent(self) -> None:
+        technique = (
+            REPO_ROOT
+            / "techniques"
+            / "proof"
+            / "published-summary"
+            / "published-summary-remediation-snapshot"
+            / "TECHNIQUE.md"
+        ).read_text(encoding="utf-8")
+        checklist = (
+            REPO_ROOT
+            / "techniques"
+            / "proof"
+            / "published-summary"
+            / "published-summary-remediation-snapshot"
+            / "checks"
+            / "remediation-snapshot-checklist.md"
+        ).read_text(encoding="utf-8")
+
+        candidate_cap_scope = "per snapshot, per bucket, or by priority band"
+        self.assertIn(candidate_cap_scope, technique)
+        self.assertIn(candidate_cap_scope, checklist)
+        self.assertNotIn("cap to each bucket", checklist)
+
     def test_canonical_bundles_have_adverse_effects_reviews_and_promoted_bundles_do_not(self) -> None:
         schema_store = validate_repo.load_schema_store(REPO_ROOT)
         records = validate_repo.collect_techniques(REPO_ROOT, schema_store)

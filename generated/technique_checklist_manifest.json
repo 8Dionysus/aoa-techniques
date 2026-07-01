@@ -344,7 +344,7 @@
             },
             {
               "order": 4,
-              "text": "applies an explicit cap to each bucket"
+              "text": "applies the documented candidate cap policy consistently at the chosen scope: per snapshot, per bucket, or by priority band"
             },
             {
               "order": 5,
