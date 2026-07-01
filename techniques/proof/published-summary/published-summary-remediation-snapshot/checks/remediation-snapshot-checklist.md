@@ -3,7 +3,7 @@
 - reads only latest published summary aliases
 - does not replay history or recompute trend state
 - uses one fixed documented bucket set
-- applies an explicit cap to each bucket
+- applies the documented candidate cap policy consistently at the chosen scope: per snapshot, per bucket, or by priority band
 - reports missing or stale inputs explicitly
 - keeps source summary references on emitted candidates
 - when several published summaries feed several downstream consumers, the snapshot is preferred over repeating direct per-source triage in each surface
