@@ -55952,7 +55952,7 @@
                 {
                   "order": 2,
                   "key": "source files",
-                  "value_markdown": "- `src/aoa_sdk/skills/detector.py`\n- `src/aoa_sdk/cli/main.py`\n- `docs/session-closeout.md`\n- `docs/WORKSPACE_INSTALL.md`\n- `/srv/AGENTS.md`"
+                  "value_markdown": "- `src/aoa_sdk/skills/detector.py`\n- `src/aoa_sdk/cli/main.py`\n- `docs/session-closeout.md`\n- `docs/WORKSPACE_INSTALL.md`\n- `<workspace-root>/AGENTS.md`"
                 }
               ]
             },

@@ -41745,7 +41745,7 @@
       "technique_path": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
       "source": {
         "primary_source_ref": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/TECHNIQUE.md",
-        "source_hash": "9779a98483eab1c5e26de4e828d67c98a48fe4ad9bce4e3431e0cb45b08817d4",
+        "source_hash": "276a991207e1bd52a0317508a94f7734c6546d855850a5e4a5dfef4160c41523",
         "catalog_ref": "generated/technique_catalog.json#AOA-T-0091",
         "capsule_ref": "generated/technique_capsules.json#AOA-T-0091",
         "section_ref": "generated/technique_sections.full.json#AOA-T-0091"
@@ -42181,8 +42181,8 @@
           "document_type": "evidence_note",
           "section_name": "Origin Evidence",
           "source_ref": "techniques/proof/owner-truth-closeout/workspace-root-ingress-and-mutation-gate/notes/origin-evidence.md",
-          "text": "Origin Evidence origin_evidence Technique id: AOA-T-0091 name: workspace-root-ingress-and-mutation-gate Source project name: aoa-sdk + 8Dionysus source files: - `src/aoa_sdk/skills/detector.py` - `src/aoa_sdk/cli/main.py` - `docs/session-closeout.md` - `docs/WORKSPACE_INSTALL.md` - `/srv/AGENTS.md` Evidence the workspace root now defines an explicit session-start contract that requires one ingress pass before substantial work the same root contract requires one guard pass before risky, mutating, infra, runtime, repo-config, or public-share actions the detector output keeps `activate_now`, `must_confirm`, `suggest_next`, and `blocked_actions` visible instead of hiding posture in free-form memory the route was used as part of the real workspace-foundation landing wave rather than being invented as a template-only abstraction Interpretation the surviving reusable object is one workspace-root operating law for entering and gating federated work the public technique can stay bounded around ingress-plus-guard posture without importing workspace install, bootstrap, or closeout doctrine",
-          "content_hash": "397e3355007162c080f5eadd9cd69e4c4774d3fa5269ffb2dc33882ab26129a9"
+          "text": "Origin Evidence origin_evidence Technique id: AOA-T-0091 name: workspace-root-ingress-and-mutation-gate Source project name: aoa-sdk + 8Dionysus source files: - `src/aoa_sdk/skills/detector.py` - `src/aoa_sdk/cli/main.py` - `docs/session-closeout.md` - `docs/WORKSPACE_INSTALL.md` - `<workspace-root>/AGENTS.md` Evidence the workspace root now defines an explicit session-start contract that requires one ingress pass before substantial work the same root contract requires one guard pass before risky, mutating, infra, runtime, repo-config, or public-share actions the detector output keeps `activate_now`, `must_confirm`, `suggest_next`, and `blocked_actions` visible instead of hiding posture in free-form memory the route was used as part of the real workspace-foundation landing wave rather than being invented as a template-only abstraction Interpretation the surviving reusable object is one workspace-root operating law for entering and gating federated work the public technique can stay bounded around ingress-plus-guard posture without importing workspace install, bootstrap, or closeout doctrine",
+          "content_hash": "d31320c6a514b46bd4b283bc970d53e80966a8a88eb057276618b2a7664897a4"
         },
         {
           "document_id": "AOA-T-0091:evidence_note:004",

@@ -11,7 +11,7 @@
   - `src/aoa_sdk/cli/main.py`
   - `docs/session-closeout.md`
   - `docs/WORKSPACE_INSTALL.md`
-  - `/srv/AGENTS.md`
+  - `<workspace-root>/AGENTS.md`
 
 ## Evidence
 - the workspace root now defines an explicit session-start contract that requires one ingress pass before substantial work
