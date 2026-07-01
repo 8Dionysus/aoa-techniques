@@ -6,7 +6,7 @@ kind: guardrail
 status: canonical
 origin:
   project: aoa-sdk + 8Dionysus
-  path: src/aoa_sdk/skills/detector.py + src/aoa_sdk/cli/main.py + docs/WORKSPACE_INSTALL.md + /srv/AGENTS.md
+  path: src/aoa_sdk/skills/detector.py + src/aoa_sdk/cli/main.py + docs/WORKSPACE_INSTALL.md + <workspace-root>/AGENTS.md
   note: Extracted from the workspace-foundation landing wave where federated AoA work starts through an explicit ingress pass and risky mutation is gated through a second workspace-aware guard pass.
 owners:
   - 8Dionysus
