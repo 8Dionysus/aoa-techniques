@@ -1,14 +1,18 @@
 from __future__ import annotations
 
+import hashlib
+import io
 import json
 import subprocess
+import sys
 import unittest
 from contextlib import redirect_stderr
 from io import StringIO
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
-from scripts import ci_gate, release_check, validation_lanes
+from scripts import ci_gate, release_check, validate_repo_local_kag_index, validation_lanes
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -48,6 +52,10 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         self.assertIn(
             ("python", "scripts/validate_source_contracts.py"),
             validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE,
+        )
+        self.assertEqual(
+            ("python", "scripts/validate_repo_local_kag_index.py"),
+            validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE[0],
         )
         self.assertEqual(
             command_sequence_from_manifest("generated_check"),
@@ -217,6 +225,105 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         self.assertNotIn("python scripts/run_tests.py", workflow)
         self.assertNotIn("python scripts/validate_repo.py", workflow)
         self.assertNotIn("python scripts/validate_source_contracts.py", workflow)
+        self.assertIn("repository: 8Dionysus/aoa-kag", workflow)
+        self.assertIn("AOA_KAG_ROOT:", workflow)
+        self.assertIn(f"ref: {validate_repo_local_kag_index.AOA_KAG_REF}", workflow)
+        self.assertNotIn("uses: 8Dionysus/aoa-kag/", workflow)
+
+    def test_repo_local_kag_adapter_resolves_sibling_builder(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            workspace = Path(temp_dir)
+            repo_root = workspace / "aoa-techniques"
+            generator = workspace / "aoa-kag" / "scripts" / "generate_repo_local_kag_index.py"
+            repo_root.mkdir()
+            generator.parent.mkdir(parents=True)
+            generator.touch()
+
+            aoa_kag_root = validate_repo_local_kag_index.resolve_aoa_kag_root(
+                {}, repo_root
+            )
+            self.assertEqual((workspace / "aoa-kag").resolve(), aoa_kag_root)
+            self.assertEqual(
+                (
+                    sys.executable,
+                    str(generator),
+                    "--repo-root",
+                    str(repo_root),
+                    "--output",
+                    "kag/indexes/source_surface_index.json",
+                    "--check",
+                ),
+                validate_repo_local_kag_index.command(generator, repo_root),
+            )
+
+    def test_repo_local_kag_adapter_fetches_and_verifies_pinned_builder(self) -> None:
+        content = b"print('portable builder')\n"
+        with TemporaryDirectory() as temp_dir:
+            destination = Path(temp_dir) / "scripts" / "generate_repo_local_kag_index.py"
+            with patch.object(
+                validate_repo_local_kag_index,
+                "GENERATOR_SHA256",
+                hashlib.sha256(content).hexdigest(),
+            ):
+                fetched = validate_repo_local_kag_index.fetch_generator(
+                    destination,
+                    opener=lambda _url, **_kwargs: io.BytesIO(content),
+                )
+
+            self.assertEqual(destination, fetched)
+            self.assertEqual(content, fetched.read_bytes())
+
+    def test_repo_local_kag_adapter_verifies_explicit_local_builder(self) -> None:
+        content = b"print('local builder')\n"
+        with TemporaryDirectory() as temp_dir:
+            workspace = Path(temp_dir)
+            repo_root = workspace / "aoa-techniques"
+            aoa_kag_root = workspace / "aoa-kag"
+            generator = aoa_kag_root / "scripts" / "generate_repo_local_kag_index.py"
+            repo_root.mkdir()
+            generator.parent.mkdir(parents=True)
+            generator.write_bytes(content)
+            with patch.object(
+                validate_repo_local_kag_index,
+                "GENERATOR_SHA256",
+                hashlib.sha256(content).hexdigest(),
+            ):
+                with validate_repo_local_kag_index.canonical_generator(
+                    {"AOA_KAG_ROOT": str(aoa_kag_root)},
+                    repo_root,
+                ) as resolved:
+                    self.assertEqual(generator.resolve(), resolved)
+
+            generator.write_bytes(b"stale builder\n")
+            with self.assertRaisesRegex(RuntimeError, "AOA_KAG_ROOT.*digest mismatch"):
+                with validate_repo_local_kag_index.canonical_generator(
+                    {"AOA_KAG_ROOT": str(aoa_kag_root)},
+                    repo_root,
+                ):
+                    pass
+
+    def test_repo_local_kag_adapter_ignores_unpinned_sibling_builder(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            workspace = Path(temp_dir)
+            repo_root = workspace / "aoa-techniques"
+            sibling_generator = (
+                workspace / "aoa-kag" / "scripts" / "generate_repo_local_kag_index.py"
+            )
+            fetched_generator = workspace / "fetched" / "generate_repo_local_kag_index.py"
+            repo_root.mkdir()
+            sibling_generator.parent.mkdir(parents=True)
+            sibling_generator.write_bytes(b"unpinned sibling\n")
+            with patch.object(
+                validate_repo_local_kag_index,
+                "fetch_generator",
+                return_value=fetched_generator,
+            ) as fetch:
+                with validate_repo_local_kag_index.canonical_generator(
+                    {},
+                    repo_root,
+                ) as resolved:
+                    self.assertEqual(fetched_generator, resolved)
+            fetch.assert_called_once()
 
     def test_active_docs_route_to_lane_ids_instead_of_full_sequences(self) -> None:
         active_docs = (
