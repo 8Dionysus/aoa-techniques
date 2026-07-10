@@ -73,6 +73,28 @@ class AgentsMeshTests(unittest.TestCase):
 
         self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
 
+    def test_agents_mesh_ignores_dependency_checkouts(self) -> None:
+        deps_root = REPO_ROOT / ".deps"
+        deps_root.mkdir(exist_ok=True)
+        try:
+            with tempfile.TemporaryDirectory(dir=deps_root) as checkout:
+                (Path(checkout) / "AGENTS.md").write_text(
+                    "# Foreign dependency route\n",
+                    encoding="utf-8",
+                )
+                result = subprocess.run(
+                    (sys.executable, "scripts/validate_agents_md_shape.py"),
+                    cwd=REPO_ROOT,
+                    check=False,
+                    capture_output=True,
+                    text=True,
+                )
+        finally:
+            if not any(deps_root.iterdir()):
+                deps_root.rmdir()
+
+        self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

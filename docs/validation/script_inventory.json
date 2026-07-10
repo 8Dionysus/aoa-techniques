@@ -807,6 +807,20 @@
       "disposition": "keep"
     },
     {
+      "path": "scripts/validate_repo_local_kag_index.py",
+      "family": "source_validator_adapter",
+      "organ_lane": "source/topology",
+      "owner_surface": "kag/AGENTS.md",
+      "source_truth": ["kag/indexes/source_surface_index.json", "aoa-kag:scripts/generate_repo_local_kag_index.py"],
+      "reads": ["tracked aoa-techniques source tree", "canonical aoa-kag index builder"],
+      "writes": [],
+      "side_effects": "resolves or fetches the digest-pinned canonical aoa-kag builder, then runs it in read-only check mode",
+      "validation_lane": "source_fast",
+      "ci_inclusion": "source_fast command sequence",
+      "test_target": "tests/test_validation_command_authority.py",
+      "disposition": "keep"
+    },
+    {
       "path": "scripts/validate_semantic_agents.py",
       "family": "source_validator",
       "organ_lane": "source/topology",

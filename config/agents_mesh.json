@@ -119,6 +119,7 @@
   ],
   "ignored_directory_names": [
     ".aoa",
+    ".deps",
     ".git",
     ".pytest_cache",
     "__pycache__"

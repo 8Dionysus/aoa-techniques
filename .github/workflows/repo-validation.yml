@@ -14,9 +14,18 @@ jobs:
   growth_gate:
     name: Repo Validation
     runs-on: ubuntu-latest
+    env:
+      AOA_KAG_ROOT: ${{ github.workspace }}/.deps/aoa-kag
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Checkout aoa-kag index builder
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          repository: 8Dionysus/aoa-kag
+          ref: 34dded920a832a529cd9a71cee37454e17b0a790
+          path: .deps/aoa-kag
 
       - name: Setup Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
