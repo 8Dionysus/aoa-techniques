@@ -11,22 +11,22 @@
       "index": 1,
       "license": 1,
       "manifest": 6,
-      "mechanics_surface": 2,
+      "mechanics_surface": 1,
       "owner_metadata": 2,
       "projection": 1,
       "receipt": 31,
       "schema": 39,
-      "script": 29,
+      "script": 36,
       "security": 1,
-      "source_code": 25,
+      "source_code": 19,
       "test": 74,
       "validator": 17
     },
     "command_role": {
       "builder": 25,
       "lane_entrypoint": 3,
-      "none": 1959,
-      "script": 1,
+      "none": 1952,
+      "script": 8,
       "test": 74,
       "validator": 17
     },
@@ -61,9 +61,9 @@
     },
     "primary_kind": {
       "artifact": 103,
-      "command": 120,
+      "command": 127,
       "document": 1669,
-      "surface": 187
+      "surface": 180
     },
     "surface_state": {
       "authored_source": 1870,
@@ -73,21 +73,21 @@
     }
   },
   "coverage_summary": {
-    "command_count": 120,
+    "command_count": 127,
     "document_count": 1669,
     "generated_count": 53,
     "heading_count": 12721,
     "mechanics_count": 600,
     "record_count": 2079,
     "schema_count": 39,
-    "script_count": 29,
+    "script_count": 36,
     "test_count": 74,
     "unknown_count": 0,
     "validator_count": 17
   },
   "index_identity": {
     "artifact_kind": "source_surface_index",
-    "content_digest": "180db767d44fda5d140a3cc1501ec4097506feec9cd9bb73fd37ee53fe114104",
+    "content_digest": "2bc275f10c82a14f5cf73dc4b029e8f571a0298de4a4541bf56f83d5fc66dce5",
     "local_id": "index:repo-local:source-surfaces",
     "schema_ref": "aoa-kag:schemas/repo-local-kag-index.schema.json"
   },
@@ -9095,7 +9095,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "source_code",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -9104,13 +9104,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "source_code",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -9131,9 +9131,9 @@
         "size_bytes": 5952
       },
       "mechanics_role": "none",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": ".agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py"
       },
       "provenance": {
@@ -9171,7 +9171,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python .agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -9184,7 +9186,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "source_code",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -9193,13 +9195,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "source_code",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -9220,9 +9222,9 @@
         "size_bytes": 3643
       },
       "mechanics_role": "none",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": ".agents/skills/aoa-dry-run-first/scripts/preview_gap_check.py"
       },
       "provenance": {
@@ -9260,7 +9262,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python .agents/skills/aoa-dry-run-first/scripts/preview_gap_check.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -11038,7 +11042,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "source_code",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -11047,13 +11051,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "source_code",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -11074,9 +11078,9 @@
         "size_bytes": 4288
       },
       "mechanics_role": "none",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": ".agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py"
       },
       "provenance": {
@@ -11114,7 +11118,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python .agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -11127,7 +11133,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "source_code",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -11136,13 +11142,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "source_code",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -11163,9 +11169,9 @@
         "size_bytes": 3007
       },
       "mechanics_role": "none",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": ".agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py"
       },
       "provenance": {
@@ -11203,7 +11209,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python .agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -14774,7 +14782,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "source_code",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -14783,13 +14791,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "source_code",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -14810,9 +14818,9 @@
         "size_bytes": 6332
       },
       "mechanics_role": "none",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": ".agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py"
       },
       "provenance": {
@@ -14850,7 +14858,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python .agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -14863,7 +14873,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "source_code",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -14872,13 +14882,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "source_code",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -14899,9 +14909,9 @@
         "size_bytes": 3175
       },
       "mechanics_role": "none",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": ".agents/skills/aoa-safe-infra-change/scripts/risk_surface_scan.py"
       },
       "provenance": {
@@ -14939,7 +14949,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python .agents/skills/aoa-safe-infra-change/scripts/risk_surface_scan.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -30041,7 +30053,7 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "f93f489b34334e40f7f9b3899721a1ffd76882c26cb67151146b56fc0c7a66e3",
+        "content_hash": "508e968dd3b8dc383edc79bc4649451a2da95f3ed7e604348d82f09e5ca48f1e",
         "git_ref": "git-index-source-tree",
         "id": "file:.github/workflows/repo-validation.yml:3affb923d0",
         "mime": "application/yaml",
@@ -30080,7 +30092,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "f93f489b34334e40f7f9b3899721a1ffd76882c26cb67151146b56fc0c7a66e3",
+        "digest": "508e968dd3b8dc383edc79bc4649451a2da95f3ed7e604348d82f09e5ca48f1e",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -55719,13 +55731,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "9ffbee371e659da1bbca5a360881cad6821cbfbf814d6f4f718ae3d3abeea695",
+        "content_hash": "3d89a4acb6ec45f0ef3e42f1325cddc20912bd76fa5c489f404fd01c128fe0be",
         "git_ref": "git-index-source-tree",
         "id": "file:docs/validation/script_inventory.json:3e79b7425b",
         "mime": "application/json",
         "path": "docs/validation/script_inventory.json",
         "repo": "aoa-techniques",
-        "size_bytes": 52389
+        "size_bytes": 52552
       },
       "mechanics_role": "none",
       "observed_form": "file",
@@ -55758,7 +55770,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "9ffbee371e659da1bbca5a360881cad6821cbfbf814d6f4f718ae3d3abeea695",
+        "digest": "3d89a4acb6ec45f0ef3e42f1325cddc20912bd76fa5c489f404fd01c128fe0be",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -60427,13 +60439,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "bb833ebde3bb706b4debdc64658da7d2085b614e37bc21d497099afd7b528920",
+        "content_hash": "164ff30ccac3c1dc65d3eb6f5a89c9d7922f161a2e881d394681d86bbb534138",
         "git_ref": "git-index-source-tree",
         "id": "file:kag/readme.md:213631cc86",
         "mime": "text/markdown",
         "path": "kag/README.md",
         "repo": "aoa-techniques",
-        "size_bytes": 1105
+        "size_bytes": 1116
       },
       "mechanics_role": "none",
       "observed_form": "file",
@@ -60488,7 +60500,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "bb833ebde3bb706b4debdc64658da7d2085b614e37bc21d497099afd7b528920",
+        "digest": "164ff30ccac3c1dc65d3eb6f5a89c9d7922f161a2e881d394681d86bbb534138",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -137791,7 +137803,7 @@
     {
       "abi": {
         "abi_epoch": "source",
-        "artifact_class": "mechanics_surface",
+        "artifact_class": "script",
         "compatibility": "stable",
         "contract_version": "none",
         "schema_version": "none"
@@ -137800,13 +137812,13 @@
         "scope": "public",
         "secrets_risk": "none"
       },
-      "artifact_kind": "mechanics_surface",
+      "artifact_kind": "script",
       "classification": {
         "confidence": "high",
-        "primary_kind": "surface"
+        "primary_kind": "command"
       },
-      "code_role": "source_module",
-      "command_role": "none",
+      "code_role": "entrypoint",
+      "command_role": "script",
       "consumer_route": {
         "route_kind": "resource",
         "surface": "aoa-kag-mcp"
@@ -137827,9 +137839,9 @@
         "size_bytes": 5503
       },
       "mechanics_role": "part_script",
-      "observed_form": "file",
+      "observed_form": "command",
       "owner_return_route": {
-        "route_kind": "source_owner",
+        "route_kind": "command_owner",
         "surface": "mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py"
       },
       "provenance": {
@@ -137867,7 +137879,9 @@
           "git",
           "python"
         ],
-        "owner_commands": [],
+        "owner_commands": [
+          "python mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py"
+        ],
         "required_tools": [
           "python"
         ]
@@ -150322,13 +150336,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "5ba3aac07b65843034b631a077d0ae211730987404c48676219e890c988bb3d6",
+        "content_hash": "c1e741d5ebb1806dd3c9edd780ae29f508fb307d9e0fa5836fe2a96f8be4d886",
         "git_ref": "git-index-source-tree",
         "id": "file:scripts/validate_repo_local_kag_index.py:4985b57a7e",
         "mime": "text/x-python",
         "path": "scripts/validate_repo_local_kag_index.py",
         "repo": "aoa-techniques",
-        "size_bytes": 3909
+        "size_bytes": 3935
       },
       "mechanics_role": "none",
       "observed_form": "command",
@@ -150361,7 +150375,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "5ba3aac07b65843034b631a077d0ae211730987404c48676219e890c988bb3d6",
+        "digest": "c1e741d5ebb1806dd3c9edd780ae29f508fb307d9e0fa5836fe2a96f8be4d886",
         "signature_ref": "",
         "verification_state": "digest-only"
       },
@@ -272381,13 +272395,13 @@
         "state": "current"
       },
       "identity": {
-        "content_hash": "8cf736c05a0b055222cb9f9937ffaa8c7bd82825f4919c1d8869e1cac005d091",
+        "content_hash": "d764a049c43fdba24790d0410909dbdcd472fd83a190ea5d7196ba9217793045",
         "git_ref": "git-index-source-tree",
         "id": "file:tests/test_validation_command_authority.py:78624b39c6",
         "mime": "text/x-python",
         "path": "tests/test_validation_command_authority.py",
         "repo": "aoa-techniques",
-        "size_bytes": 16603
+        "size_bytes": 16641
       },
       "mechanics_role": "none",
       "observed_form": "command",
@@ -272420,7 +272434,7 @@
       },
       "signs": {
         "attestation_ref": "",
-        "digest": "8cf736c05a0b055222cb9f9937ffaa8c7bd82825f4919c1d8869e1cac005d091",
+        "digest": "d764a049c43fdba24790d0410909dbdcd472fd83a190ea5d7196ba9217793045",
         "signature_ref": "",
         "verification_state": "digest-only"
       },

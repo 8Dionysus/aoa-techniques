@@ -1,0 +1,2303 @@
+{
+  "entries": [
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ac2c7660114a3e7dbfc7",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py",
+      "source_record_id": "file:.agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py:e1480fe2d2"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:135f76178a5c945f3b17",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-dry-run-first/scripts/preview_gap_check.py",
+      "source_record_id": "file:.agents/skills/aoa-dry-run-first/scripts/preview_gap_check.py:0ea89b83a2"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:30350f3e5aa5e47a2a7d",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py",
+      "source_record_id": "file:.agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py:65fb7d4d41"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:71d83261812a7ad21c77",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py",
+      "source_record_id": "file:.agents/skills/aoa-local-stack-bringup/scripts/readiness_summary.py:b9778391e0"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:25807cb4f16f35695b09",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py",
+      "source_record_id": "file:.agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py:f074327882"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:28486ddb08654f539f9a",
+      "observation_state": "declared",
+      "path": ".agents/skills/aoa-safe-infra-change/scripts/risk_surface_scan.py",
+      "source_record_id": "file:.agents/skills/aoa-safe-infra-change/scripts/risk_surface_scan.py:4783038b81"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9797de8c678b8fe3a356",
+      "observation_state": "declared",
+      "path": ".agents/spark/scripts/validate_spark_lane.py",
+      "source_record_id": "file:.agents/spark/scripts/validate_spark_lane.py:80adbf9807"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1ba1ac6777965ede9772",
+      "observation_state": "declared",
+      "path": ".agents/spark/tests/test_spark_lane.py",
+      "source_record_id": "file:.agents/spark/tests/test_spark_lane.py:2b31a3041f"
+    },
+    {
+      "event_kind": "workflow_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:64279de6a5659eb7f2f3",
+      "observation_state": "declared",
+      "path": ".github/workflows/nightly-sentinel.yml",
+      "source_record_id": "file:.github/workflows/nightly-sentinel.yml:e170c6c6c0"
+    },
+    {
+      "event_kind": "workflow_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:41b5f03586b9a4f10909",
+      "observation_state": "declared",
+      "path": ".github/workflows/release-audit.yml",
+      "source_record_id": "file:.github/workflows/release-audit.yml:1e069fa705"
+    },
+    {
+      "event_kind": "workflow_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:315aa7e101c940513cce",
+      "observation_state": "declared",
+      "path": ".github/workflows/repo-validation.yml",
+      "source_record_id": "file:.github/workflows/repo-validation.yml:3affb923d0"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "020-2026-03-23",
+        "level": 2,
+        "line": 1154,
+        "ref": "CHANGELOG.md#020-2026-03-23",
+        "title": "[0.2.0] - 2026-03-23"
+      },
+      "id": "event:repo:0271bcd05e9a8283b87c",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "045-2026-05-18",
+        "level": 2,
+        "line": 62,
+        "ref": "CHANGELOG.md#045-2026-05-18",
+        "title": "[0.4.5] - 2026-05-18"
+      },
+      "id": "event:repo:9672313571dc206c7dea",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "040-2026-04-10",
+        "level": 2,
+        "line": 1046,
+        "ref": "CHANGELOG.md#040-2026-04-10",
+        "title": "[0.4.0] - 2026-04-10"
+      },
+      "id": "event:repo:a5eb4e8c978cb34c5ca8",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "041-2026-04-19",
+        "level": 2,
+        "line": 1015,
+        "ref": "CHANGELOG.md#041-2026-04-19",
+        "title": "[0.4.1] - 2026-04-19"
+      },
+      "id": "event:repo:adba6811a596b8edb1df",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "030-2026-04-01",
+        "level": 2,
+        "line": 1090,
+        "ref": "CHANGELOG.md#030-2026-04-01",
+        "title": "[0.3.0] - 2026-04-01"
+      },
+      "id": "event:repo:e2fdcb937381e6a98731",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "042-2026-04-23",
+        "level": 2,
+        "line": 968,
+        "ref": "CHANGELOG.md#042-2026-04-23",
+        "title": "[0.4.2] - 2026-04-23"
+      },
+      "id": "event:repo:efb33399ddfbe1e3685c",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_declaration",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "010-2026-03-17",
+        "level": 2,
+        "line": 1197,
+        "ref": "CHANGELOG.md#010-2026-03-17",
+        "title": "[0.1.0] - 2026-03-17"
+      },
+      "id": "event:repo:f49f4102441bdb44103a",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "release_lane",
+      "event_role": "declaration",
+      "heading_ref": {
+        "anchor": "unreleased",
+        "level": 2,
+        "line": 7,
+        "ref": "CHANGELOG.md#unreleased",
+        "title": "[Unreleased]"
+      },
+      "id": "event:repo:1e188aacf914c10e7dbd",
+      "observation_state": "declared",
+      "path": "CHANGELOG.md",
+      "source_record_id": "file:changelog.md:06572a96a5"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:7e65b789c0006f9d98c4",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0001-agon-active-legacy-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0001-agon-active-legacy-split.md:61c52c8732"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:dff7e1ff7578d03fe1cf",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0002-agon-part-local-artifacts.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0002-agon-part-local-artifacts.md:dd20a8353b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:4d52b409e034ee0bdfa0",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0003-audit-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0003-audit-active-parts-split.md:560be29973"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:30da48c1ed88b0168b37",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0004-distillation-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0004-distillation-active-parts-split.md:133bc784bc"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:81b80e9478736d3c06a7",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0005-distillation-cross-layer-candidate-registry.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0005-distillation-cross-layer-candidate-registry.md:0b343d144e"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:88c109f7e4168f37108e",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0006-distillation-external-candidate-registry.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0006-distillation-external-candidate-registry.md:7cbc4865a6"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:e0ed8789134e86c70b36",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0007-distillation-gate-alignment.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0007-distillation-gate-alignment.md:7fbfe9a9a2"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:cfbddd52822e385f0a14",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0008-experience-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0008-experience-active-parts-split.md:fb0c8c180b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:fd0733418735f4e592ee",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0009-growth-cycle-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0009-growth-cycle-active-parts-split.md:fc1b768232"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:1623168961fd16d17155",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0010-mechanics-boundary-language-correction.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0010-mechanics-boundary-language-correction.md:384ba98389"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:b81f09ee127b44da2854",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0011-mechanics-law-local-bridge-alignment.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0011-mechanics-law-local-bridge-alignment.md:06d20512a1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:48aadad3e319e22af0b8",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0012-mechanics-owner-request-receipts.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0012-mechanics-owner-request-receipts.md:d393fa01fd"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:d4554f649137fbf68474",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0013-mechanics-surface-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0013-mechanics-surface-split.md:897a42ccaf"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:7f95ef45466b57870d26",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0014-method-growth-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0014-method-growth-active-parts-split.md:a9168158d8"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:fbcf06a09be109411338",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0015-recurrence-cross-layer-registry-observation.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0015-recurrence-cross-layer-registry-observation.md:9cec32624e"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:212be5939150ccc7b426",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0016-standalone-portable-technique-posture.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0016-standalone-portable-technique-posture.md:ec49d98917"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:3151bb3d1f699df6eea4",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0017-technique-atom-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0017-technique-atom-contract.md:ebd3693f46"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:15d4a3623828a1bf85b7",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0018-technique-topology-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0018-technique-topology-contract.md:47d2601101"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:9b351f03265c5fb5dd23",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0019-antifragility-active-legacy-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0019-antifragility-active-legacy-split.md:c3bbf61362"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:565bc1ffa79661523e19",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0020-recurrence-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0020-recurrence-active-parts-split.md:22e356f26c"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:0a9e3f1d7a044846ae2a",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0021-release-support-active-parts-split.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0021-release-support-active-parts-split.md:055f3d40b8"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:75b305c857208b843f04",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0022-boundary-bridge-candidate-mechanic.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0022-boundary-bridge-candidate-mechanic.md:1ab07fb148"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:0cada13b106e8d5ad193",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0023-checkpoint-candidate-mechanic.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0023-checkpoint-candidate-mechanic.md:2a281e3d73"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:74fab40003aaadaaefe2",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0024-distillation-agon-candidate-handoff.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0024-distillation-agon-candidate-handoff.md:81e62ddc4c"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:5573fdb32f4a7d79ae9c",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0025-mechanics-legacy-scaffold-bridge.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0025-mechanics-legacy-scaffold-bridge.md:096dd509d2"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:acfc58fdfa1693d794cb",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0026-mechanics-package-card-standard.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0026-mechanics-package-card-standard.md:571c5bfdef"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:553b5b92ee8559765bdf",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0027-method-growth-obsolescence-route.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0027-method-growth-obsolescence-route.md:72a330332a"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:8f689ca8bff73cb9287a",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0028-method-growth-pattern-adoption-gate.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0028-method-growth-pattern-adoption-gate.md:ab67094aea"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:1d0fc4ece3ca5b56fe1b",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0029-method-growth-retention-review.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0029-method-growth-retention-review.md:3da59801ea"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:d03f406b65bab257db70",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0030-method-growth-skill-proposal-handoff.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0030-method-growth-skill-proposal-handoff.md:91f3a65988"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:46f40a23787e1243729f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0031-questbook-candidate-mechanic.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0031-questbook-candidate-mechanic.md:284209e101"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:ba8a0be0fe2043dbd11a",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0032-questbook-lane-first-source-store.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0032-questbook-lane-first-source-store.md:b31dffc4cb"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:b575b43247a995b3d959",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0033-root-source-of-truth-topology.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0033-root-source-of-truth-topology.md:9c4546419b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:bd63fd81f0399b5381f6",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0034-rpg-candidate-mechanic.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0034-rpg-candidate-mechanic.md:27128d6021"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:53ae9dc06afcac634299",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0035-technique-reform-ingress-packet.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0035-technique-reform-ingress-packet.md:56af0d167f"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:0a5b746fc6df365b9a04",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0036-0005-kind-remap.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0036-0005-kind-remap.md:7287bac7ab"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:3f64d3c4259e06e8f3a1",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0037-0052-kind-remap.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0037-0052-kind-remap.md:0bb99efca5"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:4986fd5427c3725af121",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0038-0054-kind-remap.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0038-0054-kind-remap.md:7ce31611e7"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:28dce075872fbff3590f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0039-0085-kind-remap.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0039-0085-kind-remap.md:cace9fb7a4"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:5fd97021b8c7260a2e34",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0040-root-legacy-provenance-district.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0040-root-legacy-provenance-district.md:f6b415f0b5"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:6fda4a1890e38a07ee25",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0041-technique-tree-contract.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0041-technique-tree-contract.md:721a954978"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:1eae77bf3475cce01a8d",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0042-topology-scout-axis-registry.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0042-topology-scout-axis-registry.md:ad1e6f174b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:ad36fa14936fbd74d2e0",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0043-github-landing-and-mechanics-roadmap-route.md:a0e990b3e8"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:f63e6333ad34f12d2b10",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0044-template-modernization-optional-sections.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0044-template-modernization-optional-sections.md:5b01905416"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:eb7630d8ecca87621b22",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0045-agent-surface-design-and-mesh.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0045-agent-surface-design-and-mesh.md:9e6279aba1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:9677d2a000a21781e8d8",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0046-canonical-retro-audit-part.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0046-canonical-retro-audit-part.md:e6d2dc5259"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:eba6f8e340405d942642",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0047-mechanic-contract-packet-homes.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0047-mechanic-contract-packet-homes.md:bb7708fac8"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:a9d53c7adb8bdefcd5e8",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0048-mechanic-script-homes.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0048-mechanic-script-homes.md:089cd3ad3d"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:216a4a6f8f4b7c194386",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0049-mechanic-test-homes.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0049-mechanic-test-homes.md:979e9e2cd2"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:d5c3165ea7dcf07cf898",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0050-recurrence-manifest-part-home.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0050-recurrence-manifest-part-home.md:74ed6d3c72"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:04aa9970cc8a2c5b3408",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0051-review-packet-mechanics-home.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0051-review-packet-mechanics-home.md:d68e2bfb19"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:a27a3212598a0c850ea0",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0052-root-data-retirement.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0052-root-data-retirement.md:c75601c747"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:acd9618d757e3d2fb785",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0053-root-md-surface-slimming.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0053-root-md-surface-slimming.md:89ff2961a1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:c0c7fa355b6e62cafe73",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0054-spark-agent-lane-home.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0054-spark-agent-lane-home.md:239237a728"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:89318e7fb09f73450f51",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0055-technique-reform-report-home.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0055-technique-reform-report-home.md:732b107ff6"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:2bc91d544472405e3304",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0056-technique-reform-scout-input-homes.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0056-technique-reform-scout-input-homes.md:66d76c743f"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:9fe388cedc0bb8c11684",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0057-spark-registry-backed-technique-lane.md:2990c33a20"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:079f3e693e59b3e9e857",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0058-docs-surface-guardrails-and-tree-contract-slimming.md:d67157da07"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:b4d99d805a6e343872b0",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0059-agent-neighbor-doc-command-ownership.md:bc0b35c4d4"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:9f1294249aad85c3e23f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0060-agents-mesh-canonical-closure.md:46ad020e62"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:d87fa1bd95b6a482d649",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0061-candidate-intake-active-part-home.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0061-candidate-intake-active-part-home.md:c77c5606c3"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:e6c547adc00e2b446eda",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0062-closed-incoming-packets-distillation-legacy.md:388053c6f6"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:06575d41a30886d4c189",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0063-incoming-evidence-only-closeout.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0063-incoming-evidence-only-closeout.md:60cbec97d9"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:50e87adfd4527c7aab71",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0064-technique-intelligence-move-registry.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0064-technique-intelligence-move-registry.md:587f3896b1"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:0c90601e49dd60eaa792",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0065-canonical-decision-ids-and-indexes.md:96f7fe7867"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:6f65295703c42f5ddc1a",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0066-validation-lane-command-authority.md:262a18d53e"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:33863757b864e3d17ba0",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0067-validator-owner-modules.md:3570302f87"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:5c7cc205960de3461f2f",
+      "observation_state": "declared",
+      "path": "docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md",
+      "source_record_id": "file:docs/decisions/aoa-tech-d-0068-script-surface-inventory.md:8bf5f4dcc2"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:0928278abc98e3f57c6d",
+      "observation_state": "declared",
+      "path": "docs/decisions/TEMPLATE.md",
+      "source_record_id": "file:docs/decisions/template.md:874770b824"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:bf4bd03c1ebe7b2e1bd0",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-date.md",
+      "source_record_id": "file:docs/decisions/indexes/by-date.md:7f76a83a93"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:7858c95b3bf7bcaa0a64",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-guard.md",
+      "source_record_id": "file:docs/decisions/indexes/by-guard.md:8ae406686a"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:cd0bf898d5f91f73b5b6",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-mechanic.md",
+      "source_record_id": "file:docs/decisions/indexes/by-mechanic.md:ebd094489b"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:69b9489325c4d44a5c90",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-number.md",
+      "source_record_id": "file:docs/decisions/indexes/by-number.md:02e6940a39"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:5d1ccd412d9a6bb41dbd",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-surface.md",
+      "source_record_id": "file:docs/decisions/indexes/by-surface.md:acd156903f"
+    },
+    {
+      "event_kind": "decision_record",
+      "event_role": "declaration",
+      "heading_ref": null,
+      "id": "event:repo:c94c1788e59df6cb7c81",
+      "observation_state": "declared",
+      "path": "docs/decisions/indexes/by-technique-axis.md",
+      "source_record_id": "file:docs/decisions/indexes/by-technique-axis.md:9ee9420f3d"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:e02ffd86604116942bd1",
+      "observation_state": "observed",
+      "path": "kag/receipts/validation_receipt.json",
+      "source_record_id": "file:kag/receipts/validation_receipt.json:8e616be0cd"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:db1344a5a2637d7d5ec5",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md:d78e628109"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:57d12c5c6bf1684a7c5c",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-capability-registry-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-capability-registry-tree-pilot.md:8a7e1b00be"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:ceeec7a223d0463614b9",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md:6105204715"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:ab6fe9ad6704babc547b",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md:0ebc3ef5fa"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:0af0ddc73d6cf11566e5",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md:7f7ca7dcd6"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:22237a52124902eba613",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md:6b9c63b4a2"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:e83cb6c4984b5a1ac028",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md:1facc5eba5"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:ab8984a2ec22ba31de8a",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-media-ingest-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-media-ingest-tree-pilot.md:89e2b2cd03"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:6b255e72d1b730a2fa11",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-04-review-compaction-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-04-review-compaction-tree-pilot.md:29b03df283"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:799113b3e2cf623c50f2",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md:bac19bf265"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:63c33f975cac38dcba62",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md:8436895251"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:6d7c189bf1d907ce5810",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md:2ed5f4f883"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:78b06fb67879fd7aa49f",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-automation-readiness-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-automation-readiness-tree-pilot.md:859893b447"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:779e023f33894466b4e0",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-decision-routing-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-decision-routing-tree-pilot.md:055c1b35f6"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:fa76de62d1f38285349f",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md:9b0c6d86d4"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:f4f07fc1b451c535d492",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md:8e6f6b1072"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:a5511ad9bd76e456144b",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md:7c055a7c9f"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:9d1b2a65452dd632e867",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-intent-chain-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-intent-chain-tree-pilot.md:06d3199092"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:9502032b8709404c94b3",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md:fd16c3faff"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:dcdf06c142e64248bccf",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md:78a22582ae"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:60d124f77fa77e791388",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md:95e37c40a5"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:59a4726405647da14fb8",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-published-summary-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-published-summary-tree-pilot.md:11fd276d28"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:56b0b252c1b17dd5ff18",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md:88d737685f"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:83749a15eae106e81fb5",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-review-evidence-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-review-evidence-tree-pilot.md:cd8280d623"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:f13f065fd47e87440fba",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md:e16da97072"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:26e3dbf23a18808eadfa",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-skill-discovery-tree-pilot.md:1e4fd6fbb5"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:45daf622f1ec466b250e",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-skill-support-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-skill-support-tree-pilot.md:5ca4cf1c0b"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:cbbc91ffd9990cec911c",
+      "observation_state": "observed",
+      "path": "legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md",
+      "source_record_id": "file:legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md:2c98b7c351"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:f869a33f4edad3d2c48e",
+      "observation_state": "observed",
+      "path": "legacy/receipts/AGENTS.md",
+      "source_record_id": "file:legacy/receipts/agents.md:04bef8605e"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:862337ffcfb850a3954f",
+      "observation_state": "observed",
+      "path": "legacy/receipts/README.md",
+      "source_record_id": "file:legacy/receipts/readme.md:47ec2120ab"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2da40523bb0d95dd1f8d",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-technique-candidates/scripts/build_agon_epistemic_technique_candidates.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-technique-candidates/scripts/build_agon_epistemic_technique_candidates.py:e761a33b93"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:013de8134ee5a03e83db",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-technique-candidates/scripts/validate_agon_epistemic_technique_candidates.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-technique-candidates/scripts/validate_agon_epistemic_technique_candidates.py:035afe63ea"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f14655b453fdbed3e052",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py",
+      "source_record_id": "file:mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py:274d855712"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:facc721d8cc7261ce92e",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py",
+      "source_record_id": "file:mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py:11f82e9dcc"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:338cbc4a62b4c6bf77e8",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py",
+      "source_record_id": "file:mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py:04744ee4e2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e38c3e2c8418359b19cb",
+      "observation_state": "declared",
+      "path": "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",
+      "source_record_id": "file:mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py:e1c0ecf1e4"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ed05d8617d8e8317e4b4",
+      "observation_state": "declared",
+      "path": "mechanics/agon/tests/test_agon_mechanics_topology.py",
+      "source_record_id": "file:mechanics/agon/tests/test_agon_mechanics_topology.py:c5f3edc56e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d5a62837abde63e15e83",
+      "observation_state": "declared",
+      "path": "mechanics/antifragility/tests/test_antifragility_mechanics_topology.py",
+      "source_record_id": "file:mechanics/antifragility/tests/test_antifragility_mechanics_topology.py:bee6528db2"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:825931f2e16d00f6982b",
+      "observation_state": "declared",
+      "path": "mechanics/audit/tests/test_audit_mechanics_topology.py",
+      "source_record_id": "file:mechanics/audit/tests/test_audit_mechanics_topology.py:61678e3997"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:cac39fe2cd45eeb5a9eb",
+      "observation_state": "declared",
+      "path": "mechanics/boundary-bridge/tests/test_boundary_bridge_mechanics_topology.py",
+      "source_record_id": "file:mechanics/boundary-bridge/tests/test_boundary_bridge_mechanics_topology.py:621e6a7fec"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:72919e0f59236a8fb52b",
+      "observation_state": "declared",
+      "path": "mechanics/checkpoint/tests/test_checkpoint_mechanics_topology.py",
+      "source_record_id": "file:mechanics/checkpoint/tests/test_checkpoint_mechanics_topology.py:0f84c9e814"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:23200f2830bca4e72eb2",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py",
+      "source_record_id": "file:mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py:6bf6b62a56"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6bc5db9084bbfb9d7ac7",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py",
+      "source_record_id": "file:mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py:19ad5940cc"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d68b5b8d91271c74d058",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py",
+      "source_record_id": "file:mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py:3228705e4b"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:55b27c50685fc4c4efbb",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py",
+      "source_record_id": "file:mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py:765906c4c5"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:91987a7ce436f1c49bd6",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py",
+      "source_record_id": "file:mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py:5374bda42b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:04d3806fce02c435d963",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py",
+      "source_record_id": "file:mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py:5b5175da19"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5b132ef4b2ba9a3684c8",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py",
+      "source_record_id": "file:mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py:bac359db43"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:65a91095d85e9f13919e",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py",
+      "source_record_id": "file:mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py:e6e0305498"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:94b4f8708e23c779d41f",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py",
+      "source_record_id": "file:mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py:9b3627e44c"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6aeba731d967eb7de69f",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py",
+      "source_record_id": "file:mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py:845c06c1c3"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e1e660b34c9e31f3a1dc",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py",
+      "source_record_id": "file:mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py:176d42480c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:fb78b42f8bc94a8f4d0c",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_capability_boundary_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_capability_boundary_tree_pilot.py:e957409775"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:772eb383fc884bc2f344",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_capability_registry_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_capability_registry_tree_pilot.py:f18df62b8b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e84411b378a03b165388",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_diagnosis_repair_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_diagnosis_repair_tree_pilot.py:5725e9969a"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a79e087690368f550485",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_gate_decisions.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_gate_decisions.py:538bb41b40"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5a8c60644dd194de6dba",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_incoming_topology.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_incoming_topology.py:ea31a78f1b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a73a9f7f9f917a62fcd9",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_package_surfaces.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_package_surfaces.py:ced7185b3e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0f8aa5988b1ce3c3bf71",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_part_ledgers_handoff.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_part_ledgers_handoff.py:19a81dcd26"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:188d9859872595168670",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_reform_ingress_reviews.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_reform_ingress_reviews.py:e3946edd78"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b214432aefa91c1f77dd",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_tree_pilot_automation_closeout.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_tree_pilot_automation_closeout.py:7613905457"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ba330e18976011eecdfe",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_tree_pilot_capability_wave.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_tree_pilot_capability_wave.py:41ac3f2b3d"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8a332439e2bfeb29a7fb",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_tree_pilot_history_wave.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_tree_pilot_history_wave.py:2a64242697"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:43ffe1e8339cbac91a04",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_tree_pilot_ingress_wave.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_tree_pilot_ingress_wave.py:a9d48ab51c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ed39733a1820d65b19da",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_distillation_tree_pilot_runtime_wave.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_distillation_tree_pilot_runtime_wave.py:261914bf09"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ab0a6176e42702e1026b",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_docs_boundary_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_docs_boundary_tree_pilot.py:f28eb70b3e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:501da5fdbb1c901e34fd",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_evaluation_chain_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_evaluation_chain_tree_pilot.py:6b838e7b9c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8cd4fa5f2d02dec7e864",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_handoff_continuation_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_handoff_continuation_tree_pilot.py:070e531517"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:4dd85d36afe1259c727b",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_history_artifacts_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_history_artifacts_tree_pilot.py:60c4a8b114"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e0c0b7210b3003e1272f",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_instruction_surface_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_instruction_surface_tree_pilot.py:5f750270fa"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:fdefaec8693d1dfc0eb6",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_kag_source_lift_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_kag_source_lift_tree_pilot.py:939e2d9fe0"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6fd2f30dd796dde5c848",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_media_ingest_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_media_ingest_tree_pilot.py:78e75721b5"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:997e3215576cfd0ec7ec",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_published_summary_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_published_summary_tree_pilot.py:3a97b170bb"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f18b3d4795879bb3dfcc",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_review_compaction_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_review_compaction_tree_pilot.py:50b489fae4"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bcc07c1935a721639893",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_skill_discovery_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_skill_discovery_tree_pilot.py:1adc258ef7"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:4e213b31572f19d29090",
+      "observation_state": "declared",
+      "path": "mechanics/distillation/tests/test_skill_support_tree_pilot.py",
+      "source_record_id": "file:mechanics/distillation/tests/test_skill_support_tree_pilot.py:ccee71ac11"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:72797e3007c04f9b0435",
+      "observation_state": "declared",
+      "path": "mechanics/experience/tests/test_experience_adoption_contracts.py",
+      "source_record_id": "file:mechanics/experience/tests/test_experience_adoption_contracts.py:8bee56523b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:4df68c08f1e001e58e1d",
+      "observation_state": "declared",
+      "path": "mechanics/experience/tests/test_experience_governance_contracts.py",
+      "source_record_id": "file:mechanics/experience/tests/test_experience_governance_contracts.py:91c8bf91c1"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bc090b8abae6924327ef",
+      "observation_state": "declared",
+      "path": "mechanics/experience/tests/test_experience_mechanics_topology.py",
+      "source_record_id": "file:mechanics/experience/tests/test_experience_mechanics_topology.py:01c2ce6829"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:de3c6d21165c31655df2",
+      "observation_state": "declared",
+      "path": "mechanics/growth-cycle/tests/test_growth_cycle_mechanics_topology.py",
+      "source_record_id": "file:mechanics/growth-cycle/tests/test_growth_cycle_mechanics_topology.py:a50def5bfb"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:f086fcb24b052c91dec0",
+      "observation_state": "declared",
+      "path": "mechanics/method-growth/tests/test_method_growth_mechanics_topology.py",
+      "source_record_id": "file:mechanics/method-growth/tests/test_method_growth_mechanics_topology.py:2329195bfd"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:e76f57b346f95c5aa623",
+      "observation_state": "declared",
+      "path": "mechanics/questbook/tests/test_questbook_mechanics_topology.py",
+      "source_record_id": "file:mechanics/questbook/tests/test_questbook_mechanics_topology.py:bd7e3fa289"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1286717a870570464420",
+      "observation_state": "declared",
+      "path": "mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py",
+      "source_record_id": "file:mechanics/recurrence/parts/live-observation-producers/scripts/publish_live_receipts.py:2b6fbe9602"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:2bf54083eaf9ada0b59b",
+      "observation_state": "declared",
+      "path": "mechanics/recurrence/tests/test_publish_live_receipts.py",
+      "source_record_id": "file:mechanics/recurrence/tests/test_publish_live_receipts.py:79d470db58"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6bc68201bee3b295a2c8",
+      "observation_state": "declared",
+      "path": "mechanics/recurrence/tests/test_recurrence_manifest_topology.py",
+      "source_record_id": "file:mechanics/recurrence/tests/test_recurrence_manifest_topology.py:cd7e45fa0b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bc479550cdd3e49bcbf4",
+      "observation_state": "declared",
+      "path": "mechanics/recurrence/tests/test_recurrence_mechanics_topology.py",
+      "source_record_id": "file:mechanics/recurrence/tests/test_recurrence_mechanics_topology.py:c2c4868507"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:618d317aee7346d3c79d",
+      "observation_state": "declared",
+      "path": "mechanics/release-support/tests/test_release_support_mechanics_topology.py",
+      "source_record_id": "file:mechanics/release-support/tests/test_release_support_mechanics_topology.py:408b5b32cc"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:199f49c7a65983efcba6",
+      "observation_state": "declared",
+      "path": "mechanics/rpg/tests/test_rpg_mechanics_topology.py",
+      "source_record_id": "file:mechanics/rpg/tests/test_rpg_mechanics_topology.py:8e2dd663d4"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:56d4d1a6605c65b22c1c",
+      "observation_state": "declared",
+      "path": "mechanics/tests/test_experience_release_contracts.py",
+      "source_record_id": "file:mechanics/tests/test_experience_release_contracts.py:d261a7e594"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1908eee1a8d1430c4524",
+      "observation_state": "declared",
+      "path": "mechanics/tests/test_mechanics_legacy_scaffolds.py",
+      "source_record_id": "file:mechanics/tests/test_mechanics_legacy_scaffolds.py:0ca80ffe39"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:d4d7dc3e9f381224b41e",
+      "observation_state": "declared",
+      "path": "mechanics/tests/test_mechanics_package_cards.py",
+      "source_record_id": "file:mechanics/tests/test_mechanics_package_cards.py:04f448c6a1"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:3e832dbead8d4213e30b",
+      "observation_state": "declared",
+      "path": "mechanics/tests/test_mechanics_request_receipts.py",
+      "source_record_id": "file:mechanics/tests/test_mechanics_request_receipts.py:07fe02cb5d"
+    },
+    {
+      "event_kind": "validation_receipt",
+      "event_role": "receipt",
+      "heading_ref": null,
+      "id": "event:repo:8cd76e802aa21f82ad35",
+      "observation_state": "observed",
+      "path": "memo/receipts/.gitkeep",
+      "source_record_id": "file:memo/receipts/.gitkeep:eb3b036b02"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7ed713bd3d2e928185b8",
+      "observation_state": "declared",
+      "path": "scripts/build_agents_mesh_index.py",
+      "source_record_id": "file:scripts/build_agents_mesh_index.py:d418d4c434"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c7ab450117ff43fae839",
+      "observation_state": "declared",
+      "path": "scripts/build_capsules.py",
+      "source_record_id": "file:scripts/build_capsules.py:44b8d4951d"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a6d4fa6f25670d8ee757",
+      "observation_state": "declared",
+      "path": "scripts/build_catalog.py",
+      "source_record_id": "file:scripts/build_catalog.py:369fbd11fa"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:df7b9d07b6923eb459c7",
+      "observation_state": "declared",
+      "path": "scripts/build_checklist_manifest.py",
+      "source_record_id": "file:scripts/build_checklist_manifest.py:e72fb7b4d2"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:63f58a651c66e10d0e95",
+      "observation_state": "declared",
+      "path": "scripts/build_evidence_note_manifest.py",
+      "source_record_id": "file:scripts/build_evidence_note_manifest.py:677db66fbc"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5836a5e4e51304b8ea1e",
+      "observation_state": "declared",
+      "path": "scripts/build_example_manifest.py",
+      "source_record_id": "file:scripts/build_example_manifest.py:6408b7f6d5"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:123c03681112b76e53da",
+      "observation_state": "declared",
+      "path": "scripts/build_github_review_template_manifest.py",
+      "source_record_id": "file:scripts/build_github_review_template_manifest.py:f3c7fc181f"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:afe1ee4dca80bcbe4ca5",
+      "observation_state": "declared",
+      "path": "scripts/build_kag_export.py",
+      "source_record_id": "file:scripts/build_kag_export.py:d630508e51"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6f05f0144658ed8f26fe",
+      "observation_state": "declared",
+      "path": "scripts/build_kind_manifest.py",
+      "source_record_id": "file:scripts/build_kind_manifest.py:53ffb86edb"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:179dd4650859cd1cb089",
+      "observation_state": "declared",
+      "path": "scripts/build_promotion_readiness.py",
+      "source_record_id": "file:scripts/build_promotion_readiness.py:e4cfb7c2ce"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:980fa86b83a6d0b324b3",
+      "observation_state": "declared",
+      "path": "scripts/build_questbook_projection.py",
+      "source_record_id": "file:scripts/build_questbook_projection.py:637dddf144"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:04269a1ab5a122d01923",
+      "observation_state": "declared",
+      "path": "scripts/build_repo_doc_surface_manifest.py",
+      "source_record_id": "file:scripts/build_repo_doc_surface_manifest.py:87bed07467"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:41fd19fcc1c3f47b1c31",
+      "observation_state": "declared",
+      "path": "scripts/build_section_manifest.py",
+      "source_record_id": "file:scripts/build_section_manifest.py:b21d870692"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0d0241191e87fc063a62",
+      "observation_state": "declared",
+      "path": "scripts/build_sections.py",
+      "source_record_id": "file:scripts/build_sections.py:2c458624b2"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9ae2fcbc825f6985dd82",
+      "observation_state": "declared",
+      "path": "scripts/build_semantic_review_manifest.py",
+      "source_record_id": "file:scripts/build_semantic_review_manifest.py:47ac527241"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bbef1bdefe7da1de3997",
+      "observation_state": "declared",
+      "path": "scripts/build_shadow_review_manifest.py",
+      "source_record_id": "file:scripts/build_shadow_review_manifest.py:966d6fa565"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1645430b4eebf6c4e693",
+      "observation_state": "declared",
+      "path": "scripts/build_technique_intelligence.py",
+      "source_record_id": "file:scripts/build_technique_intelligence.py:aee5423505"
+    },
+    {
+      "event_kind": "validation_lane_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b23e52bff766bc6c52fd",
+      "observation_state": "declared",
+      "path": "scripts/ci_gate.py",
+      "source_record_id": "file:scripts/ci_gate.py:c5138334e3"
+    },
+    {
+      "event_kind": "generation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ebaf4911adce2cdc5c4b",
+      "observation_state": "declared",
+      "path": "scripts/generate_decision_indexes.py",
+      "source_record_id": "file:scripts/generate_decision_indexes.py:9ee2698c6e"
+    },
+    {
+      "event_kind": "validation_lane_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:17239e793a67ae2bdc36",
+      "observation_state": "declared",
+      "path": "scripts/release_check.py",
+      "source_record_id": "file:scripts/release_check.py:070046d3ac"
+    },
+    {
+      "event_kind": "command_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ff5bac78547a51e583e9",
+      "observation_state": "declared",
+      "path": "scripts/run_part_local_tests.py",
+      "source_record_id": "file:scripts/run_part_local_tests.py:cfbb189175"
+    },
+    {
+      "event_kind": "validation_lane_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:95a9663da338085712e0",
+      "observation_state": "declared",
+      "path": "scripts/run_tests.py",
+      "source_record_id": "file:scripts/run_tests.py:c8ebeae9a0"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:52c3120693c12dba9db4",
+      "observation_state": "declared",
+      "path": "scripts/validate_abyss_machine_kag_export_bundle.py",
+      "source_record_id": "file:scripts/validate_abyss_machine_kag_export_bundle.py:7eaedf4491"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:5f6eb9d9380e939c3c07",
+      "observation_state": "declared",
+      "path": "scripts/validate_agents_md_shape.py",
+      "source_record_id": "file:scripts/validate_agents_md_shape.py:97117975e7"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:bef6116297ef7eb4fd15",
+      "observation_state": "declared",
+      "path": "scripts/validate_agents_mesh.py",
+      "source_record_id": "file:scripts/validate_agents_mesh.py:5dc490a89b"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ec759027245ff6ad20f5",
+      "observation_state": "declared",
+      "path": "scripts/validate_agents_mesh_index.py",
+      "source_record_id": "file:scripts/validate_agents_mesh_index.py:e5f4c29fb3"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ff0fbe980952c4ffbc17",
+      "observation_state": "declared",
+      "path": "scripts/validate_nested_agents.py",
+      "source_record_id": "file:scripts/validate_nested_agents.py:5befe5bd63"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a4101bd44ae8f6f42c8b",
+      "observation_state": "declared",
+      "path": "scripts/validate_public_hygiene.py",
+      "source_record_id": "file:scripts/validate_public_hygiene.py:179cd9e9a1"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:8d55cc6fef7e71b9519f",
+      "observation_state": "declared",
+      "path": "scripts/validate_repo.py",
+      "source_record_id": "file:scripts/validate_repo.py:1c4be8b173"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9021f65877542c4adbdd",
+      "observation_state": "declared",
+      "path": "scripts/validate_repo_local_kag_index.py",
+      "source_record_id": "file:scripts/validate_repo_local_kag_index.py:4985b57a7e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0f8b6e70b6b60ff1f33e",
+      "observation_state": "declared",
+      "path": "scripts/validate_semantic_agents.py",
+      "source_record_id": "file:scripts/validate_semantic_agents.py:7d17f6046e"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ff607e79ac304e59523f",
+      "observation_state": "declared",
+      "path": "scripts/validate_source_contracts.py",
+      "source_record_id": "file:scripts/validate_source_contracts.py:712bfcf4dd"
+    },
+    {
+      "event_kind": "validation_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:9f4ed23bfb0c3a250010",
+      "observation_state": "declared",
+      "path": "tests/support/validate_repo_fixtures.py",
+      "source_record_id": "file:tests/support/validate_repo_fixtures.py:40891dcacd"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:c8c8a1d8eff58edc4f3f",
+      "observation_state": "declared",
+      "path": "tests/test_agents_mesh.py",
+      "source_record_id": "file:tests/test_agents_mesh.py:4ec817b9c1"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:77a75ae0fc03b96549e4",
+      "observation_state": "declared",
+      "path": "tests/test_current_direction_routes.py",
+      "source_record_id": "file:tests/test_current_direction_routes.py:098f12afb4"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6176e83d0aa6f2416898",
+      "observation_state": "declared",
+      "path": "tests/test_decision_indexes.py",
+      "source_record_id": "file:tests/test_decision_indexes.py:b90af86566"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:108d366453ac85fad989",
+      "observation_state": "declared",
+      "path": "tests/test_docs_surface_guardrails.py",
+      "source_record_id": "file:tests/test_docs_surface_guardrails.py:b8fdc31931"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6c9c7cbb3379519256d2",
+      "observation_state": "declared",
+      "path": "tests/test_downstream_feed_contracts.py",
+      "source_record_id": "file:tests/test_downstream_feed_contracts.py:abc4f4e39f"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1e119ddaadd941861c21",
+      "observation_state": "declared",
+      "path": "tests/test_github_workflow_topology.py",
+      "source_record_id": "file:tests/test_github_workflow_topology.py:a7b69e5f4c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:1abc61a0792c6939655e",
+      "observation_state": "declared",
+      "path": "tests/test_nested_agents_docs.py",
+      "source_record_id": "file:tests/test_nested_agents_docs.py:d990104fd4"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:0c6a05b4c2bfc273d95e",
+      "observation_state": "declared",
+      "path": "tests/test_release_check.py",
+      "source_record_id": "file:tests/test_release_check.py:3f21f1424c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:01dc6c9d268d74e5c253",
+      "observation_state": "declared",
+      "path": "tests/test_roadmap_parity.py",
+      "source_record_id": "file:tests/test_roadmap_parity.py:574915dc67"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:b1e60647d44fd43e60e4",
+      "observation_state": "declared",
+      "path": "tests/test_root_legacy_topology.py",
+      "source_record_id": "file:tests/test_root_legacy_topology.py:5eed110f16"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:97017f5271b8f8d60e7b",
+      "observation_state": "declared",
+      "path": "tests/test_script_topology.py",
+      "source_record_id": "file:tests/test_script_topology.py:6f0a306b0b"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:6baa7488213067eff0be",
+      "observation_state": "declared",
+      "path": "tests/test_technique_intelligence.py",
+      "source_record_id": "file:tests/test_technique_intelligence.py:24fa58fe2c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:645f95b5598d23b8c799",
+      "observation_state": "declared",
+      "path": "tests/test_test_topology.py",
+      "source_record_id": "file:tests/test_test_topology.py:9474485b91"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:fb5510133922e965ca36",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_agents_mesh.py",
+      "source_record_id": "file:tests/test_validate_repo_agents_mesh.py:8658ee6a5e"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:ec69458048bb6804f887",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_ci_release_authority.py",
+      "source_record_id": "file:tests/test_validate_repo_ci_release_authority.py:f8a3b9c764"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:7c214b0b40ca0c3d325b",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_compatibility_imports.py",
+      "source_record_id": "file:tests/test_validate_repo_compatibility_imports.py:b8959f6cec"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:94df6ec6e4beeb55ea91",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_generated_drift.py",
+      "source_record_id": "file:tests/test_validate_repo_generated_drift.py:33a13c6a67"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:31c5c8491557e494e9d9",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_public_hygiene.py",
+      "source_record_id": "file:tests/test_validate_repo_public_hygiene.py:20edd23620"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:03cf235b70863dc20832",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_questbook_intelligence.py",
+      "source_record_id": "file:tests/test_validate_repo_questbook_intelligence.py:71426c49f6"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:30cba05eda8f3d62bcf3",
+      "observation_state": "declared",
+      "path": "tests/test_validate_repo_source_contracts.py",
+      "source_record_id": "file:tests/test_validate_repo_source_contracts.py:e0bd6f96b5"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a78786b1e128cd5916d6",
+      "observation_state": "declared",
+      "path": "tests/test_validate_semantic_agents.py",
+      "source_record_id": "file:tests/test_validate_semantic_agents.py:03b76abc01"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:dd7bd9293c25d3ac7081",
+      "observation_state": "declared",
+      "path": "tests/test_validation_command_authority.py",
+      "source_record_id": "file:tests/test_validation_command_authority.py:78624b39c6"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:691466febceb7f51842a",
+      "observation_state": "declared",
+      "path": "tests/test_validation_topology.py",
+      "source_record_id": "file:tests/test_validation_topology.py:f6818f763c"
+    },
+    {
+      "event_kind": "test_run",
+      "event_role": "producer",
+      "heading_ref": null,
+      "id": "event:repo:a332c96170ca1a295aae",
+      "observation_state": "declared",
+      "path": "tests/test_validator_module_topology.py",
+      "source_record_id": "file:tests/test_validator_module_topology.py:12b5f4eff6"
+    }
+  ],
+  "index_identity": {
+    "artifact_kind": "repository_event_index",
+    "content_digest": "499c167e01dd3cfee009e4d3e492d1f569858882fab00bd8626304b93f1e074e",
+    "index_kind": "event",
+    "local_id": "index:repo-local:events",
+    "schema_ref": "aoa-kag:schemas/repo-local-kag-repository-index.schema.json"
+  },
+  "registry_output": {
+    "consumer": "aoa-kag-mcp",
+    "resource_shape": "repo-local-event-index",
+    "stable_fields": [
+      "id",
+      "event_kind",
+      "event_role",
+      "source_record_id",
+      "path",
+      "heading_ref"
+    ]
+  },
+  "repo": {
+    "git_ref": "git-index-source-tree",
+    "name": "aoa-techniques",
+    "owner_type": "organ",
+    "root": "."
+  },
+  "schema_version": "aoa-repo-local-kag-repository-index-v1",
+  "source_index": {
+    "content_digest": "2bc275f10c82a14f5cf73dc4b029e8f571a0298de4a4541bf56f83d5fc66dce5",
+    "local_id": "index:repo-local:source-surfaces",
+    "path": "kag/indexes/source_surface_index.json"
+  },
+  "summary": {
+    "entry_count": 245,
+    "kind_counts": {
+      "command_run": 8,
+      "decision_record": 75,
+      "generation_run": 25,
+      "release_declaration": 7,
+      "release_lane": 1,
+      "test_run": 74,
+      "validation_lane_run": 3,
+      "validation_receipt": 32,
+      "validation_run": 17,
+      "workflow_run": 3
+    }
+  }
+}
