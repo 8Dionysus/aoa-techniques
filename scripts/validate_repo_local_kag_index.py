@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the owner-local KAG source index with the canonical aoa-kag builder."""
+"""Check the owner-local KAG index family with the canonical aoa-kag builder."""
 
 from __future__ import annotations
 
@@ -18,8 +18,8 @@ from urllib.request import urlopen
 REPO_ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = "kag/indexes/source_surface_index.json"
 GENERATOR_PATH = Path("scripts/generate_repo_local_kag_index.py")
-AOA_KAG_REF = "34dded920a832a529cd9a71cee37454e17b0a790"
-GENERATOR_SHA256 = "693dc302c888bb078ea6587672b63efa880b88ed3d393ce4e469d7d6dc1bec5b"
+AOA_KAG_REF = "a8045bdfecd4256b93736805b7303048a993ae01"
+GENERATOR_SHA256 = "1a922a33feb3b42003bf50554355a18e4422fb45cc5bb7c510484dad20ce199f"
 GENERATOR_URL = (
     "https://raw.githubusercontent.com/8Dionysus/aoa-kag/"
     f"{AOA_KAG_REF}/{GENERATOR_PATH.as_posix()}"
@@ -107,6 +107,7 @@ def command(generator: Path, repo_root: Path = REPO_ROOT) -> tuple[str, ...]:
         str(repo_root),
         "--output",
         INDEX_PATH,
+        "--index-family",
         "--check",
     )
 

@@ -251,6 +251,7 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
                     str(repo_root),
                     "--output",
                     "kag/indexes/source_surface_index.json",
+                    "--index-family",
                     "--check",
                 ),
                 validate_repo_local_kag_index.command(generator, repo_root),
