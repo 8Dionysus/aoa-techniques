@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-kag
-          ref: a8045bdfecd4256b93736805b7303048a993ae01
+          ref: ed0cec45c24b2591391617367264e9cc6243bfc4
           path: .deps/aoa-kag
 
       - name: Setup Python
