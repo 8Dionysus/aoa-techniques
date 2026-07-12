@@ -14,7 +14,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = "kag/indexes/source_surface_index.json"
 GENERATOR_PATH = Path("scripts/generate_repo_local_kag_index.py")
 VALIDATOR_PATH = Path("scripts/validate_repo_local_kag_family.py")
-AOA_KAG_REF = "956134dccb744f7f46a3aba8a9d60df9baf1aa69"
+AOA_KAG_REF = "790457eb4806586c255c2b4a9ec4a8f08789a330"
 
 
 def resolve_aoa_kag_root(
