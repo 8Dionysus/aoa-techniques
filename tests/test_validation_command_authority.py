@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import hashlib
-import io
 import json
 import subprocess
 import sys
@@ -227,6 +225,9 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         self.assertNotIn("python scripts/validate_source_contracts.py", workflow)
         self.assertIn("repository: 8Dionysus/aoa-kag", workflow)
         self.assertIn("AOA_KAG_ROOT:", workflow)
+        self.assertIn("AOA_REPO_LOCAL_KAG_HISTORY_REF:", workflow)
+        self.assertIn("AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF:", workflow)
+        self.assertIn("fetch-depth: 0", workflow)
         self.assertIn(f"ref: {validate_repo_local_kag_index.AOA_KAG_REF}", workflow)
         self.assertNotIn("uses: 8Dionysus/aoa-kag/", workflow)
 
@@ -235,96 +236,58 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
             workspace = Path(temp_dir)
             repo_root = workspace / "aoa-techniques"
             generator = workspace / "aoa-kag" / "scripts" / "generate_repo_local_kag_index.py"
+            validator = workspace / "aoa-kag" / "scripts" / "validate_repo_local_kag_family.py"
             repo_root.mkdir()
             generator.parent.mkdir(parents=True)
             generator.touch()
+            validator.touch()
 
             aoa_kag_root = validate_repo_local_kag_index.resolve_aoa_kag_root(
                 {}, repo_root
             )
             self.assertEqual((workspace / "aoa-kag").resolve(), aoa_kag_root)
+            commands = validate_repo_local_kag_index.commands(
+                aoa_kag_root,
+                repo_root,
+                history_ref="base-sha",
+                event_history_ref="event-base-sha",
+            )
+            self.assertIn("--incremental", commands[1])
+            self.assertIn("base-sha", commands[0])
+            self.assertIn("event-base-sha", commands[0])
             self.assertEqual(
-                (
-                    sys.executable,
-                    str(generator),
-                    "--repo-root",
-                    str(repo_root),
-                    "--output",
-                    "kag/indexes/source_surface_index.json",
-                    "--index-family",
-                    "--check",
-                ),
-                validate_repo_local_kag_index.command(generator, repo_root),
+                str(validator),
+                commands[2][1],
             )
 
-    def test_repo_local_kag_adapter_fetches_and_verifies_pinned_builder(self) -> None:
-        content = b"print('portable builder')\n"
+    def test_repo_local_kag_adapter_resolves_owner_history_boundary(self) -> None:
+        history = validate_repo_local_kag_index.resolve_history_refs(
+            {
+                "AOA_REPO_LOCAL_KAG_HISTORY_REPO": "aoa-techniques",
+                "AOA_REPO_LOCAL_KAG_HISTORY_REF": "base-sha",
+                "AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF": "event-base-sha",
+            },
+            REPO_ROOT,
+        )
+        self.assertEqual(("base-sha", "event-base-sha"), history)
+
+    def test_repo_local_kag_adapter_accepts_pinned_checkout(self) -> None:
         with TemporaryDirectory() as temp_dir:
-            destination = Path(temp_dir) / "scripts" / "generate_repo_local_kag_index.py"
-            with patch.object(
-                validate_repo_local_kag_index,
-                "GENERATOR_SHA256",
-                hashlib.sha256(content).hexdigest(),
-            ):
-                fetched = validate_repo_local_kag_index.fetch_generator(
-                    destination,
-                    opener=lambda _url, **_kwargs: io.BytesIO(content),
+            aoa_kag_root = Path(temp_dir) / "aoa-kag"
+            with patch.object(subprocess, "run") as run:
+                run.return_value.returncode = 0
+                run.return_value.stdout = validate_repo_local_kag_index.AOA_KAG_REF + "\n"
+                self.assertEqual(
+                    aoa_kag_root,
+                    validate_repo_local_kag_index.require_pinned_checkout(aoa_kag_root),
                 )
 
-            self.assertEqual(destination, fetched)
-            self.assertEqual(content, fetched.read_bytes())
-
-    def test_repo_local_kag_adapter_verifies_explicit_local_builder(self) -> None:
-        content = b"print('local builder')\n"
-        with TemporaryDirectory() as temp_dir:
-            workspace = Path(temp_dir)
-            repo_root = workspace / "aoa-techniques"
-            aoa_kag_root = workspace / "aoa-kag"
-            generator = aoa_kag_root / "scripts" / "generate_repo_local_kag_index.py"
-            repo_root.mkdir()
-            generator.parent.mkdir(parents=True)
-            generator.write_bytes(content)
-            with patch.object(
-                validate_repo_local_kag_index,
-                "GENERATOR_SHA256",
-                hashlib.sha256(content).hexdigest(),
-            ):
-                with validate_repo_local_kag_index.canonical_generator(
-                    {"AOA_KAG_ROOT": str(aoa_kag_root)},
-                    repo_root,
-                ) as resolved:
-                    self.assertEqual(generator.resolve(), resolved)
-
-            generator.write_bytes(b"stale builder\n")
-            with self.assertRaisesRegex(RuntimeError, "AOA_KAG_ROOT.*digest mismatch"):
-                with validate_repo_local_kag_index.canonical_generator(
-                    {"AOA_KAG_ROOT": str(aoa_kag_root)},
-                    repo_root,
-                ):
-                    pass
-
-    def test_repo_local_kag_adapter_ignores_unpinned_sibling_builder(self) -> None:
-        with TemporaryDirectory() as temp_dir:
-            workspace = Path(temp_dir)
-            repo_root = workspace / "aoa-techniques"
-            sibling_generator = (
-                workspace / "aoa-kag" / "scripts" / "generate_repo_local_kag_index.py"
-            )
-            fetched_generator = workspace / "fetched" / "generate_repo_local_kag_index.py"
-            repo_root.mkdir()
-            sibling_generator.parent.mkdir(parents=True)
-            sibling_generator.write_bytes(b"unpinned sibling\n")
-            with patch.object(
-                validate_repo_local_kag_index,
-                "fetch_generator",
-                return_value=fetched_generator,
-            ) as fetch:
-                with validate_repo_local_kag_index.canonical_generator(
-                    {},
-                    repo_root,
-                ) as resolved:
-                    self.assertEqual(fetched_generator, resolved)
-            fetch.assert_called_once()
+    def test_repo_local_kag_adapter_rejects_other_checkout(self) -> None:
+        with patch.object(subprocess, "run") as run:
+            run.return_value.returncode = 0
+            run.return_value.stdout = "0" * 40 + "\n"
+            with self.assertRaisesRegex(RuntimeError, "must resolve"):
+                validate_repo_local_kag_index.require_pinned_checkout(Path("aoa-kag"))
 
     def test_active_docs_route_to_lane_ids_instead_of_full_sequences(self) -> None:
         active_docs = (

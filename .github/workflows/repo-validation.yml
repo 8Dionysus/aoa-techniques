@@ -16,15 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     env:
       AOA_KAG_ROOT: ${{ github.workspace }}/.deps/aoa-kag
+      AOA_REPO_LOCAL_KAG_HISTORY_REPO: aoa-techniques
+      AOA_REPO_LOCAL_KAG_HISTORY_REF: ${{ github.event.pull_request.base.sha || github.event.before || github.sha }}
+      AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF: ${{ github.event.pull_request.base.sha || github.event.before || github.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
 
       - name: Checkout aoa-kag index builder
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-kag
-          ref: a8045bdfecd4256b93736805b7303048a993ae01
+          ref: da9f50a581645b2173b99dbf771a63d447ec2fec
           path: .deps/aoa-kag
 
       - name: Setup Python
