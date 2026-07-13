@@ -61,8 +61,4 @@ raw inventory for this package.
 
 Verify with:
 
-```bash
-python -m unittest tests.test_experience_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

@@ -9,6 +9,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 PINNED_CHECKOUT = "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd"
 PINNED_SETUP_PYTHON = "actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405"
+PINNED_AOA_KAG = "da9f50a581645b2173b99dbf771a63d447ec2fec"
+PINNED_AOA_STATS = "25ebfb784f01d3b93f62994908579c4a2c5d87b1"
 
 
 class GitHubWorkflowTopologyTests(unittest.TestCase):
@@ -58,6 +60,28 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
                 self.assertIn(PINNED_SETUP_PYTHON, text)
                 self.assertNotRegex(text, re.compile(r"actions/checkout@v\d+"))
                 self.assertNotRegex(text, re.compile(r"actions/setup-python@v\d+"))
+
+    def test_stats_protocol_dependency_is_pinned_for_current_consuming_lanes(self) -> None:
+        repo_validation = self.workflow_text("repo-validation.yml")
+        release = self.workflow_text("release-audit.yml")
+        nightly = self.workflow_text("nightly-sentinel.yml")
+        moving_main = nightly.split("  latest_release_repro:", 1)[0]
+
+        for name, workflow in (
+            ("repo-validation", repo_validation),
+            ("release-audit", release),
+            ("nightly-moving-main", moving_main),
+        ):
+            with self.subTest(workflow=name):
+                self.assertIn("AOA_STATS_ROOT:", workflow)
+                self.assertIn("repository: 8Dionysus/aoa-stats", workflow)
+                self.assertIn(f"ref: {PINNED_AOA_STATS}", workflow)
+
+        self.assertIn("AOA_KAG_ROOT:", moving_main)
+        self.assertIn("repository: 8Dionysus/aoa-kag", moving_main)
+        self.assertIn(f"ref: {PINNED_AOA_KAG}", moving_main)
+        self.assertEqual(1, nightly.count("repository: 8Dionysus/aoa-stats"))
+        self.assertEqual(1, nightly.count("repository: 8Dionysus/aoa-kag"))
 
     def test_pull_request_template_names_lanes_not_release_check_as_repo_validation(
         self,

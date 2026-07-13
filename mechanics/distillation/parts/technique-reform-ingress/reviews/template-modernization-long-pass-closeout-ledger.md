@@ -86,9 +86,9 @@ Good next posture:
 Final validation is recorded in closeout reporting rather than this source
 packet. The required final checks are:
 
-- `git diff --check`
+- the diff hygiene check
 - public-safety grep over touched public surfaces
 - bridge-block grep over touched public surfaces
-- `python -m unittest tests.test_distillation_mechanics_topology`
-- `python scripts/validate_repo.py`
-- `python -m unittest discover -s tests`
+- the targeted tests
+- repository validation
+- the repository test suite

@@ -92,10 +92,4 @@ decision instead of silently upgrading the registry fields.
 
 Use:
 
-```bash
-python scripts/build_technique_intelligence.py
-python scripts/technique_intelligence.py build --check
-python scripts/validate_repo.py
-python scripts/run_tests.py
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

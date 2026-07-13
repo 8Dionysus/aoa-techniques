@@ -156,4 +156,4 @@ Run the fourth pilot migration.
 Move exactly `AOA-T-0080` through `AOA-T-0083` into
 `techniques/recovery/diagnosis-repair/`, add the minimal `recovery/` route
 card, repair authored links, preserve a root legacy receipt, rebuild generated
-surfaces, and run `python scripts/release_check.py`.
+surfaces, and run the release lane.

@@ -56,7 +56,7 @@ path movement.
 - [Technique topology scout rows for `skill-support` and `evaluation-chain`](../reports/technique_topology_scout.md)
 - [Skill-support direct-read migration review](skill-support-direct-read-migration-review.md)
 - [Landed skill-discovery pilot review](landed-skill-discovery-pilot-review.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

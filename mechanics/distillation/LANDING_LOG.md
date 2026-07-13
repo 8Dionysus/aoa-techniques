@@ -30,12 +30,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_incoming_topology
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-git diff --check
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -62,14 +57,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo
-python scripts/validate_repo.py
-python scripts/release_check.py
-git diff --check
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -93,16 +81,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python scripts/build_kind_manifest.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-git diff --check
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -128,18 +107,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python scripts/build_kind_manifest.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python scripts/validate_semantic_agents.py
-python -m unittest tests.test_validate_repo
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-git diff --check
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -167,13 +135,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_validate_repo
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -218,11 +180,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python scripts/release_check.py
-python -m unittest tests.test_nested_agents_docs tests.test_distillation_mechanics_topology tests.test_validate_repo tests.test_roadmap_parity
-python scripts/validate_repo.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -249,12 +207,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python scripts/validate_nested_agents.py
-python -m unittest tests.test_nested_agents_docs
-python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo tests.test_roadmap_parity
-python scripts/validate_repo.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -282,11 +235,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -313,11 +262,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -343,12 +288,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_validate_repo tests.test_skill_discovery_tree_pilot tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -377,11 +317,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -407,11 +343,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -438,12 +370,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -475,11 +402,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -505,10 +428,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -535,12 +455,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -570,11 +485,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -600,11 +511,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -630,12 +537,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -666,11 +568,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -698,11 +596,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -734,11 +628,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -772,11 +662,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -809,12 +695,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -853,10 +734,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -881,10 +759,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -916,12 +791,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -957,10 +827,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -986,10 +853,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1020,12 +884,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1056,10 +915,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1087,10 +943,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1118,12 +971,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1152,10 +1000,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1181,10 +1026,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1214,10 +1056,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1250,10 +1089,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1283,10 +1119,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1313,10 +1146,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_roadmap_parity
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1349,10 +1179,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1382,10 +1209,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1413,10 +1237,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1447,10 +1268,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1478,10 +1296,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1508,10 +1323,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1540,10 +1352,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1571,10 +1380,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1601,10 +1407,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1631,10 +1434,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1661,10 +1461,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1695,10 +1492,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1728,10 +1522,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1758,10 +1549,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1792,11 +1580,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_history_artifacts_tree_pilot
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1823,10 +1607,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1852,10 +1633,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1887,10 +1665,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_published_summary_tree_pilot
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -1922,11 +1697,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1953,10 +1724,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -1987,10 +1755,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_evaluation_chain_tree_pilot
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -2020,11 +1785,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2050,10 +1811,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2083,10 +1841,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_skill_support_tree_pilot
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -2116,11 +1871,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2146,10 +1897,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2178,10 +1926,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_skill_discovery_tree_pilot
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -2212,11 +1957,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2245,10 +1986,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2278,10 +2016,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_capability_boundary_tree_pilot
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not changed:
 
@@ -2311,11 +2046,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2343,11 +2074,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2376,15 +2103,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_capability_registry_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology tests.test_docs_boundary_tree_pilot tests.test_kag_source_lift_tree_pilot
-git diff --check
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2414,11 +2133,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2446,11 +2161,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2480,15 +2191,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_docs_boundary_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
-git diff --check
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2519,11 +2222,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2551,11 +2250,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2585,15 +2280,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_kag_source_lift_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
-git diff --check
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2624,11 +2311,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2655,11 +2338,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2685,15 +2364,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_instruction_surface_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
-git diff --check
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2722,11 +2393,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2751,11 +2418,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2781,14 +2444,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_diagnosis_repair_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
-git diff --check
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2816,11 +2472,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2844,11 +2496,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2873,15 +2521,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_media_ingest_tree_pilot tests.test_root_legacy_topology tests.test_distillation_mechanics_topology
-git diff --check
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2907,11 +2547,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2935,11 +2571,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2965,13 +2597,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_root_legacy_topology tests.test_handoff_continuation_tree_pilot
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -2995,11 +2621,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3021,11 +2643,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3049,13 +2667,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_root_legacy_topology tests.test_review_compaction_tree_pilot
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3078,11 +2690,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3107,13 +2715,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3137,12 +2739,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3166,12 +2763,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3195,12 +2787,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3223,11 +2810,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3251,12 +2834,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3280,12 +2858,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3309,12 +2882,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3340,12 +2908,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3371,12 +2934,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3398,11 +2956,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3422,10 +2976,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 ## 2026-05-01 - External candidate ledger compaction
 
@@ -3440,11 +2991,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 ## 2026-05-01 - External candidate registry
 
@@ -3460,14 +3007,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py --check
-python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3494,14 +3034,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3525,11 +3058,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_recurrence_manifest_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3550,13 +3079,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3578,13 +3101,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3607,14 +3124,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_agon_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3636,14 +3146,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3665,14 +3168,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3694,14 +3190,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3726,14 +3215,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3758,14 +3240,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3788,14 +3263,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3820,13 +3288,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3851,12 +3313,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3882,14 +3339,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3917,14 +3367,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity tests.test_audit_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3950,14 +3393,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_roadmap_parity
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -3982,13 +3418,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 

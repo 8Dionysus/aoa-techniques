@@ -43,7 +43,7 @@ that shelf is the nearest continuity sibling and will test whether
 - [Review-compaction tree pilot receipt](../../../../../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
 - [Technique tree projection rows for `review-compaction` and
   `handoff-continuation`](../reports/technique_tree_projection.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

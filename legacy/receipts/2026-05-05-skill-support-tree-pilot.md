@@ -51,6 +51,6 @@ Root legacy preserves only this migration accounting.
 
 ## Validation
 
-- `python scripts/release_check.py` passed after rebuilding generated surfaces,
+- the release lane passed after rebuilding generated surfaces,
   running the full unittest suite, validating nested `AGENTS.md` coverage, and
   validating repository parity.

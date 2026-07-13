@@ -66,7 +66,4 @@ retention checks, and obsolescence.
 
 The bundle is checked through normal technique validation and generated parity:
 
-```bash
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

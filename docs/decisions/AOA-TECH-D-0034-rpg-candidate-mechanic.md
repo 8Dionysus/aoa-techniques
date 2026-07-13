@@ -62,9 +62,4 @@ acceptance.
 
 Verify with:
 
-```bash
-python -m unittest tests.test_rpg_mechanics_topology tests.test_mechanics_request_receipts
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

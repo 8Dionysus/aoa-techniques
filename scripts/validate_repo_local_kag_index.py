@@ -18,6 +18,7 @@ AOA_KAG_REF = "da9f50a581645b2173b99dbf771a63d447ec2fec"
 HISTORY_REPO_ENV = "AOA_REPO_LOCAL_KAG_HISTORY_REPO"
 HISTORY_REF_ENV = "AOA_REPO_LOCAL_KAG_HISTORY_REF"
 EVENT_HISTORY_REF_ENV = "AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF"
+OWNER_REPO = "aoa-techniques"
 
 
 def resolve_aoa_kag_root(
@@ -60,7 +61,7 @@ def resolve_history_refs(
     env: Mapping[str, str] = os.environ,
     repo_root: Path = REPO_ROOT,
 ) -> tuple[str | None, str | None]:
-    if env.get(HISTORY_REPO_ENV) == repo_root.name:
+    if env.get(HISTORY_REPO_ENV) == OWNER_REPO:
         history_ref = env.get(HISTORY_REF_ENV, "").strip()
         event_history_ref = env.get(EVENT_HISTORY_REF_ENV, "").strip()
         if history_ref:

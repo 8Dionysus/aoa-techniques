@@ -8,6 +8,9 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- added the root `stats/` owner port with a revision-bound promotion-readiness
+  pass ratio, central protocol validation, and coverage that rejects a false
+  numerator while preserving technique and audit authority
 - added the root `kag/` local provider district and wired it into root surface
   law, the AGENTS mesh, and generated mesh index for downstream KAG consumers
 - tightened the OS Abyss KAG export artifact envelope so the manifest, validator,
@@ -945,10 +948,10 @@ The format is intentionally simple and human-first.
 
 ### Validation
 
-- `python scripts/validate_repo.py`
-- `python scripts/run_tests.py`
-- `python scripts/release_check.py`
-- `git diff --check`
+- repository validation
+- the repository test runner
+- the release lane
+- the diff hygiene check
 
 ### Notes
 
@@ -959,9 +962,9 @@ The format is intentionally simple and human-first.
 - generated outputs remain derived companions; authored technique bundles,
   route cards, contracts, decisions, and mechanic-owned review packets remain
   the authority surfaces
-- exact executable command lanes now live in the owning `AGENTS.md` or
-  [RELEASING](docs/RELEASING.md) surfaces rather than public route or reader
-  docs
+- exact executable command lanes now live in
+  `config/validation_lanes.json`, with focused local commands only in the
+  owning `AGENTS.md`, rather than public route or reader docs
 - package publishing to PyPI, npm, or other registries remains out of scope for
   this release
 
@@ -1002,10 +1005,10 @@ The format is intentionally simple and human-first.
 
 ### Validation
 
-- `python scripts/release_check.py`
-- `python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check`
-- `python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py`
-- `python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py`
+- the release lane
+- the owning part builder
+- the owning part validator
+- the targeted part-local tests
 
 ### Notes
 
@@ -1036,7 +1039,7 @@ The format is intentionally simple and human-first.
 
 ### Validation
 
-- `python scripts/release_check.py`
+- the release lane
 
 ### Notes
 
@@ -1053,7 +1056,7 @@ The format is intentionally simple and human-first.
 
 ### Validation
 
-- `python scripts/release_check.py`
+- the release lane
 
 ### Notes
 
@@ -1145,7 +1148,7 @@ This changelog entry uses the release-prep merge date.
 
 ### Validation
 
-- `python scripts/release_check.py`
+- the release lane
 
 ### Notes
 
@@ -1172,7 +1175,7 @@ This changelog entry uses the release-prep merge date.
 - the canonical default set expanded across agent workflows, docs, evaluation, and KAG/source-lift surfaces, including `AOA-T-0004`, `AOA-T-0013` through `AOA-T-0019`, `AOA-T-0021`, `AOA-T-0023`, and `AOA-T-0034`
 - evidence and review posture is stronger across the corpus through broader `second-context-adaptation`, `canonical-readiness`, `external-origin`, `external-import-review`, and canonical-only `adverse-effects-review` coverage
 - repo routing now centers on `docs/START_HERE.md` and the bounded `pick -> inspect -> expand -> object use` operating path
-- release and validation posture now centers on `python scripts/release_check.py`, with tighter generator-drift checks, repo-doc and review-surface validation, broader public-hygiene URL scanning, and cleaner worktree behavior
+- release and validation posture now centers on the release lane, with tighter generator-drift checks, repo-doc and review-surface validation, broader public-hygiene URL scanning, and cleaner worktree behavior
 
 ### Included in this release
 
@@ -1185,7 +1188,7 @@ This changelog entry uses the release-prep merge date.
 
 ### Validation
 
-- `python scripts/release_check.py`
+- the release lane
 - the bounded release check reruns repo-doc, catalog, capsule, section, checklist, example, evidence-note, GitHub review-template, semantic-review, and shadow-review builders before `unittest` and `validate_repo`
 
 ### Notes
@@ -1227,8 +1230,8 @@ The GitHub release for `v0.1.0` was published on `2026-03-18`.
 
 Documented local validation path for this release:
 
-- `python -m unittest discover -s tests`
-- `python scripts/validate_repo.py`
+- the repository test suite
+- repository validation
 
 ### Notes
 

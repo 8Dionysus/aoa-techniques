@@ -164,8 +164,8 @@ pass/fail evidence.
 Final closeout validation should use the same bounded menu as the residual
 scan:
 
-1. `git diff --check`
+1. the diff hygiene check
 2. public-safety grep over touched public-share surfaces
 3. bridge-block grep over touched public-share surfaces
-4. `python -m unittest tests.test_distillation_mechanics_topology`
-5. `python scripts/validate_repo.py`
+4. the targeted tests
+5. repository validation

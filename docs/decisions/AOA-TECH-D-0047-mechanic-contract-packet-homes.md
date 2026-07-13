@@ -61,10 +61,4 @@ mechanic-local schema/example pairs.
 
 ## Verification
 
-```bash
-python -m unittest tests.test_experience_adoption_contracts tests.test_experience_governance_contracts tests.test_experience_release_contracts
-python -m unittest tests.test_experience_mechanics_topology tests.test_method_growth_mechanics_topology tests.test_release_support_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

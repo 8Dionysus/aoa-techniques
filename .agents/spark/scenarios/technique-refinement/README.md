@@ -27,6 +27,6 @@ mechanic or sibling repository must accept the next move.
 ## Validation
 
 Run the narrowest validation named by the target bundle or owner route. For a
-text-only patch with no generated surface, `git diff --check` plus an honest
-manual contract pass is enough. Use `python scripts/validate_repo.py` only when
+text-only patch with no generated surface, the diff hygiene check plus an honest
+manual contract pass is enough. Use repository validation only when
 repo law, touched generated surfaces, or the user asks for that broader proof.

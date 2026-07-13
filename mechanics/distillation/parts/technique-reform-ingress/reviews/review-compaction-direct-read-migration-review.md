@@ -125,4 +125,4 @@ Run the first pilot migration.
 Move exactly `AOA-T-0051`, `AOA-T-0052`, and `AOA-T-0054` into
 `techniques/continuity/review-compaction/`, add the minimal trunk `AGENTS.md`,
 repair authored links, and rebuild generated surfaces.
-Run `python scripts/release_check.py`.
+Run the release lane.

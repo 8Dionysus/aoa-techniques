@@ -114,9 +114,4 @@ valid movement.
 
 Verified with:
 
-```bash
-python scripts/build_github_review_template_manifest.py
-python scripts/build_repo_doc_surface_manifest.py
-python scripts/validate_nested_agents.py
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

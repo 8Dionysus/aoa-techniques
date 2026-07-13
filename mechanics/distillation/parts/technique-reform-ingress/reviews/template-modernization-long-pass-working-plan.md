@@ -203,8 +203,8 @@ Goal: make the starting base explicit before the long pass begins.
 Steps:
 
 1. Confirm branch and dirty surface:
-   - `git status --short --branch`
-   - `git diff --stat`
+   - the worktree status check
+   - the diff summary
 2. Confirm the `proof/skill-support` pilot package:
    - source edits in `AOA-T-0015`, `AOA-T-0016`, `AOA-T-0017`
    - optional-section validator support
@@ -213,7 +213,7 @@ Steps:
    - review packet
    - roadmap and changelog updates
 3. Rerun or confirm full validation:
-   - `python scripts/release_check.py`
+   - the release lane
 4. If the user asks for landing, commit the pilot plus this corrected long-pass
    plan, push, open PR, wait for GitHub `Repo Validation`, merge, return to
    `main`, fast-forward, and confirm clean.
@@ -633,24 +633,9 @@ contour actually changes. Do not turn this temporary plan into the roadmap.
 
 ## Validation Menu
 
-Use the smallest honest menu for plan-only changes:
-
-1. `git diff --check`
-2. public-safety grep over touched public-share files
-3. bridge-block grep over touched public-share files
-4. `python -m unittest discover -s mechanics/distillation/tests`
-5. `python scripts/validate_repo.py`
-
-Use the source-repair menu after any `TECHNIQUE.md` or validator change:
-
-1. `git diff --check`
-2. public-safety grep over touched public-share files
-3. bridge-block grep over touched public-share files
-4. `python -m unittest discover -s tests -p 'test_validate_repo.py'`
-5. `python -m unittest discover -s mechanics/distillation/tests`
-6. `python scripts/validate_nested_agents.py`
-7. `python scripts/validate_repo.py`
-8. `python scripts/release_check.py`
+Plan-only and source-repair verification followed the Distillation owner card
+and repository lanes. This working plan does not own an executable validation
+sequence.
 
 ## Landing Rhythm
 
@@ -669,7 +654,7 @@ Preferred landing units during execution:
 
 For each landing when the user asks:
 
-1. inspect `git diff --stat`
+1. inspect the diff summary
 2. stage only intended files
 3. commit with a surface-naming message
 4. push branch

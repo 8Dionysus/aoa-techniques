@@ -8,6 +8,10 @@ This doc complements [Roadmap](../../../../ROADMAP.md) and [Long-Gap Canon Desig
 Bundle meaning still lives in each `TECHNIQUE.md` and `notes/canonical-readiness.md`.
 For the current actionable first wave, open [Promotion Evidence Runbook](../promotion-evidence-runbook/README.md).
 
+The owner-local [promotion-readiness pass ratio](../../../../stats/README.md)
+observes the generated readiness cohort as a revision-bound census. It does
+not replace this bundle-by-bundle audit route or authorize a status change.
+
 ## Current Posture
 
 - current promoted corpus: `9` techniques

@@ -42,13 +42,11 @@ For canonical IDs or index metadata, read `README.md`, `TEMPLATE.md`, and
 
 ## Validation
 
-Full lane command sequences live in `config/validation_lanes.json`; decision
-records may preserve command evidence, but active command authority stays in
-the lane manifest and entrypoints.
+Full lane command sequences live in `config/validation_lanes.json`. Decision
+records preserve verification scope and outcome rather than executable command
+evidence.
 New or revised decision records should name lane ids and the nearest owner
-`AGENTS.md` checks in active verification guidance. If an old command transcript
-must be preserved, label it as historical verification evidence rather than
-current command law.
+`AGENTS.md` checks in active verification guidance.
 
 For decision ID, metadata, and generated lookup-index parity, run:
 

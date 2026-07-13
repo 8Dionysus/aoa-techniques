@@ -8,11 +8,7 @@ It does not create canonical techniques.
 
 ## Validation
 
-```bash
-python scripts/build_agon_technique_binding_candidates.py --check
-python scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q tests/test_agon_technique_binding_candidates.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 ## Exit criteria
 

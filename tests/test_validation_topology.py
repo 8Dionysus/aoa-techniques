@@ -48,6 +48,7 @@ class ValidationTopologyTests(unittest.TestCase):
             tuple(command) for command in manifest["command_sequences"]["source_fast"]
         }
         self.assertIn(("python", "scripts/validate_source_contracts.py"), source_commands)
+        self.assertIn(("python", "scripts/validate_local_stats_port.py"), source_commands)
         self.assertNotIn(("python", "scripts/validate_repo.py"), source_commands)
         self.assertNotIn(("python", "scripts/build_catalog.py"), source_commands)
 
@@ -111,6 +112,8 @@ class ValidationTopologyTests(unittest.TestCase):
         self.assertIn("eval verdict layer", topology)
         self.assertIn("runtime policy engine", topology)
         self.assertIn("fast authored technique source contracts", topology)
+        self.assertIn("owner-local stats protocol", topology)
+        self.assertIn("cross-owner aggregation remain with `aoa-stats`", topology)
 
     def test_mechanics_part_local_lane_covers_discovered_part_tests(self) -> None:
         manifest = load_json(LANES_PATH)

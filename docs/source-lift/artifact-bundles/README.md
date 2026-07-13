@@ -17,6 +17,4 @@ Current bundle:
 
 Validate with:
 
-```bash
-python scripts/validate_abyss_machine_kag_export_bundle.py
-```
+Validation follows the source-lift owner card and the repository release lane.

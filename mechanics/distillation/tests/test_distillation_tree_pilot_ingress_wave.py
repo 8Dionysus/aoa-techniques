@@ -60,7 +60,7 @@ class DistillationTreePilotIngressWaveTests(unittest.TestCase):
             self.assertIn("Do not move files from this review pack alone", review)
             self.assertIn("Do not add `family` or `tree_path` frontmatter", review)
             self.assertIn("Create a minimal `techniques/continuity/AGENTS.md`", review)
-            self.assertIn("Run `python scripts/release_check.py`", review)
+            self.assertIn("Run the release lane", review)
 
             self.assertIn("review-compaction-direct-read-migration-review", reviews_index)
             self.assertIn("review-compaction direct-read review: landed", ingress)
@@ -195,7 +195,7 @@ class DistillationTreePilotIngressWaveTests(unittest.TestCase):
             self.assertIn("Do not move files from this review pack alone", review)
             self.assertIn("Do not add `family` or `tree_path` frontmatter", review)
             self.assertIn("Run the second pilot migration", review)
-            self.assertIn("run `python scripts/release_check.py`", review)
+            self.assertIn("run the release lane", review)
 
             self.assertIn("handoff-continuation-direct-read-migration-review", reviews_index)
             self.assertIn("handoff-continuation direct-read review: landed", ingress)

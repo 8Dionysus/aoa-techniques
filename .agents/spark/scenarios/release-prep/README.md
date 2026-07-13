@@ -24,4 +24,4 @@ acceptance, multi-repo synthesis, or a slower review.
 
 ## Validation
 
-Run `python scripts/release_check.py` when local dependencies are available.
+Run the release lane when local dependencies are available.

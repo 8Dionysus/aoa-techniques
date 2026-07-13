@@ -117,12 +117,4 @@ before renaming or widening `.agents/spark/`.
 
 This decision is validated by:
 
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

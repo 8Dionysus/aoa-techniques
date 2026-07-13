@@ -68,12 +68,4 @@ the first suspicious path:
 
 ## Verification
 
-```bash
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python -m unittest tests.test_publish_live_receipts
-python -m unittest tests.test_distillation_mechanics_topology tests.test_recurrence_mechanics_topology tests.test_validate_repo
-python scripts/validate_repo.py
-python scripts/release_check.py
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

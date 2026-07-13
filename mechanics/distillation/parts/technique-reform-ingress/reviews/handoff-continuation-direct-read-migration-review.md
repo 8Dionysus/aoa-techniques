@@ -163,4 +163,4 @@ Run the second pilot migration.
 Move exactly `AOA-T-0056` through `AOA-T-0062` into
 `techniques/continuity/handoff-continuation/`, update the continuity trunk route
 card, repair authored links, preserve a root legacy receipt, rebuild generated
-surfaces, and run `python scripts/release_check.py`.
+surfaces, and run the release lane.

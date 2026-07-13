@@ -50,7 +50,7 @@ instruction or knowledge-lift shelves move.
   `diagnosis-repair`](../reports/technique_tree_projection.md)
 - `mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`
 - `mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/TELEGRAM_ACCOUNT_AUTH_AND_SESSION_BRIDGE_CLOSEOUT_MEMO.md`
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

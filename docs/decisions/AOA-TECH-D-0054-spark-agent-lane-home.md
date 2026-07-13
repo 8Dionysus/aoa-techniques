@@ -55,10 +55,4 @@ mechanic routes, validation law, or sibling-owner meaning.
 
 Expected checks:
 
-```bash
-find . -maxdepth 1 -type d -name Spark -print
-rg -n 'Spark/|\\.agents/spark' AGENTS.md README.md ROADMAP.md CHANGELOG.md docs .agents scripts tests
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

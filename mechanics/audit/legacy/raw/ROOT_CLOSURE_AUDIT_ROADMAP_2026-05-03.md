@@ -14,7 +14,7 @@ Historical note:
 
 ## Current Live Closure Snapshot
 
-- current verification path: read-only current-state checks via `python scripts/validate_repo.py` plus `python -m unittest discover -s tests`, and bounded release-prep parity via `python scripts/release_check.py`
+- current verification path: read-only current-state checks via repository validation plus the repository test suite, and bounded release-prep parity via the release lane
 - current corpus split: `100` bundles, `25 canonical`, `75 promoted`
 - current release contour: `v0.4.2` carries the workspace ingress and mutation
   gate, audit-to-closeout proof loop, recommendation-truth-versus-host
@@ -80,7 +80,7 @@ Historical note:
 
 ## Baseline
 
-- baseline verification path: `python -m unittest discover -s tests` and `python scripts/validate_repo.py`
+- baseline verification path: the repository test suite and repository validation
 - current corpus split: `34` bundles, `17 canonical`, `17 promoted`
 - current promoted backlog:
   - [AOA-T-0005](techniques/agent-workflows/new-intent-rollout-checklist/TECHNIQUE.md)
@@ -185,9 +185,9 @@ Findings:
 
 - [scripts/release_check.py](scripts/release_check.py) covers every current repo-owned builder family, then runs tests and [scripts/validate_repo.py](scripts/validate_repo.py). No hidden generated family was found outside that path.
 - The release path is structurally sound: builder order is explicit, worktree stabilization is checked, and a clean repo must stay diff-clean after the bounded release pass.
-- `repo-only closure`: dirty-worktree drift detection is weaker than clean-worktree drift detection. The current stabilization logic compares `git status --porcelain` snapshots, so a tracked file that was already `M` can still change content without changing the snapshot shape.
+- `repo-only closure`: dirty-worktree drift detection is weaker than clean-worktree drift detection. The current stabilization logic compares the worktree status check snapshots, so a tracked file that was already `M` can still change content without changing the snapshot shape.
 - `repo-only closure`: there is no targeted regression test for the dirty-worktree masking case in [tests/test_validate_repo.py](tests/test_validate_repo.py).
-- `keep`: release doctrine is still described in more than one place, but [docs/RELEASING.md](docs/RELEASING.md) and [CONTRIBUTING.md](CONTRIBUTING.md) now agree on `python scripts/release_check.py` as the bounded release-prep path while still surfacing the lower-level commands.
+- `keep`: release doctrine is still described in more than one place, but [docs/RELEASING.md](docs/RELEASING.md) and [CONTRIBUTING.md](CONTRIBUTING.md) now agree on the release lane as the bounded release-prep path while still surfacing the lower-level commands.
 - `keep`: generated parity and route prose are now aligned on the `12`-doc repo-doc source set, and current tests lock that docs-map claim directly.
 
 Wave 1B backlog:
@@ -370,7 +370,7 @@ The queue below is now historical and shipped:
      - route references from [docs/START_HERE.md](docs/START_HERE.md)
    - close:
      - earlier repo-doc source-count drift on the docs path
-     - missing mention of `python scripts/release_check.py` in contribution guidance
+     - missing mention of the release lane in contribution guidance
      - missing route to this audit roadmap
 2. `selection and semantic-review contract hardening`
    - target surfaces:
@@ -429,9 +429,9 @@ Status: `completed`
   - [scripts/validate_repo.py](scripts/validate_repo.py)
   - [tests/test_validate_repo.py](tests/test_validate_repo.py)
 - tests and validation:
-  - `python -m unittest discover -s tests`
-  - `python scripts/validate_repo.py`
-  - `python scripts/release_check.py` only if generated-family parity is touched
+  - the repository test suite
+  - repository validation
+  - the release lane only if generated-family parity is touched
 - merge order:
   - docs wording first
   - guides second
@@ -455,9 +455,9 @@ Status: `completed`
   - landed agent-workflows canonical-core semantic review for `AOA-T-0001`, `AOA-T-0004`, and `AOA-T-0014`
   - landed wording refresh for [SKILL_SUPPORT_SEMANTIC_REVIEW.md](docs/SKILL_SUPPORT_SEMANTIC_REVIEW.md)
 - tests and validation:
-  - `python scripts/build_semantic_review_manifest.py` if a new review doc is added
-  - `python -m unittest discover -s tests`
-  - `python scripts/validate_repo.py`
+  - the semantic-review manifest builder if a new review doc is added
+  - the repository test suite
+  - repository validation
 - merge order:
   - author review doc
   - sync semantic-review manifest
@@ -505,7 +505,7 @@ Status: `active`
   - turn the current `future import here` intake lane into one coherent wave program without reopening overlap, incubation, or substrate lanes
   - close Wave A as fully landed now that [AOA-T-0035](techniques/docs/profile-preset-composition/TECHNIQUE.md), [AOA-T-0036](techniques/agent-workflows/render-truth-before-startup/TECHNIQUE.md), [AOA-T-0037](techniques/evaluation/contextual-host-doctor/TECHNIQUE.md), [AOA-T-0038](techniques/agent-workflows/one-command-service-lifecycle/TECHNIQUE.md), and [AOA-T-0039](techniques/evaluation/baseline-first-additive-profile-benchmarks/TECHNIQUE.md) have landed, then close Wave B as fully landed through [AOA-T-0040](techniques/docs/skill-vs-command-boundary/TECHNIQUE.md), [AOA-T-0041](techniques/docs/skill-marketplace-curation/TECHNIQUE.md), [AOA-T-0042](techniques/evaluation/upstream-skill-health-checking/TECHNIQUE.md), and [AOA-T-0043](techniques/docs/multi-source-primary-input-provenance/TECHNIQUE.md)
 - swarm layout:
-  - main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and `python scripts/release_check.py`
+  - main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and the release lane
   - each worker owns one candidate bundle at a time, plus only its `notes/`, `checks/`, and `examples/`
   - shared catalog, index, and other generated surfaces are synchronized only after a merge-ready bundle draft exists
 - wave order:

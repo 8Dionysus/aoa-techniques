@@ -71,11 +71,7 @@ recurrence promotion authority.
 
 Validation:
 
-```bash
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 ## Already Staged Elsewhere
 
@@ -115,8 +111,8 @@ The `already staged elsewhere` candidates keep their inherited placement in the 
 
 Each technique in a wave still lands through its own PR. The wave is a family-level import program, not a multi-technique merge unit.
 
-- the main agent owns wave boundaries, final wording, shared generated surfaces, intake or roadmap sync, and `python scripts/release_check.py`
-- before that final release-check path, install local validator deps with `python -m pip install -r requirements-dev.txt`
+- the main agent owns wave boundaries, final wording, shared generated surfaces, intake or roadmap sync, and the release lane
+- before that final release-check path, install local validator deps with the repository development dependencies
 - each worker should own only one future bundle directory plus its `notes/`, `checks/`, and `examples/`
 - shared files such as catalog, index, and generated surfaces stay out of worker ownership until a bundle draft is merge-ready
 

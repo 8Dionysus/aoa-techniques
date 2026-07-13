@@ -16,7 +16,7 @@ Changes made:
 - Added Spark lane validation command to release check.
 
 Validation run:
-- `python .agents/spark/scripts/validate_spark_lane.py`
+- Spark-lane validator
 
 Skipped checks:
 - None.

@@ -52,10 +52,5 @@ derived read models, not source authority.
 
 Verify with:
 
-```bash
-python scripts/build_catalog.py
-python scripts/validate_repo.py
-python -m unittest tests.test_validate_repo tests.test_questbook_mechanics_topology tests.test_growth_cycle_mechanics_topology
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.
 

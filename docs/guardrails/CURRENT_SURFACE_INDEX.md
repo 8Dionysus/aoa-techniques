@@ -47,6 +47,7 @@ legacy receipt, mechanic route, or technique bundle named by the relevant file.
 | `mechanics/<slug>/` | mechanic-owned operating surfaces, reviews, provenance, and mechanic-local legacy |
 | `evals/` | technique-local eval pressure, intake, suites, and reports; central proof authority remains in `aoa-evals` |
 | `generated/` | reproducible generated JSON and compact machine-facing companions |
+| `stats/` | owner-local technique-canon questions, measurement contracts, and public reference packets; central protocol authority remains in `aoa-stats` |
 | `techniques/**/` | authored technique bundle truth |
 
 ## Source-Lift Guide District

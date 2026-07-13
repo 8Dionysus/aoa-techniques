@@ -242,4 +242,4 @@ Move exactly `AOA-T-0097`, `AOA-T-0099`, `AOA-T-0100`, and `AOA-T-0098` into
 route card; preserve a root `legacy/receipts/` migration receipt; repair
 authored links including Antifragility mechanic anchors; rebuild generated
 surfaces; and validate with the narrow tree-pilot tests plus
-`python scripts/release_check.py`.
+the release lane.

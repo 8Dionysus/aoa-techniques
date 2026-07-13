@@ -76,6 +76,7 @@ owning [mechanics](mechanics/README.md) package.
 - `root-editing`: [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md)
 - `agent-surface-design`: [DESIGN.AGENTS](DESIGN.AGENTS.md)
 - `generated-parity`: authored source -> builder -> generated output -> validator
+- `local-stats`: [stats](stats/README.md) -> owning source -> consuming mechanic
 
 ## Technique Check
 
@@ -121,6 +122,7 @@ technique bundle when the reusable practice itself is already authored.
 | [docs](docs/README.md) | contracts, route maps, review guides, release docs, and generated-reader interpretation |
 | [mechanics](mechanics/README.md) | practice movement, evidence, provenance, and mechanic-local routes |
 | [generated](generated/) | reproducible catalogs, capsules, source-lift, review, and mesh companions |
+| [stats](stats/README.md) | owner-local corpus questions, measurement contracts, and public reference packets |
 | [examples](examples/README.md) | public-safe repo-wide worked examples |
 | [templates](templates/) | technique authoring and promotion scaffolds |
 | [legacy](legacy/README.md) | public-safe repo-wide raw, archive, and migration receipts |

@@ -61,7 +61,7 @@ decision rationale form a clean document-boundary shelf before any path move.
 - [First family shelf review pack](first-family-shelf-review-pack.md)
 - [First tree projection review pack](first-tree-projection-review-pack.md)
 - [Landed instruction-surface pilot review](landed-instruction-surface-pilot-review.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

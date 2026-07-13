@@ -66,11 +66,11 @@ list item text that was already authored.
 
 Passed locally:
 
-1. `python -m unittest tests.test_validate_repo.TechniqueContentSmokeTests.test_capsule_markdown_items_preserve_wrapped_bullets`
-2. `python scripts/build_capsules.py`
-3. `python -m unittest discover -s tests`
-4. `python scripts/release_check.py`
-5. `python scripts/validate_repo.py`
+1. the targeted tests
+2. the capsule builder
+3. the repository test suite
+4. the release lane
+5. repository validation
 
 ## Stop Lines
 

@@ -259,4 +259,4 @@ Move exactly `AOA-T-0044`, `AOA-T-0053`, `AOA-T-0026`, `AOA-T-0045`,
 `techniques/history/history-artifacts/`; update the compact history route card;
 preserve a root `legacy/receipts/` migration receipt; repair authored links;
 rebuild generated surfaces; and validate with the narrow tree-pilot tests plus
-`python scripts/release_check.py`.
+the release lane.

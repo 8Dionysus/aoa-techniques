@@ -216,11 +216,15 @@
       "mode": "blocking",
       "command_sequence": "source_fast",
       "entrypoint": "python scripts/ci_gate.py --mode source-fast",
-      "owner": "AGENTS mesh, route-card source topology, and authored technique source contracts",
+      "owner": "repo-local KAG parity, owner-local stats protocol, AGENTS mesh, route-card source topology, and authored technique source contracts",
       "inputs": [
         "AGENTS.md",
         "config/agents_mesh.json",
         "nested AGENTS.md cards",
+        "kag/indexes/*.json",
+        "stats/port.manifest.json",
+        "stats/packets/*.json",
+        "pinned aoa-kag and aoa-stats contract owners",
         "authored technique bundles",
         "source-owned technique contract docs",
         "schemas/*.json"
@@ -228,7 +232,7 @@
       "outputs": [
         "source/topology validation result"
       ],
-      "failure_route": "Fix the nearest AGENTS card, mesh config, semantic route snippet, authored technique bundle, schema, or source-owned contract doc."
+      "failure_route": "Fix the local KAG index, stats port, nearest AGENTS card, mesh config, semantic route snippet, authored technique bundle, schema, or source-owned contract doc; change shared grammar only in its stronger sibling owner."
     },
     {
       "id": "generated",

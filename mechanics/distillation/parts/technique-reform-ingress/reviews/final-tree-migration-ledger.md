@@ -71,7 +71,7 @@ on `2026-05-04` and later pilots landed on `2026-05-05`.
 ## Generated Parity
 
 The final pass rebuilt and validated generated reader and report surfaces with
-`python scripts/release_check.py`.
+the release lane.
 
 The release check rebuilt catalogs, capsules, section/checklist/example/evidence
 surfaces, semantic and shadow manifests, topology scout, tree projection, KAG

@@ -57,7 +57,7 @@ subordinate to authored markdown and outside KAG owner authority.
 - initial direct-read headers and section maps for `AOA-T-0018`, `AOA-T-0019`,
   `AOA-T-0020`, `AOA-T-0021`, `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and
   `AOA-T-0048`
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

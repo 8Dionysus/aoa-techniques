@@ -106,11 +106,4 @@ requirements that belong to the nearest `AGENTS.md`.
 
 Verify with:
 
-```bash
-python -m unittest mechanics.tests.test_mechanics_package_cards
-python -m unittest tests.test_docs_surface_guardrails
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

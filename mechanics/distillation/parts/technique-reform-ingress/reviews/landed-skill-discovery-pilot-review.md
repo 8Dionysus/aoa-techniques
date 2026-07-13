@@ -58,7 +58,7 @@ and practical, but they must not become one vague proof doctrine.
 - [AOA-T-0015 contract-test-design](../../../../../techniques/proof/skill-support/contract-test-design/TECHNIQUE.md)
 - [AOA-T-0017 property-invariants](../../../../../techniques/proof/skill-support/property-invariants/TECHNIQUE.md)
 - [Landed capability-boundary pilot review](landed-capability-boundary-pilot-review.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

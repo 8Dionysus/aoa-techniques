@@ -11,7 +11,7 @@ standalone gate.
 
 | Lane | Posture | Owns | Does not own |
 |---|---|---|---|
-| `source-fast` | blocking growth gate | AGENTS mesh, nested route-card shape, semantic route snippets, fast authored technique source contracts | generated freshness, release freeze, runtime/export policy |
+| `source-fast` | blocking growth gate | repo-local KAG parity, owner-local stats protocol, AGENTS mesh, nested route-card shape, semantic route snippets, fast authored technique source contracts | generated freshness, cross-owner statistics, release freeze, runtime/export policy |
 | `generated` | blocking projection gate | generated/read-model rebuild parity and drift snapshots | technique meaning, skill export/runtime contracts |
 | `mechanics/part-local` | blocking mechanic-owned gate | part-local candidate registries, handoff packets, builder `--check` parity, pytest homes | root release packaging, sibling runtime behavior |
 | `release` | blocking release gate | frozen release-prep sequence, Spark lane, mechanics/part-local lane, tests, validators, worktree stabilization | ordinary PR growth gating |
@@ -21,11 +21,13 @@ standalone gate.
 ## GitHub CI Route
 
 `Repo Validation` runs `source-fast` for pull requests and pushes to `main`.
-That gate checks route/topology plus source-owned technique contracts through
-`scripts/validate_source_contracts.py`; it does not rebuild or compare
-generated freshness. Generated checks run only on pushes to `main`, where the
-moving growth surface can absorb projection drift checks without turning every
-PR into a release freeze.
+That gate checks repo-local KAG parity, the owner-local stats port, route
+topology, and source-owned technique contracts. The stats adapter delegates
+protocol validation to pinned `aoa-stats`; it does not copy central schemas or
+aggregate sibling owners. The gate does not rebuild or compare generated
+freshness. Generated checks run only on pushes to `main`, where the moving
+growth surface can absorb projection drift checks without turning every PR into
+a release freeze.
 
 `Release Audit` and `Nightly Sentinel` are separate workflows. Release uses the
 `release` mode; nightly runs the moving-main `nightly` mode and separately
@@ -42,6 +44,9 @@ projections, KAG export, Technique Intelligence, questbook, and public hygiene.
 
 Authored technique bundles, docs contracts, mechanic source packets, schemas,
 and AGENTS cards own meaning.
+
+The local `stats/` port owns technique-canon questions and measurement meaning.
+Central protocol grammar and cross-owner aggregation remain with `aoa-stats`.
 
 Generated catalogs, readers, capsules, KAG export, AGENTS mesh mirrors, and
 mechanic generated indexes are projections. Generated validators check rebuild

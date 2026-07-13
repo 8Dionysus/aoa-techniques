@@ -144,8 +144,8 @@ or runtime doctrine.
 
 Passed locally:
 
-1. `git diff --check`
+1. the diff hygiene check
 2. public-share grep over the changed review surfaces
-3. `python -m unittest tests.test_distillation_mechanics_topology`
-4. `python scripts/validate_repo.py`
-5. `python scripts/release_check.py`
+3. the targeted tests
+4. repository validation
+5. the release lane

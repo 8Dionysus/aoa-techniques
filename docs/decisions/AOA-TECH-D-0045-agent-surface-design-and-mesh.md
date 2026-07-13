@@ -97,11 +97,6 @@ role, playbook, routing, KAG, stats, or ToS owner truth.
 
 The mesh route is validated by:
 
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.
 
 `scripts/release_check.py` includes the same mesh checks.

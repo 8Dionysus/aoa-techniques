@@ -30,8 +30,4 @@ a roadmap and not a technique status source.
 
 Use:
 
-```bash
-python -m unittest tests.test_checkpoint_mechanics_topology tests.test_mechanics_request_receipts tests.test_validate_repo
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.

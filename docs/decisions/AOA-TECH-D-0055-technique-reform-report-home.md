@@ -63,15 +63,4 @@ remain the authority for technique meaning.
 
 Expected checks:
 
-```bash
-python scripts/build_kind_manifest.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python scripts/validate_semantic_agents.py
-python -m unittest tests.test_validate_repo
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

@@ -15,7 +15,7 @@ Changes made:
 - None.
 
 Validation run:
-- `git diff --check`
+- Diff hygiene check
 
 Skipped checks:
 - Full release gate skipped because this was review-only.

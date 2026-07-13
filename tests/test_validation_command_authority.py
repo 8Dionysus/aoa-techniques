@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -14,6 +15,28 @@ from scripts import ci_gate, release_check, validate_repo_local_kag_index, valid
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+COMMAND_BLOCK_LINE = re.compile(
+    r"^\s*(?:\$\s*)?(?:python(?:3)?|git|gh|pytest|pip|uv|make|bash|sh|find|"
+    r"cargo|npm|node|ruff|mypy|jq|rg|curl|docker|podman|\./)\s"
+)
+REPO_COMMAND_LITERAL = re.compile(
+    r"python (?:scripts/|mechanics/|\.agents/|-m (?:unittest|pytest|pip))|"
+    r"git (?:diff --|status --|status -|mv )"
+)
+
+
+def markdown_command_nonowners() -> tuple[Path, ...]:
+    paths: list[Path] = []
+    for path in REPO_ROOT.rglob("*.md"):
+        relative = path.relative_to(REPO_ROOT)
+        if path.name == "AGENTS.md":
+            continue
+        if relative.parts[:2] == (".agents", "skills"):
+            continue
+        if relative.parts and relative.parts[0] == "techniques":
+            continue
+        paths.append(path)
+    return tuple(sorted(paths))
 
 
 def command_sequence_from_manifest(name: str) -> tuple[tuple[str, ...], ...]:
@@ -51,6 +74,10 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
             ("python", "scripts/validate_source_contracts.py"),
             validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE,
         )
+        self.assertIn(
+            ("python", "scripts/validate_local_stats_port.py"),
+            validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE,
+        )
         self.assertEqual(
             ("python", "scripts/validate_repo_local_kag_index.py"),
             validation_lanes.SOURCE_FAST_COMMAND_SEQUENCE[0],
@@ -86,6 +113,10 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         )
         self.assertEqual(
             command_sequence_from_manifest("release_check"),
+            validation_lanes.RELEASE_CHECK_COMMAND_SEQUENCE,
+        )
+        self.assertIn(
+            ("python", "scripts/validate_local_stats_port.py"),
             validation_lanes.RELEASE_CHECK_COMMAND_SEQUENCE,
         )
         self.assertEqual(
@@ -224,7 +255,9 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         self.assertNotIn("python scripts/validate_repo.py", workflow)
         self.assertNotIn("python scripts/validate_source_contracts.py", workflow)
         self.assertIn("repository: 8Dionysus/aoa-kag", workflow)
+        self.assertIn("repository: 8Dionysus/aoa-stats", workflow)
         self.assertIn("AOA_KAG_ROOT:", workflow)
+        self.assertIn("AOA_STATS_ROOT:", workflow)
         self.assertIn("AOA_REPO_LOCAL_KAG_HISTORY_REF:", workflow)
         self.assertIn("AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF:", workflow)
         self.assertIn("fetch-depth: 0", workflow)
@@ -342,19 +375,39 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
                 with self.subTest(surface=relative_path, command=command):
                     self.assertNotIn(command, text)
 
-    def test_historical_decision_records_may_preserve_command_evidence(self) -> None:
-        decisions_agent = (
-            REPO_ROOT / "docs" / "decisions" / "AGENTS.md"
-        ).read_text(encoding="utf-8")
-        historical_record = (
-            REPO_ROOT
-            / "docs"
-            / "decisions"
-            / "AOA-TECH-D-0051-review-packet-mechanics-home.md"
-        ).read_text(encoding="utf-8")
+    def test_markdown_nonowners_do_not_store_command_blocks(self) -> None:
+        offenders: list[str] = []
+        for path in markdown_command_nonowners():
+            relative = path.relative_to(REPO_ROOT).as_posix()
+            lines = path.read_text(encoding="utf-8").splitlines()
+            index = 0
+            while index < len(lines):
+                if not lines[index].lstrip().startswith("```"):
+                    index += 1
+                    continue
+                start = index + 1
+                index += 1
+                body: list[str] = []
+                while index < len(lines) and not lines[index].lstrip().startswith("```"):
+                    body.append(lines[index])
+                    index += 1
+                if any(COMMAND_BLOCK_LINE.match(line) for line in body):
+                    offenders.append(f"{relative}:{start}")
+                index += 1
 
-        self.assertIn("historical verification evidence", decisions_agent)
-        self.assertIn("python scripts/release_check.py", historical_record)
+        self.assertEqual([], offenders)
+
+    def test_markdown_nonowners_do_not_store_repo_command_literals(self) -> None:
+        offenders: list[str] = []
+        for path in markdown_command_nonowners():
+            relative = path.relative_to(REPO_ROOT).as_posix()
+            for line_number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(), 1
+            ):
+                if REPO_COMMAND_LITERAL.search(line):
+                    offenders.append(f"{relative}:{line_number}")
+
+        self.assertEqual([], offenders)
 
 
 if __name__ == "__main__":

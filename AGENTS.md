@@ -24,12 +24,15 @@ This repository owns:
 - public-safe technique wording and topology selection, including current
   domain/kind truth and future family/capability/substrate/risk axes
 - owner-local participation in AoA cross-mechanics around reusable practice movement
+- owner-local statistical questions, measurement meaning, and public reference
+  packets about the technique canon
 - root-level public-safe legacy provenance, archive, and migration receipts for repo-wide technique-canon history
 - generated technique catalogs, capsules, feat-card reader surfaces, and source-lift surfaces
 
 It does not own:
 
-- skill workflow meaning, proof doctrine, routing, role contracts, memory, playbooks, KAG substrate meaning, or stats summaries
+- skill workflow meaning, proof doctrine, routing, role contracts, memory,
+  playbooks, KAG substrate meaning, cross-owner aggregation, or stats summaries
 - private project operations, secrets, or infrastructure detail
 
 [DESIGN](DESIGN.md) names the repository system form. [DESIGN.AGENTS](DESIGN.AGENTS.md)
@@ -58,6 +61,7 @@ for agents.
 18. affected generated catalogs, capsules, feat cards, agent-mesh mirrors, or source-lift outputs
 19. the nearest local `AGENTS.md` under the touched path when a branch needs
     more detail than this root route card
+20. [Stats](stats/README.md) when owner-local measurement questions or exports move
 
 ## Route modes
 
@@ -72,6 +76,7 @@ for agents.
 | `direction-change` | roadmap, corpus-scale pressure, portability posture, or future triggers change | [ROADMAP](ROADMAP.md) |
 | `mechanic-change` | practice movement, donor intake, audit, recurrence, checkpoint, RPG, or release-support surfaces change | [Mechanics](mechanics/README.md) -> nearest mechanic `AGENTS.md` |
 | `generated-parity` | generated catalogs, capsules, source-lift, or repo-doc surfaces change | source doc -> builder -> generated output -> validator/test |
+| `local-stats` | owner-local technique-canon measurement meaning or reference packets change | [Stats](stats/README.md) -> owning source -> consuming mechanic |
 
 ## AGENTS stack law
 
@@ -146,6 +151,8 @@ Update only the ones that moved; otherwise say no update was needed.
   schemas, builders, validators, or a stronger sibling owner.
 - Do not make root files, docs-root files, or top-level directories without
   checking [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md).
+- Do not infer quality, adoption, runtime use, or promotion decisions from a
+  local stats packet; return to authored technique and review owners.
 
 ## Route away when
 

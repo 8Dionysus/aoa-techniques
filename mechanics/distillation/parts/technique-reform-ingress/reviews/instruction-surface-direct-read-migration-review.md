@@ -198,4 +198,4 @@ Move exactly `AOA-T-0012`, `AOA-T-0013`, `AOA-T-0024`, `AOA-T-0027`,
 `AOA-T-0029`, `AOA-T-0030`, and `AOA-T-0035` into
 `techniques/instruction/instruction-surface/`, add the minimal `instruction/`
 route card, repair authored links, preserve a root legacy receipt, rebuild
-generated surfaces, and run `python scripts/release_check.py`.
+generated surfaces, and run the release lane.

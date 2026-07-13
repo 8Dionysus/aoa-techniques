@@ -123,11 +123,11 @@ model execution proof belongs in eval ownership.
 
 Passed locally after closeout indexing and temporary-plan removal:
 
-1. `git diff --cached --check`
+1. the staged-diff hygiene check
 2. public-share grep over changed review and index surfaces
-3. `python -m unittest tests.test_distillation_mechanics_topology`
-4. `python scripts/validate_repo.py`
-5. `python scripts/release_check.py`
+3. the targeted tests
+4. repository validation
+5. the release lane
 
 The pre-mutation public-share guard surfaced sanitization and explicit risk
 gates; this closeout satisfied them through the staged review scope, public

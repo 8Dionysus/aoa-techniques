@@ -58,7 +58,7 @@ four published-summary bundles directly before any path movement.
 - [AOA-T-0008 published-summary-remediation-snapshot](../../../../../techniques/proof/published-summary/published-summary-remediation-snapshot/TECHNIQUE.md)
 - [AOA-T-0010 telemetry-integrity-snapshot](../../../../../techniques/proof/published-summary/telemetry-integrity-snapshot/TECHNIQUE.md)
 - [AOA-T-0011 required-vs-optional-source-rendering](../../../../../techniques/proof/published-summary/required-vs-optional-source-rendering/TECHNIQUE.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

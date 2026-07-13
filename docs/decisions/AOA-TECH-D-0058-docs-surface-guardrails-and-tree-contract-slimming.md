@@ -151,8 +151,4 @@ in the same change.
 
 Validate with:
 
-```bash
-python -m unittest tests.test_docs_surface_guardrails
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

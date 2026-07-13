@@ -66,9 +66,4 @@ any later decision promotes an axis into optional or required bundle metadata.
 
 Expected checks:
 
-```bash
-python -m unittest tests.test_validate_repo
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

@@ -21,14 +21,8 @@ Stop-lines preserved:
 
 Validation lane:
 
-- `python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check`
-- `python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py`
-- `python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py`
-- `python mechanics/agon/parts/epistemic-technique-candidates/scripts/build_agon_epistemic_technique_candidates.py --check`
-- `python mechanics/agon/parts/epistemic-technique-candidates/scripts/validate_agon_epistemic_technique_candidates.py`
-- `python -m pytest -q mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py`
-- `python scripts/validate_repo.py`
-- `python -m unittest discover -s tests`
+Both Agon parts passed their owner builders, validators, and targeted tests,
+followed by repository validation and the repository test suite.
 
 ## 2026-05-03 - Distillation candidate handoff route
 
@@ -48,7 +42,5 @@ Stop-lines preserved:
 
 Validation lane:
 
-- `python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check`
-- `python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py`
-- `python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py`
-- `python -m unittest tests.test_agon_mechanics_topology tests.test_distillation_mechanics_topology`
+The handoff part passed its owner builder, validator, targeted part-local tests,
+and the affected mechanic suites.

@@ -23,5 +23,5 @@ source authority, or owner judgment outside the diff.
 
 ## Validation
 
-Run read-only checks when useful, such as `git diff --check` or the changed
+Run read-only checks when useful, such as the diff hygiene check or the changed
 surface validator.
