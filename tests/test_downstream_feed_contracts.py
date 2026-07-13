@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import json
+import os
+import tempfile
 import unittest
 from pathlib import Path, PurePosixPath
 
 from jsonschema import Draft202012Validator
 
+from scripts import validate_abyss_machine_kag_export_bundle as kag_bundle_validator
 from scripts import validate_repo
 
 
@@ -202,6 +205,67 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             any("--trust-root-mode host_managed" in command for command in manifest["consumer_command"]),
             manifest["consumer_command"],
         )
+
+    def test_kag_export_bundle_validator_requires_consumer_verdict(self) -> None:
+        manifest = load_json("docs/source-lift/artifact-bundles/kag_export.bundle.json")
+        manifest["consumer_contract"].pop("consumer_verdict")
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            manifest_path = root / "docs/source-lift/artifact-bundles/kag_export.bundle.json"
+            subject_path = root / "generated/kag_export.min.json"
+            manifest_path.parent.mkdir(parents=True)
+            subject_path.parent.mkdir(parents=True)
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            subject_path.write_text("{}", encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "consumer_verdict"):
+                kag_bundle_validator._assert_manifest_matches_subject(manifest_path, subject_path)
+
+    def test_kag_export_bundle_sanitizer_redacts_imported_abyss_machine_roots(self) -> None:
+        old_repo_root = os.environ.get("ABYSS_MACHINE_REPO_ROOT")
+        try:
+            os.environ["ABYSS_MACHINE_REPO_ROOT"] = "/opt/abyss-machine"
+            sanitized = kag_bundle_validator._sanitize_public_payload(
+                {
+                    "root": "/opt/abyss-machine",
+                    "nested": "/opt/abyss-machine/src/abyss_machine/artifact_bundles.py",
+                }
+            )
+        finally:
+            if old_repo_root is None:
+                os.environ.pop("ABYSS_MACHINE_REPO_ROOT", None)
+            else:
+                os.environ["ABYSS_MACHINE_REPO_ROOT"] = old_repo_root
+
+        self.assertEqual(sanitized["root"], "abyss-machine-root-redacted")
+        self.assertEqual(
+            sanitized["nested"],
+            "abyss-machine-root-redacted/src/abyss_machine/artifact_bundles.py",
+        )
+
+    def test_kag_export_bundle_sanitizer_reports_tree_changes(self) -> None:
+        old_repo_root = os.environ.get("ABYSS_MACHINE_REPO_ROOT")
+        try:
+            os.environ["ABYSS_MACHINE_REPO_ROOT"] = "/opt/abyss-machine"
+            with tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                payload = root / "artifact.verify.json"
+                payload.write_text(
+                    json.dumps({"root": "/opt/abyss-machine/src/abyss_machine/artifact_bundles.py"}),
+                    encoding="utf-8",
+                )
+
+                self.assertTrue(kag_bundle_validator._sanitize_public_json_tree(root))
+                self.assertFalse(kag_bundle_validator._sanitize_public_json_tree(root))
+                self.assertEqual(
+                    json.loads(payload.read_text(encoding="utf-8"))["root"],
+                    "abyss-machine-root-redacted/src/abyss_machine/artifact_bundles.py",
+                )
+        finally:
+            if old_repo_root is None:
+                os.environ.pop("ABYSS_MACHINE_REPO_ROOT", None)
+            else:
+                os.environ["ABYSS_MACHINE_REPO_ROOT"] = old_repo_root
 
     def test_repo_doc_surface_manifest_is_router_safe(self) -> None:
         manifest = load_json("generated/repo_doc_surface_manifest.min.json")
