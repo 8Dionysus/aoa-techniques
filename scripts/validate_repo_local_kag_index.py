@@ -15,6 +15,9 @@ INDEX_PATH = "kag/indexes/source_surface_index.json"
 GENERATOR_PATH = Path("scripts/generate_repo_local_kag_index.py")
 VALIDATOR_PATH = Path("scripts/validate_repo_local_kag_family.py")
 AOA_KAG_REF = "790457eb4806586c255c2b4a9ec4a8f08789a330"
+HISTORY_REPO_ENV = "AOA_REPO_LOCAL_KAG_HISTORY_REPO"
+HISTORY_REF_ENV = "AOA_REPO_LOCAL_KAG_HISTORY_REF"
+EVENT_HISTORY_REF_ENV = "AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF"
 
 
 def resolve_aoa_kag_root(
@@ -53,9 +56,34 @@ def require_pinned_checkout(aoa_kag_root: Path) -> Path:
     return aoa_kag_root
 
 
+def resolve_history_refs(
+    env: Mapping[str, str] = os.environ,
+    repo_root: Path = REPO_ROOT,
+) -> tuple[str | None, str | None]:
+    if env.get(HISTORY_REPO_ENV) == repo_root.name:
+        history_ref = env.get(HISTORY_REF_ENV, "").strip()
+        event_history_ref = env.get(EVENT_HISTORY_REF_ENV, "").strip()
+        if history_ref:
+            return history_ref, event_history_ref or history_ref
+
+    completed = subprocess.run(
+        ("git", "-C", str(repo_root), "merge-base", "HEAD", "origin/main"),
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    history_ref = completed.stdout.strip()
+    if completed.returncode or not history_ref:
+        return None, None
+    return history_ref, history_ref
+
+
 def commands(
     aoa_kag_root: Path,
     repo_root: Path = REPO_ROOT,
+    *,
+    history_ref: str | None = None,
+    event_history_ref: str | None = None,
 ) -> tuple[tuple[str, ...], ...]:
     base = (
         sys.executable,
@@ -66,9 +94,14 @@ def commands(
         INDEX_PATH,
         "--index-family",
     )
+    history_args = (
+        ("--history-ref", history_ref, "--event-history-ref", event_history_ref or history_ref)
+        if history_ref
+        else ()
+    )
     return (
-        (*base, "--check"),
-        (*base, "--incremental", "--check"),
+        (*base, *history_args, "--check"),
+        (*base, "--incremental", *history_args, "--check"),
         (
             sys.executable,
             str(aoa_kag_root / VALIDATOR_PATH),
@@ -83,7 +116,12 @@ def commands(
 def main() -> int:
     try:
         aoa_kag_root = require_pinned_checkout(resolve_aoa_kag_root())
-        for command in commands(aoa_kag_root):
+        history_ref, event_history_ref = resolve_history_refs()
+        for command in commands(
+            aoa_kag_root,
+            history_ref=history_ref,
+            event_history_ref=event_history_ref,
+        ):
             result = subprocess.run(command, cwd=REPO_ROOT, check=False)
             if result.returncode:
                 return result.returncode

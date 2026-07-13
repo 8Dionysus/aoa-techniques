@@ -225,6 +225,9 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
         self.assertNotIn("python scripts/validate_source_contracts.py", workflow)
         self.assertIn("repository: 8Dionysus/aoa-kag", workflow)
         self.assertIn("AOA_KAG_ROOT:", workflow)
+        self.assertIn("AOA_REPO_LOCAL_KAG_HISTORY_REF:", workflow)
+        self.assertIn("AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF:", workflow)
+        self.assertIn("fetch-depth: 0", workflow)
         self.assertIn(f"ref: {validate_repo_local_kag_index.AOA_KAG_REF}", workflow)
         self.assertNotIn("uses: 8Dionysus/aoa-kag/", workflow)
 
@@ -243,12 +246,30 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
                 {}, repo_root
             )
             self.assertEqual((workspace / "aoa-kag").resolve(), aoa_kag_root)
-            commands = validate_repo_local_kag_index.commands(aoa_kag_root, repo_root)
+            commands = validate_repo_local_kag_index.commands(
+                aoa_kag_root,
+                repo_root,
+                history_ref="base-sha",
+                event_history_ref="event-base-sha",
+            )
             self.assertIn("--incremental", commands[1])
+            self.assertIn("base-sha", commands[0])
+            self.assertIn("event-base-sha", commands[0])
             self.assertEqual(
                 str(validator),
                 commands[2][1],
             )
+
+    def test_repo_local_kag_adapter_resolves_owner_history_boundary(self) -> None:
+        history = validate_repo_local_kag_index.resolve_history_refs(
+            {
+                "AOA_REPO_LOCAL_KAG_HISTORY_REPO": "aoa-techniques",
+                "AOA_REPO_LOCAL_KAG_HISTORY_REF": "base-sha",
+                "AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF": "event-base-sha",
+            },
+            REPO_ROOT,
+        )
+        self.assertEqual(("base-sha", "event-base-sha"), history)
 
     def test_repo_local_kag_adapter_accepts_pinned_checkout(self) -> None:
         with TemporaryDirectory() as temp_dir:
