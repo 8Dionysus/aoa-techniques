@@ -40,6 +40,7 @@ tracked Python cache residue.
 | Family | Owns | Boundary |
 |---|---|---|
 | `source_validator` | authored route, AGENTS, and technique source checks | may read source meaning; must not check generated freshness |
+| `source_validator_adapter` | owner-local contracts checked by a stronger sibling protocol owner | delegate without copying sibling schemas or rules into this repo |
 | `projection_builder` | generated/read-model writes from source | may write tracked projections; must not define source meaning |
 | `projection_validator_module` | generated/read-model parity checks | compares projections; does not own technique truth |
 | `part_local_builder` / `part_local_validator` | mechanic-owned candidate artifacts | discovered by `scripts/run_part_local_tests.py` from part homes |
@@ -61,6 +62,10 @@ validator modules must keep source checks separate from projection parity.
 Implementation ownership lives under `scripts/validators/`, and
 [`validator_inventory.json`](validator_inventory.json) remains the narrower
 inventory for validator modules.
+
+The repo-local KAG and stats adapters remain thin source-lane delegates. Local
+KAG indexes and stats measurement meaning stay here; shared KAG generation and
+stats protocol grammar stay with their sibling owners.
 
 ## Non-Root Scripts
 

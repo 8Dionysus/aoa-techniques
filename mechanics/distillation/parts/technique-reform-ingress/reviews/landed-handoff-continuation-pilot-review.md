@@ -51,7 +51,7 @@ machinery and the next pressure should test a different root district.
   `media-ingest`](../reports/technique_tree_projection.md)
 - `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md`
 - `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-handoff-bounded-continuation/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_HANDOFF_BOUNDED_CONTINUATION.md`
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

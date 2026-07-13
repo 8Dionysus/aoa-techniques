@@ -814,7 +814,7 @@ relations:
             self.assertIn(target, candidates)
 
         for target in (
-            "the main agent owns wave boundaries, final wording, the cross-doc sequence, shared generated-surface sync, and `python scripts/release_check.py`",
+            "the main agent owns wave boundaries, final wording, the cross-doc sequence, shared generated-surface sync, and the release lane",
             "execution role: keep [AOA-T-0038]",
             "execution role: keep [AOA-T-0041]",
             "[AOA-T-0043]",
@@ -884,7 +884,7 @@ relations:
         ).read_text(encoding="utf-8")
 
         for target in (
-            "main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and `python scripts/release_check.py`",
+            "main agent owns wave boundaries, final wording, intake/roadmap sync, shared generated surfaces, and the release lane",
             "Wave A: `profile-preset-composition`, `render-truth-before-startup`, `contextual-host-doctor`, `one-command-service-lifecycle`, `baseline-first-additive-profile-benchmarks`",
             "Wave B: `skill-vs-command-boundary`, `skill-marketplace-curation`, `upstream-skill-health-checking`, `multi-source-primary-input-provenance`",
             "[AOA-T-0041]",

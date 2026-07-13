@@ -74,11 +74,4 @@ land.
 
 Expected checks:
 
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_agon_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

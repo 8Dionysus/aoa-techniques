@@ -46,7 +46,7 @@ Use full canonical-ID decision filenames as the active source files for
 Each decision record now owns an `## Index Metadata` block with original date,
 surface classes, technique axes, mechanic parents, guard families, and posture.
 Generated lookup indexes under `docs/decisions/indexes/` are derived from that
-metadata and checked by `python scripts/generate_decision_indexes.py --check`.
+metadata and checked by the decision-index parity check.
 
 Previous date-prefixed paths live in git and PR history only. They are not kept
 as a live repository lookup layer.
@@ -103,11 +103,6 @@ that live compatibility files are worth the extra route surface.
 
 ## Verification
 
-Use:
+Verification route:
 
-```bash
-python scripts/generate_decision_indexes.py --check
-python scripts/run_tests.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

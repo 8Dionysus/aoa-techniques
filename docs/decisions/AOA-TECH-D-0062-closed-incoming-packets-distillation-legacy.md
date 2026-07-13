@@ -80,9 +80,4 @@ update Distillation provenance, legacy index/log, changelog, and topology tests.
 
 Validate the resulting route with:
 
-```bash
-python -m unittest mechanics.distillation.tests.test_distillation_incoming_topology
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

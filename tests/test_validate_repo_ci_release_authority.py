@@ -71,6 +71,7 @@ class ValidateRepoCiReleaseAuthorityTests(unittest.TestCase):
         for target in (
             "/.github/ @8Dionysus",
             "/scripts/ @8Dionysus",
+            "/stats/ @8Dionysus",
             "/docs/ @8Dionysus",
             "/techniques/ @8Dionysus",
         ):

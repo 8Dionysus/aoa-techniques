@@ -225,4 +225,4 @@ Move exactly `AOA-T-0018`, `AOA-T-0019`, `AOA-T-0020`, `AOA-T-0021`,
 `AOA-T-0022`, `AOA-T-0046`, `AOA-T-0047`, and `AOA-T-0048` into
 `techniques/knowledge-lift/kag-source-lift/`, add the minimal
 `knowledge-lift/` route card, repair authored links, preserve a root legacy
-receipt, rebuild generated surfaces, and run `python scripts/release_check.py`.
+receipt, rebuild generated surfaces, and run the release lane.

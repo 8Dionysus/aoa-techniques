@@ -136,10 +136,10 @@ Use this exact loop for every wave:
 9. Update [Technique Reform Ingress](../README.md) only when the contour actually
    changes.
 10. Validate the smallest honest surface:
-    - `git diff --check`;
+    - the diff hygiene check;
     - public-safety grep over touched files;
-    - `python -m unittest discover -s mechanics/distillation/tests`;
-    - `python scripts/validate_repo.py` for structural or index changes.
+    - the Distillation test suite;
+    - repository validation for structural or index changes.
 11. Land each completed wave as its own commit/PR/merge during the execution
     pass.
 

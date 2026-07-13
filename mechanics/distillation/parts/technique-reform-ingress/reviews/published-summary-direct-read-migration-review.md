@@ -240,4 +240,4 @@ Move exactly `AOA-T-0006`, `AOA-T-0008`, `AOA-T-0010`, and `AOA-T-0011` into
 `techniques/proof/published-summary/`; update the compact proof trunk route
 card; preserve a root `legacy/receipts/` migration receipt; repair authored
 links; rebuild generated surfaces; and validate with the narrow tree-pilot
-tests plus `python scripts/release_check.py`.
+tests plus the release lane.

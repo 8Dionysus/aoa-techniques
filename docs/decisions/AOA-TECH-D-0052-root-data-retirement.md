@@ -49,9 +49,4 @@ repo-wide data contract exists and no stronger existing district fits.
 
 ## Verification
 
-```bash
-python scripts/validate_semantic_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

@@ -18,13 +18,7 @@ technique review.
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_publish_live_receipts
-python -m unittest tests.test_recurrence_mechanics_topology
-python scripts/validate_repo.py
-python scripts/release_check.py
-git diff --check
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 ## 2026-05-14 - Manifest Part Home
 
@@ -38,12 +32,7 @@ git diff --check
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_recurrence_manifest_topology
-python -m unittest tests.test_recurrence_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 ## 2026-05-02
 

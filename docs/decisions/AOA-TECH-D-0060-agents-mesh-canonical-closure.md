@@ -85,11 +85,4 @@ validation route before re-enabling migration.
 
 The closure is validated by:
 
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_nested_agents.py
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

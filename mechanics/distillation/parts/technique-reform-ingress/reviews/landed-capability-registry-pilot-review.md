@@ -57,7 +57,7 @@ runtime execution doctrine.
 - [Technique tree projection rows for `capability-registry`,
   `capability-boundary`, and `skill-discovery`](../reports/technique_tree_projection.md)
 - [Landed docs-boundary pilot review](landed-docs-boundary-pilot-review.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

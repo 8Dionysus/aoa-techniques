@@ -15,11 +15,11 @@ Changes made:
 - Tightened the adaptation note without changing technique meaning.
 
 Validation run:
-- `git diff --check`
+- Diff hygiene check
 - Manual atom-contract pass
 
 Skipped checks:
-- `python scripts/validate_repo.py` deferred because no generated surfaces changed.
+- Repository validation deferred because no generated surfaces changed.
 - Full release check deferred because this was a one-bundle text patch.
 
 Remaining risk:

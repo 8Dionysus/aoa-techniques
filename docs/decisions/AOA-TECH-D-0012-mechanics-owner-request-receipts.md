@@ -54,7 +54,4 @@ only when work cites an `ORQ-*` request or answers a downstream owner request.
 
 Verify with the normal repository validation path after the change:
 
-```bash
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

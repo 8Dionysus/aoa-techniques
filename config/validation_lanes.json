@@ -12,7 +12,7 @@
       "posture": "blocking",
       "owner_surface": "docs/validation/VALIDATOR_TOPOLOGY.md",
       "command_sequence": "source_fast",
-      "purpose": "Growth-safe source/topology gate for the repo-local KAG index, AGENTS mesh, route-card shape, and fast authored technique source contracts.",
+      "purpose": "Growth-safe source/topology gate for the repo-local KAG index, owner-local stats port, AGENTS mesh, route-card shape, and fast authored technique source contracts.",
       "does_not_own": [
         "generated freshness",
         "release stabilization",
@@ -109,6 +109,10 @@
       [
         "python",
         "scripts/validate_repo_local_kag_index.py"
+      ],
+      [
+        "python",
+        "scripts/validate_local_stats_port.py"
       ],
       [
         "python",
@@ -332,6 +336,10 @@
       [
         "python",
         "scripts/validate_public_hygiene.py"
+      ],
+      [
+        "python",
+        "scripts/validate_local_stats_port.py"
       ],
       [
         "python",

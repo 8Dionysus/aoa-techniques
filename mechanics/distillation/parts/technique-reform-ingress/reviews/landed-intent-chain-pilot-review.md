@@ -56,7 +56,7 @@ now-projected shelf and `AOA-T-0004` has already landed under `intent-chain`.
 - [AOA-T-0023 stateless-single-shot-agent](../../../../../techniques/execution/agent-workflows-core/stateless-single-shot-agent/TECHNIQUE.md)
 - [AOA-T-0028 confirmation-gated-mutating-action](../../../../../techniques/execution/agent-workflows-core/confirmation-gated-mutating-action/TECHNIQUE.md)
 - [AOA-T-0031 shell-composable-agent-invocation](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

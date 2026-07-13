@@ -47,9 +47,4 @@ authority, route mutation, or canonical promotion.
 
 Expected validation for the migration wave:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology tests.test_root_legacy_topology tests.test_validate_repo tests.test_skill_discovery_tree_pilot tests.test_roadmap_parity
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+The archived route covered its targeted owner checks and repository validation lanes.

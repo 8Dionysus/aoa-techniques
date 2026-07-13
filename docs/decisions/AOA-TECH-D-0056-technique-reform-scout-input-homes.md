@@ -56,12 +56,4 @@ contract.
 
 ## Verification
 
-```bash
-python scripts/build_kind_manifest.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python -m unittest tests.test_distillation_mechanics_topology tests.test_validate_repo
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

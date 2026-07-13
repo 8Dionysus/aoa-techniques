@@ -16,12 +16,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_experience_adoption_contracts tests.test_experience_governance_contracts tests.test_experience_release_contracts
-python -m unittest tests.test_experience_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -43,11 +38,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_experience_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 
@@ -76,11 +67,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_experience_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 

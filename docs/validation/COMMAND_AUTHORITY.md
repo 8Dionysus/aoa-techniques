@@ -26,31 +26,22 @@
 - `.github/workflows/repo-validation.yml` owns the PR and moving-main
   `source-fast` growth gate, with generated checks only on pushes to `main`.
 - `.github/workflows/release-audit.yml` owns tag/manual release checks through
-  `python scripts/ci_gate.py --mode release`.
+  the `release` lane.
 - `.github/workflows/nightly-sentinel.yml` owns scheduled/manual moving-main
-  drift checks through `python scripts/ci_gate.py --mode nightly` and latest
+  drift checks through the `nightly` lane and latest
   release reproduction on the latest `v*` tag.
 - `AGENTS.md` cards may name focused local checks, lane ids, and nearby owner
   routes. They should not copy the full release or generated command sequence.
-- Active docs and decision guidance should name lane ids and nearest owner
-  `AGENTS.md` checks. Exact command snippets in decision records are historical
-  evidence unless this document or `config/validation_lanes.json` names them as
-  active authority.
-- Decision records, changelogs, receipts, and review ledgers may preserve
-  command evidence. They are not active lane authority.
+- Active docs and decision guidance name lane ids and nearest owner
+  `AGENTS.md` checks. Exact executable sequences stay in
+  `config/validation_lanes.json` or a focused `AGENTS.md` when a local command
+  is genuinely useful there.
+- Decision records, changelogs, receipts, landing logs, and review ledgers
+  preserve verification scope or outcome, not executable command snippets.
 
-## Lane Commands
-
-Use these active entrypoints:
-
-| Lane | Entry |
-|---|---|
-| `source-fast` | `python scripts/ci_gate.py --mode source-fast` |
-| `generated` | `python scripts/ci_gate.py --mode generated` |
-| `mechanics/part-local` | `python scripts/ci_gate.py --mode mechanics-part-local` |
-| `release` | `python scripts/release_check.py` |
-| `nightly` | `python scripts/ci_gate.py --mode nightly` |
-| `advisory` | `python scripts/ci_gate.py --mode advisory` |
+The manifest defines the `source-fast`, `generated`, `mechanics/part-local`,
+`release`, `nightly`, and `advisory` routes. Workflow YAML and release tooling
+invoke those routes without making this Markdown file a second command store.
 
 ## Promotion Rule
 

@@ -28,6 +28,7 @@
 /requirements-dev.txt @8Dionysus
 /schemas/ @8Dionysus
 /scripts/ @8Dionysus
+/stats/ @8Dionysus
 /techniques/ @8Dionysus
 /templates/ @8Dionysus
 /tests/ @8Dionysus

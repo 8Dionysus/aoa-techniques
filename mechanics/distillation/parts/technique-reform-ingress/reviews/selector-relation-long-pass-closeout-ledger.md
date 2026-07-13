@@ -158,10 +158,10 @@ was accepted.
 
 Validation across the pass used the same bounded menu repeatedly:
 
-- `git diff --check`;
-- `python -m unittest tests.test_distillation_mechanics_topology`;
-- `python scripts/validate_repo.py`;
-- `python scripts/release_check.py`;
+- the diff hygiene check;
+- the targeted tests;
+- repository validation;
+- the release lane;
 - public-safety grep on public-share diffs before publishing review surfaces.
 
 The final residual addendum also passed checkpoint review after commit.

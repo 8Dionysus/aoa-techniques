@@ -50,7 +50,3 @@ Name the lane ids and nearest owner `AGENTS.md` checks that validate this
 decision's placement or the resulting change. Do not copy full release or
 generated command sequences into new records; active command storage belongs in
 `config/validation_lanes.json`.
-
-If an exact command transcript is part of the record, place it under a clearly
-labeled historical evidence note instead of presenting it as current command
-guidance.

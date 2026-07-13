@@ -278,18 +278,8 @@ command.
    full lane exists.
 5. Add tests that reject unregistered scenario directories and missing
    done-or-handoff markers.
-6. Run:
-
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-```
+6. Run the Spark-local checks and repository validation lanes routed by
+   `.agents/spark/AGENTS.md`.
 
 Adjust the test invocation if the final test module path cannot be imported as
 a dotted module because `.agents` is hidden; the center repo uses direct pytest

@@ -63,7 +63,7 @@ six history bundles directly before any path movement.
 - [AOA-T-0045 witness-trace-as-reviewable-artifact](../../../../../techniques/history/history-artifacts/witness-trace-as-reviewable-artifact/TECHNIQUE.md)
 - [AOA-T-0066 transcript-replay-artifact](../../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md)
 - [AOA-T-0067 transcript-linked-code-lineage](../../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

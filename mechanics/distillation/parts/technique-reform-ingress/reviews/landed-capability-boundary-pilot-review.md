@@ -66,7 +66,7 @@ governance, or routing policy.
 - [Technique topology scout rows for `capability-boundary` and
   `skill-discovery`](../reports/technique_topology_scout.md)
 - [Landed capability-registry pilot review](landed-capability-registry-pilot-review.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

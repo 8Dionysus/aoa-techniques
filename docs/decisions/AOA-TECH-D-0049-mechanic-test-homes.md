@@ -54,16 +54,10 @@ pulling the tests back into root.
   warehouse.
 - Mechanic package tests are easier to find from the mechanic route cards and
   can move with their owners.
-- `python -m unittest discover -s tests` is no longer the full repo unittest
-  gate. Use `python scripts/run_tests.py` for the full unittest suite.
+- Root-only test discovery is no longer the full repository unittest gate. Use
+  the repository test runner for the full unittest suite.
 - `scripts/release_check.py` calls the new runner, preserving release coverage.
 
 ## Verification
 
-```bash
-python scripts/run_tests.py
-python scripts/validate_semantic_agents.py
-python scripts/validate_repo.py
-python scripts/release_check.py
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

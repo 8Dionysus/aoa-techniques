@@ -215,4 +215,4 @@ Move exactly `AOA-T-0003`, `AOA-T-0007`, and `AOA-T-0032` into
 `techniques/proof/evaluation-chain/`; update the compact proof trunk route
 card; preserve a root `legacy/receipts/` migration receipt; repair authored
 links; rebuild generated surfaces; and validate with the narrow tree-pilot
-tests plus `python scripts/release_check.py`.
+tests plus the release lane.

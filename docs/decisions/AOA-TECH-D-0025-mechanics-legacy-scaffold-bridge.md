@@ -67,9 +67,4 @@ placeholder receipt.
 
 Verify with:
 
-```bash
-python -m unittest tests.test_mechanics_legacy_scaffolds
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

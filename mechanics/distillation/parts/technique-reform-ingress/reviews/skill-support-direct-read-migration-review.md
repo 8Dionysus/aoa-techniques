@@ -209,4 +209,4 @@ Move exactly `AOA-T-0016`, `AOA-T-0015`, and `AOA-T-0017` into
 `techniques/proof/skill-support/`; add a compact proof trunk route card;
 preserve a root `legacy/receipts/` migration receipt; repair authored links;
 rebuild generated surfaces; and validate with the narrow tree-pilot tests plus
-`python scripts/release_check.py`.
+the release lane.

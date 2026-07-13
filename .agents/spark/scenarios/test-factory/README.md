@@ -23,5 +23,5 @@ work before tests can be honest.
 ## Validation
 
 Run the targeted test command for the changed test family and the validator
-named by the owning source surface. Use `python scripts/run_tests.py` only when
+named by the owning source surface. Use the repository test runner only when
 the user, owner route, or release-prep explicitly asks for broader proof.

@@ -151,6 +151,6 @@ name:
 This packet is a review-only source artifact. Required validation after landing
 this wave:
 
-1. `python -m unittest tests.test_distillation_mechanics_topology`
-2. `python scripts/validate_repo.py`
-3. `python scripts/release_check.py` before GitHub merge
+1. the targeted tests
+2. repository validation
+3. the release lane before GitHub merge

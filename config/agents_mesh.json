@@ -93,6 +93,7 @@
     "schemas/AGENTS.md",
     "scripts/AGENTS.md",
     "scripts/validators/AGENTS.md",
+    "stats/AGENTS.md",
     "techniques/AGENTS.md",
     "techniques/agent-workflows/AGENTS.md",
     "techniques/continuity/AGENTS.md",

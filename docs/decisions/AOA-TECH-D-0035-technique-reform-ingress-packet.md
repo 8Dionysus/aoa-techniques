@@ -67,9 +67,4 @@ than a schema migration by default.
 
 Expected checks:
 
-```bash
-python -m unittest tests.test_distillation_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-python scripts/release_check.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

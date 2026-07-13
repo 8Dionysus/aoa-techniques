@@ -15,7 +15,7 @@ Changes made:
 - Added `.agents/spark/tests/test_spark_lane.py`.
 
 Validation run:
-- `python -m unittest discover -s .agents/spark/tests -p 'test*.py'`
+- Spark-lane tests
 
 Skipped checks:
 - Full release check deferred to PR validation.

@@ -183,4 +183,4 @@ Run the seventh pilot migration.
 Move exactly `AOA-T-0002`, `AOA-T-0009`, `AOA-T-0034`, and `AOA-T-0033` into
 `techniques/instruction/docs-boundary/`, update the existing
 `instruction/` route card, repair authored links, preserve a root legacy
-receipt, rebuild generated surfaces, and run `python scripts/release_check.py`.
+receipt, rebuild generated surfaces, and run the release lane.

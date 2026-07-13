@@ -86,6 +86,15 @@
           "failure_route": "Fix workflow lane entrypoints or PR template wording before changing CI topology."
         },
         {
+          "path": "tests/test_local_stats_port.py",
+          "family": "stats/local-port",
+          "protects": "Owner-local readiness-ratio derivation and rejection of a false numerator.",
+          "owner_surface": "stats/port.manifest.json",
+          "runtime_cost": "fast",
+          "focused_target": "tests/test_local_stats_port.py",
+          "failure_route": "Fix the owner readiness projection, local measurement contract, or revision-bound reference packet before changing the exported statistic."
+        },
+        {
           "path": "tests/test_nested_agents_docs.py",
           "family": "AGENTS/mesh",
           "protects": "Required nested AGENTS docs and validator failure reporting.",
@@ -223,7 +232,7 @@
         {
           "path": "tests/test_validation_command_authority.py",
           "family": "release/ci-lane",
-          "protects": "Validation lane manifest authority, CI gate delegation, and release entrypoint thinness.",
+          "protects": "Validation lane manifest authority, CI gate delegation, release entrypoint thinness, and Markdown command locality.",
           "owner_surface": "config/validation_lanes.json",
           "runtime_cost": "fast",
           "focused_target": "tests/test_validation_command_authority.py",

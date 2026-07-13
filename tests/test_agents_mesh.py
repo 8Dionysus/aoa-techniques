@@ -50,6 +50,7 @@ class AgentsMeshTests(unittest.TestCase):
         )
         self.assertIn("mechanics/agon/AGENTS.md", cards_by_path)
         self.assertEqual("canonical", cards_by_path["mechanics/agon/AGENTS.md"]["shape_status"])
+        self.assertEqual("canonical", cards_by_path["stats/AGENTS.md"]["shape_status"])
 
     def test_agents_mesh_config_names_design_sources(self) -> None:
         config = json.loads((REPO_ROOT / "config" / "agents_mesh.json").read_text())

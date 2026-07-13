@@ -1,0 +1,112 @@
+{
+  "schema_version": "aoa_stats_local_port_v1",
+  "contract_version": "1.0.0",
+  "owner_repo": "aoa-techniques",
+  "status": "active",
+  "owner_boundary_ref": "AGENTS.md",
+  "central_contract_refs": [
+    "aoa-stats:stats/measurement-contract/measurement-contract.schema.json",
+    "aoa-stats:stats/measurement-contract/measurement-packet.schema.json"
+  ],
+  "evidence_posture": {
+    "live_state": "reference_only",
+    "privacy": "public",
+    "raw_content_allowed": false
+  },
+  "questions": [
+    {
+      "id": "question:published-promotion-readiness-pass-ratio",
+      "question": "What fraction of current published non-deprecated technique readiness records pass the owner-defined readiness projection at this source revision?",
+      "consumer_refs": [
+        "stats/README.md",
+        "mechanics/audit/parts/promotion-readiness-matrix/README.md"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "schema_version": "aoa_stats_measurement_contract_v1",
+      "measurement_id": "aoa-techniques/published-promotion-readiness-pass-ratio",
+      "contract_version": "1.0.0",
+      "owner_repo": "aoa-techniques",
+      "question_ref": "question:published-promotion-readiness-pass-ratio",
+      "semantic_class": "statistic",
+      "statistic": "ratio",
+      "object_kind": "published-technique-readiness-record",
+      "unit": {
+        "symbol": "1",
+        "quantity": "proportion"
+      },
+      "population": {
+        "subject": "current published non-deprecated technique readiness records",
+        "definition": "one techniques entry in the generated promotion-readiness projection",
+        "inclusion_rule": "every canonical or promoted technique record emitted by the owner projection at the source revision",
+        "exclusion_rule": "draft and deprecated bundles, mechanics candidates, examples, private usage, runtime observations, external adoption, and records absent from the owner-generated readiness cohort",
+        "sampling": "census"
+      },
+      "window": {
+        "temporality": "instant",
+        "clock": "owner_defined"
+      },
+      "dimensions": {
+        "allowed": [],
+        "prohibited": [
+          "technique_id",
+          "technique_name",
+          "session_id",
+          "consumer_identity"
+        ]
+      },
+      "aggregation": {
+        "operator": "none",
+        "across": []
+      },
+      "missingness": {
+        "states": [
+          "missing",
+          "unknown",
+          "stale"
+        ],
+        "zero_is_observation": true
+      },
+      "uncertainty": {
+        "required": false,
+        "methods": [
+          "not_applicable"
+        ]
+      },
+      "provenance": {
+        "evidence_refs_required": true,
+        "source_revision_required": true
+      },
+      "lifecycle": {
+        "status": "active",
+        "compatible_with": []
+      },
+      "privacy": {
+        "classification": "public",
+        "raw_content_allowed": false,
+        "sensitive_dimensions_allowed": false
+      },
+      "live_state": {
+        "capability": "reference_only"
+      },
+      "authority_ceiling": "Reports only the fraction of current published readiness records for which the owner projection found none of its declared local blockers; it does not establish technique quality, canonical status, effectiveness, adoption, external evidence sufficiency, skill lift, eval success, runtime use, or permission to change technique status."
+    }
+  ],
+  "exports": [
+    {
+      "measurement_id": "aoa-techniques/published-promotion-readiness-pass-ratio",
+      "posture": "reference",
+      "packet_refs": [
+        "stats/packets/published-promotion-readiness-pass-ratio.reference.json"
+      ],
+      "evidence_refs": [
+        "generated/technique_promotion_readiness.min.json",
+        "techniques/**/TECHNIQUE.md",
+        "mechanics/audit/parts/promotion-readiness-matrix/README.md",
+        "scripts/validators/projection_catalog.py"
+      ]
+    }
+  ]
+}

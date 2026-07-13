@@ -60,10 +60,4 @@ technique candidates, release holds, promote status, or claim recurrence law.
 
 Expected checks:
 
-```bash
-python -m unittest tests.test_recurrence_manifest_topology
-python -m unittest tests.test_recurrence_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-git diff --check
-```
+Verification was routed through the targeted owner checks and repository validation lanes.

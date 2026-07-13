@@ -67,7 +67,7 @@ Use this rhythm for the long execution-profile pass:
 7. Change registry wording or generated projection rules only when the pilot
    finds repeated confusion.
 8. Rebuild generated scout surfaces only from source inputs.
-9. Run `python scripts/release_check.py` and `python scripts/validate_repo.py`
+9. Run the release lane and repository validation
    for any registry, generated, or broad reader-surface change.
 
 Recommended order for the long pass:
@@ -91,10 +91,10 @@ Recommended order for the long pass:
 
 Passed locally:
 
-1. `python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py`
-2. `python -m unittest tests.test_distillation_mechanics_topology`
-3. `python scripts/validate_repo.py`
-4. `python scripts/release_check.py`
+1. the topology-scout builder
+2. the targeted tests
+3. repository validation
+4. the release lane
 
 `build_topology_scout.py` rewrote the generated scout files without producing
 a tracked generated diff.

@@ -184,26 +184,16 @@ repository integrity.
 
 Minimum validation for meaning, schema, script, or generated-surface changes:
 
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
+The archived route covered its targeted owner checks and repository validation lanes.
 
 Use the broader release-prep path when the change touches publication posture,
 wide generated outputs, or release-facing docs:
 
-```bash
-python scripts/release_check.py
-git status -sb
-```
+The archived route covered its targeted owner checks and repository validation lanes.
 
 If the task touches the Agon Wave IV technique candidate bridge, also run:
 
-```bash
-python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check
-python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py
-```
+The archived route covered its targeted owner checks and repository validation lanes.
 
 Confirm that:
 

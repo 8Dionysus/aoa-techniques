@@ -821,6 +821,20 @@
       "disposition": "keep"
     },
     {
+      "path": "scripts/validate_local_stats_port.py",
+      "family": "source_validator_adapter",
+      "organ_lane": "source/topology",
+      "owner_surface": "stats/AGENTS.md",
+      "source_truth": ["stats/port.manifest.json", "stats/packets/*.json", "aoa-stats measurement and local-port contracts"],
+      "reads": ["owner-local stats port", "checked-out aoa-stats protocol validator"],
+      "writes": [],
+      "side_effects": "delegates validation output to the central stats protocol owner",
+      "validation_lane": "source_fast",
+      "ci_inclusion": "source_fast and release_check command sequences",
+      "test_target": "tests/test_local_stats_port.py",
+      "disposition": "keep"
+    },
+    {
       "path": "scripts/validate_semantic_agents.py",
       "family": "source_validator",
       "organ_lane": "source/topology",

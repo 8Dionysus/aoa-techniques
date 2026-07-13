@@ -61,7 +61,7 @@ read the four recovery bundles directly before any path movement.
 - [AOA-T-0099 isolated-service-stop-on-shared-substrate](../../../../../techniques/recovery/antifragility-recovery/isolated-service-stop-on-shared-substrate/TECHNIQUE.md)
 - [AOA-T-0100 stress-receipt-reground-closeout](../../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 - [AOA-T-0098 receipt-first-failure-analysis](../../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md)
-- `python scripts/release_check.py` result recorded in the migration receipt
+- the release lane result recorded in the migration receipt
 
 ## Landed Shape Read
 

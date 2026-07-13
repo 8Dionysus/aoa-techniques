@@ -15,7 +15,7 @@ Changes made:
 - None.
 
 Validation run:
-- `python scripts/release_check.py`
+- Release lane
 
 Skipped checks:
 - GitHub validation not run in this example.

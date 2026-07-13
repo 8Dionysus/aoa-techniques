@@ -106,8 +106,8 @@ They are review pressure, not authority.
 
 Final closeout validation:
 
-1. `python scripts/release_check.py`
-2. `python scripts/validate_repo.py`
+1. the release lane
+2. repository validation
 
 The temporary rhythm plan was distilled into this ledger and removed from the
 working tree. It was local scratch, not source truth.

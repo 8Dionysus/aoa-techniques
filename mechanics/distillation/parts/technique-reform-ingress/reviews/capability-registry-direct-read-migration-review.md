@@ -162,4 +162,4 @@ Move exactly `AOA-T-0025`, `AOA-T-0063`, and `AOA-T-0064` into
 `capability-registry/` shelf scope to `techniques/instruction/AGENTS.md`;
 preserve a root `legacy/receipts/` migration receipt; repair authored links;
 rebuild generated surfaces; and validate with the narrow tree-pilot tests plus
-`python scripts/release_check.py`.
+the release lane.

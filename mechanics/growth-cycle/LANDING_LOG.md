@@ -36,11 +36,7 @@ Changed:
 
 Verification lane:
 
-```bash
-python -m unittest tests.test_growth_cycle_mechanics_topology
-python scripts/validate_repo.py
-python -m unittest discover -s tests
-```
+Verification covered the targeted owner checks and repository validation lanes recorded for this landing.
 
 Not moved:
 

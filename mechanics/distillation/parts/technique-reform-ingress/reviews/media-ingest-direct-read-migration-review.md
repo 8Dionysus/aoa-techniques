@@ -176,4 +176,4 @@ Run the third pilot migration.
 Move exactly `AOA-T-0070` through `AOA-T-0074` into
 `techniques/ingest/media-ingest/`, add the minimal `ingest/` route card, repair
 authored links, preserve a root legacy receipt, rebuild generated surfaces, and
-run `python scripts/release_check.py`.
+run the release lane.

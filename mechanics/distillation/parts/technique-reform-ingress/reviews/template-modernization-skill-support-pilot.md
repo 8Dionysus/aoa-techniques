@@ -139,10 +139,10 @@ as source-derived parity rather than noise.
 
 Close this pilot with:
 
-1. `git diff --check`
+1. the diff hygiene check
 2. public-safety grep over touched public-share surfaces
 3. bridge-block grep over touched public-share surfaces
-4. `python -m unittest tests.test_distillation_mechanics_topology`
-5. `python scripts/validate_nested_agents.py`
-6. `python scripts/validate_repo.py`
-7. `python scripts/release_check.py`
+4. the targeted tests
+5. the nested-agent check
+6. repository validation
+7. the release lane

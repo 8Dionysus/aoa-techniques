@@ -51,6 +51,7 @@ should I leave for another AoA owner?
 - practice-motion mechanics under [mechanics](mechanics/README.md)
 - repo-wide schemas, templates, configs, and examples
 - generated reader and machine companions
+- an owner-local statistical measurement port for bounded corpus questions
 - public-safe legacy and provenance surfaces
 - agent-facing route cards
 
@@ -122,6 +123,11 @@ support belong in mechanics until a stable atomic technique is ready.
 Skills, evals, routing, KAG, memory, playbooks, roles, stats, runtime, and ToS
 meaning have stronger owners. This repo may route to them but should not absorb
 their truth.
+
+Owner-local measurement meaning remains here when it concerns the technique
+canon. Cross-owner statistical grammar, aggregation, and views remain with
+`aoa-stats`, and neither side may turn a corpus ratio into technique status or
+promotion authority.
 
 ### 7. Validation before confidence
 

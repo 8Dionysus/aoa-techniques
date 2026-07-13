@@ -91,8 +91,4 @@ The package-card standard is covered by
 
 Verify with:
 
-```bash
-python -m unittest discover -s mechanics/tests -p 'test_mechanics_package_cards.py'
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
+Verification was routed through the targeted owner checks and repository validation lanes.
