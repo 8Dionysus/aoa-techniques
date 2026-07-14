@@ -6,61 +6,145 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-13
+
+### Summary
+
+- this release reconstructs the complete post-`v0.4.5` delta from Git history
+  and source diffs: `37` first-parent commits across `366` paths, with `98,241`
+  additions and `22,697` deletions; `31` of those commits did not edit this
+  changelog and are therefore accounted for explicitly below
+- validation now has manifest-owned source-fast, generated, part-local,
+  release, nightly, and advisory lanes, with owner-split validators, test and
+  script topology inventories, dedicated GitHub workflows, and a stabilizing
+  release entrypoint
+- the repository now carries bounded local memo, eval, KAG, and stats ports
+  while preserving `aoa-memo`, `aoa-evals`, `aoa-kag`, and `aoa-stats` as the
+  stronger owners of their respective cross-repository semantics
+- KAG export and repo-local indexes now carry artifact identity, trust-root and
+  subject-store admission, canonical index-family parity, squash-stable event
+  history, and fail-closed consumer verdicts
+- this remains a public technique canon and generated companion surface, not a
+  skill runtime, proof authority, routing engine, memory owner, KAG substrate,
+  cross-owner stats layer, or package-registry artifact
+
+### Added
+
+- added the root `memo/` port, portable validation route, reviewed-memory route
+  labels, and memory-trigger guidance without turning session evidence into
+  technique truth
+- added canonical decision indexes plus modeled-surface contracts that reject
+  implicit, unlisted, or unmodeled decision-lane inputs
+- added the manifest-backed validation topology, source-only PR gate,
+  generated projection groups, part-local discovery runner, release/nightly
+  workflows, and explicit test and script inventories
+- added the root `evals/` skeleton for technique-local eval pressure while
+  keeping verdict, scoring, regression, and proof doctrine with `aoa-evals`
+- added artifact identity and OS Abyss trust-envelope validation for the KAG
+  export, including durable evidence promotion and subject-store admission
+- added the root `kag/` provider home, source-return packet, provider readiness
+  surface, repo-local indexes, canonical seven-index family, and downstream
+  parity validation
+- added the root `stats/` owner port with a revision-bound
+  promotion-readiness pass ratio, central protocol validation, and coverage
+  that rejects a false numerator while preserving technique and audit authority
+
 ### Changed
 
-- added the root `stats/` owner port with a revision-bound promotion-readiness
-  pass ratio, central protocol validation, and coverage that rejects a false
-  numerator while preserving technique and audit authority
-- added the root `kag/` local provider district and wired it into root surface
-  law, the AGENTS mesh, and generated mesh index for downstream KAG consumers
-- tightened the OS Abyss KAG export artifact envelope so the manifest, validator,
-  and downstream contract test require durable evidence promotion,
-  materialized subject-store admission, source/trust-root matching, and
-  fail-closed allow/deny consumer verdicts before agent consumption
-- moved validation command authority into `config/validation_lanes.json`, added
-  `scripts/validation_lanes.py` and `scripts/ci_gate.py`, and changed GitHub
-  `Repo Validation` to run the `source-fast` lane instead of the full
-  `scripts/release_check.py` release gate on every PR
-- added a validation topology district with source-fast, generated,
-  mechanics/part-local, release, nightly, and advisory lane definitions scoped
-  to the technique-canon owner boundary
-- split GitHub release and nightly validation into separate pinned-action
-  workflows so pull requests do not run the full release-freeze gate
-- split `scripts/validate_repo.py` into `scripts/validators/` owner modules
-  while keeping the old CLI/import surface as a thin compatibility adapter
-- isolated generated/read-model checks into explicit projection validator
-  modules and generated lane groups for catalog, decisions, AGENTS mesh,
-  mechanics projections, KAG export, Technique Intelligence, questbook, and
-  public hygiene
-- added `docs/testing/TEST_TOPOLOGY.md`, `docs/testing/test_inventory.json`,
-  and topology tests so root, mechanic-level, part-local, and Spark agent-lane
-  test homes stay inventoried without becoming release command authority
-- changed the `mechanics/part-local` lane to enter through
-  `scripts/run_part_local_tests.py`, which discovers part-local pytest files
-  and their related builder `--check` / validator scripts from source homes
-- split the former `tests/test_validate_repo.py` monolith into owner-surface
-  tests for compatibility imports, CI/release authority, source contracts,
-  generated drift, AGENTS mesh, public hygiene, and questbook/intelligence
-- split the former Distillation mechanics topology monolith into phase, part,
-  and surface-owned suites with separate inventory failure routes
-- changed active docs and decision command guidance to name validation lane ids
-  and nearest owner `AGENTS.md` checks instead of copied release snippets
-- expanded `source-fast` with a source-only
-  `scripts/validate_source_contracts.py` entrypoint so PR validation covers
-  authored technique contracts without pulling generated freshness into the
-  growth gate
-- added guardrail coverage for active `AGENTS.md` cards so deleted test targets
-  such as the former validate-repo and Distillation topology monoliths cannot
-  remain as focused local checks
-- expanded the nightly workflow with a latest `v*` release reproduction job
-  while keeping moving-main drift checks separate from release-freeze behavior
-- added script topology coverage with `docs/validation/SCRIPT_TOPOLOGY.md`,
-  `docs/validation/script_inventory.json`, and `tests/test_script_topology.py`
-  so every active `*/scripts/*` surface has an explicit owner, lane,
-  side-effect boundary, CI inclusion, and focused test route
-- added a root-level `evals/` skeleton port for technique-local eval pressure
-  while central verdict, scoring, regression, and proof doctrine stay owned by
-  `aoa-evals`
+- changed root and generated agent guidance to use the canonical `aoa-memo`
+  route label and explicit memory-route trigger law
+- moved executable validation command authority into
+  `config/validation_lanes.json`; active docs and decisions now name lane ids
+  and nearest owner cards rather than copying release command sequences
+- split the former repo validator and its monolithic test into owner-local
+  source, generated, AGENTS-mesh, hygiene, questbook, intelligence, and
+  compatibility modules, and similarly split Distillation topology coverage
+  into phase-, part-, and surface-owned suites
+- separated ordinary PR growth validation from release-freeze and nightly
+  reproduction, while keeping latest-tag reproduction and generated drift
+  checks explicit
+- keyed live recurrence receipts by event id and sanitized owner-local evidence
+  and workspace-origin paths before they enter public technique surfaces
+- aligned KAG provider validation with the canonical shared contract, then
+  adopted pinned, lineage-aware, streamable, squash-stable repository index
+  generation and event-history propagation
+- tightened KAG export admission so materialized subjects, source and trust-root
+  identity, evidence state, and allow/deny consumer verdicts must agree before
+  agent consumption
+
+### Fixed
+
+- restored Spark center-decision references and made the local memo validator
+  route portable
+- enforced CSV parity for the kind overlay and repaired the Distillation reform
+  context guard, Wave A anatomy counts, and promotion-evidence hold label
+- repaired owner-truth closeout and technique-tree relative links across source
+  bundles and their generated companions
+- enforced bundle-review draft kind, hardened antifragility and recurrence
+  owner-request receipt tests, and retained wrapped rubric finding tokens
+- aligned the published-summary remediation snapshot cap policy with its
+  checklist, generated readers, and regression coverage
+
+### Included changes
+
+Every first-parent commit from `v0.4.5` through the pre-release base
+`e45b41f5` is listed exactly once, in landing order:
+
+- `5d73dfa3` — `[codex] Add memory route trigger law (#457)`
+- `c030988e` — `Use canonical aoa-memo route label (#458)`
+- `9a0ac2ba` — `Add local memo port (#459)`
+- `b8aeb335` — `Canonicalize technique decision indexes (#460)`
+- `5a733764` — `[codex] Close validation lane coverage gaps (#461)`
+- `4e3ceb77` — `[codex] Add script topology coverage`
+- `3df26cb3` — `Detect unmodeled decision lane surfaces (#463)`
+- `a0263cd4` — `Honor modeled decision lane surfaces (#464)`
+- `01461d6b` — `Require modeled surfaces to be explicit lists (#465)`
+- `1a7d1469` — `Add local eval port skeleton`
+- `ad926b20` — `Restore Spark center decision references (#467)`
+- `7c327f0e` — `Require portable memo validation route (#468)`
+- `60e8edee` — `Validate kind overlay CSV parity (#469)`
+- `b008e207` — `Fix distillation reform context guard (#470)`
+- `1fdf90ab` — `Fix bundle anatomy Wave A counts`
+- `e30e26fa` — `Define promotion evidence hold rubric label`
+- `9c28aab7` — `Fix owner truth closeout links`
+- `0d56be3b` — `Fix stale technique tree relative links (#474)`
+- `6b51b6ea` — `Enforce bundle review draft kind (#475)`
+- `8b2ad2de` — `Harden antifragility ORQ receipt test (#476)`
+- `1fdf9849` — `Harden recurrence ORQ receipt test (#477)`
+- `30a70271` — `Capture wrapped rubric finding tokens (#478)`
+- `15bafd85` — `[codex] Add artifact identity to KAG export (#479)`
+- `5fc1c0c2` — `Add OS Abyss trust gate for KAG export (#480)`
+- `b5e38e08` — `Require subject-store trust gate for KAG export (#481)`
+- `8ab16bc8` — `Add local KAG provider home (#482)`
+- `50f14c92` — `Align KAG provider validation route (#483)`
+- `326f70bf` — `Add repo-local KAG indexes (#484)`
+- `89432bbc` — `Key live receipt hooks by event id (#485)`
+- `a1918b54` — `Sanitize promotion incubation evidence handles (#486)`
+- `e432adac` — `Sanitize workspace ingress origin path (#487)`
+- `98a5533f` — `Align remediation snapshot cap policy (#488)`
+- `67f90cc7` — `Enforce repo-local KAG index parity (#489)`
+- `d58fd66c` — `Adopt repository KAG index family (#490)`
+- `5fa63ab7` — `Publish canonical repository KAG indexes (#491)`
+- `090440b5` — `Add aoa-techniques stats port (#492)`
+- `e45b41f5` — `Harden KAG export artifact admission (#493)`
+
+### Validation
+
+- exact `37`-of-`37` first-parent inventory parity against the tagged range
+- complete `366`-path source-diff accounting, including the `31` commits that
+  did not edit the prior changelog
+- source-fast, generated, mechanics/part-local, and release validation lanes
+- repository tests, public-hygiene checks, and diff hygiene
+- repo-local KAG full, incremental, family, and event-history parity
+- landed-main GitHub validation and post-merge release-lane reproduction
+
+### Notes
+
+- generated outputs remain derived companions; authored technique bundles,
+  route cards, contracts, decisions, mechanic-owned packets, and local port
+  sources remain authoritative
+- package publication to PyPI, npm, or another registry remains out of scope;
+  the public artifact is the tagged corpus and its GitHub release
 
 ## [0.4.5] - 2026-05-18
 
