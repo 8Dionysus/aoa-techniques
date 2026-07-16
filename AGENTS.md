@@ -35,6 +35,23 @@ It does not own:
   playbooks, KAG substrate meaning, cross-owner aggregation, or stats summaries
 - private project operations, secrets, or infrastructure detail
 
+## Skill home boundary
+
+`aoa-techniques` currently owns no repository-local skill bundle. Do not create
+an empty top-level `skills/` port and do not copy shared AoA bundles into
+`.agents/skills/`. Shared skills reach agents through host or user-profile
+projections outside this repository; technique discovery starts from authored
+routes, `TECHNIQUE.md` bundles, and derived readers that return to those
+sources.
+
+A future repository-local skill is admissible only after one concrete
+`aoa-techniques` capability demonstrates a distinct trigger, input/output
+contract, independent composition value, failure boundary, and repeatable
+benefit in manual no-skill and coexistence trials. A technique-to-skill idea is
+only a proposal: route it through Method-growth and AOA-T-0102 to the receiving
+owner without treating proposal, acceptance, activation, or projection as the
+same event.
+
 [DESIGN](DESIGN.md) names the repository system form. [DESIGN.AGENTS](DESIGN.AGENTS.md)
 names the agent-facing surface form. This card is the operational route card
 for agents.
@@ -143,6 +160,8 @@ Update only the ones that moved; otherwise say no update was needed.
 
 - Do not turn a technique into a skill, eval, route, playbook, memory object,
   role contract, runtime behavior, or ToS source.
+- Do not recreate `.agents/skills/` as a repository cache for shared bundles or
+  add an empty `skills/` home without an admitted repo-owned capability.
 - Do not treat generated catalogs, capsules, source-lift outputs, or AGENTS
   mesh mirrors as authored meaning.
 - Do not hide project-private residue, secrets, unreduced transcripts, or

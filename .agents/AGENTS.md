@@ -23,14 +23,17 @@ For Codex Spark work, also read `.agents/spark/README.md`,
 `.agents/spark/registry.json`, and the chosen scenario `README.md` plus
 `PROMPT.md`.
 
-For exported skill-like material, also read `techniques/AGENTS.md`,
-`TECHNIQUE_INDEX.md`, and the source `TECHNIQUE.md` bundle that produced the
-agent-facing companion.
+For technique-facing help, also read `techniques/AGENTS.md`,
+`TECHNIQUE_INDEX.md`, and the selected source `TECHNIQUE.md` bundle.
 
 ## Boundaries
 
-- Do not turn exported technique guidance into an `aoa-skills` skill bundle.
-- Do not hand-edit generated or exported companion content as the first move.
+- Do not create `.agents/skills/` as a local cache of shared AoA bundles.
+- Do not create an empty top-level `skills/` home. A future repository-owned
+  bundle must first pass the admission boundary in root `AGENTS.md`.
+- Use host or user-profile projections for shared skills; use authored
+  technique routes and source-returning derived readers for technique help.
+- Do not hand-edit generated companion content as the first move.
 - Do not make agent lanes stronger than the source technique, docs, schemas,
   builders, or owning AoA repository.
 - Do not add private project assumptions, secrets, local host paths, or hidden

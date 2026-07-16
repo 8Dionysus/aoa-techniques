@@ -117,6 +117,7 @@
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
 
 ## AGENTS/mesh
 
@@ -171,9 +172,18 @@
 
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
 
+## owner boundary
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+
+## prompt visibility
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+
 ## script topology
 
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
 
 ## source contract
 

@@ -108,3 +108,7 @@
 ## 2026-06-03
 
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+
+## 2026-07-16
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)

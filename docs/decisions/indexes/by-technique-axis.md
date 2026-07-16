@@ -121,6 +121,14 @@
 
 - [AOA-TECH-D-0065 Canonical Decision IDs And Indexes](../AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md`)
 
+## execution shape
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+
+## owner boundary
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+
 ## validation lane
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)

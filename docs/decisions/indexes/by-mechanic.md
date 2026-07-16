@@ -49,6 +49,7 @@
 - [AOA-TECH-D-0028 Method-Growth Pattern Adoption Gate](../AOA-TECH-D-0028-method-growth-pattern-adoption-gate.md) (`docs/decisions/AOA-TECH-D-0028-method-growth-pattern-adoption-gate.md`)
 - [AOA-TECH-D-0029 Method-Growth Retention Review](../AOA-TECH-D-0029-method-growth-retention-review.md) (`docs/decisions/AOA-TECH-D-0029-method-growth-retention-review.md`)
 - [AOA-TECH-D-0030 Method-Growth Skill Proposal Handoff](../AOA-TECH-D-0030-method-growth-skill-proposal-handoff.md) (`docs/decisions/AOA-TECH-D-0030-method-growth-skill-proposal-handoff.md`)
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
 
 ## questbook
 

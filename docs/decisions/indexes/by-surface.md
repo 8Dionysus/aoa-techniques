@@ -121,6 +121,7 @@
 - [AOA-TECH-D-0057 Spark Registry-Backed Technique Lane](../AOA-TECH-D-0057-spark-registry-backed-technique-lane.md) (`docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md`)
 - [AOA-TECH-D-0059 Agent Neighbor Doc Command Ownership](../AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md) (`docs/decisions/AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md`)
 - [AOA-TECH-D-0060 AGENTS Mesh Canonical Closure](../AOA-TECH-D-0060-agents-mesh-canonical-closure.md) (`docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md`)
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
 
 ## generated/readout
 
@@ -165,8 +166,16 @@
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 
+## owner boundary
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+
 ## release/tooling
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+
+## repository topology
+
+- [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
