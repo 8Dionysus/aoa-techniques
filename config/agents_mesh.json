@@ -16,7 +16,6 @@
   ],
   "canonical_cards": [
     ".agents/AGENTS.md",
-    ".agents/skills/AGENTS.md",
     ".agents/spark/AGENTS.md",
     ".github/AGENTS.md",
     "AGENTS.md",

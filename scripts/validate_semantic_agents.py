@@ -17,16 +17,6 @@ class AgentsDocSpec:
 
 REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
     AgentsDocSpec(
-        Path('.agents/skills/AGENTS.md'),
-        (
-            'agent-facing companion surface',
-            'TECHNIQUE.md',
-            'aoa-skills',
-            'public-safe',
-            'validate_repo.py',
-        ),
-    ),
-    AgentsDocSpec(
         Path('config/AGENTS.md'),
         (
             'policy',

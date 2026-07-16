@@ -6,6 +6,13 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Changed
+
+- removed the foreign `.agents/skills/` bundle cache and its six copied helper
+  scripts; `aoa-techniques` now declares no repository-local skill home until a
+  repo-specific capability proves a distinct trigger, contract, composition
+  value, and repeatable benefit through manual no-skill and coexistence trials
+
 ## [0.5.0] - 2026-07-13
 
 ### Summary

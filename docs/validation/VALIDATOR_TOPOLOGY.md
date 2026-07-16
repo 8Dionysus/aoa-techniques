@@ -108,5 +108,5 @@ The broader script-surface map lives in
 [`SCRIPT_TOPOLOGY.md`](SCRIPT_TOPOLOGY.md) and
 [`script_inventory.json`](script_inventory.json). That inventory covers every
 active file under `*/scripts/*`, including mechanic-local scripts, Spark lane
-scripts, exported skill companion helpers, and script-local `AGENTS.md` route
-cards. It is descriptive coverage, not command authority.
+scripts, and script-local `AGENTS.md` route cards. It is descriptive coverage,
+not command authority.

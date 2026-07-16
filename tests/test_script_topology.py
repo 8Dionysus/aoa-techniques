@@ -60,9 +60,6 @@ REQUIRED_ENTRY_FIELDS = {
 }
 
 CLI_SMOKE_COMMANDS = (
-    (".agents/skills/aoa-dry-run-first/scripts/dry_run_contract.py", "--template"),
-    (".agents/skills/aoa-local-stack-bringup/scripts/bringup_contract.py", "--template"),
-    (".agents/skills/aoa-safe-infra-change/scripts/infra_change_contract.py", "--template"),
     (".agents/spark/scripts/validate_spark_lane.py", "--help"),
     ("scripts/ci_gate.py", "--help"),
     ("scripts/technique_intelligence.py", "--help"),
@@ -203,16 +200,12 @@ class ScriptTopologyTests(unittest.TestCase):
         self.assertEqual(inventory_part_scripts, runner_part_scripts)
         self.assertTrue(runner_part_scripts)
 
-    def test_advisory_runtime_and_skill_tools_are_not_hidden_hard_gates(self) -> None:
+    def test_advisory_observation_tools_are_not_hidden_hard_gates(self) -> None:
         hard_gate_paths = all_lane_command_script_paths()
 
         for entry in inventory_entries():
             path = entry["path"]
             with self.subTest(path=path):
-                if path.startswith(".agents/skills/"):
-                    self.assertEqual("advisory", entry["validation_lane"])
-                    self.assertEqual([], entry["writes"])
-                    self.assertNotIn(path, hard_gate_paths)
                 if path.endswith("publish_live_receipts.py"):
                     self.assertEqual("advisory", entry["validation_lane"])
                     self.assertIn("appends", entry["side_effects"])
