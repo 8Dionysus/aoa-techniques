@@ -11,10 +11,10 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-INDEX_PATH = "kag/indexes/source_surface_index.json"
+SOURCE_VIEW_PATH = "kag/indexes/source_surface_index.json"
 GENERATOR_PATH = Path("scripts/generate_repo_local_kag_index.py")
 VALIDATOR_PATH = Path("scripts/validate_repo_local_kag_family.py")
-AOA_KAG_REF = "da9f50a581645b2173b99dbf771a63d447ec2fec"
+AOA_KAG_REF = "b28f64a497fd440dd58cbaae90d655da46224d8c"
 HISTORY_REPO_ENV = "AOA_REPO_LOCAL_KAG_HISTORY_REPO"
 HISTORY_REF_ENV = "AOA_REPO_LOCAL_KAG_HISTORY_REF"
 EVENT_HISTORY_REF_ENV = "AOA_REPO_LOCAL_KAG_EVENT_HISTORY_REF"
@@ -92,8 +92,8 @@ def commands(
         "--repo-root",
         str(repo_root),
         "--output",
-        INDEX_PATH,
-        "--index-family",
+        SOURCE_VIEW_PATH,
+        "--portable-family",
     )
     history_args = (
         ("--history-ref", history_ref, "--event-history-ref", event_history_ref or history_ref)
@@ -109,7 +109,7 @@ def commands(
             "--repo-root",
             str(repo_root),
             "--source-index",
-            INDEX_PATH,
+            SOURCE_VIEW_PATH,
         ),
     )
 
