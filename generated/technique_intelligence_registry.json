@@ -245,7 +245,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -699,7 +699,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -1183,7 +1183,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -1685,7 +1685,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -2179,7 +2179,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -2681,7 +2681,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -3178,7 +3178,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -3685,7 +3685,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -4169,7 +4169,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -4665,7 +4665,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -5164,7 +5164,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -5643,7 +5643,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -6129,7 +6129,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -6610,7 +6610,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -7094,7 +7094,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -7591,7 +7591,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -8084,7 +8084,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -8559,7 +8559,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -9039,7 +9039,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -9510,7 +9510,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -9977,7 +9977,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -10447,7 +10447,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -10904,7 +10904,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -11384,7 +11384,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -11860,7 +11860,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -12336,7 +12336,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -12823,7 +12823,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -13311,7 +13311,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -13797,7 +13797,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -14289,7 +14289,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -14778,7 +14778,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -15257,7 +15257,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -15716,7 +15716,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -16156,7 +16156,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -16589,7 +16589,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -17019,7 +17019,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -17458,7 +17458,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -17909,7 +17909,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -18366,7 +18366,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -18813,7 +18813,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -19259,7 +19259,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -19702,7 +19702,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -20147,7 +20147,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -20601,7 +20601,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -21064,7 +21064,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -21515,7 +21515,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -21948,7 +21948,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -22377,7 +22377,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -22822,7 +22822,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -23282,7 +23282,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -23736,7 +23736,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -24190,7 +24190,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -24660,7 +24660,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -25124,7 +25124,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -25578,7 +25578,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -26032,7 +26032,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -26505,7 +26505,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -26969,7 +26969,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -27427,7 +27427,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -27880,7 +27880,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -28343,7 +28343,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -28806,7 +28806,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -29260,7 +29260,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -29715,7 +29715,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -30171,7 +30171,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -30641,7 +30641,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -31113,7 +31113,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -31576,7 +31576,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -32040,7 +32040,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -32496,7 +32496,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -32950,7 +32950,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -33396,7 +33396,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -33844,7 +33844,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -34291,7 +34291,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -34756,7 +34756,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -35209,7 +35209,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -35601,7 +35601,7 @@
           {
             "path": "techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md",
             "title": "minimal harvest-packet-contract",
-            "body_hash": "47916b83dff5db0d1e542344e738cdbebdb0518b174f936ddaea9c5ea30003b2"
+            "body_hash": "f92f6ee713f7a4cfea068f4ec7e42642310e845c7d7be8b40b777c3560b787a9"
           }
         ],
         "evidence_notes": [
@@ -35666,7 +35666,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -35860,8 +35860,8 @@
           "document_type": "example",
           "section_name": "minimal harvest-packet-contract",
           "source_ref": "techniques/continuity/donor-harvest/harvest-packet-contract/examples/minimal-harvest-packet-contract.md",
-          "text": "minimal harvest-packet-contract ```yaml harvest_packet: session_ref: reviewed-session-2026-04-05 reviewed_artifacts: - compaction-note-2026-04-05.md extracts: - title: explicit post-session donor harvest workflow kind: mechanic summary: keep donor extraction visible before later placement or promotion evidence_refs: - \"the reviewed note repeatedly turns raw recap into bounded reusable extracts\" repeat_signal: repeated in the reviewed session artifact owner_hint: aoa-skills chosen_next_surface: SKILL.md nearest_wrong_target: aoa-routing fork_cards: - \"optional later branch analysis\" progression: - \"optional later progression overlay\" ``` Why this example stays bounded: - it keeps the required packet spine small - it records one bounded extract instead of one long recap - it treats later family fields as optional pointers rather than replacements for sibling seams",
-          "content_hash": "7cefc2c625b54d118303de4cd24167c09808ac33b07fb075f2dc92a056e5c37b"
+          "text": "minimal harvest-packet-contract ```yaml harvest_packet: session_ref: reviewed-session-2026-04-05 reviewed_artifacts: - compaction-note-2026-04-05.md extracts: - title: explicit post-session donor harvest workflow kind: mechanic summary: keep donor extraction visible before later placement or promotion evidence_refs: - \"the reviewed note repeatedly turns raw recap into bounded reusable extracts\" repeat_signal: repeated in the reviewed session artifact owner_hint: aoa-skills chosen_next_surface: SKILL.md nearest_wrong_target: aoa-sdk fork_cards: - \"optional later branch analysis\" progression: - \"optional later progression overlay\" ``` Why this example stays bounded: - it keeps the required packet spine small - it records one bounded extract instead of one long recap - it treats later family fields as optional pointers rather than replacements for sibling seams",
+          "content_hash": "21a7c6c863369115dbd0ed36f63c7540b03bb0dd64f487bd10327dbd9b899a94"
         },
         {
           "document_id": "AOA-T-0077:evidence_note:001",
@@ -36120,7 +36120,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -36565,7 +36565,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -37010,7 +37010,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -37456,7 +37456,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -37902,7 +37902,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -38349,7 +38349,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -38805,7 +38805,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -39258,7 +39258,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -39703,7 +39703,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -40148,7 +40148,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -40594,7 +40594,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -41039,7 +41039,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -41491,7 +41491,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -41960,7 +41960,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -42413,7 +42413,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -42857,7 +42857,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -43302,7 +43302,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -43745,7 +43745,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -44141,7 +44141,7 @@
           {
             "path": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md",
             "title": "minimal pinned-validation-matrix-before-generated-publish",
-            "body_hash": "9fcef1bb38ec435668a4e4a41c8eda3e0bdedf44176987ed6eaaf60862b147a5"
+            "body_hash": "f8185ba386ff22926d55175469ba98968a336f6a85092f92501504dfc519c34e"
           }
         ],
         "evidence_notes": [
@@ -44196,7 +44196,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -44390,8 +44390,8 @@
           "document_type": "example",
           "section_name": "minimal pinned-validation-matrix-before-generated-publish",
           "source_ref": "techniques/proof/owner-truth-closeout/pinned-validation-matrix-before-generated-publish/examples/minimal-pinned-validation-matrix-before-generated-publish.md",
-          "text": "minimal pinned-validation-matrix-before-generated-publish ```yaml generated_publish: repo_root: /workspace/aoa-routing outputs: - generated/owner_layer_shortlist.min.json workflow_pinned_inputs: - repo: aoa-playbooks ref: origin/main required_surface: generated/playbook_review_status.min.json - repo: aoa-skills ref: workflow-pinned-sibling required_surface: generated/core_skill_receipt_contracts.min.json rebuild: command: python scripts/build_router.py --check publish_gate: requires: - pinned_matrix_rebuilt - generated_diff_honest - repo_validators_green ``` Why this example stays bounded: - it names the generated outputs and the workflow-pinned inputs before publish - it makes the pinned matrix explicit instead of treating local workspace state as automatically sufficient - it shows one publish gate without widening into full release choreography",
-          "content_hash": "b35f8a9b5d4f0fddc281fe3c1ec1811f528e4eb8b443f75bb4974462ac4d5dab"
+          "text": "minimal pinned-validation-matrix-before-generated-publish ```yaml generated_publish: repo_root: /workspace/aoa-sdk outputs: - generated/owner_layer_shortlist.min.json workflow_pinned_inputs: - repo: aoa-playbooks ref: origin/main required_surface: generated/playbook_review_status.min.json - repo: aoa-skills ref: workflow-pinned-sibling required_surface: generated/core_skill_receipt_contracts.min.json rebuild: command: python -m aoa_sdk.control_plane.routing.producer --generated-dir generated --check publish_gate: requires: - pinned_matrix_rebuilt - generated_diff_honest - repo_validators_green ``` Why this example stays bounded: - it names the generated outputs and the workflow-pinned inputs before publish - it makes the pinned matrix explicit instead of treating local workspace state as automatically sufficient - it shows one publish gate without widening into full release choreography",
+          "content_hash": "ceb205e9a78274f4a1be778999c415bdf777610eb7d53de1d6c999a2bce1ed79"
         },
         {
           "document_id": "AOA-T-0096:evidence_note:001",
@@ -44632,7 +44632,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -45076,7 +45076,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -45515,7 +45515,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -45959,7 +45959,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -46406,7 +46406,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -46866,7 +46866,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -47327,7 +47327,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -47777,7 +47777,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -48222,7 +48222,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -48681,7 +48681,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {
@@ -49140,7 +49140,7 @@
           },
           {
             "object_class": "dispatch_policy",
-            "owner": "aoa-routing",
+            "owner": "aoa-sdk",
             "cue": "the request asks for global next-surface routing or dispatcher behavior"
           },
           {

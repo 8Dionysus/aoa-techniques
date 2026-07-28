@@ -25,7 +25,7 @@ pre-split v0.7 provenance.
 
 `Agents-of-Abyss` owns center Method-growth law and owner-request grammar.
 `aoa-skills` owns executable workflow packages, `aoa-evals` owns proof
-verdicts, `aoa-routing` owns route behavior, `aoa-memo` owns memory objects,
+verdicts, `aoa-sdk` owns route behavior, `aoa-memo` owns memory objects,
 and each sibling owner keeps acceptance of its own operational truth.
 
 ### Inputs

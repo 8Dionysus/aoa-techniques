@@ -138,7 +138,7 @@ class QuestbookMechanicsTopologyTestCase(unittest.TestCase):
             "aoa-evals",
             "aoa-playbooks",
             "aoa-memo",
-            "aoa-routing",
+            "aoa-sdk",
         ):
             with self.subTest(expected=expected):
                 self.assertIn(expected, anchors)

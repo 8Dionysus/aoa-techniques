@@ -37,7 +37,7 @@ source owners.
 - Add examples only when reviewed local evidence can show the bridge without
   smuggling sibling-owner truth into this repo.
 - Route proof-strength work to `aoa-evals`, memory writeback to `aoa-memo`, KAG
-  projection truth to `aoa-kag`, and route behavior to `aoa-routing`.
+  projection truth to `aoa-kag`, and route behavior to `aoa-sdk`.
 - Reassess this roadmap after a boundary-shaped candidate proves smaller than
   existing proof, docs-boundary, owner-truth, or source-lift techniques.
 

@@ -25,7 +25,7 @@ bridges that keep Agon pressure reviewable before any technique bundle exists.
 `Agents-of-Abyss` owns Agon doctrine, lawful move vocabulary, owner-binding
 rules, arena/session law, verdict retention, rank/scar boundaries, and ToS
 threshold routing. `aoa-skills` owns executable workflows, `aoa-evals` owns
-proof verdicts, `aoa-routing` owns routing logic, `aoa-memo` owns memory
+proof verdicts, `aoa-sdk` owns routing logic, `aoa-memo` owns memory
 writeback, and `Tree-of-Sophia` owns ToS-authored meaning.
 
 Part-local candidate surfaces translate center-owned move pressure into

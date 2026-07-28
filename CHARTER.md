@@ -59,7 +59,7 @@ It should:
 |---|---|
 | bounded execution workflows and agent-facing skill packages | `aoa-skills` |
 | proof doctrine, verdict logic, scoring, and claim checks | `aoa-evals` |
-| cross-repo dispatch, recommendation, and route policy | `aoa-routing` |
+| cross-repo dispatch, recommendation, and route policy | `aoa-sdk` |
 | recurring scenarios, campaigns, and route choreography | `aoa-playbooks` |
 | role identity, persona contracts, standing posture, and handoff roles | `aoa-agents` |
 | memory, recall, retention, and witness objects as primary meaning | `aoa-memo` |

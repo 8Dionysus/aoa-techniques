@@ -99,7 +99,7 @@ ROUTE_AWAY_BOUNDARIES = (
     },
     {
         "object_class": "dispatch_policy",
-        "owner": "aoa-routing",
+        "owner": "aoa-sdk",
         "cue": "the request asks for global next-surface routing or dispatcher behavior",
     },
     {

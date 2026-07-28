@@ -84,7 +84,7 @@ def test_agon_candidate_handoff_shape() -> None:
             "aoa-agents": 1,
             "aoa-evals": 4,
             "aoa-memo": 1,
-            "aoa-routing": 1,
+            "aoa-sdk": 1,
         },
         "by_source_part": {
             "epistemic-technique-candidates": 5,

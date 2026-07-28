@@ -8,6 +8,10 @@ The format is intentionally simple and human-first.
 
 ### Changed
 
+- routed current dispatch-owner maps, technique-intelligence boundaries,
+  mechanic handoffs, and runnable examples through the canonical `aoa-sdk`
+  routing surface while preserving `aoa-routing` only in dated donor,
+  provenance, review, and legacy evidence
 - removed the foreign `.agents/skills/` bundle cache and its six copied helper
   scripts; `aoa-techniques` now declares no repository-local skill home until a
   repo-specific capability proves a distinct trigger, contract, composition

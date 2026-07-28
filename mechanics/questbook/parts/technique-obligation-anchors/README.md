@@ -26,7 +26,7 @@ kept in Questbook, harvested, dropped, or routed to a stronger owner.
 
 If the obligation needs proof, route to `aoa-evals`. If it needs recurring
 choreography, route to `aoa-playbooks`. If it needs memory or recall, route to
-`aoa-memo`. If it needs route behavior, route to `aoa-routing`.
+`aoa-memo`. If it needs route behavior, route to `aoa-sdk`.
 
 ## Stop-lines
 

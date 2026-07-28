@@ -31,7 +31,7 @@ bridges to center guidance.
 `Agents-of-Abyss` owns center Boundary Bridge doctrine, bridge modes, owner
 maps, non-transfer stop-lines, and owner-request packets. `Tree-of-Sophia`
 owns ToS meaning, `aoa-kag` owns derived knowledge substrate semantics,
-`aoa-routing` owns route behavior, `aoa-sdk` owns compatibility helpers,
+`aoa-sdk` owns route behavior and compatibility helpers,
 `aoa-memo` owns memory objects, `aoa-evals` owns proof, and `abyss-stack` owns
 runtime behavior.
 

@@ -33,7 +33,7 @@ or scar effects.
 |---|---|---|---|
 | `probe_trace` | trace review over one artifact; `medium-agent`; nearest wrong owner `aoa-memo` | one trace link, inspected artifact, explicit unknown | `trace-probe` is not current `kind`; map only after the gate proves the atom |
 | `localize_contradiction` | contradiction diagnosis over claims; `medium-agent`; nearest wrong owner `aoa-evals` | smallest conflicting claims plus separating evidence | `diagnosis` is not current `kind`; likely needs `assessment` or another registry-backed choice |
-| `deny_closure` | closure guardrail over review state; `small-agent`; nearest wrong owner `aoa-routing` | one unmet condition plus reopen route | `guardrail` is already registry-backed, but route authority must stay outside |
+| `deny_closure` | closure guardrail over review state; `small-agent`; nearest wrong owner `aoa-sdk` | one unmet condition plus reopen route | `guardrail` is already registry-backed, but route authority must stay outside |
 | `inference_chain_attack_practice` | reasoning audit over an inference chain; `medium-agent`; nearest wrong owner `aoa-evals` | weakest link plus repair evidence | `review` is not current `kind`; restate attack as audit before choosing |
 | `explanatory_power_comparison_practice` | two-explanation comparison; `small-agent`; nearest wrong owner `aoa-evals` | same evidence, comparison axis, remaining unknown | `comparison` is not current `kind`; likely needs `assessment` if it becomes a bundle |
 | `concept_boundary_probe_practice` | concept-boundary probe over docs; `small-agent`; nearest wrong owner `Tree-of-Sophia` | one near case, one excluded case, owner stop-line | `boundary` is not current `kind`; do not write ToS canon |

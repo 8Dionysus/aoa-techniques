@@ -36,7 +36,7 @@ self-repair, or technique status changes.
   acceptance, or route authority.
 - Keep sibling owner truth with its owner: controls in `aoa-sdk`, protocol in
   `aoa-skills`, actor posture in `aoa-agents`, memory/relaunch in `aoa-memo`,
-  proof in `aoa-evals`, routing in `aoa-routing`, stats in `aoa-stats`, runtime
+  proof in `aoa-evals`, routing in `aoa-sdk`, stats in `aoa-stats`, runtime
   exports in `abyss-stack`, and center law in `Agents-of-Abyss`.
 - If a stable reusable practice emerges, route it into `techniques/` through
   the normal technique review path.

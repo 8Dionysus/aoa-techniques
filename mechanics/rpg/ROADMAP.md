@@ -29,7 +29,7 @@ keeping stronger owner authority outside this repo.
   examples, and validation.
 - Route role canon to `aoa-agents`, playbook choreography to `aoa-playbooks`,
   quest source truth to Questbook surfaces, memory canon to `aoa-memo`, proof
-  to `aoa-evals`, and route behavior to `aoa-routing`.
+  to `aoa-evals`, and route behavior to `aoa-sdk`.
 - Reassess this roadmap after RPG language repeatedly improves technique
   selection or closeout without becoming scoring lore.
 

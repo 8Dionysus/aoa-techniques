@@ -31,9 +31,10 @@ The useful question is "which bounded practice shape should become the next skil
 Keep this as a selection hint, not an execution contract.
 `aoa-skills` still owns bounded execution behavior, packaging, and invocation discipline.
 
-### `aoa-routing`
+### `aoa-sdk`
 
-Use `domain + kind` as the second cut after owner-layer/domain choice.
+Use `domain + kind` as the second cut after owner-layer/domain choice in the
+SDK-owned routing and dispatch surface.
 
 That means:
 

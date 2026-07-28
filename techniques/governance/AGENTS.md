@@ -60,7 +60,7 @@ Keep the governance object explicit:
 - what stop condition prevents advisory structure from becoming policy
 
 Do not turn a governance technique into AoA constitutional authority,
-`aoa-routing` ownership, role contract law, runtime dispatch, approval policy,
+`aoa-sdk` routing ownership, role contract law, runtime dispatch, approval policy,
 playbook design, security framework authority, scheduler doctrine, queue
 ownership, broad orchestration governance, hidden automation governance, skill
 acceptance, skill activation, proof verdict authority, memory truth, or

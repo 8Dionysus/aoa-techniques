@@ -54,6 +54,16 @@ class TechniqueIntelligenceTests(unittest.TestCase):
     def test_registry_uses_no_activation_shape_keys(self) -> None:
         self.assertTrue(BANNED_KEYS.isdisjoint(iter_keys(self.registry)))
 
+    def test_dispatch_policy_routes_to_sdk_successor(self) -> None:
+        dispatch = next(
+            boundary
+            for boundary in surface.ROUTE_AWAY_BOUNDARIES
+            if boundary["object_class"] == "dispatch_policy"
+        )
+
+        self.assertEqual("aoa-sdk", dispatch["owner"])
+        self.assertNotEqual("aoa-routing", dispatch["owner"])
+
     def test_registry_schema_accepts_generated_payload(self) -> None:
         schema = json.loads(
             (REPO_ROOT / "schemas/technique_intelligence_registry.schema.json").read_text(

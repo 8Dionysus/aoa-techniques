@@ -45,7 +45,7 @@ bundle-local evidence and validation expected by `aoa-techniques`.
 
 Distillation also does not absorb the owning layer of the donor. Skills stay in
 `aoa-skills`, eval doctrine stays in `aoa-evals`, role contracts stay in
-`aoa-agents`, routing stays in `aoa-routing`, memory stays in `aoa-memo`, and
+`aoa-agents`, routing stays in `aoa-sdk`, memory stays in `aoa-memo`, and
 center doctrine stays in `Agents-of-Abyss`.
 
 ## Current structural posture

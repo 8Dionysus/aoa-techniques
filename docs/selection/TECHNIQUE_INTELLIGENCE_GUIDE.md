@@ -85,7 +85,7 @@ Leave when the object class changes:
 
 - execution workflow: nearest workflow or agent-lane owner
 - proof verdict: `aoa-evals`
-- dispatch policy: `aoa-routing`
+- dispatch policy: `aoa-sdk`
 - runtime behavior: `abyss-stack`
 - role contract: `aoa-agents`
 - scenario composition: `aoa-playbooks`

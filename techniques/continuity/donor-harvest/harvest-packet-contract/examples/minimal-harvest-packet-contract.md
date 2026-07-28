@@ -14,7 +14,7 @@ harvest_packet:
       repeat_signal: repeated in the reviewed session artifact
       owner_hint: aoa-skills
       chosen_next_surface: SKILL.md
-      nearest_wrong_target: aoa-routing
+      nearest_wrong_target: aoa-sdk
   fork_cards:
     - "optional later branch analysis"
   progression:

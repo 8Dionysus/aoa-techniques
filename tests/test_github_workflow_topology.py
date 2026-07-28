@@ -4,12 +4,13 @@ import re
 import unittest
 from pathlib import Path
 
+from scripts.validate_repo_local_kag_index import AOA_KAG_REF as PINNED_AOA_KAG
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 PINNED_CHECKOUT = "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd"
 PINNED_SETUP_PYTHON = "actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405"
-PINNED_AOA_KAG = "da9f50a581645b2173b99dbf771a63d447ec2fec"
 PINNED_AOA_STATS = "25ebfb784f01d3b93f62994908579c4a2c5d87b1"
 
 
