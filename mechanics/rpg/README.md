@@ -31,7 +31,7 @@ owner-handoff cues for technique-layer pressure.
 `Agents-of-Abyss` owns center RPG world grammar and downstream owner posture.
 `aoa-agents` owns role canon, `aoa-skills` owns skill execution,
 `aoa-playbooks` owns scenario and campaign choreography, `aoa-evals` owns proof
-verdicts, `aoa-memo` owns memory and chronicle objects, `aoa-routing` owns
+verdicts, `aoa-memo` owns memory and chronicle objects, `aoa-sdk` owns
 routing behavior, `aoa-stats` owns summaries, and `abyss-stack` owns runtime
 ledger state.
 

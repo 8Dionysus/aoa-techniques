@@ -32,7 +32,7 @@ one portable technique.
 
 - Add examples only when they are public-safe and do not imply release approval.
 - Route proof verdicts to `aoa-evals`, public projection to the publishing
-  owner, routing ABI to `aoa-routing`, SDK compatibility to `aoa-sdk`, runtime
+  owner, routing ABI and SDK compatibility to `aoa-sdk`, runtime
   deployment to the runtime owner, and Tree-of-Sophia write authority to ToS.
 - Reassess this roadmap after release-support pressure repeatedly points to the
   same missing installation or release-support atom.

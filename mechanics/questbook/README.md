@@ -34,7 +34,7 @@ and provenance bridges to center Questbook guidance.
 `QUESTBOOK.md` and root `quests/` own repo-local obligation source. Generated
 quest files are projections. `Agents-of-Abyss` owns center Questbook law and
 owner-request grammar. `aoa-playbooks` owns scenario choreography,
-`aoa-evals` owns proof, `aoa-routing` owns routing behavior, and `aoa-memo`
+`aoa-evals` owns proof, `aoa-sdk` owns routing behavior, and `aoa-memo`
 owns memory objects.
 
 ### Inputs

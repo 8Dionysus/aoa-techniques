@@ -105,8 +105,8 @@ review posture, and repo-owned generated companions.
 
 Leave when the object class changes: [aoa-skills](https://github.com/8Dionysus/aoa-skills)
 owns bounded execution workflows, [aoa-evals](https://github.com/8Dionysus/aoa-evals)
-owns verdict doctrine and proof surfaces, and [aoa-routing](https://github.com/8Dionysus/aoa-routing)
-owns smallest-next-surface routing and dispatch hints.
+owns verdict doctrine and proof surfaces, and [aoa-sdk](https://github.com/8Dionysus/aoa-sdk)
+owns canonical smallest-next-surface routing and dispatch hints.
 
 ## Release And Validation
 

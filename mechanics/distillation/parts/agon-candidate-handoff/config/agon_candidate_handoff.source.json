@@ -255,7 +255,7 @@
       "bridge": {
         "higher_law": "Agents-of-Abyss mechanics/agon owns closure law.",
         "local_route": "Run one gate card focused on a named unmet condition and reopen route.",
-        "nearest_wrong_owner": "aoa-routing",
+        "nearest_wrong_owner": "aoa-sdk",
         "bridge_stop_line": "Do not create route authority, proof verdict, or permanent dispute state."
       },
       "next_move": "Write a gate card with condition, evidence gap, and explicit reopen route."
@@ -515,7 +515,7 @@
       "bridge": {
         "higher_law": "Agents-of-Abyss mechanics/agon owns rupture pressure and stop-lines.",
         "local_route": "Hold until the output is a review trigger rather than proof, alarm, or route action.",
-        "nearest_wrong_owner": "aoa-routing",
+        "nearest_wrong_owner": "aoa-sdk",
         "bridge_stop_line": "Do not dispatch routes, issue proof verdicts, or write scars."
       },
       "next_move": "Separate rupture signal from route action before writing an atom card."

@@ -577,7 +577,7 @@ relations:
             "mechanics/distillation/README.md",
             "aoa-skills",
             "aoa-evals",
-            "aoa-routing",
+            "aoa-sdk",
             "current corpus posture is generated",
             "../generated/technique_catalog.min.json",
             "domain/kind/status split",

@@ -36,7 +36,7 @@ technique.
 - Add examples only when they show a public-safe handoff artifact without
   implying hidden runtime state.
 - Route memory canon to `aoa-memo`, proof to `aoa-evals`, route behavior to
-  `aoa-routing`, runtime activation to the runtime owner, and stats meaning to
+  `aoa-sdk`, runtime activation to the runtime owner, and stats meaning to
   `aoa-stats`.
 - Reassess this roadmap after a checkpoint-shaped candidate proves smaller than
   existing continuity or owner-truth-closeout techniques.

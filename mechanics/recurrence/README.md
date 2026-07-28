@@ -28,9 +28,9 @@ center recurrence guidance.
 
 ### Stronger owner split
 
-`Agents-of-Abyss` owns recurrence law and owner-request grammar. `aoa-routing`
-owns dispatch, `aoa-memo` owns memory recall, `aoa-sdk` owns control-plane
-carry, `aoa-evals` owns proof, `aoa-playbooks` owns scenario choreography,
+`Agents-of-Abyss` owns recurrence law and owner-request grammar. `aoa-sdk`
+owns dispatch and control-plane carry, `aoa-memo` owns memory recall,
+`aoa-evals` owns proof, `aoa-playbooks` owns scenario choreography,
 `aoa-stats` owns derived summaries, `aoa-kag` owns derived knowledge substrate,
 and `abyss-stack` owns runtime return.
 

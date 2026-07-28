@@ -2,7 +2,7 @@
 
 ```yaml
 generated_publish:
-  repo_root: /workspace/aoa-routing
+  repo_root: /workspace/aoa-sdk
   outputs:
     - generated/owner_layer_shortlist.min.json
   workflow_pinned_inputs:
@@ -13,7 +13,7 @@ generated_publish:
       ref: workflow-pinned-sibling
       required_surface: generated/core_skill_receipt_contracts.min.json
   rebuild:
-    command: python scripts/build_router.py --check
+    command: python -m aoa_sdk.control_plane.routing.producer --generated-dir generated --check
   publish_gate:
     requires:
       - pinned_matrix_rebuilt

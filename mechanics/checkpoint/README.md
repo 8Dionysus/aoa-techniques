@@ -30,7 +30,7 @@ to center checkpoint guidance.
 `Agents-of-Abyss` owns center Checkpoint law, vocabulary, owner map,
 stop-lines, and cross-owner route grammar. `aoa-skills` owns executable
 checkpoint workflows, `aoa-agents` owns actor and handoff posture, `aoa-memo`
-owns memory/relaunch objects, `aoa-evals` owns proof, `aoa-routing` owns route
+owns memory/relaunch objects, `aoa-evals` owns proof, `aoa-sdk` owns route
 behavior, `aoa-stats` owns derived summaries, and `abyss-stack` owns runtime
 exports.
 

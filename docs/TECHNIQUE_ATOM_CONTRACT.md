@@ -69,7 +69,7 @@ Route away from `aoa-techniques` when the candidate is mainly:
 |---|---|
 | multi-step workflow with state, retries, or tools | `aoa-skills` |
 | verdict doctrine, benchmark proof, or claim scoring | `aoa-evals` |
-| selector logic, dispatch policy, or recommendation behavior | `aoa-routing` |
+| selector logic, dispatch policy, or recommendation behavior | `aoa-sdk` |
 | scenario composition or recurring play | `aoa-playbooks` |
 | role identity, handoff posture, or agent contract | `aoa-agents` |
 | memory, KAG, runtime, or infrastructure behavior | the owning layer |

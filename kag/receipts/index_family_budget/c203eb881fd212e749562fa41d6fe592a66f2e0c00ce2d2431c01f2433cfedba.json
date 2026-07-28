@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 8684128,
+  "allowed_tracked_bytes": 33264020,
+  "approved_by": "repository-owner",
+  "base_ref": "e842c0d0156c58cfb9020b636e81134e96fc8cfb",
+  "changed_generated_bytes": 8684128,
+  "changed_generated_files": 124,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "c203eb881fd212e749562fa41d6fe592a66f2e0c00ce2d2431c01f2433cfedba",
+  "reason": "Refresh the portable KAG family for the reviewed aoa-routing to aoa-sdk consumer succession in aoa-techniques; this digest-bound receipt authorizes only the measured generated projection delta.",
+  "repo": "aoa-techniques",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 33264020,
+  "tracked_bytes_max": 36700160
+}

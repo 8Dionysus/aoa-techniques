@@ -35,9 +35,10 @@ projection authority, owner acceptance, or technique status changes.
   proof notes, receipts, or compatibility mirrors as owner acceptance, source
   truth, proof verdicts, runtime truth, or public authority.
 - Keep sibling owner truth with its owner: ToS meaning in `Tree-of-Sophia`,
-  derived projection in `aoa-kag`, route behavior in `aoa-routing`, memory and
+  derived projection in `aoa-kag`, route behavior and compatibility in
+  `aoa-sdk`, memory and
   witness objects in `aoa-memo`, proof in `aoa-evals`, scenario choreography in
-  `aoa-playbooks`, compatibility in `aoa-sdk`, runtime in `abyss-stack`, and
+  `aoa-playbooks`, runtime in `abyss-stack`, and
   center law in `Agents-of-Abyss`.
 - If a stable reusable practice emerges, route it into `techniques/` through
   the normal technique review path.

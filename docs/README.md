@@ -150,7 +150,7 @@ canonical, semantic, or shadow guide before opening mechanic-owned packets.
 Neighboring AoA repositories own adjacent object classes:
 [aoa-skills](https://github.com/8Dionysus/aoa-skills),
 [aoa-evals](https://github.com/8Dionysus/aoa-evals),
-[aoa-routing](https://github.com/8Dionysus/aoa-routing),
+[aoa-sdk](https://github.com/8Dionysus/aoa-sdk),
 [aoa-playbooks](https://github.com/8Dionysus/aoa-playbooks), and
 [Agents-of-Abyss](https://github.com/8Dionysus/Agents-of-Abyss).
 

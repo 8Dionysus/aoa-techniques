@@ -38,7 +38,7 @@ projection, harvest, and promotion pressure around technique canon.
 - Add examples only from reviewed quest evidence that can stay public-safe and
   does not become quest closure proof.
 - Route playbook choreography to `aoa-playbooks`, memory canon to `aoa-memo`,
-  proof to `aoa-evals`, routing behavior to `aoa-routing`, and RPG readings to
+  proof to `aoa-evals`, routing behavior to `aoa-sdk`, and RPG readings to
   the RPG mechanic or stronger owner.
 - Reassess this roadmap after durable obligations repeatedly require the same
   technique-shaped intervention.
