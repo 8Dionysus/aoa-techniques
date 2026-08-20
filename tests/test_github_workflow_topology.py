@@ -67,11 +67,13 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         release = self.workflow_text("release-audit.yml")
         nightly = self.workflow_text("nightly-sentinel.yml")
         moving_main = nightly.split("  latest_release_repro:", 1)[0]
+        latest_release_repro = nightly.split("  latest_release_repro:", 1)[1]
 
         for name, workflow in (
             ("repo-validation", repo_validation),
             ("release-audit", release),
             ("nightly-moving-main", moving_main),
+            ("nightly-latest-release-repro", latest_release_repro),
         ):
             with self.subTest(workflow=name):
                 self.assertIn("AOA_STATS_ROOT:", workflow)
@@ -81,7 +83,8 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         self.assertIn("AOA_KAG_ROOT:", moving_main)
         self.assertIn("repository: 8Dionysus/aoa-kag", moving_main)
         self.assertIn(f"ref: {PINNED_AOA_KAG}", moving_main)
-        self.assertEqual(1, nightly.count("repository: 8Dionysus/aoa-stats"))
+        self.assertIn("pytest>=8.0,<9.0", latest_release_repro)
+        self.assertEqual(2, nightly.count("repository: 8Dionysus/aoa-stats"))
         self.assertEqual(1, nightly.count("repository: 8Dionysus/aoa-kag"))
 
     def test_pull_request_template_names_lanes_not_release_check_as_repo_validation(
