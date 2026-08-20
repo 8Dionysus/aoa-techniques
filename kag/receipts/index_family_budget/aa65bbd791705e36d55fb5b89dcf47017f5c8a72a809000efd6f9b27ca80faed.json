@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 8286240,
+  "allowed_tracked_bytes": 33270567,
+  "approved_by": "repository-owner",
+  "base_ref": "9a5222cc6a6b1fdc52b4df906f49dadfd0383c71",
+  "changed_generated_bytes": 8286240,
+  "changed_generated_files": 97,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "aa65bbd791705e36d55fb5b89dcf47017f5c8a72a809000efd6f9b27ca80faed",
+  "reason": "Refresh the tracked portable KAG family after documenting the synchronized Nightly Sentinel validation setup change; keep full and incremental source-fast validation on the same owner-main history boundary.",
+  "repo": "aoa-techniques",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 33270567,
+  "tracked_bytes_max": 36700160
+}
