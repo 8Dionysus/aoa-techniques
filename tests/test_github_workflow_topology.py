@@ -84,6 +84,9 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         self.assertIn("repository: 8Dionysus/aoa-kag", moving_main)
         self.assertIn(f"ref: {PINNED_AOA_KAG}", moving_main)
         self.assertIn("pytest>=8.0,<9.0", latest_release_repro)
+        self.assertIn("Move release dependencies outside tagged checkout", latest_release_repro)
+        self.assertIn('mv "$GITHUB_WORKSPACE/.deps" "$release_deps"', latest_release_repro)
+        self.assertIn('>> "$GITHUB_ENV"', latest_release_repro)
         self.assertEqual(2, nightly.count("repository: 8Dionysus/aoa-stats"))
         self.assertEqual(1, nightly.count("repository: 8Dionysus/aoa-kag"))
 
