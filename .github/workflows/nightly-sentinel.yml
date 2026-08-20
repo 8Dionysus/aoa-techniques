@@ -95,6 +95,22 @@ jobs:
           ref: 25ebfb784f01d3b93f62994908579c4a2c5d87b1
           path: .deps/aoa-stats
 
+      - name: Move release dependencies outside tagged checkout
+        shell: bash
+        run: |
+          release_deps="$RUNNER_TEMP/aoa-techniques-release-deps"
+          if [ -e "$release_deps" ]; then
+            echo "release dependency directory already exists: $release_deps" >&2
+            exit 1
+          fi
+          test -d "$GITHUB_WORKSPACE/.deps/abyss-machine"
+          test -d "$GITHUB_WORKSPACE/.deps/aoa-stats"
+          mv "$GITHUB_WORKSPACE/.deps" "$release_deps"
+          {
+            echo "ABYSS_MACHINE_REPO_ROOT=$release_deps/abyss-machine"
+            echo "AOA_STATS_ROOT=$release_deps/aoa-stats"
+          } >> "$GITHUB_ENV"
+
       - name: Setup Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:

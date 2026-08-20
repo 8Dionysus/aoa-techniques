@@ -31,6 +31,8 @@ def markdown_command_nonowners() -> tuple[Path, ...]:
         relative = path.relative_to(REPO_ROOT)
         if path.name == "AGENTS.md":
             continue
+        if relative.parts and relative.parts[0] == ".deps":
+            continue
         if relative.parts[:2] == (".agents", "skills"):
             continue
         if relative.parts and relative.parts[0] == "techniques":

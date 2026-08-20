@@ -1,0 +1,17 @@
+{
+  "allowed_bytes": 8768560,
+  "allowed_tracked_bytes": 33275846,
+  "approved_by": "repository-owner",
+  "base_ref": "cf2756912d7c60fbedc06bd85e459e6e451efe7d",
+  "changed_generated_bytes": 8768560,
+  "changed_generated_files": 104,
+  "decision_ref": "aoa-kag:docs/decisions/AOA-KAG-D-0017-portable-content-addressed-repository-family.md",
+  "default_limit_bytes": 1048576,
+  "head_family_digest": "71a39ee4632ad1a5cd171e79787ff10d4604adf364abb94de00fe4679dce63ea",
+  "reason": "Refresh the portable KAG family for the workflow-level release dependency isolation required by the tagged latest-release reproduction.",
+  "repo": "aoa-techniques",
+  "schema_version": "aoa-repo-local-kag-budget-receipt-v1",
+  "scope": "generated_delta",
+  "tracked_bytes": 33275846,
+  "tracked_bytes_max": 36700160
+}

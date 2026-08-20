@@ -270,7 +270,9 @@ class ScriptTopologyTests(unittest.TestCase):
 
         for doc in sorted(set(docs)):
             relative_doc = doc.relative_to(REPO_ROOT).as_posix()
-            if "legacy/" in relative_doc:
+            if "legacy/" in relative_doc or relative_doc.startswith(
+                IGNORED_SCRIPT_SURFACE_PREFIXES
+            ):
                 continue
             text = doc.read_text(encoding="utf-8")
             refs = {
