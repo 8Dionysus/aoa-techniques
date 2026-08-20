@@ -11,6 +11,8 @@ The format is intentionally simple and human-first.
 - repaired the Nightly Sentinel dependency setup by pinning the `aoa-stats`
   validator checkout and installing `pytest` for latest-release reproduction,
   so the scheduled source and release gates can execute their declared checks
+- kept foreign `.deps/` checkouts outside the repository-owned test, script,
+  and command-authority topology scans used by latest-release reproduction
 - routed current dispatch-owner maps, technique-intelligence boundaries,
   mechanic handoffs, and runnable examples through the canonical `aoa-sdk`
   routing surface while preserving `aoa-routing` only in dated donor,

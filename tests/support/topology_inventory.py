@@ -11,6 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 INVENTORY_PATH = REPO_ROOT / "docs" / "testing" / "test_inventory.json"
 TEST_TOPOLOGY_PATH = REPO_ROOT / "docs" / "testing" / "TEST_TOPOLOGY.md"
 TEST_FILE_PATTERN = "test*.py"
+IGNORED_EXTERNAL_TEST_PREFIXES = (".deps/",)
 COMMAND_PREFIXES = ("python", "git", "bash", "sh", "pytest", "uv", "make")
 
 
@@ -37,12 +38,15 @@ def normalized_inventory_entries() -> list[dict[str, Any]]:
 def discovered_test_files(repo_root: Path = REPO_ROOT) -> set[str]:
     files: set[str] = set()
     for path in repo_root.rglob(TEST_FILE_PATTERN):
-        rel_parts = path.relative_to(repo_root).parts
+        relative = path.relative_to(repo_root).as_posix()
+        rel_parts = Path(relative).parts
         if ".git" in rel_parts or "__pycache__" in rel_parts:
+            continue
+        if relative.startswith(IGNORED_EXTERNAL_TEST_PREFIXES):
             continue
         if path.suffix != ".py":
             continue
-        files.add(path.relative_to(repo_root).as_posix())
+        files.add(relative)
     return files
 
 
