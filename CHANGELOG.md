@@ -22,6 +22,39 @@ The format is intentionally simple and human-first.
 - the fourteen merged PRs and matching first-parent commits remain individually named in the reconciled slices; release-preparation and generated-only changes remain distinguishable from product capability and contract changes
 - provider pins, artifact/trust boundaries, source/CI/merge/publication/runtime/proof/delivery/closure boundaries, limitations, and explicit non-claims remain preserved as separate claims; this consolidation does not promote any historical evidence into a stronger verdict
 
+#### Campaign-wide first-parent ledger
+
+The nested source slices below retain the detailed material reconciliation for
+each former publication. These six release-preparation or successor-contract
+landings complete the individual public index for the fourteen merged PRs and
+are kept separate from authored capability changes and generated churn:
+
+1. `1ab377a9ddc2dcfc35fa4f4b3db8fd77b0e69d0c` — PR #500, prepared the
+   original `v0.6.0` release surface, README pointer, generated readers, and
+   release-parity expectations; its generated KAG refresh is accounted for as
+   release evidence rather than a second capability.
+2. `60ca634f9b1ff7ea2ba4ff7eaa7d8b7a5498bdb8` — PR #501, aligned the
+   `v0.6.0` release headings and removed a stale hard-coded family digest;
+   this is release metadata and generated validation churn, not a new
+   authored technique.
+3. `6693c431955105c300a1149473b66a4af3140c82` — PR #503, prepared the
+   successor `v0.6.1` release surface with exact provider, artifact, trust,
+   generated, and non-claim boundaries; the publication bookkeeping remains
+   historical material inside this consolidated section.
+4. `0331b21b07373a35c762aacb4d45fa193479183a` — PR #506, prepared the
+   successor `v0.6.2` release surface, parity expectations, and generated
+   companions while preserving the prior release identity; this is release
+   preparation rather than a new tag or runtime claim.
+5. `455f3b16516e9ef595922c25735e0e911f254df6` — PR #507, revalidated the
+   Techniques consumer against exact published `aoa-kag`/`aoa-stats` commits,
+   preserved action and artifact boundaries, and refreshed owner-generated
+   evidence; provider currentness and generated changes remain distinct from
+   authored technique meaning.
+6. `41a66b085eef524498ea9c7f7154ed3952679bd8` — PR #508, completed the
+   successor release contract and exact-current generated KAG family while
+   preserving the explicit artifact, proof, delivery, closure, and acceptance
+   limits; its release bookkeeping is retained here as the campaign endpoint.
+
 ### Reconciled source slice: former v0.6.3 publication
 
 #### Summary
