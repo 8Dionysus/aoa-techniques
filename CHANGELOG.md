@@ -30,7 +30,7 @@ The format is intentionally simple and human-first.
   retaining its documented moving-sibling boundary; canary output is not
   immutable release, artifact, runtime, proof, or acceptance evidence
 
-### Validation and boundaries
+### Validation
 
 - local provider adapters reject stale, moving, or ancestor-only checkouts;
   generated KAG companions remain builder-owned
@@ -42,6 +42,9 @@ The format is intentionally simple and human-first.
   agent-admissible; release-consumer and public-release intents remain the
   artifact owner's raw `manual_review_required` verdicts where the production
   trust root is absent
+
+### Notes
+
 - source, CI, merge, tag, GitHub Release, artifact admission, runtime, proof,
   delivery, closure, and owner/human acceptance remain separate claims
 
