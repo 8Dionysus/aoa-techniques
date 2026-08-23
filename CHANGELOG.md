@@ -6,6 +6,154 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-08-23
+
+### Summary
+
+- this is a corrective patch after `v0.6.0`'s post-audit: direct KAG and
+  stats provider body pins now name the exact published provider commits, and
+  the KAG export artifact contract binds durable evidence to the exact
+  Techniques release commit and intended consumer trust boundary
+- the public technique canon and authored technique bundles are unchanged;
+  this release repairs dependency currentness, artifact identity, generated
+  parity, and release evidence without claiming a new technique corpus
+- `v0.6.0` remains an immutable historical release and is not rewritten
+
+### Added
+
+- added an exact `commit:<40-hex-git-SHA>` source-ref contract for KAG export
+  artifact sidecars, registry records, subject materialization, and trust
+  gates
+- added explicit release-evidence guidance distinguishing the intended local
+  `consumer_intent=agent` / `trust_root_mode=host_managed` boundary from the
+  separate `release_consumer` and `public_release` production boundaries
+- added a durable decision record for immutable provider pins and exact KAG
+  release evidence
+
+### Changed
+
+- changed repo-validation, release-audit, nightly-sentinel, and local KAG
+  guard surfaces to use published `aoa-kag@v0.5.0` commit
+  `813a7f69dc96ec031dad9b897a6991792cc48b7a` and published
+  `aoa-stats@v0.2.0` commit
+  `dc608fd5de3fcaf0301f356c9efd52e2bdd350ce`; these replace the historical
+  ancestor-only body pins recorded in `v0.6.0`
+- changed the KAG export validator to resolve the checked-out `HEAD`, reject
+  a mismatched requested source ref, and pass the exact ref through sidecars,
+  the registry, subject-store verification, and trust-gate calls
+- refreshed the source-owned portable KAG family and generated export
+  readers from the exact provider source after the evidence contract change
+
+### Fixed
+
+- fixed consumer/provider currentness so a green ancestor-only ref cannot be
+  mistaken for the exact published provider commit
+- fixed the KAG export manifest and validator path-source ambiguity: a
+  manifest path is descriptive only, while artifact evidence carries the
+  immutable release commit
+- fixed pre-materialization handling so the raw
+  `required_artifact_subject_store_not_verified` `deny` remains a deny until
+  subject materialization is complete; wrappers do not rewrite it to `allow`
+- fixed trust-boundary reporting so `allow`, `manual_review_required`,
+  `deny`, `warn`, and `unknown` remain separate outcomes
+
+### ABI, schemas, evidence, and generated consumers
+
+- the `aoa_techniques_kag_export_v1` envelope remains the source-owned KAG
+  export ABI; generated identity and evidence-contract text are refreshed,
+  while authored technique meaning remains authoritative
+- the content-addressed generated capsule does not embed a self-referential
+  release SHA; the artifact owner binds `source_ref=commit:<exact-release-SHA>`
+  when sidecars, registry evidence, subject materialization, and trust gates
+  are prepared
+- the intended local consumer contract is `agent` with `host_managed` trust;
+  a production `release_consumer` or `public_release` result is independently
+  evaluated and is not promoted to allow by this source release
+- the public publication artifact is the annotated Git tag and matching
+  GitHub Release; no PyPI, npm, package-registry, or GitHub asset publication
+  is implied
+
+### Compatibility and migration
+
+- current exact prerequisites are published `aoa-kag@v0.5.0` containing
+  `813a7f69dc96ec031dad9b897a6991792cc48b7a` and `aoa-stats@v0.2.0`
+  containing `dc608fd5de3fcaf0301f356c9efd52e2bdd350ce`
+- consumers staying on `v0.6.0` retain its historical provider-pin claims and
+  artifact path reference; they should upgrade to `v0.6.1` for exact provider
+  currentness and exact release-commit evidence
+- the KAG export ABI and technique-bundle layout remain compatible; generated
+  KAG family and export identities change because their source/evidence
+  contract is refreshed
+
+### Security and privacy
+
+- public source, generated, and artifact evidence surfaces remain limited to
+  sanitized metadata, public commits, and public trust claims; secrets,
+  private transcripts, host internals, and raw sensitive logs are excluded
+- artifact admission remains fail-closed on ABI identity, provenance,
+  durable evidence, subject-store state, source identity, trust-root mode,
+  and the exact raw trust-gate result
+- a missing public-release trust root remains `manual_review_required`; it is
+  not relabeled as an allow, and unknown/deny/warn outcomes are not collapsed
+- these are source, CI, artifact-admission, and public-hygiene claims, not a
+  general runtime-security certification
+
+### Deployment, observability, recovery, and rollback
+
+- no service, deployment, storage, host, runtime, activation, or sibling
+  repository path changed
+- owner-local stats and observability meaning remain separate from the
+  central `aoa-stats` protocol and cross-owner aggregation owner; no adoption,
+  quality, power, or universal score claim is made
+- rollback remains Git based: retain `v0.6.0`, retain its Release and tag,
+  and move consumers back to that immutable source only through an explicit
+  owner decision
+
+### First-Parent Reconciliation
+
+The product-change range is
+`v0.6.0..0f981adfcd37b74800db701dab73dbe842296329`.
+It contains one landed one-parent squash commit. The release-preparation
+commit that introduces this section is publication bookkeeping and is
+intentionally outside the product-change ledger, following the repository's
+prior release tradition.
+
+1. `0f981adfcd37b74800db701dab73dbe842296329` — PR #502, repaired exact
+   published KAG/stats provider pins, bound KAG export evidence to an exact
+   source commit and consumer boundary, preserved raw artifact verdicts, and
+   refreshed the generated KAG family. All generated shard/index churn is
+   accounted for under this single landed corrective commit; no authored
+   technique bundle change is omitted or duplicated.
+
+There are no additional internal/noise commits, duplicate product entries,
+or intentional exclusions in this product range.
+
+### Validation
+
+- exact clean provider checkouts passed the manifest-owned `source-fast` lane;
+  generated parity, public hygiene, AGENTS mesh, and focused contract tests
+  passed
+- the exact-source release lane completed repository, mechanics, part-local,
+  generated-parity, KAG export, stats-federation, and artifact-validator
+  coverage before release preparation
+- PR #502 passed GitHub `Repo Validation`; merge, tag identity, GitHub
+  Release identity, artifact admission, and tag-scoped Release Audit remain
+  separate checks rather than one substituted claim
+- provider currentness is checked against exact published tag targets, not
+  moving branches or ancestor-only acceptance
+
+### Notes
+
+- this release does not claim runtime health, deployment, service activation,
+  consumer-zero, measured routing benefit, cross-owner adoption, proof or eval
+  verdicts, durable memory promotion, rollback execution, or human acceptance
+- the artifact owner preserves its raw local and production-boundary results;
+  the release does not manufacture a public-release trust-root decision
+- the final release evidence must point to the exact immutable `v0.6.1` tag
+  commit; a source checkout, CI pass, tag, Release, artifact admission,
+  runtime state, proof, delivery, closure, and acceptance remain distinct
+  claims
+
 ## [0.6.0] - 2026-08-22
 
 ### Summary
