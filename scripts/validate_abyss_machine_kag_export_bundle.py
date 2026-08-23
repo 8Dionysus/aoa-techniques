@@ -731,13 +731,25 @@ def _validate_in_bundle_dir(
         source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
-    pre_materialization_gate = _trust_gate_allow_latest(
-        artifact_bundles,
+    pre_materialization_trust_gate = artifact_bundles.trust_gate(
         registry_dir,
-        registry,
-        source_ref=source_ref,
-        require_subject_store=False,
+        artifact_class=ARTIFACT_CLASS,
+        subject_digest=str(registry.get("latest_by_artifact_class", {}).get(ARTIFACT_CLASS, {}).get("subject_digest") or ""),
+        consumer_intent=CONSUMER_INTENT,
+        expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
+        expected_trust_root_mode=TRUST_ROOT_MODE,
     )
+    pre_materialization_gate = {
+        "ok": bool(
+            pre_materialization_trust_gate.get("verdict") == "deny"
+            and pre_materialization_trust_gate.get("blockers") == [
+                "required_artifact_subject_store_not_verified"
+            ]
+        ),
+        "expected": "deny until the required subject store is materialized",
+        "trust_gate": pre_materialization_trust_gate,
+    }
     materialized = artifact_bundles.materialize_artifact_subjects(
         bundle_dir,
         store_root=subject_store_root,
