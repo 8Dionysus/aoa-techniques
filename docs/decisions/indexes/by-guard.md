@@ -172,6 +172,7 @@
 ## artifact trust
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 
 ## command authority
 
@@ -188,6 +189,7 @@
 ## release identity
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 
 ## script topology
 
@@ -202,3 +204,7 @@
 ## validator topology
 
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
+
+## workflow topology
+
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)

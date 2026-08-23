@@ -162,6 +162,10 @@
 - [AOA-TECH-D-0031 Questbook Candidate Mechanic](../AOA-TECH-D-0031-questbook-candidate-mechanic.md) (`docs/decisions/AOA-TECH-D-0031-questbook-candidate-mechanic.md`)
 - [AOA-TECH-D-0032 Questbook Lane-first Source Store](../AOA-TECH-D-0032-questbook-lane-first-source-store.md) (`docs/decisions/AOA-TECH-D-0032-questbook-lane-first-source-store.md`)
 
+## CI
+
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
+
 ## GitHub workflow
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
@@ -169,6 +173,7 @@
 ## artifact evidence
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 
 ## owner boundary
 
@@ -178,6 +183,7 @@
 ## release
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 
 ## release/tooling
 
