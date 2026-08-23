@@ -34,6 +34,9 @@ The format is intentionally simple and human-first.
 
 - local provider adapters reject stale, moving, or ancestor-only checkouts;
   generated KAG companions remain builder-owned
+- tag-scoped Release Audit now reads the stats pin from the selected immutable
+  Techniques checkout, so auditing `v0.6.2` retains its historical stats
+  provider while the moving current release resolves `v0.2.2`
 - the final KAG artifact is source-bound to its exact landed commit and is
   agent-admissible; release-consumer and public-release intents remain the
   artifact owner's raw `manual_review_required` verdicts where the production
