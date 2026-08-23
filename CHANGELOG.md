@@ -6,21 +6,195 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-08-22
+
+### Summary
+
+- this release reconstructs the complete `v0.5.0..2b70fddc` landed source
+  range: five first-parent commits across the public technique canon, KAG
+  export, owner-routing references, generated readers, and release/nightly
+  reproducibility surfaces
+- the version remains `0.6.0` under the repository's early `0.x` policy
+  because the range changes public owner boundaries and generated KAG schema
+  topology, not because of commit count
+- `aoa-techniques` remains a standalone public canon of small, sanitized,
+  bounded, reviewable engineering techniques; this release does not turn it
+  into a skill runtime, proof authority, routing engine, KAG substrate, stats
+  aggregator, package registry, or deployment runtime
+
+### Added
+
+- added an explicit owner decision and route law stating that this repository
+  currently has no repository-local skill home; discovery returns to authored
+  technique bundles and derived readers, while shared skills arrive through
+  the user/profile surface
+- added the portable v3 KAG family manifest, content-addressed JSONL shard
+  topology, deterministic v2 compatibility assembly, and digest-bound
+  migration and budget receipts
+- added release/nightly dependency setup for the pinned `aoa-stats` validator
+  and the bounded `pytest>=8.0,<9.0` test dependency
+
 ### Changed
 
-- repaired the Nightly Sentinel dependency setup by pinning the `aoa-stats`
-  validator checkout and installing `pytest` for latest-release reproduction,
-  so the scheduled source and release gates can execute their declared checks
-- kept foreign `.deps/` checkouts outside the repository-owned test, script,
-  and command-authority topology scans used by latest-release reproduction
-- routed current dispatch-owner maps, technique-intelligence boundaries,
-  mechanic handoffs, and runnable examples through the canonical `aoa-sdk`
-  routing surface while preserving `aoa-routing` only in dated donor,
-  provenance, review, and legacy evidence
-- removed the foreign `.agents/skills/` bundle cache and its six copied helper
-  scripts; `aoa-techniques` now declares no repository-local skill home until a
-  repo-specific capability proves a distinct trigger, contract, composition
-  value, and repeatable benefit through manual no-skill and coexistence trials
+- changed active dispatch, selection, and intelligence ownership references
+  to canonical `aoa-sdk`; retained `aoa-routing` only in dated donor,
+  provenance, review, and legacy compatibility evidence
+- changed latest-release reproduction so foreign `.deps/` checkouts live
+  outside the tagged owner checkout and cannot be misclassified as
+  repository-owned tests, scripts, or command-authority inputs
+- changed the tracked KAG read-model surface from v2 monoliths to the v3
+  manifest/shard family while preserving deterministic v2 compatibility
+  assembly for consumers that still require that view
+- refreshed KAG family shards, generated route/read models, mechanics handoff
+  projections, owner inventories, and repository-document readers from their
+  authored sources
+
+### Fixed
+
+- fixed the historical release/nightly dependency split where latest-release
+  reproduction lacked the pinned `aoa-stats` validator and the moving-main
+  part-local lane lacked `pytest`
+- fixed the post-merge latest-release reproduction false failure caused by
+  foreign dependency checkouts being discovered as owner files
+- fixed route, generated-projection, source-contract, and topology
+  expectations required by the no-skill-home and `aoa-sdk` succession
+  boundaries
+
+### Deprecated
+
+- deprecated direct active dispatch ownership references to `aoa-routing`;
+  the namespace remains available for compatibility and historical evidence
+  but is no longer the active route owner
+- deprecated direct consumers of the removed tracked KAG v2 monolith paths;
+  consumers should use the v3 manifest/shard/compatibility route
+
+### Removed
+
+- removed the foreign `.agents/skills/` cache: 25 shared bundles, 212 copied
+  paths, and six copied helper scripts
+- removed the active direct predecessor checkout dependency from the current
+  `aoa-techniques` routing surface
+- removed tracked KAG v2 monolith index files as storage representations;
+  this does not remove the v2 compatibility view
+
+### ABI, schemas, evidence, and generated consumers
+
+- the KAG family manifest remains
+  `kag/indexes/index_family.manifest.json` with schema
+  `aoa-repo-local-kag-family-manifest-v3`; the current content-addressed
+  family digest is `71a39ee4632ad1a5cd171e79787ff10d4604adf364abb94de00fe4679dce63ea`
+- the `aoa_techniques_kag_export_v1` export ABI remains unchanged, while the
+  v3 family manifest, shards, receipts, source-return records, and consumer
+  routes change their generated identity and therefore require fresh parity
+  and trust checks
+- generated catalogs, capsules, section/checklist/example/evidence/review
+  manifests, AGENTS mesh, mechanics projections, KAG exports, Technique
+  Intelligence, questbook readers, and repository-document readers remain
+  derived companions; authored technique bundles, contracts, route cards,
+  decisions, and owner-local source packets remain the authorities
+- the public artifact is the annotated Git tag and matching GitHub Release;
+  no PyPI, npm, package-registry, or GitHub asset publication is implied
+
+### Compatibility and migration
+
+- consumers that opened deleted v2 monolith paths must migrate to the v3
+  manifest, shard, and deterministic compatibility routes
+- consumers that treated `aoa-routing` as the active dispatch owner must
+  follow the `aoa-sdk` route; dated donor, provenance, review, and legacy
+  evidence remains available for reconciliation
+- the exact provider prerequisites used for this release are published
+  `aoa-kag@v0.5.0` containing commit
+  `b28f64a497fd440dd58cbaae90d655da46224d8c` and `aoa-stats@v0.2.0`
+  containing commit `25ebfb784f01d3b93f62994908579c4a2c5d87b1`; unmerged
+  `aoa-kag` PR #219 is not part of this consumer release contract
+
+### Security and privacy
+
+- public technique and KAG-export surfaces remain limited to sanitized public
+  metadata and source references; secrets, private transcripts, private
+  infrastructure, runtime state, and raw sensitive logs are excluded
+- GitHub Actions and cross-repository validation checkouts remain pinned to
+  exact immutable refs in workflow source
+- KAG-adjacent consumer admission remains fail-closed on ABI identity,
+  generated provenance, materialized subjects, source/trust-root matching,
+  and the exact artifact trust-gate result
+- these are source/public-hygiene and artifact-admission claims, not a general
+  runtime-security certification
+
+### Deployment, observability, recovery, and rollback
+
+- no service, deployment, storage, host, runtime, or activation path changed
+- owner-local stats and observability meaning remains separate from the
+  central `aoa-stats` protocol and cross-owner aggregation owner; no adoption,
+  quality, power, or universal score claim is made
+- rollback remains source/Git based: retain `v0.5.0`, retain the v2
+  compatibility assembly and `aoa-routing` legacy references, and keep the
+  no-skill-home boundary reversible through a separately admitted future trial
+
+### First-Parent Reconciliation
+
+The product-change range is `v0.5.0..2b70fddcefe17bb4d02584a84997011d69964f24`.
+It contains five landed one-parent squash commits. Each is listed exactly once;
+no commit in this source range is internal-only noise or intentionally omitted.
+The release-preparation commit that introduces this section is publication
+bookkeeping and is intentionally outside the product-change ledger, following
+the repository's prior release tradition.
+
+1. `9364662c7bde35b87fc67e17502f9c78f5934b64` — PR #495, removed the foreign
+   `.agents/skills/` cache and recorded the no-skill-home owner decision. This
+   is a changelog-worthy owner-boundary change, not generated noise.
+2. `e842c0d0156c58cfb9020b636e81134e96fc8cfb` — PR #496, migrated the KAG
+   family from tracked v2 monoliths to the portable v3 manifest and
+   content-addressed shards while retaining v2 compatibility. This is a
+   changelog-worthy schema/read-model migration and is not folded into a CI
+   bullet.
+3. `9a5222cc6a6b1fdc52b4df906f49dadfd0383c71` — PR #497, moved active
+   dispatch and selection ownership to `aoa-sdk` while retaining
+   `aoa-routing` compatibility/provenance/history. Consumer-zero,
+   observation-cycle, rollback-rehearsal, and measured-net-benefit outcomes
+   remain explicitly unclaimed.
+4. `cf2756912d7c60fbedc06bd85e459e6e451efe7d` — PR #498, repaired release and
+   nightly dependency provisioning and topology coverage. The temporary
+   generated receipt it introduced was replaced by the current receipt in
+   #499, so that receipt replacement is generated churn, not a second feature.
+5. `2b70fddcefe17bb4d02584a84997011d69964f24` — PR #499, isolated foreign
+   `.deps/` checkouts outside tagged owner topology and refreshed the current
+   KAG family receipt. It is distinct from #498: path isolation and dependency
+   provisioning close different failure modes.
+
+Generated shard files and index churn are accounted for under their owning
+landings above, not promoted to duplicate release bullets. There are no
+additional internal/noise commits, duplicate product entries, or intentional
+exclusions in the five-commit product range.
+
+### Validation
+
+- the release-prep route uses the manifest-owned `source-fast`, `generated`,
+  `mechanics/part-local`, and `release` lanes; `scripts/release_check.py`
+  stabilizes the generated snapshot and fails if a clean source tree drifts
+- the release surface includes repo-local KAG full/incremental/family and
+  event-history parity, generated-doc and AGENTS-mesh freshness, public
+  hygiene, mechanics tests, full repository tests, and the KAG artifact bundle
+  validator
+- provider currentness is bound to exact published tags rather than moving
+  branches: `aoa-kag@v0.5.0` and `aoa-stats@v0.2.0` contain the exact consumer
+  pins above
+- GitHub Repo Validation, the exact landed-commit release lane, the annotated
+  tag identity, and the tag-scoped Release Audit are separate checks; a green
+  PR or CI result is not publication, artifact admission, runtime health,
+  proof, or human acceptance
+
+### Notes and non-claims
+
+- this release does not claim runtime health, deployment, service activation,
+  consumer-zero, measured routing cost benefit, cross-owner adoption, proof or
+  eval verdicts, durable memory promotion, rollback execution, or human
+  acceptance
+- there is no `1.0.0` claim: structure, contribution, and validation posture
+  remain early public shaping under `docs/RELEASING.md`
+- local ignored `dist/` files are evidence inputs only and are not GitHub
+  Release assets; artifact receipts, trust-gate admission, runtime status,
+  proof, and publication acceptance remain separate claims
 
 ## [0.5.0] - 2026-07-13
 
