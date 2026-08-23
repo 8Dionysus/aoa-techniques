@@ -81,8 +81,8 @@ The format is intentionally simple and human-first.
 
 - the KAG family manifest remains
   `kag/indexes/index_family.manifest.json` with schema
-  `aoa-repo-local-kag-family-manifest-v3`; the current content-addressed
-  family digest is `71a39ee4632ad1a5cd171e79787ff10d4604adf364abb94de00fe4679dce63ea`
+  `aoa-repo-local-kag-family-manifest-v3`; its content-addressed family
+  identity is regenerated and checked by the pinned `aoa-kag` builder
 - the `aoa_techniques_kag_export_v1` export ABI remains unchanged, while the
   v3 family manifest, shards, receipts, source-return records, and consumer
   routes change their generated identity and therefore require fresh parity
@@ -184,7 +184,7 @@ exclusions in the five-commit product range.
   PR or CI result is not publication, artifact admission, runtime health,
   proof, or human acceptance
 
-### Notes and non-claims
+### Notes
 
 - this release does not claim runtime health, deployment, service activation,
   consumer-zero, measured routing cost benefit, cross-owner adoption, proof or
