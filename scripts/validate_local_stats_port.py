@@ -11,6 +11,7 @@ import sys
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PORT_PATH = REPO_ROOT / "stats" / "port.manifest.json"
+AOA_STATS_REF = "339ecb2db22ac4552fa88756b650896ebbff5b56"
 
 
 def _candidate_roots() -> tuple[Path, ...]:
@@ -20,11 +21,27 @@ def _candidate_roots() -> tuple[Path, ...]:
     return (REPO_ROOT / ".deps" / "aoa-stats", REPO_ROOT.parent / "aoa-stats")
 
 
+def require_pinned_checkout(stats_root: Path) -> Path:
+    completed = subprocess.run(
+        ("git", "-C", str(stats_root), "rev-parse", "HEAD"),
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    ref = completed.stdout.strip()
+    if completed.returncode or ref != AOA_STATS_REF:
+        raise RuntimeError(
+            f"aoa-stats checkout must resolve {AOA_STATS_REF}; got {ref or 'unresolved'}"
+        )
+    return stats_root
+
+
 def main() -> int:
     candidates = _candidate_roots()
     for root in candidates:
         validator = root / "scripts" / "validate_stats_protocol.py"
         if validator.is_file():
+            require_pinned_checkout(root)
             return subprocess.run(
                 (sys.executable, str(validator), "--port", str(PORT_PATH)),
                 cwd=REPO_ROOT,

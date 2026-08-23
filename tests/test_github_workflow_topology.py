@@ -4,6 +4,7 @@ import re
 import unittest
 from pathlib import Path
 
+from scripts.validate_local_stats_port import AOA_STATS_REF
 from scripts.validate_repo_local_kag_index import AOA_KAG_REF as PINNED_AOA_KAG
 
 
@@ -11,7 +12,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 PINNED_CHECKOUT = "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd"
 PINNED_SETUP_PYTHON = "actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405"
-PINNED_AOA_STATS = "dc608fd5de3fcaf0301f356c9efd52e2bdd350ce"
+PINNED_AOA_STATS = AOA_STATS_REF
+PINNED_ABYSS_MACHINE = "a9f52d8bfe23e28167c01dd2a059af231fff77a0"
 
 
 class GitHubWorkflowTopologyTests(unittest.TestCase):
@@ -89,6 +91,20 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         self.assertIn('>> "$GITHUB_ENV"', latest_release_repro)
         self.assertEqual(2, nightly.count("repository: 8Dionysus/aoa-stats"))
         self.assertEqual(1, nightly.count("repository: 8Dionysus/aoa-kag"))
+
+    def test_release_audit_uses_the_subject_root_compatible_artifact_owner(self) -> None:
+        release = self.workflow_text("release-audit.yml")
+        nightly = self.workflow_text("nightly-sentinel.yml")
+        validator = (REPO_ROOT / "scripts" / "validate_abyss_machine_kag_export_bundle.py").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(f"ref: {PINNED_ABYSS_MACHINE}", release)
+        self.assertEqual(2, nightly.count(f"ref: {PINNED_ABYSS_MACHINE}"))
+        self.assertIn("release_ref:", release)
+        self.assertIn("ref: ${{ inputs.release_ref || github.ref }}", release)
+        self.assertIn("subject_root=REPO_ROOT", validator)
+        self.assertIn("source_ref=source_ref", validator)
 
     def test_pull_request_template_names_lanes_not_release_check_as_repo_validation(
         self,
