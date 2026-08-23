@@ -6,6 +6,41 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.6.3] - 2026-08-23
+
+### Summary
+
+- this corrective successor revalidates the Techniques consumer after the
+  exact published `aoa-kag@v0.5.2` provider and its final `aoa-stats@v0.2.2`
+  dependency; authored technique meaning is unchanged
+- `v0.6.2`, its tag, GitHub Release, and artifact history remain immutable
+
+### Exact provider revalidation
+
+- current repo-validation, nightly, release-audit, and local KAG/stats gates
+  now resolve exact `aoa-kag` commit
+  `8136d3eb629da28cea1206d13a8f1df52ee14739` (`v0.5.2`, annotated tag object
+  `251846823f49d18b06c32374b3434e6e11002e96`) and exact `aoa-stats` commit
+  `f119805cda69b3edeb2a4c5e407368d70e68650d` (`v0.2.2`, annotated tag object
+  `119f434918e8218e43e977b2edec3e4feab6b493`)
+- the separately recorded KAG action identity
+  `6a79e62c7d20b6b11406dee78f409ada4a51bb3f` remains action evidence and is
+  not collapsed into the KAG provider source commit
+- the scheduled compatibility canary pins the exact stats provider while
+  retaining its documented moving-sibling boundary; canary output is not
+  immutable release, artifact, runtime, proof, or acceptance evidence
+
+### Validation and boundaries
+
+- local provider adapters reject stale, moving, or ancestor-only checkouts;
+  generated KAG companions remain builder-owned
+- the final KAG artifact is source-bound to its exact landed commit and is
+  agent-admissible; release-consumer and public-release intents remain the
+  artifact owner's raw `manual_review_required` verdicts where the production
+  trust root is absent
+- source, CI, merge, tag, GitHub Release, artifact admission, runtime, proof,
+  delivery, closure, and owner/human acceptance remain separate claims
+
 ## [0.6.2] - 2026-08-23
 
 ### Summary
