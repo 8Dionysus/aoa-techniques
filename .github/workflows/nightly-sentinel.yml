@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/abyss-machine
-          ref: 5724ce73cae69a0cd2b43996f006dc2bba2ab711
+          ref: a9f52d8bfe23e28167c01dd2a059af231fff77a0
           path: .deps/abyss-machine
 
       - name: Checkout aoa-kag index builder
@@ -85,7 +85,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/abyss-machine
-          ref: 5724ce73cae69a0cd2b43996f006dc2bba2ab711
+          ref: a9f52d8bfe23e28167c01dd2a059af231fff77a0
           path: .deps/abyss-machine
 
       - name: Checkout aoa-stats protocol validator

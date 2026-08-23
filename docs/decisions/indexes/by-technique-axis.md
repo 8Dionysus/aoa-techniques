@@ -129,6 +129,10 @@
 
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
 
+## lifecycle
+
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
+
 ## owner boundary
 
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
@@ -136,10 +140,12 @@
 ## provenance
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 
 ## validation
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+- [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 
 ## validation lane
 

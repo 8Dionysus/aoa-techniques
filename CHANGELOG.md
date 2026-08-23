@@ -6,6 +6,16 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Postpublish release-audit follow-up
+
+- repaired the release-audit and nightly sentinel artifact-tool pin to the
+  exact current `abyss-machine` commit
+  `a9f52d8bfe23e28167c01dd2a059af231fff77a0`, which exposes the subject-root
+  API required by the exact KAG evidence contract
+- added an optional `release_ref` input to release-audit so an immutable tag
+  can be re-audited from the current workflow without moving or rewriting the
+  tag or GitHub Release
+
 ## [0.6.1] - 2026-08-23
 
 ### Summary
