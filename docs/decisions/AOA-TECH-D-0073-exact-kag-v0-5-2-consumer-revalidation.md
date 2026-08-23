@@ -64,9 +64,9 @@ separate prevents a green action receipt from admitting stale provider source.
 - Artifact trust retains the owner's independent `allow`, `warn`, `deny`,
   `manual_review_required`, and `unknown` outcomes. Local agent admission is
   not production/public acceptance.
-- Tag-scoped Release Audit derives its stats checkout from the selected
-  immutable Techniques release, preserving historical audits while current
-  moving-main lanes use the exact v0.2.2 pin.
+- Tag-scoped Release Audit and Nightly Latest Release Repro derive their stats
+  checkout from the selected immutable Techniques release, preserving
+  historical audits while current moving-main lanes use the exact v0.2.2 pin.
 - The upstream KAG report's missing federation feeds and recovery-only closure
   remain limitations, not silently promoted success claims.
 

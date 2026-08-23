@@ -74,7 +74,6 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         for name, workflow in (
             ("repo-validation", repo_validation),
             ("nightly-moving-main", moving_main),
-            ("nightly-latest-release-repro", latest_release_repro),
         ):
             with self.subTest(workflow=name):
                 self.assertIn("AOA_STATS_ROOT:", workflow)
@@ -84,6 +83,9 @@ class GitHubWorkflowTopologyTests(unittest.TestCase):
         self.assertIn("Resolve release provider pins from selected checkout", release)
         self.assertIn("AOA_STATS_REF", release)
         self.assertIn("ref: ${{ steps.release_dependencies.outputs.stats_ref }}", release)
+        self.assertIn("Resolve release provider pins from selected checkout", latest_release_repro)
+        self.assertIn("AOA_STATS_REF", latest_release_repro)
+        self.assertIn("ref: ${{ steps.release_dependencies.outputs.stats_ref }}", latest_release_repro)
 
         self.assertIn("AOA_KAG_ROOT:", moving_main)
         self.assertIn("repository: 8Dionysus/aoa-kag", moving_main)
