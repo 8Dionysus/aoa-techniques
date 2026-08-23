@@ -11,7 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 PINNED_CHECKOUT = "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd"
 PINNED_SETUP_PYTHON = "actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405"
-PINNED_AOA_STATS = "25ebfb784f01d3b93f62994908579c4a2c5d87b1"
+PINNED_AOA_STATS = "dc608fd5de3fcaf0301f356c9efd52e2bdd350ce"
 
 
 class GitHubWorkflowTopologyTests(unittest.TestCase):

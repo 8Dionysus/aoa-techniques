@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-stats
-          ref: 25ebfb784f01d3b93f62994908579c4a2c5d87b1
+          ref: dc608fd5de3fcaf0301f356c9efd52e2bdd350ce
           path: .deps/aoa-stats
 
       - name: Setup Python

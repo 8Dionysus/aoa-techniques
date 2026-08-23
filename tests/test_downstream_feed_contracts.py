@@ -141,9 +141,11 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         self.assertIn("machine-local runtime state", identity["privacy_boundary"])
         self.assertIn("KAG substrate authority", identity["privacy_boundary"])
         self.assertIn("generated/kag_export.min.json", identity["content_identity"])
+        self.assertIn("exact landed commit:<40-hex-git-SHA>", identity["consumer_expectation"])
+        self.assertIn("host_managed trust", identity["consumer_expectation"])
         self.assertIn("consumer trust-gate allow/latest", identity["consumer_expectation"])
         self.assertIn(
-            "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
+            "python scripts/validate_abyss_machine_kag_export_bundle.py --source-ref commit:<EXACT_LANDED_RELEASE_COMMIT> --json",
             identity["verification"],
         )
 
@@ -202,9 +204,19 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             manifest["consumer_command"],
         )
         self.assertTrue(
+            any("--source-ref commit:<EXACT_LANDED_RELEASE_COMMIT>" in command for command in manifest["consumer_command"]),
+            manifest["consumer_command"],
+        )
+        self.assertTrue(
             any("--trust-root-mode host_managed" in command for command in manifest["consumer_command"]),
             manifest["consumer_command"],
         )
+
+    def test_kag_artifact_source_ref_is_exact_checked_out_commit(self) -> None:
+        source_ref = kag_bundle_validator._exact_git_source_ref(REPO_ROOT)
+        self.assertRegex(source_ref, r"^commit:[0-9a-f]{40}$")
+        with self.assertRaisesRegex(ValueError, "does not match"):
+            kag_bundle_validator._resolve_source_ref("commit:" + ("0" * 40))
 
     def test_kag_export_bundle_validator_requires_consumer_verdict(self) -> None:
         manifest = load_json("docs/source-lift/artifact-bundles/kag_export.bundle.json")

@@ -6,6 +6,7 @@ import importlib
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -92,6 +93,35 @@ def _portable_ref(path: Path) -> str:
         return resolved.relative_to(REPO_ROOT).as_posix()
     except ValueError:
         return resolved.name
+
+
+def _exact_git_source_ref(repo_root: Path = REPO_ROOT) -> str:
+    """Return the immutable source ref required by the artifact owner."""
+
+    completed = subprocess.run(
+        ("git", "-C", str(repo_root), "rev-parse", "HEAD"),
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    value = completed.stdout.strip()
+    if completed.returncode or len(value) != 40 or any(char not in "0123456789abcdef" for char in value):
+        raise RuntimeError(
+            "aoa-techniques artifact evidence requires a checked-out exact Git commit; "
+            f"got {value or 'unresolved'}"
+        )
+    return f"commit:{value}"
+
+
+def _resolve_source_ref(source_ref: str | None) -> str:
+    actual = _exact_git_source_ref(REPO_ROOT)
+    requested = str(source_ref or "").strip()
+    if requested and requested != actual:
+        raise ValueError(
+            "requested artifact source_ref does not match the checked-out source commit: "
+            f"{requested} != {actual}"
+        )
+    return actual
 
 
 def _abyss_machine_roots_for_sanitizer() -> list[Path]:
@@ -220,6 +250,7 @@ def _assert_manifest_matches_subject(manifest: Path, subject: Path) -> None:
         "artifacts registry-latest",
         "--store-root SUBJECT_STORE_ROOT",
         "--source-repo aoa-techniques",
+        "--source-ref commit:<EXACT_LANDED_RELEASE_COMMIT>",
         "--trust-root-mode host_managed",
     ):
         if token not in commands:
@@ -301,6 +332,7 @@ def _registry_roundtrip(
     lifecycle_state: str,
     evidence_ref: str,
     manifest: Path = DEFAULT_MANIFEST,
+    source_ref: str,
     abyss_repo_root: Path | None = None,
 ) -> dict[str, Any]:
     promoted = artifact_bundles.promote_bundle_evidence(
@@ -310,7 +342,7 @@ def _registry_roundtrip(
         consumer_refs=[CONSUMER_REF],
         evidence_refs=[evidence_ref],
         source_repo=SOURCE_REPO,
-        source_ref=_portable_ref(manifest),
+        source_ref=source_ref,
         producer=PRODUCER,
         trust_root_mode=TRUST_ROOT_MODE,
         repo_root=abyss_repo_root or artifact_bundles.REPO_ROOT,
@@ -338,6 +370,7 @@ def _registry_roundtrip_with_subject_store(
     lifecycle_state: str,
     evidence_ref: str,
     manifest: Path,
+    source_ref: str,
     abyss_repo_root: Path,
 ) -> dict[str, Any]:
     env_root = "ABYSS_MACHINE_ARTIFACT_SUBJECT_STORE_ROOT"
@@ -354,6 +387,7 @@ def _registry_roundtrip_with_subject_store(
             lifecycle_state=lifecycle_state,
             evidence_ref=evidence_ref,
             manifest=manifest,
+            source_ref=source_ref,
             abyss_repo_root=abyss_repo_root,
         )
     finally:
@@ -372,6 +406,7 @@ def _trust_gate_allow_latest(
     registry_dir: Path,
     registry_roundtrip: dict[str, Any],
     *,
+    source_ref: str,
     require_subject_store: bool = True,
 ) -> dict[str, Any]:
     record = registry_roundtrip.get("promoted", {}).get("record", {})
@@ -381,6 +416,7 @@ def _trust_gate_allow_latest(
         subject_digest=str(record.get("subject_digest") or ""),
         consumer_intent=CONSUMER_INTENT,
         expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
         expected_trust_root_mode=TRUST_ROOT_MODE,
     )
     inspected_claims = trust_gate.get("inspected_claims", {})
@@ -482,6 +518,7 @@ def _verify_terminal_registry_state(
     bundle_dir: Path,
     tmp_root: Path,
     manifest: Path,
+    source_ref: str,
     abyss_repo_root: Path,
 ) -> dict[str, Any]:
     registry_dir = tmp_root / "terminal-registry"
@@ -492,6 +529,7 @@ def _verify_terminal_registry_state(
         lifecycle_state="release-ready",
         evidence_ref="terminal-state-rehearsal",
         manifest=manifest,
+        source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
     revoked = artifact_bundles.write_bundle_registry_record(
@@ -500,7 +538,7 @@ def _verify_terminal_registry_state(
         lifecycle_state="revoked",
         revocation_reason="aoa-techniques KAG export terminal-state rehearsal",
         source_repo=SOURCE_REPO,
-        source_ref=_portable_ref(manifest),
+        source_ref=source_ref,
         producer=PRODUCER,
         trust_root_mode=TRUST_ROOT_MODE,
         repo_root=abyss_repo_root,
@@ -511,6 +549,7 @@ def _verify_terminal_registry_state(
         record_id=str(release_ready.get("promoted", {}).get("record", {}).get("record_id") or ""),
         consumer_intent=CONSUMER_INTENT,
         expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
         expected_trust_root_mode=TRUST_ROOT_MODE,
     )
     after_revoke = artifact_bundles.read_bundle_registry(registry_dir, artifact_class=ARTIFACT_CLASS)
@@ -537,6 +576,7 @@ def _verify_materialized_subject_store(
     registry_dir: Path,
     tmp_root: Path,
     store_root: Path,
+    source_ref: str,
     abyss_repo_root: Path,
 ) -> dict[str, Any]:
     pre_registry = _registry_roundtrip(
@@ -546,6 +586,7 @@ def _verify_materialized_subject_store(
         lifecycle_state="release-ready",
         evidence_ref="materialized-subject-store-precondition",
         manifest=manifest,
+        source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
     materialized = artifact_bundles.materialize_artifact_subjects(
@@ -555,6 +596,7 @@ def _verify_materialized_subject_store(
         manifest_ref=manifest,
         consumer_intent=CONSUMER_INTENT,
         expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
         expected_trust_root_mode=TRUST_ROOT_MODE,
         repo_root=abyss_repo_root,
     )
@@ -566,6 +608,7 @@ def _verify_materialized_subject_store(
         lifecycle_state="release-ready",
         evidence_ref="materialized-subject-store-rehearsal",
         manifest=manifest,
+        source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
     _sanitize_public_json_tree(store_root)
@@ -577,6 +620,7 @@ def _verify_materialized_subject_store(
         subject_digest=str(materialized.get("aggregate_digest") or ""),
         consumer_intent=CONSUMER_INTENT,
         expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
         expected_trust_root_mode=TRUST_ROOT_MODE,
     )
     return _sanitize_public_payload(
@@ -605,6 +649,7 @@ def _run_adversarial_checks(
     manifest: Path,
     subject: Path,
     bundle_dir: Path,
+    source_ref: str,
 ) -> dict[str, Any]:
     with tempfile.TemporaryDirectory(prefix="aoa-techniques-kag-export-negative-", dir=_default_tmp_root()) as tmp:
         tmp_root = Path(tmp)
@@ -619,6 +664,7 @@ def _run_adversarial_checks(
                 bundle_dir,
                 tmp_root,
                 manifest,
+                source_ref,
                 abyss_repo_root,
             ),
             "materialized_subject_store": _verify_materialized_subject_store(
@@ -628,6 +674,7 @@ def _run_adversarial_checks(
                 tmp_root / "materialized-registry",
                 tmp_root,
                 tmp_root / "subject-store",
+                source_ref,
                 abyss_repo_root,
             ),
         }
@@ -644,6 +691,7 @@ def _validate_in_bundle_dir(
     registry_dir: Path,
     subject_store_root: Path,
     *,
+    source_ref: str,
     clean: bool,
 ) -> dict[str, Any]:
     artifact_bundles, abyss_machine_root, package_root = _import_artifact_bundles()
@@ -658,10 +706,12 @@ def _validate_in_bundle_dir(
     bundle_dir.mkdir(parents=True, exist_ok=True)
 
     abyss_repo_root = abyss_machine_root or artifact_bundles.REPO_ROOT
-    producer_command = "python scripts/validate_abyss_machine_kag_export_bundle.py"
+    producer_command = f"python scripts/validate_abyss_machine_kag_export_bundle.py --source-ref {source_ref}"
     build = artifact_bundles.build_sidecars(
         bundle_dir,
         manifest_ref=manifest,
+        subject_root=REPO_ROOT,
+        source_ref=source_ref,
         repo_root=abyss_repo_root,
         producer_command=producer_command,
     )
@@ -678,12 +728,14 @@ def _validate_in_bundle_dir(
         lifecycle_state="release-ready",
         evidence_ref=_portable_ref(bundle_dir) + "/artifact.verify.json",
         manifest=manifest,
+        source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
     pre_materialization_gate = _trust_gate_allow_latest(
         artifact_bundles,
         registry_dir,
         registry,
+        source_ref=source_ref,
         require_subject_store=False,
     )
     materialized = artifact_bundles.materialize_artifact_subjects(
@@ -693,6 +745,7 @@ def _validate_in_bundle_dir(
         manifest_ref=manifest,
         consumer_intent=CONSUMER_INTENT,
         expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
         expected_trust_root_mode=TRUST_ROOT_MODE,
         repo_root=abyss_repo_root,
     )
@@ -704,6 +757,7 @@ def _validate_in_bundle_dir(
         lifecycle_state="release-ready",
         evidence_ref="materialized-subject-store",
         manifest=manifest,
+        source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
     registry_sanitized = _sanitize_public_json_tree(registry_dir)
@@ -712,16 +766,37 @@ def _validate_in_bundle_dir(
     _assert_public_payloads_do_not_leak_local_roots(registry_dir, abyss_machine_root, label="registry")
     _assert_public_payloads_do_not_leak_local_roots(subject_store_root, abyss_machine_root, label="subject-store")
     registry = artifact_bundles.read_bundle_registry(registry_dir, artifact_class=ARTIFACT_CLASS)
-    trust_gate = _trust_gate_allow_latest(artifact_bundles, registry_dir, registry_with_subject_store)
+    trust_gate = _trust_gate_allow_latest(
+        artifact_bundles,
+        registry_dir,
+        registry_with_subject_store,
+        source_ref=source_ref,
+    )
     subject_store_gate = artifact_bundles.trust_gate(
         registry_dir,
         artifact_class=ARTIFACT_CLASS,
         subject_digest=str(materialized.get("aggregate_digest") or ""),
         consumer_intent=CONSUMER_INTENT,
         expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
         expected_trust_root_mode=TRUST_ROOT_MODE,
     )
-    adversarial = _run_adversarial_checks(artifact_bundles, abyss_repo_root, manifest, subject, bundle_dir)
+    release_consumer_gate = artifact_bundles.trust_gate(
+        registry_dir,
+        artifact_class=ARTIFACT_CLASS,
+        consumer_intent="release_consumer",
+        expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
+        expected_trust_root_mode=TRUST_ROOT_MODE,
+    )
+    adversarial = _run_adversarial_checks(
+        artifact_bundles,
+        abyss_repo_root,
+        manifest,
+        subject,
+        bundle_dir,
+        source_ref,
+    )
 
     payload = {
         "ok": bool(
@@ -743,6 +818,8 @@ def _validate_in_bundle_dir(
         "schema": "aoa_techniques_abyss_machine_kag_export_artifact_bundle_validation_v1",
         "manifest_ref": _portable_ref(manifest),
         "subject_ref": _portable_ref(subject),
+        "source_repo": SOURCE_REPO,
+        "source_ref": source_ref,
         "bundle_dir": _portable_ref(bundle_dir),
         "registry_dir": _portable_ref(registry_dir),
         "subject_store_root": _portable_ref(subject_store_root),
@@ -755,6 +832,10 @@ def _validate_in_bundle_dir(
         "registry": registry,
         "pre_materialization_gate": pre_materialization_gate,
         "trust_gate": trust_gate,
+        "consumer_trust_boundaries": {
+            "agent": trust_gate,
+            "release_consumer": release_consumer_gate,
+        },
         "materialized_subject_store": materialized,
         "registry_with_subject_store": registry_with_subject_store,
         "subject_store_gate": subject_store_gate,
@@ -781,17 +862,20 @@ def validate_bundle(
     registry_dir: Path | None,
     subject_store_root: Path | None,
     *,
+    source_ref: str | None = None,
     clean: bool,
 ) -> dict[str, Any]:
     target_bundle = bundle_dir or DEFAULT_BUNDLE_DIR
     target_registry = registry_dir or DEFAULT_REGISTRY_DIR
     target_subject_store = subject_store_root or DEFAULT_SUBJECT_STORE_ROOT
+    resolved_source_ref = _resolve_source_ref(source_ref)
     return _validate_in_bundle_dir(
         manifest,
         subject,
         target_bundle,
         target_registry,
         target_subject_store,
+        source_ref=resolved_source_ref,
         clean=clean,
     )
 
@@ -803,6 +887,10 @@ def main() -> int:
     parser.add_argument("--bundle-dir", type=Path)
     parser.add_argument("--registry-dir", type=Path)
     parser.add_argument("--subject-store-root", type=Path)
+    parser.add_argument(
+        "--source-ref",
+        help="exact commit:<40-hex> source ref; it must match the checked-out HEAD",
+    )
     parser.add_argument("--no-clean", action="store_true", help="do not remove the previous generated bundle directory first")
     parser.add_argument("--json", action="store_true", help="print the full validation payload")
     args = parser.parse_args()
@@ -821,7 +909,15 @@ def main() -> int:
             args.subject_store_root if args.subject_store_root.is_absolute() else REPO_ROOT / args.subject_store_root
         )
 
-    payload = validate_bundle(manifest, subject, bundle_dir, registry_dir, subject_store_root, clean=not args.no_clean)
+    payload = validate_bundle(
+        manifest,
+        subject,
+        bundle_dir,
+        registry_dir,
+        subject_store_root,
+        source_ref=args.source_ref,
+        clean=not args.no_clean,
+    )
     if args.json:
         print(json.dumps(payload, sort_keys=True))
     elif payload["ok"]:
