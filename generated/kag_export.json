@@ -44,7 +44,7 @@
     "owner_repo": "aoa-techniques",
     "authority_ref": "techniques/instruction/capability-boundary/multi-source-primary-input-provenance/TECHNIQUE.md",
     "producer": "scripts/build_kag_export.py via scripts/validators/projection_kag.py from source-authored technique bundles",
-    "consumer_expectation": "Verify owner_repo, kind, object_id, entry_surface, source_inputs, direct_relations, non_identity_boundary, artifact_identity, build_kag_export parity, generated/source-fast validation, OS Abyss artifact ABI/SLSA evidence, materialized subject-store state, and consumer trust-gate allow/latest before treating this as a KAG donor orientation.",
+    "consumer_expectation": "Verify owner_repo, kind, object_id, entry_surface, source_inputs, direct_relations, non_identity_boundary, artifact_identity, build_kag_export parity, generated/source-fast validation, OS Abyss artifact ABI/SLSA evidence, materialized subject-store state, and consumer trust-gate allow/latest before treating this as a KAG donor orientation. The durable artifact evidence must bind source_repo aoa-techniques to the exact landed commit:<40-hex-git-SHA>; the declared agent consumer boundary uses host_managed trust, while release_consumer or public_release admission remains a separate trust-root verdict.",
     "privacy_boundary": "Public technique metadata and source refs only; no private project residue, hidden transcripts, source payload bodies, secrets, machine-local runtime state, or KAG substrate authority.",
     "content_identity": "generated/kag_export.json and generated/kag_export.min.json rebuilt from source-owned technique surfaces and compared by validate_repo.",
     "abi_epoch": "aoa_techniques_kag_export_v1",
@@ -58,7 +58,7 @@
     ],
     "verification": [
       "python scripts/build_kag_export.py",
-      "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
+      "python scripts/validate_abyss_machine_kag_export_bundle.py --source-ref commit:<EXACT_LANDED_RELEASE_COMMIT> --json",
       "python scripts/validate_repo.py",
       "python scripts/ci_gate.py --mode generated"
     ],

@@ -118,6 +118,7 @@
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+- [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
 
 ## AGENTS/mesh
 
@@ -168,6 +169,10 @@
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 
+## artifact trust
+
+- [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
+
 ## command authority
 
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
@@ -179,6 +184,10 @@
 ## prompt visibility
 
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+
+## release identity
+
+- [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
 
 ## script topology
 

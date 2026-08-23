@@ -246,7 +246,11 @@ KAG_EXPORT_ARTIFACT_IDENTITY: dict[str, Any] = {
         "build_kag_export parity, generated/source-fast validation, OS Abyss "
         "artifact ABI/SLSA evidence, materialized subject-store state, and "
         "consumer trust-gate allow/latest before treating this as a KAG donor "
-        "orientation."
+        "orientation. The durable artifact evidence must bind source_repo "
+        "aoa-techniques to the exact landed commit:<40-hex-git-SHA>; the "
+        "declared agent consumer boundary uses host_managed trust, while "
+        "release_consumer or public_release admission remains a separate "
+        "trust-root verdict."
     ),
     "privacy_boundary": (
         "Public technique metadata and source refs only; no private project "
@@ -271,7 +275,7 @@ KAG_EXPORT_ARTIFACT_IDENTITY: dict[str, Any] = {
     ],
     "verification": [
         "python scripts/build_kag_export.py",
-        "python scripts/validate_abyss_machine_kag_export_bundle.py --json",
+        "python scripts/validate_abyss_machine_kag_export_bundle.py --source-ref commit:<EXACT_LANDED_RELEASE_COMMIT> --json",
         "python scripts/validate_repo.py",
         "python scripts/ci_gate.py --mode generated",
     ],
@@ -1914,4 +1918,3 @@ def validate_schema_instance(
                 validate_schema_instance(
                     value, properties[key], f"{instance_path}.{key}", schema_store
                 )
-

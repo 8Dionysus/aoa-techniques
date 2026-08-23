@@ -34,14 +34,14 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-kag
-          ref: b28f64a497fd440dd58cbaae90d655da46224d8c
+          ref: 813a7f69dc96ec031dad9b897a6991792cc48b7a
           path: .deps/aoa-kag
 
       - name: Checkout aoa-stats protocol validator
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-stats
-          ref: 25ebfb784f01d3b93f62994908579c4a2c5d87b1
+          ref: dc608fd5de3fcaf0301f356c9efd52e2bdd350ce
           path: .deps/aoa-stats
 
       - name: Setup Python
@@ -92,7 +92,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-stats
-          ref: 25ebfb784f01d3b93f62994908579c4a2c5d87b1
+          ref: dc608fd5de3fcaf0301f356c9efd52e2bdd350ce
           path: .deps/aoa-stats
 
       - name: Move release dependencies outside tagged checkout

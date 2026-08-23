@@ -49,6 +49,24 @@ release/export handoff.
 The envelope is still subordinate to the authored technique bundle and does not
 define KAG substrate behavior.
 
+## Release source binding
+
+The generated capsule is content-addressed, so the source commit is bound in
+the OS Abyss artifact evidence at preparation time rather than embedded as a
+self-referential field in the generated JSON. The release validator resolves
+the checked-out `HEAD` and passes it as the exact
+`commit:<40-hex-git-SHA>` `source_ref` to artifact sidecars, the durable
+registry record, subject materialization, and the trust gate. A path such as
+`docs/source-lift/artifact-bundles/kag_export.bundle.json` is a manifest
+reference only and is not a currentness proof.
+
+The intended local consumer boundary is `consumer_intent=agent` with
+`trust_root_mode=host_managed`. The validator records that boundary's raw
+verdict without rewriting it. `release_consumer` and `public_release` are
+separate production boundaries: when they lack a public-release trust root,
+their `manual_review_required` result remains manual review, not an allow
+claim. Unknown, deny, warn, and allow remain distinct outcomes.
+
 ## Regeneration
 
 Use [AGENTS](AGENTS.md#validation) for the current regeneration and validation
