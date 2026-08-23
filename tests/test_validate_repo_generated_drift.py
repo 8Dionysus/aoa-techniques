@@ -509,6 +509,7 @@ class ValidateRepoGeneratedDriftTests(unittest.TestCase):
         self.assertEqual(
             (
                 "[Unreleased]",
+                "[0.6.0] - 2026-08-22",
                 "[0.5.0] - 2026-07-13",
                 "[0.4.5] - 2026-05-18",
                 "[0.4.2] - 2026-04-23",
