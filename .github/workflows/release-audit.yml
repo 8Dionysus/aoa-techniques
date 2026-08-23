@@ -30,6 +30,18 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.release_ref || github.ref }}
 
+      - name: Resolve release provider pins from selected checkout
+        id: release_dependencies
+        shell: bash
+        run: |
+          stats_ref="$(sed -nE 's/^AOA_STATS_REF = "([0-9a-f]{40})"$/\1/p' scripts/validate_local_stats_port.py)"
+          if [ -z "$stats_ref" ] || [ "$(printf '%s\n' "$stats_ref" | wc -l)" -ne 1 ]; then
+            echo "selected release does not expose exactly one AOA_STATS_REF" >&2
+            exit 1
+          fi
+          echo "stats_ref=$stats_ref" >> "$GITHUB_OUTPUT"
+          echo "Release-scoped aoa-stats ref: $stats_ref" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Checkout abyss-machine artifact tools
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
@@ -41,7 +53,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-stats
-          ref: 339ecb2db22ac4552fa88756b650896ebbff5b56
+          ref: ${{ steps.release_dependencies.outputs.stats_ref }}
           path: .deps/aoa-stats
 
       - name: Setup Python

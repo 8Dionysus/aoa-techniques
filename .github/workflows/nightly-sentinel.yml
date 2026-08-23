@@ -34,14 +34,14 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-kag
-          ref: 813a7f69dc96ec031dad9b897a6991792cc48b7a
+          ref: 8136d3eb629da28cea1206d13a8f1df52ee14739
           path: .deps/aoa-kag
 
       - name: Checkout aoa-stats protocol validator
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-stats
-          ref: 339ecb2db22ac4552fa88756b650896ebbff5b56
+          ref: f119805cda69b3edeb2a4c5e407368d70e68650d
           path: .deps/aoa-stats
 
       - name: Setup Python
@@ -81,6 +81,18 @@ jobs:
       - name: Checkout latest release tag
         run: git checkout --detach "${{ steps.latest.outputs.tag }}"
 
+      - name: Resolve release provider pins from selected checkout
+        id: release_dependencies
+        shell: bash
+        run: |
+          stats_ref="$(sed -nE 's/^AOA_STATS_REF = "([0-9a-f]{40})"$/\1/p' scripts/validate_local_stats_port.py)"
+          if [ -z "$stats_ref" ] || [ "$(printf '%s\n' "$stats_ref" | wc -l)" -ne 1 ]; then
+            echo "selected release does not expose exactly one AOA_STATS_REF" >&2
+            exit 1
+          fi
+          echo "stats_ref=$stats_ref" >> "$GITHUB_OUTPUT"
+          echo "Release-scoped aoa-stats ref: $stats_ref" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Checkout abyss-machine artifact tools
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
@@ -92,7 +104,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-stats
-          ref: 339ecb2db22ac4552fa88756b650896ebbff5b56
+          ref: ${{ steps.release_dependencies.outputs.stats_ref }}
           path: .deps/aoa-stats
 
       - name: Move release dependencies outside tagged checkout
