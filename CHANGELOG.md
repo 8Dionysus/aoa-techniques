@@ -16,6 +16,19 @@ The format is intentionally simple and human-first.
   can be re-audited from the current workflow without moving or rewriting the
   tag or GitHub Release
 
+### Exact aoa-stats v0.2.1 revalidation
+
+- moved every current consuming lane to the exact published
+  `aoa-stats@v0.2.1` commit
+  `339ecb2db22ac4552fa88756b650896ebbff5b56`, preserving the historical
+  `v0.6.1` pin as release history rather than rewriting it
+- made the owner-local stats adapter reject an ancestor or moving checkout
+  before delegating validation, so provider-before-consumer remains an exact
+  commit identity constraint outside GitHub Actions as well
+- added regression coverage for the `build_sidecars(subject_root=...)`
+  contract and the exact artifact-owner checkout used by tag-scoped Release
+  Audit and nightly release reproduction
+
 ## [0.6.1] - 2026-08-23
 
 ### Summary

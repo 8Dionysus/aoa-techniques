@@ -3,7 +3,11 @@ from __future__ import annotations
 from copy import deepcopy
 import json
 from pathlib import Path
+import subprocess
 import unittest
+from unittest.mock import patch
+
+from scripts import validate_local_stats_port
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -57,6 +61,23 @@ class LocalStatsPortTests(unittest.TestCase):
             "packet numerator must match readiness_passed records",
         ):
             assert_packet_matches_owner_readiness(false_packet)
+
+    def test_stats_validator_requires_the_published_provider_commit(self) -> None:
+        stats_root = Path("/tmp/aoa-stats")
+        with patch.object(subprocess, "run") as run:
+            run.return_value.returncode = 0
+            run.return_value.stdout = validate_local_stats_port.AOA_STATS_REF + "\n"
+            self.assertEqual(
+                stats_root,
+                validate_local_stats_port.require_pinned_checkout(stats_root),
+            )
+
+    def test_stats_validator_rejects_an_ancestor_or_moving_checkout(self) -> None:
+        with patch.object(subprocess, "run") as run:
+            run.return_value.returncode = 0
+            run.return_value.stdout = "0" * 40 + "\n"
+            with self.assertRaisesRegex(RuntimeError, "must resolve"):
+                validate_local_stats_port.require_pinned_checkout(Path("/tmp/aoa-stats"))
 
 
 if __name__ == "__main__":

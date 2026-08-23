@@ -165,6 +165,7 @@
 ## CI
 
 - [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
+- [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
 
 ## GitHub workflow
 
@@ -180,10 +181,15 @@
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
 
+## provider validation
+
+- [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
+
 ## release
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
 - [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
+- [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
 
 ## release/tooling
 
