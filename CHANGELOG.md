@@ -6,6 +6,18 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+## [0.6.2] - 2026-08-23
+
+### Summary
+
+- this corrective successor repairs the current provider-validation and
+  Release Audit contract exposed by the immutable `v0.6.1` audit
+- the public technique canon and authored technique bundles are unchanged;
+  the release updates owner validation, workflow identity, generated evidence
+  projections, and release-boundary documentation
+- `v0.6.1`, its tag, and its GitHub Release remain immutable historical
+  evidence and are not rewritten
+
 ### Postpublish release-audit follow-up
 
 - repaired the release-audit and nightly sentinel artifact-tool pin to the
@@ -28,6 +40,50 @@ The format is intentionally simple and human-first.
 - added regression coverage for the `build_sidecars(subject_root=...)`
   contract and the exact artifact-owner checkout used by tag-scoped Release
   Audit and nightly release reproduction
+
+### First-Parent Reconciliation
+
+The product-change range is
+`v0.6.1..ba88196b3f652d3da2a08626f83f5ccec848a9de`. It contains two landed
+one-parent squash commits. The release-preparation commit that introduces
+this section is publication bookkeeping and is intentionally outside the
+product-change ledger.
+
+1. `055e4fe99b5f9f1d0f68059ad8530a794807b953` — PR #504, repaired the
+   postpublish artifact-audit route by pinning the exact `abyss-machine`
+   provider and adding an immutable `release_ref` workflow input.
+2. `ba88196b3f652d3da2a08626f83f5ccec848a9de` — PR #505, repaired the
+   `build_sidecars(subject_root=...)` contract, advanced consuming lanes to
+   exact `aoa-stats@v0.2.1`, enforced exact local provider identity, and
+   refreshed the owner-local KAG family.
+
+There are no additional internal/noise commits, duplicate product entries,
+or intentional exclusions in this product range.
+
+### Validation
+
+- the exact-source release gate passed the full repository and mechanics
+  suites, generated parity, public hygiene, exact stats federation, and the
+  OS Abyss artifact bundle loop on the landed source commit
+- PR #505 passed GitHub `Repo Validation`; its source-fast provider gate used
+  exact `aoa-stats` commit
+  `339ecb2db22ac4552fa88756b650896ebbff5b56`, exact `aoa-kag` commit
+  `813a7f69dc96ec031dad9b897a6991792cc48b7a`, and exact `abyss-machine`
+  commit `a9f52d8bfe23e28167c01dd2a059af231fff77a0`
+- tag-scoped Release Audit, GitHub Release identity, artifact admission,
+  postpublish re-audit, runtime, proof, delivery, closure, and acceptance
+  remain separate claims and are not substituted by this source validation
+
+### Notes
+
+- artifact admission preserves raw `allow`, `warn`, `deny`,
+  `manual_review_required`, and `unknown` outcomes; the production/public
+  review boundary is not promoted by this source release
+- this release claims no runtime health, deployment, service activation,
+  measured routing benefit, cross-owner adoption, proof/eval verdict,
+  durable-memory promotion, rollback execution, or human acceptance
+- the release identity remains the exact annotated tag and matching GitHub
+  Release; package-registry publication is out of scope
 
 ## [0.6.1] - 2026-08-23
 
