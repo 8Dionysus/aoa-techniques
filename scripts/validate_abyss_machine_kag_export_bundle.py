@@ -507,10 +507,11 @@ def _trust_gate_denies_without_subject_store(
     inspected_claims = trust_gate.get("inspected_claims", {})
     return {
         "ok": bool(
-            trust_gate.get("ok") is False
+            registry_roundtrip.get("ok") is True
+            and trust_gate.get("ok") is False
             and trust_gate.get("verdict") == "deny"
             and trust_gate.get("decision", {}).get("allow") is False
-            and REQUIRED_SUBJECT_STORE_BLOCKER in trust_gate.get("blockers", [])
+            and trust_gate.get("blockers") == [REQUIRED_SUBJECT_STORE_BLOCKER]
             and inspected_claims.get("registry_latest", {}).get("selected_record_is_latest") is True
             and inspected_claims.get("controls", {}).get("required_controls_missing") == []
             and inspected_claims.get("source", {}).get("source_repo_matched") is True
