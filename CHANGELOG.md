@@ -6,6 +6,29 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Final provider pin repair
+
+- repaired the current-main provider declarations after the published
+  campaign settled on `aoa-kag@v0.5.0` and `aoa-stats@v0.2.0`
+- current `Repo Validation` and `Nightly Sentinel` moving-main lanes now
+  checkout the exact peeled commits `f46f146cc79a26fa81ad0f400b9c5774df293e57`
+  and `88ff38b1b38eef939f2c5b4541cbe8363a05fc8d`; the local KAG and stats
+  adapters reject any other checkout
+- the tag-scoped Release Audit and latest-release reproducer continue to
+  derive provider refs from the selected immutable Techniques checkout, so
+  historical `v0.6.0` evidence is not rewritten
+- generated KAG-family and document/decision companions are refreshed only
+  through their owner builders; no authored technique meaning changes
+
+### Validation and claim boundaries
+
+- source-fast, generated, mechanics/part-local, release, and exact provider
+  checks are rerun against the live tag objects `8f63e3ae558ea96d21ee06becfa6ef61d63d698a`
+  (KAG) and `a63dd6f95c6f0c87a371720885c2d90a1baa3436` (stats)
+- no tag or GitHub Release is created, moved, deleted, or rewritten; artifact
+  `allow`, `warn`, `deny`, `manual_review_required`, and `unknown` outcomes
+  remain the artifact owner's separate results, not source-release claims
+
 ## [0.6.0] - 2026-08-23
 
 ### Summary

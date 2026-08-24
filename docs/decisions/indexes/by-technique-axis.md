@@ -134,6 +134,7 @@
 - [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 - [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
+- [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 
 ## owner boundary
 
@@ -145,6 +146,7 @@
 - [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 - [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
+- [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 
 ## validation
 
@@ -152,6 +154,7 @@
 - [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 - [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
+- [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 
 ## validation lane
 
