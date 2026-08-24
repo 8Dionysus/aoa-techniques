@@ -11,7 +11,7 @@ import sys
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PORT_PATH = REPO_ROOT / "stats" / "port.manifest.json"
-AOA_STATS_REF = "f119805cda69b3edeb2a4c5e407368d70e68650d"
+AOA_STATS_REF = "88ff38b1b38eef939f2c5b4541cbe8363a05fc8d"
 
 
 def _candidate_roots() -> tuple[Path, ...]:
