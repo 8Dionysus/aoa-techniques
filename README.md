@@ -11,7 +11,7 @@ This README is only the public front door. When the question becomes authority,
 authoring, classification, review, release, mechanics, or agent routing, follow
 the linked owner surface instead of expanding root prose.
 
-> Current release: `v0.6.0`. See [CHANGELOG](CHANGELOG.md) for the consolidated campaign release notes.
+> Current release: `v0.6.0`. See [CHANGELOG](CHANGELOG.md) for release notes.
 
 ## What This Repository Does
 
