@@ -6,16 +6,65 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
-## [0.6.3] - 2026-08-23
+## [0.6.0] - 2026-08-23
 
 ### Summary
+
+- this is the sole consolidated campaign release for the landed source range represented by the former same-day `v0.6.0` through `v0.6.3` publications; it preserves their public capability, schema, ABI, owner and routing, security and privacy, operator, generated, validation, limitation, and non-claim material
+- the reconciled source history is the fourteen-commit first-parent range from `v0.5.0` through `41a66b085eef524498ea9c7f7154ed3952679bd8`, with each merged PR #495 through #508 accounted for exactly once in the campaign ledger
+- release identity is this one dated changelog section, the exact landed annotated `v0.6.0` tag, and its matching GitHub Release; no package registry, asset, runtime activation, deployment, proof verdict, or human-acceptance claim is implied
+- `aoa-techniques` remains a standalone public canon of small, sanitized, bounded, reviewable engineering techniques rather than a skill runtime, proof authority, routing engine, KAG substrate, stats aggregator, package registry, or deployment runtime
+
+### Publication reconciliation
+
+- the four same-day Release bodies and their tag-scoped `CHANGELOG.md` snapshots are reconciled below without silent deletion; every line is retained in the canonical material or explicitly classified in the content-conservation ledger as a repeated snapshot, publication wrapper, generated/internal churn, or a mapped source item
+- former release highlights, release dates, canonical changelog links, full-notes wrappers, assets state, and release/tag identities remain represented as publication reconciliation evidence; the final body is generated from this canonical section by the owner release route
+- the fourteen merged PRs and matching first-parent commits remain individually named in the reconciled slices; release-preparation and generated-only changes remain distinguishable from product capability and contract changes
+- provider pins, artifact/trust boundaries, source/CI/merge/publication/runtime/proof/delivery/closure boundaries, limitations, and explicit non-claims remain preserved as separate claims; this consolidation does not promote any historical evidence into a stronger verdict
+
+#### Campaign-wide first-parent ledger
+
+The nested source slices below retain the detailed material reconciliation for
+each former publication. These six release-preparation or successor-contract
+landings complete the individual public index for the fourteen merged PRs and
+are kept separate from authored capability changes and generated churn:
+
+1. `1ab377a9ddc2dcfc35fa4f4b3db8fd77b0e69d0c` — PR #500, prepared the
+   original `v0.6.0` release surface, README pointer, generated readers, and
+   release-parity expectations; its generated KAG refresh is accounted for as
+   release evidence rather than a second capability.
+2. `60ca634f9b1ff7ea2ba4ff7eaa7d8b7a5498bdb8` — PR #501, aligned the
+   `v0.6.0` release headings and removed a stale hard-coded family digest;
+   this is release metadata and generated validation churn, not a new
+   authored technique.
+3. `6693c431955105c300a1149473b66a4af3140c82` — PR #503, prepared the
+   successor `v0.6.1` release surface with exact provider, artifact, trust,
+   generated, and non-claim boundaries; the publication bookkeeping remains
+   historical material inside this consolidated section.
+4. `0331b21b07373a35c762aacb4d45fa193479183a` — PR #506, prepared the
+   successor `v0.6.2` release surface, parity expectations, and generated
+   companions while preserving the prior release identity; this is release
+   preparation rather than a new tag or runtime claim.
+5. `455f3b16516e9ef595922c25735e0e911f254df6` — PR #507, revalidated the
+   Techniques consumer against exact published `aoa-kag`/`aoa-stats` commits,
+   preserved action and artifact boundaries, and refreshed owner-generated
+   evidence; provider currentness and generated changes remain distinct from
+   authored technique meaning.
+6. `41a66b085eef524498ea9c7f7154ed3952679bd8` — PR #508, completed the
+   successor release contract and exact-current generated KAG family while
+   preserving the explicit artifact, proof, delivery, closure, and acceptance
+   limits; its release bookkeeping is retained here as the campaign endpoint.
+
+### Reconciled source slice: former v0.6.3 publication
+
+#### Summary
 
 - this corrective successor revalidates the Techniques consumer after the
   exact published `aoa-kag@v0.5.2` provider and its final `aoa-stats@v0.2.2`
   dependency; authored technique meaning is unchanged
 - `v0.6.2`, its tag, GitHub Release, and artifact history remain immutable
 
-### Exact provider revalidation
+#### Exact provider revalidation
 
 - current repo-validation, nightly, release-audit, and local KAG/stats gates
   now resolve exact `aoa-kag` commit
@@ -30,7 +79,7 @@ The format is intentionally simple and human-first.
   retaining its documented moving-sibling boundary; canary output is not
   immutable release, artifact, runtime, proof, or acceptance evidence
 
-### Validation
+#### Validation
 
 - local provider adapters reject stale, moving, or ancestor-only checkouts;
   generated KAG companions remain builder-owned
@@ -43,14 +92,14 @@ The format is intentionally simple and human-first.
   artifact owner's raw `manual_review_required` verdicts where the production
   trust root is absent
 
-### Notes
+#### Notes
 
 - source, CI, merge, tag, GitHub Release, artifact admission, runtime, proof,
   delivery, closure, and owner/human acceptance remain separate claims
 
-## [0.6.2] - 2026-08-23
+### Reconciled source slice: former v0.6.2 publication
 
-### Summary
+#### Summary
 
 - this corrective successor repairs the current provider-validation and
   Release Audit contract exposed by the immutable `v0.6.1` audit
@@ -60,7 +109,7 @@ The format is intentionally simple and human-first.
 - `v0.6.1`, its tag, and its GitHub Release remain immutable historical
   evidence and are not rewritten
 
-### Postpublish release-audit follow-up
+#### Postpublish release-audit follow-up
 
 - repaired the release-audit and nightly sentinel artifact-tool pin to the
   exact current `abyss-machine` commit
@@ -70,7 +119,7 @@ The format is intentionally simple and human-first.
   can be re-audited from the current workflow without moving or rewriting the
   tag or GitHub Release
 
-### Exact aoa-stats v0.2.1 revalidation
+#### Exact aoa-stats v0.2.1 revalidation
 
 - moved every current consuming lane to the exact published
   `aoa-stats@v0.2.1` commit
@@ -83,7 +132,7 @@ The format is intentionally simple and human-first.
   contract and the exact artifact-owner checkout used by tag-scoped Release
   Audit and nightly release reproduction
 
-### First-Parent Reconciliation
+#### First-Parent Reconciliation
 
 The product-change range is
 `v0.6.1..ba88196b3f652d3da2a08626f83f5ccec848a9de`. It contains two landed
@@ -102,7 +151,7 @@ product-change ledger.
 There are no additional internal/noise commits, duplicate product entries,
 or intentional exclusions in this product range.
 
-### Validation
+#### Validation
 
 - the exact-source release gate passed the full repository and mechanics
   suites, generated parity, public hygiene, exact stats federation, and the
@@ -116,7 +165,7 @@ or intentional exclusions in this product range.
   postpublish re-audit, runtime, proof, delivery, closure, and acceptance
   remain separate claims and are not substituted by this source validation
 
-### Notes
+#### Notes
 
 - artifact admission preserves raw `allow`, `warn`, `deny`,
   `manual_review_required`, and `unknown` outcomes; the production/public
@@ -127,9 +176,9 @@ or intentional exclusions in this product range.
 - the release identity remains the exact annotated tag and matching GitHub
   Release; package-registry publication is out of scope
 
-## [0.6.1] - 2026-08-23
+### Reconciled source slice: former v0.6.1 publication
 
-### Summary
+#### Summary
 
 - this is a corrective patch after `v0.6.0`'s post-audit: direct KAG and
   stats provider body pins now name the exact published provider commits, and
@@ -140,7 +189,7 @@ or intentional exclusions in this product range.
   parity, and release evidence without claiming a new technique corpus
 - `v0.6.0` remains an immutable historical release and is not rewritten
 
-### Added
+#### Added
 
 - added an exact `commit:<40-hex-git-SHA>` source-ref contract for KAG export
   artifact sidecars, registry records, subject materialization, and trust
@@ -151,7 +200,7 @@ or intentional exclusions in this product range.
 - added a durable decision record for immutable provider pins and exact KAG
   release evidence
 
-### Changed
+#### Changed
 
 - changed repo-validation, release-audit, nightly-sentinel, and local KAG
   guard surfaces to use published `aoa-kag@v0.5.0` commit
@@ -165,7 +214,7 @@ or intentional exclusions in this product range.
 - refreshed the source-owned portable KAG family and generated export
   readers from the exact provider source after the evidence contract change
 
-### Fixed
+#### Fixed
 
 - fixed consumer/provider currentness so a green ancestor-only ref cannot be
   mistaken for the exact published provider commit
@@ -178,7 +227,7 @@ or intentional exclusions in this product range.
 - fixed trust-boundary reporting so `allow`, `manual_review_required`,
   `deny`, `warn`, and `unknown` remain separate outcomes
 
-### ABI, schemas, evidence, and generated consumers
+#### ABI, schemas, evidence, and generated consumers
 
 - the `aoa_techniques_kag_export_v1` envelope remains the source-owned KAG
   export ABI; generated identity and evidence-contract text are refreshed,
@@ -194,7 +243,7 @@ or intentional exclusions in this product range.
   GitHub Release; no PyPI, npm, package-registry, or GitHub asset publication
   is implied
 
-### Compatibility and migration
+#### Compatibility and migration
 
 - current exact prerequisites are published `aoa-kag@v0.5.0` containing
   `813a7f69dc96ec031dad9b897a6991792cc48b7a` and `aoa-stats@v0.2.0`
@@ -206,7 +255,7 @@ or intentional exclusions in this product range.
   KAG family and export identities change because their source/evidence
   contract is refreshed
 
-### Security and privacy
+#### Security and privacy
 
 - public source, generated, and artifact evidence surfaces remain limited to
   sanitized metadata, public commits, and public trust claims; secrets,
@@ -219,7 +268,7 @@ or intentional exclusions in this product range.
 - these are source, CI, artifact-admission, and public-hygiene claims, not a
   general runtime-security certification
 
-### Deployment, observability, recovery, and rollback
+#### Deployment, observability, recovery, and rollback
 
 - no service, deployment, storage, host, runtime, activation, or sibling
   repository path changed
@@ -230,7 +279,7 @@ or intentional exclusions in this product range.
   and move consumers back to that immutable source only through an explicit
   owner decision
 
-### First-Parent Reconciliation
+#### First-Parent Reconciliation
 
 The product-change range is
 `v0.6.0..0f981adfcd37b74800db701dab73dbe842296329`.
@@ -249,7 +298,7 @@ prior release tradition.
 There are no additional internal/noise commits, duplicate product entries,
 or intentional exclusions in this product range.
 
-### Validation
+#### Validation
 
 - exact clean provider checkouts passed the manifest-owned `source-fast` lane;
   generated parity, public hygiene, AGENTS mesh, and focused contract tests
@@ -263,7 +312,7 @@ or intentional exclusions in this product range.
 - provider currentness is checked against exact published tag targets, not
   moving branches or ancestor-only acceptance
 
-### Notes
+#### Notes
 
 - this release does not claim runtime health, deployment, service activation,
   consumer-zero, measured routing benefit, cross-owner adoption, proof or eval
@@ -275,9 +324,9 @@ or intentional exclusions in this product range.
   runtime state, proof, delivery, closure, and acceptance remain distinct
   claims
 
-## [0.6.0] - 2026-08-22
+### Reconciled source slice: former v0.6.0 publication
 
-### Summary
+#### Summary
 
 - this release reconstructs the complete `v0.5.0..2b70fddc` landed source
   range: five first-parent commits across the public technique canon, KAG
@@ -291,7 +340,7 @@ or intentional exclusions in this product range.
   into a skill runtime, proof authority, routing engine, KAG substrate, stats
   aggregator, package registry, or deployment runtime
 
-### Added
+#### Added
 
 - added an explicit owner decision and route law stating that this repository
   currently has no repository-local skill home; discovery returns to authored
@@ -303,7 +352,7 @@ or intentional exclusions in this product range.
 - added release/nightly dependency setup for the pinned `aoa-stats` validator
   and the bounded `pytest>=8.0,<9.0` test dependency
 
-### Changed
+#### Changed
 
 - changed active dispatch, selection, and intelligence ownership references
   to canonical `aoa-sdk`; retained `aoa-routing` only in dated donor,
@@ -318,7 +367,7 @@ or intentional exclusions in this product range.
   projections, owner inventories, and repository-document readers from their
   authored sources
 
-### Fixed
+#### Fixed
 
 - fixed the historical release/nightly dependency split where latest-release
   reproduction lacked the pinned `aoa-stats` validator and the moving-main
@@ -329,7 +378,7 @@ or intentional exclusions in this product range.
   expectations required by the no-skill-home and `aoa-sdk` succession
   boundaries
 
-### Deprecated
+#### Deprecated
 
 - deprecated direct active dispatch ownership references to `aoa-routing`;
   the namespace remains available for compatibility and historical evidence
@@ -337,7 +386,7 @@ or intentional exclusions in this product range.
 - deprecated direct consumers of the removed tracked KAG v2 monolith paths;
   consumers should use the v3 manifest/shard/compatibility route
 
-### Removed
+#### Removed
 
 - removed the foreign `.agents/skills/` cache: 25 shared bundles, 212 copied
   paths, and six copied helper scripts
@@ -346,7 +395,7 @@ or intentional exclusions in this product range.
 - removed tracked KAG v2 monolith index files as storage representations;
   this does not remove the v2 compatibility view
 
-### ABI, schemas, evidence, and generated consumers
+#### ABI, schemas, evidence, and generated consumers
 
 - the KAG family manifest remains
   `kag/indexes/index_family.manifest.json` with schema
@@ -364,7 +413,7 @@ or intentional exclusions in this product range.
 - the public artifact is the annotated Git tag and matching GitHub Release;
   no PyPI, npm, package-registry, or GitHub asset publication is implied
 
-### Compatibility and migration
+#### Compatibility and migration
 
 - consumers that opened deleted v2 monolith paths must migrate to the v3
   manifest, shard, and deterministic compatibility routes
@@ -377,7 +426,7 @@ or intentional exclusions in this product range.
   containing commit `25ebfb784f01d3b93f62994908579c4a2c5d87b1`; unmerged
   `aoa-kag` PR #219 is not part of this consumer release contract
 
-### Security and privacy
+#### Security and privacy
 
 - public technique and KAG-export surfaces remain limited to sanitized public
   metadata and source references; secrets, private transcripts, private
@@ -390,7 +439,7 @@ or intentional exclusions in this product range.
 - these are source/public-hygiene and artifact-admission claims, not a general
   runtime-security certification
 
-### Deployment, observability, recovery, and rollback
+#### Deployment, observability, recovery, and rollback
 
 - no service, deployment, storage, host, runtime, or activation path changed
 - owner-local stats and observability meaning remains separate from the
@@ -400,7 +449,7 @@ or intentional exclusions in this product range.
   compatibility assembly and `aoa-routing` legacy references, and keep the
   no-skill-home boundary reversible through a separately admitted future trial
 
-### First-Parent Reconciliation
+#### First-Parent Reconciliation
 
 The product-change range is `v0.5.0..2b70fddcefe17bb4d02584a84997011d69964f24`.
 It contains five landed one-parent squash commits. Each is listed exactly once;
@@ -436,7 +485,7 @@ landings above, not promoted to duplicate release bullets. There are no
 additional internal/noise commits, duplicate product entries, or intentional
 exclusions in the five-commit product range.
 
-### Validation
+#### Validation
 
 - the release-prep route uses the manifest-owned `source-fast`, `generated`,
   `mechanics/part-local`, and `release` lanes; `scripts/release_check.py`
@@ -453,7 +502,7 @@ exclusions in the five-commit product range.
   PR or CI result is not publication, artifact admission, runtime health,
   proof, or human acceptance
 
-### Notes
+#### Notes
 
 - this release does not claim runtime health, deployment, service activation,
   consumer-zero, measured routing cost benefit, cross-owner adoption, proof or
@@ -464,6 +513,33 @@ exclusions in the five-commit product range.
 - local ignored `dist/` files are evidence inputs only and are not GitHub
   Release assets; artifact receipts, trust-gate admission, runtime status,
   proof, and publication acceptance remain separate claims
+
+### Validation
+
+- the owner release route rebuilds generated readers and KAG export surfaces,
+  runs the manifest-owned source, generated, mechanics, and release lanes, and
+  requires a clean stabilized source snapshot after generation
+- the content-conservation ledger accounts for every line of the four former
+  same-day Release bodies and tag-scoped changelog snapshots, every merged PR
+  and first-parent commit in the reconciled range, and each material
+  capability, schema, ABI, owner, routing, security, privacy, operator,
+  generated, validation, limitation, and non-claim class
+- exact provider handoff, artifact admission, CI, merge, publication, tag
+  object, postpublish, transport delivery, closure, and owner acceptance are
+  checked as separate evidence-bearing boundaries; a green source or generated
+  validator is not substituted for any of them
+
+### Notes
+
+- this is the one dated campaign release section for the target version;
+  former releases and their evidence are reconciled as nested source slices,
+  while the immutable ledger retains every raw line and duplicate-snapshot
+  classification
+- no service, deployment, storage, host, runtime, activation, package-registry,
+  or GitHub-asset publication is implied; the public artifact remains the
+  exact annotated Git tag and matching GitHub Release
+- historical provider, artifact, proof, delivery, closure, limitation, and
+  human-acceptance boundaries remain honest and separately reviewable
 
 ## [0.5.0] - 2026-07-13
 

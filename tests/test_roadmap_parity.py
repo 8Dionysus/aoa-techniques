@@ -56,7 +56,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         changelog = (REPO_ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
         technique_index = (REPO_ROOT / "TECHNIQUE_INDEX.md").read_text(encoding="utf-8")
 
-        self.assertIn("Current release: `v0.6.3`", readme)
+        self.assertIn("Current release: `v0.6.0`", readme)
         self.assertIn("## [0.4.0]", changelog)
         self.assertIn("authored technique bundles | `107`", roadmap)
         self.assertIn("canonical bundles | `98`", roadmap)
