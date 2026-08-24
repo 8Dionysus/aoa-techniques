@@ -184,7 +184,11 @@ def _abyss_machine_roots_for_sanitizer() -> list[Path]:
 
 def _tmp_roots_for_sanitizer() -> list[Path]:
     roots: list[Path] = []
-    for raw in (os.environ.get("ABYSS_MACHINE_TMP_ROOT"), "/srv/abyss-machine/tmp"):
+    for raw in (
+        os.environ.get("ABYSS_MACHINE_TMP_ROOT"),
+        "/srv/abyss-machine/tmp",
+        tempfile.gettempdir(),
+    ):
         if not raw:
             continue
         root = Path(raw).expanduser().resolve()
@@ -211,11 +215,12 @@ def _sanitize_public_payload(payload: Any) -> Any:
                 return f"abyss-machine-root-redacted/{suffix}"
         for tmp_root in _tmp_roots_for_sanitizer():
             tmp_root_text = str(tmp_root)
+            label = "host-tmp:system" if tmp_root == Path(tempfile.gettempdir()).resolve() else "host-tmp:abyss-machine"
             if payload == tmp_root_text:
-                return "host-tmp:abyss-machine"
+                return label
             if payload.startswith(tmp_root_text + os.sep):
                 suffix = Path(payload).resolve().relative_to(tmp_root).as_posix()
-                return f"host-tmp:abyss-machine/{suffix}"
+                return f"{label}/{suffix}"
         home = Path.home().resolve()
         if payload == str(home) or payload.startswith(str(home) + os.sep):
             return "host-home-redacted"

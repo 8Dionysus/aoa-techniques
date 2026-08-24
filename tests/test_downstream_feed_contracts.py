@@ -341,6 +341,20 @@ class DownstreamFeedContractsTests(unittest.TestCase):
             else:
                 os.environ["ABYSS_MACHINE_REPO_ROOT"] = old_repo_root
 
+    def test_kag_export_bundle_sanitizer_redacts_system_temp_roots(self) -> None:
+        system_tmp = Path(tempfile.gettempdir()).resolve()
+        sanitized = kag_bundle_validator._sanitize_public_payload(
+            {
+                "root": str(system_tmp / "aoa-techniques-precondition"),
+                "nested": str(system_tmp / "aoa-techniques-precondition" / "subject-store"),
+            }
+        )
+
+        self.assertTrue(sanitized["root"].startswith("host-tmp:"))
+        self.assertTrue(sanitized["nested"].startswith("host-tmp:"))
+        self.assertNotIn(str(system_tmp), sanitized["root"])
+        self.assertNotIn(str(system_tmp), sanitized["nested"])
+
     def test_repo_doc_surface_manifest_is_router_safe(self) -> None:
         manifest = load_json("generated/repo_doc_surface_manifest.min.json")
 
