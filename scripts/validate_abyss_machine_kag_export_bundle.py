@@ -9,6 +9,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from collections.abc import Iterator
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +28,47 @@ SOURCE_REPO = "aoa-techniques"
 TRUST_ROOT_MODE = "host_managed"
 PRODUCER = "aoa-techniques KAG export generator from reviewed technique canon"
 EXPECTED_REQUIRED_CONTROLS = ["abi_signature", "slsa_in_toto"]
+REQUIRED_SUBJECT_STORE_BLOCKER = "required_artifact_subject_store_not_verified"
+SUBJECT_STORE_ENV_NAMES = (
+    "ABYSS_MACHINE_ARTIFACT_SUBJECT_STORE_ROOT",
+    "ABYSS_MACHINE_ARTIFACT_SUBJECT_STORE_ROOTS",
+)
+
+
+@contextmanager
+def _subject_store_scope(artifact_bundles: Any, store_root: Path) -> Iterator[None]:
+    """Bind every artifact-store lookup in this rehearsal to one explicit root.
+
+    The abyss-machine resolver appends its host default after reading the
+    environment roots.  Environment-only binding can therefore discover an
+    unrelated canonical store and turn the required missing-store denial into
+    an allow.  Rebind the imported owner module as well as both environment
+    names, then restore the process state exactly.
+    """
+
+    target = Path(store_root).expanduser().resolve()
+    missing = object()
+    previous_default = getattr(
+        artifact_bundles,
+        "DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT",
+        missing,
+    )
+    previous_env = {name: os.environ.get(name) for name in SUBJECT_STORE_ENV_NAMES}
+    try:
+        artifact_bundles.DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT = target
+        for name in SUBJECT_STORE_ENV_NAMES:
+            os.environ[name] = str(target)
+        yield
+    finally:
+        if previous_default is missing:
+            delattr(artifact_bundles, "DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT")
+        else:
+            artifact_bundles.DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT = previous_default
+        for name, value in previous_env.items():
+            if value is None:
+                os.environ.pop(name, None)
+            else:
+                os.environ[name] = value
 
 
 def _candidate_abyss_machine_roots() -> list[Path]:
@@ -141,7 +184,11 @@ def _abyss_machine_roots_for_sanitizer() -> list[Path]:
 
 def _tmp_roots_for_sanitizer() -> list[Path]:
     roots: list[Path] = []
-    for raw in (os.environ.get("ABYSS_MACHINE_TMP_ROOT"), "/srv/abyss-machine/tmp"):
+    for raw in (
+        os.environ.get("ABYSS_MACHINE_TMP_ROOT"),
+        "/srv/abyss-machine/tmp",
+        tempfile.gettempdir(),
+    ):
         if not raw:
             continue
         root = Path(raw).expanduser().resolve()
@@ -168,11 +215,12 @@ def _sanitize_public_payload(payload: Any) -> Any:
                 return f"abyss-machine-root-redacted/{suffix}"
         for tmp_root in _tmp_roots_for_sanitizer():
             tmp_root_text = str(tmp_root)
+            label = "host-tmp:system" if tmp_root == Path(tempfile.gettempdir()).resolve() else "host-tmp:abyss-machine"
             if payload == tmp_root_text:
-                return "host-tmp:abyss-machine"
+                return label
             if payload.startswith(tmp_root_text + os.sep):
                 suffix = Path(payload).resolve().relative_to(tmp_root).as_posix()
-                return f"host-tmp:abyss-machine/{suffix}"
+                return f"{label}/{suffix}"
         home = Path.home().resolve()
         if payload == str(home) or payload.startswith(str(home) + os.sep):
             return "host-home-redacted"
@@ -439,6 +487,44 @@ def _trust_gate_allow_latest(
     }
 
 
+def _trust_gate_denies_without_subject_store(
+    artifact_bundles: Any,
+    registry_dir: Path,
+    registry_roundtrip: dict[str, Any],
+    *,
+    source_ref: str,
+) -> dict[str, Any]:
+    record = registry_roundtrip.get("promoted", {}).get("record", {})
+    trust_gate = artifact_bundles.trust_gate(
+        registry_dir,
+        artifact_class=ARTIFACT_CLASS,
+        subject_digest=str(record.get("subject_digest") or ""),
+        consumer_intent=CONSUMER_INTENT,
+        expected_source_repo=SOURCE_REPO,
+        expected_source_ref=source_ref,
+        expected_trust_root_mode=TRUST_ROOT_MODE,
+    )
+    inspected_claims = trust_gate.get("inspected_claims", {})
+    return {
+        "ok": bool(
+            registry_roundtrip.get("ok") is True
+            and trust_gate.get("ok") is False
+            and trust_gate.get("verdict") == "deny"
+            and trust_gate.get("decision", {}).get("allow") is False
+            and trust_gate.get("blockers") == [REQUIRED_SUBJECT_STORE_BLOCKER]
+            and inspected_claims.get("registry_latest", {}).get("selected_record_is_latest") is True
+            and inspected_claims.get("controls", {}).get("required_controls_missing") == []
+            and inspected_claims.get("source", {}).get("source_repo_matched") is True
+            and inspected_claims.get("source", {}).get("source_ref_matched") is True
+            and inspected_claims.get("trust_root", {}).get("trust_root_mode_matched") is True
+            and inspected_claims.get("artifact_subject_store", {}).get("required") is True
+            and inspected_claims.get("artifact_subject_store", {}).get("ok") is False
+        ),
+        "expected": "deny until the required subject store is materialized",
+        "trust_gate": trust_gate,
+    }
+
+
 def _verify_missing_slsa(artifact_bundles: Any, abyss_repo_root: Path, bundle_dir: Path, tmp_root: Path) -> dict[str, Any]:
     candidate = _copy_bundle(bundle_dir, tmp_root / "missing-slsa")
     path = candidate / artifact_bundles.SLSA_INTOTO_SIDECAR
@@ -579,6 +665,30 @@ def _verify_materialized_subject_store(
     source_ref: str,
     abyss_repo_root: Path,
 ) -> dict[str, Any]:
+    target_store_root = Path(store_root).expanduser().resolve()
+    with _subject_store_scope(artifact_bundles, target_store_root):
+        return _verify_materialized_subject_store_impl(
+            artifact_bundles,
+            manifest,
+            bundle_dir,
+            registry_dir,
+            tmp_root,
+            target_store_root,
+            source_ref,
+            abyss_repo_root,
+        )
+
+
+def _verify_materialized_subject_store_impl(
+    artifact_bundles: Any,
+    manifest: Path,
+    bundle_dir: Path,
+    registry_dir: Path,
+    tmp_root: Path,
+    store_root: Path,
+    source_ref: str,
+    abyss_repo_root: Path,
+) -> dict[str, Any]:
     pre_registry = _registry_roundtrip(
         artifact_bundles,
         bundle_dir,
@@ -695,6 +805,34 @@ def _validate_in_bundle_dir(
     clean: bool,
 ) -> dict[str, Any]:
     artifact_bundles, abyss_machine_root, package_root = _import_artifact_bundles()
+    with _subject_store_scope(artifact_bundles, subject_store_root):
+        return _validate_in_bundle_dir_impl(
+            manifest,
+            subject,
+            bundle_dir,
+            registry_dir,
+            subject_store_root,
+            artifact_bundles=artifact_bundles,
+            abyss_machine_root=abyss_machine_root,
+            package_root=package_root,
+            source_ref=source_ref,
+            clean=clean,
+        )
+
+
+def _validate_in_bundle_dir_impl(
+    manifest: Path,
+    subject: Path,
+    bundle_dir: Path,
+    registry_dir: Path,
+    subject_store_root: Path,
+    *,
+    artifact_bundles: Any,
+    abyss_machine_root: Path | None,
+    package_root: str | None,
+    source_ref: str,
+    clean: bool,
+) -> dict[str, Any]:
     _assert_manifest_matches_subject(manifest, subject)
     _assert_public_safe_subjects(manifest, subject)
     if clean and bundle_dir.exists():
@@ -731,25 +869,32 @@ def _validate_in_bundle_dir(
         source_ref=source_ref,
         abyss_repo_root=abyss_repo_root,
     )
-    pre_materialization_trust_gate = artifact_bundles.trust_gate(
-        registry_dir,
-        artifact_class=ARTIFACT_CLASS,
-        subject_digest=str(registry.get("latest_by_artifact_class", {}).get(ARTIFACT_CLASS, {}).get("subject_digest") or ""),
-        consumer_intent=CONSUMER_INTENT,
-        expected_source_repo=SOURCE_REPO,
-        expected_source_ref=source_ref,
-        expected_trust_root_mode=TRUST_ROOT_MODE,
-    )
-    pre_materialization_gate = {
-        "ok": bool(
-            pre_materialization_trust_gate.get("verdict") == "deny"
-            and pre_materialization_trust_gate.get("blockers") == [
-                "required_artifact_subject_store_not_verified"
-            ]
-        ),
-        "expected": "deny until the required subject store is materialized",
-        "trust_gate": pre_materialization_trust_gate,
-    }
+    # A --no-clean rerun may retain a valid materialized store.  Keep the
+    # negative precondition independent from that retained state and from the
+    # host canonical store so every invocation proves deny-before-materialization.
+    with tempfile.TemporaryDirectory(
+        prefix="aoa-techniques-kag-export-precondition-",
+        dir=_default_tmp_root(),
+    ) as precondition_tmp:
+        precondition_root = Path(precondition_tmp)
+        precondition_registry_dir = precondition_root / "registry"
+        with _subject_store_scope(artifact_bundles, precondition_root):
+            precondition_registry = _registry_roundtrip(
+                artifact_bundles,
+                bundle_dir,
+                precondition_registry_dir,
+                lifecycle_state="release-ready",
+                evidence_ref="materialized-subject-store-negative-precondition",
+                manifest=manifest,
+                source_ref=source_ref,
+                abyss_repo_root=abyss_repo_root,
+            )
+            pre_materialization_gate = _trust_gate_denies_without_subject_store(
+                artifact_bundles,
+                precondition_registry_dir,
+                precondition_registry,
+                source_ref=source_ref,
+            )
     materialized = artifact_bundles.materialize_artifact_subjects(
         bundle_dir,
         store_root=subject_store_root,
@@ -867,19 +1012,35 @@ def _validate_in_bundle_dir(
     return _sanitize_public_payload(payload)
 
 
+def _resolve_subject_store_root(subject_store_root: Path | str | None) -> Path:
+    if subject_store_root is None:
+        return DEFAULT_SUBJECT_STORE_ROOT.resolve()
+    if isinstance(subject_store_root, str) and not subject_store_root.strip():
+        raise ValueError("explicit subject_store_root must be a non-empty path")
+    candidate = Path(subject_store_root).expanduser()
+    if candidate == Path("."):
+        raise ValueError("explicit subject_store_root must not resolve to the repository root")
+    if not candidate.is_absolute():
+        candidate = REPO_ROOT / candidate
+    resolved = candidate.resolve()
+    if resolved == REPO_ROOT.resolve():
+        raise ValueError("explicit subject_store_root must not resolve to the repository root")
+    return resolved
+
+
 def validate_bundle(
     manifest: Path,
     subject: Path,
     bundle_dir: Path | None,
     registry_dir: Path | None,
-    subject_store_root: Path | None,
+    subject_store_root: Path | str | None,
     *,
     source_ref: str | None = None,
     clean: bool,
 ) -> dict[str, Any]:
     target_bundle = bundle_dir or DEFAULT_BUNDLE_DIR
     target_registry = registry_dir or DEFAULT_REGISTRY_DIR
-    target_subject_store = subject_store_root or DEFAULT_SUBJECT_STORE_ROOT
+    target_subject_store = _resolve_subject_store_root(subject_store_root)
     resolved_source_ref = _resolve_source_ref(source_ref)
     return _validate_in_bundle_dir(
         manifest,
@@ -898,7 +1059,9 @@ def main() -> int:
     parser.add_argument("--subject", type=Path, default=DEFAULT_SUBJECT)
     parser.add_argument("--bundle-dir", type=Path)
     parser.add_argument("--registry-dir", type=Path)
-    parser.add_argument("--subject-store-root", type=Path)
+    # Keep this raw so an empty shell expansion stays distinguishable from
+    # Path('.') before subject-store resolution.
+    parser.add_argument("--subject-store-root", default=None)
     parser.add_argument(
         "--source-ref",
         help="exact commit:<40-hex> source ref; it must match the checked-out HEAD",
@@ -915,11 +1078,7 @@ def main() -> int:
     registry_dir = None
     if args.registry_dir is not None:
         registry_dir = args.registry_dir if args.registry_dir.is_absolute() else REPO_ROOT / args.registry_dir
-    subject_store_root = None
-    if args.subject_store_root is not None:
-        subject_store_root = (
-            args.subject_store_root if args.subject_store_root.is_absolute() else REPO_ROOT / args.subject_store_root
-        )
+    subject_store_root = args.subject_store_root
 
     payload = validate_bundle(
         manifest,

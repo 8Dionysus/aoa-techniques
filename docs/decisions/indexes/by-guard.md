@@ -174,10 +174,15 @@
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
 - [AOA-TECH-D-0071 Pin Release Audit To The Current Artifact Owner And Immutable Target](../AOA-TECH-D-0071-postpublish-release-audit-provider.md) (`docs/decisions/AOA-TECH-D-0071-postpublish-release-audit-provider.md`)
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
+- [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
 
 ## command authority
 
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+
+## negative precondition
+
+- [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
 
 ## owner boundary
 
@@ -200,6 +205,7 @@
 - [AOA-TECH-D-0072 Revalidate Exact aoa-stats v0.2.1 Before the Next Techniques Release](../AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0072-exact-stats-v0-2-1-consumer-revalidation.md`)
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
 - [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
+- [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
 
 ## script topology
 

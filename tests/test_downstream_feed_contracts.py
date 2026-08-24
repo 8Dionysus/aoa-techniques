@@ -218,6 +218,68 @@ class DownstreamFeedContractsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "does not match"):
             kag_bundle_validator._resolve_source_ref("commit:" + ("0" * 40))
 
+    def test_kag_artifact_subject_store_root_rejects_empty_or_repo_root(self) -> None:
+        with self.assertRaisesRegex(ValueError, "non-empty path"):
+            kag_bundle_validator._resolve_subject_store_root("")
+        with self.assertRaisesRegex(ValueError, "repository root"):
+            kag_bundle_validator._resolve_subject_store_root(".")
+        with self.assertRaisesRegex(ValueError, "repository root"):
+            kag_bundle_validator._resolve_subject_store_root(REPO_ROOT)
+
+    def test_kag_artifact_subject_store_scope_restores_owner_state(self) -> None:
+        class FakeArtifactBundles:
+            DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT = Path("/ambient/subject-store")
+
+        names = kag_bundle_validator.SUBJECT_STORE_ENV_NAMES
+        previous_env = {name: os.environ.get(name) for name in names}
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "isolated"
+            try:
+                with kag_bundle_validator._subject_store_scope(FakeArtifactBundles, target):
+                    self.assertEqual(
+                        FakeArtifactBundles.DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT,
+                        target.resolve(),
+                    )
+                    for name in names:
+                        self.assertEqual(os.environ[name], str(target.resolve()))
+                self.assertEqual(
+                    FakeArtifactBundles.DEFAULT_ARTIFACT_SUBJECT_STORE_ROOT,
+                    Path("/ambient/subject-store"),
+                )
+                for name, value in previous_env.items():
+                    self.assertEqual(os.environ.get(name), value)
+            finally:
+                for name, value in previous_env.items():
+                    if value is None:
+                        os.environ.pop(name, None)
+                    else:
+                        os.environ[name] = value
+
+    def test_kag_artifact_negative_precondition_isolated_from_host_store(self) -> None:
+        source_ref = kag_bundle_validator._exact_git_source_ref(REPO_ROOT)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            payload = kag_bundle_validator.validate_bundle(
+                kag_bundle_validator.DEFAULT_MANIFEST,
+                kag_bundle_validator.DEFAULT_SUBJECT,
+                root / "bundle",
+                root / "registry",
+                root / "subject-store",
+                source_ref=source_ref,
+                clean=True,
+            )
+
+        precondition = payload["pre_materialization_gate"]
+        trust_gate = precondition["trust_gate"]
+        self.assertTrue(payload["ok"])
+        self.assertTrue(precondition["ok"])
+        self.assertEqual(trust_gate["verdict"], "deny")
+        self.assertEqual(
+            trust_gate["blockers"],
+            ["required_artifact_subject_store_not_verified"],
+        )
+        self.assertFalse("/var/lib/abyss-machine/artifacts/subjects" in json.dumps(precondition))
+
     def test_kag_export_bundle_validator_requires_consumer_verdict(self) -> None:
         manifest = load_json("docs/source-lift/artifact-bundles/kag_export.bundle.json")
         manifest["consumer_contract"].pop("consumer_verdict")
@@ -278,6 +340,20 @@ class DownstreamFeedContractsTests(unittest.TestCase):
                 os.environ.pop("ABYSS_MACHINE_REPO_ROOT", None)
             else:
                 os.environ["ABYSS_MACHINE_REPO_ROOT"] = old_repo_root
+
+    def test_kag_export_bundle_sanitizer_redacts_system_temp_roots(self) -> None:
+        system_tmp = Path(tempfile.gettempdir()).resolve()
+        sanitized = kag_bundle_validator._sanitize_public_payload(
+            {
+                "root": str(system_tmp / "aoa-techniques-precondition"),
+                "nested": str(system_tmp / "aoa-techniques-precondition" / "subject-store"),
+            }
+        )
+
+        self.assertTrue(sanitized["root"].startswith("host-tmp:"))
+        self.assertTrue(sanitized["nested"].startswith("host-tmp:"))
+        self.assertNotIn(str(system_tmp), sanitized["root"])
+        self.assertNotIn(str(system_tmp), sanitized["nested"])
 
     def test_repo_doc_surface_manifest_is_router_safe(self) -> None:
         manifest = load_json("generated/repo_doc_surface_manifest.min.json")

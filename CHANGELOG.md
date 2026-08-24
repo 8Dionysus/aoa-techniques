@@ -6,6 +6,20 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Artifact subject-store rehearsal isolation
+
+- the Techniques KAG artifact validator now binds every rehearsal lookup to its
+  explicit subject-store root, including the imported abyss-machine module
+  default and both host-store environment roots
+- negative preconditions use a fresh registry and empty temporary subject store
+  on every invocation, so a retained `--no-clean` result or ambient canonical
+  host state cannot turn deny-before-materialization into a false allow
+- empty or repository-root subject-store arguments fail before artifact writes;
+  materialized agent admission remains separate from the artifact owner's
+  release-consumer `manual_review_required` outcome
+- this is an `[Unreleased]` validator repair only; `v0.6.0`, its tag, GitHub
+  Release, body, assets, and published commit remain unchanged
+
 ### Final provider pin repair
 
 - repaired the current-main provider declarations after the published
