@@ -37,7 +37,7 @@ matching reader guide for the family being moved or regenerated.
 
 ## Validation
 
-Select the narrowest owner route: `source-fast` for source routes; add `generated` for declared projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
+Inherit parent validation: source-fast/generated/release; see [VALIDATION.md](../../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

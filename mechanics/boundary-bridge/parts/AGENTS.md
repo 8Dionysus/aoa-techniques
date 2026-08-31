@@ -32,10 +32,7 @@ Read `README.md` only when the selected task needs its human map; do not preload
 - Promote into `techniques/` only when the reusable practice can stand as an
   atomic technique with validation.
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 

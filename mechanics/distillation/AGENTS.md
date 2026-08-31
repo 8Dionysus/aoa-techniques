@@ -32,6 +32,7 @@ technique promotion.
 1. Repository root `AGENTS.md`
 2. `mechanics/AGENTS.md`
 Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
+Nested parts also read this package's `PARTS.md` before the target local card.
 
 ## Boundaries
 
@@ -44,10 +45,7 @@ Read `README.md` only when the selected task needs its human map; do not preload
   worldview.
 - Keep sibling-repo routes as provenance, not owner transfer.
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 

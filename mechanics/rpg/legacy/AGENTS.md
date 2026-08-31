@@ -22,13 +22,7 @@ Read `README.md` only when the selected task needs its human map; do not preload
 
 ## Boundaries
 
-- Do not use raw legacy files as the normal first route for current edits.
-- Do not make raw legacy files the only place current active behavior lives.
-- Do not create placeholder source receipts; preserve only actual source packets.
-- Start in `../README.md`, `../DIRECTION.md`, `../PARTS.md`, and `../parts/`
-  for current behavior.
-- Use `../PROVENANCE.md` as the active bridge into this district.
-- Keep `INDEX.md`, `DISTILLATION_LOG.md`, and `raw/README.md` aligned.
+Inherited legacy route: do not alter current behavior from legacy; see [mechanics/AGENTS.md](../../AGENTS.md#boundaries); preserve source lineage.
 
 ## Validation
 

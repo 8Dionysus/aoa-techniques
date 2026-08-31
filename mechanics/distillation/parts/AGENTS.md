@@ -14,11 +14,7 @@ operating surfaces, not raw donor archives.
 
 Read:
 
-1. repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/distillation/AGENTS.md`
-4. `mechanics/distillation/PARTS.md`
-Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
+Inherit [../AGENTS.md](../AGENTS.md#read-before-editing); use the local part route.
 
 ## Boundaries
 

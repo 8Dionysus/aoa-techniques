@@ -19,10 +19,7 @@ projection authority, owner acceptance, or technique status changes.
 
 ## Read before editing
 
-1. Root `AGENTS.md`.
-2. `mechanics/AGENTS.md`.
-3. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
-Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
+Inherit [../AGENTS.md](../AGENTS.md#read-before-editing); use package route surfaces.
 
 ## Boundaries
 

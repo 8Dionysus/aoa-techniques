@@ -41,7 +41,7 @@ philosophy, project-local folklore, or live runtime contracts that belong in
 
 ## Validation
 
-Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
+Inherit parent validation: source-fast/generated/release; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

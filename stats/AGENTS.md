@@ -32,7 +32,7 @@ Read `README.md` only when the selected task needs its human map; do not preload
 
 ## Validation
 
-Select the narrowest owner route: `source-fast` for the local owner; add `generated` for derived indexes and `advisory` only for non-blocking boundaries. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
+Inherit parent validation: source-fast/generated/advisory; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

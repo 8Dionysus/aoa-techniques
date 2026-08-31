@@ -27,18 +27,11 @@ Select the focused owner route for the touched surface.
 
 Read:
 
-1. repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/distillation/AGENTS.md`
-4. `mechanics/distillation/PARTS.md`
-Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
+Inherit [../../../AGENTS.md](../../../AGENTS.md#read-before-editing); use the local part route.
 
 ## Boundaries
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../../../../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 
