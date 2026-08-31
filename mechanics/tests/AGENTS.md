@@ -30,8 +30,7 @@ look smaller.
 
 ## Validation
 
-Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/tests/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
 Report changed mechanics-wide tests, mechanic packages affected, validation

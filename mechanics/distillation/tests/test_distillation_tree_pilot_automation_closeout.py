@@ -1626,12 +1626,12 @@ class DistillationTreePilotAutomationCloseoutTests(unittest.TestCase):
                         REPO_ROOT / "techniques" / trunk / "AGENTS.md"
                     ).read_text(encoding="utf-8")
                     self.assertIn(
-                        "This is a tree trunk, not a frontmatter domain",
+                        "shared placement applies",
                         agents,
                     )
                     self.assertIn("## Current Shelves", agents)
                     self.assertIn("## Trunk Rules", agents)
-                    self.assertIn("Do not add `tree_path` frontmatter", agents)
+                    self.assertIn("path placement follows the parent contract", agents)
                     self.assertIn(
                         f'Path("techniques") / "{trunk}" / "AGENTS.md"',
                         validator,

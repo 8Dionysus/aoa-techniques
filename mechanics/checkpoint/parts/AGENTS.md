@@ -38,10 +38,7 @@ Read `README.md` only when the selected task needs its human map; do not preload
 
 ## Validation
 
-Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
-
+Inherit [../../AGENTS.md](../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/checkpoint/parts/AGENTS.md`: bounded active part/promotion boundary.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/checkpoint/parts/AGENTS.md`: name the bounded active part and state whether promotion remains outside this package.

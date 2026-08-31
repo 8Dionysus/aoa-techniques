@@ -15,16 +15,12 @@ optional support directories such as `checks/`, `examples/`, and `notes/`.
 
 ## Read before editing
 
-Before editing anything here, read in this order:
-
-1. `../AGENTS.md`
-2. `../TECHNIQUE_INDEX.md`
-3. `../docs/START_HERE.md`
-4. the relevant trunk or retained frontmatter-lane `AGENTS.md`
-5. the target `TECHNIQUE.md`
-6. any touched `checks/`, `examples/`, and `notes/`
-7. any generated surfaces affected by the change
-Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
+Use this shared order: root `AGENTS.md` -> `TECHNIQUE_INDEX.md` ->
+`docs/START_HERE.md` -> the relevant trunk or retained lane -> target
+`TECHNIQUE.md` -> touched support/generated surfaces. Read `README.md` only
+when the selected task needs its human map; do not preload unrelated maps.
+Trunk cards add their local role and shelves; retained lanes add migration and
+provenance context.
 
 ## Boundaries
 
@@ -49,6 +45,13 @@ Select the narrowest owner route: `source-fast` for authored or route-card work;
 
 ## Closeout
 
-Report technique IDs, trunk/shelf/slug paths, frontmatter changes, generated
-surfaces rebuilt or left untouched, checks run, checks skipped, and remaining
-owner-boundary risk.
+Report technique IDs; trunk, shelf, and slug paths; frontmatter changes;
+generated surfaces rebuilt or left untouched; checks run; checks skipped; and
+remaining owner-boundary risk. Trunk cards also report the trunk, shelf, and
+bundle paths changed; whether path, frontmatter, generated catalogs, or reader
+surfaces changed; checks run; checks skipped; and any remaining owner-route
+risk.
+
+Tree trunks inherit this placement contract: the tree is a route spine, not
+frontmatter truth; meaning stays in `TECHNIQUE.md`; `tree_path` is not added by
+path alone; and renames require a reviewed projection and bounded receipt.

@@ -91,7 +91,7 @@ class SkillDiscoveryTreePilotTestCase(unittest.TestCase):
         )
         flat_text = re.sub(r"\s+", " ", text)
 
-        self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
+        self.assertIn("shared placement applies", text)
         self.assertIn("skill-discovery/", text)
         self.assertIn("curated skill discovery", flat_text)
         self.assertIn("pre-surface upstream source readiness", flat_text)
@@ -101,7 +101,7 @@ class SkillDiscoveryTreePilotTestCase(unittest.TestCase):
         self.assertIn("security scanning", flat_text)
         self.assertIn("runtime law", flat_text)
         self.assertIn("agent-role authority", flat_text)
-        self.assertIn("Do not add `tree_path` frontmatter", text)
+        self.assertIn("path placement follows the parent contract", text)
 
     def test_docs_and_evaluation_route_cards_no_longer_name_moved_representatives(self) -> None:
         docs = (REPO_ROOT / "techniques" / "docs" / "AGENTS.md").read_text(

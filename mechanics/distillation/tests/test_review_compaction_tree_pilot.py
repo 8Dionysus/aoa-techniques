@@ -68,9 +68,9 @@ class ReviewCompactionTreePilotTestCase(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
+        self.assertIn("shared placement applies", text)
         self.assertIn("review-compaction", text)
-        self.assertIn("Do not add `tree_path` frontmatter", text)
+        self.assertIn("path placement follows the parent contract", text)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (
