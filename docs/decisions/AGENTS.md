@@ -16,15 +16,14 @@ what the repository now does.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `docs/AGENTS.md`, `docs/README.md`,
 `docs/ROOT_SURFACE_LAW.md`, this file, and `TEMPLATE.md`.
 
 Also read the source surfaces that the decision affects, such as root docs,
 mechanic package cards, generated-source builders, validators, tests, or
 technique contracts.
 
-For canonical IDs or index metadata, read `README.md`, `TEMPLATE.md`, and
 `indexes/index_contract.yaml`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -42,31 +41,7 @@ For canonical IDs or index metadata, read `README.md`, `TEMPLATE.md`, and
 
 ## Validation
 
-Full lane command sequences live in `config/validation_lanes.json`. Decision
-records preserve verification scope and outcome rather than executable command
-evidence.
-New or revised decision records should name lane ids and the nearest owner
-`AGENTS.md` checks in active verification guidance.
-
-For decision ID, metadata, and generated lookup-index parity, run:
-
-```bash
-python scripts/generate_decision_indexes.py --check
-```
-
-For decision-lane shape or AGENTS mesh changes, run:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
-
-For broad route, generated, release-facing, or public-facing changes, route
-through the `generated` or `release` lane named in
-[`COMMAND_AUTHORITY.md`](../validation/COMMAND_AUTHORITY.md), plus the nearest
-owner `AGENTS.md` focused checks for the changed surface.
+Select the narrowest owner route: `source-fast` for source routes; add `generated` for declared projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

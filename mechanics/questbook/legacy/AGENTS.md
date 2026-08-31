@@ -19,7 +19,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/questbook/AGENTS.md`
 4. `mechanics/questbook/PROVENANCE.md`
-5. `mechanics/questbook/legacy/README.md` or the touched raw/receipt surface when present
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -33,11 +33,7 @@ Read:
 
 ## Validation
 
-Run:
-
-```bash
-python -m unittest discover -s mechanics/questbook/tests
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

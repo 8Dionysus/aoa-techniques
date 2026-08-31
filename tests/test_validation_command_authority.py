@@ -29,7 +29,7 @@ def markdown_command_nonowners() -> tuple[Path, ...]:
     paths: list[Path] = []
     for path in REPO_ROOT.rglob("*.md"):
         relative = path.relative_to(REPO_ROOT)
-        if path.name == "AGENTS.md":
+        if path.name in {"AGENTS.md", "VALIDATION.md"}:
             continue
         if relative.parts and relative.parts[0] == ".deps":
             continue

@@ -17,8 +17,8 @@ only serve one part belong in `mechanics/<slug>/parts/<part>/tests/`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/README.md`, and the
 package card or mechanics route contract under test.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -30,12 +30,7 @@ look smaller.
 
 ## Validation
 
-Verify with:
-
-```bash
-python -m unittest discover -s mechanics/tests
-python scripts/run_tests.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

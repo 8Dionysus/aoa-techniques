@@ -24,8 +24,9 @@ For technique intake, also read `docs/TECHNIQUE_ATOM_CONTRACT.md`,
 `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and the relevant GitHub issue or pull
 request template.
 
-For mechanic-facing intake, also read `mechanics/README.md`,
-`mechanics/AGENTS.md`, and the nearest mechanic package card.
+For mechanic-facing intake, also read `mechanics/AGENTS.md` and the nearest
+mechanic package card.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -57,22 +58,7 @@ source truth.
 
 ## Validation
 
-Run the narrowest relevant checks first. Full lane command sequences live in
-`config/validation_lanes.json`; GitHub workflow YAML should call
-`scripts/ci_gate.py --mode ...`, not duplicate lane meaning inline.
-
-Use the `source-fast` lane for ordinary workflow/template changes. For broad
-platform, contribution, generated, or release-facing changes, use the
-`generated` or `release` lane named in
-[`COMMAND_AUTHORITY.md`](../docs/validation/COMMAND_AUTHORITY.md), plus the
-nearest root or GitHub owner checks for the changed surface.
-
-```bash
-python scripts/ci_gate.py --mode source-fast
-```
-
-If a listed validator is not present in the checkout yet, report that
-explicitly and run the closest available guardrail.
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

@@ -20,6 +20,7 @@ guide that owns the reader family before changing paths or builder output.
 
 For source-lift readers, also read `docs/source-lift/KAG_SOURCE_LIFT_GUIDE.md` and the
 matching lift guide for the reader being moved or regenerated.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -33,18 +34,7 @@ matching lift guide for the reader being moved or regenerated.
 
 ## Validation
 
-Run the builder for the moved reader family, then:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
-For docs-root topology changes, also run:
-
-```bash
-python -m unittest tests.test_docs_surface_guardrails
-```
+Select the narrowest owner route: `source-fast` for source routes; add `generated` for declared projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

@@ -20,10 +20,9 @@ acceptance, generated quest truth, or technique status changes.
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
-3. `mechanics/questbook/README.md`.
-4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
-5. `QUESTBOOK.md`, `quests/`, schemas, or generated quest projections only
+3. `QUESTBOOK.md`, `quests/`, schemas, or generated quest projections only
    when the task touches their route or source/projection boundary.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -44,12 +43,7 @@ acceptance, generated quest truth, or technique status changes.
 
 ## Validation
 
-Use the root validation path after changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

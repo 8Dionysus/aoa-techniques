@@ -33,6 +33,7 @@ Read:
 4. `generated/AGENTS.md` for generated export posture
 5. source technique bundle named by the touched record
 6. `aoa-kag/kag/LOCAL_SUBTREE_PROTOCOL.md` for shared provider contract shape
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Source Routes
 
@@ -51,17 +52,7 @@ contract changes to `aoa-kag`.
 
 ## Validation
 
-Use the repo validator for source and generated KAG export parity:
-
-```bash
-python scripts/validate_repo.py
-```
-
-Use the source-fast lane for route/topology changes:
-
-```bash
-python scripts/ci_gate.py --mode source-fast
-```
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

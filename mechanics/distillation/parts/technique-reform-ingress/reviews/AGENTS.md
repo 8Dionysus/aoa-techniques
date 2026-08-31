@@ -35,8 +35,7 @@ Read:
 5. `mechanics/distillation/AGENTS.md`
 6. `mechanics/distillation/parts/AGENTS.md`
 7. `mechanics/distillation/parts/technique-reform-ingress/AGENTS.md`
-8. the part README
-9. the touched review packet family README when present
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -53,23 +52,7 @@ Read:
 
 ## Validation
 
-For review-only changes, run:
-
-```bash
-python -m unittest discover -s mechanics/distillation/tests
-python scripts/validate_repo.py
-```
-
-For review changes that alter generated/public reader interpretation, AGENTS
-coverage, or release posture, also run the matching parent checks:
-
-```bash
-python scripts/release_check.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

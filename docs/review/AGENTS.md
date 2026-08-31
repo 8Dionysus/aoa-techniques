@@ -17,22 +17,19 @@ doctrine from neighboring AoA repositories.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `DESIGN.md`, `docs/AGENTS.md`,
-`docs/ROOT_SURFACE_LAW.md`, and this district [README](README.md).
+Read root `AGENTS.md`, `DESIGN.md`, `docs/AGENTS.md`, and
+`docs/ROOT_SURFACE_LAW.md` before review-guide edits.
 
 For promotion or maturity wording, also read:
 
 - [Canonical Rubric](CANONICAL_RUBRIC.md)
 - [Canonical Review Guide](CANONICAL_REVIEW_GUIDE.md)
-- [Promotion Readiness Matrix](../../mechanics/audit/parts/promotion-readiness-matrix/README.md)
-- [Promotion Evidence Runbook](../../mechanics/audit/parts/promotion-evidence-runbook/README.md)
 
 For semantic or shadow review wording, also read:
 
 - [Semantic Review Guide](SEMANTIC_REVIEW_GUIDE.md)
 - [Technique Shadow Guide](TECHNIQUE_SHADOW_GUIDE.md)
-- [Review Readers](../readers/review/README.md)
-- [Distillation Reviews](../../mechanics/distillation/parts/technique-reform-ingress/reviews/README.md)
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -47,20 +44,7 @@ For semantic or shadow review wording, also read:
 
 ## Validation
 
-For review-guide changes, run the narrow affected test first when possible:
-
-```bash
-python scripts/build_catalog.py
-python scripts/build_semantic_review_manifest.py
-python scripts/build_shadow_review_manifest.py
-python -m unittest tests.test_validate_repo_source_contracts
-python -m unittest tests.test_validate_repo_generated_drift
-python -m unittest tests.test_docs_surface_guardrails
-python scripts/validate_repo.py
-```
-
-If generated review, selection, catalog, or evidence-note outputs move, rebuild
-the matching surfaces before validation.
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

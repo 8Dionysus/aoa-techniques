@@ -23,6 +23,7 @@ Read root `AGENTS.md`, `docs/AGENTS.md`, `docs/ROOT_SURFACE_LAW.md`,
 
 For AGENTS mesh changes, also read `docs/guardrails/AGENTS_MESH_PROTOCOL.md`
 and `config/agents_mesh.json`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -36,18 +37,7 @@ and `config/agents_mesh.json`.
 
 ## Validation
 
-Run:
-
-```bash
-python -m unittest tests.test_validation_topology tests.test_validation_command_authority tests.test_script_topology
-python scripts/ci_gate.py --mode source-fast
-```
-
-For release-visible lane changes, run:
-
-```bash
-python scripts/release_check.py
-```
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

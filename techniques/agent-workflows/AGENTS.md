@@ -29,6 +29,7 @@ Read:
 3. `docs/TECHNIQUE_TREE_CONTRACT.md`
 4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
 5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -57,13 +58,7 @@ Do not:
 
 ## Validation
 
-After changing an agent-workflow technique or this retained route lane, run:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/validate_nested_agents.py`
-- `python scripts/validate_repo.py`
-
-Run `python scripts/release_check.py` when generated catalogs or docs changed too.
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

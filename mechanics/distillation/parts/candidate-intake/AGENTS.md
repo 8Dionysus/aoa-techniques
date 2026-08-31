@@ -23,8 +23,7 @@ first-pass queues are exhausted and all non-landed tails have final verdicts.
 
 Read root `AGENTS.md`, `docs/START_HERE.md`, `docs/TECHNIQUE_ATOM_CONTRACT.md`,
 `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `mechanics/distillation/AGENTS.md`,
-`mechanics/distillation/README.md`, `mechanics/distillation/PARTS.md`, and this
-part README before moving candidate material.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -47,12 +46,7 @@ part README before moving candidate material.
 
 ## Validation
 
-Verify with:
-
-```bash
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

@@ -42,11 +42,10 @@ It does not own:
 ## Read before editing
 
 1. Read the repository root `AGENTS.md`, then `mechanics/AGENTS.md`.
-2. Read `README.md`, `DIRECTION.md`, `PARTS.md`, and `PROVENANCE.md`.
-3. Read the part README for the touched path.
-4. When changing status, read `LANDING_LOG.md` and `ROADMAP.md`.
-5. When promoting a reusable practice, route it through
+2. When changing status, read `LANDING_LOG.md` and `ROADMAP.md`.
+3. When promoting a reusable practice, route it through
    `techniques/**/TECHNIQUE.md` and the normal canonical review path.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -68,19 +67,7 @@ It does not own:
 
 ## Validation
 
-After changing this package, run:
-
-```bash
-python -m unittest discover -s mechanics/rpg/tests
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
-If nested AGENTS coverage changes, also run:
-
-```bash
-python scripts/validate_nested_agents.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

@@ -19,12 +19,12 @@ Read root `AGENTS.md`, `DESIGN.AGENTS.md`,
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, and the nearest lane card before
 changing files here.
 
-For Codex Spark work, also read `.agents/spark/README.md`,
-`.agents/spark/registry.json`, and the chosen scenario `README.md` plus
-`PROMPT.md`.
+For a registered Spark scenario, also read its `PROMPT.md` and
+`registry.json` entry when that scenario is relevant to the task.
 
 For technique-facing help, also read `techniques/AGENTS.md`,
 `TECHNIQUE_INDEX.md`, and the selected source `TECHNIQUE.md` bundle.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -41,22 +41,7 @@ For technique-facing help, also read `techniques/AGENTS.md`,
 
 ## Validation
 
-Run the smallest covering checks:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-python scripts/validate_semantic_agents.py
-python scripts/validate_repo.py
-```
-
-For broad agent-lane or generated-surface changes, run:
-
-```bash
-python scripts/release_check.py
-```
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

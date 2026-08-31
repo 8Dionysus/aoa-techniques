@@ -28,6 +28,7 @@ surface, and `docs/START_HERE.md`.
 For AGENTS mesh mirrors, read `DESIGN.AGENTS.md`,
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, `config/agents_mesh.json`, and
 `scripts/build_agents_mesh_index.py`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -43,20 +44,7 @@ For AGENTS mesh mirrors, read `DESIGN.AGENTS.md`,
 
 ## Validation
 
-Common paths include:
-
-```bash
-python scripts/build_catalog.py
-python scripts/build_promotion_readiness.py
-python scripts/build_capsules.py
-python scripts/build_repo_doc_surface_manifest.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_nested_agents.py
-python scripts/release_check.py
-```
-
-Snippet contract: keep `python scripts/build_catalog.py` visible for nested
-AGENTS validation.
+Select the narrowest owner route: `source-fast` for source routes; add `generated` for declared projections. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

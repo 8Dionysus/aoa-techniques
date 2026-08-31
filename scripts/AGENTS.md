@@ -27,6 +27,7 @@ changing the owner/lane/side-effect posture of a script.
 
 For agent mesh scripts, also read `DESIGN.AGENTS.md`,
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md`, and `config/agents_mesh.json`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -44,20 +45,7 @@ For agent mesh scripts, also read `DESIGN.AGENTS.md`,
 
 ## Validation
 
-Full lane command sequences live in `config/validation_lanes.json`;
-`scripts/validation_lanes.py` is the loader/API, and `scripts/ci_gate.py` is the
-CI lane executor. Keep root entrypoints thin and verify with:
-
-```bash
-python -m unittest tests.test_validator_module_topology tests.test_script_topology
-python scripts/ci_gate.py --mode source-fast
-python scripts/validate_source_contracts.py
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-python scripts/validate_repo.py
-```
+Select the narrowest owner route: `source-fast` for focused source/validator work; add `generated` for projections. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

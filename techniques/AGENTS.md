@@ -18,13 +18,13 @@ optional support directories such as `checks/`, `examples/`, and `notes/`.
 Before editing anything here, read in this order:
 
 1. `../AGENTS.md`
-2. `../README.md`
-3. `../TECHNIQUE_INDEX.md`
-4. `../docs/START_HERE.md`
-5. the relevant trunk or retained frontmatter-lane `AGENTS.md`
-6. the target `TECHNIQUE.md`
-7. any touched `checks/`, `examples/`, and `notes/`
-8. any generated surfaces affected by the change
+2. `../TECHNIQUE_INDEX.md`
+3. `../docs/START_HERE.md`
+4. the relevant trunk or retained frontmatter-lane `AGENTS.md`
+5. the target `TECHNIQUE.md`
+6. any touched `checks/`, `examples/`, and `notes/`
+7. any generated surfaces affected by the change
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -45,18 +45,7 @@ philosophy, project-local folklore, or live runtime contracts that belong in
 
 ## Validation
 
-After changes, run the smallest checks that cover the touched surface. Common
-paths include:
-
-```bash
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-```
-
-Snippet contract: keep `python scripts/validate_repo.py` visible for nested
-AGENTS validation.
-
-Run `python scripts/release_check.py` when generated outputs changed.
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

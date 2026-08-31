@@ -8,7 +8,7 @@ inside it.
 ## Role
 
 `scripts/validators/` owns repo-local validator implementation modules for
-`python scripts/validate_repo.py`.
+`scripts/validate_repo.py`.
 
 `scripts/validate_repo.py` remains the compatibility CLI and re-export adapter.
 The owner modules here carry rule implementation:
@@ -36,6 +36,7 @@ Read root `AGENTS.md`, `scripts/AGENTS.md`,
 `docs/validation/VALIDATOR_TOPOLOGY.md`,
 `docs/validation/validator_inventory.json`, and the source or generated
 surface consumed by the validator you are changing.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -53,19 +54,7 @@ surface consumed by the validator you are changing.
 
 ## Validation
 
-Run the focused topology and validator tests first:
-
-```bash
-python -m unittest tests.test_validator_module_topology tests.test_validate_repo_source_contracts tests.test_validate_repo_generated_drift
-python scripts/ci_gate.py --mode generated
-python scripts/validate_repo.py
-```
-
-For release-facing changes, run the release entrypoint after focused tests:
-
-```bash
-python scripts/release_check.py
-```
+Select the narrowest owner route: `source-fast` for focused source/validator work; add `generated` for projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

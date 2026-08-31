@@ -17,14 +17,13 @@ not make a proposed path current by themselves.
 Read:
 
 1. `../AGENTS.md`
-2. `../README.md`
-3. `../INDEX.md`
-4. `README.md`
-5. the reviewed source packet, active route, or migration contract being
+2. `../INDEX.md`
+3. the reviewed source packet, active route, or migration contract being
    accounted for
 
 For technique-tree migration receipts, also read
 `../../docs/TECHNIQUE_TREE_CONTRACT.md`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -39,12 +38,7 @@ For technique-tree migration receipts, also read
 
 ## Validation
 
-Run:
-
-```bash
-python -m unittest tests.test_root_legacy_topology
-python scripts/validate_repo.py
-```
+Select the narrowest owner route: `source-fast` for the local owner; add `generated` for derived indexes and `advisory` only for non-blocking boundaries. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

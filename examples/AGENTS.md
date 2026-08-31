@@ -21,9 +21,10 @@ interprets them.
 
 ## Read before editing
 
-Read root `AGENTS.md`, local `README.md`, `docs/START_HERE.md`, the source
-technique, schema, or docs surface that the example illustrates, and any
+Read root `AGENTS.md`, `docs/START_HERE.md`, the source technique, schema, or
+docs surface that the example illustrates, and any
 generated manifest that indexes examples.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -49,13 +50,7 @@ The local README must index every root example file.
 
 ## Validation
 
-Verify with:
-
-```bash
-python scripts/build_example_manifest.py
-python scripts/validate_repo.py
-python -m unittest tests.test_docs_surface_guardrails
-```
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

@@ -23,13 +23,11 @@ Read root `AGENTS.md`, `.agents/AGENTS.md`, `DESIGN.AGENTS.md`, and the nearest
 source route for the touched file before changing this lane or using it as
 work context.
 
-For ordinary Spark work, read `README.md`, `registry.json`, and the chosen
-scenario `README.md` plus `PROMPT.md`.
-
 Read `SPARK_EXTRAPOLATION_NOTEBOOK.md` when changing the lane contract,
 scenario set, validator, tests, or release-check wiring. It records the studied
 `Agents-of-Abyss/.agents/spark` pattern and the local technique-canon
 adaptation boundary.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -60,23 +58,7 @@ multi-hour architecture synthesis or canon promotion.
 
 ## Validation
 
-A Spark task is done here when the scope is finished or handed off; the
-technique is more reusable, sanitized, and reviewable when edited;
-boundedness is clearer; generated surfaces are aligned when touched;
-neighboring layer ownership is clearer; and the narrowest relevant validation
-was run or explicitly skipped.
-
-For agent-lane changes, include:
-
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-```
-
-Spark should act like a sharp editor of reusable practice, not like a smuggler
-of project folklore.
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

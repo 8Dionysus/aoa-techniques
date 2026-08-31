@@ -25,7 +25,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`TECHNIQUE.md`",
             "`checks/`, `examples/`, and `notes/`",
             "Do not add bundle-local `AGENTS.md` by default",
-            "`python scripts/validate_repo.py`",
+            "VALIDATION.md",
         ),
     ),
     AgentsDocSpec(
@@ -202,7 +202,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`generated/repo_doc_surface_manifest.json`",
             "`generated/kag_export.json`",
             "Do not hand-edit",
-            "`python scripts/build_catalog.py`",
+            "`generated`",
         ),
     ),
     AgentsDocSpec(
@@ -213,7 +213,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`ADAPTATION_NOTE.template.md`",
             "`PROMOTION_NOTE.template.md`",
             "Preserve placeholders",
-            "`python scripts/validate_nested_agents.py`",
+            "`source-fast`",
         ),
     ),
 )

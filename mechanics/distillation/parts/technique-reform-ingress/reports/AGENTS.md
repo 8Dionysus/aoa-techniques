@@ -21,12 +21,7 @@ what command or source produced the readout.
 
 Do not convert a report into a proof claim that belongs in `aoa-evals` or a workflow claim that belongs in `aoa-skills`.
 
-Verify with the report generator when present, then:
-
-```bash
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-```
+Select the focused owner route for the touched surface.
 
 ## Read before editing
 
@@ -36,7 +31,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/distillation/AGENTS.md`
 4. `mechanics/distillation/PARTS.md`
-5. the touched part README, schema, example, script, report, or test
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -47,7 +42,7 @@ Read:
 
 ## Validation
 
-Run `python scripts/validate_repo.py` and the nearest package or part test.
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

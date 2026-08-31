@@ -58,27 +58,14 @@ for agents.
 
 ## Read before editing
 
-1. [README](README.md)
-2. [CHARTER](CHARTER.md)
-3. [DESIGN](DESIGN.md)
-4. [DESIGN.AGENTS](DESIGN.AGENTS.md)
-5. [START_HERE](docs/START_HERE.md)
-6. [TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md)
-7. [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md)
-8. [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) when corpus path architecture, tree projection, or bundle moves matter
-9. [ROADMAP](ROADMAP.md) when direction, horizons, or repo-level future triggers move
-10. [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) when root or docs-root placement changes
-11. [AGENTS_MESH_PROTOCOL](docs/guardrails/AGENTS_MESH_PROTOCOL.md) when agent-card coverage, shape, or generated mesh surfaces move
-12. [Root Legacy](legacy/README.md) when root-wide raw, archive, or receipt provenance changes
-13. [Mechanics](mechanics/README.md) when the change touches AoA mechanics or practice movement around canon
-14. [Examples](examples/README.md) when a public worked example changes
-15. [TECHNIQUE_SELECTION](docs/readers/selection/TECHNIQUE_SELECTION.md)
-16. [TECHNIQUE_KIND_GUIDE](docs/selection/TECHNIQUE_KIND_GUIDE.md)
-17. the target `techniques/**/TECHNIQUE.md`
-18. affected generated catalogs, capsules, feat cards, agent-mesh mirrors, or source-lift outputs
-19. the nearest local `AGENTS.md` under the touched path when a branch needs
-    more detail than this root route card
-20. [Stats](stats/README.md) when owner-local measurement questions or exports move
+Read this root card first for repository identity, owner boundaries, and route selection.
+For the selected surface, read the nearest local card and the exact stronger source: the authored technique bundle, source contract, schema, mechanic packet, builder, validator, or generated owner named by that route.
+Use [DESIGN.AGENTS](DESIGN.AGENTS.md), [START_HERE](docs/START_HERE.md),
+[TECHNIQUE_ATOM_CONTRACT](docs/TECHNIQUE_ATOM_CONTRACT.md),
+[TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md), and
+[TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md) only when the
+agent-surface, authoring, topology, or tree question requires them.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Route modes
 
@@ -111,29 +98,6 @@ past work, or preserved lessons, start with `aoa-memo` and the workspace memory
 map. Session grounding routes through `.aoa`; local candidate writing routes
 through this repository's `memo/` port when that port exists; durable reviewed
 memory lands through `aoa-memo`.
-
-## GitHub landing workflow
-
-Root [AGENTS](AGENTS.md) owns the repository-wide branch, PR, CI, and merge route.
-[.github/AGENTS](.github/AGENTS.md) owns the GitHub-native files that support it.
-
-When the user asks to commit, push, and merge in this repository, use this
-route:
-
-1. Start from a clean branch based on current `origin/main`.
-2. Commit only the intended diff with a message that names the changed surface.
-3. Push the branch and open a pull request with changed surfaces, validation,
-   skipped checks, generated parity, public-safety posture, and remaining risk.
-4. Wait for GitHub `Repo Validation` to finish. If it fails, fix the branch and
-   wait for the new result.
-5. Merge through GitHub after green validation. Use squash unless repository
-   settings require a different allowed method. If GitHub reports a different
-   allowed method, use that method and report which method landed.
-6. Return to `main`, fast-forward from `origin/main`, and confirm the worktree
-   is clean before closeout.
-
-If GitHub status or merge permissions cannot be observed, stop the landing route
-and report the exact blocker instead of guessing.
 
 ## Post-change route review
 
@@ -182,34 +146,13 @@ Update only the ones that moved; otherwise say no update was needed.
 
 ## Validation
 
-Default growth validation uses the `source-fast` lane. Full lane command
-sequences live in [validation_lanes](config/validation_lanes.json), and the
-lane map lives in [Validator Topology](docs/validation/VALIDATOR_TOPOLOGY.md).
-Use the `source-fast` lane for default growth checks and the nearest nested
-`AGENTS.md` for focused owner checks.
-
-```bash
-python scripts/ci_gate.py --mode source-fast
-```
-
-Use release checks when publication posture, broad generated outputs, or
-companion-candidate surfaces change. Route that through the `release` lane in
-[Command Authority](docs/validation/COMMAND_AUTHORITY.md), not by copying the
-release command sequence into route docs.
-
-For mechanic-specific companions such as Agon, use the owning mechanic
-`AGENTS.md` and part README rather than preserved root-era guidance.
-
-For agent-surface changes, use the focused AGENTS mesh checks named by the
-nearest AGENTS owner card and the `source-fast` / `generated` lane ids as
-needed.
+Select the narrowest route in [VALIDATION.md](VALIDATION.md): `source-fast`, `generated`, `mechanics/part-local`, or `release` for the changed evidence class.
+Exact order is owned by `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, blockers, and supported claims.
 
 ## Closeout
 
-State the technique, technique family, root surface, mechanic, or GitHub
-platform surface changed; whether IDs, kind, domain, state, adaptation notes,
-generated companions, or source-lift surfaces changed; and exactly what
-validation ran. If a PR was merged, name the GitHub merge method that landed.
+Report changed surfaces, source owners, validation lanes and focused checks run, generated parity, skipped routes, external blockers, remaining risk, and the next owner route.
+Keep local validation, CI, review, merge, publication, runtime use, adoption, and owner acceptance as separate claims; this card does not claim any unobserved state.
 
 ## Historical Reference
 

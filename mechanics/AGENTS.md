@@ -44,19 +44,20 @@ It does not own:
 
 ## Read before editing
 
-1. Read the repository root `AGENTS.md`, `README.md`, `ROADMAP.md`, and
-   `docs/START_HERE.md`.
+Read:
+
+1. Read the repository root `AGENTS.md` and `docs/START_HERE.md`.
 2. Read `docs/TECHNIQUE_ATOM_CONTRACT.md`,
-   `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and `mechanics/README.md`.
+   `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, and the mechanics owner route.
 3. If the work cites an AoA center-side `ORQ-*` request or downstream owner
    request, read `mechanics/REQUEST_RECEIPTS.md`.
-4. Read the nearest package README for the touched path, starting with its
-   local `Mechanic card`.
+4. Read the nearest package `AGENTS.md` or local `Mechanic card`.
 5. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
    or `parts/`, use those active route surfaces before opening raw legacy.
 6. For status, release, or promotion changes, also read
    `docs/review/CANONICAL_RUBRIC.md`, `docs/review/CANONICAL_REVIEW_GUIDE.md`, and
    `docs/RELEASING.md`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -105,16 +106,7 @@ It does not own:
 
 ## Validation
 
-Use the root validation path after changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
-If Agon binding candidates, questbook references, RPG references, manifests, or
-generated reader surfaces change, run their named builders or validators before
-closeout.
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

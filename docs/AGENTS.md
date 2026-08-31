@@ -16,8 +16,8 @@ package behavior, or sibling-repo authority.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `README.md`, `CHARTER.md`, `DESIGN.md`,
-`DESIGN.AGENTS.md`, and `docs/START_HERE.md` before broad docs changes.
+Read root `AGENTS.md`, `DESIGN.AGENTS.md`, and `docs/START_HERE.md` before
+broad docs changes.
 
 For root or docs-root placement, read `docs/ROOT_SURFACE_LAW.md`,
 `docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`, and
@@ -29,6 +29,7 @@ For validation lane topology or command authority, read
 `docs/validation/validator_inventory.json`.
 For test home topology, read `docs/testing/TEST_TOPOLOGY.md` and
 `docs/testing/test_inventory.json`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -45,20 +46,7 @@ For test home topology, read `docs/testing/TEST_TOPOLOGY.md` and
 
 ## Validation
 
-Run the narrowest relevant checks. Full lane command sequences live in
-`config/validation_lanes.json`; docs should point to lane IDs or focused owner
-checks instead of carrying copied release sequences. Common docs routes are the
-`source-fast` lane, the `generated` lane's relevant command group, and the
-focused checks named by the nearest docs or generated-surface `AGENTS.md`.
-
-For broad route, release, generated, or public-facing changes, use the
-`generated` or `release` lane named in
-[`COMMAND_AUTHORITY.md`](validation/COMMAND_AUTHORITY.md), plus the nearest
-owner `AGENTS.md` checks for the changed surface.
-
-```bash
-python scripts/ci_gate.py --mode source-fast
-```
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

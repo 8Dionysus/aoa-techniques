@@ -19,7 +19,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/checkpoint/AGENTS.md`
 4. `mechanics/checkpoint/PARTS.md`
-5. the touched part README, schema, example, script, report, or test
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -38,12 +38,7 @@ Read:
 
 ## Validation
 
-Use the package and root tests after part changes:
-
-```bash
-python -m unittest discover -s mechanics/checkpoint/tests
-python scripts/validate_repo.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

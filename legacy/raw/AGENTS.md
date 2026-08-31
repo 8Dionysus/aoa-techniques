@@ -18,13 +18,12 @@ archive.
 Read:
 
 1. `../AGENTS.md`
-2. `../README.md`
-3. `../INDEX.md`
-4. `README.md`
-5. the active route or owner route the raw packet pressures
+2. `../INDEX.md`
+3. the active route or owner route the raw packet pressures
 
 If the packet came from a technique-tree move, also read
 `../../docs/TECHNIQUE_TREE_CONTRACT.md`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -41,12 +40,7 @@ If the packet came from a technique-tree move, also read
 
 ## Validation
 
-Run:
-
-```bash
-python -m unittest tests.test_root_legacy_topology
-python scripts/validate_repo.py
-```
+Select the narrowest owner route: `source-fast` for the local owner; add `generated` for derived indexes and `advisory` only for non-blocking boundaries. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

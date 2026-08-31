@@ -32,9 +32,9 @@ Read:
 4. `mechanics/AGENTS.md`
 5. `mechanics/distillation/AGENTS.md`
 6. `mechanics/distillation/PARTS.md`
-7. this part README
-8. the nearest local `AGENTS.md` for `config/`, `data/`, `reports/`,
+7. the nearest local `AGENTS.md` for `config/`, `data/`, `reports/`,
    `reviews/`, or `scripts/` when touching that district
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -54,28 +54,7 @@ Read:
 
 ## Validation
 
-For review-only or README contour changes, run:
-
-```bash
-python -m unittest discover -s mechanics/distillation/tests
-python scripts/validate_repo.py
-```
-
-For generated report, tree, topology, capsule, catalog, or public reader
-changes, also run the owning builder or the release gate:
-
-```bash
-python scripts/release_check.py
-```
-
-For AGENTS coverage or route-card changes under this part, also run:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
+Select the narrowest owner route: `mechanics/part-local` for part-local work; add `source-fast` for authored routes or `generated` for projections. See [VALIDATION.md](../../../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

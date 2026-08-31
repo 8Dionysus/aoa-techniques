@@ -26,6 +26,7 @@ and the source doc or generated surface that consumes the changed config.
 
 For `config/agents_mesh.json`, also read
 `docs/guardrails/AGENTS_MESH_PROTOCOL.md`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -37,18 +38,7 @@ For `config/agents_mesh.json`, also read
 
 ## Validation
 
-When config changes generated surfaces, rebuild the affected catalogs and
-inspect the diff for meaning drift.
-
-Full lane command sequences live in `config/validation_lanes.json`; this local
-card may name focused checks and lane entrypoints only. Common checks:
-
-```bash
-python scripts/ci_gate.py --mode source-fast
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_source_contracts.py
-```
+Select the narrowest owner route: `source-fast` for authored or route-card work; add `generated` for projections and `release` only for release posture. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

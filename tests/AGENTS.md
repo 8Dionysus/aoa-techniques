@@ -23,6 +23,7 @@ the builder or validator being exercised.
 For adding, deleting, moving, or changing a test home, also read
 `docs/testing/TEST_TOPOLOGY.md` and update
 `docs/testing/test_inventory.json`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -36,25 +37,7 @@ For adding, deleting, moving, or changing a test home, also read
 
 ## Validation
 
-Full lane command sequences live in `config/validation_lanes.json`; tests may
-guard lane authority, but they should not become a second command store. Verify
-with the focused test first, then the relevant lane:
-
-```bash
-python -m unittest tests.test_test_topology
-python -m unittest tests.test_validator_module_topology
-python scripts/ci_gate.py --mode source-fast
-python scripts/run_tests.py
-python scripts/validate_semantic_agents.py
-```
-
-When tests cover AGENTS mesh behavior, also run:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/validate_agents_mesh_index.py
-```
+Select the narrowest owner route: `source-fast` for focused source/validator work; add `generated` for projections. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

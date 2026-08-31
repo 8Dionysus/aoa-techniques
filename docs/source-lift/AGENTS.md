@@ -17,12 +17,11 @@ truth.
 ## Read before editing
 
 Read root `AGENTS.md`, `docs/AGENTS.md`, `docs/ROOT_SURFACE_LAW.md`,
-`docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md`, and
-`docs/source-lift/README.md`.
+`docs/guardrails/THEMATIC_DISTRICT_PROTOCOL.md` before changing source-lift
+contracts.
 
 For generated reader output, also read `docs/readers/AGENTS.md` and the
-matching `docs/readers/source-lift/README.md`, `docs/readers/repo/README.md`,
-or `docs/readers/review/README.md`.
+matching reader guide for the family being moved or regenerated.
 
 ## Boundaries
 
@@ -38,29 +37,7 @@ or `docs/readers/review/README.md`.
 
 ## Validation
 
-Choose the matching narrow builder for the changed family first:
-
-```bash
-python scripts/build_section_manifest.py
-python scripts/build_checklist_manifest.py
-python scripts/build_example_manifest.py
-python scripts/build_evidence_note_manifest.py
-python scripts/build_repo_doc_surface_manifest.py
-python scripts/build_kag_export.py
-```
-
-Then run:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
-For broad source-lift topology changes, run:
-
-```bash
-python scripts/release_check.py
-```
+Select the narrowest owner route: `source-fast` for source routes; add `generated` for declared projections. See [VALIDATION.md](../../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 
