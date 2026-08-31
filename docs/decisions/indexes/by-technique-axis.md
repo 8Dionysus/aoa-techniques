@@ -111,6 +111,7 @@
 - [AOA-TECH-D-0057 Spark Registry-Backed Technique Lane](../AOA-TECH-D-0057-spark-registry-backed-technique-lane.md) (`docs/decisions/AOA-TECH-D-0057-spark-registry-backed-technique-lane.md`)
 - [AOA-TECH-D-0059 Agent Neighbor Doc Command Ownership](../AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md) (`docs/decisions/AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md`)
 - [AOA-TECH-D-0060 AGENTS Mesh Canonical Closure](../AOA-TECH-D-0060-agents-mesh-canonical-closure.md) (`docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md`)
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
 
 ## github landing
 
@@ -120,6 +121,10 @@
 ## decision index
 
 - [AOA-TECH-D-0065 Canonical Decision IDs And Indexes](../AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md) (`docs/decisions/AOA-TECH-D-0065-canonical-decision-ids-and-indexes.md`)
+
+## command authority
+
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
 
 ## consumer boundary
 
@@ -152,6 +157,10 @@
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
 - [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 - [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
+
+## public practice canon
+
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
 
 ## validation
 

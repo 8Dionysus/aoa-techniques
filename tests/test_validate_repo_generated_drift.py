@@ -544,7 +544,7 @@ class ValidateRepoGeneratedDriftTests(unittest.TestCase):
             list(validate_repo.REPO_DOC_SURFACE_GROUP_ORDER),
             [group["group"] for group in actual_full["surface_groups"]],
         )
-        self.assertEqual(20, len(actual_full["docs"]))
+        self.assertEqual(21, len(actual_full["docs"]))
         docs_by_id = {doc["doc_id"]: doc for doc in actual_full["docs"]}
         self.assertEqual("entrypoint/map", docs_by_id["ecosystem_context"]["surface_group"])
         self.assertEqual("canon/authority", docs_by_id["charter"]["surface_group"])
@@ -600,7 +600,7 @@ class ValidateRepoGeneratedDriftTests(unittest.TestCase):
         self.assertIn("START_HERE.md", releasing)
         self.assertIn("REPO_DOC_SURFACES.md", docs_readme)
         self.assertIn("repo_doc_surface_manifest.json", docs_readme)
-        self.assertIn("20 authoritative public route/canon/status files", docs_readme)
+        self.assertIn("21 authoritative public route/canon/status files", docs_readme)
         self.assertIn("REPO_DOC_SURFACE_LIFT_GUIDE.md", docs_readme)
         self.assertIn("review packet route", docs_readme)
         self.assertIn("Distillation Review Packet Atlas", review_readme)

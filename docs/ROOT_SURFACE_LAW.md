@@ -54,7 +54,7 @@ evidence trail.
 | Corpus map and direction | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md), [ROADMAP](../ROADMAP.md), [QUESTBOOK](../QUESTBOOK.md) | do not become generated manifests, audit ledgers, or changelog copies |
 | Public governance and legal | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [SECURITY](../SECURITY.md), [LICENSE](../LICENSE) | do not become technique doctrine catalogs |
 | Release history | [CHANGELOG](../CHANGELOG.md) | record release history, not future direction |
-| Agent lane | [AGENTS](../AGENTS.md), [.agents](../.agents/), [agents mesh config](../config/agents_mesh.json), [agents mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | route agents without replacing public docs or owner contracts |
+| Agent and validation entry | [AGENTS](../AGENTS.md), [VALIDATION](../VALIDATION.md), [.agents](../.agents/), [agents mesh config](../config/agents_mesh.json), [agents mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | keep inherited semantic routes separate from on-demand procedure; neither replaces public docs or owner contracts |
 | Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [evals](../evals/), [examples](../examples/), [generated](../generated/), [kag](../kag/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [stats](../stats/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
 | Development requirements | [.gitignore](../.gitignore), [requirements-dev.txt](../requirements-dev.txt) | stay technical and small |
 
@@ -106,6 +106,7 @@ compact, route it to the owner surface that can carry the detail.
 | Local stats port | [stats](../stats/) carries owner-defined technique-canon questions, measurement contracts, and public reference packets; cross-owner grammar and aggregation remain with `aoa-stats`. |
 | Root data | Empty root `data/` is retired until a concrete repo-wide data contract justifies it. |
 | Spark lane | The previous root Spark surface lives under [.agents/spark](../.agents/spark/) as an agent-lane packet, not a standalone public root district. |
+| Validation entry | [VALIDATION](../VALIDATION.md) stays root as the on-demand human map; blocking command order remains in `config/validation_lanes.json`, focused procedure remains with its owner, and README stays human/public. |
 
 ## Final Rule
 

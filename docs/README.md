@@ -23,7 +23,7 @@ For the shortest repo overview, read:
 For design shape, add [DESIGN](../DESIGN.md) and [DESIGN.AGENTS](../DESIGN.AGENTS.md).
 For the compact repo-doc reader, open [REPO_DOC_SURFACES](readers/repo/REPO_DOC_SURFACES.md):
 its [repo_doc_surface_manifest.json](../generated/repo_doc_surface_manifest.json)
-lifts the 20 authoritative public route/canon/status files into routing knowledge only.
+lifts the 21 authoritative public route/canon/status files into routing knowledge only.
 
 ## Root Docs
 
@@ -39,6 +39,7 @@ lifts the 20 authoritative public route/canon/status files into routing knowledg
 | [TECHNIQUE_TOPOLOGY_CONTRACT](TECHNIQUE_TOPOLOGY_CONTRACT.md) | faceted classification |
 | [TECHNIQUE_TREE_CONTRACT](TECHNIQUE_TREE_CONTRACT.md) | authored corpus path architecture |
 | [RELEASING](RELEASING.md) | release-prep route |
+| [Root VALIDATION](../VALIDATION.md) | on-demand validation and landing evidence map |
 
 ## Districts
 

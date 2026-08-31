@@ -124,3 +124,7 @@
 ## 2026-08-24
 
 - [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
+
+## 2026-08-31
+
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)

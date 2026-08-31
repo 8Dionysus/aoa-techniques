@@ -953,7 +953,7 @@ relations:
         surfaces = validate_repo.parse_repo_doc_surfaces(REPO_ROOT)
         source_paths = {surface.doc_path for surface in surfaces}
 
-        self.assertEqual(20, len(surfaces))
+        self.assertEqual(21, len(surfaces))
         self.assertEqual(
             {spec["doc_path"] for spec in validate_repo.REPO_DOC_SURFACE_SPECS},
             source_paths,
@@ -977,6 +977,7 @@ relations:
                 "CHARTER.md",
                 "DESIGN.md",
                 "DESIGN.AGENTS.md",
+                "VALIDATION.md",
                 "ROADMAP.md",
                 "QUESTBOOK.md",
                 "docs/ROOT_SURFACE_LAW.md",
@@ -1196,7 +1197,7 @@ relations:
             "1. [README](../README.md)\n2. [Charter](../CHARTER.md)\n3. [Start Here](START_HERE.md)\n4. [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md)\n5. [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md)",
             docs_readme,
         )
-        self.assertIn("20 authoritative public route/canon/status files", docs_readme)
+        self.assertIn("21 authoritative public route/canon/status files", docs_readme)
         self.assertIn("one family guide such as", docs_readme)
         self.assertIn("one reader or manifest such as", docs_readme)
         self.assertIn(

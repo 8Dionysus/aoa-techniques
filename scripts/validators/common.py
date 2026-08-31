@@ -531,6 +531,11 @@ REPO_DOC_NAVIGATION_SPECS = (
         "note": "Use DESIGN for practice-canon system form, DESIGN.AGENTS for the agent-facing mesh form, AGENTS for operational route law, and Root Surface Law for placement.",
     },
     {
+        "question": "Where do agent-selected validation and landing procedures live?",
+        "doc_ids": ("validation", "docs_releasing", "agents"),
+        "note": "Use VALIDATION after the touched surface is known, RELEASING for GitHub landing and publication procedure, and AGENTS only for semantic route law and fail-closed boundaries.",
+    },
+    {
         "question": "Where do root and docs-root placement rules live?",
         "doc_ids": ("root_surface_law", "charter", "docs_readme"),
         "note": "Use Root Surface Law before adding or moving root or docs-root surfaces, with the Charter and docs map as supporting route context.",
@@ -585,6 +590,12 @@ REPO_DOC_SURFACE_SPECS = (
         "doc_path": "DESIGN.AGENTS.md",
         "surface_group": "canon/authority",
         "bounded_role": "root agent-surface design form for the AGENTS mesh and portable agent guidance",
+    },
+    {
+        "doc_id": "validation",
+        "doc_path": "VALIDATION.md",
+        "surface_group": "entrypoint/map",
+        "bounded_role": "on-demand human map from selected surface and evidence class to machine-owned lanes, focused owners, and landing procedure",
     },
     {
         "doc_id": "start_here",

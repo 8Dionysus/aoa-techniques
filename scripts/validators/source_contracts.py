@@ -1768,8 +1768,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 20:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 20 authoritative public route/canon/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 21:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 21 authoritative public route/canon/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 
