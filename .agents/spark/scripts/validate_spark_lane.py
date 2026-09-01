@@ -315,10 +315,22 @@ def validate(root: Path) -> list[str]:
         for required in (
             "done-or-handoff",
             ".agents/spark/registry.json",
-            "python .agents/spark/scripts/validate_spark_lane.py",
+            "VALIDATION.md",
         ):
             if required not in agents_text:
                 problems.append(f".agents/spark/AGENTS.md does not mention {required}")
+
+    validation = root / "VALIDATION.md"
+    if not validation.is_file():
+        problems.append("missing root VALIDATION.md for the Spark on-demand route")
+    else:
+        validation_text = validation.read_text(encoding="utf-8")
+        for required in (
+            "python .agents/spark/scripts/validate_spark_lane.py",
+            "python -m unittest discover -s .agents/spark/tests -p 'test*.py'",
+        ):
+            if required not in validation_text:
+                problems.append(f"VALIDATION.md Spark route does not mention {required}")
 
     swarm = root / ".agents/spark/SWARM.md"
     if swarm.exists() and ".agents/spark/registry.json" not in swarm.read_text(encoding="utf-8"):

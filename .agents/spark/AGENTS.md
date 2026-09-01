@@ -58,7 +58,10 @@ multi-hour architecture synthesis or canon promotion.
 
 ## Validation
 
-Inherit parent validation: source-fast/generated; see [VALIDATION.md](../../VALIDATION.md) and config/validation_lanes.json.
+For changes to this lane, run the **Spark agent lane** route in
+[VALIDATION.md](../../VALIDATION.md). Add parent `source-fast` when AGENTS shape
+or mesh meaning moves and `generated` when a mesh projection moves; exact lane
+order remains in `config/validation_lanes.json`.
 
 ## Closeout
 

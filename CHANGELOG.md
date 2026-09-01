@@ -6,6 +6,15 @@ The format is intentionally simple and human-first.
 
 ## [Unreleased]
 
+### Prompt-light agent routes and on-demand validation
+
+- README loading is now conditional in inherited AGENTS cards, while public
+  entrypoint meaning remains in README and executable procedures move to the
+  repository `VALIDATION.md` map
+- the root test and Spark cards now route to explicit on-demand procedures that
+  execute the changed test surface and the Spark validator/test home; existing
+  blocking lane membership and source/generated boundaries remain unchanged
+
 ### Artifact subject-store rehearsal isolation
 
 - the Techniques KAG artifact validator now binds every rehearsal lookup to its

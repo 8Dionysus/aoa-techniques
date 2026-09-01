@@ -37,7 +37,12 @@ Read `README.md` only when the selected task needs its human map; do not preload
 
 ## Validation
 
-Select the narrowest owner route: `source-fast` for focused source/validator work; add `generated` for projections. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
+First run the changed test's `focused_target` from
+`docs/testing/test_inventory.json`, then use the **Root test surface** route in
+[VALIDATION.md](../VALIDATION.md) so the changed root test is included. Add
+`source-fast` for source or validator work and `generated` for projections;
+exact lane order remains in `config/validation_lanes.json`. Report checks,
+skips, and blockers.
 
 ## Closeout
 
