@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           repository: 8Dionysus/aoa-kag
-          ref: f46f146cc79a26fa81ad0f400b9c5774df293e57
+          ref: 14ee1e33e43749d23c557b3ef526eca7edb36196
           path: .deps/aoa-kag
 
       - name: Checkout aoa-stats protocol validator
