@@ -128,3 +128,7 @@
 ## 2026-08-31
 
 - [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
+
+## 2026-09-04
+
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)

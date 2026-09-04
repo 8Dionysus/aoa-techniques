@@ -23,20 +23,6 @@
   ],
   "script_surfaces": [
     {
-      "path": ".agents/spark/scripts/validate_spark_lane.py",
-      "family": "agent_lane_validator",
-      "organ_lane": "release/nightly",
-      "owner_surface": ".agents/spark/AGENTS.md",
-      "source_truth": [".agents/spark/registry.json", ".agents/spark/scenarios/"],
-      "reads": [".agents/spark registry, scenarios, templates, result packets, and handoff packets"],
-      "writes": [],
-      "side_effects": "validation output only",
-      "validation_lane": "release",
-      "ci_inclusion": "direct release_check command; Spark tests run in release_check",
-      "test_target": ".agents/spark/tests/test_spark_lane.py",
-      "disposition": "keep"
-    },
-    {
       "path": "mechanics/agon/parts/epistemic-technique-candidates/scripts/build_agon_epistemic_technique_candidates.py",
       "family": "part_local_builder",
       "organ_lane": "mechanics/part-local",
@@ -593,7 +579,7 @@
       "side_effects": "runs unittest subprocess discovery homes",
       "validation_lane": "release",
       "ci_inclusion": "release_check command sequence",
-      "test_target": "tests/test_test_topology.py",
+      "test_target": "tests/test_script_topology.py",
       "disposition": "keep"
     },
     {

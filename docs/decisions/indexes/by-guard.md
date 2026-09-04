@@ -21,6 +21,7 @@
 - [AOA-TECH-D-0040 Root Legacy Provenance District](../AOA-TECH-D-0040-root-legacy-provenance-district.md) (`docs/decisions/AOA-TECH-D-0040-root-legacy-provenance-district.md`)
 - [AOA-TECH-D-0052 Root Data Retirement](../AOA-TECH-D-0052-root-data-retirement.md) (`docs/decisions/AOA-TECH-D-0052-root-data-retirement.md`)
 - [AOA-TECH-D-0053 Root Markdown Surface Slimming](../AOA-TECH-D-0053-root-md-surface-slimming.md) (`docs/decisions/AOA-TECH-D-0053-root-md-surface-slimming.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## technique atom
 
@@ -84,6 +85,7 @@
 - [AOA-TECH-D-0049 Mechanic Test Homes](../AOA-TECH-D-0049-mechanic-test-homes.md) (`docs/decisions/AOA-TECH-D-0049-mechanic-test-homes.md`)
 - [AOA-TECH-D-0050 Recurrence Manifest Part Home](../AOA-TECH-D-0050-recurrence-manifest-part-home.md) (`docs/decisions/AOA-TECH-D-0050-recurrence-manifest-part-home.md`)
 - [AOA-TECH-D-0062 Closed Incoming Packets Distillation Legacy](../AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md) (`docs/decisions/AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## part-local artifact
 
@@ -129,6 +131,7 @@
 - [AOA-TECH-D-0059 Agent Neighbor Doc Command Ownership](../AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md) (`docs/decisions/AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md`)
 - [AOA-TECH-D-0060 AGENTS Mesh Canonical Closure](../AOA-TECH-D-0060-agents-mesh-canonical-closure.md) (`docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md`)
 - [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## release/tooling
 
@@ -213,6 +216,10 @@
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
 - [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 - [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
+
+## roadmap parity
+
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## script topology
 

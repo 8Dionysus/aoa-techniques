@@ -16,7 +16,7 @@ Date: 2026-05-15
 ## Context
 
 `aoa-techniques` had moved the old root `Spark/` lane under
-[.agents/spark](../../.agents/spark/), but the local lane still contained only
+[.agents/spark](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/), but the local lane still contained only
 an operating card and a swarm recipe. That was enough to remove root clutter,
 but not enough for repeated Codex Spark use.
 
@@ -44,14 +44,14 @@ Build `.agents/spark/` as a registry-backed Codex Spark lane for
 
 The lane now owns:
 
-- [README](../../.agents/spark/README.md)
-- [registry](../../.agents/spark/registry.json)
+- [README](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/README.md)
+- [registry](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/registry.json)
 - scenario packets under `../../.agents/spark/scenarios/`
 - result and handoff homes under `../../.agents/spark/results/` and
   `../../.agents/spark/handoffs/`
 - schemas under `../../.agents/spark/schemas/`
-- [Spark lane validator](../../.agents/spark/scripts/validate_spark_lane.py)
-- [Spark lane tests](../../.agents/spark/tests/test_spark_lane.py)
+- [Spark lane validator](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/scripts/validate_spark_lane.py)
+- [Spark lane tests](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/tests/test_spark_lane.py)
 
 The registered scenarios are technique-canon specific:
 
@@ -93,12 +93,12 @@ do not belong to the technique canon.
 ## Source surfaces
 
 - [.agents AGENTS](../../.agents/AGENTS.md)
-- [Spark AGENTS](../../.agents/spark/AGENTS.md)
-- [Spark notebook](../../.agents/spark/SPARK_EXTRAPOLATION_NOTEBOOK.md)
-- [Spark README](../../.agents/spark/README.md)
-- [Spark registry](../../.agents/spark/registry.json)
-- [Spark validator](../../.agents/spark/scripts/validate_spark_lane.py)
-- [Spark tests](../../.agents/spark/tests/test_spark_lane.py)
+- [Spark AGENTS](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/AGENTS.md)
+- [Spark notebook](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/SPARK_EXTRAPOLATION_NOTEBOOK.md)
+- [Spark README](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/README.md)
+- [Spark registry](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/registry.json)
+- [Spark validator](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/scripts/validate_spark_lane.py)
+- [Spark tests](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/.agents/spark/tests/test_spark_lane.py)
 - [Release check](../../scripts/release_check.py)
 - [DESIGN.AGENTS](../../DESIGN.AGENTS.md)
 - [ROOT_SURFACE_LAW](../ROOT_SURFACE_LAW.md)

@@ -9,6 +9,7 @@
 - [AOA-TECH-D-0040 Root Legacy Provenance District](../AOA-TECH-D-0040-root-legacy-provenance-district.md) (`docs/decisions/AOA-TECH-D-0040-root-legacy-provenance-district.md`)
 - [AOA-TECH-D-0052 Root Data Retirement](../AOA-TECH-D-0052-root-data-retirement.md) (`docs/decisions/AOA-TECH-D-0052-root-data-retirement.md`)
 - [AOA-TECH-D-0053 Root Markdown Surface Slimming](../AOA-TECH-D-0053-root-md-surface-slimming.md) (`docs/decisions/AOA-TECH-D-0053-root-md-surface-slimming.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## docs route
 
@@ -141,6 +142,7 @@
 - [AOA-TECH-D-0025 Mechanics Legacy Scaffold Bridge](../AOA-TECH-D-0025-mechanics-legacy-scaffold-bridge.md) (`docs/decisions/AOA-TECH-D-0025-mechanics-legacy-scaffold-bridge.md`)
 - [AOA-TECH-D-0040 Root Legacy Provenance District](../AOA-TECH-D-0040-root-legacy-provenance-district.md) (`docs/decisions/AOA-TECH-D-0040-root-legacy-provenance-district.md`)
 - [AOA-TECH-D-0062 Closed Incoming Packets Distillation Legacy](../AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md) (`docs/decisions/AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## release/GitHub
 
@@ -158,6 +160,7 @@
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 - [AOA-TECH-D-0067 Validator Owner Modules](../AOA-TECH-D-0067-validator-owner-modules.md) (`docs/decisions/AOA-TECH-D-0067-validator-owner-modules.md`)
 - [AOA-TECH-D-0068 Script Surface Inventory](../AOA-TECH-D-0068-script-surface-inventory.md) (`docs/decisions/AOA-TECH-D-0068-script-surface-inventory.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## quest/lane
 
@@ -175,6 +178,10 @@
 ## GitHub workflow
 
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
+
+## agent mesh
+
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## artifact evidence
 

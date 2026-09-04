@@ -353,20 +353,13 @@ class ValidationCommandAuthorityTests(unittest.TestCase):
                 with self.subTest(surface=relative_path, marker=marker):
                     self.assertNotIn(marker, text)
 
-    def test_on_demand_routes_execute_root_tests_and_spark_lane(self) -> None:
+    def test_on_demand_routes_execute_root_tests(self) -> None:
         validation = (REPO_ROOT / "VALIDATION.md").read_text(encoding="utf-8")
         tests_card = (REPO_ROOT / "tests" / "AGENTS.md").read_text(encoding="utf-8")
-        spark_card = (REPO_ROOT / ".agents" / "spark" / "AGENTS.md").read_text(
-            encoding="utf-8"
-        )
 
         self.assertIn("### Root test surface", validation)
         self.assertIn("python scripts/run_tests.py", validation)
-        self.assertIn("### Spark agent lane", validation)
-        self.assertIn("python .agents/spark/scripts/validate_spark_lane.py", validation)
-        self.assertIn(".agents/spark/tests", validation)
         self.assertIn("Root test surface", tests_card)
-        self.assertIn("Spark agent lane", spark_card)
 
     def test_active_decision_guidance_uses_lanes_not_command_runbooks(self) -> None:
         active_decision_guidance = (

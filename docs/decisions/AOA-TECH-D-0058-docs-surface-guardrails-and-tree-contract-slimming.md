@@ -22,7 +22,7 @@ The `docs/` root had become legible only after already knowing the repository.
 with a full historical migration ledger.
 
 The repository already has better owner homes for the dense material:
-[decisions](./) for rationale, [legacy](../../legacy/) for public-safe
+[decisions](./) for rationale, [legacy](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/) for public-safe
 repo-wide receipts, [mechanics](../../mechanics/) for operating evidence, and
 [generated](../../generated/) for reproducible JSON companions. The missing
 piece was a docs-local topology rule that makes flat `docs/*.md` surfaces prove
@@ -60,7 +60,7 @@ Adopt option 3.
   back to route surfaces.
 - Keep [Technique Tree Contract](../TECHNIQUE_TREE_CONTRACT.md) as current path
   law and route historical wave detail to the [Final Tree Migration Ledger](../../mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md),
-  [Root Legacy Index](../../legacy/INDEX.md), and [legacy receipts](../../legacy/receipts/).
+  [Root Legacy Index](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md), and [legacy receipts](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/).
 
 ## Rationale
 
@@ -102,7 +102,7 @@ readers and small agents.
   so chooser, kind, handoff, and capsule guidance now has one district route
   instead of four flat docs-root siblings.
 - `AGENTS_ROOT_REFERENCE.md` was archived under
-  [legacy/archive](../../legacy/archive/AGENTS_ROOT_REFERENCE.md) after the
+  [legacy/archive](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/archive/AGENTS_ROOT_REFERENCE.md) after the
   root card stopped using it as current route law.
 - The old root `WALKTHROUGH.md` moved into
   [examples](../../examples/README.md), because the walkthrough is a worked
@@ -134,8 +134,8 @@ readers and small agents.
 - [Link And Shape Hygiene Protocol](../guardrails/LINK_AND_SHAPE_HYGIENE_PROTOCOL.md)
 - [Hygiene Guardrail Index](../guardrails/HYGIENE_GUARDRAIL_INDEX.md)
 - [Final Tree Migration Ledger](../../mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)
-- [Root Legacy Index](../../legacy/INDEX.md)
-- [Archived AGENTS Root Reference](../../legacy/archive/AGENTS_ROOT_REFERENCE.md)
+- [Root Legacy Index](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Archived AGENTS Root Reference](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/archive/AGENTS_ROOT_REFERENCE.md)
 - [Examples District](../../examples/README.md)
 - [Plan-Diff-Apply-Verify-Report Walkthrough](../../examples/plan-diff-apply-verify-report-walkthrough.md)
 - [Decisions District](./README.md)

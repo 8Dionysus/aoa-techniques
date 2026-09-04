@@ -59,19 +59,6 @@ python scripts/run_tests.py
 This runner covers root and mechanic-level unittest homes. It does not replace
 the `generated` lane when fixtures or projections changed.
 
-### Spark agent lane
-
-For `.agents/spark/` policy, registry, scenario, template, or release-wiring
-changes, run the lane-local validator and its focused test home:
-
-```bash
-python .agents/spark/scripts/validate_spark_lane.py
-python -m unittest discover -s .agents/spark/tests -p 'test*.py'
-```
-
-If the change also moves AGENTS shape or mesh meaning, add `source-fast`; if it
-moves a generated mesh projection, add `generated`.
-
 ## Generated and source boundary
 
 Change `TECHNIQUE.md`, authored docs, config, mechanic source packets, schemas,

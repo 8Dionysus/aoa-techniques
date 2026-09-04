@@ -48,7 +48,7 @@ Use [README](README.md) only when the task needs the public overview.
 | tree/topology change | [TECHNIQUE_TREE_CONTRACT](docs/TECHNIQUE_TREE_CONTRACT.md), then [TECHNIQUE_TOPOLOGY_CONTRACT](docs/TECHNIQUE_TOPOLOGY_CONTRACT.md) |
 | root-file placement | [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) |
 | agent-card form or mesh | [DESIGN.AGENTS](DESIGN.AGENTS.md), then the nearest card |
-| repo-wide legacy provenance | only when legacy evidence matters, [Root Legacy](legacy/README.md), then [Legacy Index](legacy/INDEX.md) |
+| repo-wide historical provenance | only when historical evidence matters, [retirement decision](docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) |
 | direction or future trigger | [ROADMAP](ROADMAP.md) |
 | mechanic package or part | nearest `mechanics/**/AGENTS.md`; only when an atlas is needed, [Mechanics](mechanics/README.md) |
 | generated parity | authored source, builder, generated output, then validator |

@@ -122,15 +122,6 @@
           "failure_route": "Fix roadmap/current direction source or generated promotion readiness before changing route claims."
         },
         {
-          "path": "tests/test_root_legacy_topology.py",
-          "family": "docs/root-surface",
-          "protects": "Root legacy scaffold boundaries and active/generated surface exclusion.",
-          "owner_surface": "legacy/",
-          "runtime_cost": "fast",
-          "focused_target": "tests/test_root_legacy_topology.py",
-          "failure_route": "Fix legacy route evidence or root topology before moving active surfaces."
-        },
-        {
           "path": "tests/test_technique_intelligence.py",
           "family": "generated/read-model",
           "protects": "Technique Intelligence registry, DAG projection, schema, and query behavior.",
@@ -196,11 +187,11 @@
         {
           "path": "tests/test_validate_repo_agents_mesh.py",
           "family": "AGENTS/mesh",
-          "protects": "Agent-lane placement under the AGENTS district and Spark lane route boundaries.",
-          "owner_surface": ".agents/spark/",
+          "protects": "Agent-lane placement under the authored AGENTS district and retired-lane exclusion.",
+          "owner_surface": "config/agents_mesh.json",
           "runtime_cost": "fast",
           "focused_target": "tests/test_validate_repo_agents_mesh.py",
-          "failure_route": "Fix Spark AGENTS district routing before changing agent-lane tests or generated mesh expectations."
+          "failure_route": "Fix authored mesh source or mesh validator expectations before changing agent-lane tests."
         },
         {
           "path": "tests/test_validate_repo_public_hygiene.py",
@@ -255,24 +246,6 @@
           "runtime_cost": "fast",
           "focused_target": "tests/test_validator_module_topology.py",
           "failure_route": "Fix validator module split or inventory before changing repo validator ownership."
-        }
-      ]
-    },
-    {
-      "home": ".agents/spark/tests",
-      "home_scope": "agent-lane",
-      "coverage_authority": "validation_lanes.release_check",
-      "lane": "spark-agent",
-      "mode": "release-only",
-      "files": [
-        {
-          "path": ".agents/spark/tests/test_spark_lane.py",
-          "family": "agent-lane/spark",
-          "protects": "Spark lane registry, scenario coverage, prompt done/handoff shape, and release wiring.",
-          "owner_surface": ".agents/spark/",
-          "runtime_cost": "fast",
-          "focused_target": ".agents/spark/tests",
-          "failure_route": "Fix .agents/spark registry, scenarios, templates, or lane validator before changing release posture."
         }
       ]
     },

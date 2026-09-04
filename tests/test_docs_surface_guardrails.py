@@ -137,7 +137,7 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("legacy/receipts/", tree_contract)
+        self.assertIn("docs/decisions/", tree_contract)
         self.assertIn("final-tree-migration-ledger.md", tree_contract)
         self.assertNotIn("The first pilot migration moves", tree_contract)
         self.assertNotIn("The twenty-eighth pilot migration moves", tree_contract)

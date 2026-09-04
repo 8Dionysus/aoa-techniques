@@ -62,7 +62,7 @@ class RoadmapParityTestCase(unittest.TestCase):
         self.assertIn("canonical bundles | `98`", roadmap)
         self.assertIn("promoted bundles | `9`", roadmap)
         self.assertIn("repo-level direction", roadmap)
-        self.assertIn("mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md", roadmap)
+        self.assertIn("AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md", roadmap)
         self.assertIn("does not own technique status by itself", roadmap)
         self.assertIn("Horizon: Corpus Topology", roadmap)
         self.assertIn("Horizon: Standalone Portability", roadmap)
@@ -83,40 +83,6 @@ class RoadmapParityTestCase(unittest.TestCase):
         for surface in CURRENT_RELEASE_SURFACES:
             with self.subTest(surface=surface):
                 self.assertTrue((REPO_ROOT / surface).is_file())
-
-    def test_root_roadmap_preserves_old_audit_detail_in_audit_legacy(self) -> None:
-        roadmap = (REPO_ROOT / "ROADMAP.md").read_text(encoding="utf-8")
-        legacy_roadmap = (
-            REPO_ROOT
-            / "mechanics"
-            / "audit"
-            / "legacy"
-            / "raw"
-            / "ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md"
-        ).read_text(encoding="utf-8")
-
-        for relative_path in (
-            "mechanics/agon/PARTS.md",
-            "mechanics/agon/PROVENANCE.md",
-            "mechanics/agon/LANDING_LOG.md",
-            "mechanics/agon/parts/move-technique-bridge/README.md",
-            "mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md",
-            "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
-            "mechanics/agon/parts/move-technique-bridge/config/agon_technique_binding_candidates.source.json",
-            "mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py",
-            "mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py",
-            "mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py",
-        ):
-            self.assertTrue((REPO_ROOT / relative_path).is_file())
-
-        self.assertIn("mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md", roadmap)
-        self.assertIn("move-technique-bridge", legacy_roadmap)
-        self.assertIn(
-            "mechanics/agon/parts/move-technique-bridge/generated/agon_technique_binding_candidates.min.json",
-            legacy_roadmap,
-        )
-        self.assertIn("requested_not_landed", legacy_roadmap)
-
 
 if __name__ == "__main__":
     unittest.main()

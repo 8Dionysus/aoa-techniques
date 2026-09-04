@@ -145,6 +145,10 @@
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
 - [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 
+## owner boundaries
+
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
+
 ## owner boundary
 
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
@@ -161,6 +165,14 @@
 ## public practice canon
 
 - [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
+
+## source history
+
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
+
+## tree placement
+
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## validation
 
