@@ -19,5 +19,5 @@ validator, and test lane.
 
 ## Provenance
 
-The Wave XV landing receipt is preserved at
-[`../../legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md`](../../legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md).
+The Wave XV landing receipt is preserved at the
+[historical immutable source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md).
