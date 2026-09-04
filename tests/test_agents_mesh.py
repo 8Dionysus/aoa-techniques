@@ -7,6 +7,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from scripts.agents_mesh_common import active_card_route_issues
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -95,6 +97,60 @@ class AgentsMeshTests(unittest.TestCase):
                 deps_root.rmdir()
 
         self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
+
+    def test_active_route_guard_rejects_executable_and_structural_residue(self) -> None:
+        card = """# AGENTS.md
+
+## Applies to
+this path
+
+## Role
+local owner
+
+## Read before editing
+Read `README.md` before every edit.
+
+## Boundaries
+- Do not widen ownership.
+
+## Validation
+Select `source-fast`; see VALIDATION.md and config/validation_lanes.json.
+```bash
+python scripts/validate_repo.py
+```
+
+## Closeout
+Report the route and remaining risk.
+"""
+        issues = active_card_route_issues(card)
+        self.assertTrue(any("executable fences" in issue for issue in issues))
+        self.assertTrue(any("runnable command" in issue for issue in issues))
+        self.assertTrue(any("unconditional README" in issue for issue in issues))
+
+    def test_active_route_guard_accepts_on_demand_route_card(self) -> None:
+        card = """# AGENTS.md
+
+## Applies to
+this path
+
+## Role
+local owner
+
+## Read before editing
+Read the nearest owner card. Read `README.md` only when the selected task
+needs its human map.
+
+## Boundaries
+- Do not widen ownership.
+
+## Validation
+Select the `source-fast` lane in VALIDATION.md; exact order is
+config/validation_lanes.json.
+
+## Closeout
+Report the route and remaining risk.
+"""
+        self.assertEqual([], active_card_route_issues(card))
 
 
 if __name__ == "__main__":

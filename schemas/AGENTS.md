@@ -22,6 +22,7 @@ same part's `examples/` directory.
 
 Read root `AGENTS.md`, `docs/START_HERE.md`, the consuming builder or
 validator, the paired examples, and any downstream consumer route.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -33,15 +34,7 @@ validator, the paired examples, and any downstream consumer route.
 
 ## Validation
 
-When a schema affects routing, KAG lift, or skill composition, re-check the
-downstream consumer surface and name the owner repo in the report.
-
-Verify with:
-
-```bash
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-```
+Select the narrowest owner route: `source-fast` for focused source/validator work; add `generated` for projections. See [VALIDATION.md](../VALIDATION.md); exact order is `config/validation_lanes.json`; focused procedure stays with the nearest owner. Report checks, skips, and blockers.
 
 ## Closeout
 

@@ -16,12 +16,13 @@ lane and state directory.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `QUESTBOOK.md`, `quests/README.md`, and
-`mechanics/questbook/README.md` before changing quest semantics.
+Read root `AGENTS.md`, `QUESTBOOK.md`, and `mechanics/questbook/AGENTS.md`
+before changing quest semantics.
 
-Use the nearest lane `AGENTS.md` for local command posture and the lane README
-for human-facing lane meaning. Generated quest files summarize source quest
+Use the nearest lane `AGENTS.md` for local route posture; consult its README
+only when human-facing lane meaning is relevant. Generated quest files summarize source quest
 files; they do not author quest meaning.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -33,13 +34,7 @@ files; they do not author quest meaning.
 
 ## Validation
 
-Run the narrowest relevant checks first. Usual checks for this district:
-
-```bash
-python scripts/build_questbook_projection.py --check
-python -m unittest tests.test_validate_repo_questbook_intelligence
-python scripts/ci_gate.py --mode source-fast
-```
+Inherit parent validation: source-fast/generated/advisory; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

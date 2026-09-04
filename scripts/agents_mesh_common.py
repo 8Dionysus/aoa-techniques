@@ -14,6 +14,82 @@ CONFIG_SCHEMA_VERSION = "aoa_techniques_agents_mesh_v1"
 SOURCE_OF_TRUTH = "agents-md-mesh-v1"
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 
+# Active route cards name a lane or owner; exact command batteries live in the
+# validation manifest. Keep these patterns deliberately code-shaped so normal
+# prose, paths, and DESIGN.AGENTS examples are not rejected.
+EXECUTABLE_LINE_RE = re.compile(
+    r"^\s*(?:\$\s*)?(?:python(?:3)?|pytest|git|gh|pip|uv|make|bash|sh|find|"
+    r"cargo|npm|node|ruff|mypy|jq|rg|curl|docker|podman|\./)\s+"
+)
+INLINE_COMMAND_RE = re.compile(
+    r"`(?:python(?:3)?|pytest|git|gh|pip|uv|make|bash|sh|find|cargo|npm|node|"
+    r"ruff|mypy|jq|rg|curl|docker|podman|\./)\s+"
+)
+README_ROUTE_EXCEPTION = "Read `README.md` only when the selected task needs its human map"
+LANE_TOKENS = ("source-fast", "generated", "mechanics/part-local", "release", "advisory", "nightly")
+
+
+def active_card_route_issues(text: str) -> list[str]:
+    """Return narrow D-0076 shape issues for an active AGENTS card."""
+    issues: list[str] = []
+    lines = text.splitlines()
+    in_fence = False
+    read_start: int | None = None
+    read_end = len(lines)
+    for index, line in enumerate(lines):
+        if line.strip().startswith("```"):
+            in_fence = not in_fence
+            issues.append(f"line {index + 1}: executable fences are not allowed")
+        if EXECUTABLE_LINE_RE.match(line):
+            issues.append(f"line {index + 1}: runnable command line is not allowed")
+        if INLINE_COMMAND_RE.search(line):
+            issues.append(f"line {index + 1}: inline runnable command is not allowed")
+        if in_fence:
+            continue
+        if line.strip() == "## Read before editing":
+            read_start = index + 1
+        elif read_start is not None and line.startswith("## "):
+            read_end = index
+            read_start = None
+    if in_fence:
+        issues.append("unterminated executable fence")
+
+    read_lines = lines[(read_start or 0):read_end] if read_start is not None else []
+    if not read_lines:
+        # Cards without a read section are reported by the canonical heading
+        # check; avoid duplicating that error here.
+        start = next((i for i, line in enumerate(lines) if line.strip() == "## Read before editing"), None)
+        if start is not None:
+            end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
+            read_lines = lines[start + 1:end]
+    for offset, line in enumerate(read_lines, 1):
+        context = " ".join(read_lines[offset - 1 : offset + 2])
+        if "README" in line and README_ROUTE_EXCEPTION not in context and "only when" not in context:
+            issues.append(f"Read before editing line {offset}: unconditional README inventory")
+
+    for index, line in enumerate(lines):
+        if line.rstrip().endswith(":"):
+            next_index = index + 1
+            while next_index < len(lines) and not lines[next_index].strip():
+                next_index += 1
+            if next_index == len(lines) or lines[next_index].startswith("#"):
+                issues.append(f"line {index + 1}: dangling colon lead-in")
+        if re.match(r"^\s*[-*]\s+", line) and line.rstrip().endswith(":"):
+            next_index = index + 1
+            while next_index < len(lines) and not lines[next_index].strip():
+                next_index += 1
+            if next_index < len(lines) and re.match(r"^\s*[-*]\s+", lines[next_index]):
+                issues.append(f"line {index + 1}: stacked same-level list lead-ins")
+
+    validation = section_body(text, "## Validation")
+    if not validation:
+        issues.append("Validation section is empty")
+    elif "VALIDATION.md" not in validation or "config/validation_lanes.json" not in validation:
+        issues.append("Validation section must route to VALIDATION.md and config/validation_lanes.json")
+    elif not any(token in validation for token in LANE_TOKENS):
+        issues.append("Validation section must name an applicable lane")
+    return issues
+
 
 class AgentsMeshError(RuntimeError):
     """Raised when the AGENTS mesh contract is invalid."""

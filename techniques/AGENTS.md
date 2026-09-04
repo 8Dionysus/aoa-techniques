@@ -15,16 +15,12 @@ optional support directories such as `checks/`, `examples/`, and `notes/`.
 
 ## Read before editing
 
-Before editing anything here, read in this order:
-
-1. `../AGENTS.md`
-2. `../README.md`
-3. `../TECHNIQUE_INDEX.md`
-4. `../docs/START_HERE.md`
-5. the relevant trunk or retained frontmatter-lane `AGENTS.md`
-6. the target `TECHNIQUE.md`
-7. any touched `checks/`, `examples/`, and `notes/`
-8. any generated surfaces affected by the change
+Use this shared order: root `AGENTS.md` -> `TECHNIQUE_INDEX.md` ->
+`docs/START_HERE.md` -> the relevant trunk or retained lane -> target
+`TECHNIQUE.md` -> touched support/generated surfaces. Read `README.md` only
+when the selected task needs its human map; do not preload unrelated maps.
+Trunk cards add their local role and shelves; retained lanes add migration and
+provenance context.
 
 ## Boundaries
 
@@ -45,21 +41,17 @@ philosophy, project-local folklore, or live runtime contracts that belong in
 
 ## Validation
 
-After changes, run the smallest checks that cover the touched surface. Common
-paths include:
-
-```bash
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-```
-
-Snippet contract: keep `python scripts/validate_repo.py` visible for nested
-AGENTS validation.
-
-Run `python scripts/release_check.py` when generated outputs changed.
+Inherit parent validation: source-fast/generated/release; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 
-Report technique IDs, trunk/shelf/slug paths, frontmatter changes, generated
-surfaces rebuilt or left untouched, checks run, checks skipped, and remaining
-owner-boundary risk.
+Report technique IDs; trunk, shelf, and slug paths; frontmatter changes;
+generated surfaces rebuilt or left untouched; checks run; checks skipped; and
+remaining owner-boundary risk. Trunk cards also report the trunk, shelf, and
+bundle paths changed; whether path, frontmatter, generated catalogs, or reader
+surfaces changed; checks run; checks skipped; and any remaining owner-route
+risk.
+
+Tree trunks inherit this placement contract: the tree is a route spine, not
+frontmatter truth; meaning stays in `TECHNIQUE.md`; `tree_path` is not added by
+path alone; and renames require a reviewed projection and bounded receipt.

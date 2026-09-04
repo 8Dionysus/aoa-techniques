@@ -15,9 +15,9 @@ candidates, receipts, exports, and local notes before reviewed landing in
 1. Root `AGENTS.md`
 2. `CHARTER.md`
 3. `DESIGN.md`
-4. This `README.md`
-5. `PORT.yaml`
-6. `aoa-memo` memory operation contracts when a candidate should move centrally
+4. `PORT.yaml`
+5. `aoa-memo` memory operation contracts when a candidate should move centrally
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -35,44 +35,17 @@ for review or handoff traces, `exports/` for packets meant for `aoa-memo`, and
 
 ## Candidate Route
 
-Create technique-layer candidates through the stack MCP helper:
-
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli create-candidate \
-  --repo aoa-techniques \
-  --evidence-ref README.md \
-  --claim "aoa-techniques memory should move through reviewed local candidates before aoa-memo landing."
-```
-
-Then validate the emitted candidate path:
-
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli validate-candidate path/to/candidate.json
-```
+Use the explicit `aoa-memo` candidate-intake owner with reviewed evidence refs; this card does not embed a launcher or infer a host checkout.
+Validate the emitted candidate through the owner contract before any export or landing decision.
 
 ## Reviewed Landing Route
 
-```bash
-AOA_ABYSS_STACK_ROOT="${AOA_ABYSS_STACK_ROOT:-$HOME/src/abyss-stack}"
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli pending-exports --repo aoa-techniques
-PYTHONPATH="$AOA_ABYSS_STACK_ROOT/mcp/services/aoa-memo-mcp/src" python -m aoa_memo_mcp.cli landing-plan --repo aoa-techniques --export-ref exports/path.reviewed-intake.json --run-dry-run
-```
-
-`landing-plan` is an access-plane check. Durable memory lands only in
-`aoa-memo` through reviewed intake, generated read models, validators, and
-review.
+After review, route exports to the `aoa-memo` owner for intake and landing review.
+A landing plan is an access-plane check; durable memory remains owner-reviewed and is not authored by this local port.
 
 ## Validation
 
-```bash
-: "${AOA_MEMO_ROOT:?Set AOA_MEMO_ROOT to your local aoa-memo checkout}"
-python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo
-python "$AOA_MEMO_ROOT/scripts/memory/build_local_memo_port_index.py" --path memo --check
-```
-
-For repo-wide release posture, use the root `AGENTS.md` validation route.
+Inherit parent validation: source-fast/generated/advisory; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

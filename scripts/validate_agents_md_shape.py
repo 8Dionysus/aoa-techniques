@@ -6,6 +6,7 @@ from pathlib import Path
 
 from agents_mesh_common import (
     AgentsMeshError,
+    active_card_route_issues,
     canonical_card_paths,
     headings_in_order,
     iter_agents_cards,
@@ -48,9 +49,9 @@ def validate(repo_root: Path) -> list[str]:
         if "Do not" not in boundary and "do not" not in boundary:
             issues.append(f"{rel_path}: Boundaries section must contain an explicit do-not rule")
 
-        validation = section_body(text, "## Validation")
-        if "python " not in validation and "pytest" not in validation:
-            issues.append(f"{rel_path}: Validation section must name an executable check")
+        issues.extend(
+            f"{rel_path}: {issue}" for issue in active_card_route_issues(text)
+        )
 
         closeout = section_body(text, "## Closeout")
         if len(closeout.split()) < 8:

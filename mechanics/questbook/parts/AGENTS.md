@@ -19,7 +19,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/questbook/AGENTS.md`
 4. `mechanics/questbook/PARTS.md`
-5. the touched part README, schema, example, script, report, or test
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -33,22 +33,11 @@ Read:
 - Promote into `techniques/` only when the reusable practice can stand as an
   atomic technique with validation.
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 
-Use the package and root tests after part changes:
-
-```bash
-python -m unittest discover -s mechanics/questbook/tests
-python scripts/validate_repo.py
-```
-
+Inherit [../../AGENTS.md](../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/questbook/parts/AGENTS.md`: bounded active part/promotion boundary.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/questbook/parts/AGENTS.md`: name the bounded active part and state whether promotion remains outside this package.

@@ -27,8 +27,7 @@ semantics, or runtime behavior.
 
 1. Repository root `AGENTS.md`
 2. `mechanics/AGENTS.md`
-3. `mechanics/audit/README.md`
-4. The nearest part README, or `PROVENANCE.md` when touching lineage
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -43,19 +42,7 @@ semantics, or runtime behavior.
 
 ## Validation
 
-For Audit topology changes:
-
-```bash
-python -m unittest discover -s mechanics/audit/tests
-```
-
-For repository-level safety after structure changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/audit/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
 Report which active parts changed, whether any legacy source was moved, which

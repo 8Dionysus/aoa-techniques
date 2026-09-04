@@ -15,9 +15,10 @@ reports, and source refs.
 
 ## Read before editing
 
-Read the root `AGENTS.md`, then this card, `README.md`, `PORT.yaml`, and the
-nearest intake, suites, or reports surface you will touch. For central proof
-adoption rules, read the local eval-port standard in `aoa-evals`.
+Read the root `AGENTS.md`, then this card, `PORT.yaml`, and the nearest intake,
+suites, or reports surface you will touch. For central proof adoption rules,
+read the local eval-port standard in `aoa-evals`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -30,12 +31,7 @@ adoption rules, read the local eval-port standard in `aoa-evals`.
 
 ## Validation
 
-```bash
-python scripts/release_check.py
-```
-
-Before landing, also run the central local eval-port validator from `aoa-evals`
-against this repository root.
+Inherit parent validation: source-fast/generated/release; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

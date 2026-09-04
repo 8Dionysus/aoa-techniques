@@ -34,6 +34,7 @@ For link, shape, or moved-path hygiene, also read:
 
 - `LINK_AND_SHAPE_HYGIENE_PROTOCOL.md`
 - `HYGIENE_GUARDRAIL_INDEX.md`
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -46,21 +47,7 @@ For link, shape, or moved-path hygiene, also read:
 
 ## Validation
 
-For AGENTS mesh changes, run:
-
-```bash
-python scripts/validate_agents_md_shape.py
-python scripts/validate_agents_mesh.py
-python scripts/build_agents_mesh_index.py --check
-python scripts/validate_agents_mesh_index.py
-```
-
-For broader route, generated, or public-facing changes, run:
-
-```bash
-python -m unittest tests.test_docs_surface_guardrails
-python scripts/release_check.py
-```
+Inherit parent validation: source-fast/generated/release; see [VALIDATION.md](../../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

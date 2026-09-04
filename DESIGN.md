@@ -160,6 +160,8 @@ technique canon.
 - private project residue disguised as reusable practice
 - topology labels that do not change selection quality
 - public promises without validation or owner evidence
+- executable procedure copied across inherited route cards after its owner is
+  already known
 
 ## Relationship to Other Root Surfaces
 
@@ -167,8 +169,10 @@ technique canon.
 [START_HERE](docs/START_HERE.md) routes. [TECHNIQUE_INDEX](TECHNIQUE_INDEX.md)
 maps the corpus. [ROOT_SURFACE_LAW](docs/ROOT_SURFACE_LAW.md) governs
 placement. [AGENTS](AGENTS.md) routes agents. [DESIGN.AGENTS](DESIGN.AGENTS.md)
-holds the design form of the agent-facing layer. `DESIGN.md` holds the system
-form of the practice canon.
+holds the design form of the agent-facing layer. [VALIDATION](VALIDATION.md)
+maps on-demand human procedure while `config/validation_lanes.json` owns
+blocking command sequences. `DESIGN.md` holds the system form of the practice
+canon.
 
 ## Use by Agents
 

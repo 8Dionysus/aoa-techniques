@@ -138,9 +138,9 @@ class KagSourceLiftTreePilotTestCase(unittest.TestCase):
             encoding="utf-8"
         )
 
-        self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
+        self.assertIn("shared placement applies", text)
         self.assertIn("kag-source-lift/", text)
-        self.assertIn("Do not add `tree_path` frontmatter", text)
+        self.assertIn("path placement follows the parent contract", text)
         self.assertIn("aoa-kag", text)
         self.assertIn("graph semantics", text.replace("\n", " "))
         self.assertIn("generated source-of-truth replacement", text)

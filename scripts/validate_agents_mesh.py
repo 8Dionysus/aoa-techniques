@@ -7,6 +7,7 @@ from pathlib import Path
 
 from agents_mesh_common import (
     AgentsMeshError,
+    active_card_route_issues,
     canonical_card_paths,
     iter_agents_cards,
     load_mesh_config,
@@ -69,6 +70,13 @@ def validate(repo_root: Path) -> list[str]:
     for rel_path in cards:
         if rel_path not in discovered:
             issues.append(f"{rel_path}: canonical AGENTS.md card is not discovered")
+            continue
+        path = repo_root / rel_path
+        issues.extend(
+            f"{rel_path}: {issue}" for issue in active_card_route_issues(
+                path.read_text(encoding="utf-8")
+            )
+        )
 
     migration_cards = sorted(discovered - set(cards))
     if migration_cards and not config.get("migration_allowed", False):

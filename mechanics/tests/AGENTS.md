@@ -17,8 +17,8 @@ only serve one part belong in `mechanics/<slug>/parts/<part>/tests/`.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `mechanics/AGENTS.md`, `mechanics/README.md`, and the
 package card or mechanics route contract under test.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -30,13 +30,7 @@ look smaller.
 
 ## Validation
 
-Verify with:
-
-```bash
-python -m unittest discover -s mechanics/tests
-python scripts/run_tests.py
-```
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/tests/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
 Report changed mechanics-wide tests, mechanic packages affected, validation

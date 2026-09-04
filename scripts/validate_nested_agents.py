@@ -25,7 +25,8 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`TECHNIQUE.md`",
             "`checks/`, `examples/`, and `notes/`",
             "Do not add bundle-local `AGENTS.md` by default",
-            "`python scripts/validate_repo.py`",
+            "VALIDATION.md",
+            "Tree trunks inherit this placement contract",
         ),
     ),
     AgentsDocSpec(
@@ -44,7 +45,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "continuity" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`review-compaction/`",
             "`handoff-continuation/`",
             "`donor-harvest/`",
@@ -56,7 +56,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "execution" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`ready-work-graphs/`",
             "`intent-chain/`",
             "`agent-workflows-core/`",
@@ -69,7 +68,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "governance" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`decision-routing/`",
             "`approval-evidence/`",
             "`automation-readiness/`",
@@ -83,7 +81,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "history" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`session-capture-as-repo-artifact`",
             "`versionable-session-transcripts`",
             "`witness-trace-as-reviewable-artifact`",
@@ -96,7 +93,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "ingest" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`media-ingest/`",
             "source material",
             "reviewable intermediate object",
@@ -107,7 +103,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "instruction" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`instruction-surface/`",
             "`docs-boundary/`",
             "`capability-registry/`",
@@ -121,7 +116,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "knowledge-lift" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`kag-source-lift/`",
             "authored source remains authoritative",
             "`aoa-kag` owner doctrine",
@@ -132,7 +126,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "proof" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`skill-support/`",
             "`evaluation-chain/`",
             "`published-summary/`",
@@ -151,7 +144,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "recovery" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`diagnosis-repair/`",
             "`antifragility-recovery/`",
             "validation-shaped leaves",
@@ -162,7 +154,6 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
         Path("techniques") / "tool-use" / "AGENTS.md",
         (
             "# AGENTS.md",
-            "This is a tree trunk, not a frontmatter domain",
             "`tool-gateway/`",
             "caller-facing surface",
             "metadata",
@@ -202,7 +193,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`generated/repo_doc_surface_manifest.json`",
             "`generated/kag_export.json`",
             "Do not hand-edit",
-            "`python scripts/build_catalog.py`",
+            "`generated`",
         ),
     ),
     AgentsDocSpec(
@@ -213,7 +204,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             "`ADAPTATION_NOTE.template.md`",
             "`PROMOTION_NOTE.template.md`",
             "Preserve placeholders",
-            "`python scripts/validate_nested_agents.py`",
+            "`source-fast`",
         ),
     ),
 )

@@ -17,7 +17,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/audit/AGENTS.md`
 4. `mechanics/audit/PROVENANCE.md`
-5. `mechanics/audit/legacy/README.md` or the touched raw/receipt surface when present
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -30,19 +30,11 @@ Read:
 - Update `INDEX.md` and `DISTILLATION_LOG.md` when a legacy source is moved or
   compacted.
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 
-```bash
-python -m unittest discover -s mechanics/audit/tests
-```
-
+Inherit [../../AGENTS.md](../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/audit/legacy/AGENTS.md`: lineage/raw-source boundaries.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/audit/legacy/AGENTS.md`: preserve lineage and state any active-source handoff left unchanged.

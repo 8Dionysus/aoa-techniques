@@ -95,7 +95,7 @@ class CapabilityBoundaryTreePilotTestCase(unittest.TestCase):
         )
         flat_text = re.sub(r"\s+", " ", text)
 
-        self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
+        self.assertIn("shared placement applies", text)
         self.assertIn("capability-boundary/", text)
         self.assertIn("skill-command boundaries", text)
         self.assertIn("primary source priority", flat_text)
@@ -105,7 +105,7 @@ class CapabilityBoundaryTreePilotTestCase(unittest.TestCase):
         self.assertIn("runtime law", text)
         self.assertIn("host inventory", text)
         self.assertIn("agent-role authority", text)
-        self.assertIn("Do not add `tree_path` frontmatter", text)
+        self.assertIn("path placement follows the parent contract", text)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (

@@ -17,7 +17,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/distillation/AGENTS.md`
 4. `mechanics/distillation/PROVENANCE.md`
-5. `mechanics/distillation/legacy/README.md` or the touched raw/receipt surface when present
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -31,12 +31,7 @@ Read:
 
 ## Validation
 
-```bash
-python -m unittest discover -s mechanics/distillation/tests
-```
-
+Inherit [../../AGENTS.md](../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/distillation/legacy/AGENTS.md`: lineage/raw-source boundaries.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/distillation/legacy/AGENTS.md`: preserve lineage and state any active-source handoff left unchanged.

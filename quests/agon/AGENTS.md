@@ -19,14 +19,12 @@ technique status.
 Read:
 
 1. `../AGENTS.md`
-2. `../README.md`
-3. `README.md`
-4. `../../QUESTBOOK.md`
-5. `../../mechanics/questbook/README.md`
-6. `../../mechanics/agon/AGENTS.md`
-7. the Agon part or candidate surface named by the quest
+2. `../../QUESTBOOK.md`
+3. `../../mechanics/agon/AGENTS.md`
+4. the Agon part or candidate surface named by the quest
 
 Markdown quest sources in this lane use `quest_markdown_contract_v1`.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -39,13 +37,7 @@ Markdown quest sources in this lane use `quest_markdown_contract_v1`.
 
 ## Validation
 
-Run the narrowest relevant checks first. Usual checks for this lane:
-
-```bash
-python scripts/build_questbook_projection.py --check
-python -m unittest tests.test_validate_repo_questbook_intelligence
-python scripts/ci_gate.py --mode source-fast
-```
+Inherit parent validation: source-fast/generated/advisory; see [VALIDATION.md](../../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

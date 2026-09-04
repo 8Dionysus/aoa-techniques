@@ -27,27 +27,15 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/recurrence/AGENTS.md`
 4. `mechanics/recurrence/PARTS.md`
-5. the touched part README, schema, example, script, report, or test
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../../../../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 
-Verify with:
-
-```bash
-python -m unittest discover -s mechanics/recurrence/tests -p 'test_publish_live_receipts.py'
-python -m unittest discover -s mechanics/recurrence/tests
-python scripts/validate_repo.py
-```
-
+Inherit [../../../../AGENTS.md](../../../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/recurrence/parts/live-observation-producers/scripts/AGENTS.md`: bounded active part/promotion boundary.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/recurrence/parts/live-observation-producers/scripts/AGENTS.md`: name the bounded active part and state whether promotion remains outside this package.

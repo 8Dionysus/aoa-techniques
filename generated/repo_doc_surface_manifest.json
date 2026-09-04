@@ -103,6 +103,20 @@
       ]
     },
     {
+      "doc_id": "validation",
+      "doc_path": "VALIDATION.md",
+      "title": "`aoa-techniques` Validation Routes",
+      "surface_group": "entrypoint/map",
+      "bounded_role": "on-demand human map from selected surface and evidence class to machine-owned lanes, focused owners, and landing procedure",
+      "top_level_sections": [
+        "Lane entrypoints",
+        "Focused owner routes",
+        "Generated and source boundary",
+        "Landing route",
+        "Evidence and closeout"
+      ]
+    },
+    {
       "doc_id": "start_here",
       "doc_path": "docs/START_HERE.md",
       "title": "Start Here",
@@ -245,19 +259,12 @@
       "top_level_sections": [
         "Applies to",
         "Role",
-        "Owner lane",
-        "Skill home boundary",
+        "Skill-home boundary",
         "Read before editing",
-        "Route modes",
-        "AGENTS stack law",
-        "Memory route",
-        "GitHub landing workflow",
-        "Post-change route review",
         "Boundaries",
-        "Route away when",
+        "Decisions and propagation",
         "Validation",
-        "Closeout",
-        "Historical Reference"
+        "Closeout"
       ]
     },
     {
@@ -370,6 +377,7 @@
       "bounded_role": "bounded release flow and validation path for public docs and technique updates",
       "top_level_sections": [
         "Release goals",
+        "Ordinary change landing",
         "Recommended release flow",
         "Generated surface checklist",
         "Release note shape",

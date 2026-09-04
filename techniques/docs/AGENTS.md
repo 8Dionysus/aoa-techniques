@@ -21,14 +21,7 @@ authored leaves into the current tree through `docs/TECHNIQUE_TREE_CONTRACT.md`.
 
 ## Read before editing
 
-Read:
-
-1. repository root `AGENTS.md`
-2. `techniques/AGENTS.md`
-3. `docs/TECHNIQUE_TREE_CONTRACT.md`
-4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
-
+Use shared order in [techniques/AGENTS.md](../AGENTS.md#read-before-editing); inspect `docs` role and its target bundle.
 ## Boundaries
 
 Keep the technique about documentation posture, provenance, or source-lift
@@ -59,18 +52,7 @@ Do not:
 
 ## Validation
 
-Before validator or release-check commands here, run
-`python -m pip install -r requirements-dev.txt`.
-
-After changing a docs technique, run:
-
-- `python scripts/validate_nested_agents.py`
-- `python scripts/validate_repo.py`
-
-Run `python scripts/release_check.py` when the change affects generated reader surfaces.
-
+Inherit [techniques/AGENTS.md](../AGENTS.md#validation): `source-fast`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `techniques/docs/AGENTS.md`.
 ## Closeout
 
-Report the trunk, shelf, and bundle paths changed; whether path,
-frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
-skipped; and any remaining owner-route risk.
+Local delta `techniques/docs/AGENTS.md`: state placement/frontmatter/generated-reader changes or route-only guidance.

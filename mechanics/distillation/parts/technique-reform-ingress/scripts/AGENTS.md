@@ -23,31 +23,15 @@ than copying logic into the part.
 
 Read:
 
-1. repository root `AGENTS.md`
-2. `mechanics/AGENTS.md`
-3. `mechanics/distillation/AGENTS.md`
-4. `mechanics/distillation/PARTS.md`
-5. the touched part README, schema, example, script, report, or test
+Inherit [../../../AGENTS.md](../../../AGENTS.md#read-before-editing); use the local part route.
 
 ## Boundaries
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../../../../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 
-Verify with:
-
-```bash
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_topology_scout.py
-python mechanics/distillation/parts/technique-reform-ingress/scripts/build_tree_projection.py
-python scripts/validate_repo.py
-```
-
+Inherit [../../../../AGENTS.md](../../../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/distillation/parts/technique-reform-ingress/scripts/AGENTS.md`: bounded active part/promotion boundary.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/distillation/parts/technique-reform-ingress/scripts/AGENTS.md`: name the bounded active part and state whether promotion remains outside this package.

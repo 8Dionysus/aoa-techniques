@@ -23,8 +23,7 @@ first-pass queues are exhausted and all non-landed tails have final verdicts.
 
 Read root `AGENTS.md`, `docs/START_HERE.md`, `docs/TECHNIQUE_ATOM_CONTRACT.md`,
 `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `mechanics/distillation/AGENTS.md`,
-`mechanics/distillation/README.md`, `mechanics/distillation/PARTS.md`, and this
-part README before moving candidate material.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -47,13 +46,7 @@ part README before moving candidate material.
 
 ## Validation
 
-Verify with:
-
-```bash
-python scripts/validate_repo.py
-python scripts/validate_semantic_agents.py
-```
-
+Inherit [../../../AGENTS.md](../../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/distillation/parts/candidate-intake/AGENTS.md`: bounded active part/promotion boundary.
 ## Closeout
 
 Report candidate paths changed, provenance retained, public-safe review,

@@ -29,8 +29,7 @@ outside this repository.
 1. Repository root `AGENTS.md`
 2. `mechanics/AGENTS.md`
 3. `mechanics/REQUEST_RECEIPTS.md` when touching `ORQ-EXPERIENCE-TECHNIQUES-001`
-4. `mechanics/experience/README.md`
-5. The nearest part README, or `PROVENANCE.md` when touching lineage
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -44,19 +43,7 @@ outside this repository.
 
 ## Validation
 
-For Experience topology changes:
-
-```bash
-python -m unittest discover -s mechanics/experience/tests
-```
-
-For repository-level safety after structure changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/experience/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
 Report which active parts changed, whether any legacy source was moved, which

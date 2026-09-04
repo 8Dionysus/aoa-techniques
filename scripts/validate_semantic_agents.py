@@ -33,7 +33,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'public-safe',
             'adaptation boundary',
             'No secrets',
-            'validate_repo.py',
+            'VALIDATION.md',
         ),
     ),
     AgentsDocSpec(
@@ -53,7 +53,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'source-authored bundles',
             'bounded',
             'aoa-evals',
-            'validate_repo.py',
+            'VALIDATION.md',
         ),
     ),
     AgentsDocSpec(
@@ -63,7 +63,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             '$schema',
             'paired examples',
             'downstream consumer',
-            'validate_repo.py',
+            'VALIDATION.md',
         ),
     ),
     AgentsDocSpec(
@@ -73,7 +73,7 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'repo-relative',
             'generated summaries',
             'validators',
-            'ci_gate.py',
+            'config/validation_lanes.json',
         ),
     ),
     AgentsDocSpec(
@@ -82,8 +82,8 @@ REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
             'technique contracts',
             'generated parity',
             'public-safe',
-            'python scripts/run_tests.py',
-            'validate_semantic_agents.py',
+            'source-fast',
+            'generated parity',
         ),
     ),
 )

@@ -11,10 +11,7 @@ This card applies to `techniques/tool-use/` and every descendant unless a nearer
 agent, caller, or bounded workflow meets tools, gateways, APIs, connectors, or
 tool metadata through one reviewable surface.
 
-This is a tree trunk, not a frontmatter domain. Technique bundles here may keep
-their existing `domain` and `kind` values when the reviewed move is only path
-architecture.
-
+Current `tool-use` trunk: shared placement applies; local role and shelves are the delta.
 ## Current Shelves
 
 Current shelves:
@@ -24,20 +21,10 @@ Current shelves:
 
 ## Read before editing
 
-Read:
-
-1. repository root `AGENTS.md`
-2. `techniques/AGENTS.md`
-3. `docs/TECHNIQUE_TREE_CONTRACT.md`
-4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
-
+Use shared order in [techniques/AGENTS.md](../AGENTS.md#read-before-editing); inspect `tool-use` role and its target bundle.
 ## Trunk Rules
 
-Keep this card as tree route guidance for the trunk. Technique bundle meaning
-stays in each `TECHNIQUE.md`; path placement alone does not change frontmatter
-truth or owner authority.
-
+Placement contract: [techniques/AGENTS.md](../AGENTS.md#closeout); local `tool-use` shelf and boundary delta follows.
 ## Boundaries
 
 Keep the tool-use object small and inspectable:
@@ -52,9 +39,6 @@ Keep the tool-use object small and inspectable:
 
 Use `docs/TECHNIQUE_TREE_CONTRACT.md` before adding another shelf here.
 
-Do not add `tree_path` frontmatter merely because a bundle lives under this
-trunk. Do not rename trunks or shelves without a reviewed projection and a
-bounded migration receipt.
 
 If the object becomes a concrete executable workflow, route it to `aoa-skills`
 or the owning repository. If it becomes proof authority, route it to
@@ -62,18 +46,12 @@ or the owning repository. If it becomes proof authority, route it to
 deployment, API product policy, or marketplace governance, route it away from
 this trunk.
 
+Do not widen this lane beyond its caller-facing mediation seam.
+
+`tool-use` path placement follows the parent contract; renames need its reviewed projection and bounded receipt.
 ## Validation
 
-After changing tool-use techniques, run:
-
-- `python scripts/validate_nested_agents.py`
-- `python scripts/validate_repo.py`
-
-Run `python scripts/release_check.py` when generated catalogs or reader
-surfaces changed.
-
+Inherit [techniques/AGENTS.md](../AGENTS.md#validation): `source-fast`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `techniques/tool-use/AGENTS.md`.
 ## Closeout
 
-Report the trunk, shelf, and bundle paths changed; whether path,
-frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
-skipped; and any remaining owner-route risk.
+Local delta `techniques/tool-use/AGENTS.md`: state placement/frontmatter/generated-reader changes or route-only guidance.

@@ -122,6 +122,7 @@
 - [AOA-TECH-D-0059 Agent Neighbor Doc Command Ownership](../AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md) (`docs/decisions/AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md`)
 - [AOA-TECH-D-0060 AGENTS Mesh Canonical Closure](../AOA-TECH-D-0060-agents-mesh-canonical-closure.md) (`docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md`)
 - [AOA-TECH-D-0069 Keep The Technique Canon Without A Skill Home](../AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md) (`docs/decisions/AOA-TECH-D-0069-keep-technique-canon-without-skill-home.md`)
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
 
 ## generated/readout
 
@@ -145,6 +146,7 @@
 
 - [AOA-TECH-D-0021 Release Support Active Parts Split](../AOA-TECH-D-0021-release-support-active-parts-split.md) (`docs/decisions/AOA-TECH-D-0021-release-support-active-parts-split.md`)
 - [AOA-TECH-D-0043 GitHub Landing And Mechanics Direction Split Correction](../AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md) (`docs/decisions/AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md`)
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
 
 ## public status
 
@@ -199,6 +201,10 @@
 - [AOA-TECH-D-0073 Revalidate Techniques Against Exact aoa-kag v0.5.2](../AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md) (`docs/decisions/AOA-TECH-D-0073-exact-kag-v0-5-2-consumer-revalidation.md`)
 - [AOA-TECH-D-0074 Revalidate Techniques Against the Final Published KAG and Stats Providers](../AOA-TECH-D-0074-exact-final-provider-revalidation.md) (`docs/decisions/AOA-TECH-D-0074-exact-final-provider-revalidation.md`)
 
+## public documentation
+
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
+
 ## release
 
 - [AOA-TECH-D-0070 Bind Provider Pins And KAG Evidence To Immutable Release Source](../AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md) (`docs/decisions/AOA-TECH-D-0070-immutable-provider-and-kag-release-evidence.md`)
@@ -221,3 +227,7 @@
 ## source contract
 
 - [AOA-TECH-D-0075 Isolate Techniques Artifact Subject-Store Rehearsals](../AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md) (`docs/decisions/AOA-TECH-D-0075-artifact-subject-store-rehearsal-isolation.md`)
+
+## validation route
+
+- [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)

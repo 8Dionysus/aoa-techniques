@@ -24,8 +24,7 @@ ToS canon.
 
 1. Repository root `AGENTS.md`
 2. `mechanics/AGENTS.md`
-3. `mechanics/agon/README.md`
-4. The nearest part README, or `PROVENANCE.md` when touching legacy lineage
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -37,29 +36,7 @@ ToS canon.
 
 ## Validation
 
-For Agon technique binding candidates:
-
-```bash
-python mechanics/agon/parts/move-technique-bridge/scripts/build_agon_technique_binding_candidates.py --check
-python mechanics/agon/parts/move-technique-bridge/scripts/validate_agon_technique_binding_candidates.py
-python -m pytest -q mechanics/agon/parts/move-technique-bridge/tests/test_agon_technique_binding_candidates.py
-```
-
-For Agon epistemic candidates:
-
-```bash
-python mechanics/agon/parts/epistemic-technique-candidates/scripts/build_agon_epistemic_technique_candidates.py --check
-python mechanics/agon/parts/epistemic-technique-candidates/scripts/validate_agon_epistemic_technique_candidates.py
-python -m pytest -q mechanics/agon/parts/epistemic-technique-candidates/tests/test_agon_epistemic_technique_candidates.py
-```
-
-For repository-level safety after structure changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/agon/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
 Report which active parts changed, whether any legacy source was moved or

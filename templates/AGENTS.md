@@ -15,6 +15,7 @@ related notes.
 Read root `AGENTS.md`, `docs/TECHNIQUE_ATOM_CONTRACT.md`,
 `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`, `docs/TECHNIQUE_TREE_CONTRACT.md`, and
 the validator that enforces the edited template.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -29,15 +30,7 @@ the validator that enforces the edited template.
 
 ## Validation
 
-After changing templates, run:
-
-```bash
-python scripts/validate_nested_agents.py
-python scripts/validate_repo.py
-```
-
-Snippet contract: keep `python scripts/validate_nested_agents.py` visible for
-nested AGENTS validation.
+Inherit parent validation: `source-fast`/`generated`/`release`; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

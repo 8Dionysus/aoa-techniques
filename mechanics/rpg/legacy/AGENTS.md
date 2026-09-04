@@ -18,28 +18,15 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/rpg/AGENTS.md`
 4. `mechanics/rpg/PROVENANCE.md`
-5. `mechanics/rpg/legacy/README.md` or the touched raw/receipt surface when present
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
-- Do not use raw legacy files as the normal first route for current edits.
-- Do not make raw legacy files the only place current active behavior lives.
-- Do not create placeholder source receipts; preserve only actual source packets.
-- Start in `../README.md`, `../DIRECTION.md`, `../PARTS.md`, and `../parts/`
-  for current behavior.
-- Use `../PROVENANCE.md` as the active bridge into this district.
-- Keep `INDEX.md`, `DISTILLATION_LOG.md`, and `raw/README.md` aligned.
+Inherited legacy route: do not alter current behavior from legacy; see [mechanics/AGENTS.md](../../AGENTS.md#boundaries); preserve source lineage.
 
 ## Validation
 
-Run:
-
-```bash
-python -m unittest discover -s mechanics/rpg/tests
-```
-
+Inherit [../../AGENTS.md](../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/rpg/legacy/AGENTS.md`: lineage/raw-source boundaries.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/rpg/legacy/AGENTS.md`: preserve lineage and state any active-source handoff left unchanged.

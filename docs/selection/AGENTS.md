@@ -17,8 +17,8 @@ contracts.
 
 ## Read before editing
 
-Read root `AGENTS.md`, `DESIGN.md`, `docs/AGENTS.md`,
-`docs/ROOT_SURFACE_LAW.md`, and this district [README](README.md).
+Read root `AGENTS.md`, `DESIGN.md`, `docs/AGENTS.md`, and
+`docs/ROOT_SURFACE_LAW.md` before selection-guide edits.
 
 For selector or kind changes, also read:
 
@@ -38,6 +38,7 @@ For Technique Intelligence changes, also read:
 
 - [Technique Intelligence Guide](TECHNIQUE_INTELLIGENCE_GUIDE.md)
 - [Technique Intelligence](../readers/intelligence/TECHNIQUE_INTELLIGENCE.md)
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -54,18 +55,7 @@ For Technique Intelligence changes, also read:
 
 ## Validation
 
-For selection, kind, capsule, or intelligence guide changes, run the affected
-builder first when source-backed readers move:
-
-```bash
-python scripts/build_catalog.py
-python scripts/build_kind_manifest.py
-python scripts/build_capsules.py
-python scripts/build_technique_intelligence.py
-python scripts/validate_repo.py
-```
-
-For broad route or release-visible changes, run `python scripts/release_check.py`.
+Inherit parent validation: source-fast/generated/release; see [VALIDATION.md](../../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

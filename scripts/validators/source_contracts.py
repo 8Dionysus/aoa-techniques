@@ -34,9 +34,10 @@ SOURCE_FAST_REQUIRED_SOURCE_FILES = (
 )
 MEMO_AGENTS_NAME = "memo/AGENTS.md"
 HOST_SPECIFIC_MEMO_ROOT = "/srv/AbyssOS/aoa-memo"
-MEMO_AGENTS_VALIDATION_COMMANDS = (
-    'python "$AOA_MEMO_ROOT/scripts/memory/validate_local_memo_port.py" --path memo',
-    'python "$AOA_MEMO_ROOT/scripts/memory/build_local_memo_port_index.py" --path memo --check',
+MEMO_AGENTS_ROUTE_SNIPPETS = (
+    "aoa-memo",
+    "VALIDATION.md",
+    "config/validation_lanes.json",
 )
 
 
@@ -56,14 +57,9 @@ def validate_memo_agents_portable_validation_route(repo_root: Path) -> None:
             f"{MEMO_AGENTS_NAME}: memo validation route must not default AOA_MEMO_ROOT "
             f"to host-specific {HOST_SPECIFIC_MEMO_ROOT}"
         )
-    if "AOA_MEMO_ROOT:?" not in text:
-        fail(
-            f"{MEMO_AGENTS_NAME}: memo validation route must require an explicit "
-            "AOA_MEMO_ROOT instead of guessing a sibling checkout path"
-        )
-    for command in MEMO_AGENTS_VALIDATION_COMMANDS:
-        if command not in text:
-            fail(f"{MEMO_AGENTS_NAME}: memo validation route must include `{command}`")
+    for snippet in MEMO_AGENTS_ROUTE_SNIPPETS:
+        if snippet not in text:
+            fail(f"{MEMO_AGENTS_NAME}: memo route must name `{snippet}`")
 
 
 def validate_frontmatter_schema(
@@ -1768,8 +1764,8 @@ def parse_shadow_reviews(repo_root: Path) -> tuple[ShadowReview, ...]:
 
 
 def validate_repo_doc_surface_specs(repo_root: Path) -> None:
-    if len(REPO_DOC_SURFACE_SPECS) != 20:
-        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 20 authoritative public route/canon/status files")
+    if len(REPO_DOC_SURFACE_SPECS) != 21:
+        fail("REPO_DOC_SURFACE_SPECS must contain exactly the 21 authoritative public route/canon/status files")
     if len(REPO_DOC_SURFACE_GROUP_SPECS) != len(REPO_DOC_SURFACE_GROUP_ORDER):
         fail("REPO_DOC_SURFACE_GROUP_SPECS must contain exactly one spec per surface group")
 

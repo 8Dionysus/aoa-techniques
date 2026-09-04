@@ -47,7 +47,7 @@ A healthy agent-facing layer has:
 - named source surfaces for technique meaning, mechanics, generated outputs,
   schemas, tests, and legacy
 - negative boundaries that prevent authority drift
-- validation and generated-freshness routes
+- risk-based validation selection and an on-demand procedure route
 - closeout expectations that name changed surfaces, skipped checks, remaining
   risk, and next owner route
 - generated mesh companions that expose coverage without authoring meaning
@@ -60,8 +60,8 @@ safety, or owner review.
 
 | Surface class | Role |
 |---|---|
-| Root card | repository identity, owner boundaries, route modes, broad validation, and closeout |
-| District cards | local source class, local risks, source surfaces, and local validation |
+| Root card | repository identity, owner boundaries, route modes, validation selection, and closeout |
+| District cards | local source class, local risks, source surfaces, and the nearest on-demand validation route |
 | Technique cards | protection for bundle meaning and the split between tree placement and frontmatter truth |
 | Mechanic cards | practice-motion routes, provenance, generated mirrors, and sibling-owner stop lines |
 | Deep cards | high-friction generated, legacy, part-local, schema, manifest, or agent-lane surfaces |
@@ -71,6 +71,13 @@ The source surfaces still keep meaning: technique bundles, docs contracts,
 schemas, builders, validators, mechanics packages, generated-source configs,
 and neighboring owner repositories. Agent cards route to them; they do not
 become source truth by repetition.
+
+Executable procedure has the same placement rule. Active `AGENTS.md` cards
+name the applicable evidence class or owner route after the touched surface is
+known. Root `VALIDATION.md`, `config/validation_lanes.json`, the nearest focused
+owner, and `docs/RELEASING.md` carry exact human or machine procedure. Copying
+command batteries into inherited cards makes the mesh heavier without making
+the command owner stronger.
 
 ## Design as Operation
 
@@ -182,3 +189,6 @@ legacy-card drift.
 8. Portability comes from repeated discipline, not copied text.
 9. Agency must remain returnable: durable action preserves review, rollback,
    evidence, and a way back to the owner surface.
+10. Human maps stay on demand: README explains the public canon, mechanic,
+    contract, or usage route; AGENTS does not preload it unless the selected
+    task needs that explanation.

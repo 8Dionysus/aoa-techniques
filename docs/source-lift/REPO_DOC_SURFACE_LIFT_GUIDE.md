@@ -36,6 +36,7 @@ exactly:
 - `CHARTER.md`
 - `DESIGN.md`
 - `DESIGN.AGENTS.md`
+- `VALIDATION.md`
 - `docs/START_HERE.md`
 - `docs/ECOSYSTEM_CONTEXT.md`
 - `docs/ROOT_SURFACE_LAW.md`
@@ -93,4 +94,6 @@ Not part of this current public route/canon/status wave:
 
 The meaning remains in the authored docs themselves.
 
-Agent validation and regeneration routes live in [AGENTS](AGENTS.md).
+Agent validation and regeneration routes live in root
+[VALIDATION](../../VALIDATION.md); [AGENTS](AGENTS.md) keeps only the local
+semantic route and stop-lines.

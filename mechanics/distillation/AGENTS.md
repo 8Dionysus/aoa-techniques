@@ -31,8 +31,8 @@ technique promotion.
 
 1. Repository root `AGENTS.md`
 2. `mechanics/AGENTS.md`
-3. `mechanics/distillation/README.md`
-4. The nearest part README, or `PROVENANCE.md` when touching lineage
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
+Nested parts also read this package's `PARTS.md` before the target local card.
 
 ## Boundaries
 
@@ -45,50 +45,11 @@ technique promotion.
   worldview.
 - Keep sibling-repo routes as provenance, not owner transfer.
 
-- Do not let this local card override authored source surfaces, schemas,
-  builders, validators, or sibling owner truth.
-- Do not claim skill execution, proof verdict, runtime, routing, memory,
-  playbook, or owner-acceptance authority from this package.
+Inherited mechanics boundary: do not override stronger sources; see [mechanics/AGENTS.md](../AGENTS.md#boundaries); local role remains above.
 
 ## Validation
 
-For Distillation topology changes:
-
-```bash
-python -m unittest discover -s mechanics/distillation/tests
-```
-
-For the external candidate registry:
-
-```bash
-python mechanics/distillation/parts/external-candidate-ledger/scripts/build_external_candidate_registry.py --check
-python mechanics/distillation/parts/external-candidate-ledger/scripts/validate_external_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/external-candidate-ledger/tests/test_external_candidate_registry.py
-```
-
-For the cross-layer candidate registry:
-
-```bash
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/build_cross_layer_candidate_registry.py --check
-python mechanics/distillation/parts/cross-layer-candidate-ledger/scripts/validate_cross_layer_candidate_registry.py
-python -m pytest -q mechanics/distillation/parts/cross-layer-candidate-ledger/tests/test_cross_layer_candidate_registry.py
-```
-
-For the Agon candidate handoff registry:
-
-```bash
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/build_agon_candidate_handoff.py --check
-python mechanics/distillation/parts/agon-candidate-handoff/scripts/validate_agon_candidate_handoff.py
-python -m pytest -q mechanics/distillation/parts/agon-candidate-handoff/tests/test_agon_candidate_handoff.py
-```
-
-For repository-level safety after structure changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/distillation/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
 Report which active parts changed, whether any legacy source was moved or

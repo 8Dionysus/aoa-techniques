@@ -12,6 +12,26 @@ See also [START_HERE.md](START_HERE.md), [Documentation Map](README.md),
 A release should make four things easy to answer: what changed, why it matters,
 how it was validated, and what is intentionally not included.
 
+## Ordinary change landing
+
+For an ordinary repository change, start from a clean branch based on current
+`origin/main`, commit only the intended diff, and open a pull request that names
+changed surfaces, validation actually run, skipped checks, generated parity,
+public-safety posture, and remaining risk. Wait for the required `Repo
+Validation` result. Fix a failing branch and observe the replacement result
+before proceeding.
+
+Merge through GitHub only after required checks and authority are observable.
+Use squash unless current repository settings require another allowed method;
+record the method that actually landed. Then fast-forward local `main` from
+`origin/main` and confirm the worktree is clean. If status, review, or merge
+permission cannot be observed, stop and return the exact blocker rather than
+inferring a landed state.
+
+Root `AGENTS.md` routes here but does not duplicate this procedure. Root
+`VALIDATION.md` maps the relevant evidence classes. A local green lane is not
+GitHub CI, review, merge, publication, or release evidence.
+
 ## Recommended release flow
 
 1. Confirm the target release scope.

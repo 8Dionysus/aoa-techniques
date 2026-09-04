@@ -23,14 +23,7 @@ route new authored leaves into the current tree through
 
 ## Read before editing
 
-Read:
-
-1. repository root `AGENTS.md`
-2. `techniques/AGENTS.md`
-3. `docs/TECHNIQUE_TREE_CONTRACT.md`
-4. `docs/TECHNIQUE_TOPOLOGY_CONTRACT.md`
-5. the target bundle `TECHNIQUE.md` and local notes/checks/examples
-
+Use shared order in [techniques/AGENTS.md](../AGENTS.md#read-before-editing); inspect `evaluation` role and its target bundle.
 ## Boundaries
 
 Keep the proof posture explicit. These techniques should help a reader bound
@@ -59,16 +52,7 @@ Do not:
 
 ## Validation
 
-After changing an evaluation technique, run:
-
-- `python -m pip install -r requirements-dev.txt`
-- `python scripts/validate_nested_agents.py`
-- `python scripts/validate_repo.py`
-
-Cross-check downstream implications in `aoa-evals` when the technique changes proof posture materially.
-
+Inherit [techniques/AGENTS.md](../AGENTS.md#validation): `source-fast`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `techniques/evaluation/AGENTS.md`.
 ## Closeout
 
-Report the trunk, shelf, and bundle paths changed; whether path,
-frontmatter, generated catalogs, or reader surfaces changed; checks run; checks
-skipped; and any remaining owner-route risk.
+Local delta `techniques/evaluation/AGENTS.md`: state placement/frontmatter/generated-reader changes or route-only guidance.

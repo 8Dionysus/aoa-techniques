@@ -17,9 +17,9 @@ decisions, eval verdicts, usage surveillance, skill adoption, or runtime truth.
 ## Read before editing
 
 1. Root `AGENTS.md`, `DESIGN.md`, and `docs/TECHNIQUE_ATOM_CONTRACT.md`.
-2. `README.md` and `port.manifest.json` in this district.
-3. The owner source and consuming mechanic named by the measurement.
-4. The central `aoa-stats` measurement and local-port contracts.
+2. The owner source and consuming mechanic named by the measurement.
+3. The central `aoa-stats` measurement and local-port contracts.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -32,13 +32,7 @@ decisions, eval verdicts, usage surveillance, skill adoption, or runtime truth.
 
 ## Validation
 
-```bash
-python scripts/validate_local_stats_port.py
-python -m unittest tests.test_local_stats_port
-```
-
-The repository-wide lane remains `source-fast`; its command sequence is owned
-by `config/validation_lanes.json`.
+Inherit parent validation: source-fast/generated/advisory; see [VALIDATION.md](../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

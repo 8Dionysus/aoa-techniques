@@ -20,10 +20,9 @@ truth, or technique status changes.
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
-3. `mechanics/antifragility/README.md`.
-4. `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and the touched part README.
-5. `legacy/` only when auditing the pre-split chaos wave donor trace.
-6. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
+3. `legacy/` only when auditing the pre-split chaos wave donor trace.
+4. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -40,15 +39,7 @@ truth, or technique status changes.
 
 ## Validation
 
-Use the root validation path after changes:
-
-```bash
-python scripts/validate_repo.py
-python scripts/run_tests.py
-```
-
+Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/antifragility/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/antifragility/AGENTS.md`: keep stress/recovery practice distinct from center doctrine, cleanup, and runtime self-healing.

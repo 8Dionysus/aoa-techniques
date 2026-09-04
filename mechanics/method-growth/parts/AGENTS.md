@@ -18,7 +18,7 @@ Read:
 2. `mechanics/AGENTS.md`
 3. `mechanics/method-growth/AGENTS.md`
 4. `mechanics/method-growth/PARTS.md`
-5. the touched part README, schema, example, script, report, or test
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -31,13 +31,7 @@ Read:
 
 ## Validation
 
-```bash
-python -m unittest discover -s mechanics/method-growth/tests
-python scripts/validate_repo.py
-```
-
+Inherit [../../AGENTS.md](../../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/method-growth/parts/AGENTS.md`: bounded active part/promotion boundary.
 ## Closeout
 
-Report the mechanic package, part, legacy surface, or helper changed;
-whether source, generated, schema, example, or test surfaces moved; checks run;
-checks skipped; and the next owner route.
+Local delta `mechanics/method-growth/parts/AGENTS.md`: name the bounded active part and state whether promotion remains outside this package.

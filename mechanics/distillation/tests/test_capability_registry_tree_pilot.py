@@ -86,7 +86,7 @@ class CapabilityRegistryTreePilotTestCase(unittest.TestCase):
         )
         flat_text = re.sub(r"\s+", " ", text)
 
-        self.assertIn("This is a tree trunk, not a frontmatter domain.", text)
+        self.assertIn("shared placement applies", text)
         self.assertIn("capability-registry/", text)
         self.assertIn("capability specs", text)
         self.assertIn("registry-facing entries", text)
@@ -94,7 +94,7 @@ class CapabilityRegistryTreePilotTestCase(unittest.TestCase):
         self.assertIn("registry product doctrine", flat_text)
         self.assertIn("runtime resolution", text)
         self.assertIn("skill acceptance", text)
-        self.assertIn("Do not add `tree_path` frontmatter", text)
+        self.assertIn("path placement follows the parent contract", text)
 
     def test_root_legacy_receipt_preserves_old_and_new_paths(self) -> None:
         receipt = (

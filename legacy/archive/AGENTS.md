@@ -17,13 +17,12 @@ tail surface stops being current. It is not a second current docs tree.
 Read:
 
 1. `../AGENTS.md`
-2. `../README.md`
-3. `../INDEX.md`
-4. `README.md`
-5. the current source surface that replaces the archived material
+2. `../INDEX.md`
+3. the current source surface that replaces the archived material
 
 For the archived root-agent reference, also read `AGENTS_ROOT_REFERENCE.md`
 before moving or summarizing it.
+Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
 ## Boundaries
 
@@ -40,15 +39,7 @@ before moving or summarizing it.
 
 ## Validation
 
-Run:
-
-```bash
-python -m unittest tests.test_root_legacy_topology
-python scripts/validate_repo.py
-```
-
-Use `python scripts/release_check.py` when archived docs affect public release
-posture, root links, generated mirrors, or broad route docs.
+Inherit parent validation: source-fast/generated/advisory; see [VALIDATION.md](../../VALIDATION.md) and config/validation_lanes.json.
 
 ## Closeout
 

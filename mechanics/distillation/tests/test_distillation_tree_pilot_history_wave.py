@@ -1029,7 +1029,7 @@ class DistillationTreePilotHistoryWaveTests(unittest.TestCase):
             self.assertIn("Ready-Work-Graphs Tree Pilot Receipt", receipt)
             self.assertIn("sixteenth authored path migration", receipt)
             self.assertIn("Preserve `AOA-T-0055` as a readiness ladder", receipt)
-            self.assertIn("This is a tree trunk, not a frontmatter domain", execution_agents)
+            self.assertIn("shared placement applies", execution_agents)
             self.assertIn("ready-work-graphs/", execution_agents)
             self.assertIn("ready-work-graphs migration: landed", ingress)
             self.assertIn("Ready-work-graphs tree pilot migration", landing_log)
