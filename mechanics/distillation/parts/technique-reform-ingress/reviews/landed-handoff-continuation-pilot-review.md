@@ -7,7 +7,7 @@ Migration review:
 [Handoff-Continuation Direct-Read Migration Review](handoff-continuation-direct-read-migration-review.md)
 
 Migration receipt:
-[Handoff-Continuation Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
+[Handoff-Continuation Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -45,8 +45,8 @@ machinery and the next pressure should test a different root district.
 - [AOA-T-0061 cross-repo-resource-map-bootstrap](../../../../../techniques/continuity/handoff-continuation/cross-repo-resource-map-bootstrap/TECHNIQUE.md)
 - [AOA-T-0062 episode-bounded-agent-loop](../../../../../techniques/continuity/handoff-continuation/episode-bounded-agent-loop/TECHNIQUE.md)
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Handoff-continuation tree pilot receipt](../../../../../legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Handoff-continuation tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-handoff-continuation-tree-pilot.md)
 - [Technique tree projection rows for `handoff-continuation` and
   `media-ingest`](../reports/technique_tree_projection.md)
 - `mechanics/distillation/legacy/archive/closed-incoming-packets/chat-graph-review-mailbox/docs/EXTERNAL_TECHNIQUE_CANDIDATES_CHAT_GRAPH_REVIEW_MAILBOX.md`

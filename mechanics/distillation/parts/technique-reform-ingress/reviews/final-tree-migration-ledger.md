@@ -13,7 +13,7 @@ Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Root legacy index:
-[Root Legacy Index](../../../../../legacy/INDEX.md)
+[Root Legacy Index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
 
 Status: final-ledger-validated, generated-parity-clean, receipts-complete,
 temporary-plan-distilled, ready-for-technique-bundle-reform, not path

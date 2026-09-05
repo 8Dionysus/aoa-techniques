@@ -10,39 +10,6 @@ from scripts import validate_repo
 
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
-# Historical tree-migration assertions read the preserved receipt, not the live
-# root roadmap, so root direction can stay compact.
-TREE_MIGRATION_BREADCRUMB_ROADMAP = (
-    REPO_ROOT
-    / "mechanics"
-    / "distillation"
-    / "legacy"
-    / "raw"
-    / "ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md"
-)
-
-ACTIVE_DISTILLATION_SURFACES = (
-    "mechanics/distillation/AGENTS.md",
-    "mechanics/distillation/README.md",
-    "mechanics/distillation/DIRECTION.md",
-    "mechanics/distillation/PARTS.md",
-    "mechanics/distillation/PROVENANCE.md",
-    "mechanics/distillation/LANDING_LOG.md",
-    "mechanics/distillation/ROADMAP.md",
-    "mechanics/distillation/parts/AGENTS.md",
-    "mechanics/distillation/parts/README.md",
-    "mechanics/distillation/legacy/AGENTS.md",
-    "mechanics/distillation/legacy/README.md",
-    "mechanics/distillation/legacy/INDEX.md",
-    "mechanics/distillation/legacy/DISTILLATION_LOG.md",
-    "mechanics/distillation/legacy/raw/README.md",
-)
-
-RAW_DISTILLATION_RECEIPTS = (
-    "mechanics/distillation/legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
-    "mechanics/distillation/legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
-)
-
 PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/donor-refinery/README.md",
     "mechanics/distillation/parts/external-import-runbook/README.md",
@@ -234,14 +201,11 @@ def tree_migration_context_paths() -> tuple[Path, ...]:
         / "parts"
         / "technique-reform-ingress"
     )
-    receipt_root = REPO_ROOT / "legacy" / "receipts"
     return (
         REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md",
-        TREE_MIGRATION_BREADCRUMB_ROADMAP,
         reform_root / "README.md",
         reform_root / "reviews" / "README.md",
         *sorted((reform_root / "reviews").glob("*.md")),
-        *sorted(receipt_root.glob("*-tree-pilot.md")),
     )
 
 

@@ -7,7 +7,7 @@ Migration review:
 [Docs-Boundary Direct-Read Migration Review](docs-boundary-direct-read-migration-review.md)
 
 Migration receipt:
-[Docs-Boundary Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md)
+[Docs-Boundary Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -49,8 +49,8 @@ resolution, or marketplace curation.
 - [AOA-T-0064 capability-discovery](../../../../../techniques/instruction/capability-registry/capability-discovery/TECHNIQUE.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Docs-boundary tree pilot receipt](../../../../../legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Docs-boundary tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-docs-boundary-tree-pilot.md)
 - [Technique tree projection rows for `docs-boundary`,
   `capability-registry`, `capability-boundary`, and `skill-discovery`](../reports/technique_tree_projection.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)

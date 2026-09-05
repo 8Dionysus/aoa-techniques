@@ -55,7 +55,7 @@ Keep the old root Markdown file set, but slim the active route surfaces:
   [Documentation Map](../README.md), [Repo Doc Surfaces](../readers/repo/REPO_DOC_SURFACES.md), generated manifests, and
   owner-local `mechanics/**` surfaces.
 - The old root roadmap breadcrumb chain is preserved as
-  [root roadmap tree migration breadcrumbs receipt](../../mechanics/distillation/legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md)
+  [root roadmap tree migration breadcrumbs receipt](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md)
   so historical migration assertions do not require re-bloating the live root
   roadmap.
 - Tests should protect this boundary by checking that root points to the
@@ -103,7 +103,7 @@ tree migration evidence stays with Distillation legacy.
 - [Distillation roadmap](../../mechanics/distillation/ROADMAP.md)
 - [final tree migration ledger](../../mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)
 - [whole tree closeout review](../../mechanics/distillation/parts/technique-reform-ingress/reviews/whole-tree-closeout-review.md)
-- [root roadmap tree migration breadcrumbs receipt](../../mechanics/distillation/legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md)
+- [root roadmap tree migration breadcrumbs receipt](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md)
 
 ## Follow-up route
 

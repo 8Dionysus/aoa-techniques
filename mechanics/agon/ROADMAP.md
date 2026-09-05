@@ -9,10 +9,10 @@ promotion by itself.
 Agon is the local route for practice-candidate bridges, active parts,
 provenance, and preserved wave receipts.
 
-The first Agon mechanics passes established the active/legacy split:
+The first Agon mechanics passes established the active/provenance split:
 
 - active route in `README.md`, `DIRECTION.md`, `PARTS.md`, and `parts/`
-- preserved wave receipts in `legacy/raw/`
+- immutable recovery paths for preserved wave receipts in `PROVENANCE.md`
 - lineage bridge in `PROVENANCE.md`
 - landing accounting in `LANDING_LOG.md`
 - part-local technical artifacts for Wave IV binding candidates, Wave XV

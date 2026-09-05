@@ -93,7 +93,7 @@ of the object itself rather than agent-local command law.
 - [Mechanics README](../../mechanics/README.md)
 - [Source Lift AGENTS](../source-lift/AGENTS.md)
 - [Guardrails AGENTS](../guardrails/AGENTS.md)
-- [Root Legacy AGENTS](../../legacy/AGENTS.md)
+- [Root Legacy AGENTS](https://github.com/8Dionysus/aoa-techniques/tree/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/AGENTS.md)
 
 ## Follow-up route
 

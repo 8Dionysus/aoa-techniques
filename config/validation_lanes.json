@@ -360,20 +360,6 @@
       ],
       [
         "python",
-        ".agents/spark/scripts/validate_spark_lane.py"
-      ],
-      [
-        "python",
-        "-m",
-        "unittest",
-        "discover",
-        "-s",
-        ".agents/spark/tests",
-        "-p",
-        "test*.py"
-      ],
-      [
-        "python",
         "scripts/ci_gate.py",
         "--mode",
         "mechanics-part-local"

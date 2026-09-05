@@ -4,7 +4,7 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Migration receipt:
-[Practice-Adoption-Lifecycle Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md)
+[Practice-Adoption-Lifecycle Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md)
 
 Previous review:
 [Practice-Adoption-Lifecycle Direct-Read Migration Review](practice-adoption-lifecycle-direct-read-migration-review.md)

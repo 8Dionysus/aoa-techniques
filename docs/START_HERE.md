@@ -80,7 +80,7 @@ hand-maintained here.
 Open [Technique Selection](readers/selection/TECHNIQUE_SELECTION.md) for the
 live domain/kind/status split. Use [technique catalog min JSON](../generated/technique_catalog.min.json)
 for the current machine-readable corpus view. Use [Roadmap](../ROADMAP.md) for
-direction and [Root Legacy](../legacy/README.md) for public-safe receipts,
+direction and the [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) for immutable historical recovery,
 archives, and raw snapshots.
 
 The growth target remains `1000+` compact, well-classified, template-backed

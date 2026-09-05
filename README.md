@@ -125,7 +125,7 @@ technique bundle when the reusable practice itself is already authored.
 | [stats](stats/README.md) | owner-local corpus questions, measurement contracts, and public reference packets |
 | [examples](examples/README.md) | public-safe repo-wide worked examples |
 | [templates](templates/) | technique authoring and promotion scaffolds |
-| [legacy](legacy/README.md) | public-safe repo-wide raw, archive, and migration receipts |
+| [retirement decision](docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) | immutable Git recovery links for historical surfaces |
 | [.agents](.agents/AGENTS.md) | agent-facing companion lanes and local route support |
 | [scripts](scripts/) | repo-wide builders and validators |
 | [tests](tests/AGENTS.md) | repo-wide validation surfaces |

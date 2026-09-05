@@ -7,7 +7,7 @@ Migration review:
 [Kag-Source-Lift Direct-Read Migration Review](kag-source-lift-direct-read-migration-review.md)
 
 Migration receipt:
-[Kag-Source-Lift Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md)
+[Kag-Source-Lift Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -53,8 +53,8 @@ decision rationale form a clean document-boundary shelf before any path move.
 - [AOA-T-0034 public-safe-artifact-sanitization](../../../../../techniques/instruction/docs-boundary/public-safe-artifact-sanitization/TECHNIQUE.md)
 - [AOA-T-0033 decision-rationale-recording](../../../../../techniques/instruction/docs-boundary/decision-rationale-recording/TECHNIQUE.md)
 - [Knowledge-lift route card](../../../../../techniques/knowledge-lift/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Kag-source-lift tree pilot receipt](../../../../../legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Kag-source-lift tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-kag-source-lift-tree-pilot.md)
 - [Technique tree projection rows for `kag-source-lift`,
   `docs-boundary`, `instruction-surface`, and boundary-watch instruction
   shelves](../reports/technique_tree_projection.md)

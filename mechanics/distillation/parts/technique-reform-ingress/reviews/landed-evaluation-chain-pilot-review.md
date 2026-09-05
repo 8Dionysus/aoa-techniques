@@ -7,7 +7,7 @@ Migration review:
 [Evaluation-Chain Direct-Read Migration Review](evaluation-chain-direct-read-migration-review.md)
 
 Migration receipt:
-[Evaluation-Chain Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md)
+[Evaluation-Chain Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -45,8 +45,8 @@ four published-summary bundles directly before any path movement.
 - [AOA-T-0032 context-report-for-ci](../../../../../techniques/proof/evaluation-chain/context-report-for-ci/TECHNIQUE.md)
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Evaluation-chain tree pilot receipt](../../../../../legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Evaluation-chain tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-evaluation-chain-tree-pilot.md)
 - [Technique tree projection rows for `evaluation-chain` and `published-summary`](../reports/technique_tree_projection.md)
 - [Technique family scout rows for `evaluation-chain` and `published-summary`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `evaluation-chain` and `published-summary`](../reports/technique_topology_scout.md)

@@ -146,7 +146,7 @@ canonical, semantic, or shadow guide before opening mechanic-owned packets.
 | [scripts](../scripts/) | builders, validators, and release checks |
 | [tests](../tests/AGENTS.md) | repo-wide validation |
 | [templates](../templates/) | technique authoring and promotion scaffolds |
-| [legacy](../legacy/README.md) | repo-wide public-safe raw, archive, and migration receipts |
+| [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) | immutable Git recovery links for historical surfaces |
 
 Neighboring AoA repositories own adjacent object classes:
 [aoa-skills](https://github.com/8Dionysus/aoa-skills),
@@ -161,4 +161,4 @@ Neighboring AoA repositories own adjacent object classes:
 - Prefer [Current Surface Index](guardrails/CURRENT_SURFACE_INDEX.md) when the question is why a flat `docs/*.md` file still exists.
 - Prefer [Root Surface Law](ROOT_SURFACE_LAW.md) before adding, moving, or deleting root or docs-root surfaces.
 - Prefer [Decisions District](decisions/README.md) when the question is why a structural route was chosen.
-- Prefer [Root Legacy](../legacy/README.md) and [Root Legacy Index](../legacy/INDEX.md) for public-safe receipts, archives, and migration history.
+- Prefer the [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) for immutable historical recovery links.

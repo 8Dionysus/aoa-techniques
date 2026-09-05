@@ -7,6 +7,7 @@
 - [AOA-TECH-D-0001 Split Agon Mechanics Into Active Parts And Legacy Provenance](../AOA-TECH-D-0001-agon-active-legacy-split.md) (`docs/decisions/AOA-TECH-D-0001-agon-active-legacy-split.md`)
 - [AOA-TECH-D-0002 Move Agon Technical Artifacts Into Part-Local Homes](../AOA-TECH-D-0002-agon-part-local-artifacts.md) (`docs/decisions/AOA-TECH-D-0002-agon-part-local-artifacts.md`)
 - [AOA-TECH-D-0024 Distillation Agon Candidate Handoff](../AOA-TECH-D-0024-distillation-agon-candidate-handoff.md) (`docs/decisions/AOA-TECH-D-0024-distillation-agon-candidate-handoff.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## antifragility
 
@@ -16,6 +17,7 @@
 
 - [AOA-TECH-D-0003 Audit Active Parts Split](../AOA-TECH-D-0003-audit-active-parts-split.md) (`docs/decisions/AOA-TECH-D-0003-audit-active-parts-split.md`)
 - [AOA-TECH-D-0046 Canonical Retro Audit Part](../AOA-TECH-D-0046-canonical-retro-audit-part.md) (`docs/decisions/AOA-TECH-D-0046-canonical-retro-audit-part.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## boundary-bridge
 
@@ -33,6 +35,7 @@
 - [AOA-TECH-D-0007 Distillation Gate Alignment](../AOA-TECH-D-0007-distillation-gate-alignment.md) (`docs/decisions/AOA-TECH-D-0007-distillation-gate-alignment.md`)
 - [AOA-TECH-D-0024 Distillation Agon Candidate Handoff](../AOA-TECH-D-0024-distillation-agon-candidate-handoff.md) (`docs/decisions/AOA-TECH-D-0024-distillation-agon-candidate-handoff.md`)
 - [AOA-TECH-D-0062 Closed Incoming Packets Distillation Legacy](../AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md) (`docs/decisions/AOA-TECH-D-0062-closed-incoming-packets-distillation-legacy.md`)
+- [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
 
 ## experience
 

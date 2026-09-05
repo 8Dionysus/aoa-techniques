@@ -4,7 +4,7 @@ This file preserves the active-first bridge from pre-split Growth-cycle flat
 files to the current part-local homes.
 
 The pre-split files were compact active mechanics surfaces, not raw wave
-receipts. The [legacy scaffold](legacy/README.md) is present for
+receipts. The [legacy scaffold](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/growth-cycle/legacy/README.md) is present for
 source-to-active accounting, and its current raw inventory is empty.
 
 ## Active Landing Map

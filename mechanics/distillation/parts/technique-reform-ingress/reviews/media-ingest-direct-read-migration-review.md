@@ -43,10 +43,10 @@ generated surfaces, and validation move together.
 - [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 - supporting `checks/`, `examples/`, and `notes/` files for the five bundles,
   scanned for invariant, adjacency, public-safety, and drift-pressure cues
-- [Personal Media Ingest](../../../../../mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/README.md)
-- [External Technique Candidates - Personal Media Ingest](../../../../../mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md)
-- [Personal Media Ingest - Planting Order](../../../../../mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/PERSONAL_MEDIA_INGEST_PLANTING_ORDER.md)
-- [Personal Media Ingest Donor Sources](../../../../../mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/support/DONOR_SOURCES.md)
+- [Personal Media Ingest](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/README.md)
+- [External Technique Candidates - Personal Media Ingest](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md)
+- [Personal Media Ingest - Planting Order](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/PERSONAL_MEDIA_INGEST_PLANTING_ORDER.md)
+- [Personal Media Ingest Donor Sources](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/support/DONOR_SOURCES.md)
 - `mechanics/distillation/parts/technique-reform-ingress/reports/technique_tree_projection.md` rows for `AOA-T-0070` through
   `AOA-T-0074`
 - `mechanics/distillation/parts/technique-reform-ingress/reports/technique_topology_scout.md` rows for `AOA-T-0070` through

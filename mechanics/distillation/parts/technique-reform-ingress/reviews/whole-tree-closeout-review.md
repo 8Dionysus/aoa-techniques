@@ -13,7 +13,7 @@ Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
 
 Root legacy index:
-[Root Legacy Index](../../../../../legacy/INDEX.md)
+[Root Legacy Index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
 
 Status: tree-closeout-validated, current-paths-match-projection,
 all-shelves-receipted, no split hold, no singleton hold, choose route-card
@@ -40,13 +40,13 @@ current placement spine.
 - [Technique Tree Contract](../../../../../docs/TECHNIQUE_TREE_CONTRACT.md)
 - [Technique Tree Projection](../reports/technique_tree_projection.md)
 - [Technique Tree Projection JSON](../reports/technique_tree_projection.json)
-- [Root Legacy](../../../../../legacy/README.md)
-- [Root Legacy Index](../../../../../legacy/INDEX.md)
+- [Root Legacy](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/README.md)
+- [Root Legacy Index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
 - [Landed Tool-Gateway Pilot Review](landed-tool-gateway-pilot-review.md)
 - [Automation-Governance Split Expansion Closeout](automation-governance-split-expansion-closeout.md)
 - [Landed Practice-Adoption-Lifecycle Pilot Review](landed-practice-adoption-lifecycle-pilot-review.md)
 - [Tool-Gateway Direct-Read Singleton Review](tool-gateway-direct-read-singleton-review.md)
-- [Tool-Gateway Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
+- [Tool-Gateway Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
 - [Technique Reform Ingress](../README.md)
 
 ## Counted Evidence

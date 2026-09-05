@@ -39,8 +39,9 @@ Nested parts also read this package's `PARTS.md` before the target local card.
 - Keep candidate ledgers distinct from promoted technique bundles.
 - If a candidate becomes a stable reusable practice with inputs, outputs, risks,
   and validation, route it into `techniques/` through the normal bundle path.
-- If a ledger is compacted, preserve the pre-pruned accounting in `legacy/raw/`
-  or point to an explicit preserved source.
+- If a ledger is compacted, record its exact pre-change Git commit and original
+  path in `PROVENANCE.md` or the retirement decision before shortening the
+  active route; do not create an archive-only copy.
 - Keep external donor wording sanitized and narrower than the donor's total
   worldview.
 - Keep sibling-repo routes as provenance, not owner transfer.

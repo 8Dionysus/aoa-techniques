@@ -7,7 +7,7 @@ Migration review:
 [Tool-Gateway Direct-Read Singleton Review](tool-gateway-direct-read-singleton-review.md)
 
 Migration receipt:
-[Tool-Gateway Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
+[Tool-Gateway Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -47,7 +47,7 @@ slice should be the whole-tree closeout review.
 - [AOA-T-0065 canonical readiness](../../../../../techniques/tool-use/tool-gateway/mcp-gateway-proxy/notes/canonical-readiness.md)
 - [Tool-use route card](../../../../../techniques/tool-use/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Tool-gateway tree pilot receipt](../../../../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
+- [Tool-gateway tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
 - [Tool-gateway direct-read singleton review](tool-gateway-direct-read-singleton-review.md)
 - [Technique family scout row for `tool-gateway`](../reports/technique_family_scout.md)
 - [Technique topology scout row for `tool-gateway`](../reports/technique_topology_scout.md)

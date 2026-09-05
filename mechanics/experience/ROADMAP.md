@@ -28,9 +28,9 @@ atom is visible.
 4. Keep handoff compression, scope boundary, and service clarity in
    `hold_overlap` until their portable atom is smaller than live office,
    release, service runtime, and existing handoff/lifecycle bundles.
-5. Preserve any discovered real wave/source material in `legacy/raw/` and keep
-   `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
-   aligned.
+5. If a future compaction needs historical source recovery, record the exact
+   pre-change Git commit and original path in `PROVENANCE.md` or the retirement
+   decision; do not create a `legacy/raw/` copy or archive-only ledger.
 
 ## When Time Comes
 

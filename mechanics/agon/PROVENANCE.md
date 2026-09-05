@@ -22,18 +22,17 @@ the active route.
 
 | Preserved source | Active route | Distilled signal |
 |---|---|---|
-| [legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md](legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md) | [parts/move-technique-bridge](parts/move-technique-bridge/README.md) | Wave IV gave `aoa-techniques` requested-only practice candidates behind center-owned Agon owner binding. |
-| [legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md](legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md) | [parts/recurrence-adapter](parts/recurrence-adapter/README.md) | Wave IV candidate surfaces can be observed by recurrence, but recurrence cannot create arena, verdict, scar, rank, or rewrite effects. |
-| [legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md](legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md) | [parts/epistemic-practice-boundary](parts/epistemic-practice-boundary/README.md) | Epistemic technique candidates stay reusable-practice only and do not execute workflows, issue eval verdicts, or mutate memory. |
-| [legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md](legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md) | [parts/epistemic-technique-candidates](parts/epistemic-technique-candidates/README.md) | Epistemic move-extension support remains requested-only until owner review promotes a real technique bundle. |
+| [Wave IV immutable source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md) | [parts/move-technique-bridge](parts/move-technique-bridge/README.md) | Wave IV gave `aoa-techniques` requested-only practice candidates behind center-owned Agon owner binding. |
+| [Wave IV immutable source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md) | [parts/recurrence-adapter](parts/recurrence-adapter/README.md) | Wave IV candidate surfaces can be observed by recurrence, but recurrence cannot create arena, verdict, scar, rank, or rewrite effects. |
+| [Wave XV immutable source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md) | [parts/epistemic-practice-boundary](parts/epistemic-practice-boundary/README.md) | Epistemic technique candidates stay reusable-practice only and do not execute workflows, issue eval verdicts, or mutate memory. |
+| [Wave XV immutable source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md) | [parts/epistemic-technique-candidates](parts/epistemic-technique-candidates/README.md) | Epistemic move-extension support remains requested-only until owner review promotes a real technique bundle. |
 
 ## Detailed districts
 
-- [legacy/INDEX.md](legacy/INDEX.md): map from preserved raw wave files to active
-  routes.
-- [legacy/raw](legacy/raw/): preserved wave source notes.
-- [legacy/DISTILLATION_LOG.md](legacy/DISTILLATION_LOG.md): dated accounting for
-  this raw-to-active split.
+- The [immutable Wave IV source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md)
+  and [immutable Wave XV source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE15_TECHNIQUES_LANDING.md)
+  are the historical recovery paths.
+- Current route accounting remains in this bridge and `LANDING_LOG.md`.
 
 ## Downstream Distillation Bridge
 
@@ -45,6 +44,7 @@ or Wave XV receipts into the active Distillation route.
 
 ## Distillation rule
 
-When a preserved source changes current behavior, update the relevant active
-part first, then update this bridge, `legacy/INDEX.md`, and `LANDING_LOG.md`.
+When a historical source changes current behavior, update the relevant active
+part first, then update this bridge and `LANDING_LOG.md`, retaining the exact
+immutable Git commit and original path here.
 Active part docs must not become raw wave inventories.

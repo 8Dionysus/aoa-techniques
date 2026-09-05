@@ -4,8 +4,8 @@ This active ledger records the current external donor-derived technique
 candidate accounting for `aoa-techniques`. It is intentionally compact: use it
 to decide the current route, not to replay every wave note.
 
-The detailed pre-prune receipt is preserved at
-[legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](../../legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md).
+The detailed pre-prune receipt is recoverable at the [immutable historical
+source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md).
 
 It does not change technique status, create a new bundle, or authorize import by
 itself.

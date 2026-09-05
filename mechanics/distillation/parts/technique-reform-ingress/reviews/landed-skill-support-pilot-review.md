@@ -7,7 +7,7 @@ Migration review:
 [Skill-Support Direct-Read Migration Review](skill-support-direct-read-migration-review.md)
 
 Migration receipt:
-[Skill-Support Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-skill-support-tree-pilot.md)
+[Skill-Support Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-skill-support-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -49,8 +49,8 @@ path movement.
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Skill-support tree pilot receipt](../../../../../legacy/receipts/2026-05-05-skill-support-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Skill-support tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-skill-support-tree-pilot.md)
 - [Technique tree projection rows for `skill-support` and `evaluation-chain`](../reports/technique_tree_projection.md)
 - [Technique family scout rows for `skill-support` and `evaluation-chain`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `skill-support` and `evaluation-chain`](../reports/technique_topology_scout.md)

@@ -98,7 +98,7 @@ Future path changes happen in projection-first waves:
 2. review assignments against authored bundle meaning
 3. choose one bounded trunk, shelf, split, merge, or hold
 4. move only that bounded subtree after direct reading accepts the change
-5. preserve a compact migration receipt in root `legacy/receipts/`
+5. preserve a compact migration rationale in `docs/decisions/`
 6. update links, generated catalogs, capsules, docs, validators, and decisions
 7. stop after validation proves the new path is easier to read
 
@@ -133,8 +133,8 @@ themselves.
 ## Stop Lines
 
 - Do not move broad technique surfaces in one wave.
-- Do not move active technique bundles through root `legacy/`; preserve only
-  receipts there.
+- Do not move active technique bundles through historical surfaces; preserve
+  rationale in the retirement decision.
 - Do not require `tree_path` frontmatter before projection review proves value.
 - Do not treat `domain`, `kind`, generated family assignments, or mechanic
   package shape as automatic path authority.
@@ -151,9 +151,7 @@ holds.
 Historical movement evidence now lives in:
 
 - [Final Tree Migration Ledger](../mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)
-- [Root Legacy Index](../legacy/INDEX.md)
-- [legacy/receipts/](../legacy/receipts/)
-- [Distillation tree migration breadcrumbs](../mechanics/distillation/legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md)
+- [legacy retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md)
 
 The authored tree is current path architecture. It does not add `tree_path`,
 `family`, capability, substrate, execution-profile, or risk frontmatter; it does
@@ -163,8 +161,8 @@ posture; and it does not make generated projection stronger than bundle meaning.
 ## Next Honest Build Path
 
 Future path changes should start from the current tree, refresh the projection,
-read affected bundles directly, and preserve compact receipts under
-`legacy/receipts/`.
+read affected bundles directly, and preserve compact rationale in
+`docs/decisions/`.
 
 The next reform program should start with a corpus-wide bundle anatomy and
 small-agent usability audit before changing individual leaves.

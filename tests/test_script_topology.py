@@ -60,7 +60,6 @@ REQUIRED_ENTRY_FIELDS = {
 }
 
 CLI_SMOKE_COMMANDS = (
-    (".agents/spark/scripts/validate_spark_lane.py", "--help"),
     ("scripts/ci_gate.py", "--help"),
     ("scripts/technique_intelligence.py", "--help"),
 )

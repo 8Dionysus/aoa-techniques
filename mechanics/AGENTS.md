@@ -52,8 +52,10 @@ Read:
 3. If the work cites an AoA center-side `ORQ-*` request or downstream owner
    request, read `mechanics/REQUEST_RECEIPTS.md`.
 4. Read the nearest package `AGENTS.md` or local `Mechanic card`.
-5. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `legacy/`,
-   or `parts/`, use those active route surfaces before opening raw legacy.
+5. If the package has `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, or `parts/`,
+   use those active route surfaces; recover retired source only through the
+   exact Git commit and original path recorded in `PROVENANCE.md` or the
+   retirement decision.
 6. For status, release, or promotion changes, also read
    `docs/review/CANONICAL_RUBRIC.md`, `docs/review/CANONICAL_REVIEW_GUIDE.md`, and
    `docs/RELEASING.md`.
@@ -85,14 +87,12 @@ Read `README.md` only when the selected task needs its human map; do not preload
 - Evidence and donor material must stay public-safe, source-linked, and
   reversible.
 - Generated artifacts remain evidence, not authority.
-- Legacy surfaces preserve source lineage. They are not trash archives, and they
-  must not be the only place current active behavior lives.
-- Grown mechanics packages should keep a `legacy/` scaffold even when raw
-  inventory is empty. Use it as the provenance district and source-to-active
-  bridge, not as a placeholder receipt store.
+- Historical source lineage is recovered from exact immutable Git commit/path
+  references in `PROVENANCE.md` or the retirement decision; it is not an
+  active contract or an archive-only directory.
 - When a package grows beyond a simple README, prefer the AoA split:
-  `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`, `parts/`, and
-  `legacy/`, one mechanic at a time.
+  `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, `LANDING_LOG.md`, and `parts/`,
+  one mechanic at a time.
 - Package `ROADMAP.md` files should name current contour, next work,
   condition-based later triggers, and stop-lines without becoming landing logs
   or raw ledgers.

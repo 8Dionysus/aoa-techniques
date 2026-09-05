@@ -1,10 +1,11 @@
 # Antifragility Provenance
 
 This file preserves the active-first bridge from the pre-split chaos wave file
-to the current active parts.
+to the current active parts. Historical recovery uses the immutable baseline
+commit and original path recorded by the retirement decision.
 
 The pre-split file carried donor pack, donor artifact, and digest information,
-so this pass preserves it under `legacy/raw/` and distills only the current
+so this pass records its exact committed Git path and distills only the current
 practice route into active parts.
 
 ## Current Route First
@@ -16,13 +17,14 @@ Start with:
 - [PARTS](PARTS.md)
 - [parts/](parts/)
 
-Open `legacy/raw/` only when the donor trace or original wave wording is needed.
+Open the immutable donor path only when the donor trace or original wave wording
+is needed.
 
 ## Active Landing Map
 
 | Previous surface | Current active home | Preservation note |
 |---|---|---|
-| Pre-split flat `CHAOS_WAVE1_PROGRAM.md` | [parts/chaos-stress-program](parts/chaos-stress-program/README.md) and [parts/recovery-practice-bridge](parts/recovery-practice-bridge/README.md) | Donor digest and original wave program wording are preserved in [legacy/raw/CHAOS_WAVE1_PROGRAM.md](legacy/raw/CHAOS_WAVE1_PROGRAM.md). Active parts keep only the reusable technique-layer route. |
+| Pre-split flat `CHAOS_WAVE1_PROGRAM.md` | [parts/chaos-stress-program](parts/chaos-stress-program/README.md) and [parts/recovery-practice-bridge](parts/recovery-practice-bridge/README.md) | Donor digest and original wave program wording are recoverable from the [immutable historical source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/antifragility/legacy/raw/CHAOS_WAVE1_PROGRAM.md). Active parts keep only the reusable technique-layer route. |
 
 ## AoA Center Relation
 

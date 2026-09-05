@@ -33,7 +33,7 @@ Use named homes for everything else:
 | Role | Home |
 |---|---|
 | durable rationale | [decisions](decisions/) |
-| repo-wide public-safe raw, archive, and receipts | [legacy](../legacy/) |
+| repo-wide historical recovery | [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) |
 | mechanic lineage or part operation | [mechanics](../mechanics/) |
 | generated JSON | [generated](../generated/) |
 | active review contracts | [review](review/) |
@@ -55,19 +55,19 @@ evidence trail.
 | Public governance and legal | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [SECURITY](../SECURITY.md), [LICENSE](../LICENSE) | do not become technique doctrine catalogs |
 | Release history | [CHANGELOG](../CHANGELOG.md) | record release history, not future direction |
 | Agent and validation entry | [AGENTS](../AGENTS.md), [VALIDATION](../VALIDATION.md), [.agents](../.agents/), [agents mesh config](../config/agents_mesh.json), [agents mesh mirror](../generated/agents_mesh.min.json), [AGENTS_MESH_PROTOCOL](guardrails/AGENTS_MESH_PROTOCOL.md) | keep inherited semantic routes separate from on-demand procedure; neither replaces public docs or owner contracts |
-| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [evals](../evals/), [examples](../examples/), [generated](../generated/), [kag](../kag/), [legacy](../legacy/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [stats](../stats/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
+| Tooling, provenance, and machine districts | [.github](../.github/), [config](../config/), [docs](./), [evals](../evals/), [examples](../examples/), [generated](../generated/), [kag](../kag/), [mechanics](../mechanics/), [quests](../quests/), [schemas](../schemas/), [scripts](../scripts/), [stats](../stats/), [templates](../templates/), [tests](../tests/), [techniques](../techniques/) | keep local route guidance where needed |
 | Development requirements | [.gitignore](../.gitignore), [requirements-dev.txt](../requirements-dev.txt) | stay technical and small |
 
 ## Surfaces That Should Not Live In Root
 
 | Surface kind | Better home | Reason |
 |---|---|---|
-| Audit baselines, closure packets, or searched-lane ledgers | [Audit raw legacy](../mechanics/audit/legacy/raw/) plus [Audit provenance](../mechanics/audit/PROVENANCE.md) | evidence is useful; root direction should stay live |
-| Repo-wide pre-migration receipts or retired tail surfaces | [legacy/raw](../legacy/raw/), [legacy/archive](../legacy/archive/), [legacy/receipts](../legacy/receipts/) | history stays auditable without becoming active canon |
+| Audit baselines, closure packets, or searched-lane ledgers | [Audit provenance](../mechanics/audit/PROVENANCE.md) and the [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) | evidence is useful; root direction should stay live |
+| Repo-wide pre-migration receipts or retired tail surfaces | [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) | immutable Git history stays auditable without becoming active canon |
 | Mechanic runbooks, reports, configs, scripts, schemas, examples, manifests, or tests | owning `mechanics/<slug>/parts/<part>/` district | one-owner operating surfaces belong beside their mechanic |
 | Root catch-all data district without active repo-wide payload | strongest owner home, or a decision-backed new root district | an empty `data/` shelf attracts misplaced mechanic-local or generated material |
-| Agent-lane packet or swarm recipe | `.agents/<lane>/`, including `.agents/spark/` | agent-lane packet guidance belongs under the agent district |
-| Donor intake notes, raw external records, or candidate lists | [Distillation candidate intake](../mechanics/distillation/parts/candidate-intake/README.md), another owning Distillation part, or root [legacy/raw](../legacy/raw/) only for repo-wide preservation | donor evidence should not become canon or a second incoming queue |
+| Agent-lane packet or swarm recipe | `.agents/<lane>/` | agent-lane packet guidance belongs under the agent district |
+| Donor intake notes, raw external records, or candidate lists | [Distillation candidate intake](../mechanics/distillation/parts/candidate-intake/README.md) or another owning Distillation part | donor evidence should not become canon or a second incoming queue |
 | Generated catalogs, capsules, projections, or readers | [generated](../generated/) or [readers](readers/) as appropriate | generated surfaces are reproducible companions, not authored truth |
 | Technique meaning | [techniques](../techniques/) | root routes to meaning; it does not re-author it |
 | Local scratchpads or private operation notes | untracked local notes or the owning private repo | public root must stay sanitized and reusable |
@@ -100,12 +100,11 @@ compact, route it to the owner surface that can carry the detail.
 | Authority and design | [CHARTER](../CHARTER.md), [DESIGN](../DESIGN.md), and [DESIGN.AGENTS](../DESIGN.AGENTS.md) stay root because they define boundary, system form, and agent-surface form. |
 | Corpus direction | [TECHNIQUE_INDEX](../TECHNIQUE_INDEX.md), [ROADMAP](../ROADMAP.md), and [QUESTBOOK](../QUESTBOOK.md) stay root only while they remain compact route/status surfaces. |
 | Docs districts | [guardrails](guardrails/), [review](review/), [selection](selection/), [source-lift](source-lift/), [validation](validation/), and [readers](readers/) keep flat docs from turning into a maze. |
-| Provenance | [legacy](../legacy/) is the repo-wide public-safe provenance district; active mechanic lineage stays mechanic-local. |
+| Provenance | The retirement decision pins repo-wide historical recovery in Git; active mechanic lineage stays mechanic-local. |
 | Mechanics artifacts | Reports, scout inputs, overlays, scripts, manifests, schemas, examples, and tests that serve one mechanic part live with that part. |
 | Local KAG provider | [kag](../kag/) carries the repo-local provider packet, source-return handles, and validation receipts for downstream KAG consumers. |
 | Local stats port | [stats](../stats/) carries owner-defined technique-canon questions, measurement contracts, and public reference packets; cross-owner grammar and aggregation remain with `aoa-stats`. |
 | Root data | Empty root `data/` is retired until a concrete repo-wide data contract justifies it. |
-| Spark lane | The previous root Spark surface lives under [.agents/spark](../.agents/spark/) as an agent-lane packet, not a standalone public root district. |
 | Validation entry | [VALIDATION](../VALIDATION.md) stays root as the on-demand human map; blocking command order remains in `config/validation_lanes.json`, focused procedure remains with its owner, and README stays human/public. |
 
 ## Final Rule

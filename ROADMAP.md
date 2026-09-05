@@ -36,8 +36,7 @@ the surfaces that produced or reviewed it:
 - [final tree migration ledger](mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)
 - [whole tree closeout review](mechanics/distillation/parts/technique-reform-ingress/reviews/whole-tree-closeout-review.md)
 - [bundle anatomy final closeout ledger](mechanics/distillation/parts/technique-reform-ingress/reviews/bundle-anatomy-final-closeout-ledger.md)
-- [root roadmap tree migration breadcrumbs receipt](mechanics/distillation/legacy/raw/ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md)
-- [root closure audit roadmap receipt](mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md)
+- [legacy retirement decision](docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md)
 
 Those are evidence, not live root-roadmap body.
 
@@ -171,8 +170,8 @@ composition can belong to larger agents or neighboring layers.
 
 ## Horizon: Mechanics To Canon
 
-Mechanics packages keep active routes, parts, provenance, landing logs, package
-roadmaps, and legacy scaffolds around canon.
+Mechanics packages keep active routes, parts, provenance, landing logs, and
+package roadmaps around canon.
 
 Next: use mechanics to preserve lineage and candidate pressure while
 extracting only one atomic practice at a time into [techniques](techniques/).

@@ -4,7 +4,7 @@ This file preserves the active-first bridge from AoA boundary-bridge law,
 local source-lift docs, and existing boundary-adjacent technique bundles to the
 current local parts.
 
-The [legacy scaffold](legacy/README.md) is present for source-to-active
+The [legacy scaffold](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/boundary-bridge/legacy/README.md) is present for source-to-active
 accounting. Its current raw inventory is empty because no local pre-split
 boundary-bridge wave receipt or raw source packet is being preserved. The
 package is a new local mechanic built from active center guidance and

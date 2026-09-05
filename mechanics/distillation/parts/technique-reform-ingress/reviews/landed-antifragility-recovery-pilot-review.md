@@ -7,7 +7,7 @@ Migration review:
 [Antifragility-Recovery Direct-Read Migration Review](antifragility-recovery-direct-read-migration-review.md)
 
 Migration receipt:
-[Antifragility-Recovery Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md)
+[Antifragility-Recovery Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -47,8 +47,8 @@ trunk is accepted only from projection rows.
 - [AOA-T-0100 stress-receipt-reground-closeout](../../../../../techniques/recovery/antifragility-recovery/stress-receipt-reground-closeout/TECHNIQUE.md)
 - [AOA-T-0098 receipt-first-failure-analysis](../../../../../techniques/recovery/antifragility-recovery/receipt-first-failure-analysis/TECHNIQUE.md)
 - [Recovery route card](../../../../../techniques/recovery/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Antifragility-recovery tree pilot receipt](../../../../../legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Antifragility-recovery tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-antifragility-recovery-tree-pilot.md)
 - [Antifragility-recovery direct-read migration review](antifragility-recovery-direct-read-migration-review.md)
 - [Landed diagnosis-repair pilot review](landed-diagnosis-repair-pilot-review.md)
 - [Technique tree projection rows for `antifragility-recovery` and `ready-work-graphs`](../reports/technique_tree_projection.md)

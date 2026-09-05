@@ -150,8 +150,7 @@ before editing. It should answer:
 The package roadmap is not a landing log, raw ledger, proof verdict, hidden
 backlog, package inventory, or substitute for the root roadmap. Update it when
 future-facing package meaning moves. Leave checked landings in `LANDING_LOG.md`,
-source lineage in `PROVENANCE.md` and `legacy/`, and repo-level direction in
-root `ROADMAP.md`.
+source lineage in `PROVENANCE.md`, and repo-level direction in root `ROADMAP.md`.
 
 ## Candidate Gate
 
@@ -166,8 +165,8 @@ and [Technique Topology Contract](../docs/TECHNIQUE_TOPOLOGY_CONTRACT.md):
 - nearest related techniques, alternatives, or conflict points
 - owner boundary, portable core, and stop line
 
-If those cannot be named, keep the material in mechanics, legacy, or a
-candidate ledger instead of drafting a broad technique bundle.
+If those cannot be named, keep the material in mechanics or a candidate ledger
+instead of drafting a broad technique bundle.
 
 ## Active And Legacy Split
 
@@ -178,10 +177,9 @@ at a time:
 - active behavior in `README.md`, `DIRECTION.md`, `PARTS.md`, and `parts/`
 - provenance bridge in `PROVENANCE.md`
 - checked landing history in `LANDING_LOG.md`
-- source-to-active accounting in `legacy/INDEX.md` and
-  `legacy/DISTILLATION_LOG.md`
-- preserved source receipts in `legacy/raw/` when raw receipts exist; otherwise
-  an explicit empty raw inventory in `legacy/raw/README.md`
+- source-to-active accounting in `PROVENANCE.md` and `LANDING_LOG.md`
+- historical source recovery through the [immutable retirement decision](../docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md),
+  which pins each pre-prune path to its committed baseline
 
-Use the package card first, then open active parts. Enter legacy through
-`PROVENANCE.md` only when the source route matters.
+Use the package card first, then open active parts. Consult the immutable
+retirement decision only when historical source recovery matters.

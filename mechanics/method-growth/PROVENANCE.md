@@ -45,7 +45,7 @@ replaced with public part-local schema URLs; field semantics stayed unchanged.
 
 The pre-split files were current compact active surfaces rather than large wave
 receipts. Their content moved into part-local active homes. The
-[legacy scaffold](legacy/README.md) is present for source-to-active accounting,
+[legacy scaffold](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/method-growth/legacy/README.md) is present for source-to-active accounting,
 and its current raw inventory is empty.
 
 ## Method-Growth Rule

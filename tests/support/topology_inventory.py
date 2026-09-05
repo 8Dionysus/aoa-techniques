@@ -54,8 +54,6 @@ def classify_test_home(relative_path: str) -> tuple[str, str]:
     parts = Path(relative_path).parts
     if parts[0] == "tests":
         return "root", "tests"
-    if parts[:3] == (".agents", "spark", "tests"):
-        return "agent-lane", ".agents/spark/tests"
     if parts[0] == "mechanics":
         test_index = parts.index("tests")
         home = "/".join(parts[: test_index + 1])

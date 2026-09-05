@@ -7,7 +7,7 @@ Migration review:
 [Decision-Routing Direct-Read Migration Review](decision-routing-direct-read-migration-review.md)
 
 Migration receipt:
-[Decision-Routing Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md)
+[Decision-Routing Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-decision-routing-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -45,7 +45,7 @@ slice should run a direct-read review for `governance/approval-evidence`.
 - [AOA-T-0079 checklist](../../../../../techniques/governance/decision-routing/risk-passport-lift/checks/risk-passport-lift-checklist.md)
 - [AOA-T-0079 canonical readiness](../../../../../techniques/governance/decision-routing/risk-passport-lift/notes/canonical-readiness.md)
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
-- [Decision-routing tree pilot receipt](../../../../../legacy/receipts/2026-05-05-decision-routing-tree-pilot.md)
+- [Decision-routing tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-decision-routing-tree-pilot.md)
 - [Decision-routing direct-read migration review](decision-routing-direct-read-migration-review.md)
 - [Technique family scout rows for `decision-routing` and `approval-evidence`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `decision-routing` and `approval-evidence`](../reports/technique_topology_scout.md)

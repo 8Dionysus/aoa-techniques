@@ -7,9 +7,9 @@ mechanics.
 
 Scope:
 
-- moved Wave IV and Wave XV landing receipts into `legacy/raw/`
+- recorded immutable Wave IV and Wave XV recovery paths in `PROVENANCE.md`
 - moved current Agon behavior into active `parts/`
-- added `DIRECTION.md`, `PARTS.md`, `PROVENANCE.md`, and legacy accounting
+- added `DIRECTION.md`, `PARTS.md`, and `PROVENANCE.md` accounting
 - kept requested candidate posture unchanged
 
 Stop-lines preserved:

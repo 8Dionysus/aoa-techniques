@@ -8,7 +8,7 @@ mechanic.
 Changed:
 
 - moved all closed root `incoming/` packet roots into
-  [closed incoming packets](legacy/archive/closed-incoming-packets/README.md)
+  [closed incoming packets](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/archive/closed-incoming-packets/README.md)
   after their first-pass landing queues were exhausted
 - moved active intake ownership to
   [Candidate Intake](parts/candidate-intake/README.md)
@@ -277,7 +277,7 @@ Changed:
 - moved `AOA-T-0065` from `techniques/agent-workflows/` into
   `techniques/tool-use/tool-gateway/`
 - added the root legacy receipt
-  [2026-05-05-tool-gateway-tree-pilot](../../legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
+  [2026-05-05-tool-gateway-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-tool-gateway-tree-pilot.md)
 - added the compact `tool-use` trunk route card and updated
   `agent-workflows` as a retained frontmatter review lane with no active
   direct leaf bundles
@@ -359,7 +359,7 @@ Changed:
   `techniques/agent-workflows/` into
   `techniques/governance/practice-adoption-lifecycle/`
 - added the root legacy receipt
-  [2026-05-05-practice-adoption-lifecycle-tree-pilot](../../legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md)
+  [2026-05-05-practice-adoption-lifecycle-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-practice-adoption-lifecycle-tree-pilot.md)
 - updated governance and agent-workflows route-card accounting for the new
   shelf
 - repaired active adjacent links into the moved practice-adoption-lifecycle
@@ -444,7 +444,7 @@ Changed:
   `techniques/agent-workflows/` into
   `techniques/governance/promotion-boundary/`
 - added the root legacy receipt
-  [2026-05-05-promotion-boundary-tree-pilot](../../legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md)
+  [2026-05-05-promotion-boundary-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md)
 - updated governance and agent-workflows route-card accounting for the new
   shelf
 - repaired active adjacent links into the moved promotion-boundary leaves and
@@ -527,7 +527,7 @@ Changed:
   `techniques/agent-workflows/` into
   `techniques/governance/automation-readiness/`
 - added the root legacy receipt
-  [2026-05-05-automation-readiness-tree-pilot](../../legacy/receipts/2026-05-05-automation-readiness-tree-pilot.md)
+  [2026-05-05-automation-readiness-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-automation-readiness-tree-pilot.md)
 - updated governance and agent-workflows route-card accounting for the new
   shelf
 - repaired active adjacent links into the moved automation-readiness leaves
@@ -687,7 +687,7 @@ Changed:
   `kind: workflow`, `AOA-T-0096` as `kind: validation`, and `AOA-T-0094` as
   `kind: distribution`
 - added
-  [2026-05-05-owner-truth-closeout-tree-pilot](../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
+  [2026-05-05-owner-truth-closeout-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
   as the root legacy receipt for the twenty-fourth migration
 - updated the proof route card to name `owner-truth-closeout/` as bounded
   owner-truth entry, closeout, remote-owner, generated-publish, and mirror
@@ -783,7 +783,7 @@ Changed:
 - kept `AOA-T-0036` as `kind: composition`, `AOA-T-0038` as `kind:
   workflow`, and `AOA-T-0037` plus `AOA-T-0039` as `kind: validation`
 - added
-  [2026-05-05-runtime-truth-lifecycle-tree-pilot](../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
+  [2026-05-05-runtime-truth-lifecycle-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
   as the root legacy receipt for the twenty-third migration
 - updated the execution route card to name `runtime-truth-lifecycle/` as local
   runtime truth, lifecycle, readiness, and baseline-first comparison
@@ -875,7 +875,7 @@ Changed:
 - kept `AOA-T-0106` as `domain: docs`, `kind: artifact`,
   `status: promoted`
 - added
-  [2026-05-05-review-evidence-tree-pilot](../../legacy/receipts/2026-05-05-review-evidence-tree-pilot.md)
+  [2026-05-05-review-evidence-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-review-evidence-tree-pilot.md)
   as the root legacy receipt for the twenty-second migration
 - updated the proof route card to name `review-evidence/` as bounded review
   evidence rather than proof verdict authority, eval-suite ownership,
@@ -962,7 +962,7 @@ Changed:
 - kept `AOA-T-0069` as `domain: agent-workflows`, `kind: handoff`,
   `status: promoted`
 - added
-  [2026-05-05-approval-evidence-tree-pilot](../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
+  [2026-05-05-approval-evidence-tree-pilot](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
   as the root legacy receipt for the twenty-first migration
 - updated the governance route card to name `approval-evidence/` as boundary
   evidence rather than approval policy, security framework authority, runtime
@@ -2969,7 +2969,7 @@ Not moved:
 Changed:
 
 - preserved the active external candidate ledger as
-  [legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md)
+  [legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md)
 - marked `seed_4.txt` and `seed_6.txt` as historical source labels whose raw
   files are not present in the current checkout
 - kept candidate verdicts, counts, and narrowing-lane posture unchanged
@@ -3092,7 +3092,7 @@ Not moved:
 Changed:
 
 - preserved the active cross-layer candidate ledger as
-  [legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md)
+  [legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md)
 - compacted [parts/cross-layer-candidate-ledger](parts/cross-layer-candidate-ledger/README.md)
   so active route keeps current accounting, landed anchors, implementation
   rules, and reopen gates instead of detailed landed wave execution order
