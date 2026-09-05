@@ -3,7 +3,7 @@
 ## Status
 
 This package is a local candidate-only mechanics surface. The
-[legacy scaffold](legacy/README.md) is present for source-to-active accounting,
+[legacy scaffold](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/rpg/legacy/README.md) is present for source-to-active accounting,
 and its current raw inventory is empty because no local pre-split RPG wave,
 seed, or raw receipt is preserved inside `aoa-techniques`.
 

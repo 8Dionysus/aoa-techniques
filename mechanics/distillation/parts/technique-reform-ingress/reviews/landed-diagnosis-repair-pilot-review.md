@@ -7,7 +7,7 @@ Migration review:
 [Diagnosis-Repair Direct-Read Migration Review](diagnosis-repair-direct-read-migration-review.md)
 
 Migration receipt:
-[Diagnosis-Repair Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md)
+[Diagnosis-Repair Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -42,8 +42,8 @@ test a docs-rooted instruction district before the more derived
 - [AOA-T-0082 repair-shape-from-diagnosis](../../../../../techniques/recovery/diagnosis-repair/repair-shape-from-diagnosis/TECHNIQUE.md)
 - [AOA-T-0083 checkpoint-bound-self-repair](../../../../../techniques/recovery/diagnosis-repair/checkpoint-bound-self-repair/TECHNIQUE.md)
 - [Recovery route card](../../../../../techniques/recovery/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Diagnosis-repair tree pilot receipt](../../../../../legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Diagnosis-repair tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-diagnosis-repair-tree-pilot.md)
 - [Technique tree projection rows for `diagnosis-repair`,
   `instruction-surface`, and `kag-source-lift`](../reports/technique_tree_projection.md)
 - [First family shelf review pack](first-family-shelf-review-pack.md)

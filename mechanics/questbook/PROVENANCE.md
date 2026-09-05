@@ -4,7 +4,7 @@ This file preserves the active-first bridge from AoA Questbook law, local
 Questbook source surfaces, and existing quest-adjacent technique bundles to
 the current local parts.
 
-The [legacy scaffold](legacy/README.md) is present for source-to-active
+The [legacy scaffold](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/questbook/legacy/README.md) is present for source-to-active
 accounting. Its current raw inventory is empty because no local pre-split
 Questbook wave receipt or raw source packet is being preserved. The package is
 a local mechanic built around already-landed source surfaces: `QUESTBOOK.md`,

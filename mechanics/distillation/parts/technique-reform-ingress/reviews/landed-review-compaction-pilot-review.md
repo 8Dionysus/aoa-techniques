@@ -7,7 +7,7 @@ Migration review:
 [Review-Compaction Direct-Read Migration Review](review-compaction-direct-read-migration-review.md)
 
 Migration receipt:
-[Review-Compaction Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
+[Review-Compaction Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -39,8 +39,8 @@ that shelf is the nearest continuity sibling and will test whether
 - [AOA-T-0052 review-findings-compaction](../../../../../techniques/continuity/review-compaction/review-findings-compaction/TECHNIQUE.md)
 - [AOA-T-0054 compaction-resilient-skill-loading](../../../../../techniques/continuity/review-compaction/compaction-resilient-skill-loading/TECHNIQUE.md)
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Review-compaction tree pilot receipt](../../../../../legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Review-compaction tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-review-compaction-tree-pilot.md)
 - [Technique tree projection rows for `review-compaction` and
   `handoff-continuation`](../reports/technique_tree_projection.md)
 - the release lane result recorded in the migration receipt

@@ -7,7 +7,7 @@ Migration review:
 [Capability-Registry Direct-Read Migration Review](capability-registry-direct-read-migration-review.md)
 
 Migration receipt:
-[Capability-Registry Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-capability-registry-tree-pilot.md)
+[Capability-Registry Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-capability-registry-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -52,8 +52,8 @@ runtime execution doctrine.
 - [AOA-T-0042 upstream-skill-health-checking](../../../../../techniques/instruction/skill-discovery/upstream-skill-health-checking/TECHNIQUE.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Capability-registry tree pilot receipt](../../../../../legacy/receipts/2026-05-04-capability-registry-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Capability-registry tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-capability-registry-tree-pilot.md)
 - [Technique tree projection rows for `capability-registry`,
   `capability-boundary`, and `skill-discovery`](../reports/technique_tree_projection.md)
 - [Landed docs-boundary pilot review](landed-docs-boundary-pilot-review.md)

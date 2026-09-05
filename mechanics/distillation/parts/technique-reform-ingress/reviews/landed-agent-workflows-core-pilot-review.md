@@ -7,7 +7,7 @@ Migration review:
 [Agent-Workflows-Core Direct-Read Migration Review](agent-workflows-core-direct-read-migration-review.md)
 
 Migration receipt:
-[Agent-Workflows-Core Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md)
+[Agent-Workflows-Core Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -44,7 +44,7 @@ slice should run a direct-read review for `continuity/donor-harvest`.
 - [AOA-T-0031 shell-composable-agent-invocation](../../../../../techniques/execution/agent-workflows-core/shell-composable-agent-invocation/TECHNIQUE.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Agent-workflows-core tree pilot receipt](../../../../../legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md)
+- [Agent-workflows-core tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-agent-workflows-core-tree-pilot.md)
 - [Agent-workflows-core direct-read migration review](agent-workflows-core-direct-read-migration-review.md)
 - [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)
 - [Technique family scout rows for `agent-workflows-core` and `donor-harvest`](../reports/technique_family_scout.md)

@@ -10,17 +10,6 @@ from scripts import validate_repo
 
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
-# Historical tree-migration assertions read the preserved receipt, not the live
-# root roadmap, so root direction can stay compact.
-TREE_MIGRATION_BREADCRUMB_ROADMAP = (
-    REPO_ROOT
-    / "mechanics"
-    / "distillation"
-    / "legacy"
-    / "raw"
-    / "ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md"
-)
-
 PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/donor-refinery/README.md",
     "mechanics/distillation/parts/external-import-runbook/README.md",
@@ -212,14 +201,11 @@ def tree_migration_context_paths() -> tuple[Path, ...]:
         / "parts"
         / "technique-reform-ingress"
     )
-    receipt_root = REPO_ROOT / "legacy" / "receipts"
     return (
         REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md",
-        TREE_MIGRATION_BREADCRUMB_ROADMAP,
         reform_root / "README.md",
         reform_root / "reviews" / "README.md",
         *sorted((reform_root / "reviews").glob("*.md")),
-        *sorted(receipt_root.glob("*-tree-pilot.md")),
     )
 
 

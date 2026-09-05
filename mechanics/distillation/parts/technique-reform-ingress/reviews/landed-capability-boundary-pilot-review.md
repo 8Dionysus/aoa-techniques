@@ -7,7 +7,7 @@ Migration review:
 [Capability-Boundary Direct-Read Migration Review](capability-boundary-direct-read-migration-review.md)
 
 Migration receipt:
-[Capability-Boundary Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md)
+[Capability-Boundary Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -57,8 +57,8 @@ governance, or routing policy.
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Capability-boundary tree pilot receipt](../../../../../legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Capability-boundary tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-capability-boundary-tree-pilot.md)
 - [Technique tree projection rows for `capability-boundary` and
   `skill-discovery`](../reports/technique_tree_projection.md)
 - [Technique family scout rows for `capability-boundary` and

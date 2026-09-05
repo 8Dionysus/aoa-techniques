@@ -7,7 +7,7 @@ Migration review:
 [History-Artifacts Direct-Read Migration Review](history-artifacts-direct-read-migration-review.md)
 
 Migration receipt:
-[History-Artifacts Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md)
+[History-Artifacts Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -50,8 +50,8 @@ read the four recovery bundles directly before any path movement.
 - [AOA-T-0066 transcript-replay-artifact](../../../../../techniques/history/history-artifacts/transcript-replay-artifact/TECHNIQUE.md)
 - [AOA-T-0067 transcript-linked-code-lineage](../../../../../techniques/history/history-artifacts/transcript-linked-code-lineage/TECHNIQUE.md)
 - [History route card](../../../../../techniques/history/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [History-artifacts tree pilot receipt](../../../../../legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [History-artifacts tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-history-artifacts-tree-pilot.md)
 - [Technique tree projection rows for `history-artifacts` and `antifragility-recovery`](../reports/technique_tree_projection.md)
 - [Technique family scout rows for `history-artifacts` and `antifragility-recovery`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `history-artifacts` and `antifragility-recovery`](../reports/technique_topology_scout.md)

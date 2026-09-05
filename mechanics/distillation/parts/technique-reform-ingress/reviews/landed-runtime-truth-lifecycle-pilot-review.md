@@ -7,7 +7,7 @@ Migration review:
 [Runtime-Truth-Lifecycle Direct-Read Migration Review](runtime-truth-lifecycle-direct-read-migration-review.md)
 
 Migration receipt:
-[Runtime-Truth-Lifecycle Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
+[Runtime-Truth-Lifecycle Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -52,7 +52,7 @@ slice should run a direct-read review for `proof/owner-truth-closeout`.
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Evaluation route card](../../../../../techniques/evaluation/AGENTS.md)
-- [Runtime-truth-lifecycle tree pilot receipt](../../../../../legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
+- [Runtime-truth-lifecycle tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-runtime-truth-lifecycle-tree-pilot.md)
 - [Runtime-truth-lifecycle direct-read migration review](runtime-truth-lifecycle-direct-read-migration-review.md)
 - [Technique family scout rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `runtime-truth-lifecycle` and `owner-truth-closeout`](../reports/technique_topology_scout.md)

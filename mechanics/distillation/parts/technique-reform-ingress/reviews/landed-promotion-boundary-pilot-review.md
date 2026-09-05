@@ -4,7 +4,7 @@ Source packet:
 [Technique Reform Ingress](../README.md)
 
 Migration receipt:
-[Promotion-Boundary Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md)
+[Promotion-Boundary Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-promotion-boundary-tree-pilot.md)
 
 Previous review:
 [Promotion-Boundary Direct-Read Migration Review](promotion-boundary-direct-read-migration-review.md)

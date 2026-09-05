@@ -7,7 +7,7 @@ Migration review:
 [Owner-Truth-Closeout Direct-Read Migration Review](owner-truth-closeout-direct-read-migration-review.md)
 
 Migration receipt:
-[Owner-Truth-Closeout Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
+[Owner-Truth-Closeout Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -56,7 +56,7 @@ slice should run a direct-read split review for
 - [Proof route card](../../../../../techniques/proof/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
 - [Docs route card](../../../../../techniques/docs/AGENTS.md)
-- [Owner-truth-closeout tree pilot receipt](../../../../../legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
+- [Owner-truth-closeout tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-owner-truth-closeout-tree-pilot.md)
 - [Owner-truth-closeout direct-read migration review](owner-truth-closeout-direct-read-migration-review.md)
 - [Technique family scout rows for `owner-truth-closeout` and `automation-governance`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `owner-truth-closeout` and `automation-governance`](../reports/technique_topology_scout.md)

@@ -7,7 +7,7 @@ Migration review:
 [Instruction-Surface Direct-Read Migration Review](instruction-surface-direct-read-migration-review.md)
 
 Migration receipt:
-[Instruction-Surface Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md)
+[Instruction-Surface Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -47,8 +47,8 @@ subordinate to authored markdown and outside KAG owner authority.
 - [AOA-T-0030 fragmented-agent-context](../../../../../techniques/instruction/instruction-surface/fragmented-agent-context/TECHNIQUE.md)
 - [AOA-T-0035 profile-preset-composition](../../../../../techniques/instruction/instruction-surface/profile-preset-composition/TECHNIQUE.md)
 - [Instruction route card](../../../../../techniques/instruction/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Instruction-surface tree pilot receipt](../../../../../legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Instruction-surface tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-instruction-surface-tree-pilot.md)
 - [Technique tree projection rows for `instruction-surface`,
   `kag-source-lift`, `docs-boundary`, and boundary-watch instruction
   shelves](../reports/technique_tree_projection.md)

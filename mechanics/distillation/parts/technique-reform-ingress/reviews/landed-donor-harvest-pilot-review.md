@@ -7,7 +7,7 @@ Migration review:
 [Donor-Harvest Direct-Read Migration Review](donor-harvest-direct-read-migration-review.md)
 
 Migration receipt:
-[Donor-Harvest Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md)
+[Donor-Harvest Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -48,7 +48,7 @@ slice should run a direct-read review for `governance/decision-routing`.
 - [AOA-T-0085 checklist](../../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/checks/multi-axis-quest-overlay-checklist.md)
 - [AOA-T-0085 canonical readiness](../../../../../techniques/continuity/donor-harvest/multi-axis-quest-overlay/notes/canonical-readiness.md)
 - [Continuity route card](../../../../../techniques/continuity/AGENTS.md)
-- [Donor-harvest tree pilot receipt](../../../../../legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md)
+- [Donor-harvest tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-donor-harvest-tree-pilot.md)
 - [Donor-harvest direct-read migration review](donor-harvest-direct-read-migration-review.md)
 - [Technique family scout rows for `donor-harvest` and `decision-routing`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `donor-harvest` and `decision-routing`](../reports/technique_topology_scout.md)

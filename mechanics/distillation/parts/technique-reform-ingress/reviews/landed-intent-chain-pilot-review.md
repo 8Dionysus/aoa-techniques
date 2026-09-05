@@ -7,7 +7,7 @@ Migration review:
 [Intent-Chain Direct-Read Migration Review](intent-chain-direct-read-migration-review.md)
 
 Migration receipt:
-[Intent-Chain Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-intent-chain-tree-pilot.md)
+[Intent-Chain Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-intent-chain-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -44,7 +44,7 @@ now-projected shelf and `AOA-T-0004` has already landed under `intent-chain`.
 - [AOA-T-0005 new-intent-rollout-checklist](../../../../../techniques/execution/intent-chain/new-intent-rollout-checklist/TECHNIQUE.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
 - [Agent-workflows route card](../../../../../techniques/agent-workflows/AGENTS.md)
-- [Intent-chain tree pilot receipt](../../../../../legacy/receipts/2026-05-05-intent-chain-tree-pilot.md)
+- [Intent-chain tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-intent-chain-tree-pilot.md)
 - [Intent-chain direct-read migration review](intent-chain-direct-read-migration-review.md)
 - [Intent-chain semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/INTENT_CHAIN_SEMANTIC_REVIEW.md)
 - [Agent-workflows core semantic review](../../../../../mechanics/distillation/parts/technique-reform-ingress/reviews/semantic/AGENT_WORKFLOWS_CORE_SEMANTIC_REVIEW.md)

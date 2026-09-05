@@ -7,7 +7,7 @@ Migration review:
 [Approval-Evidence Direct-Read Migration Review](approval-evidence-direct-read-migration-review.md)
 
 Migration receipt:
-[Approval-Evidence Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
+[Approval-Evidence Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -42,7 +42,7 @@ slice should run a direct-read review for `proof/review-evidence`.
 - [AOA-T-0069 checklist](../../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/checks/approval-bound-durable-jobs-checklist.md)
 - [AOA-T-0069 canonical readiness](../../../../../techniques/governance/approval-evidence/approval-bound-durable-jobs/notes/canonical-readiness.md)
 - [Governance route card](../../../../../techniques/governance/AGENTS.md)
-- [Approval-evidence tree pilot receipt](../../../../../legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
+- [Approval-evidence tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-approval-evidence-tree-pilot.md)
 - [Approval-evidence direct-read migration review](approval-evidence-direct-read-migration-review.md)
 - [Technique family scout rows for `approval-evidence` and `review-evidence`](../reports/technique_family_scout.md)
 - [Technique topology scout rows for `approval-evidence` and `review-evidence`](../reports/technique_topology_scout.md)

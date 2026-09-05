@@ -7,7 +7,7 @@ Migration review:
 [Media-Ingest Direct-Read Migration Review](media-ingest-direct-read-migration-review.md)
 
 Migration receipt:
-[Media-Ingest Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
+[Media-Ingest Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -44,8 +44,8 @@ instruction or knowledge-lift shelves move.
 - [AOA-T-0073 semantic-media-bucketing-with-vision-plus-ocr](../../../../../techniques/ingest/media-ingest/semantic-media-bucketing-with-vision-plus-ocr/TECHNIQUE.md)
 - [AOA-T-0074 telegram-export-normalization-to-local-store](../../../../../techniques/ingest/media-ingest/telegram-export-normalization-to-local-store/TECHNIQUE.md)
 - [Ingest route card](../../../../../techniques/ingest/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Media-ingest tree pilot receipt](../../../../../legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Media-ingest tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-04-media-ingest-tree-pilot.md)
 - [Technique tree projection rows for `media-ingest` and
   `diagnosis-repair`](../reports/technique_tree_projection.md)
 - `mechanics/distillation/legacy/archive/closed-incoming-packets/personal-media-ingest/docs/EXTERNAL_TECHNIQUE_CANDIDATES_PERSONAL_MEDIA_INGEST.md`

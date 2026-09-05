@@ -7,7 +7,7 @@ Migration review:
 [Ready-Work-Graphs Direct-Read Migration Review](ready-work-graphs-direct-read-migration-review.md)
 
 Migration receipt:
-[Ready-Work-Graphs Tree Pilot Receipt](../../../../../legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md)
+[Ready-Work-Graphs Tree Pilot Receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md)
 
 Generated lens:
 [Technique Tree Projection](../reports/technique_tree_projection.md)
@@ -45,8 +45,8 @@ action-contract pressure than ready-work visibility.
 - [AOA-T-0050 ready-work-from-blocker-graph](../../../../../techniques/execution/ready-work-graphs/ready-work-from-blocker-graph/TECHNIQUE.md)
 - [AOA-T-0055 requirements-design-tasks-ladder](../../../../../techniques/execution/ready-work-graphs/requirements-design-tasks-ladder/TECHNIQUE.md)
 - [Execution route card](../../../../../techniques/execution/AGENTS.md)
-- [Root legacy index](../../../../../legacy/INDEX.md)
-- [Ready-work-graphs tree pilot receipt](../../../../../legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md)
+- [Root legacy index](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/INDEX.md)
+- [Ready-work-graphs tree pilot receipt](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/legacy/receipts/2026-05-05-ready-work-graphs-tree-pilot.md)
 - [Ready-work-graphs direct-read migration review](ready-work-graphs-direct-read-migration-review.md)
 - [Landed antifragility-recovery pilot review](landed-antifragility-recovery-pilot-review.md)
 - [Technique tree projection rows for `ready-work-graphs` and `intent-chain`](../reports/technique_tree_projection.md)

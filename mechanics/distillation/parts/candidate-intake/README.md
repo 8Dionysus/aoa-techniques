@@ -11,7 +11,7 @@ gate before it can speak as technique canon.
 There are no active packet roots in this part.
 
 The former closed packet roots are preserved under
-[closed incoming packets](../../legacy/archive/closed-incoming-packets/README.md).
+[closed incoming packets](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/archive/closed-incoming-packets/README.md).
 
 ## How To Use This Directory
 
