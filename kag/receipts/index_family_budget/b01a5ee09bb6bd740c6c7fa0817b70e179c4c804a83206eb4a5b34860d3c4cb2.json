@@ -9,8 +9,8 @@
     "contract_version": "aoa-kag:budget-receipt-candidate-identity-v2",
     "excluded_path": "kag/receipts/index_family_budget/b01a5ee09bb6bd740c6c7fa0817b70e179c4c804a83206eb4a5b34860d3c4cb2.json",
     "family_digest": "b01a5ee09bb6bd740c6c7fa0817b70e179c4c804a83206eb4a5b34860d3c4cb2",
-    "file_count": 2394,
-    "seal": "fd8625d069fa26d0adf1334e7c2bfea85049a782aec5d28692d4b74b4b31fdc5",
+    "file_count": 2387,
+    "seal": "7bc8613dafc4657307e3da8be02577e530c0d823720e6560a5f92a812ee0e379",
     "source_epoch": "sha256:337bab4eeaae17f705690ae3b0f9b2390cbbd79e840214e86874ace0f99fd2d5",
     "source_snapshot": "sha256:1b5f4bf7f84ba7c2c745b9323934f4a1bcba39d34ded375b016597d6cf5d8105"
   },
