@@ -11,7 +11,8 @@ This card applies to `mechanics/tests/` and all descendants unless a nearer
 mechanic package.
 
 Use this home for package-card standards, shared request-receipt posture,
-shared legacy scaffold expectations, and cross-mechanic contract checks. Tests
+shared active-route and historical-recovery contracts, and cross-mechanic
+contract checks. Tests
 that only serve one mechanic belong in `mechanics/<slug>/tests/`; tests that
 only serve one part belong in `mechanics/<slug>/parts/<part>/tests/`.
 

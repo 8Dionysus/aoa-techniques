@@ -81,8 +81,9 @@ After a route, topology, source-authority, validator, public-contract, or owner
 change, use [decision guidance](docs/decisions/AGENTS.md) to determine whether future agents need
 the rationale. Update only the roadmap, changelog, design, generated
 companions, mechanic ledgers, quest surfaces, or neighboring owner routes whose
-meaning actually changed. Historical detail belongs in its legacy receipt,
-not in active root guidance.
+meaning actually changed. Historical detail stays at the exact Git commit and
+original path recorded by the owning PROVENANCE surface or retirement
+decision, not in active root guidance.
 
 ## Validation
 
