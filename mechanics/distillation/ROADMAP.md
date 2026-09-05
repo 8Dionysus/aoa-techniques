@@ -25,8 +25,9 @@ The first full technique tree migration program is complete:
 
 The old long roadmap ledger has been distilled back into its owning surfaces:
 checked landings in `LANDING_LOG.md`, route evidence in
-`parts/technique-reform-ingress/reviews/`, lineage in `PROVENANCE.md`, and raw
-or pre-prune source receipts in `legacy/`.
+`parts/technique-reform-ingress/reviews/`, and lineage in `PROVENANCE.md`.
+Historical pre-prune source recovery remains available from the exact committed
+Git path recorded by the retirement decision.
 
 ## Next Work
 
@@ -43,9 +44,9 @@ or pre-prune source receipts in `legacy/`.
 5. Keep external, cross-layer, Agon, and recurrence registries paired with their
    active READMEs and generated indexes. Registries are accounting evidence, not
    candidate authority.
-6. Before compacting another candidate ledger, preserve the pre-prune accounting
-   in `legacy/raw/`, then update `PROVENANCE.md`, `LANDING_LOG.md`,
-   `legacy/INDEX.md`, and `legacy/DISTILLATION_LOG.md` together.
+6. Before compacting another candidate ledger, record its exact pre-change Git
+   commit and original path in `PROVENANCE.md` or the retirement decision, then
+   update `LANDING_LOG.md`; do not create an archive-only raw copy.
 
 ## When Time Comes
 

@@ -7,8 +7,8 @@ Use it when the question is not "which landed technique should I open?", but "wh
 This is an intake and decision surface.
 It does not change technique status, create a new bundle, or authorize import by itself.
 
-The detailed pre-prune receipt is preserved at
-[legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md](../../legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md).
+The detailed pre-prune receipt is recoverable at the [immutable historical
+source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/distillation/legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md).
 
 ## Scope
 

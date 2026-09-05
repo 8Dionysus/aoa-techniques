@@ -29,8 +29,8 @@ Not moved:
 
 Changed:
 
-- preserved the former root closure-audit `ROADMAP.md` at
-  `legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md`
+- preserved recovery of the former root closure-audit `ROADMAP.md` through the
+  [immutable baseline path](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/audit/legacy/raw/ROOT_CLOSURE_AUDIT_ROADMAP_2026-05-03.md)
 - kept current root `ROADMAP.md` focused on repo-level direction, horizons, and
   update rules
 - updated Audit provenance and legacy accounting so the old audit baseline stays

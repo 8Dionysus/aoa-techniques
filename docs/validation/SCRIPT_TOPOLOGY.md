@@ -44,7 +44,6 @@ tracked Python cache residue.
 | `projection_builder` | generated/read-model writes from source | may write tracked projections; must not define source meaning |
 | `projection_validator_module` | generated/read-model parity checks | compares projections; does not own technique truth |
 | `part_local_builder` / `part_local_validator` | mechanic-owned candidate artifacts | discovered by `scripts/run_part_local_tests.py` from part homes |
-| `agent_lane_validator` | Spark lane registry and scenario shape | release-owned, not PR source-fast |
 | `lane_executor`, `lane_loader`, `release_entrypoint`, `test_runner` | command execution and release/test orchestration | load command authority from `config/validation_lanes.json` |
 | `compatibility_adapter` | old import/CLI surfaces | keep thin; rule ownership stays elsewhere |
 | `script_route_card` | local route and stop-line guidance | source-fast AGENTS validators cover shape and mesh inclusion |
@@ -80,9 +79,6 @@ generated mechanics projection group.
 The Recurrence `publish_live_receipts.py` helper appends local JSONL
 observation receipts. It is tested as a mechanic-local helper, but it is not
 runtime policy, proof verdict, memory authority, or a release command.
-
-The Spark lane validator is release-owned and validates agent-lane registry,
-scenario, result, and handoff shape. It does not belong in PR `source-fast`.
 
 ## Promotion Rule
 

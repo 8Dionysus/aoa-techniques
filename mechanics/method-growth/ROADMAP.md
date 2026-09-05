@@ -40,9 +40,9 @@ outside the bundle.
    `superseded-practice-obsolescence-route`.
 3. Reassess handoff only when a second owner-facing skill proposal packet shows
    a stable field or validation shape not covered by AOA-T-0102.
-4. Preserve any discovered real wave/source material in `legacy/raw/` and keep
-   `legacy/INDEX.md`, `legacy/DISTILLATION_LOG.md`, and `PROVENANCE.md`
-   aligned.
+4. If a future compaction needs historical source recovery, record the exact
+   pre-change Git commit and original path in `PROVENANCE.md` or the retirement
+   decision; do not create a `legacy/raw/` copy or archive-only ledger.
 
 ## When Time Comes
 

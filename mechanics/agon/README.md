@@ -86,8 +86,9 @@ lineage behind an active part.
 
 ## Historical provenance
 
-Preserved wave receipts live under [legacy](legacy/README.md). They are not the
-normal first route for current edits.
+Historical wave receipts are recoverable through the immutable paths in
+[PROVENANCE](PROVENANCE.md). They are not the normal first route for current
+edits.
 
 ## Owner boundary
 

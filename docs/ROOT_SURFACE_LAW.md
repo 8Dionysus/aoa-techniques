@@ -66,7 +66,7 @@ evidence trail.
 | Repo-wide pre-migration receipts or retired tail surfaces | [retirement decision](decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) | immutable Git history stays auditable without becoming active canon |
 | Mechanic runbooks, reports, configs, scripts, schemas, examples, manifests, or tests | owning `mechanics/<slug>/parts/<part>/` district | one-owner operating surfaces belong beside their mechanic |
 | Root catch-all data district without active repo-wide payload | strongest owner home, or a decision-backed new root district | an empty `data/` shelf attracts misplaced mechanic-local or generated material |
-| Agent-lane packet or swarm recipe | `.agents/<lane>/`, including `.agents/spark/` | agent-lane packet guidance belongs under the agent district |
+| Agent-lane packet or swarm recipe | `.agents/<lane>/` | agent-lane packet guidance belongs under the agent district |
 | Donor intake notes, raw external records, or candidate lists | [Distillation candidate intake](../mechanics/distillation/parts/candidate-intake/README.md) or another owning Distillation part | donor evidence should not become canon or a second incoming queue |
 | Generated catalogs, capsules, projections, or readers | [generated](../generated/) or [readers](readers/) as appropriate | generated surfaces are reproducible companions, not authored truth |
 | Technique meaning | [techniques](../techniques/) | root routes to meaning; it does not re-author it |
@@ -105,7 +105,6 @@ compact, route it to the owner surface that can carry the detail.
 | Local KAG provider | [kag](../kag/) carries the repo-local provider packet, source-return handles, and validation receipts for downstream KAG consumers. |
 | Local stats port | [stats](../stats/) carries owner-defined technique-canon questions, measurement contracts, and public reference packets; cross-owner grammar and aggregation remain with `aoa-stats`. |
 | Root data | Empty root `data/` is retired until a concrete repo-wide data contract justifies it. |
-| Spark lane | The previous Spark surface is retired; recover it only from the immutable baseline linked by the retirement decision. |
 | Validation entry | [VALIDATION](../VALIDATION.md) stays root as the on-demand human map; blocking command order remains in `config/validation_lanes.json`, focused procedure remains with its owner, and README stays human/public. |
 
 ## Final Rule

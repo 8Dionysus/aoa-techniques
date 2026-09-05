@@ -20,7 +20,8 @@ truth, or technique status changes.
 
 1. Root `AGENTS.md`.
 2. `mechanics/AGENTS.md`.
-3. `legacy/` only when auditing the pre-split chaos wave donor trace.
+3. `PROVENANCE.md` and the retirement decision when auditing the pre-split
+   chaos wave donor trace.
 4. `mechanics/REQUEST_RECEIPTS.md` only when naming AoA center-side pressure.
 Read `README.md` only when the selected task needs its human map; do not preload unrelated maps.
 
@@ -32,8 +33,9 @@ Read `README.md` only when the selected task needs its human map; do not preload
   pattern source truth as local implementation authority.
 - Do not treat stress, recovery, or chaos notes as one-score health, public
   repair proof, owner acceptance, runtime recovery, or deletion approval.
-- Preserve donor wave source material through `legacy/raw/` and `PROVENANCE.md`;
-  keep active parts short and current.
+- Preserve donor wave recovery through the exact committed Git path in
+  `PROVENANCE.md` or the retirement decision; keep active parts short and
+  current.
 - If a stable reusable practice emerges, route it into `techniques/` through the
   normal technique review path.
 

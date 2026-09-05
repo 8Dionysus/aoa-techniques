@@ -25,8 +25,9 @@ Read `README.md` only when the selected task needs its human map; do not preload
 - Keep part changes bounded to that part's role.
 - Update `../PARTS.md` when a part is added, renamed, or retired.
 - Update `../PROVENANCE.md` when source evidence changes the part's behavior.
-- Preserve pre-prune source accounting in `../legacy/raw/` before shortening a
-  ledger or runbook.
+- Before shortening a ledger or runbook, preserve recovery by recording its
+  exact pre-change Git commit and original path in `../PROVENANCE.md` or the
+  retirement decision; do not create an archive-only raw copy.
 - Do not change technique status from inside a part without bundle-local
   canonical evidence and the normal validation path.
 

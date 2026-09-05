@@ -45,8 +45,8 @@ validator, and test lane.
 
 ## Provenance
 
-The Wave IV landing receipt is preserved at
-[`../../legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md`](../../legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md).
+The Wave IV landing receipt is recoverable at the [immutable historical
+source](https://github.com/8Dionysus/aoa-techniques/blob/feffba63dc22fd921512ba5a3ff1b5d78606f93b/mechanics/agon/legacy/raw/AGON_WAVE4_TECHNIQUE_LANDING.md).
 Current behavior belongs here and in the seed/generated candidate surfaces, not
 in the raw wave note.
 

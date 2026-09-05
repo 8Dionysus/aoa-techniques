@@ -15,8 +15,8 @@ ToS canon.
 ## Source split
 
 - `README.md`, `DIRECTION.md`, `PARTS.md`, and `parts/` own current active route.
-- `PROVENANCE.md` is the active-first bridge to preserved wave sources.
-- `legacy/` preserves raw Wave IV and Wave XV landing receipts.
+- `PROVENANCE.md` is the active-first bridge to immutable Wave IV and Wave XV
+  source paths.
 - Part-local `config/`, `generated/`, `schemas/`, `examples/`, `scripts/`,
   `tests/`, and recurrence manifests own current Agon technical artifacts.
 
@@ -29,8 +29,9 @@ Read `README.md` only when the selected task needs its human map; do not preload
 ## Boundaries
 
 - Do not edit raw wave receipts to change current behavior.
-- If a raw source changes current behavior, update the relevant active part
-  first, then update `PROVENANCE.md`, `legacy/INDEX.md`, and `LANDING_LOG.md`.
+- If a historical source changes current behavior, update the relevant active
+  part first, then update `PROVENANCE.md` and `LANDING_LOG.md`; preserve the
+  former source through its exact immutable Git commit and path.
 - Keep requested candidates distinct from promoted technique bundles.
 - Keep cross-repo boundaries explicit in every new route.
 
@@ -39,6 +40,6 @@ Read `README.md` only when the selected task needs its human map; do not preload
 Inherit [../AGENTS.md](../AGENTS.md#validation): `mechanics/part-local`; see [VALIDATION.md](../../VALIDATION.md) and `config/validation_lanes.json`. Local `mechanics/agon/AGENTS.md`: package practice/owner stop-line.
 ## Closeout
 
-Report which active parts changed, whether any legacy source was moved or
-distilled, which validation ran, what was not moved, and where the next Agon
-pass should resume.
+Report which active parts changed, which immutable historical paths were used,
+which validation ran, what remained current, and where the next Agon pass
+should resume.

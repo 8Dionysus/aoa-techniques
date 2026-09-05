@@ -21,28 +21,6 @@ TREE_MIGRATION_BREADCRUMB_ROADMAP = (
     / "ROOT_ROADMAP_TREE_MIGRATION_BREADCRUMBS_2026-05-14.md"
 )
 
-ACTIVE_DISTILLATION_SURFACES = (
-    "mechanics/distillation/AGENTS.md",
-    "mechanics/distillation/README.md",
-    "mechanics/distillation/DIRECTION.md",
-    "mechanics/distillation/PARTS.md",
-    "mechanics/distillation/PROVENANCE.md",
-    "mechanics/distillation/LANDING_LOG.md",
-    "mechanics/distillation/ROADMAP.md",
-    "mechanics/distillation/parts/AGENTS.md",
-    "mechanics/distillation/parts/README.md",
-    "mechanics/distillation/legacy/AGENTS.md",
-    "mechanics/distillation/legacy/README.md",
-    "mechanics/distillation/legacy/INDEX.md",
-    "mechanics/distillation/legacy/DISTILLATION_LOG.md",
-    "mechanics/distillation/legacy/raw/README.md",
-)
-
-RAW_DISTILLATION_RECEIPTS = (
-    "mechanics/distillation/legacy/raw/EXTERNAL_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
-    "mechanics/distillation/legacy/raw/CROSS_LAYER_CANDIDATE_LEDGER_2026-05-01_PRE_PRUNE.md",
-)
-
 PART_LOCAL_DISTILLATION_READMES = (
     "mechanics/distillation/parts/donor-refinery/README.md",
     "mechanics/distillation/parts/external-import-runbook/README.md",

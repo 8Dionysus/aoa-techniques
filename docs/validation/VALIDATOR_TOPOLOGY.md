@@ -14,7 +14,7 @@ standalone gate.
 | `source-fast` | blocking growth gate | repo-local KAG parity, owner-local stats protocol, AGENTS mesh, nested route-card shape, semantic route snippets, fast authored technique source contracts | generated freshness, cross-owner statistics, release freeze, runtime/export policy |
 | `generated` | blocking projection gate | generated/read-model rebuild parity and drift snapshots | technique meaning, skill export/runtime contracts |
 | `mechanics/part-local` | blocking mechanic-owned gate | part-local candidate registries, handoff packets, builder `--check` parity, pytest homes | root release packaging, sibling runtime behavior |
-| `release` | blocking release gate | frozen release-prep sequence, Spark lane, mechanics/part-local lane, tests, validators, worktree stabilization | ordinary PR growth gating |
+| `release` | blocking release gate | frozen release-prep sequence, mechanics/part-local lane, tests, validators, worktree stabilization | ordinary PR growth gating |
 | `nightly` | blocking moving-main sentinel | source, generated, and mechanic part-local drift on the growth surface | release artifact identity or sibling release reproduction |
 | `advisory` | non-blocking boundary inventory | route-only export/runtime, trace/eval, and security/adversarial boundaries | hard runtime policy, eval verdicts, security enforcement |
 
@@ -107,6 +107,6 @@ with `config/validation_lanes.json` when command routing changes.
 The broader script-surface map lives in
 [`SCRIPT_TOPOLOGY.md`](SCRIPT_TOPOLOGY.md) and
 [`script_inventory.json`](script_inventory.json). That inventory covers every
-active file under `*/scripts/*`, including mechanic-local scripts, Spark lane
-scripts, and script-local `AGENTS.md` route cards. It is descriptive coverage,
-not command authority.
+active file under `*/scripts/*`, including mechanic-local scripts and
+script-local `AGENTS.md` route cards. It is descriptive coverage, not command
+authority.

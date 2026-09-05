@@ -26,8 +26,9 @@ recovery-oriented practice pressure that may become one portable technique.
    can name one atomic move, likely domain, likely kind, family posture,
    capability, substrate, execution profile, risk posture, relations, and
    validation.
-4. Keep donor-wave details in `legacy/raw/` unless an active part needs a
-   distilled route.
+4. Keep donor-wave recovery as an exact committed Git path in `PROVENANCE.md`
+   or the retirement decision unless an active part needs a distilled route;
+   do not create a new `legacy/raw/` copy.
 
 ## When Time Comes
 

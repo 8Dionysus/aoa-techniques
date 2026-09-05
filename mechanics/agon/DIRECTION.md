@@ -17,9 +17,9 @@ The current active surface is not the old wave notes. Start here:
 
 ## Source split
 
-Wave IV and Wave XV landing notes are now preserved under `legacy/raw/`. They
-remain useful for provenance, but they are no longer the first route for current
-Agon technique-side behavior.
+Wave IV and Wave XV landing notes remain recoverable through the immutable
+baseline paths in [PROVENANCE](PROVENANCE.md). They are useful for provenance,
+but they are no longer the first route for current Agon technique-side behavior.
 
 Use [PROVENANCE](PROVENANCE.md) when you need to audit how a preserved wave
 feeds an active part. Do not copy raw wave inventories into active part docs.
