@@ -741,7 +741,7 @@
       "family": "source_validator",
       "organ_lane": "source/topology",
       "owner_surface": "docs/guardrails/AGENTS_MESH_PROTOCOL.md",
-      "source_truth": ["nested AGENTS.md cards and semantic route snippets"],
+      "source_truth": ["selected AGENTS.md route-card paths and validation route contracts"],
       "reads": ["AGENTS route-card text"],
       "writes": [],
       "side_effects": "validation output only",

@@ -132,6 +132,7 @@
 - [AOA-TECH-D-0060 AGENTS Mesh Canonical Closure](../AOA-TECH-D-0060-agents-mesh-canonical-closure.md) (`docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md`)
 - [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
 - [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
+- [AOA-TECH-D-0078 Structural AGENTS Route Guard Boundary](../AOA-TECH-D-0078-structural-agents-route-guard-boundary.md) (`docs/decisions/AOA-TECH-D-0078-structural-agents-route-guard-boundary.md`)
 
 ## release/tooling
 
@@ -139,6 +140,7 @@
 - [AOA-TECH-D-0043 GitHub Landing And Mechanics Direction Split Correction](../AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md) (`docs/decisions/AOA-TECH-D-0043-github-landing-and-mechanics-roadmap-route.md`)
 - [AOA-TECH-D-0066 Validation Lane Command Authority](../AOA-TECH-D-0066-validation-lane-command-authority.md) (`docs/decisions/AOA-TECH-D-0066-validation-lane-command-authority.md`)
 - [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
+- [AOA-TECH-D-0078 Structural AGENTS Route Guard Boundary](../AOA-TECH-D-0078-structural-agents-route-guard-boundary.md) (`docs/decisions/AOA-TECH-D-0078-structural-agents-route-guard-boundary.md`)
 
 ## public-safety
 

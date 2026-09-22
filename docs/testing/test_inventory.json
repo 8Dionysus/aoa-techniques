@@ -214,11 +214,11 @@
         {
           "path": "tests/test_validate_semantic_agents.py",
           "family": "AGENTS/mesh",
-          "protects": "Semantic AGENTS route-card snippets and missing-doc failure behavior.",
+          "protects": "Selected AGENTS route-card paths, validation route contracts, and missing-doc failure behavior.",
           "owner_surface": "scripts/validate_semantic_agents.py",
           "runtime_cost": "fast",
           "focused_target": "tests/test_validate_semantic_agents.py",
-          "failure_route": "Fix semantic AGENTS docs or validator snippets before changing semantic AGENTS coverage."
+          "failure_route": "Fix selected AGENTS route cards or their validation route contracts before changing this coverage."
         },
         {
           "path": "tests/test_validation_command_authority.py",
