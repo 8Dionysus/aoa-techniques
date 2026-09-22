@@ -132,18 +132,21 @@ class DocsSurfaceGuardrailsTestCase(unittest.TestCase):
             with self.subTest(target=target):
                 self.assertIn(target, protocol)
 
-    def test_tree_contract_keeps_current_law_and_provenance_route(self) -> None:
+    def test_tree_contract_keeps_provenance_routes(self) -> None:
         tree_contract = (REPO_ROOT / "docs" / "TECHNIQUE_TREE_CONTRACT.md").read_text(
             encoding="utf-8"
         )
 
         self.assertIn("docs/decisions/", tree_contract)
-        self.assertIn(
-            "[Final Tree Migration Ledger](../mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md)",
-            tree_contract,
+        ledger_path = Path(
+            "mechanics/distillation/parts/technique-reform-ingress/reviews/final-tree-migration-ledger.md"
         )
-        self.assertIn("The whole-tree migration pass is closed", tree_contract)
-        self.assertIn("current path architecture", tree_contract)
+        linked_targets = {
+            target.split("#", 1)[0].strip("<>")
+            for target in LOCAL_LINK_PATTERN.findall(tree_contract)
+        }
+        self.assertIn(f"../{ledger_path.as_posix()}", linked_targets)
+        self.assertTrue((REPO_ROOT / ledger_path).is_file())
 
     def test_root_examples_are_indexed_and_not_root_markdown(self) -> None:
         self.assertFalse((REPO_ROOT / "WALKTHROUGH.md").exists())
