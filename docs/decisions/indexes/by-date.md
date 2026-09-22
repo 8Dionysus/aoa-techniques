@@ -132,3 +132,7 @@
 ## 2026-09-04
 
 - [AOA-TECH-D-0077 Retire Spark and Legacy Technique Surfaces](../AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md) (`docs/decisions/AOA-TECH-D-0077-retire-spark-and-legacy-surfaces.md`)
+
+## 2026-09-22
+
+- [AOA-TECH-D-0078 Structural AGENTS Route Guard Boundary](../AOA-TECH-D-0078-structural-agents-route-guard-boundary.md) (`docs/decisions/AOA-TECH-D-0078-structural-agents-route-guard-boundary.md`)

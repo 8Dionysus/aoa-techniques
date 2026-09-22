@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Validate Pack 4 semantic-layer AGENTS.md guidance for aoa-techniques."""
+"""Validate selected AGENTS.md route-card completeness.
+
+This guard checks selected card paths and delegates route semantics to the
+canonical AGENTS mesh helper. It does not treat prose keywords as proof of
+meaning, public safety, or owner acceptance.
+"""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -8,83 +13,52 @@ import sys
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.agents_mesh_common import active_card_route_issues
+
+
+ROUTE_HANDLES = ("VALIDATION.md", "config/validation_lanes.json")
+
 
 @dataclass(frozen=True)
 class AgentsDocSpec:
     path: Path
+    # Kept as compatibility metadata for callers that inspect the old field.
+    # Route semantics are owned by active_card_route_issues(), not by literal
+    # prose matching in this module.
     required_snippets: tuple[str, ...]
 
 
 REQUIRED_DOCS: tuple[AgentsDocSpec, ...] = (
     AgentsDocSpec(
         Path('config/AGENTS.md'),
-        (
-            'policy',
-            'export',
-            'TECHNIQUE.md',
-            'generated surfaces',
-            'validation_lanes.json',
-        ),
+        ROUTE_HANDLES,
     ),
     AgentsDocSpec(
         Path('examples/AGENTS.md'),
-        (
-            'technique canon',
-            'public-safe',
-            'adaptation boundary',
-            'No secrets',
-            'VALIDATION.md',
-        ),
+        ROUTE_HANDLES,
     ),
     AgentsDocSpec(
         Path('mechanics/distillation/parts/candidate-intake/AGENTS.md'),
-        (
-            'quarantine',
-            'candidate',
-            'provenance',
-            'public-safe',
-            'Promotion',
-        ),
+        ROUTE_HANDLES,
     ),
     AgentsDocSpec(
         Path('mechanics/distillation/parts/technique-reform-ingress/reports/AGENTS.md'),
-        (
-            'diagnostic surfaces',
-            'source-authored bundles',
-            'bounded',
-            'aoa-evals',
-            'VALIDATION.md',
-        ),
+        ROUTE_HANDLES,
     ),
     AgentsDocSpec(
         Path('schemas/AGENTS.md'),
-        (
-            'Schema edits are contract edits',
-            '$schema',
-            'paired examples',
-            'downstream consumer',
-            'VALIDATION.md',
-        ),
+        ROUTE_HANDLES,
     ),
     AgentsDocSpec(
         Path('scripts/AGENTS.md'),
-        (
-            'deterministic builders',
-            'repo-relative',
-            'generated summaries',
-            'validators',
-            'config/validation_lanes.json',
-        ),
+        ROUTE_HANDLES,
     ),
     AgentsDocSpec(
         Path('tests/AGENTS.md'),
-        (
-            'technique contracts',
-            'generated parity',
-            'public-safe',
-            'source-fast',
-            'generated parity',
-        ),
+        ROUTE_HANDLES,
     ),
 )
 
@@ -106,22 +80,24 @@ def validate(repo_root: Path = REPO_ROOT) -> list[str]:
         text = path.read_text(encoding="utf-8")
         if not text.strip().startswith("# AGENTS.md"):
             issues.append(f"{spec.path.as_posix()}: must start with '# AGENTS.md'")
-        for snippet in spec.required_snippets:
-            if snippet not in text:
-                issues.append(
-                    f"{spec.path.as_posix()}: missing required snippet {snippet!r}"
-                )
+        issues.extend(
+            f"{spec.path.as_posix()}: {issue}"
+            for issue in active_card_route_issues(text)
+        )
     return issues
 
 
 def main() -> int:
     issues = validate(REPO_ROOT)
     if issues:
-        print("Pack 4 semantic AGENTS validation failed.", file=sys.stderr)
+        print("Selected AGENTS route-card validation failed.", file=sys.stderr)
         for issue in issues:
             print(f"- {issue}", file=sys.stderr)
         return 1
-    print(f"[ok] Pack 4 semantic AGENTS docs are present and shaped: {len(REQUIRED_DOCS)}")
+    print(
+        "[ok] selected AGENTS route-card docs are present and structurally shaped: "
+        f"{len(REQUIRED_DOCS)}"
+    )
     return 0
 
 

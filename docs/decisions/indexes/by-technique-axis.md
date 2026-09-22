@@ -15,6 +15,7 @@
 - [AOA-TECH-D-0052 Root Data Retirement](../AOA-TECH-D-0052-root-data-retirement.md) (`docs/decisions/AOA-TECH-D-0052-root-data-retirement.md`)
 - [AOA-TECH-D-0053 Root Markdown Surface Slimming](../AOA-TECH-D-0053-root-md-surface-slimming.md) (`docs/decisions/AOA-TECH-D-0053-root-md-surface-slimming.md`)
 - [AOA-TECH-D-0058 Docs Surface Guardrails And Tree Contract Slimming](../AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md) (`docs/decisions/AOA-TECH-D-0058-docs-surface-guardrails-and-tree-contract-slimming.md`)
+- [AOA-TECH-D-0078 Structural AGENTS Route Guard Boundary](../AOA-TECH-D-0078-structural-agents-route-guard-boundary.md) (`docs/decisions/AOA-TECH-D-0078-structural-agents-route-guard-boundary.md`)
 
 ## tree
 
@@ -112,6 +113,7 @@
 - [AOA-TECH-D-0059 Agent Neighbor Doc Command Ownership](../AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md) (`docs/decisions/AOA-TECH-D-0059-agent-neighbor-doc-command-ownership.md`)
 - [AOA-TECH-D-0060 AGENTS Mesh Canonical Closure](../AOA-TECH-D-0060-agents-mesh-canonical-closure.md) (`docs/decisions/AOA-TECH-D-0060-agents-mesh-canonical-closure.md`)
 - [AOA-TECH-D-0076 Prompt-Light Agent Routes And On-Demand Validation](../AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md) (`docs/decisions/AOA-TECH-D-0076-prompt-light-agent-routes-and-on-demand-validation.md`)
+- [AOA-TECH-D-0078 Structural AGENTS Route Guard Boundary](../AOA-TECH-D-0078-structural-agents-route-guard-boundary.md) (`docs/decisions/AOA-TECH-D-0078-structural-agents-route-guard-boundary.md`)
 
 ## github landing
 
